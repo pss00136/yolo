@@ -16,7 +16,7 @@
         <link href="/Yolo/css/app.css" rel="stylesheet">
         
         <!-- 추가 속성 CSS -->
-        <link href="/Yolo/css_yolo/cssView//Club/clubList.css" rel="stylesheet">
+        <link href="/Yolo/css_yolo/cssView/Club/clubList.css" rel="stylesheet">
 
         <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
