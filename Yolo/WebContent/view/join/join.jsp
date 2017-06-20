@@ -36,8 +36,13 @@
                     </div>
                     <div class="modal-body">
                         <form role="form">
-                            <div class="form-group">
-                                <input type="text" placeholder="아이디" class="form-control">
+                        	<div class="form-group">
+                            	<div class="input-group">
+                                	<input type="text" placeholder="아이디" class="form-control">
+                            		<span class="input-group-btn">
+                            			<button class="btn btn-success" type="button">중복확인</button>
+                            		</span>
+                            	</div>
                             </div>
                             <div class="form-group">
                                 <input type="password" placeholder="비밀번호" class="form-control">
@@ -72,7 +77,7 @@
                                     <a href="explore.html" class="btn btn-lg btn-green">가입하기</a>
                                 </div>
                             </div>
-                            <p class="help-block">회원이신가요? <a href="signin.html" class="text-green">로그인하기</a></p>
+                            <p class="help-block">회원이신가요? <a href="/Yolo/view/login/login.jsp" class="text-green">로그인하기</a></p>
                         </form>
                     </div>
                 </div>
