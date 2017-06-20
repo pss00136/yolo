@@ -16,11 +16,10 @@
 <link href="/Yolo/css/bootstrap.css" rel="stylesheet">
 <link href="/Yolo/css/app.css" rel="stylesheet">
 <!-- 추가css -->
-<!-- <link rel="stylesheet" href="/Yolo/css_yolo/cssView/lot/lot.css"> -->
-
+<link rel="stylesheet" type="text/css"
+	href="/TestBoot/bootstrap/css/bootstrap-datetimepicker.css" />
 </head>
 <style type="text/css">
-
 .tags .tag {
 	margin: 6px 6px 6px 0;
 	padding: 0 11px;
@@ -31,10 +30,13 @@
 	border: 1px solid silver;
 }
 
-#commentsForm{
- padding-bottom: 10px;
+#commentsForm {
+	padding-bottom: 10px;
 }
 
+#reservation {
+	margin-bottom: 10px;
+}
 </style>
 
 <body class="notransition">
@@ -220,13 +222,12 @@
 	<div class="closeLeftSide"></div>
 
 	<!-- Content -->
-
-	<div id="wrapper">
-		<div id="mapView" class="mob-min">
-			<div class="mapPlaceholder">
-				<span class="fa fa-spin fa-spinner"></span> Loading map...
-			</div>
+	<div id="mapView" class="mob-min">
+		<div class="mapPlaceholder">
+			<span class="fa fa-spin fa-spinner"></span> Loading map...
 		</div>
+	</div>
+	<div id="wrapper">
 		<div id="content" class="mob-max">
 			<div class="singleTop">
 				<div id="carouselFull" class="carousel slide" data-ride="carousel">
@@ -273,54 +274,64 @@
 
 				<div class="summary">
 					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-8">
 							<div class="summaryItem">
 								<h1 class="pageTitle">왕십리 아지트스튜디오</h1>
+								<strong style="margin-top: 0px; font-size: 25px;">20,000원/시간</strong>
 								<div class="address">
 									<span class="icon-pointer"></span>왕십리
 								</div>
 								<div class="tags">
-									<span class="tag" style="cursor: pointer;">#신촌</span> <span
+									<span class="tag" style="cursor: pointer;">#왕십리</span> <span
 										class="tag" style="cursor: pointer;">#파티</span> <span
-										class="tag" style="cursor: pointer;">#파티룸</span> <span
-										class="tag" style="cursor: pointer;">#신촌파티룸</span>
+										class="tag" style="cursor: pointer;">#아지트스튜디오</span> <span
+										class="tag" style="cursor: pointer;">#왕십리스튜디오</span>
 								</div>
-								
-								<ul class="features">
-									<li><span class="fa fa-moon-o"></span>
-									<div>2 Bedrooms</div></li>
-									<li><span class="icon-drop"></span>
-									<div>2 Bathrooms</div></li>
-									<li><span class="icon-frame"></span>
-									<div>2750 Sq Ft</div></li>
-								</ul>
-								<div class="clearfix"></div>
+
+
+
 							</div>
 						</div>
-						<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-							<div class="agentAvatar summaryItem">
-								<div class="clearfix"></div>
-								<img class="avatar agentAvatarImg"
-									src="/Yolo/images/avatar-2.png" alt="avatar">
-								<div class="agentName">Jane Smith</div>
-								<a data-toggle="modal" href="#contactAgent"
-									class="btn btn-lg btn-round btn-green contactBtn">Contact
-									Agent</a>
+
+						<div id="reservation">
+						
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+					
+								<div id="reservation" class="col-md-12">
+									<label>예약날짜</label>
+								<div class="input-append date form_datetime">
+									<input size="16" type="text" value="" readonly> <span
+										class="add-on"><i class="icon-th"></i></span>
+								</div>
+								</div>
+
+								<div id="reservation" class="col-md-12">
+									<button style="display: inline-flex; margin-right: 3px; text-align: center;" class="btn btn-green col-md-5">
+										<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>문의하기
+									</button>
+									<button style="display: inline-flex; margin-right: 5px; text-align: center;" class="btn btn-green col-md-5">
+										<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>예약하기
+									</button>
+								</div>
 							</div>
+
 						</div>
+
 					</div>
+
+
 				</div>
 			</div>
 			<div class="clearfix"></div>
 			<div class="description">
 				<h3>상세정보</h3>
 				<p>
-				너와 나 사이 마음을 잇는 공간<br /> 어느사이 우리가 만날 시간이 되었군요 :)<br /> 
-				인생샷을 위한 조명이 비치되어 있습니다. HVR-600S / 60w 신촌에 위치한 어느사이는 여러분의 파티/모임과 함께 합니다.<br />
-				3M의 키친과 BAR, 16명까지 수용가능한 넓은 공간까지~!
+					너와 나 사이 마음을 잇는 공간<br /> 어느사이 우리가 만날 시간이 되었군요 :)<br /> 인생샷을 위한 조명이
+					비치되어 있습니다. HVR-600S / 60w 신촌에 위치한 어느사이는 여러분의 파티/모임과 함께 합니다.<br />
+					3M의 키친과 BAR, 16명까지 수용가능한 넓은 공간까지~!
 				</p>
 			</div>
-			
+
 			<div class="amenities">
 				<h3>편의시설</h3>
 				<div class="row">
@@ -362,39 +373,41 @@
 
 			<!-- 후기 작성하기 -->
 			<div class="comments">
-				<h3>
-				후기작성
-				</h3>
-				
+				<h3>후기작성</h3>
+
 				<div class="comment">
 					<div class="commentAvatar">
-						
+
 						<div class="commentArrow">
 							<span class="fa fa-caret-left"></span>
 						</div>
 					</div>
 					<div class="commentContent">
+						<div class="cardRating">
+							<span class="fa fa-star"></span> <span class="fa fa-star"></span>
+							<span class="fa fa-star"></span> <span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+						</div>
 						<div class="commentName">ilju123456</div>
-						<div class="commentBody">하루종일 빌려서 친구들과 신나게 놀았습니다! 다음에 또 이용할껍니다</div>
+						<div class="commentBody">하루종일 빌려서 친구들과 신나게 놀았습니다! 다음에 또
+							이용할껍니다</div>
 					</div>
 				</div>
-				
+
 				<div class="comment">
 					<div class="commentAvatar">
-						
+
 						<div class="commentArrow">
 							<span class="fa fa-caret-left"></span>
 						</div>
 					</div>
-					
+
 					<div class="commentContent">
-					<div class="star">
-								<input type="checkbox" id="st1" value="1" /> <label for="st1"></label>
-								<input type="checkbox" id="st2" value="2" /> <label for="st2"></label>
-								<input type="checkbox" id="st3" value="3" /> <label for="st3"></label>
-								<input type="checkbox" id="st4" value="4" /> <label for="st4"></label>
-								<input type="checkbox" id="st5" value="5" /> <label for="st5"></label>
-							</div>
+						<div class="cardRating">
+							<span class="fa fa-star"></span> <span class="fa fa-star"></span>
+							<span class="fa fa-star"></span> <span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+						</div>
 						<div class="commentName">happycs</div>
 						<div class="commentBody">이게 아지트? 다신 안빌려ㅗ</div>
 					</div>
@@ -408,23 +421,33 @@
 						</div>
 					</div>
 					<div class="commentContent">
+						<div class="cardRating">
+							<span class="fa fa-star"></span> <span class="fa fa-star"></span>
+							<span class="fa fa-star"></span> <span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+						</div>
 						<div class="commentName">chacha</div>
 						<div class="commentBody">넓고 좋더라고요~! 잠자기 딱좋음</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		
+
 		<div class="commentsFormWrapper">
 			<form id="commentsForm" class="commentsForm">
 				<div class="input-group">
+					<div class="cardRating">
+						<span class="fa fa-star-o"></span> <span class="fa fa-star-o"></span>
+						<span class="fa fa-star-o"></span> <span class="fa fa-star-o"></span>
+						<span class="fa fa-star-o"></span>
+					</div>
 					<input type="text" class="form-control"
 						placeholder="Write a comment..."> <span
 						class="input-group-btn"><a class="btn btn-green">Post</a></span>
 				</div>
 			</form>
 		</div>
-		
+
 	</div>
 
 	<div class="modal fade" id="contactAgent" role="dialog"
@@ -478,5 +501,17 @@
 	<script src="/Yolo/js/jquery.tagsinput.min.js"></script>
 	<script src="/Yolo/js/bootstrap-datepicker.js"></script>
 	<script src="/Yolo/js/app.js" type="text/javascript"></script>
+	<!-- 추가 js -->
+	<script src="/TestBoot/bootstrap/js/bootstrap-datetimepicker.js"></script>
+	<script src="/TestBoot/bootstrap/js/bootstrap-datetimepicker.min.js"></script>
+	<script type="text/javascript">
+$(function(){
+	$(".form_datetime").datetimepicker({
+		format : "dd MM yyyy hh:ii"
+	});
+	
+});
+</script>
+
 </body>
 </html>

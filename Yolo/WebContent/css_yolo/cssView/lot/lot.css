@@ -1,12 +1,12 @@
 
 <!-- *****************별점css**************** -->
 
-.star {
+#star {
   display: inline-block;
   border: none;
 }
 
-.star input {
+#star input {
   border: 0;
   width: 1px;
   height: 1px;
@@ -17,13 +17,13 @@
   opacity: 0;
 }
 
-.star label {
+#star label {
   position: relative;
   float: right;
   color: #C8C8C8;
 }
 
-.star label:before {
+#star label:before {
   margin: 5px;
   content: "\f005";
   font-family: FontAwesome;
@@ -35,15 +35,15 @@
   user-select: none;
 }
 
-.star input:checked ~ label:before {
+#star input:checked ~ label:before {
   color: #FFC107;
 }
 
-.star label:hover ~ label:before {
+#star label:hover ~ label:before {
   color: #ffdb70;
 }
 
-.star label:hover:before {
+#star label:hover:before {
   color: #FFC107;
 }
 
