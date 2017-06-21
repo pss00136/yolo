@@ -418,17 +418,17 @@
 			</div>
 		</div>
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-		<div id="commentsFormWrapper" class="commentsFormWrapper">
+		<div id="commentsFormWrapper" class="commentsFormWrapper" style='width:400px;'>
 			<form id="commentsForm" class="commentsForm">
-				<div class="input-group">
+				<div id="input-group" class="input-group">
 					<div class="cardRating">
 						<span class="fa fa-star-o"></span> <span class="fa fa-star-o"></span>
 						<span class="fa fa-star-o"></span> <span class="fa fa-star-o"></span>
 						<span class="fa fa-star-o"></span>
 					</div>
 					<input type="text" class="form-control"
-						placeholder="Write a comment..."> <span
-						class="input-group-btn"><a class="btn btn-green">Post</a></span>
+						placeholder="Write a comment..."> 
+						<span id="post" class="input-group-btn"><a class="btn btn-green">Post</a></span>
 				</div>
 			</form>
 		</div>
