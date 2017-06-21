@@ -23,7 +23,13 @@
 			href="/Yolo/css_yolo/cssView/Club/tagPlus.css" />
 		<link rel="stylesheet" type="text/css"
 			href="/Yolo/css_yolo/cssView/lot/lotDetail.css" />
+			
+		<style type="text/css">
+		.commentsFormWrapper.active {
+    width: 100%;
+}
 		
+		</style>	
 	</head>
 
 <body class="notransition">
@@ -286,7 +292,7 @@
 								<div id="reservation">
 									<label>예약날짜</label>
 								<div class="input-append date form_datetime">
-									<input size="16" type="text" value="" readonly> <span
+									<input class="form-control" type="text" value="" readonly> <span
 										class="add-on"><i class="icon-th"></i></span>
 								</div>
 								</div>
@@ -411,20 +417,21 @@
 				</div>
 			</div>
 		</div>
-
-		<div class="commentsFormWrapper">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<div id="commentsFormWrapper" class="commentsFormWrapper" style='width:400px;'>
 			<form id="commentsForm" class="commentsForm">
-				<div class="input-group">
+				<div id="input-group" class="input-group">
 					<div class="cardRating">
 						<span class="fa fa-star-o"></span> <span class="fa fa-star-o"></span>
 						<span class="fa fa-star-o"></span> <span class="fa fa-star-o"></span>
 						<span class="fa fa-star-o"></span>
 					</div>
 					<input type="text" class="form-control"
-						placeholder="Write a comment..."> <span
-						class="input-group-btn"><a class="btn btn-green">Post</a></span>
+						placeholder="Write a comment..."> 
+						<span id="post" class="input-group-btn"><a class="btn btn-green">Post</a></span>
 				</div>
 			</form>
+		</div>
 		</div>
 
 	</div>
@@ -479,7 +486,7 @@
 	<script src="/Yolo/js/infobox.js"></script>
 	<script src="/Yolo/js/jquery.tagsinput.min.js"></script>
 	<script src="/Yolo/js/bootstrap-datepicker.js"></script>
-	<script src="/Yolo/js/app.js" type="text/javascript"></script>
+	<script src="/Yolo/js_yolo/app.js" type="text/javascript"></script>
 	<!-- 추가 js -->
 	<script src="/Yolo/css_yolo/cssPlugin/bootstrap-datetimepicker.js"></script>
 	<script src="/Yolo/css_yolo/cssPlugin/bootstrap-datetimepicker.min.js"></script>

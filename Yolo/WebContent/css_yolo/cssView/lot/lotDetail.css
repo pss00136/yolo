@@ -15,3 +15,15 @@
     margin-bottom: 10px;
     width: 100%;
 }
+
+#commentsFormWrapper{
+	width: 100%;
+}
+
+#input-group{
+	margin-left: 18px;
+}
+
+#post{
+	padding-top: 18px;
+}

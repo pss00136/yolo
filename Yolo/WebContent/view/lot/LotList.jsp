@@ -319,7 +319,7 @@
                             </a>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                            <a href="single.html" class="card">
+                            <a href="/Yolo/view/lot/LotView.jsp" class="card">
                                 <div class="figure">
                                     <img src="/Yolo/images_yolo/lot/2.PNG" alt="image">
                                     <div class="figCaption">
