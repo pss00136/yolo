@@ -20,6 +20,7 @@
            <link href="/Yolo/css_yolo/cssView/Host/host.css" rel="stylesheet">
        
     </head>
+    
     <body class="notransition">
     
 		<!-- Header -->
@@ -59,11 +60,13 @@
 		                <h2 class="osLight">Our Services</h2>
 		                <div class="row">
 		                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 s-menu-item">
+		                     <a href="/Yolo/view/host/HostMyLot.jsp">
 		                            <span class="glyphicon glyphicon-th-large s-icon"></span>
 		                            <div class="s-content">
 		                                <h2 class="s-main osLight">내 공간보기</h2>
 		                                <h3 class="s-sub osLight">등록한 공간을 한 눈에 볼 수 있어요</h3>
 		                            </div>
+		                            </a>
 		                      
 		                    </div>
 		                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 s-menu-item">
@@ -110,7 +113,7 @@
 		        
             </div>
             <div class="clearfix"></div>
-        </div>
+  
         
         
         

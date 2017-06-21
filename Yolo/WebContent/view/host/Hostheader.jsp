@@ -66,7 +66,7 @@
 	<nav class="leftNav scrollable">
 
 		<ul>
-			<li><a href="explore.html"><span
+			<li><a href="/Yolo/view/host/HostMyLot.jsp"><span
 					class="navIcon glyphicon glyphicon-th-large"></span><span
 					class="navLabel">내 공간보기</span></a></li>
 			<li><a href="single.html"><span
