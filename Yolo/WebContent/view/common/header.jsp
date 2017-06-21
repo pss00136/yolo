@@ -3,8 +3,8 @@
 <!-- Header -->
 <div id="header">
 	<div class="logo">
-		<a href="index.html"> <span class="fa fa-home marker"></span> <span
-			class="logoText">Yolo</span>
+		<a href="/Yolo/index.jsp"> <span class="fa fa-home marker"></span> <span
+			class="logoText">&nbsp;Yolo</span>
 		</a>
 	</div>
 	<a href="#" class="navHandler"><span class="fa fa-bars"></span></a>
@@ -31,7 +31,7 @@
 				<div class="mobAvatarName">John Smith</div>
 			</div>
 			<ul>
-				<li><a href="profile.html"><span class="icon-user"></span>마이페이지</a></li>
+				<li><a href="#"><span class="icon-user"></span>마이페이지</a></li>
 				<li><a href="#"><span class="icon-envelope"></span>메세지
 						<span class="badge pull-right bg-red">5</span></a></li>
 				<li class="divider"></li>
@@ -108,18 +108,18 @@
 		</div>
 		<ul>
 			<li>
-				<a href="explore.html"><span class="navIcon icon-compass"></span>
+				<a href="#"><span class="navIcon icon-compass"></span>
 				<span class="navLabel">공간찾기</span></a>
 			</li>
 			<li>
-				<a href="single.html"><span class="navIcon fa fa-group"></span>
+				<a href="#"><span class="navIcon fa fa-group"></span>
 				<span class="navLabel">모임찾기</span></a>
 			</li>
 			<li class="hasSub"><a href="#"><span
 					class="navIcon fa fa-globe"></span><span class="navLabel">커뮤니티</span><span
 					class="fa fa-angle-left arrowRight"></span></a>
 				<ul>
-					<li><a href="#">세미나/강연</a></li>
+					<li><a href="/Yolo/view/comLecture/LectureList.jsp">세미나/강연</a></li>
 					<li><a href="#">플리마켓</a></li>
 					<li><a href="#">공간 쉐어링</a></li>
 				</ul></li>
@@ -139,7 +139,7 @@
 			<div class="clearfix"></div>
 		</a>
 		<ul class="dropdown-menu" role="menu">
-			<li><a href="profile.html"><span class="icon-user"></span>마이페이지</a></li>
+			<li><a href="#"><span class="icon-user"></span>마이페이지</a></li>
 			<li><a href="#"><span class="icon-bell"></span>메세지
 					<span class="badge pull-right bg-red">5</span></a></li>
 			<li class="divider"></li>
