@@ -231,7 +231,7 @@
 						<li data-target="#carouselFull" data-slide-to="3"></li>
 					</ol>
 
-					<!-- slider 상세사진보기 -->
+					  <!------------- 슬라이더로 사진, 상세사진 보여주기 --------------------->
 					<div class="carousel-inner">
 						<div class="item active">
 							<img src="/Yolo/images_yolo/lot/2.PNG" alt="First slide">
@@ -264,7 +264,7 @@
 						data-slide="next"><span class="fa fa-chevron-right"></span></a>
 				</div>
 
-
+            <!------------- 상세정보, 해시태그 --------------------->
 				<div class="summary">
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-8">
@@ -317,6 +317,7 @@
 				</p>
 			</div>
 
+        <!------------- 편의시설 항목들 --------------------->
 			<div class="amenities">
 				<h3>편의시설</h3>
 				<div class="row">
@@ -356,7 +357,7 @@
 				</div>
 			</div>
 
-			<!-- 후기 작성하기 -->
+			  <!------------- 후기 작성하기 --------------------->
 			<div class="comments">
 				<h3>후기작성</h3>
 
@@ -418,17 +419,17 @@
 			</div>
 		</div>
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-		<div id="commentsFormWrapper" class="commentsFormWrapper">
+		<div id="commentsFormWrapper" class="commentsFormWrapper" style='width:400px;'>
 			<form id="commentsForm" class="commentsForm">
-				<div class="input-group">
+				<div id="input-group" class="input-group">
 					<div class="cardRating">
 						<span class="fa fa-star-o"></span> <span class="fa fa-star-o"></span>
 						<span class="fa fa-star-o"></span> <span class="fa fa-star-o"></span>
 						<span class="fa fa-star-o"></span>
 					</div>
 					<input type="text" class="form-control"
-						placeholder="Write a comment..."> <span
-						class="input-group-btn"><a class="btn btn-green">Post</a></span>
+						placeholder="Write a comment..."> 
+						<span id="post" class="input-group-btn"><a class="btn btn-green">Post</a></span>
 				</div>
 			</form>
 		</div>

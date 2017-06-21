@@ -204,7 +204,7 @@
             <div id="content">
             
             
-            <!-- 필터검색 -->
+            <!-------------- 필터 --------------------->
                 <div class="filter">
                     <h1 class="osLight">공간찾기</h1>
                     <a href="#" class="handleFilter"><span class="icon-equalizer"></span></a>
@@ -250,13 +250,8 @@
                         
                         <div class="row">
                             <div class="col-xs-12 col-sm-6 col-md-3 formItem">
-                               
-                               
                                     <label>예약날짜</label>
                                         <input type="text" class="form-control col-md-12" id="datepicker"/>
-                                       
-                                  
-                                
                             </div>
                             
                           <div class="col-xs-12 col-sm-6 col-md-4  formItem">
@@ -272,12 +267,8 @@
                             </div>
                             
                               <div class="col-xs-12 col-sm-6 col-md-4 formItem">
-                               
-                                        
                                         <button style="margin-top: 20px;" class="btn btn-yellow col-md-7">검색</button>
-                                        
                                         <div class="clearfix"></div>
-                              
                             </div>
                             
                         </div>
@@ -287,7 +278,7 @@
                 </div>
                 
                 
-                <!-- 공간 검색 결과 리스트 -->
+                <!------------- 공간 검색 결과 리스트 보여주기 --------------------->
                 <div class="row rightContainer">
                     <h3>공간검색결과</h3>
                     <div class="row">
@@ -319,7 +310,7 @@
                             </a>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                            <a href="single.html" class="card">
+                            <a href="/Yolo/view/lot/LotView.jsp" class="card">
                                 <div class="figure">
                                     <img src="/Yolo/images_yolo/lot/2.PNG" alt="image">
                                     <div class="figCaption">
@@ -454,6 +445,7 @@
                             </a>
                         </div>
                     </div>
+                    
                     <ul class="pagination">
                         <li class="disabled"><a href="#"><span class="fa fa-angle-left"></span></a></li>
                         <li class="active"><a href="#">1</a></li>

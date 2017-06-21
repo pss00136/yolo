@@ -11,7 +11,7 @@
 	<a href="#" class="navHandler"><span class="fa fa-bars"></span></a>
 
  
-    <!-- 호스트 정보 드롭다운 -->
+    <!----------- 호스트 정보 드롭다운 --------->
 	<div class="headerUserWraper">
 		<a href="#" class="userHandler dropdown-toggle" data-toggle="dropdown"><span
 			class="icon-user"></span></a> 
@@ -24,7 +24,7 @@
 			</div>
 			<div class="clearfix"></div>
 		</a>
-		<!-- 반응형 드롭 -->
+		<!-------------- 반응형 드롭 ---------------->
 		<div class="dropdown-menu pull-right userMenu" role="menu">
 			<div class="mobAvatar">
 				<img class="avatar mobAvatarImg" src="/Yolo/images_yolo/host/profile.PNG"
@@ -41,7 +41,7 @@
 		</div>
 	</div>
 
-	<!-- 호스트 등록하기 -->
+	<!-------------- 호스트 등록하기 ---------->
 	<div class="headerUserWraper">
 	<a href="#" class="userHandler dropdown-toggle" data-toggle="dropdown"><span
 			class="icon-user-follow"></span></a> 
