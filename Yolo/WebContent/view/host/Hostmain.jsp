@@ -1,5 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,82 +15,81 @@
         <link href="/Yolo/css/fileinput.min.css" rel="stylesheet">
         <link href="/Yolo/css/bootstrap.css" rel="stylesheet">
         <link href="/Yolo/css/app.css" rel="stylesheet">
-
-        <!--[if lt IE 9]>
-          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
+        
+        <!-- 추가 css -->
+           <link href="/Yolo/css_yolo/cssView/Host/host.css" rel="stylesheet">
+       
     </head>
     <body class="notransition">
     
 		<!-- Header -->
-		<%@include file="/view/common/header.jsp"%>
+		<%@include file="/view/host/Hostheader.jsp"%>
 
-        <!-- Content -->
+        <!-- Content --> 
         <div id="wrapper" class="full">
-            <div id="mapView" class="min"><div class="mapPlaceholder"><span class="fa fa-spin fa-spinner"></span> Loading map...</div></div>
-            <div id="content" class="max">
-            	<div id="hero-container">
-		            <ul class="cb-slideshow">
-		                <li><span></span></li>
-		                <li><span></span></li>
-		                <li><span></span></li>
-		                <li><span></span></li>
-		                <li><span></span></li>
-		                <li><span></span></li>
-		            </ul>
+                <div id="content" class="max">
+            	<div id="hero-container" style="background-image: url("Yolo/images_yolo/lot/1.PNG");">
+		           
 		            <div class="home-caption">
-		                <div class="home-title">Now it's easy to find your future home</div>
-		                <div class="home-subtitle">With Reales - Real Estate HTML Template</div>
-		                <a href="#" class="btn btn-lg btn-black">Learn More</a>
+		                <div class="home-title">자신의 공간을 공유해보세요!</div>
+		                <div id="home_subtitle">With YOLO WOW LOT</div>
+		                   <div id="space" class="col-md-12">
+									<button id="bregister" class="btn btn-round  btn-o btn-green col-md-5">
+										<span class="icon-puzzle" aria-hidden="true"></span>공간 등록하기
+									</button>
+									<button id="bmanage" class="btn btn-round  btn-o btn-green col-md-5">
+										<span class="icon-wrench" aria-hidden="true"></span>공간 관리하기
+									</button>
+								</div>
+		    
 		            </div>
+		         
 		            <div class="search-panel">
 		           
 		            </div>
 		        </div>
 		        <div class="highlight">
-		            <div class="h-title osLight">Find your new place with Reales</div>
-		            <div class="h-text osLight">Fusce risus metus, placerat in consectetur eu, porttitor a est sed sed dolor lorem cras adipiscing</div>
+		            <div class="h-title osLight">Share your place with YoloWowLot</div>
+		            <div class="h-text osLight">It is easy to share your place</div>
 		        </div>
 	
-				<!-- 컨텐츠2 -->
+				<!-- ì»¨íì¸ 2 -->
 		       <div class="home-wrapper">
 		            <div class="home-content">
 		                <h2 class="osLight">Our Services</h2>
-		                <div class="row pb40">
+		                <div class="row">
+		                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 s-menu-item">
+		                            <span class="glyphicon glyphicon-th-large s-icon"></span>
+		                            <div class="s-content">
+		                                <h2 class="s-main osLight">내 공간보기</h2>
+		                                <h3 class="s-sub osLight">등록한 공간을 한 눈에 볼 수 있어요</h3>
+		                            </div>
+		                      
+		                    </div>
 		                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 s-menu-item">
 		                        <a href="#">
-		                            <span class="icon-pointer s-icon"></span>
+		                            <span class="glyphicon glyphicon-plus s-icon"></span>
 		                            <div class="s-content">
-		                                <h2 class="s-main osLight">Find places anywhere in the world</h2>
-		                                <h3 class="s-sub osLight">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+		                  	              <h2 class="s-main osLight">공간 등록</h2>
+		                                <h3 class="s-sub osLight">사람들에게 공유하고 싶은 자신의 공간을 등록할 수 있어요</h3>
 		                            </div>
 		                        </a>
 		                    </div>
 		                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 s-menu-item">
 		                        <a href="#">
-		                            <span class="icon-users s-icon"></span>
+		                            <span class="glyphicon glyphicon-user s-icon"></span>
 		                            <div class="s-content">
-		                                <h2 class="s-main osLight">We have agents with experience</h2>
-		                                <h3 class="s-sub osLight">Nulla convallis egestas rhoncus consectetur adipiscing elit</h3>
+		                                <h2 class="s-main osLight">예약 관리</h2>
+		                                <h3 class="s-sub osLight">나의 공간을 예약한 이용자들의 현황을 확인 할 수 있어요</h3>
 		                            </div>
 		                        </a>
 		                    </div>
 		                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 s-menu-item">
 		                        <a href="#">
-		                            <span class="icon-home s-icon"></span>
+		                            <span class="glyphicon glyphicon-comment s-icon"></span>
 		                            <div class="s-content">
-		                                <h2 class="s-main osLight">Buy or rent beautiful properties</h2>
-		                                <h3 class="s-sub osLight">Donec facilisis fermentum sem, ac viverra ante luctus vel</h3>
-		                            </div>
-		                        </a>
-		                    </div>
-		                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 s-menu-item">
-		                        <a href="#">
-		                            <span class="icon-cloud-upload s-icon"></span>
-		                            <div class="s-content">
-		                                <h2 class="s-main osLight">With agent account you can list properties</h2>
-		                                <h3 class="s-sub osLight">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+		                                <h2 class="s-main osLight">문의함</h2>
+		                                <h3 class="s-sub osLight">내 공간에 대한 질의응답을 할 수 있어요</h3>
 		                            </div>
 		                        </a>
 		                    </div>
@@ -138,7 +139,7 @@
         <script src="/Yolo/js/app.js"></script>
         <script src="/Yolo/js/calendar.js"></script>
         
-        <!-- 추가  -->
+        <!-- ì¶ê°  -->
 		<script src="/Yolo/js/home.js" type="text/javascript"></script>
 		
 		
