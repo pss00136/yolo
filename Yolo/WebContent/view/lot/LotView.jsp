@@ -17,7 +17,7 @@
 <link href="/Yolo/css/app.css" rel="stylesheet">
 <!-- 추가css -->
 <link rel="stylesheet" type="text/css"
-	href="/TestBoot/bootstrap/css/bootstrap-datetimepicker.css" />
+	href="/Yolo/css_yolo/cssPlugin/bootstrap-datetimepicker.css" />
 </head>
 <style type="text/css">
 .tags .tag {
@@ -502,8 +502,8 @@
 	<script src="/Yolo/js/bootstrap-datepicker.js"></script>
 	<script src="/Yolo/js/app.js" type="text/javascript"></script>
 	<!-- 추가 js -->
-	<script src="/TestBoot/bootstrap/js/bootstrap-datetimepicker.js"></script>
-	<script src="/TestBoot/bootstrap/js/bootstrap-datetimepicker.min.js"></script>
+	<script src="/Yolo/css_yolo/cssPlugin/bootstrap-datetimepicker.js"></script>
+	<script src="/Yolo/css_yolo/cssPlugin/bootstrap-datetimepicker.min.js"></script>
 	<script type="text/javascript">
 $(function(){
 	$(".form_datetime").datetimepicker({

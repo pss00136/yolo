@@ -1,60 +1,26 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-        <!-- Footer -->
-        <div class="home-footer">
-            <div class="home-wrapper">
-                <div class="row">
-                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                        <div class="osLight footer-header">Company</div>
-                        <ul class="footer-nav pb20">
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Jobs</a></li>
-                            <li><a href="#">Press</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="#">Help</a></li>
-                            <li><a href="#">Policies</a></li>
-                            <li><a href="#">Terms & Privacy</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                        <div class="osLight footer-header">Discover</div>
-                        <ul class="footer-nav pb20">
-                            <li><a href="#">Become a Member</a></li>
-                            <li><a href="#">Properties List</a></li>
-                            <li><a href="#">Sign In</a></li>
-                            <li><a href="#">Widgets</a></li>
-                            <li><a href="#">Components</a></li>
-                            <li><a href="#">Tables</a></li>
-                            <li><a href="#">Lists</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                        <div class="osLight footer-header">Get in Touch</div>
-                        <ul class="footer-nav pb20">
-                            <li class="footer-phone"><span class="fa fa-phone"></span> 800 234 67 89</li>
-                            <li class="footer-address osLight">
-                                <p>516 Green St</p>
-                                <p>San Francisco, CA 94133</p>
-                                <p>United States</p>
-                            </li>
-                            <li><a href="#" class="btn btn-sm btn-icon btn-round btn-o btn-white"><span class="fa fa-facebook"></span></a> <a href="#" class="btn btn-sm btn-icon btn-round btn-o btn-white"><span class="fa fa-twitter"></span></a> <a href="#" class="btn btn-sm btn-icon btn-round btn-o btn-white"><span class="fa fa-google-plus"></span></a> <a href="#" class="btn btn-sm btn-icon btn-round btn-o btn-white"><span class="fa fa-linkedin"></span></a> </li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                        <div class="osLight footer-header">Subscribe to Our Newsletter</div>
-                        <form role="form">
-                            <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Email Address">
-                            </div>
-                            <div class="form-group">
-                                <a href="#" class="btn btn-green btn-block">Subscribe</a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="copyright">Real estate web application<br> &copy; 2014</div>
-            </div>
-        </div>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>ShareList.jsp</title>
+<link href="/Yolo/css/font-awesome.css" rel="stylesheet">
+<link href="/Yolo/css/simple-line-icons.css" rel="stylesheet">
+<link href="/Yolo/css/fullscreen-slider.css" rel="stylesheet">
+<link href="/Yolo/css/bootstrap.css" rel="stylesheet">
+<link href="/Yolo/css/app.css" rel="stylesheet">
+</head>
+    <body class="notransition no-hidden">
+
+        
+        <!-- Content -->
+
+        
+
+        
 
         <div class="modal fade" id="signin" role="dialog" aria-labelledby="signinLabel" aria-hidden="true">
             <div class="modal-dialog modal-sm">
@@ -148,3 +114,16 @@
                 </div>
             </div>
         </div>
+
+        <script src="/Yolo/js/jquery-2.1.1.min.js"></script>
+        <script src="/Yolo/js/jquery-ui.min.js"></script>
+        <script src="/Yolo/js/jquery-ui-touch-punch.js"></script>
+        <script src="/Yolo/js/jquery.placeholder.js"></script>
+        <script src="/Yolo/js/bootstrap.js"></script>
+        <script src="/Yolo/js/jquery.touchSwipe.min.js"></script>
+        <script src="http://maps.googleapis.com/maps/api/js?sensor=true&amp;libraries=geometry&amp;libraries=places" type="text/javascript"></script>
+        <script src="/Yolo/js/infobox.js"></script>
+        <script src="/Yolo/js/jquery.visible.js"></script>
+        <script src="/Yolo/js/home.js" type="text/javascript"></script>
+    </body>
+</html>

@@ -19,12 +19,12 @@
     
     <!-- Common CSS -->
     <link href="/Yolo/css/font-awesome.css" rel="stylesheet">
-       <link href="/Yolo/css/simple-line-icons.css" rel="stylesheet">
-       <link href="/Yolo/css/jquery-ui.css" rel="stylesheet">
-        <link href="/Yolo/css/datepicker.css" rel="stylesheet">
-        <link href="/Yolo/css/fileinput.min.css" rel="stylesheet">
-        <link href="/Yolo/css/bootstrap.css" rel="stylesheet">
-        <link href="/Yolo/css/app.css" rel="stylesheet">
+     <link href="/Yolo/css/simple-line-icons.css" rel="stylesheet">
+     <link href="/Yolo/css/jquery-ui.css" rel="stylesheet">
+     <link href="/Yolo/css/datepicker.css" rel="stylesheet">
+     <link href="/Yolo/css/fileinput.min.css" rel="stylesheet">
+     <link href="/Yolo/css/bootstrap.css" rel="stylesheet">
+     <link href="/Yolo/css/app.css" rel="stylesheet">
 </head>
 <body class="notransition">
     
