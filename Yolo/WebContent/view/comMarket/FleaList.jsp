@@ -18,7 +18,7 @@
 <link href="/Yolo/css/fileinput.min.css" rel="stylesheet">
 
 <!-- 추가 속성 CSS -->
-<!-- <link href="/Yolo/css_yolo/cssView/Club/clubList.css" rel="stylesheet"> -->
+
 
 
 <!--[if lt IE 9]>
@@ -75,8 +75,9 @@
 <body class="notransition no-hidden">
 	<!-- Header -->
 	<%@include file="/view/common/header.jsp"%>
-
-	<!-- Content -->
+	<!-- / Header -->
+	
+	
 	<div id="wrapper" class="full">
 		<div id="mapView" class="min">
 			<div class="mapPlaceholder">
@@ -84,25 +85,31 @@
 			</div>
 		</div>
 		<div id="content" class="max">
+			
 			<!-- -----------------여기에 컨텐츠 div넣으세요----------------- -->
-			<!-- 이 사이에! -->
-			<!-- Content -->
 		
 			<div class="blog-content">
 				<div class="home-wrapper">
-				<div class="input-btn"><a href="#" class="btn btn-round btn-green btn-sm">상품 등록하기</a></div>
+				
+				<!-- 상품 등록하기 버튼 -->
+				<div class="input-btn">
+					<a href="#" class="btn btn-round btn-green btn-sm">상품 등록하기</a>
+				</div><!-- / 상품 등록하기 버튼 -->
+					
+					
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+						<!-- 플리마켓, 상품 Tab  -->
 							<div class="tabsContainer">
 								<ul class="nav nav-tabs nav-justified" role="tablist">
 									<li class="active"><a href="#home" role="tab"
-										data-toggle="tab"><span class="icon-home"></span> FLEA
-											MARKET</a></li>
+										data-toggle="tab"><span class="icon-home"></span> FLEA MARKET</a></li>
 									<li><a href="#profile" role="tab" data-toggle="tab"><span
 											class="icon-handbag"></span> GOODS</a></li>
 								</ul>
-								<!-- fleamarket content -->
+																
 								<div class="tab-content">
+									<!-- 플리마켓 content -->
 									<div class="tab-pane fade in active" id="home">
 										<div class="row">
 											<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
@@ -190,10 +197,9 @@
 											</a>
 											<div class="clearfix"></div>
 										</div>
-									</div>
+									</div><!-- / 플리마켓 content -->
 
-
-									<!-- goods content -->
+									<!-- 상품 content -->
 									<div class="tab-pane fade" id="profile">
 									
 										<label><h5>Category</h5></label>
@@ -333,26 +339,31 @@
 											</div>
 										</div>
 										<div class="blog-pagination">
-											<a href="#" class="btn btn-o btn-round btn-green"><span
-												class="fa fa-angle-left"></span> Older Articles</a> <a href="#"
-												class="btn btn-o btn-round btn-green pull-right">Newer
-												Articles <span class="fa fa-angle-right"></span>
+											<!-- 이전버튼 -->
+											<a href="#" class="btn btn-o btn-round btn-green">
+											<span class="fa fa-angle-left"></span> Older Articles</a> 
+											<!-- 다음버튼 -->
+											<a href="#" class="btn btn-o btn-round btn-green pull-right">Newer Articles 
+											<span class="fa fa-angle-right"></span>
 											</a>
-											<div class="clearfix"></div>
-										</div>
-									</div>
+										</div>										
+									</div><!-- / 상품 content -->
 								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+								 
+							</div> <!-- / 플리마켓, 상품 Tab -->
+						</div> <!-- / col-xs-12 col-sm-12 col-md-9 col-lg-9 -->
+					</div> <!-- / row -->
+				</div> <!-- / home-wrapper -->
 				<!-- ------------------------------------------------------- -->
 				<!-- Footer -->
 				<%@include file="/view/common/footer.jsp"%>
-
-			</div>
+			</div> <!-- / blog-content -->
+			
 			<div class="clearfix"></div>
-		</div>
+			
+		</div> <!-- / Content -->
+	</div> <!-- / wrapper -->
+		
 		<script src="/Yolo/js/jquery-2.1.1.min.js"></script>
 		<script src="/Yolo/js/jquery-ui.min.js"></script>
 		<script src="/Yolo/js/jquery-ui-touch-punch.js"></script>

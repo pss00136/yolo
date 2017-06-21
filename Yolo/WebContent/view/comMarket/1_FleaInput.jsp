@@ -41,7 +41,6 @@ form {display : inline;}
 	<!-- Header -->
 	<%@include file="/view/common/header.jsp"%>
 
-	<!-- Content -->
 	<div id="wrapper" class="full">
 		<div id="mapView" class="min">
 			<div class="mapPlaceholder">
@@ -51,22 +50,22 @@ form {display : inline;}
 		<div id="content" class="max">
 		
 			<!-- -----------------여기에 컨텐츠 div넣으세요----------------- -->
-			<!-- 이 사이에! -->
 
-			<!-- Content -->
 			<div class="blog-content">
 				<div class="home-wrapper">
 					<div class="panel-group" id="accordion">
-
+						
+						<!-- 처음 등록이 아닌 사람 -->
 						<div class="panel panel-default dd">
 							<a href="#ddPanel-2"
 								class="btn btn-o btn-default btn-block btn-lg align-left"
 								data-toggle="collapse" data-parent="#accordion"> 
 								모임 상품 등록이 처음이 아니신가요?<span class="fa fa-angle-down pull-right" />
 							</a>
+									
+							<!-- 처음이 아닌 사람 본문 -->							
 							<div id="ddPanel-2" class="panel-collapse collapse">
 								<div class="panel-body">
-									<!-- 처음이 아닌 사람 -->
 									<div class="panel panel-default">
 										<div class="panel-heading">모임 선택하기</div>
 										<div class="table-overflow">
@@ -107,6 +106,7 @@ form {display : inline;}
                                              <input type="file" class="file" multiple data-show-upload="false" data-show-caption="false" data-show-remove="false" accept="image/jpeg,image/png" data-browse-class="btn btn-o btn-default" data-browse-label="Browse Images">
                                          </div>
                                     </div>
+                                    <!-- 다음버튼 -->
                                     <div id="nextbtn" class="col-md-12">
                                     	<div class="col-md-5"></div>
 											<button class="col-md-2 btn btn-round btn-o btn-green">다 음
@@ -114,15 +114,18 @@ form {display : inline;}
 										<div class="col-md-5"></div>
 									</div>
 								</div>
-							</div>
-						</div>
+							</div> <!-- / 처음이 아닌 사람 본문 -->
+						</div> <!-- / 처음 등록이 아닌 사람 -->
 
+						<!-- 처음 등록하는 사람 -->
 						<div class="panel panel-default dd">
 							<a href="#ddPanel-3"
 								class="btn btn-o btn-default btn-block btn-lg align-left"
 								data-toggle="collapse" data-parent="#accordion"> 
 								모임 상품 등록이 처음이신가요?<span class="fa fa-angle-down pull-right" />
 							</a>
+							
+							<!-- 처음 등록하는 사람 본문 -->
 							<div id="ddPanel-3" class="panel-collapse collapse">
 								<div class="panel-body">
 									<!-- 처음인 사람 -->
@@ -136,27 +139,28 @@ form {display : inline;}
                                              <input type="file" class="file" multiple data-show-upload="false" data-show-caption="false" data-show-remove="false" accept="*" data-browse-class="btn btn-o btn-default" data-browse-label="Browse File">
                                          </div>
                                     </div>
+                                    <!-- 다음 버튼 -->
                                     <div id="nextbtn" class="col-md-12">
                                     	<div class="col-md-5"></div>
-											<button class="col-md-2 btn btn-round btn-o btn-green">다 음
-										</button>
+											<button class="col-md-2 btn btn-round btn-o btn-green">다 음</button>
 										<div class="col-md-5"></div>
 									</div>
 								</div>
-							</div>
-						</div>
+							</div> <!-- / 처음 등록하는 사람 본문-->
+						</div> <!-- / 처음 등록하는 사람 -->
 
-					</div>
-				</div>
-				<div class="clearfix"></div>
-			</div>
+					</div> <!-- / panel-group -->
+				</div> <!-- / home-wrapper -->
+			</div> <!-- / blog-content -->
 			<!-- ------------------------------------------------------- -->
 			<!-- Footer -->
-			<%-- 				<%@include file="/view/common/footer.jsp"%> --%>
+<%-- 							<%@include file="/view/common/footer.jsp"%> --%>
 
-		</div>
+		</div> <!-- /content -->
 		<div class="clearfix"></div>
-	</div>
+	</div> <!-- / wrapper -->
+	
+	
 	<script src="/Yolo/js/jquery-2.1.1.min.js"></script>
 	<script src="/Yolo/js/jquery-ui.min.js"></script>
 	<script src="/Yolo/js/jquery-ui-touch-punch.js"></script>
