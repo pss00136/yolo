@@ -10,11 +10,11 @@
 
         <link href="/Yolo/css/font-awesome.css" rel="stylesheet">
         <link href="/Yolo/css/simple-line-icons.css" rel="stylesheet">
-        <link href="/Yolo/css/jquery-ui.css" rel="stylesheet">
-        <link href="/Yolo/css/datepicker.css" rel="stylesheet">
         <link href="/Yolo/css/fileinput.min.css" rel="stylesheet">
         <link href="/Yolo/css/bootstrap.css" rel="stylesheet">
-        <link href="/Yolo/css/app.css" rel="stylesheet">
+        <link href="/Yolo/css/fullscreen-slider.css" rel="stylesheet">
+<!--         <link href="/Yolo/css/app.css" rel="stylesheet"> -->
+        <link href="/Yolo/css_yolo/cssView/common/app.css" rel="stylesheet">
 
         <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -40,14 +40,14 @@
 		                <li><span></span></li>
 		            </ul>
 		            <div class="home-caption">
-		                <div class="home-title">Now it's easy to find your future home</div>
-		                <div class="home-subtitle">With Reales - Real Estate HTML Template</div>
-		                <a href="#" class="btn btn-lg btn-black">Learn More</a>
+		                <div class="home-title">인생을 즐길 줄 아는 사람들을 위한 공간 공유 서비스</div>
+		                <div class="home-subtitle">Yolo Wow Lot</div>
+<!-- 		                <a href="#" class="btn btn-lg btn-black">Learn More</a> -->
 		            </div>
 		            <div class="search-panel">
 		                <form class="form-inline" role="form">
 		                    <div class="form-group">
-		                        <input type="text" class="form-control" id="city" placeholder="City" autocomplete="off">
+<!-- 		                        <input type="text" class="form-control" id="city" placeholder="City" autocomplete="off"> -->
 		                    </div>
 		                    <div class="form-group hidden-xs adv">
 		                        <a href="#" data-toggle="dropdown" class="btn btn-white dropdown-toggle">
@@ -268,108 +268,7 @@
 		                        </a>
 		                    </div>
 		                </div>
-		                <h2 class="osLight">Our Agents</h2>
-		                <div class="row pb40">
-		                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-		                        <div class="agent">
-		                            <a href="profile.html" class="agent-avatar">
-		                                <img src="/Yolo/images/avatar-1.png" alt="John Smith">
-		                                <div class="ring"></div>
-		                            </a>
-		                            <div class="agent-name osLight">John Smith</div>
-		                            <div class="agent-rating">
-		                                <span class="fa fa-star text-yellow"></span>
-		                                <span class="fa fa-star text-yellow"></span>
-		                                <span class="fa fa-star text-yellow"></span>
-		                                <span class="fa fa-star text-yellow"></span>
-		                                <span class="fa fa-star text-yellow"></span>
-		                            </div>
-		                            <div class="agent-contact">
-		                                <a href="#" class="btn btn-sm btn-icon btn-round btn-o btn-green"><span class="fa fa-envelope-o"></span></a> <a href="#" class="btn btn-sm btn-icon btn-round btn-o btn-facebook"><span class="fa fa-facebook"></span></a> <a href="#" class="btn btn-sm btn-icon btn-round btn-o btn-twitter"><span class="fa fa-twitter"></span></a> <a href="#" class="btn btn-sm btn-icon btn-round btn-o btn-google"><span class="fa fa-google-plus"></span></a>
-		                            </div>
-		                        </div>
-		                    </div>
-		                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-		                        <div class="agent">
-		                            <a href="profile.html" class="agent-avatar">
-		                                <img src="/Yolo/images/avatar-2.png" alt="Jane Smith">
-		                                <div class="ring"></div>
-		                            </a>
-		                            <div class="agent-name osLight">Jane Smith</div>
-		                            <div class="agent-rating">
-		                                <span class="fa fa-star text-yellow"></span>
-		                                <span class="fa fa-star text-yellow"></span>
-		                                <span class="fa fa-star text-yellow"></span>
-		                                <span class="fa fa-star text-yellow"></span>
-		                                <span class="fa fa-star text-yellow"></span>
-		                            </div>
-		                            <div class="agent-contact">
-		                                <a href="#" class="btn btn-sm btn-icon btn-round btn-o btn-green"><span class="fa fa-envelope-o"></span></a> <a href="#" class="btn btn-sm btn-icon btn-round btn-o btn-facebook"><span class="fa fa-facebook"></span></a> <a href="#" class="btn btn-sm btn-icon btn-round btn-o btn-twitter"><span class="fa fa-twitter"></span></a> <a href="#" class="btn btn-sm btn-icon btn-round btn-o btn-google"><span class="fa fa-google-plus"></span></a>
-		                            </div>
-		                        </div>
-		                    </div>
-		                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-		                        <div class="agent">
-		                            <a href="profile.html" class="agent-avatar">
-		                                <img src="/Yolo/images/avatar-3.png" alt="Rust Cohle">
-		                                <div class="ring"></div>
-		                            </a>
-		                            <div class="agent-name osLight">Rust Cohle</div>
-		                            <div class="agent-rating">
-		                                <span class="fa fa-star text-yellow"></span>
-		                                <span class="fa fa-star text-yellow"></span>
-		                                <span class="fa fa-star text-yellow"></span>
-		                                <span class="fa fa-star text-yellow"></span>
-		                                <span class="fa fa-star text-yellow"></span>
-		                            </div>
-		                            <div class="agent-contact">
-		                                <a href="#" class="btn btn-sm btn-icon btn-round btn-o btn-green"><span class="fa fa-envelope-o"></span></a> <a href="#" class="btn btn-sm btn-icon btn-round btn-o btn-facebook"><span class="fa fa-facebook"></span></a> <a href="#" class="btn btn-sm btn-icon btn-round btn-o btn-twitter"><span class="fa fa-twitter"></span></a> <a href="#" class="btn btn-sm btn-icon btn-round btn-o btn-google"><span class="fa fa-google-plus"></span></a>
-		                            </div>
-		                        </div>
-		                    </div>
-		                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-		                        <div class="agent">
-		                            <a href="profile.html" class="agent-avatar">
-		                                <img src="/Yolo/images/avatar-4.png" alt="Antony Iglesias">
-		                                <div class="ring"></div>
-		                            </a>
-		                            <div class="agent-name osLight">Antony Iglesias</div>
-		                            <div class="agent-rating">
-		                                <span class="fa fa-star text-yellow"></span>
-		                                <span class="fa fa-star text-yellow"></span>
-		                                <span class="fa fa-star text-yellow"></span>
-		                                <span class="fa fa-star text-yellow"></span>
-		                                <span class="fa fa-star text-yellow"></span>
-		                            </div>
-		                            <div class="agent-contact">
-		                                <a href="#" class="btn btn-sm btn-icon btn-round btn-o btn-green"><span class="fa fa-envelope-o"></span></a> <a href="#" class="btn btn-sm btn-icon btn-round btn-o btn-facebook"><span class="fa fa-facebook"></span></a> <a href="#" class="btn btn-sm btn-icon btn-round btn-o btn-twitter"><span class="fa fa-twitter"></span></a> <a href="#" class="btn btn-sm btn-icon btn-round btn-o btn-google"><span class="fa fa-google-plus"></span></a>
-		                            </div>
-		                        </div>
-		                    </div>
-		                </div>
-		                <h2 class="osLight">Testimonials</h2>
-		                <div id="home-testimonials" class="carousel slide carousel-wb mb20" data-ride="carousel">
-		                    <ol class="carousel-indicators">
-		                        <li data-target="#home-testimonials" data-slide-to="0" class="active"></li>
-		                        <li data-target="#home-testimonials" data-slide-to="1" class=""></li>
-		                    </ol>
-		                    <div class="carousel-inner">
-		                        <div class="item active">
-		                            <img src="/Yolo/images/avatar-2.png" class="home-testim-avatar" alt="Jane Smith">
-		                            <div class="home-testim">
-		                                <div class="home-testim-text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words</div>
-		                                <div class="home-testim-name">Jane Smith</div>
-		                            </div>
-		                        </div>
-		                        <div class="item">
-		                            <img src="/Yolo/images/avatar-3.png" class="home-testim-avatar" alt="Rust Cohle">
-		                            <div class="home-testim">
-		                                <div class="home-testim-text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words</div>
-		                                <div class="home-testim-name">Rust Cohle</div>
-		                            </div>
-		                        </div>
-		                    </div>
-		                </div>
+		                
 		            </div>
 		        </div>
 		        
