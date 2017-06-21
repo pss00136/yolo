@@ -52,13 +52,13 @@
 		</div>
 		<div id="content" class="max">
 			<!-- -----------------여기에 컨텐츠 div넣으세요----------------- -->
-			<!-- 이 사이에! -->
+			<!-- 이 사이에!  -->
 			<div class="row">
 				<div class="col-lg-12 responsive">
 					<h1 class="page-header">
 						내 플리마켓 <small>상품 정보</small>
 					</h1>
-
+			
 				</div>
 			</div>
 			<!-- /.row -->
