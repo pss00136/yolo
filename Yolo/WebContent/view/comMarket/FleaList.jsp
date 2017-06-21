@@ -29,7 +29,10 @@
 <style>
 .home-wrapper {
 	margin-top: 0px;
-	padding-top: 0;
+}
+
+#wrapper{
+	overflow: hidden;
 }
 
 .col-lg-12 {
