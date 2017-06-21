@@ -41,6 +41,18 @@
 .blog-r-nav{
     padding-bottom: 0px;
 }
+
+a.handleFilter{
+	margin: 5px 5px 0 0;
+}
+
+.article h4 {
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0 20px;
+    line-height: 26px;
+}
 </style>
 <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -110,7 +122,7 @@
 									<div class="filter">
 										<h1 class="osLight">회원리스트 보기</h1>
 										<a href="#" class="handleFilter"><span
-											class="icon-equalizer"></span></a>
+											class="fa fa-bars"></span></a>
 										<div class="clearfix"></div>
 										<form class="filterForm">
 											<h2 class="osLight h-r align-center">회원 리스트</h2>
@@ -266,10 +278,10 @@
 										<div class="article-category">
 											<a href="#" class="text-green">Architecture</a>
 										</div>
-										<h3 class="osLight">
+										<h4 class="osLight">
 											<a href="blog-post.html">Stylish Modern Ranch Exuding a
 												Welcoming Feel</a>
-										</h3>
+										</h4>
 										<div class="footer">
 											<a href="#">John Smith</a>, <a href="#">Sep 3, 2014</a>
 										</div>
@@ -282,10 +294,10 @@
 										<div class="article-category">
 											<a href="#" class="text-green">Architecture</a>
 										</div>
-										<h3 class="osLight">
+										<h4 class="osLight">
 											<a href="blog-post.html">Private Contemporary Home
 												Balancing Openness</a>
-										</h3>
+										</h4>
 										<div class="footer">
 											<a href="#">John Smith</a>, <a href="#">Sep 2, 2014</a>
 										</div>
@@ -298,10 +310,10 @@
 										<div class="article-category">
 											<a href="#" class="text-green">Architecture</a>
 										</div>
-										<h3 class="osLight">
+										<h4 class="osLight">
 											<a href="blog-post.html">Modern Two-Level Pool House in
 												Los Angeles</a>
-										</h3>
+										</h4>
 										<div class="footer">
 											<a href="#">John Smith</a>, <a href="#">Sep 1, 2014</a>
 										</div>
@@ -314,10 +326,10 @@
 										<div class="article-category">
 											<a href="#" class="text-green">Architecture</a>
 										</div>
-										<h3 class="osLight">
+										<h4 class="osLight">
 											<a href="blog-post.html">Modern Two-Level Pool House in
 												Los Angeles</a>
-										</h3>
+										</h4>
 										<div class="footer">
 											<a href="#">John Smith</a>, <a href="#">Sep 1, 2014</a>
 										</div>
@@ -330,10 +342,10 @@
 										<div class="article-category">
 											<a href="#" class="text-green">Architecture</a>
 										</div>
-										<h3 class="osLight">
+										<h4 class="osLight">
 											<a href="blog-post.html">Modern Two-Level Pool House in
 												Los Angeles</a>
-										</h3>
+										</h4>
 										<div class="footer">
 											<a href="#">John Smith</a>, <a href="#">Sep 1, 2014</a>
 										</div>
@@ -346,10 +358,10 @@
 										<div class="article-category">
 											<a href="#" class="text-green">Architecture</a>
 										</div>
-										<h3 class="osLight">
+										<h4 class="osLight">
 											<a href="blog-post.html">Modern Two-Level Pool House in
 												Los Angeles</a>
-										</h3>
+										</h4>
 										<div class="footer">
 											<a href="#">John Smith</a>, <a href="#">Sep 1, 2014</a>
 										</div>
@@ -362,10 +374,10 @@
 										<div class="article-category">
 											<a href="#" class="text-green">Architecture</a>
 										</div>
-										<h3 class="osLight">
+										<h4 class="osLight">
 											<a href="blog-post.html">Modern Two-Level Pool House in
 												Los Angeles</a>
-										</h3>
+										</h4>
 										<div class="footer">
 											<a href="#">John Smith</a>, <a href="#">Sep 1, 2014</a>
 										</div>
@@ -378,10 +390,10 @@
 										<div class="article-category">
 											<a href="#" class="text-green">Architecture</a>
 										</div>
-										<h3 class="osLight">
+										<h4 class="osLight">
 											<a href="blog-post.html">Modern Two-Level Pool House in
 												Los Angeles</a>
-										</h3>
+										</h4>
 										<div class="footer">
 											<a href="#">John Smith</a>, <a href="#">Sep 1, 2014</a>
 										</div>
@@ -394,10 +406,10 @@
 										<div class="article-category">
 											<a href="#" class="text-green">Architecture</a>
 										</div>
-										<h3 class="osLight">
+										<h4 class="osLight">
 											<a href="blog-post.html">Modern Two-Level Pool House in
 												Los Angeles</a>
-										</h3>
+										</h4>
 										<div class="footer">
 											<a href="#">John Smith</a>, <a href="#">Sep 1, 2014</a>
 										</div>

@@ -17,6 +17,15 @@
 <!-- Custom CSS -->
 <link href="/Yolo/css_yolo/cssView/MyMarket/portfolio-item.css"
 	rel="stylesheet">
+	<style type="text/css">
+	.article h4 {
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0 20px;
+    line-height: 26px;
+}
+	</style>
 
 <!-- Common CSS -->
 		<link href="/Yolo/css/font-awesome.css" rel="stylesheet">
@@ -100,10 +109,10 @@
 								<div class="article-category">
 									<a href="#" class="text-green">Architecture</a>
 								</div>
-								<h3 class="osLight">
+								<h4 class="osLight">
 									<a href="blog-post.html">Stylish Modern Ranch Exuding a
 										Welcoming Feel</a>
-								</h3>
+								</h4>
 								<div class="footer">
 									<a href="#" class="btn btn-round btn-o btn-blue col-xs-6 col-md-6">수정</a>
 									<a href="#" class="btn btn-round btn-o btn-red col-xs-6 col-md-6">삭제</a>
@@ -117,10 +126,10 @@
 								<div class="article-category">
 									<a href="#" class="text-green">Architecture</a>
 								</div>
-								<h3 class="osLight">
+								<h4 class="osLight">
 									<a href="blog-post.html">Private Contemporary Home
 										Balancing Openness</a>
-								</h3>
+								</h4>
 								<div class="footer">
 									<a href="#" class="btn btn-round btn-o btn-blue col-xs-6 col-md-6">수정</a>
 									<a href="#" class="btn btn-round btn-o btn-red col-xs-6 col-md-6">삭제</a>
@@ -134,10 +143,10 @@
 								<div class="article-category">
 									<a href="#" class="text-green">Architecture</a>
 								</div>
-								<h3 class="osLight">
+								<h4 class="osLight">
 									<a href="blog-post.html">Modern Two-Level Pool House in Los
 										Angeles</a>
-								</h3>
+								</h4>
 								<div class="footer">
 									<a href="#" class="btn btn-round btn-o btn-blue col-xs-6 col-md-6">수정</a>
 									<a href="#" class="btn btn-round btn-o btn-red col-xs-6 col-md-6">삭제</a>
@@ -153,10 +162,10 @@
 								<div class="article-category">
 									<a href="#" class="text-green">Architecture</a>
 								</div>
-								<h3 class="osLight">
+								<h4 class="osLight">
 									<a href="blog-post.html">Stylish Modern Ranch Exuding a
 										Welcoming Feel</a>
-								</h3>
+								</h4>
 								<div class="footer">
 									<a href="#" class="btn btn-round btn-o btn-blue col-xs-6 col-md-6">수정</a>
 									<a href="#" class="btn btn-round btn-o btn-red col-xs-6 col-md-6">삭제</a>
@@ -170,10 +179,10 @@
 								<div class="article-category">
 									<a href="#" class="text-green">Architecture</a>
 								</div>
-								<h3 class="osLight">
+								<h4 class="osLight">
 									<a href="blog-post.html">Private Contemporary Home
 										Balancing Openness</a>
-								</h3>
+								</h4>
 								<div class="footer">
 									<a href="#" class="btn btn-round btn-o btn-blue col-xs-6 col-md-6">수정</a>
 									<a href="#" class="btn btn-round btn-o btn-red col-xs-6 col-md-6">삭제</a>
@@ -187,10 +196,10 @@
 								<div class="article-category">
 									<a href="#" class="text-green">Architecture</a>
 								</div>
-								<h3 class="osLight">
+								<h4 class="osLight">
 									<a href="blog-post.html">Modern Two-Level Pool House in Los
 										Angeles</a>
-								</h3>
+								</h4>
 								<div class="footer">
 									<a href="#" class="btn btn-round btn-o btn-blue col-xs-6 col-md-6">수정</a>
 									<a href="#" class="btn btn-round btn-o btn-red col-xs-6 col-md-6">삭제</a>
