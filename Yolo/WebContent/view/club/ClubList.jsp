@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-        <title>reales | real estate web application</title>
+        <title>ClubList</title>
 
         <link href="/Yolo/css/font-awesome.css" rel="stylesheet">
         <link href="/Yolo/css/simple-line-icons.css" rel="stylesheet">
@@ -192,7 +192,7 @@
                 <div class="resultsList">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                            <a href="single.html" class="card">
+                            <a href="ClubDetail.jsp" class="card">
                                 <div class="figure">
                                     <img src="/Yolo/images/prop/1-1.png" alt="image">
                                     <div class="figCaption">

@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-        <title>reales | real estate web application</title>
+        <title>ClubDetail</title>
 
         <link href="/Yolo/css/font-awesome.css" rel="stylesheet">
         <link href="/Yolo/css/simple-line-icons.css" rel="stylesheet">
@@ -44,7 +44,7 @@
                         </ol>
                         <div class="carousel-inner">
                             <div class="item active">
-                                <img src="/Yolo/images/prop/4-1.png" alt="First slide">
+                                <img src="/Yolo/images_yolo/club/wooden1.jpg" alt="First slide">
                                 <div class="container">
                                     <div class="carousel-caption">
                                         
@@ -52,7 +52,7 @@
                                 </div>
                             </div>
                             <div class="item">
-                                <img src="/Yolo/images/prop/4-2.png" alt="Second slide">
+                                <img src="/Yolo/images_yolo/club/wooden2.jpg" alt="Second slide">
                                 <div class="container">
                                     <div class="carousel-caption">
                                         
@@ -60,7 +60,7 @@
                                 </div>
                             </div>
                             <div class="item">
-                                <img src="/Yolo/images/prop/4-3.png" alt="Third slide">
+                                <img src="/Yolo/images_yolo/club/wooden3.jpg" alt="Third slide">
                                 <div class="container">
                                     <div class="carousel-caption">
                                         
