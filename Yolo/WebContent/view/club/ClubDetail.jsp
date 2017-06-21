@@ -16,7 +16,8 @@
         <link href="/Yolo/css/app.css" rel="stylesheet">
         
         <!-- 추가 속성 CSS -->
-        <link href="/Yolo/css_yolo/cssView/Club/clubList.css" rel="stylesheet">
+        <link href="/Yolo/css_yolo/cssView/Club/clubDetail.css" rel="stylesheet">
+        <link href="/Yolo/css_yolo/cssView/Club/tagPlus.css" rel="stylesheet">
 
         <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -26,11 +27,12 @@
     <body class="notransition">
 
        	<!-- Header -->
-		<%@include file="/view/common/header_noMap.jsp"%>
+		<%@include file="/view/common/header.jsp"%>
 
         <!-- Content -->
 
         <div id="wrapper">
+            <div id="mapView" class="mob-min"><div class="mapPlaceholder"><span class="fa fa-spin fa-spinner"></span> Loading map...</div></div>
             <div id="content" class="mob-max">
                 <div class="singleTop">
                     <div id="carouselFull" class="carousel slide" data-ride="carousel">
@@ -81,26 +83,31 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
                                 <div class="summaryItem">
-                                    <h1 class="pageTitle">Modern Residence in New York</h1>
-                                    <div class="address"><span class="icon-pointer"></span> 39 Remsen St, Brooklyn, NY 11201, USA</div>
-                                    <ul class="rating">
-                                        <li><a href="#"><span class="fa fa-star"></span></a></li>
-                                        <li><a href="#"><span class="fa fa-star"></span></a></li>
-                                        <li><a href="#"><span class="fa fa-star"></span></a></li>
-                                        <li><a href="#"><span class="fa fa-star"></span></a></li>
-                                        <li><a href="#"><span class="fa fa-star-o"></span></a></li>
-                                        <li>(146)</li>
-                                    </ul>
+                                    <h1 class="pageTitle">목공예 기초과정 7월 (토) 주말반(스툴 만들기)</h1>
+                                    <div class="address"><span class="icon-pointer"></span>서울 용산구 후암동 서울특별시 용산구 후암로 38, 지하 1층</div>
+                                    <ul class="users">
+                                    	<li><span class="icon-users"></span> 총 30 명</li>
+                                    	<li> / 10명 신청가능</li>
+                                   	</ul>
                                     <div class="favLink"><a href="#"><span class="icon-heart"></span></a>54</div>
                                     <ul class="stats">
                                         <li><span class="icon-eye"></span> 200</li>
                                         <li><span class="icon-bubble"></span> 13</li>
                                     </ul>
                                     <div class="clearfix"></div>
+                                   <ul class="tags">
+                                        <li><span style="cursor: pointer;">#목공교육</span></li>
+                                        <li><span style="cursor: pointer;">#가구제작</span> </li>
+                                        <li><span class="tag" style="cursor: pointer;">#가구디자인</span></li>
+                                        <li><span class="tag" style="cursor: pointer;">#가구공방</span></li>
+                                        <li><span class="tag" style="cursor: pointer;">#목공배우기</span></li>
+                                        <li><span class="tag" style="cursor: pointer;">#욜루와랏</span></li>
+                                    </ul>
+									<div class="clearfix"></div>
                                     <ul class="features">
-                                        <li><span class="fa fa-moon-o"></span><div>2 Bedrooms</div></li>
-                                        <li><span class="icon-drop"></span><div>2 Bathrooms</div></li>
-                                        <li><span class="icon-frame"></span><div>2750 Sq Ft</div></li>
+                                        <li><span class="fa fa-calendar-o"> 신청기간</span><div>6월 19일 (월) ~ 6월 30일 (금)</div></li>
+                                        <li><span class="fa fa-clock-o"> 활동주기</span><div>정기적</div></li>
+                                        <li><span class="fa fa-calendar"> 모임기간</span><div>7월 8일 (토) ~ 7월 29일 (토)</div></li>
                                     </ul>
                                     <div class="clearfix"></div>
                                 </div>
@@ -110,7 +117,11 @@
                                      <div class="clearfix"></div>
                                     <img class="avatar agentAvatarImg" src="/Yolo/images/avatar-2.png" alt="avatar">
                                     <div class="agentName">Jane Smith</div>
-                                    <a data-toggle="modal" href="#contactAgent" class="btn btn-lg btn-round btn-green contactBtn">Contact Agent</a>
+                                </div>
+                                <div class="mainFunction summaryItem">
+                                     <div class="clearfix"></div>
+                                    <a data-toggle="modal" href="#contactAgent" class="btn btn-lg btn-round btn-green contactBtn">문의하기</a>
+                                    <a href="#confirmSigning" class="btn btn-lg btn-round btn-green applyBtn">신청하기</a>
                                 </div>
                             </div>
                         </div>
@@ -118,543 +129,26 @@
                 </div>
                 <div class="clearfix"></div>
                 <div class="description">
-                    <h3>Description</h3>
-                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                    <h3>상세설명</h3>
+                    <p>이 강좌는 해쉬에서 디자인된 원목 스툴만들기 목공예 기초과정입니다. 원목의 특징, 수종, 구조의 체계적인 이론을 배우며 원목가공에 필요한 기계 및 장비사용법과 안전사항을 숙지합니다. 가구제작에 필수적인 재단방법, 결합방법, 마감등 체계적으로 배울 수 있는 정규교육과정입니다.</p>
                 </div>
-                <div class="share">
-                    <h3>Share on Social Networks</h3>
-                    <div class="row">
-                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 shareItem">
-                            <a href="#" class="btn btn-sm btn-round btn-o btn-facebook"><span class="fa fa-facebook"></span> Facebook</a>
-                        </div>
-                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 shareItem">
-                            <a href="#" class="btn btn-sm btn-round btn-o btn-twitter"><span class="fa fa-twitter"></span> Twitter</a>
-                        </div>
-                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 shareItem">
-                            <a href="#" class="btn btn-sm btn-round btn-o btn-google"><span class="fa fa-google-plus"></span> Google+</a>
-                        </div>
-                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 shareItem">
-                            <a href="#" class="btn btn-sm btn-round btn-o btn-pinterest"><span class="fa fa-pinterest"></span> Pinterest</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="amenities">
-                    <h3>Amenities</h3>
-                    <div class="row">
-                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem"><span class="fa fa-car"></span> Garage</div>
-                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem"><span class="fa fa-tint"></span> Outdoor Pool</div>
-                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem inactive"><span class="fa fa-leaf"></span> Garden</div>
-                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem inactive"><span class="fa fa-shield"></span> Security System</div>
-                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem"><span class="fa fa-wifi"></span> Internet</div>
-                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem inactive"><span class="fa fa-phone"></span> Telephone</div>
-                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem"><span class="fa fa-asterisk"></span> Air Conditioning</div>
-                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem inactive"><span class="fa fa-sun-o"></span> Heating</div>
-                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem"><span class="fa fa-fire"></span> Fireplace</div>
-                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem"><span class="fa fa-arrows-v"></span> Balcony</div>
-                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem"><span class="fa fa-desktop"></span> TV Cable</div>
-                    </div>
-                </div>
-                <div class="similar">
-                    <h3>Similar Properties</h3>
-                    <!-- carousel for medium & large devices -->
-                    <div id="carouselSimilar-1" class="carousel slide visible-lg carousel-col">
-                        <ol class="carousel-indicators">
-                            <li data-target="#carouselSimilar-1" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselSimilar-1" data-slide-to="1"></li>
-                        </ol>
-                        <div class="carousel-inner"> 
-                            <div class="item active">
-                                <div class="row">
-                                    <div class="col-xs-4">
-                                        <div data-linkto="single.html" class="card">
-                                            <div class="figure">
-                                                <img src="/Yolo/images/prop/1-1.png" alt="image">
-                                                <div class="figCaption">
-                                                    <div>$1,550,000</div>
-                                                    <span class="icon-eye"> 200</span>
-                                                    <span class="icon-heart"> 54</span>
-                                                    <span class="icon-bubble"> 13</span>
-                                                </div>
-                                                <div class="figView"><span class="icon-eye"></span></div>
-                                                <div class="figType">FOR SALE</div>
-                                            </div>
-                                            <h2>Modern Residence in New York</h2>
-                                            <div class="cardAddress"><span class="icon-pointer"></span> 39 Remsen St, Brooklyn, NY 11201, USA</div>
-                                            <ul class="cardFeat">
-                                                <li><span class="fa fa-moon-o"></span> 3</li>
-                                                <li><span class="icon-drop"></span> 2</li>
-                                                <li><span class="icon-frame"></span> 3430 Sq Ft</li>
-                                            </ul>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-4">
-                                        <div data-linkto="single.html" class="card">
-                                            <div class="figure">
-                                                <img src="/Yolo/images/prop/2-1.png" alt="image">
-                                                <div class="figCaption">
-                                                    <div>$1,750,000</div>
-                                                    <span class="icon-eye"> 175</span>
-                                                    <span class="icon-heart"> 67</span>
-                                                    <span class="icon-bubble"> 9</span>
-                                                </div>
-                                                <div class="figView"><span class="icon-eye"></span></div>
-                                                <div class="figType">For Rent</div>
-                                            </div>
-                                            <h2>Hauntingly Beautiful Estate</h2>
-                                            <div class="cardAddress"><span class="icon-pointer"></span> 169 Warren St, Brooklyn, NY 11201, USA</div>
-                                            <ul class="cardFeat">
-                                                <li><span class="fa fa-moon-o"></span> 2</li>
-                                                <li><span class="icon-drop"></span> 2</li>
-                                                <li><span class="icon-frame"></span> 4430 Sq Ft</li>
-                                            </ul>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-4">
-                                        <div data-linkto="single.html" class="card">
-                                            <div class="figure">
-                                                <img src="/Yolo/images/prop/3-1.png" alt="image">
-                                                <div class="figCaption">
-                                                    <div>$1,340,000</div>
-                                                    <span class="icon-eye"> 180</span>
-                                                    <span class="icon-heart"> 87</span>
-                                                    <span class="icon-bubble"> 12</span>
-                                                </div>
-                                                <div class="figView"><span class="icon-eye"></span></div>
-                                                <div class="figType">For Rent</div>
-                                            </div>
-                                            <h2>Sophisticated Residence</h2>
-                                            <div class="cardAddress"><span class="icon-pointer"></span> 38-62 Water St, Brooklyn, NY 11201, USA</div>
-                                            <ul class="cardFeat">
-                                                <li><span class="fa fa-moon-o"></span> 2</li>
-                                                <li><span class="icon-drop"></span> 3</li>
-                                                <li><span class="icon-frame"></span> 2640 Sq Ft</li>
-                                            </ul>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="row">
-                                    <div class="col-xs-4">
-                                        <div data-linkto="single.html" class="card">
-                                            <div class="figure">
-                                                <img src="/Yolo/images/prop/4-1.png" alt="image">
-                                                <div class="figCaption">
-                                                    <div>$1,930,000</div>
-                                                    <span class="icon-eye"> 145</span>
-                                                    <span class="icon-heart"> 99</span>
-                                                    <span class="icon-bubble"> 25</span>
-                                                </div>
-                                                <div class="figView"><span class="icon-eye"></span></div>
-                                                <div class="figType">For Sale</div>
-                                            </div>
-                                            <h2>House With a Lovely Glass-Roofed Pergola</h2>
-                                            <div class="cardAddress"><span class="icon-pointer"></span> Wunsch Bldg, Brooklyn, NY 11201, USA</div>
-                                            <ul class="cardFeat">
-                                                <li><span class="fa fa-moon-o"></span> 3</li>
-                                                <li><span class="icon-drop"></span> 2</li>
-                                                <li><span class="icon-frame"></span> 2800 Sq Ft</li>
-                                            </ul>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-4">
-                                        <div data-linkto="single.html" class="card">
-                                            <div class="figure">
-                                                <img src="/Yolo/images/prop/5-1.png" alt="image">
-                                                <div class="figCaption">
-                                                    <div>$2,350,000</div>
-                                                    <span class="icon-eye"> 184</span>
-                                                    <span class="icon-heart"> 120</span>
-                                                    <span class="icon-bubble"> 18</span>
-                                                </div>
-                                                <div class="figView"><span class="icon-eye"></span></div>
-                                                <div class="figType">For Rent</div>
-                                            </div>
-                                            <h2>Luxury Mansion</h2>
-                                            <div class="cardAddress"><span class="icon-pointer"></span> 95 Butler St, Brooklyn, NY 11231, USA</div>
-                                            <ul class="cardFeat">
-                                                <li><span class="fa fa-moon-o"></span> 2</li>
-                                                <li><span class="icon-drop"></span> 2</li>
-                                                <li><span class="icon-frame"></span> 2750 Sq Ft</li>
-                                            </ul>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-4">
-                                        <div data-linkto="single.html" class="card">
-                                            <div class="figure">
-                                                <img src="/Yolo/images/prop/1-1.png" alt="image">
-                                                <div class="figCaption">
-                                                    <div>$1,550,000</div>
-                                                    <span class="icon-eye"> 200</span>
-                                                    <span class="icon-heart"> 54</span>
-                                                    <span class="icon-bubble"> 13</span>
-                                                </div>
-                                                <div class="figView"><span class="icon-eye"></span></div>
-                                                <div class="figType">FOR SALE</div>
-                                            </div>
-                                            <h2>Modern Residence in New York</h2>
-                                            <div class="cardAddress"><span class="icon-pointer"></span> 39 Remsen St, Brooklyn, NY 11201, USA</div>
-                                            <ul class="cardFeat">
-                                                <li><span class="fa fa-moon-o"></span> 3</li>
-                                                <li><span class="icon-drop"></span> 2</li>
-                                                <li><span class="icon-frame"></span> 3430 Sq Ft</li>
-                                            </ul>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <a class="left carousel-control" href="#carouselSimilar-1" role="button" data-slide="prev"><span class="fa fa-chevron-left"></span></a>
-                        <a class="right carousel-control" href="#carouselSimilar-1" role="button" data-slide="next"><span class="fa fa-chevron-right"></span></a>
-                    </div>
-
-                    <!-- carousel for small devices -->
-                    <div id="carouselSimilar-2" class="carousel slide visible-md carousel-col"> 
-                        <ol class="carousel-indicators">
-                            <li data-target="#carouselSimilar-2" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselSimilar-2" data-slide-to="1"></li>
-                            <li data-target="#carouselSimilar-2" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner"> 
-                            <div class="item active">
-                                <div class="row">
-                                    <div class="col-xs-6">
-                                        <div data-linkto="single.html" class="card">
-                                            <div class="figure">
-                                                <img src="/Yolo/images/prop/1-1.png" alt="image">
-                                                <div class="figCaption">
-                                                    <div>$1,550,000</div>
-                                                    <span class="icon-eye"> 200</span>
-                                                    <span class="icon-heart"> 54</span>
-                                                    <span class="icon-bubble"> 13</span>
-                                                </div>
-                                                <div class="figView"><span class="icon-eye"></span></div>
-                                                <div class="figType">FOR SALE</div>
-                                            </div>
-                                            <h2>Modern Residence in New York</h2>
-                                            <div class="cardAddress"><span class="icon-pointer"></span> 39 Remsen St, Brooklyn, NY 11201, USA</div>
-                                            <ul class="cardFeat">
-                                                <li><span class="fa fa-moon-o"></span> 3</li>
-                                                <li><span class="icon-drop"></span> 2</li>
-                                                <li><span class="icon-frame"></span> 3430 Sq Ft</li>
-                                            </ul>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-6">
-                                        <div data-linkto="single.html" class="card">
-                                            <div class="figure">
-                                                <img src="/Yolo/images/prop/2-1.png" alt="image">
-                                                <div class="figCaption">
-                                                    <div>$1,750,000</div>
-                                                    <span class="icon-eye"> 175</span>
-                                                    <span class="icon-heart"> 67</span>
-                                                    <span class="icon-bubble"> 9</span>
-                                                </div>
-                                                <div class="figView"><span class="icon-eye"></span></div>
-                                                <div class="figType">For Rent</div>
-                                            </div>
-                                            <h2>Hauntingly Beautiful Estate</h2>
-                                            <div class="cardAddress"><span class="icon-pointer"></span> 169 Warren St, Brooklyn, NY 11201, USA</div>
-                                            <ul class="cardFeat">
-                                                <li><span class="fa fa-moon-o"></span> 2</li>
-                                                <li><span class="icon-drop"></span> 2</li>
-                                                <li><span class="icon-frame"></span> 4430 Sq Ft</li>
-                                            </ul>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="row">
-                                    <div class="col-xs-6">
-                                        <div data-linkto="single.html" class="card">
-                                            <div class="figure">
-                                                <img src="/Yolo/images/prop/3-1.png" alt="image">
-                                                <div class="figCaption">
-                                                    <div>$1,340,000</div>
-                                                    <span class="icon-eye"> 180</span>
-                                                    <span class="icon-heart"> 87</span>
-                                                    <span class="icon-bubble"> 12</span>
-                                                </div>
-                                                <div class="figView"><span class="icon-eye"></span></div>
-                                                <div class="figType">For Rent</div>
-                                            </div>
-                                            <h2>Sophisticated Residence</h2>
-                                            <div class="cardAddress"><span class="icon-pointer"></span> 38-62 Water St, Brooklyn, NY 11201, USA</div>
-                                            <ul class="cardFeat">
-                                                <li><span class="fa fa-moon-o"></span> 2</li>
-                                                <li><span class="icon-drop"></span> 3</li>
-                                                <li><span class="icon-frame"></span> 2640 Sq Ft</li>
-                                            </ul>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-6">
-                                        <div data-linkto="single.html" class="card">
-                                            <div class="figure">
-                                                <img src="/Yolo/images/prop/4-1.png" alt="image">
-                                                <div class="figCaption">
-                                                    <div>$1,930,000</div>
-                                                    <span class="icon-eye"> 145</span>
-                                                    <span class="icon-heart"> 99</span>
-                                                    <span class="icon-bubble"> 25</span>
-                                                </div>
-                                                <div class="figView"><span class="icon-eye"></span></div>
-                                                <div class="figType">For Sale</div>
-                                            </div>
-                                            <h2>House With a Lovely Glass-Roofed Pergola</h2>
-                                            <div class="cardAddress"><span class="icon-pointer"></span> Wunsch Bldg, Brooklyn, NY 11201, USA</div>
-                                            <ul class="cardFeat">
-                                                <li><span class="fa fa-moon-o"></span> 3</li>
-                                                <li><span class="icon-drop"></span> 2</li>
-                                                <li><span class="icon-frame"></span> 2800 Sq Ft</li>
-                                            </ul>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="row">
-                                    <div class="col-xs-6">
-                                        <div data-linkto="single.html" class="card">
-                                            <div class="figure">
-                                                <img src="/Yolo/images/prop/5-1.png" alt="image">
-                                                <div class="figCaption">
-                                                    <div>$2,350,000</div>
-                                                    <span class="icon-eye"> 184</span>
-                                                    <span class="icon-heart"> 120</span>
-                                                    <span class="icon-bubble"> 18</span>
-                                                </div>
-                                                <div class="figView"><span class="icon-eye"></span></div>
-                                                <div class="figType">For Rent</div>
-                                            </div>
-                                            <h2>Luxury Mansion</h2>
-                                            <div class="cardAddress"><span class="icon-pointer"></span> 95 Butler St, Brooklyn, NY 11231, USA</div>
-                                            <ul class="cardFeat">
-                                                <li><span class="fa fa-moon-o"></span> 2</li>
-                                                <li><span class="icon-drop"></span> 2</li>
-                                                <li><span class="icon-frame"></span> 2750 Sq Ft</li>
-                                            </ul>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-6">
-                                        <div data-linkto="single.html" class="card">
-                                            <div class="figure">
-                                                <img src="/Yolo/images/prop/1-1.png" alt="image">
-                                                <div class="figCaption">
-                                                    <div>$1,550,000</div>
-                                                    <span class="icon-eye"> 200</span>
-                                                    <span class="icon-heart"> 54</span>
-                                                    <span class="icon-bubble"> 13</span>
-                                                </div>
-                                                <div class="figView"><span class="icon-eye"></span></div>
-                                                <div class="figType">FOR SALE</div>
-                                            </div>
-                                            <h2>Modern Residence in New York</h2>
-                                            <div class="cardAddress"><span class="icon-pointer"></span> 39 Remsen St, Brooklyn, NY 11201, USA</div>
-                                            <ul class="cardFeat">
-                                                <li><span class="fa fa-moon-o"></span> 3</li>
-                                                <li><span class="icon-drop"></span> 2</li>
-                                                <li><span class="icon-frame"></span> 3430 Sq Ft</li>
-                                            </ul>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- carousel-inner -->
-                        <a class="left carousel-control" href="#carouselSimilar-2" role="button" data-slide="prev"><span class="fa fa-chevron-left"></span></a>
-                        <a class="right carousel-control" href="#carouselSimilar-2" role="button" data-slide="next"><span class="fa fa-chevron-right"></span></a>
-                    </div>
-
-                    <!-- carousel for extra-small devices -->
-                    <div id="carouselSimilar-3" class="carousel slide visible-xs visible-sm carousel-col">
-                        <ol class="carousel-indicators">
-                            <li data-target="#carouselSimilar-3" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselSimilar-3" data-slide-to="1"></li>
-                            <li data-target="#carouselSimilar-3" data-slide-to="2"></li>
-                            <li data-target="#carouselSimilar-3" data-slide-to="3"></li>
-                            <li data-target="#carouselSimilar-3" data-slide-to="4"></li>
-                            <li data-target="#carouselSimilar-3" data-slide-to="5"></li>
-                        </ol>
-                        <div class="carousel-inner"> 
-                            <div class="item active">
-                                <div class="row">
-                                    <div class="col-xs-12">
-                                        <div data-linkto="single.html" class="card">
-                                            <div class="figure">
-                                                <img src="/Yolo/images/prop/1-1.png" alt="image">
-                                                <div class="figCaption">
-                                                    <div>$1,550,000</div>
-                                                    <span class="icon-eye"> 200</span>
-                                                    <span class="icon-heart"> 54</span>
-                                                    <span class="icon-bubble"> 13</span>
-                                                </div>
-                                                <div class="figView"><span class="icon-eye"></span></div>
-                                                <div class="figType">FOR SALE</div>
-                                            </div>
-                                            <h2>Modern Residence in New York</h2>
-                                            <div class="cardAddress"><span class="icon-pointer"></span> 39 Remsen St, Brooklyn, NY 11201, USA</div>
-                                            <ul class="cardFeat">
-                                                <li><span class="fa fa-moon-o"></span> 3</li>
-                                                <li><span class="icon-drop"></span> 2</li>
-                                                <li><span class="icon-frame"></span> 3430 Sq Ft</li>
-                                            </ul>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="row">
-                                    <div class="col-xs-12">
-                                        <div data-linkto="single.html" class="card">
-                                            <div class="figure">
-                                                <img src="/Yolo/images/prop/2-1.png" alt="image">
-                                                <div class="figCaption">
-                                                    <div>$1,750,000</div>
-                                                    <span class="icon-eye"> 175</span>
-                                                    <span class="icon-heart"> 67</span>
-                                                    <span class="icon-bubble"> 9</span>
-                                                </div>
-                                                <div class="figView"><span class="icon-eye"></span></div>
-                                                <div class="figType">For Rent</div>
-                                            </div>
-                                            <h2>Hauntingly Beautiful Estate</h2>
-                                            <div class="cardAddress"><span class="icon-pointer"></span> 169 Warren St, Brooklyn, NY 11201, USA</div>
-                                            <ul class="cardFeat">
-                                                <li><span class="fa fa-moon-o"></span> 2</li>
-                                                <li><span class="icon-drop"></span> 2</li>
-                                                <li><span class="icon-frame"></span> 4430 Sq Ft</li>
-                                            </ul>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="row">
-                                    <div class="col-xs-12">
-                                        <div data-linkto="single.html" class="card">
-                                            <div class="figure">
-                                                <img src="/Yolo/images/prop/3-1.png" alt="image">
-                                                <div class="figCaption">
-                                                    <div>$1,340,000</div>
-                                                    <span class="icon-eye"> 180</span>
-                                                    <span class="icon-heart"> 87</span>
-                                                    <span class="icon-bubble"> 12</span>
-                                                </div>
-                                                <div class="figView"><span class="icon-eye"></span></div>
-                                                <div class="figType">For Rent</div>
-                                            </div>
-                                            <h2>Sophisticated Residence</h2>
-                                            <div class="cardAddress"><span class="icon-pointer"></span> 38-62 Water St, Brooklyn, NY 11201, USA</div>
-                                            <ul class="cardFeat">
-                                                <li><span class="fa fa-moon-o"></span> 2</li>
-                                                <li><span class="icon-drop"></span> 3</li>
-                                                <li><span class="icon-frame"></span> 2640 Sq Ft</li>
-                                            </ul>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="row">
-                                    <div class="col-xs-12">
-                                        <div data-linkto="single.html" class="card">
-                                            <div class="figure">
-                                                <img src="/Yolo/images/prop/4-1.png" alt="image">
-                                                <div class="figCaption">
-                                                    <div>$1,930,000</div>
-                                                    <span class="icon-eye"> 145</span>
-                                                    <span class="icon-heart"> 99</span>
-                                                    <span class="icon-bubble"> 25</span>
-                                                </div>
-                                                <div class="figView"><span class="icon-eye"></span></div>
-                                                <div class="figType">For Sale</div>
-                                            </div>
-                                            <h2>House With a Lovely Glass-Roofed Pergola</h2>
-                                            <div class="cardAddress"><span class="icon-pointer"></span> Wunsch Bldg, Brooklyn, NY 11201, USA</div>
-                                            <ul class="cardFeat">
-                                                <li><span class="fa fa-moon-o"></span> 3</li>
-                                                <li><span class="icon-drop"></span> 2</li>
-                                                <li><span class="icon-frame"></span> 2800 Sq Ft</li>
-                                            </ul>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="row">
-                                    <div class="col-xs-12">
-                                        <div data-linkto="single.html" class="card">
-                                            <div class="figure">
-                                                <img src="/Yolo/images/prop/5-1.png" alt="image">
-                                                <div class="figCaption">
-                                                    <div>$2,350,000</div>
-                                                    <span class="icon-eye"> 184</span>
-                                                    <span class="icon-heart"> 120</span>
-                                                    <span class="icon-bubble"> 18</span>
-                                                </div>
-                                                <div class="figView"><span class="icon-eye"></span></div>
-                                                <div class="figType">For Rent</div>
-                                            </div>
-                                            <h2>Luxury Mansion</h2>
-                                            <div class="cardAddress"><span class="icon-pointer"></span> 95 Butler St, Brooklyn, NY 11231, USA</div>
-                                            <ul class="cardFeat">
-                                                <li><span class="fa fa-moon-o"></span> 2</li>
-                                                <li><span class="icon-drop"></span> 2</li>
-                                                <li><span class="icon-frame"></span> 2750 Sq Ft</li>
-                                            </ul>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="row">
-                                    <div class="col-xs-12">
-                                        <div data-linkto="single.html" class="card">
-                                            <div class="figure">
-                                                <img src="/Yolo/images/prop/1-1.png" alt="image">
-                                                <div class="figCaption">
-                                                    <div>$1,550,000</div>
-                                                    <span class="icon-eye"> 200</span>
-                                                    <span class="icon-heart"> 54</span>
-                                                    <span class="icon-bubble"> 13</span>
-                                                </div>
-                                                <div class="figView"><span class="icon-eye"></span></div>
-                                                <div class="figType">FOR SALE</div>
-                                            </div>
-                                            <h2>Modern Residence in New York</h2>
-                                            <div class="cardAddress"><span class="icon-pointer"></span> 39 Remsen St, Brooklyn, NY 11201, USA</div>
-                                            <ul class="cardFeat">
-                                                <li><span class="fa fa-moon-o"></span> 3</li>
-                                                <li><span class="icon-drop"></span> 2</li>
-                                                <li><span class="icon-frame"></span> 3430 Sq Ft</li>
-                                            </ul>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <a class="left carousel-control" href="#carouselSimilar-3" role="button" data-slide="prev"><span class="fa fa-chevron-left"></span></a>
-                        <a class="right carousel-control" href="#carouselSimilar-3" role="button" data-slide="next"><span class="fa fa-chevron-right"></span></a>
-                    </div>
-                </div>
+<!--                 <div class="share"> -->
+<!--                     <h3>Share on Social Networks</h3> -->
+<!--                     <div class="row"> -->
+<!--                         <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 shareItem"> -->
+<!--                             <a href="#" class="btn btn-sm btn-round btn-o btn-facebook"><span class="fa fa-facebook"></span> Facebook</a> -->
+<!--                         </div> -->
+<!--                         <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 shareItem"> -->
+<!--                             <a href="#" class="btn btn-sm btn-round btn-o btn-twitter"><span class="fa fa-twitter"></span> Twitter</a> -->
+<!--                         </div> -->
+<!--                         <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 shareItem"> -->
+<!--                             <a href="#" class="btn btn-sm btn-round btn-o btn-google"><span class="fa fa-google-plus"></span> Google+</a> -->
+<!--                         </div> -->
+<!--                         <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 shareItem"> -->
+<!--                             <a href="#" class="btn btn-sm btn-round btn-o btn-pinterest"><span class="fa fa-pinterest"></span> Pinterest</a> -->
+<!--                         </div> -->
+<!--                     </div> -->
+<!--                 </div> -->
                 <div class="comments">
                     <h3><span>4</span> Comments</h3>
                     <div class="comment">
@@ -790,7 +284,7 @@
             </div>
         </div>
 
-        <script src="/Yolo/js/jquery-2.1.1.min.js"></script>
+ 		<script src="/Yolo/js/jquery-2.1.1.min.js"></script>
         <script src="/Yolo/js/jquery-ui.min.js"></script>
         <script src="/Yolo/js/jquery-ui-touch-punch.js"></script>
         <script src="/Yolo/js/jquery.placeholder.js"></script>
@@ -798,7 +292,7 @@
         <script src="/Yolo/js/jquery.touchSwipe.min.js"></script>
         <script src="/Yolo/js/jquery.slimscroll.min.js"></script>
         <script src="/Yolo/js/jquery.visible.js"></script>
-        <script src="http://maps.googleapis.com/maps/api/js?sensor=true&amp;libraries=geometry&amp;libraries=places" type="text/javascript"></script>
+        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBh5iJnCJrUZugfpicBfCPv3pCLOTat6gM&sensor=true&amp;libraries=geometry&amp;libraries=places" type="text/javascript"></script>
         <script src="/Yolo/js/infobox.js"></script>
         <script src="/Yolo/js/jquery.tagsinput.min.js"></script>
         <script src="/Yolo/js/bootstrap-datepicker.js"></script>
