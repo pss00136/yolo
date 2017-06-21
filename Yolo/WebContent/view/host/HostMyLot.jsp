@@ -34,7 +34,7 @@
                 <div class="widgets">
                     <h4 style="margin-bottom: 30px; font-size: 20px; font-family: 'Nanum Brush Script';">내 공간보기</h4>
                    
-                   <!-- 승인 요청중 -->
+                   <!------------- 승인 요청중인 공간 리스트 보여주기 --------------------->
                    <div class="col-md-12">
                     <div class="row" style="margin-bottom: 10px;">
                      <h3 style="margin: 5px;">승인 요청중인 공간 &nbsp;<span class="label label-warning">승인 대기</span></h3>
@@ -102,14 +102,13 @@
                      
                     </div>
                     
-                    <!-- 승인완료 -->
+                     <!------------- 승인 완료된 공간 리스트 보여주기 --------------------->
                     <div class="col-md-12">
                     <div class="row" style="margin-bottom: 15px;">
                      <h3 style="margin: 5px;">승인 완료된 공간 &nbsp;<span class="label label-danger">승인 완료</span></h3>
                      
                         <div>
                             <div class="row">
-                            
                              <div class="col-md-4 col-sm-6">
                                     <a href="/Yolo/view/lot/LotView.jsp" class="propWidget-1" style="margin-bottom: 5px;">
                                     
@@ -126,18 +125,11 @@
                                                <button style="float:right; margin: 5px;" href="#" class="btn btn-o btn-green">수정</button>
                                                <button style="float:right; margin: 5px;" href="#" class="btn btn-o btn-green">삭제</button>
                                     </a>
-                                  
-                                </div>
-                             
-           
-                                   
-                               
-                                
-                            </div>
-                        </div>
+                                </div> 
+                            </div> 
                         </div>
                         
-                     
+                        </div>
                     </div>
                     
                     
@@ -176,14 +168,8 @@
         <script src="/Yolo/js/app.js"></script>
         <script src="/Yolo/js/calendar.js"></script>
         
-        <!-- ì¶ê°  -->
+        <!-- 추가 js  -->
 		<script src="/Yolo/js/home.js" type="text/javascript"></script>
-		
-		
-		
-		
-		
-		
 		
     </body>
 </html>
