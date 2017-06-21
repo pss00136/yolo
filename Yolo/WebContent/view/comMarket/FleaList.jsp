@@ -28,7 +28,8 @@
 
 <style>
 .home-wrapper {
-	margin-top: 56px;
+	margin-top: 0px;
+	padding-top: 0;
 }
 
 .col-lg-12 {
@@ -47,6 +48,12 @@
 
 .col-lg-9 {
 	width: 100%;
+}
+
+.input-btn{        
+    float: right !important;
+    margin-bottom: 2%;
+    margin-top: 2%;
 }
 </style>
 
@@ -69,8 +76,10 @@
 			<!-- -----------------여기에 컨텐츠 div넣으세요----------------- -->
 			<!-- 이 사이에! -->
 			<!-- Content -->
+		
 			<div class="blog-content">
 				<div class="home-wrapper">
+				<div class="input-btn"><a href="#" class="btn btn-round btn-green btn-sm">상품 등록하기</a></div>
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
 							<div class="tabsContainer">
@@ -172,48 +181,46 @@
 										</div>
 									</div>
 
+
 									<!-- goods content -->
-									<label>Category</label>
-									<div class="checkbox custom-checkbox">
-	                                   <div class="row">
-		                                   <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 formItem">
-			                                   <label>
-				                                   <input type="checkbox">
-				                                   <span class="fa fa-check"></span>
-				                                   	교육	
-			                                   </label>
-		                                   </div>
-		                                   <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 formItem">
-			                                   <label>
-				                                   <input type="checkbox">
-				                                   <span class="fa fa-check"></span>
-				                                   	방송/연예
-			                                   </label>
-		                                   </div>
-		                                   <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 formItem">
-			                                   <label>
-				                                   <input type="checkbox">
-				                                   <span class="fa fa-check"></span>
-				                                   	전시/박람회
-			                                   </label>
-		                                   </div>
-		                                   <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 formItem">
-			                                   <label>
-				                                   <input type="checkbox">
-				                                   <span class="fa fa-check"></span>
-				                                   	취미활동
-			                                   </label>
-		                                   </div>
-		                                   <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 formItem">
-			                                   <label>
-				                                   <input type="checkbox">
-				                                   <span class="fa fa-check"></span>
-				                                   	패션/뷰티
-			                                   </label>
-		                                   </div>
-	                                   </div><hr>
-                                    </div>
 									<div class="tab-pane fade" id="profile">
+									
+										<label><h5>Category</h5></label>
+										<div class="checkbox custom-checkbox">
+											<div class="row">
+												<div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 formItem">
+													<label> <input type="checkbox"> <span
+														class="fa fa-check"></span> fashion
+													</label>
+												</div>
+												<div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 formItem">
+													<label> <input type="checkbox"> <span
+														class="fa fa-check"></span> living
+													</label>
+												</div>
+												<div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 formItem">
+													<label> <input type="checkbox"> <span
+														class="fa fa-check"></span> food
+													</label>
+												</div>
+												<div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 formItem">
+													<label> <input type="checkbox"> <span
+														class="fa fa-check"></span> cosmetics
+													</label>
+												</div>
+												<div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 formItem">
+													<label> <input type="checkbox"> <span
+														class="fa fa-check"></span> child
+													</label>
+												</div>
+												<div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 formItem">
+													<label> <input type="checkbox"> <span
+														class="fa fa-check"></span> others
+													</label>
+												</div>
+											</div>
+											<hr>
+										</div>
 										<div class="row">
 											<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 												<div class="article">
