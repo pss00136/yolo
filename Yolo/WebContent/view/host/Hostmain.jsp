@@ -54,7 +54,7 @@
 		            <div class="h-text osLight">It is easy to share your place</div>
 		        </div>
 	
-				<!-- ì»¨íì¸ 2 -->
+				  <!------------- Out services 버튼 --------------------->
 		       <div class="home-wrapper">
 		            <div class="home-content">
 		                <h2 class="osLight">Our Services</h2>
