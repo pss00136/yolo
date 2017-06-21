@@ -2,42 +2,29 @@
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<title>LotView.jsp</title>
-
-<link href="/Yolo/css/font-awesome.css" rel="stylesheet">
-<link href="/Yolo/css/simple-line-icons.css" rel="stylesheet">
-<link href="/Yolo/css/jquery-ui.css" rel="stylesheet">
-<link href="/Yolo/css/datepicker.css" rel="stylesheet">
-<link href="/Yolo/css/bootstrap.css" rel="stylesheet">
-<link href="/Yolo/css/app.css" rel="stylesheet">
-<!-- 추가css -->
-<link rel="stylesheet" type="text/css"
-	href="/Yolo/css_yolo/cssPlugin/bootstrap-datetimepicker.css" />
-</head>
-<style type="text/css">
-.tags .tag {
-	margin: 6px 6px 6px 0;
-	padding: 0 11px;
-	height: 30px;
-	font-size: 13px;
-	border-radius: 28px;
-	background-color: white;
-	border: 1px solid silver;
-}
-
-#commentsForm {
-	padding-bottom: 10px;
-}
-
-#reservation {
-	margin-bottom: 10px;
-}
-</style>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<title>LotView.jsp</title>
+		
+		<link href="/Yolo/css/font-awesome.css" rel="stylesheet">
+		<link href="/Yolo/css/simple-line-icons.css" rel="stylesheet">
+		<link href="/Yolo/css/jquery-ui.css" rel="stylesheet">
+		<link href="/Yolo/css/datepicker.css" rel="stylesheet">
+		<link href="/Yolo/css/bootstrap.css" rel="stylesheet">
+		<link href="/Yolo/css/app.css" rel="stylesheet">
+		
+		<!-- 추가css -->
+		<link rel="stylesheet" type="text/css"
+			href="/Yolo/css_yolo/cssPlugin/bootstrap-datetimepicker.css" />
+		<link rel="stylesheet" type="text/css"
+			href="/Yolo/css_yolo/cssView/Club/tagPlus.css" />
+		<link rel="stylesheet" type="text/css"
+			href="/Yolo/css_yolo/cssView/lot/lotDetail.css" />
+		
+	</head>
 
 <body class="notransition">
 
@@ -281,45 +268,37 @@
 								<div class="address">
 									<span class="icon-pointer"></span>왕십리
 								</div>
-								<div class="tags">
-									<span class="tag" style="cursor: pointer;">#왕십리</span> <span
-										class="tag" style="cursor: pointer;">#파티</span> <span
-										class="tag" style="cursor: pointer;">#아지트스튜디오</span> <span
-										class="tag" style="cursor: pointer;">#왕십리스튜디오</span>
-								</div>
-
-
-
+								<ul class="tags">
+                                        <li><span style="cursor: pointer;">#왕십리</span></li>
+                                        <li><span style="cursor: pointer;">#파티</span> </li>
+                                        <li><span class="tag" style="cursor: pointer;">#아지트스튜디오</span></li>
+                                        <li><span class="tag" style="cursor: pointer;">#왕십리스튜디오</span></li>
+                                        <li><span class="tag" style="cursor: pointer;">#아지트스튜디오</span></li>
+                                        <li><span class="tag" style="cursor: pointer;">#아지트스튜디오</span></li>
+                                </ul>
 							</div>
 						</div>
 
 						<div id="reservation">
 						
-							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
 					
-								<div id="reservation" class="col-md-12">
+								<div id="reservation">
 									<label>예약날짜</label>
 								<div class="input-append date form_datetime">
 									<input size="16" type="text" value="" readonly> <span
 										class="add-on"><i class="icon-th"></i></span>
 								</div>
 								</div>
-
-								<div id="reservation" class="col-md-12">
-									<button style="display: inline-flex; margin-right: 3px; text-align: center;" class="btn btn-green col-md-5">
-										<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>문의하기
-									</button>
-									<button style="display: inline-flex; margin-right: 5px; text-align: center;" class="btn btn-green col-md-5">
-										<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>예약하기
-									</button>
-								</div>
+								
+								<div class="mainFunction summaryItem">
+                                     <div class="clearfix"></div>
+                                    <a data-toggle="modal" href="#contactAgent" class="btn btn-lg btn-round btn-green contactBtn">문의하기</a>
+                                    <a href="#confirmSigning" class="btn btn-lg btn-round btn-green applyBtn">예약하기</a>
+                                </div>
 							</div>
-
 						</div>
-
 					</div>
-
-
 				</div>
 			</div>
 			<div class="clearfix"></div>
