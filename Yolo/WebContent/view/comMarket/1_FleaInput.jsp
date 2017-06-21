@@ -37,6 +37,7 @@ form {display : inline;}
 
 #nextbtn{margin-top: 2%;}
 
+.form-group a{margin-left:5px;}
 </style>
 </head>
 <body>
@@ -130,9 +131,22 @@ form {display : inline;}
 							<div id="ddPanel-3" class="panel-collapse collapse">
 								<div class="panel-body">
 									<!-- 처음인 사람 -->
-
-
-
+									<div class="txtupload"><h5>후기 작성하기</h5>
+									<h6>플리마켓 참여에 필요한 정보를 양식에 맞게 작성하여 첨부해주시기 바랍니다.</h6><hr><br/><br/>							    
+									</div>
+									<div class="form-group">
+                                        <label class="col-sm-2 control-label">File upload</label>
+                                        <a>양식 다운로드 : </a><a href="">문서파일</a><br/><br/>
+                                        <div class="col-sm-10">
+                                             <input type="file" class="file" multiple data-show-upload="false" data-show-caption="false" data-show-remove="false" accept="*" data-browse-class="btn btn-o btn-default" data-browse-label="Browse File">
+                                         </div>
+                                    </div>
+                                    <div id="nextbtn" class="col-md-12">
+                                    	<div class="col-md-5"></div>
+											<button class="col-md-2 btn btn-round btn-o btn-green">다 음
+										</button>
+										<div class="col-md-5"></div>
+									</div>
 								</div>
 							</div>
 						</div>

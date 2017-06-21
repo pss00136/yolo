@@ -55,9 +55,17 @@
     margin-bottom: 2%;
     margin-top: 2%;
 }
+
+.article h4 {
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0 20px;
+    line-height: 26px;
+}
+
+
 </style>
-
-
 
 
 </head>
@@ -101,10 +109,10 @@
 													<div class="article-category">
 														<a href="#" class="text-green">Architecture</a>
 													</div>
-													<h3 class="osLight">
+													<h4 id="oslight" class="osLight">
 														<a href="blog-post.html">Subtly Twisting Geometry
 															Inserted in Raw Nature</a>
-													</h3>
+													</h4>
 													<p>Lorem Ipsum is simply dummy text of the printing and
 														typesetting industry. Lorem Ipsum has been the industry's
 														standard dummy text ever since the 1500s, when an unknown
@@ -122,10 +130,10 @@
 													<div class="article-category">
 														<a href="#" class="text-green">Architecture</a>
 													</div>
-													<h3 class="osLight">
+													<h4 class="osLight">
 														<a href="blog-post.html">Provocative Home Design
 															Re-Shaping The Landscape</a>
-													</h3>
+													</h4>
 													<div class="footer">
 														<a href="#">Jane Smith</a>, <a href="#">Sep 3, 2014</a>
 													</div>
@@ -140,10 +148,10 @@
 													<div class="article-category">
 														<a href="#" class="text-green">Apartments</a>
 													</div>
-													<h3 class="osLight">
+													<h4 class="osLight">
 														<a href="blog-post.html">Luminous 3 Bedroom Apartment
 															Flaunting Modern Style</a>
-													</h3>
+													</h4>
 													<div class="footer">
 														<a href="#">John Smith</a>, <a href="#">Sep 3, 2014</a>
 													</div>
@@ -156,10 +164,10 @@
 													<div class="article-category">
 														<a href="#" class="text-green">Living Room</a>
 													</div>
-													<h3 class="osLight">
+													<h4 class="osLight">
 														<a href="blog-post.html">How Does A Designer Home Look
 															Like</a>
-													</h3>
+													</h4>
 													<p>Lorem Ipsum is simply dummy text of the printing and
 														typesetting industry. Lorem Ipsum has been the industry's
 														standard dummy text ever since the 1500s, when an unknown
@@ -229,10 +237,10 @@
 													<div class="article-category">
 														<a href="#" class="text-green">Architecture</a>
 													</div>
-													<h3 class="osLight">
+													<h4 class="osLight">
 														<a href="blog-post.html">Stylish Modern Ranch Exuding
 															a Welcoming Feel</a>
-													</h3>
+													</h4>
 													<div class="footer">
 														<a href="#">John Smith</a>, <a href="#">Sep 3, 2014</a>
 													</div>
@@ -245,10 +253,10 @@
 													<div class="article-category">
 														<a href="#" class="text-green">Architecture</a>
 													</div>
-													<h3 class="osLight">
+													<h4 class="osLight">
 														<a href="blog-post.html">Private Contemporary Home
 															Balancing Openness</a>
-													</h3>
+													</h4>
 													<div class="footer">
 														<a href="#">John Smith</a>, <a href="#">Sep 2, 2014</a>
 													</div>
@@ -261,10 +269,10 @@
 													<div class="article-category">
 														<a href="#" class="text-green">Architecture</a>
 													</div>
-													<h3 class="osLight">
+													<h4 class="osLight">
 														<a href="blog-post.html">Modern Two-Level Pool House
 															in Los Angeles</a>
-													</h3>
+													</h4>
 													<div class="footer">
 														<a href="#">John Smith</a>, <a href="#">Sep 1, 2014</a>
 													</div>
@@ -279,10 +287,10 @@
 													<div class="article-category">
 														<a href="#" class="text-green">Architecture</a>
 													</div>
-													<h3 class="osLight">
+													<h4 class="osLight">
 														<a href="blog-post.html">Stylish Modern Ranch Exuding
 															a Welcoming Feel</a>
-													</h3>
+													</h4>
 													<div class="footer">
 														<a href="#">John Smith</a>, <a href="#">Sep 3, 2014</a>
 													</div>
@@ -295,10 +303,10 @@
 													<div class="article-category">
 														<a href="#" class="text-green">Architecture</a>
 													</div>
-													<h3 class="osLight">
+													<h4 class="osLight">
 														<a href="blog-post.html">Private Contemporary Home
 															Balancing Openness</a>
-													</h3>
+													</h4>
 													<div class="footer">
 														<a href="#">John Smith</a>, <a href="#">Sep 2, 2014</a>
 													</div>
@@ -311,10 +319,10 @@
 													<div class="article-category">
 														<a href="#" class="text-green">Architecture</a>
 													</div>
-													<h3 class="osLight">
+													<h4 class="osLight">
 														<a href="blog-post.html">Modern Two-Level Pool House
 															in Los Angeles</a>
-													</h3>
+													</h4>
 													<div class="footer">
 														<a href="#">John Smith</a>, <a href="#">Sep 1, 2014</a>
 													</div>
