@@ -23,7 +23,15 @@
 	width: 150px;
 }
 
+#btn_addr{
+	width: 120px;
+	text-align : center;
+}
+
 .form-horizontal{
 	margin-bottom: 30px;
 }
 
+#form-control{
+	
+}

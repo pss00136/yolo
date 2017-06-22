@@ -58,7 +58,7 @@
 						<div class="form-group">
 							<label class="col-sm-2 control-label">아이디</label>
 							<div class="col-sm-8">
-								<input type="text" name="uId" class="form-control" value="ilj123456">
+								<input type="text" name="uId" class="form-control" value="">
 							</div>
 						</div>
 					</form>
@@ -67,7 +67,7 @@
 						<div class="form-group">
 							<label class="col-sm-2 control-label">비밀번호</label>
 							<div class="col-sm-8">
-								<input type="text" name="uPass" class="form-control" value="1234">
+								<input type="text" name="uPass" class="form-control" value="">
 							</div>
 						</div>
 					</form>
@@ -76,7 +76,7 @@
 						<div class="form-group">
 							<label class="col-sm-2 control-label">이 름</label>
 							<div class="col-sm-8">
-								<input type="text" name="uName" class="form-control" value="김일주">
+								<input type="text" name="uName" class="form-control" value="">
 							</div>
 						</div>
 					</form>
@@ -85,7 +85,7 @@
 						<div class="form-group">
 							<label class="col-sm-2 control-label">휴대전화</label>
 							<div class="col-sm-8">
-								<input type="text" name="uPhone" class="form-control" value="010-8403-5303">
+								<input type="text" name="uPhone" class="form-control" value="">
 							</div>
 						</div>
 					</form>
@@ -94,7 +94,7 @@
 						<div class="form-group">
 							<label class="col-sm-2 control-label">이메일</label>
 							<div class="col-sm-8">
-								<input type="text" name="uEmail" class="form-control" value="ilju123456@naver.com">
+								<input type="text" name="uEmail" class="form-control" value="">
 							</div>
 						</div>
 					</form>
@@ -110,17 +110,17 @@
 					
 					<form class="form-horizontal" role="form">
 						<div class="form-group">
-							<label class="col-sm-2 control-label">지 역</label>
+							<label class="col-sm-2 control-label">주 소 </label>
 							<div class="col-sm-8">
-								<select class="form-control">
-								<option value="서울특별시">서울특별시</option>
-								<option value="경기도">경기도</option>
-								<option value="강원도">강원도</option>
-								<option value="충청도">충청도</option>
-								<option value="전라도">전라도</option>	
-								<option value="경상도">경상도</option>	
-								</select>
+							
+						<div class="col-md-3" style="margin-bottom: 20px;">
+						<input type="text" name="uAddr" class="form-control" value="">
+						</div>
+							<button id="btn_addr" class="btn btn-o btn-green">우편번호 검색</button>
+							<input type="text" name="uAddr" class="form-control" value="">
+							
 							</div>
+							
 						</div>
 					</form>
 					
