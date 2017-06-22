@@ -32,6 +32,10 @@
 	margin-bottom: 30px;
 }
 
-#form-control{
-	
+.home-wrapper{
+	background-color:white;
+}
+.addr{
+	padding-right: 0;
+    padding-left: 0;
 }

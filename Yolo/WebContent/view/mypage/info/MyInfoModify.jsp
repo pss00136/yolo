@@ -25,16 +25,18 @@
 <body class="notransition">
 
 	<!-- Header -->
-		<%@include file="/view/common/header.jsp"%>
+	<%@include file="/view/common/header.jsp"%>
 
 	<!-- Content -->
 	<div id="wrapper" class="full">
 		<div id="content" class="max">
 
 			<!---------------개인정보 수정하기 ------------------------>
-			<div style="padding: 50px;" id="panel" class="panel panel-default">
+			<div class="home-wrapper">
 
-				<h4 style="text-align: center; margin-bottom: 30px; border-bottom: 1px solid silver; padding-bottom: 10px;">MY PROFILE</h4>
+				<h4
+					style="text-align: center; margin-bottom: 30px; border-bottom: 1px solid silver; padding-bottom: 10px;">MY
+					PROFILE</h4>
 				<div class="panel-body">
 
 					<form class="form-horizontal" role="form">
@@ -42,14 +44,16 @@
 							<label class="col-sm-2 control-label"> 프로필 </label>
 							<div class="col-sm-2">
 								<input type="file" name="imageUpload" id="imageUpload"
-									style="display: none;" /> <img src="" id="imagePreview"
-									alt="" class="ratio img-responsive img-circle" /><br />
-									
+									style="display: none;" /> <img src="" id="imagePreview" alt=""
+									class="ratio img-responsive img-circle" /><br />
+
 								<div style="text-align: center;">
 									<div style="display: inline-block;">
-										<label for="imageUpload" id="btn_profile" class="btn btn-o btn-green">사진 등록</label>
+										<label for="imageUpload" id="btn_profile"
+											class="btn btn-o btn-green">사진 등록</label>
 									</div>
-								</div><!-------사진 등록버튼 가운데정렬 -->
+								</div>
+								<!-------사진 등록버튼 가운데정렬 -->
 							</div>
 						</div>
 					</form>
@@ -71,7 +75,7 @@
 							</div>
 						</div>
 					</form>
-					
+
 					<form class="form-horizontal" role="form">
 						<div class="form-group">
 							<label class="col-sm-2 control-label">이 름</label>
@@ -80,7 +84,7 @@
 							</div>
 						</div>
 					</form>
-					
+
 					<form class="form-horizontal" role="form">
 						<div class="form-group">
 							<label class="col-sm-2 control-label">휴대전화</label>
@@ -89,8 +93,8 @@
 							</div>
 						</div>
 					</form>
-					
-						<form class="form-horizontal" role="form">
+
+					<form class="form-horizontal" role="form">
 						<div class="form-group">
 							<label class="col-sm-2 control-label">이메일</label>
 							<div class="col-sm-8">
@@ -98,7 +102,7 @@
 							</div>
 						</div>
 					</form>
-					
+
 					<form class="form-horizontal" role="form">
 						<div class="form-group">
 							<label class="col-sm-2 control-label">생 일</label>
@@ -107,23 +111,26 @@
 							</div>
 						</div>
 					</form>
-					
+
 					<form class="form-horizontal" role="form">
 						<div class="form-group">
 							<label class="col-sm-2 control-label">주 소 </label>
 							<div class="col-sm-8">
-							
-						<div class="col-md-3" style="margin-bottom: 20px;">
-						<input type="text" name="uAddr" class="form-control" value="">
-						</div>
-							<button id="btn_addr" class="btn btn-o btn-green">우편번호 검색</button>
-							<input type="text" name="uAddr" class="form-control" value="">
-							
+
+								<div class="col-xs-5 col-md-3 addr">
+									<input type="text" name="uAddr" class="form-control" value="">
+								</div>
+								<div class="col-xs-3 col-md-3">
+									<button id="btn_addr" class="btn btn-o btn-green">우편번호 검색</button>
+								</div>
+								
+								<input type="text" name="uAddr" class="form-control" value="">
+
 							</div>
-							
+
 						</div>
 					</form>
-					
+
 					<div style="text-align: center;">
 						<div style="display: inline-block;">
 							<button id="btn_modify" class="btn btn-o btn-green">수정</button>
@@ -139,7 +146,6 @@
 		<!-- content 끝 -->
 
 		<!-- Footer -->
-		<%@include file="/view/common/footer.jsp"%>
 
 
 
