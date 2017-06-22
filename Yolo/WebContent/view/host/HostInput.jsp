@@ -32,7 +32,7 @@
 		<div id="content" class="max">
 
 			<!---------------호스트 등록하기 ------------------------>
-			<div style="padding: 50px;" id="panel" class="panel panel-default">
+			<div class="home-wrapper">
 
 				<h4 style="text-align: center; margin-bottom: 30px; border-bottom: 1px solid silver; padding-bottom: 10px;">HOST REGISTER</h4>
 				<div class="panel-body">
