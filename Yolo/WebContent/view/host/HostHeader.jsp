@@ -10,8 +10,8 @@
 	</div>
 	<a href="#" class="navHandler"><span class="fa fa-bars"></span></a>
 
- 
-    <!----------- 호스트 정보 드롭다운 --------->
+    <!-- HostHeader -->
+    <!----------- 호스트 정보 드롭다운 ------------------->
 	<div class="headerUserWraper">
 		<a href="#" class="userHandler dropdown-toggle" data-toggle="dropdown"><span
 			class="icon-user"></span></a> 
