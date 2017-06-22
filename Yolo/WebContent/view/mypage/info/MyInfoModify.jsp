@@ -31,7 +31,7 @@
 	<div id="wrapper" class="full">
 		<div id="content" class="max">
 
-			<!---------------개인정보 수정하기 ------------------------>
+			<!-------- -------개인정보 수정하기 ------------------------>
 			<div class="home-wrapper">
 
 				<h4
@@ -95,7 +95,8 @@
 						<div class="form-group">
 							<label class="col-sm-2 control-label">생 일</label>
 							<div class="col-sm-8">
-								<input type="date" name="uBirth" class="form-control" value="">
+								<input type="text" name="uBirth" class="form-control" id="datepicker">
+								
 							</div>
 						</div>
 					
@@ -162,7 +163,7 @@
 	<script src="/Yolo/js/infobox.js"></script>
 	<script src="/Yolo/js/clndr.js"></script>
 	<script src="/Yolo/js/jquery.tagsinput.min.js"></script>
-	<script src="/Yolo/js/bootstrap-datepicker.js"></script>
+<!-- 	<script src="/Yolo/js/bootstrap-datepicker.js"></script> -->
 	<script src="/Yolo/js/fileinput.min.js"></script>
 	<script src="/Yolo/js/app.js"></script>
 	<script src="/Yolo/js/calendar.js"></script>
@@ -170,7 +171,25 @@
 	<!-- 추가 js  -->
 	<script src="/Yolo/js/home.js" type="text/javascript"></script>
 	<script type="text/javascript" src='/Yolo/js_yolo/host/hostregister.js'></script>
-
+	<script type="text/javascript">
+	$(function(){
+		$("#datepicker").datepicker();
+	});
+	
+	$.datepicker.setDefaults({
+	    dateFormat: 'yy/mm/dd',
+	    prevText: '이전 달',
+	    nextText: '다음 달',
+	    monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+	    monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+	    dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+	    dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+	    dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+	    showMonthAfterYear: true,
+	    yearSuffix: '년'
+	});
+	
+	</script>
 
 
 
