@@ -19,6 +19,45 @@
 <!-- 추가 CSS -->
 
 
+<!-- -------슬라이드 CSS-------- -->
+<style>
+
+.carousel, .item, .active {
+	height: 60%;
+    width: 30%;
+}
+
+.carousel-inner {
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-inner > .active {
+    width: 100%;
+    height: 100%;
+}
+
+.fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+</style>
+
+<!-- -------슬라이드 JS-------- -->
+<script>
+    $('.carousel').carousel({
+        interval: 5000 //화면 넘기는 속도
+    })
+</script>
+
+
+
 
 
 </head>
@@ -32,53 +71,57 @@
 		<div id="content" class="max">
 		    <!-- ------------------------------------------------------- -->
 		    <!-- 본문내용 -->
-			<div class="row">
-		        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                    <div id="carouselFull" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#carouselFull" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselFull" data-slide-to="1"></li>
-                            <li data-target="#carouselFull" data-slide-to="2"></li>
-                            <li data-target="#carouselFull" data-slide-to="3"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <img src="/Yolo/images_yolo/lot/1.PNG" alt="First slide">
-                                <div class="container">
-                                    <div class="carousel-caption">
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src="/Yolo/images_yolo/lot/2.PNG" alt="Second slide">
-                                <div class="container">
-                                    <div class="carousel-caption">
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src="/Yolo/images_yolo/lot/3.PNG" alt="Third slide">
-                                <div class="container">
-                                    <div class="carousel-caption">
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src="/Yolo/images_yolo/lot/4.PNG" alt="Fourth slide">
-                                <div class="container">
-                                    <div class="carousel-caption">
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <a class="left carousel-control" href="#carouselFull" role="button" data-slide="prev"><span class="fa fa-chevron-left"></span></a>
-                        <a class="right carousel-control" href="#carouselFull" role="button" data-slide="next"><span class="fa fa-chevron-right"></span></a>
-                    </div>
-				</div>
+		    
+		    
+		    
+		    
+<!-- ------------------이미지 슬라이드------------------------------------------ -->
+		    
+    <header id="myCarousel" class="carousel slide">
+    
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <div class="carousel-inner">
+            <div class="item active">
+                <!-- Set the first background image using inline CSS below. -->
+                <div class="fill">
+                	<img src="/Yolo/images_yolo/comMarket/dress1.PNG" alt="First slide" >
+                </div>
+                <div class="carousel-caption">
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the second background image using inline CSS below. -->
+                <div class="fill">
+                	<img src="/Yolo/images_yolo/comMarket/dress2.PNG" alt="First slide">
+                </div>
+                <div class="carousel-caption">
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill">
+                	<img src="/Yolo/images_yolo/comMarket/dress3.PNG" alt="First slide">
+                </div>
+                <div class="carousel-caption">
+                </div>
+            </div>
+        </div>
+
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+
+    </header>
+    
+<!-- ----------------------------------------------------------------------------------- -->
+
 
 
 
