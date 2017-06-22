@@ -1,5 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,9 +31,93 @@
             <div id="mapView" class="min"><div class="mapPlaceholder"><span class="fa fa-spin fa-spinner"></span> Loading map...</div></div>
             <div id="content" class="max">
 		        <!-- -----------------여기에 컨텐츠 div넣으세요----------------- -->
-		        <!-- 이 사이에! -->
-		        
-		        
+		        <!--이 사이에! -->
+			<div class="tables">		        
+		        <div class="panel panel-default">
+                        <div class="panel-heading">주문목록</div>
+                        <div class="row tableContainer">
+                            
+                            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                                <div class="input-group input-group-sm mb5">
+                                    <input type="text" class="form-control" placeholder="Search...">
+                                    <span class="input-group-btn"><a class="btn btn-sm btn-green"><span class="icon-magnifier"></span></a></span>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                                <div class="btn-group pull-right mb5">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-o btn-gray dropdown-toggle" data-toggle="dropdown">
+                                        1-50 of 121
+                                        <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li class="disabled"><a href="#">Newest</a></li>
+                                            <li><a href="#">Oldest</a></li>
+                                        </ul>
+                                    </div>
+                                    <button type="button" class="btn btn-sm btn-gray"><span class="fa fa-angle-left"></span></button>
+                                    <button type="button" class="btn btn-sm btn-gray"><span class="fa fa-angle-right"></span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-overflow">
+                            <table class="table" id="inboxTable">
+                                <thead>
+                                    <tr>
+										<th colspan="2">상품명</th>
+                                        <th>옵션</th>
+                                        <th>수량</th>
+                                        <th style="width:100px;">상태</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table">
+                                    <tr>
+                                    	<th>상품명</th>
+                                        <td>John Smith</td>
+                                        <td>John Smith</td>
+                                        <td>Modern Residence in New York</td>
+                                        <td>입금대기</td>
+                                    </tr>
+                                    <tr>
+                                    	<th>상품명</th>
+                                        <td>Jane Smith</td>
+                                        <td>John Smith</td>
+                                        <td>Hauntingly Beautiful Estate</td>
+                                        <td>입금완료</td>
+                                    </tr>
+                                    <tr>
+                                    	<th>상품명</th>
+                                        <td>Rust Cohle</td>
+                                        <td>John Smith</td>
+                                        <td>Sophisticated Residence</td>
+                                        <td>배송대기중</td>
+                                    </tr>
+                                    <tr>
+                                    	<th>상품명</th>
+                                        <td>Antony Iglesias</td>
+                                        <td>John Smith</td>
+                                        <td>House With a Lovely Glass Roof</td>
+                                        <td>배송중</td>
+                                    </tr>
+                                    <tr>
+                                    	<th>상품명</th>
+                                        <td>John Smith</td>
+                                        <td>John Smith</td>
+                                        <td>Modern Residence in New York</td>
+                                        <td>배송완료</td>
+                                    </tr>
+                                    <tr>
+                                    	<th>상품명</th>
+                                        <td>John Smith</td>
+                                        <td>John Smith</td>
+                                        <td>Modern Residence in New York</td>
+                                        <td>거래완료</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
 		        
 		        <!-- ------------------------------------------------------- -->
 		        <!-- Footer -->
@@ -61,7 +147,7 @@
         <script src="/Yolo/js/app.js"></script>
         <script src="/Yolo/js/calendar.js"></script>
         
-        <!-- 추가  -->
+        <!-- ì¶ê°  -->
 		<script src="/Yolo/js/home.js" type="text/javascript"></script>
 		
 		
