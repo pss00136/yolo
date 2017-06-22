@@ -17,16 +17,8 @@
 <!-- Custom CSS -->
 <link href="/Yolo/css_yolo/cssView/MyMarket/portfolio-item.css"
 	rel="stylesheet">
-<style type="text/css">
-.article h4 {
-	font-size: 20px;
-	font-weight: normal;
-	margin: 0;
-	padding: 0 20px;
-	line-height: 26px;
-}
-</style>
-
+<link href="/Yolo/css_yolo/cssView/MyMarket/GoodsMyList.css"
+	rel="stylesheet">
 <!-- Common CSS -->
 <link href="/Yolo/css/font-awesome.css" rel="stylesheet">
 <link href="/Yolo/css/simple-line-icons.css" rel="stylesheet">
