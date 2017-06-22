@@ -18,22 +18,9 @@
 <link href="/Yolo/css/fileinput.min.css" rel="stylesheet">
 
 <!-- 추가 속성 CSS -->
+<link href="/Yolo/css_yolo/cssView/comMarket/3_fleaInput.css" rel="stylesheet"> 
 
 
-<style>
-.radio.custom-radio label{
-	margin-right: 3%;
-}
-
-.form-control{
-	width: 100%;`
-	padding-right: 4px;
-}
-.col-md-6 .btn-o.btn-green.add{
-	float: right;
-}
-
-</style>
 </head>
 <body class="notransition">
 
@@ -110,7 +97,7 @@
 												placeholder="옵션 가격">
 											<p class="help-block" />
 										</div>
-										<div class="col-sm-2">
+									<div class="col-sm-2">
 										<button type="button" class="btn btn-green">+</button>
 										</div>
 									</div>

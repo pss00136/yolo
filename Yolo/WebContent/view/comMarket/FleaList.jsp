@@ -18,57 +18,13 @@
 <link href="/Yolo/css/fileinput.min.css" rel="stylesheet">
 
 <!-- 추가 속성 CSS -->
-
+<link href="/Yolo/css_yolo/cssView/comMarket/fleaList.css" rel="stylesheet">
 
 
 <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-
-<style>
-.home-wrapper {
-   margin-top: 0px;
-}
-
-#wrapper{
-   overflow: hidden;
-}
-
-.col-lg-12 {
-   margin-top: 22%;
-   padding-left: 27%;
-}
-
-.home-wrapper hr {
-   border-top: 2px solid #b9aaaa;
-   margin-top: 0;
-}
-
-.blog-content h2 {
-   margin-top: 10%;
-}
-
-.col-lg-9 {
-   width: 100%;
-}
-
-.input-btn{        
-    float: right !important;
-    margin-bottom: 2%;
-    margin-top: 2%;
-}
-
-.article h4 {
-    font-size: 20px;
-    font-weight: normal;
-    margin: 0;
-    padding: 0 20px;
-    line-height: 26px;
-}
-
-
-</style>
 
 
 </head>

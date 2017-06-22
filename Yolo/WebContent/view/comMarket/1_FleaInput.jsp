@@ -20,20 +20,9 @@
 <!-- 추가 CSS -->
 <link href="/Yolo/css_yolo/cssView/comMarket/inputStarRating.css" rel="stylesheet">
 <link href="/Yolo/css_yolo/cssView/comMarket/fileUpload.css" rel="stylesheet"> 
+<link href="/Yolo/css_yolo/cssView/comMarket/1_fleaInput.css" rel="stylesheet"> 
         
-<style>
-#wrapper{overflow: hidden;}
-.home-wrapper {margin-top: 56px;}
-.epilogue{margin-top: 40px;}
-.epilogue h5{margin-left : 15px; margin-right: 15px; display : inline;}
-.epilogue hr{margin-top: 10px; margin-bottom: 10px;}
-.checktable .form-control{background-color: #ffffff; margin-bottom: 10px;}
-form {display : inline;}
-.form-group {margin-top: 10px;}
-#nextbtn{margin-top: 2%;}
-.form-group a{margin-left:5px;}
 
-</style>
 </head>
 <body class="notransition no-hidden">
 
