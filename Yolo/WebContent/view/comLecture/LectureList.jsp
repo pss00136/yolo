@@ -32,11 +32,6 @@
 
 	<!-- Content -->
 	<div id="wrapper" class="full">
-		<div id="mapView" class="min">
-			<div class="mapPlaceholder">
-<!-- 				<span class="fa fa-spin fa-spinner"></span> Loading map... -->
-			</div>
-		</div>
 		<div id="content" class="max">
 			<!-- -----------------여기에 컨텐츠 div넣으세요----------------- -->
 			<!-- 이 사이에! -->
@@ -44,7 +39,7 @@
 			<div class="row bounds padding" >
 				<div class="col-md-12 col-xs-12" style="text-align:right;">
 					<div style="display:inline-block;">
-					<a href="#" class="btn btn-round btn-green ">세미나/강연 등록하기</a>
+					<a href="/Yolo/view/comLecture/LectureInput.jsp" class="btn btn-round btn-green ">세미나/강연 등록하기</a>
 					</div>
 				</div>				
 			</div>
