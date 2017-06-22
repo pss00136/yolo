@@ -17,23 +17,23 @@
 <!-- Custom CSS -->
 <link href="/Yolo/css_yolo/cssView/MyMarket/portfolio-item.css"
 	rel="stylesheet">
-	<style type="text/css">
-	.article h4 {
-    font-size: 20px;
-    font-weight: normal;
-    margin: 0;
-    padding: 0 20px;
-    line-height: 26px;
+<style type="text/css">
+.article h4 {
+	font-size: 20px;
+	font-weight: normal;
+	margin: 0;
+	padding: 0 20px;
+	line-height: 26px;
 }
-	</style>
+</style>
 
 <!-- Common CSS -->
-		<link href="/Yolo/css/font-awesome.css" rel="stylesheet">
-        <link href="/Yolo/css/simple-line-icons.css" rel="stylesheet">
-        <link href="/Yolo/css/jquery-ui.css" rel="stylesheet">
-        <link href="/Yolo/css/datepicker.css" rel="stylesheet">
-        <link href="/Yolo/css/bootstrap.css" rel="stylesheet">
-        <link href="/Yolo/css/app.css" rel="stylesheet">
+<link href="/Yolo/css/font-awesome.css" rel="stylesheet">
+<link href="/Yolo/css/simple-line-icons.css" rel="stylesheet">
+<link href="/Yolo/css/jquery-ui.css" rel="stylesheet">
+<link href="/Yolo/css/datepicker.css" rel="stylesheet">
+<link href="/Yolo/css/bootstrap.css" rel="stylesheet">
+<link href="/Yolo/css/app.css" rel="stylesheet">
 
 </head>
 <body class="notransition">
@@ -53,9 +53,12 @@
 			<!-- 이 사이에! -->
 			<!-- Page Content -->
 			<!-- Portfolio Item Heading -->
+			
+		<div class="home-wrapper">
+			<div class="home-content">
 			<div class="row">
 				<div class="col-lg-12 responsive">
-					<h1 class="page-header">
+					<h1>
 						내 플리마켓 <small>상품 정보</small>
 					</h1>
 
@@ -69,12 +72,11 @@
 				<div class="col-md-6 responsive">
 
 					<img class="img-responsive" src="/Yolo/images/prop/2-1.png" alt="">
-					<br /> 
-					<a href="#" class="btn btn-round btn-o btn-blue col-xs-6 col-md-6">수정</a>
-					<a href="#" class="btn btn-round btn-o btn-red col-xs-6 col-md-6">삭제</a>
+					<br /> <a href="#"
+						class="btn btn-round btn-o btn-blue col-xs-6 col-md-6">수정</a> <a
+						href="#" class="btn btn-round btn-o btn-red col-xs-6 col-md-6">삭제</a>
 				</div>
-				<br/>
-				<br/>
+				<br /> <br />
 
 				<div class="col-md-5 responsive">
 					<h3>플리마켓 설명</h3>
@@ -95,8 +97,7 @@
 			<!-- /.row -->
 
 
-			<br />
-			<br />
+			<br /> <br />
 
 			<!-- Related Projects Row -->
 			<div class="row">
@@ -114,8 +115,10 @@
 										Welcoming Feel</a>
 								</h4>
 								<div class="footer">
-									<a href="#" class="btn btn-round btn-o btn-blue col-xs-6 col-md-6">수정</a>
-									<a href="#" class="btn btn-round btn-o btn-red col-xs-6 col-md-6">삭제</a>
+									<a href="#"
+										class="btn btn-round btn-o btn-blue col-xs-6 col-md-6">수정</a>
+									<a href="#"
+										class="btn btn-round btn-o btn-red col-xs-6 col-md-6">삭제</a>
 								</div>
 							</div>
 						</div>
@@ -131,8 +134,10 @@
 										Balancing Openness</a>
 								</h4>
 								<div class="footer">
-									<a href="#" class="btn btn-round btn-o btn-blue col-xs-6 col-md-6">수정</a>
-									<a href="#" class="btn btn-round btn-o btn-red col-xs-6 col-md-6">삭제</a>
+									<a href="#"
+										class="btn btn-round btn-o btn-blue col-xs-6 col-md-6">수정</a>
+									<a href="#"
+										class="btn btn-round btn-o btn-red col-xs-6 col-md-6">삭제</a>
 								</div>
 							</div>
 						</div>
@@ -148,8 +153,10 @@
 										Angeles</a>
 								</h4>
 								<div class="footer">
-									<a href="#" class="btn btn-round btn-o btn-blue col-xs-6 col-md-6">수정</a>
-									<a href="#" class="btn btn-round btn-o btn-red col-xs-6 col-md-6">삭제</a>
+									<a href="#"
+										class="btn btn-round btn-o btn-blue col-xs-6 col-md-6">수정</a>
+									<a href="#"
+										class="btn btn-round btn-o btn-red col-xs-6 col-md-6">삭제</a>
 								</div>
 							</div>
 						</div>
@@ -167,8 +174,10 @@
 										Welcoming Feel</a>
 								</h4>
 								<div class="footer">
-									<a href="#" class="btn btn-round btn-o btn-blue col-xs-6 col-md-6">수정</a>
-									<a href="#" class="btn btn-round btn-o btn-red col-xs-6 col-md-6">삭제</a>
+									<a href="#"
+										class="btn btn-round btn-o btn-blue col-xs-6 col-md-6">수정</a>
+									<a href="#"
+										class="btn btn-round btn-o btn-red col-xs-6 col-md-6">삭제</a>
 								</div>
 							</div>
 						</div>
@@ -184,8 +193,10 @@
 										Balancing Openness</a>
 								</h4>
 								<div class="footer">
-									<a href="#" class="btn btn-round btn-o btn-blue col-xs-6 col-md-6">수정</a>
-									<a href="#" class="btn btn-round btn-o btn-red col-xs-6 col-md-6">삭제</a>
+									<a href="#"
+										class="btn btn-round btn-o btn-blue col-xs-6 col-md-6">수정</a>
+									<a href="#"
+										class="btn btn-round btn-o btn-red col-xs-6 col-md-6">삭제</a>
 								</div>
 							</div>
 						</div>
@@ -201,130 +212,54 @@
 										Angeles</a>
 								</h4>
 								<div class="footer">
-									<a href="#" class="btn btn-round btn-o btn-blue col-xs-6 col-md-6">수정</a>
-									<a href="#" class="btn btn-round btn-o btn-red col-xs-6 col-md-6">삭제</a>
+									<a href="#"
+										class="btn btn-round btn-o btn-blue col-xs-6 col-md-6">수정</a>
+									<a href="#"
+										class="btn btn-round btn-o btn-red col-xs-6 col-md-6">삭제</a>
 								</div>
 							</div>
 						</div>
 					</div>
-				
-					<!-- 			<div class="col-sm-6 col-md-4"> -->
-					<!-- 				<div class="thumbnail" > -->
-					<!-- 					<h4 class="text-center"><span class="label label-info">카테고리</span></h4> -->
-					<!-- 					<img src="/Yolo/images/prop/2-1.png" class="img-responsive"> -->
-					<!-- 					<div class="caption"> -->
-					<!-- 						<div class="row"> -->
-					<!-- 							<div class="col-md-6 col-xs-6"> -->
-					<!-- 								<h3>상품 이름</h3> -->
-					<!-- 							</div> -->
-					<!-- 							<div class="col-md-6 col-xs-6 price"> -->
-					<!-- 								<h3> -->
-					<!-- 								<label>가격</label></h3> -->
-					<!-- 							</div> -->
-					<!-- 						</div> -->
-					<!-- 						<p>상품 내용</p> -->
-					<!-- 						<div class="row"> -->
-					<!-- 							<div class="col-md-6"> -->
-					<!-- 								<a class="btn btn-primary btn-product col-xs-6 col-md-12">수정</a>  -->
-					<!-- 							</div> -->
-					<!-- 							<div class="col-md-6"> -->
-					<!-- 								<a href="#" class="btn btn-success btn-product col-xs-6 col-md-12">삭제</a></div> -->
-					<!-- 						</div> -->
-
-					<!-- 						<p> </p> -->
-					<!-- 					</div> -->
-					<!-- 				</div> -->
-					<!-- 			</div> -->
-					<!-- 			<div class="col-sm-6 col-md-4"> -->
-					<!-- 				<div class="thumbnail" > -->
-					<!-- 					<h4 class="text-center"><span class="label label-info">카테고리</span></h4> -->
-					<!-- 					<img src="/Yolo/images/prop/2-1.png" class="img-responsive"> -->
-					<!-- 					<div class="caption"> -->
-					<!-- 						<div class="row"> -->
-					<!-- 							<div class="col-md-6 col-xs-6"> -->
-					<!-- 								<h3>iPhone 6</h3> -->
-					<!-- 							</div> -->
-					<!-- 							<div class="col-md-6 col-xs-6 price"> -->
-					<!-- 								<h3> -->
-					<!-- 								<label>$749.99</label></h3> -->
-					<!-- 							</div> -->
-					<!-- 						</div> -->
-					<!-- 						<p>32GB, 64Bit, 1080HD, 4.7 inches, iOS 8</p> -->
-					<!-- 						<div class="row"> -->
-					<!-- 							<div class="col-md-6"> -->
-					<!-- 								<a class="btn btn-primary btn-product col-xs-6 col-md-12">수정</a>  -->
-					<!-- 							</div> -->
-					<!-- 							<div class="col-md-6"> -->
-					<!-- 								<a href="#" class="btn btn-success btn-product col-xs-6 col-md-12">삭제</a></div> -->
-					<!-- 						</div> -->
-
-					<!-- 						<p> </p> -->
-					<!-- 					</div> -->
-					<!-- 				</div> -->
-					<!-- 			</div> -->
-					<!--             <div class="col-sm-6 col-md-4"> -->
-					<!-- 				<div class="thumbnail" > -->
-					<!-- 					<h4 class="text-center"><span class="label label-info">카테고리</span></h4> -->
-					<!-- 					<img src="/Yolo/images/prop/2-1.png" class="img-responsive"> -->
-					<!-- 					<div class="caption"> -->
-					<!-- 						<div class="row"> -->
-					<!-- 							<div class="col-md-6 col-xs-6"> -->
-					<!-- 								<h3>상품 이름</h3> -->
-					<!-- 							</div> -->
-					<!-- 							<div class="col-md-6 col-xs-6 price"> -->
-					<!-- 								<h3> -->
-					<!-- 								<label>가격</label></h3> -->
-					<!-- 							</div> -->
-					<!-- 						</div> -->
-					<!-- 						<p>상세내용</p> -->
-					<!-- 						<div class="row"> -->
-					<!-- 							<div class="col-md-6"> -->
-					<!-- 								<a class="btn btn-primary btn-product col-xs-6 col-md-12">수정</a>  -->
-					<!-- 							</div> -->
-					<!-- 							<div class="col-md-6"> -->
-					<!-- 								<a href="#" class="btn btn-success btn-product col-xs-6 col-md-12">삭제</a></div> -->
-					<!-- 						</div> -->
-
-					<!-- 						<p> </p> -->
-					<!-- 					</div> -->
-					<!-- 				</div> -->
-					<!-- 			</div> -->
-
-					<!--         </div>  -->
-					<!--         </div> -->
-					<!--         /.row -->
-
-					<!-- ------------------------------------------------------- -->
-					<!-- Footer -->
-					<%@include file="/view/common/footer.jsp"%>
-
 				</div>
-				<div class="clearfix"></div>
 			</div>
+			<!-- row end -->
+			</div>
+			<!-- home-content end -->
+			</div>
+			<!-- home-wrapper end -->
 
-			<script src="/Yolo/js/json2.js"></script>
-			<script src="/Yolo/js/jquery-2.1.1.min.js"></script>
-			<script src="/Yolo/js/underscore.js"></script>
-			<script src="/Yolo/js/moment-2.5.1.js"></script>
-			<script src="/Yolo/js/jquery-ui.min.js"></script>
-			<script src="/Yolo/js/jquery-ui-touch-punch.js"></script>
-			<script src="/Yolo/js/jquery.placeholder.js"></script>
-			<script src="/Yolo/js/bootstrap.js"></script>
-			<script src="/Yolo/js/jquery.touchSwipe.min.js"></script>
-			<script src="/Yolo/js/jquery.slimscroll.min.js"></script>
-			<script src="/Yolo/js/jquery.visible.js"></script>
-			<script
-				src="http://maps.googleapis.com/maps/api/js?sensor=true&amp;libraries=geometry&amp;libraries=places"
-				type="text/javascript"></script>
-			<script src="/Yolo/js/infobox.js"></script>
-			<script src="/Yolo/js/clndr.js"></script>
-			<script src="/Yolo/js/jquery.tagsinput.min.js"></script>
-			<script src="/Yolo/js/bootstrap-datepicker.js"></script>
-			<script src="/Yolo/js/fileinput.min.js"></script>
-			<script src="/Yolo/js/app.js"></script>
-			<script src="/Yolo/js/calendar.js"></script>
 
-			<!-- 추가  -->
-			<script src="/Yolo/js/home.js" type="text/javascript"></script>
+			<!-- ------------------------------------------------------- -->
+			<!-- Footer -->
+			<%@include file="/view/common/footer.jsp"%>
+
+		</div>
+		<div class="clearfix"></div>
+	</div>
+
+	<script src="/Yolo/js/json2.js"></script>
+	<script src="/Yolo/js/jquery-2.1.1.min.js"></script>
+	<script src="/Yolo/js/underscore.js"></script>
+	<script src="/Yolo/js/moment-2.5.1.js"></script>
+	<script src="/Yolo/js/jquery-ui.min.js"></script>
+	<script src="/Yolo/js/jquery-ui-touch-punch.js"></script>
+	<script src="/Yolo/js/jquery.placeholder.js"></script>
+	<script src="/Yolo/js/bootstrap.js"></script>
+	<script src="/Yolo/js/jquery.touchSwipe.min.js"></script>
+	<script src="/Yolo/js/jquery.slimscroll.min.js"></script>
+	<script src="/Yolo/js/jquery.visible.js"></script>
+	<script
+		src="http://maps.googleapis.com/maps/api/js?sensor=true&amp;libraries=geometry&amp;libraries=places"
+		type="text/javascript"></script>
+	<script src="/Yolo/js/infobox.js"></script>
+	<script src="/Yolo/js/clndr.js"></script>
+	<script src="/Yolo/js/jquery.tagsinput.min.js"></script>
+	<script src="/Yolo/js/bootstrap-datepicker.js"></script>
+	<script src="/Yolo/js/fileinput.min.js"></script>
+	<script src="/Yolo/js/app.js"></script>
+	<script src="/Yolo/js/calendar.js"></script>
+
+	<!-- 추가  -->
+	<script src="/Yolo/js/home.js" type="text/javascript"></script>
 </body>
 </html>

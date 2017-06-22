@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<title>HostInput.jsp</title>
+<title>MypageInput.jsp</title>
 
 <link href="/Yolo/css/font-awesome.css" rel="stylesheet">
 <link href="/Yolo/css/simple-line-icons.css" rel="stylesheet">
@@ -18,76 +18,134 @@
 <link href="/Yolo/css/app.css" rel="stylesheet">
 
 <!-- 추가 css -->
-<link href="/Yolo/css_yolo/cssView/Host/host.css" rel="stylesheet">
+<link href="/Yolo/css_yolo/cssView/MyPage/mypage.css" rel="stylesheet">
 
 </head>
 
 <body class="notransition">
 
-	<!-- HostHeader -->
-	<%@include file="/view/host/HostHeader.jsp"%>
+	<!-- Header -->
+	<%@include file="/view/common/header.jsp"%>
 
 	<!-- Content -->
 	<div id="wrapper" class="full">
 		<div id="content" class="max">
 
-			<!---------------호스트 등록하기 ------------------------>
+			<!---------------개인정보 수정하기 ------------------------>
 			<div class="home-wrapper">
 
-				<h4 style="text-align: center; margin-bottom: 30px; border-bottom: 1px solid silver; padding-bottom: 10px;">HOST REGISTER</h4>
+				<h4
+					style="text-align: center; margin-bottom: 30px; border-bottom: 1px solid silver; padding-bottom: 10px;">MY
+					PROFILE</h4>
 				<div class="panel-body">
 
 					<form class="form-horizontal" role="form">
 						<div class="form-group">
-							<label class="col-sm-2 control-label"> 호스트 이미지 </label>
+							<label class="col-sm-2 control-label"> 프로필 </label>
 							<div class="col-sm-2">
 								<input type="file" name="imageUpload" id="imageUpload"
-									style="display: none;" /> <img src="" id="imagePreview"
-									alt="" class="ratio img-responsive img-circle" /><br />
-									
+									style="display: none;" /> <img src="" id="imagePreview" alt=""
+									class="ratio img-responsive img-circle" /><br />
+
 								<div style="text-align: center;">
 									<div style="display: inline-block;">
-										<label for="imageUpload" id="btn_profile" class="btn btn-o btn-green">프로필 등록</label>
+										<label for="imageUpload" id="btn_profile"
+											class="btn btn-o btn-green">사진 등록</label>
 									</div>
-								</div><!-------호스트 사진 등록버튼 가운데정렬 -->
+								</div>
+								<!-------사진 등록버튼 가운데정렬 -->
 							</div>
 						</div>
 					</form>
 
 					<form class="form-horizontal" role="form">
 						<div class="form-group">
-							<label class="col-sm-2 control-label">호스트 명</label>
+							<label class="col-sm-2 control-label">아이디</label>
 							<div class="col-sm-8">
-								<input type="text" name="hname" class="form-control" value="일주짱">
+								<input type="text" name="uId" class="form-control" value="">
 							</div>
 						</div>
 					</form>
 
 					<form class="form-horizontal" role="form">
 						<div class="form-group">
-							<label class="col-sm-2 control-label">소개글</label>
+							<label class="col-sm-2 control-label">비밀번호</label>
 							<div class="col-sm-8">
-								<textarea name="hintroduce" class="form-control" rows="6"></textarea>
+								<input type="text" name="uPass" class="form-control" value="">
 							</div>
 						</div>
 					</form>
+
+					<form class="form-horizontal" role="form">
+						<div class="form-group">
+							<label class="col-sm-2 control-label">이 름</label>
+							<div class="col-sm-8">
+								<input type="text" name="uName" class="form-control" value="">
+							</div>
+						</div>
+					</form>
+
+					<form class="form-horizontal" role="form">
+						<div class="form-group">
+							<label class="col-sm-2 control-label">휴대전화</label>
+							<div class="col-sm-8">
+								<input type="text" name="uPhone" class="form-control" value="">
+							</div>
+						</div>
+					</form>
+
+					<form class="form-horizontal" role="form">
+						<div class="form-group">
+							<label class="col-sm-2 control-label">이메일</label>
+							<div class="col-sm-8">
+								<input type="text" name="uEmail" class="form-control" value="">
+							</div>
+						</div>
+					</form>
+
+					<form class="form-horizontal" role="form">
+						<div class="form-group">
+							<label class="col-sm-2 control-label">생 일</label>
+							<div class="col-sm-8">
+								<input type="date" name="uBirth" class="form-control" value="">
+							</div>
+						</div>
+					</form>
+
+					<form class="form-horizontal" role="form">
+						<div class="form-group">
+							<label class="col-sm-2 control-label">주 소 </label>
+							<div class="col-sm-8">
+
+								<div class="col-xs-5 col-md-3 addr">
+									<input type="text" name="uAddr" class="form-control" value="">
+								</div>
+								<div class="col-xs-3 col-md-3">
+									<button id="btn_addr" class="btn btn-o btn-green">우편번호 검색</button>
+								</div>
+								
+								<input type="text" name="uAddr" class="form-control" value="">
+
+							</div>
+
+						</div>
+					</form>
+
 					<div style="text-align: center;">
 						<div style="display: inline-block;">
-							<button id="btn_register" class="btn btn-o btn-green">호스트
-								등록하기</button>
+							<button id="btn_modify" class="btn btn-o btn-green">수정</button>
 						</div>
 					</div>
 
 				</div>
 			</div>
-			<!---------------호스트 등록하기 끝 ------------------------>
+			<!---------------개인정보  수정하기 끝 ------------------------>
 
 
 		</div>
 		<!-- content 끝 -->
 
 		<!-- Footer -->
-		<%@include file="/view/common/footer.jsp"%>
 
 
 
