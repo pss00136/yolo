@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -89,7 +89,7 @@
                                     	<li><span class="icon-users"></span> 총 30 명</li>
                                     	<li> / 10명 신청가능</li>
                                    	</ul>
-                                    <div class="favLink"><a href="#"><span class="icon-heart"></span></a>54</div>
+                                    <div class="favLink"><a href="#"><span class="icon-star"></span></a>54</div>
                                     <ul class="stats">
                                         <li><span class="icon-eye"></span> 200</li>
                                         <li><span class="icon-bubble"></span> 13</li>
