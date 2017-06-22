@@ -1,0 +1,29 @@
+
+
+<!--mypageinput css------>
+.ratio {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.img-circle {
+	border-radius: 50%;
+}
+
+#imagePreview {
+	display: block;
+	width: 100%;
+}
+
+
+
+#btn_modify{
+	width: 150px;
+}
+
+.form-horizontal{
+	margin-bottom: 30px;
+}
+

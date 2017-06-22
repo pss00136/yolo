@@ -114,14 +114,7 @@
             </div>
             <div class="clearfix"></div>
   
-        
-        
-        
-
-        
-
-		        
-
+ 
         <script src="/Yolo/js/json2.js"></script>
         <script src="/Yolo/js/jquery-2.1.1.min.js"></script>
         <script src="/Yolo/js/underscore.js"></script>
@@ -142,7 +135,7 @@
         <script src="/Yolo/js/app.js"></script>
         <script src="/Yolo/js/calendar.js"></script>
         
-        <!-- ì¶ê°  -->
+        <!-- 추가 js -->
 		<script src="/Yolo/js/home.js" type="text/javascript"></script>
 		
 		
