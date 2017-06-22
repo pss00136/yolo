@@ -45,7 +45,6 @@
 				<div class="home-caption">
 					<div class="home-title">인생을 즐길 줄 아는 사람들을 위한 공간 공유 서비스</div>
 					<div class="home-subtitle">Yolo Wow Lot</div>
-					<!-- 		                <a href="#" class="btn btn-lg btn-black">Learn More</a> -->
 				</div>
 				<!-- 통합 검색 폼 -->
 				<div class="search-panel">

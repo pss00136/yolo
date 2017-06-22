@@ -1,5 +1,18 @@
 @CHARSET "UTF-8";
 
+/*****추가부분*****/
+#lec_title{
+	margin-top:20px;
+	margin-bottom: 50px;
+/* 	display: inline; */
+}
+#lec_title_hr{
+border: 0.5px solid #9f9f9f;
+
+}
+/***************************/
+
+/*****세미나/강연 list 부분*****/
 .link-abs {
 	position: absolute;
 	left: 0;

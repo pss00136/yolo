@@ -114,57 +114,6 @@
 								<div class="clearfix"></div>
 							</div><!-- 이전글 & 다음글 끝 -->
 						</div><!-- 글 전체 끝 -->
-						<!-- 카테고리 -->
-<!-- 						<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3"> -->
-<!-- 							<div class="row"> -->
-<!-- 								<div class="col-xs-12 col-sm-6 col-md-12 col-lg-12"> -->
-<!-- 									<h2 class="osLight h-r">Categories</h2> -->
-<!-- 									<ul class="blog-r-nav"> -->
-<!-- 										<li><a href="#">Apartments (13)</a></li> -->
-<!-- 										<li><a href="#">Architecture (12)</a></li> -->
-<!-- 										<li><a href="#">Bedroom (25)</a></li> -->
-<!-- 										<li><a href="#">Furniture (34)</a></li> -->
-<!-- 										<li><a href="#">Ideas (56)</a></li> -->
-<!-- 										<li><a href="#">Kitchen (16)</a></li> -->
-<!-- 										<li><a href="#">Living Room (28)</a></li> -->
-<!-- 										<li><a href="#">Living Room (39)</a></li> -->
-<!-- 										<li><a href="#">Bathroom (21)</a></li> -->
-<!-- 									</ul> -->
-<!-- 								</div> -->
-<!-- 								<div class="col-xs-12 col-sm-6 col-md-12 col-lg-12"> -->
-<!-- 									<h2 class="osLight h-r">Archive</h2> -->
-<!-- 									<ul class="blog-r-nav"> -->
-<!-- 										<li><a href="#">October 2014</a></li> -->
-<!-- 										<li><a href="#">September 2014</a></li> -->
-<!-- 										<li><a href="#">August 2014</a></li> -->
-<!-- 										<li><a href="#">July 2014</a></li> -->
-<!-- 										<li><a href="#">June 2014</a></li> -->
-<!-- 										<li><a href="#">May 2014</a></li> -->
-<!-- 										<li><a href="#">April 2014</a></li> -->
-<!-- 										<li><a href="#">March 2014</a></li> -->
-<!-- 										<li><a href="#">February 2014</a></li> -->
-<!-- 										<li><a href="#">January 2014</a></li> -->
-<!-- 									</ul> -->
-<!-- 								</div> -->
-<!-- 								<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> -->
-<!-- 									<h2 class="osLight h-r">Popular Tags</h2> -->
-<!-- 									<div class="blog-tags"> -->
-<!-- 										<a href="#" class="label label-default">furniture</a><a -->
-<!-- 											href="#" class="label label-default">architect</a><a href="#" -->
-<!-- 											class="label label-default">chair</a><a href="#" -->
-<!-- 											class="label label-default">modern</a><a href="#" -->
-<!-- 											class="label label-default">bathroom</a><a href="#" -->
-<!-- 											class="label label-default">table</a><a href="#" -->
-<!-- 											class="label label-default">sofa</a><a href="#" -->
-<!-- 											class="label label-default">bed</a><a href="#" -->
-<!-- 											class="label label-default">design</a><a href="#" -->
-<!-- 											class="label label-default">apartment</a><a href="#" -->
-<!-- 											class="label label-default">leather</a><a href="#" -->
-<!-- 											class="label label-default">lamp</a> -->
-<!-- 									</div> -->
-<!-- 								</div> -->
-<!-- 							</div> -->
-<!-- 						</div>카테고리 끝 -->
 					</div>
 				</div>
 			</div>
