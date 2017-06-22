@@ -39,7 +39,7 @@
 			<div class="row bounds padding" >
 				<div class="col-md-12 col-xs-12" style="text-align:right;">
 					<div style="display:inline-block;">
-					<a href="#" class="btn btn-round btn-green ">세미나/강연 등록하기</a>
+					<a href="/Yolo/view/comLecture/LectureInput.jsp" class="btn btn-round btn-green ">세미나/강연 등록하기</a>
 					</div>
 				</div>				
 			</div>
