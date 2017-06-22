@@ -1,6 +1,12 @@
+<!-- lotinput -->
 
 
-<!-- 체크박스 -->
+#label{
+	font-size: 17px;
+	font-family: "NanumGothic";
+}
+
+<!-- checkbox -->
 
 .checkbox.switch  {
     padding-top: 4px;
@@ -40,7 +46,7 @@
 }
 
 
-<!-- 라디오버튼 -->
+<!-- radio-button -->
 
 .radio.custom-radio span {
     background-color: #f99639;
@@ -133,8 +139,5 @@ fieldset[disabled] .checkbox.switch input:checked+span.cs-place {
 fieldset[disabled] .checkbox.switch input:checked+span.cs-place span.cs-handler {
     color: #b9ebb9;
     border-color: #b9ebb9;
-}
-.round {
-    border-radius: 100px;
 }
 
