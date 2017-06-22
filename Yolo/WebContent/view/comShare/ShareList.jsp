@@ -43,22 +43,19 @@
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 						<h1 class="osLight">공간 쉐어링</h1>
 					<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 ">
-						<h3 class="osLight">공간을 나누면 두배의 행복이!<br/>홀로 쓰기엔 버거운 공간을 공유해보세요.</h3>
+						<h3 class="osLight">공간을 나누면 두배의 행복이!<br/>홀로 쓰기엔 버거운 공간을 공유해보세요</h3>
                     </div>
                     
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 ">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                     	<div class="form-group">
-                                            <label class="col-sm-2 control-label"></label>
-                                            <div class="col-sm-10">
-                                                <div class="input-group">
-                                                    <input type="text" class="form-control">
-                                                    <span class="input-group-btn">
-                                                        <a href="#" class="btn btn-green">검색</a>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                    </div>
+							<div class="input-group">
+								<input type="text" class="form-control">
+									<span class="input-group-btn">
+										<a href="#" class="btn btn-green">검색</a>
+									</span>
+							</div>
+						</div>
+					</div>
                     
 					<div class="col-xs-12 col-sm-2 col-md-3 col-lg-3">
 						<a href="#" class="btn btn-round btn-o btn-success">쉐어링 글쓰기</a>
