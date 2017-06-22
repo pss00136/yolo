@@ -20,43 +20,9 @@
 #wrapper{ 
  	overflow: hidden; 
 }
-/* .row { */
-/*     margin-right: 10%; */
-/*     margin-left: 10%; */
-/* } */
 
 
-.s-menu-item {
-    height: 100px;
-}
 
-/* 아이콘 기본 */
-.s-icon {
-    font-size: 20px;
-    color: #0eaaa6;
-    opacity: 0.8;
-    line-height: 70px;
-    position: absolute;
-    width: 100%;
-    height: 50%;
-    left: 0px;
-    top: 0px;
-    text-align: center;
-    -webkit-transition: all 400ms linear;
-    -moz-transition: all 400ms linear;
-    -o-transition: all 400ms linear;
-    -ms-transition: all 400ms linear;
-    transition: all 400ms linear;
-}
-/* 아이콘 hover 상태변화 */
-.no-touch .s-menu-item:hover .s-icon {
-    color: #fff;
-    font-size: 35px;
-    opacity:0.3;
-    -webkit-animation: smallToBig 900ms alternate ease;
-    -moz-animation: smallToBig 900ms alternate ease;
-    -ms-animation: smallToBig 900ms alternate ease;
-}
 </style>
 
 </head>
@@ -71,20 +37,39 @@
             <div id="content" class="max">
 		        <!-- -----------------여기에 컨텐츠 div넣으세요----------------- -->
 		        <!-- 이 사이에! -->
-		        <div class="home-wrapper">
+		<div class="home-wrapper">
 			<div class="home-content">
-			<div class="row">
+			<div class="row pb20">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-					<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 s-menu-item">
-                        <a href="#">
-                            <span class="icon-users s-icon"></span>
-                            <div class="s-content">
-                                <h2 class="s-main osLight">공간 쉐어링</h2>
-                            </div>
-                        </a>
+						<h1 class="osLight">공간 쉐어링</h1>
+					<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 ">
+						<h3 class="osLight">공간을 나누면 두배의 행복이!<br/>홀로 쓰기엔 버거운 공간을 공유해보세요.</h3>
                     </div>
+                    
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 ">
+                    	<div class="form-group">
+                                            <label class="col-sm-2 control-label"></label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control">
+                                                    <span class="input-group-btn">
+                                                        <a href="#" class="btn btn-green">검색</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                    </div>
+                    
+					<div class="col-xs-12 col-sm-2 col-md-3 col-lg-3">
+						<a href="#" class="btn btn-round btn-o btn-success">쉐어링 글쓰기</a>
+					</div>
+					
 				</div> 
 			</div>  
+			
+			<div class="clearfix"></div>
+			
+			
                 <div class="row pb40">
                     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                         <a href="single.html" class="propWidget-2">
@@ -164,7 +149,7 @@
 		</div>     
                     
                     
-                    <div class="clearfix"></div>'
+                    <div class="clearfix"></div>
 		        <!-- ------------------------------------------------------- -->
 		        <!-- Footer -->
 		        <%@include file="/view/common/footer.jsp"%>   
