@@ -24,10 +24,10 @@
         
 <style>
 
-.col-sm-10 {
-    width: 73.333333%;
-}
 
+.radio.custom-radio label{
+	margin-right: 3%;
+}
 
 </style>
 
@@ -46,61 +46,67 @@
 		</div>
 		<div id="content" class="max">
 			<!-- ------------------------------------------------------- -->
-				<div class="tables">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div class="panel panel-default">
-                                <div class="panel-body">
-                                <h2>플리마켓 정보 입력</h2><hr><br/>
-                                    <form class="form-horizontal" role="form">
-                                    	<!-- 마켓 명 입력 -->
-                                        <div class="form-group">
-                                            <label class="col-sm-2 control-label">마켓 명</label>
-                                            <div class="col-sm-10">
-                                                <input class="form-control input-sm" type="text" >
-                                            </div>
-                                        </div>
-                                        <!-- 안전 거래 유무 -->
-                                        <div class="form-group">
-                                            <label class="col-sm-2 control-label">안전 거래</label>
-                                            <div class="col-sm-10">
-                                                <div class="radio custom-radio">
-                                                	<label><input type="radio" name="radio1"><span class="fa fa-circle"></span> 등록</label>
-                                                </div>
-                                                <div class="radio custom-radio">
-                                                	<label><input type="radio" name="radio1" checked="checked"><span class="fa fa-circle"></span> 미등록</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- 마켓 설명 입력 -->
-                                        <div class="form-group">
-                                            <label class="col-sm-2 control-label">마켓 설명</label>
-                                            <div class="col-sm-10">
-                                                <textarea class="form-control" rows="15"></textarea>
-                                            </div>
-                                        </div>
-                                        <!-- 상품 등록하러 가기 버튼 -->
-                                        <div id="nextbtn" class="col-md-12">
-                                    	<div class="col-md-5"></div>
-											<button class="col-md-2 btn btn-round btn-o btn-green">상품 등록하러 가기</button>
+			<div class="tables">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<h4>플리마켓 정보 입력</h4>
+								<hr>
+								<br />
+								<form class="form-horizontal" role="form">
+									<!-- 마켓 명 입력 -->
+									<div class="form-group">
+										<label class="col-sm-2 control-label">마켓 명</label>
+										<div class="col-sm-9">
+											<input class="form-control input-sm" type="text">
+										</div>
+									</div>
+									<!-- 안전 거래 유무 -->
+									<div class="form-group">
+										<label class="col-sm-2 control-label">안전 거래</label>
+										<div class="col-sm-9">
+											<div class="radio custom-radio">
+												<label><input type="radio" name="radio1"> <span
+													class="fa fa-circle"></span> 등록 </label> <label><input
+													type="radio" name="radio1" checked="checked"> <span
+													class="fa fa-circle"></span> 미등록 </label>
+											</div>
+										</div>
+									</div>
+									<!-- 마켓 설명 입력 -->
+									<div class="form-group">
+										<label class="col-sm-2 control-label">마켓 설명</label>
+										<div class="col-sm-9">
+											<textarea class="form-control" rows="15"></textarea>
+										</div>
+									</div>
+									<!-- 상품 등록하러 가기 버튼 -->
+									<div id="nextbtn" class="col-md-12">
+										<div class="col-md-5"></div>
+										<button class="col-md-2 btn btn-round btn-o btn-green">상품
+											등록하러 가기</button>
 										<div class="col-md-5"></div>
 									</div>
-									
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-				</div> <!-- / tables -->
+
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- / tables -->
 
 
 			<!-- ------------------------------------------------------- -->
 			<!-- Footer -->
 			<%@include file="/view/common/footer.jsp"%>
 
-		</div> <!-- / content -->
+		</div>
+		<!-- / content -->
 		<div class="clearfix"></div>
-	</div> <!-- / wrapper -->
+	</div>
+	<!-- / wrapper -->
 
 	<script src="/Yolo/js/json2.js"></script>
 	<script src="/Yolo/js/jquery-2.1.1.min.js"></script>
