@@ -32,6 +32,7 @@
             <div id="content" class="max">
 		        <!-- -----------------여기에 컨텐츠 div넣으세요----------------- -->
 		        <!--이 사이에! -->
+			
 			<div class="tables">		        
 		        <div class="panel panel-default">
                         <div class="panel-heading">주문목록</div>
