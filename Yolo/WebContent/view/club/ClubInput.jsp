@@ -44,7 +44,7 @@
 
 								<!-- 체크박스 -->
 								<div class="form-group">
-									<label class="col-sm-2 control-label">주제</label>
+									<label class="col-xs-2 control-label">주제</label>
 									<div class="col-md-4 col-xs-12">
 										<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
 											<label><input type="checkbox"><span
@@ -78,7 +78,7 @@
 								<!-- 체크박스 끝 -->
 
 								<div class="form-group">
-									<label class="col-sm-2 control-label">모임 명</label>
+									<label class="col-xs-2 control-label">모임 명</label>
 									<div class="col-md-5 col-xs-10">
 										<input type="text" class="form-control">
 									</div>
@@ -88,9 +88,9 @@
 
 								<!-- 파일 등록하기 -->
 								<div class="form-group">
-									<label class="col-sm-2 control-label">타이틀 이미지</label>
+									<label class="col-xs-2 control-label">타이틀 이미지</label>
 									<div class="col-sm-10">
-										<div class="col-sm-2">
+										<div class="col-xs-2">
 											<input type="file" name="imageUpload" id="imageUpload"
 												style="display: none;" /> <img src="" id="imagePreview"
 												alt="" class="ratio img-responsive" /><br />
@@ -110,8 +110,8 @@
 
 								<!-- 해시태그-->
 								<div class="form-group">
-									<label class="col-sm-2 control-label">해시태그</label>
-									<div class="col-sm-10">
+									<label class="col-xs-2 control-label">해시태그</label>
+									<div class="col-xs-10">
 										<input type="text" class="form-control" id="tags"
 											placeholder="#내용 으로 적어주세요" style="display: none;">
 										
@@ -121,8 +121,8 @@
 
 								<!-- 일시  -->
 								<div class="form-group">
-									<label class="col-sm-2 control-label">일시</label>
-									<div class="col-md-6 col-sm-10">
+									<label class="col-xs-2 control-label">일시</label>
+									<div class="col-md-6 col-xs-10">
 										<div class="col-md-2 radio custom-radio">
 											<label><input type="radio" name="radio1"><span
 												class="fa fa-circle"></span> 미정</label>
@@ -132,7 +132,7 @@
 												class="fa fa-circle"></span> 확정</label>
 										</div>
 										
-											<div class="col-md-2 col-sm-3">
+											<div class="col-md-2 col-xs-3">
 										<input type="text" class="form-control" id="datepicker">
 								</div>
 									</div><!-- 라디오버튼 -->
@@ -141,7 +141,7 @@
 									<!-- 활동주기 -->
 								<div class="form-group">
 									<label class="col-sm-2 control-label">활동 주기</label>
-									<div class="col-md-6 col-sm-10">
+									<div class="col-md-6 col-xs-10">
 										<div class="col-md-2 radio custom-radio">
 											<label><input type="radio" name="radio1"><span
 												class="fa fa-circle"></span> 정기적</label>
@@ -153,32 +153,25 @@
 									</div><!-- 라디오버튼 -->				
 								</div><!-- 활동주기 끝 -->
 								
+								
+								
 
 								<div class="form-group">
-									<label class="col-sm-2 control-label">Dropdown select</label>
-									<div class="col-sm-10">
-										<div class="btn-group">
-											<button data-toggle="dropdown"
-												class="btn btn-o btn-gray dropdown-toggle">
-												<span class="dropdown-label">Option 1</span> <span
-													class="caret"></span>
-											</button>
-											<ul class="dropdown-menu dropdown-select">
-												<li class="active"><input type="radio" name="ds1"
-													checked="checked"><a href="#">Option 1</a></li>
-												<li><input type="radio" name="ds1"><a href="#">Option
-														2</a></li>
-												<li><input type="radio" name="ds1"><a href="#">Option
-														3</a></li>
-												<li class="disabled"><input type="radio" name="ds1"
-													disabled=""><a href="#">Option disabled</a></li>
-											</ul>
-										</div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label">모임 설명</label>
+								
+                               
+                                    <label class="col-sm-2 control-label" >인원</label>
+                                    <div class="col-md-6 col-xs-10">
+                                        <a href="#" class="btn btn-gray btn-round-left"><span class="fa fa-angle-left"></span></a>
+                                        <input type="text" class="form-control" readonly="readonly" value="1">
+                                        <a href="#" class="btn btn-gray btn-round-right"><span class="fa fa-angle-right"></span></a>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                
+                            </div>
+                            
+                            
+                            <div class="form-group">
+									<label class="col-xs-2 control-label">모임 설명</label>
 									<div class="col-md-5 col-xs-10">
 										<textarea class="form-control" rows="5"></textarea>
 									</div>
@@ -191,6 +184,13 @@
 									</div>
 								</div>
 								</div>
+                            
+								</div><!-- panel-body  -->
+
+
+
+
+								
 
 
  
@@ -202,8 +202,6 @@
 					</div>
 				</div>
 			</div>
-
-			<!-- ------------------------------------------------------- -->
 
 
 		</div>
