@@ -25,7 +25,7 @@
 <body class="notransition">
 
 	<!-- Header -->
-	<%@include file="/view/host/Hostheader.jsp"%>
+	<%@include file="/view/host/HostHeader.jsp"%>
 
 	<!-- Content -->
 	<div id="wrapper" class="full">

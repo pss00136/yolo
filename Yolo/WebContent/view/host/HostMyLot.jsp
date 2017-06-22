@@ -25,7 +25,7 @@
 <body class="notransition">
     
 		<!-- Header -->
-		<%@include file="/view/host/Hostheader.jsp"%>
+		<%@include file="/view/host/HostHeader.jsp"%>
 
         <!-- Content --> 
         <div id="wrapper" class="full">
@@ -55,7 +55,7 @@
                                                 <div class="feat feat-2"><span class="icon-bubble"></span> 	2</div>                                               
                                             </div>
                                         </div>
-                                                <a style="float:right; margin-bottom: 5px;" href="#" class="btn btn-round btn-o btn-green">요청취소</a>
+                                                <a style="float:right; margin-bottom: 5px;" href="#" class="btn  btn-o btn-green">요청취소</a>
                                     </a>
                                   
                                 </div>
@@ -72,7 +72,7 @@
                                                 <div class="feat feat-2"><span class="icon-bubble"></span> 	1</div>                                               
                                             </div>
                                         </div>
-                                                <a style="float:right; margin-bottom: 5px;" href="#" class="btn btn-round btn-o btn-green">요청취소</a>
+                                                <a style="float:right; margin-bottom: 5px;" href="#" class="btn  btn-o btn-green">요청취소</a>
                                     </a>
                                   
                                 </div>
@@ -89,7 +89,7 @@
                                                 <div class="feat feat-2"><span class="icon-bubble"></span> 	1</div>                                               
                                             </div>
                                         </div>
-                                                <a style="float:right; margin-bottom: 5px;" href="#" class="btn btn-round btn-o btn-green">요청취소</a>
+                                                <a style="float:right; margin-bottom: 5px;" href="#" class="btn  btn-o btn-green">요청취소</a>
                                     </a>
                                   
                                 </div>
@@ -122,7 +122,8 @@
                                                 <div class="feat feat-2"><span class="icon-bubble"></span> 	2</div>                                               
                                             </div>
                                         </div>
-                                                <a style="float:right; margin-bottom: 5px;" href="#" class="btn btn-round btn-o btn-green">Green</a>
+                                                <a style="float:right; margin: 5px;" href="#" class="btn  btn-o btn-green">수정</a>
+                                                <a style="float:right; margin: 5px;" href="#" class="btn  btn-o btn-green">삭제</a>
                                     </a>
                                   
                                 </div>
@@ -139,7 +140,8 @@
                                                 <div class="feat feat-2"><span class="icon-bubble"></span> 	1</div>                                               
                                             </div>
                                         </div>
-                                                <a style="float:right; margin-bottom: 5px;" href="#" class="btn btn-round btn-o btn-green">Green</a>
+                                                <a style="float:right; margin: 5px;" href="#" class="btn  btn-o btn-green">수정</a>
+                                                <a style="float:right; margin: 5px;" href="#" class="btn  btn-o btn-green">삭제</a>
                                     </a>
                                   
                                 </div>
@@ -156,7 +158,8 @@
                                                 <div class="feat feat-2"><span class="icon-bubble"></span> 	1</div>                                               
                                             </div>
                                         </div>
-                                                <a style="float:right; margin-bottom: 5px;" href="#" class="btn btn-round btn-o btn-green">Green</a>
+                                               <a style="float:right; margin: 5px;" href="#" class="btn  btn-o btn-green">수정</a>
+                                                <a style="float:right; margin: 5px;" href="#" class="btn  btn-o btn-green">삭제</a>
                                     </a>
                                   
                                 </div>
