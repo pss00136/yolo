@@ -24,7 +24,7 @@
  
 <body class="notransition">
     
-		<!-- Header -->
+		<!-- HostHeader -->
 		<%@include file="/view/host/HostHeader.jsp"%>
 
         <!-- Content --> 
@@ -39,10 +39,10 @@
                     <div class="row" style="margin-bottom: 10px;">
                      <h3 style="margin: 5px;">승인 요청중인 공간 &nbsp;<span class="label label-warning">승인 대기</span></h3>
                      
-                        <div>
+                    
                             <div class="row">
                              
-                                <div class="col-md-4 col-sm-6" style="background-color: white;">
+                                <div class="col-md-4 col-xs-12">
                                     <a href="/Yolo/view/lot/LotView.jsp" class="propWidget-1" style="margin-bottom: 5px;">
                                     
                                         <div class="fig">
@@ -55,11 +55,13 @@
                                                 <div class="feat feat-2"><span class="icon-bubble"></span> 	2</div>                                               
                                             </div>
                                         </div>
-                                                <a style="float:right; margin-bottom: 5px;" href="#" class="btn  btn-o btn-green">요청취소</a>
-                                    </a>
-                                  
+                                        
+                                             </a>
+                                   <a style="float:right; margin-bottom: 5px;" href="#" class="btn  btn-o btn-green">요청취소</a>
                                 </div>
-                                   <div class="col-md-4 col-sm-6" style="background-color: white;">
+                                
+                              
+                                   <div class="col-md-4 col-xs-12">
                                     <a href="/Yolo/view/lot/LotView.jsp" class="propWidget-1" style="margin-bottom: 5px;">
                                     
                                         <div class="fig">
@@ -71,12 +73,13 @@
                                                 <div class="feat feat-1"><span class="fa fa-eye"></span> 5</div>
                                                 <div class="feat feat-2"><span class="icon-bubble"></span> 	1</div>                                               
                                             </div>
-                                        </div>
-                                                <a style="float:right; margin-bottom: 5px;" href="#" class="btn  btn-o btn-green">요청취소</a>
+                                        </div>      
                                     </a>
-                                  
+                                     <a style="float:right; margin-bottom: 5px;" href="#" class="btn  btn-o btn-green">요청취소</a>
                                 </div>
-                                   <div class="col-md-4 col-sm-6" style="background-color: white;">
+                               
+                                
+                                   <div class="col-md-4 col-xs-12">
                                     <a href="/Yolo/view/lot/LotView.jsp" class="propWidget-1" style="margin-bottom: 5px;">
                                     
                                         <div class="fig">
@@ -91,11 +94,10 @@
                                         </div>
                                                 <a style="float:right; margin-bottom: 5px;" href="#" class="btn  btn-o btn-green">요청취소</a>
                                     </a>
-                                  
                                 </div>
                                 
                             </div>
-                        </div>
+                     
                         </div>
                         
                      
@@ -109,7 +111,7 @@
                         <div>
                             <div class="row">
                              
-                                <div class="col-md-4 col-sm-6" style="background-color: white;">
+                                <div class="col-md-4 col-xs-12" style="background-color: white;">
                                     <a href="/Yolo/view/lot/LotView.jsp" class="propWidget-1" style="margin-bottom: 5px;">
                                     
                                         <div class="fig">
@@ -127,7 +129,7 @@
                                     </a>
                                   
                                 </div>
-                                   <div class="col-md-4 col-sm-6" style="background-color: white;">
+                                   <div class="col-md-4 col-xs-12" style="background-color: white;">
                                     <a href="/Yolo/view/lot/LotView.jsp" class="propWidget-1" style="margin-bottom: 5px;">
                                     
                                         <div class="fig">
@@ -145,7 +147,7 @@
                                     </a>
                                   
                                 </div>
-                                   <div class="col-md-4 col-sm-6" style="background-color: white;">
+                                   <div class="col-md-4 col-xs-12" style="background-color: white;">
                                     <a href="/Yolo/view/lot/LotView.jsp" class="propWidget-1" style="margin-bottom: 5px;">
                                     
                                         <div class="fig">

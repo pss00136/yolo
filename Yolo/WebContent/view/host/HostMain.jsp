@@ -23,7 +23,7 @@
     
     <body class="notransition">
     
-		<!-- Header -->
+		<!-- HostHeader -->
 		<%@include file="/view/host/HostHeader.jsp"%>
 
         <!-- Content --> 
