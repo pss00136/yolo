@@ -56,63 +56,49 @@
 								<!-------사진 등록버튼 가운데정렬 -->
 							</div>
 						</div>
-					</form>
 
-					<form class="form-horizontal" role="form">
 						<div class="form-group">
 							<label class="col-sm-2 control-label">아이디</label>
 							<div class="col-sm-8">
 								<input type="text" name="uId" class="form-control" value="">
 							</div>
 						</div>
-					</form>
-
-					<form class="form-horizontal" role="form">
+				
 						<div class="form-group">
 							<label class="col-sm-2 control-label">비밀번호</label>
 							<div class="col-sm-8">
 								<input type="text" name="uPass" class="form-control" value="">
 							</div>
 						</div>
-					</form>
-
-					<form class="form-horizontal" role="form">
+				
 						<div class="form-group">
 							<label class="col-sm-2 control-label">이 름</label>
 							<div class="col-sm-8">
 								<input type="text" name="uName" class="form-control" value="">
 							</div>
 						</div>
-					</form>
-
-					<form class="form-horizontal" role="form">
+				
 						<div class="form-group">
 							<label class="col-sm-2 control-label">휴대전화</label>
 							<div class="col-sm-8">
 								<input type="text" name="uPhone" class="form-control" value="">
 							</div>
 						</div>
-					</form>
-
-					<form class="form-horizontal" role="form">
+				
 						<div class="form-group">
 							<label class="col-sm-2 control-label">이메일</label>
 							<div class="col-sm-8">
 								<input type="text" name="uEmail" class="form-control" value="">
 							</div>
 						</div>
-					</form>
-
-					<form class="form-horizontal" role="form">
+			
 						<div class="form-group">
 							<label class="col-sm-2 control-label">생 일</label>
 							<div class="col-sm-8">
 								<input type="date" name="uBirth" class="form-control" value="">
 							</div>
 						</div>
-					</form>
-
-					<form class="form-horizontal" role="form">
+					
 						<div class="form-group">
 							<label class="col-sm-2 control-label">주 소 </label>
 							<div class="col-sm-8">
@@ -125,9 +111,7 @@
 								</div>
 								
 								<input type="text" name="uAddr" class="form-control" value="">
-
 							</div>
-
 						</div>
 					</form>
 
