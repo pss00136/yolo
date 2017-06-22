@@ -20,6 +20,7 @@
 <!-- 추가 속성 CSS -->
 
 <link href="/Yolo/css_yolo/cssView/appStatus/InterestList.css" rel="stylesheet">
+<link href="/Yolo/css_yolo/cssView/Club/clubList.css" rel="stylesheet">
 
 </head>
 <body class="notransition no-hidden">
@@ -140,14 +141,41 @@
 		                                </div>
 		                                <div class="clearfix"></div>
 		                            </a>
-		                        </div>	
+		                        </div>
+		                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+		                            <a href="single.html" class="card">
+		                                <div class="figure">
+		                                    <img src="/Yolo/images_yolo/lot/2.PNG" alt="image">
+		                                    <div class="figCaption">
+		                                        <div>20,000원/시간</div>
+		                                        <span class="icon-eye"> 175</span>
+		                                        <span class="icon-heart"> 67</span>
+		                                        <span class="icon-bubble"> 9</span>
+		                                    </div>
+		                                    <div class="figView"><span class="icon-eye"></span></div>
+		                                    
+		                                </div>
+		                                <h2>왕십리 아지트스튜디오</h2>
+		                                <div class="cardAddress"><span class="icon-pointer"></span>왕십리</div>
+		                                <div class="cardRating">
+		                                    <span class="fa fa-star"></span>
+		                                    <span class="fa fa-star"></span>
+		                                    <span class="fa fa-star"></span>
+		                                    <span class="fa fa-star"></span>
+		                                    <span class="fa fa-star"></span>
+		                                    (123)
+		                                </div>
+                              		  <div class="clearfix"></div>
+                          	  		</a>
+                      			</div>
                               </div>
                               <div class="blog-pagination">
-                                 <a href="#" class="btn btn-o btn-round btn-green"><span
-                                    class="fa fa-angle-left"></span> Older Articles</a> <a href="#"
-                                    class="btn btn-o btn-round btn-green pull-right">Newer
-                                    Articles <span class="fa fa-angle-right"></span>
-                                 </a>
+                                 <!-- 이전버튼 -->
+                                 <a href="#" class="btn btn-o btn-round btn-green">
+                                 <span class="fa fa-angle-left"></span> Previous </a> 
+                                 <!-- 다음버튼 -->
+                                 <a href="#" class="btn btn-o btn-round btn-green pull-right">
+                                 <span class="fa fa-angle-right"></span> Next </a>
                                  <div class="clearfix"></div>
                               </div>
                            </div><!-- / 플리마켓 content -->
@@ -179,7 +207,7 @@
 	                        	<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
 		                            <a href="ClubDetail.jsp" class="card">
 		                                <div class="figure">
-		                                    <img src="/Yolo/images_yolo/club/wooden1.jpg" alt="image">
+		                                    <img src="/Yolo/images_yolo/club/wooden2.jpg" alt="image">
 		                                    <div class="figCaption">
 		                                        <div><span class="icon-users"> 총 30 명 / 10명 신청가능</span> </div>
 		                                        <span class="icon-eye"> 200</span>
@@ -200,6 +228,27 @@
 	                       		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
 		                            <a href="ClubDetail.jsp" class="card">
 		                                <div class="figure">
+		                                    <img src="/Yolo/images_yolo/club/network.jpg" alt="image">
+		                                    <div class="figCaption">
+		                                        <div><span class="icon-users"> 총 30 명 / 10명 신청가능</span> </div>
+		                                        <span class="icon-eye"> 200</span>
+		                                        <span class="icon-star"> 16</span>
+		                                    </div>
+		                                    <div class="figView"><span class="icon-eye"></span></div>
+		                                    <div class="figType">취미활동</div>
+		                                </div>
+		                                <h2>1인미디어 비즈니스 매칭 네트워킹 모임</h2>
+		                                <div class="cardAddress"><span class="icon-pointer"></span>서울 용산구 후암동 서울특별시 용산구 후암로 38, 지하 1층</div>
+		                                <ul class="cardFeat">
+		                                    <li><span class="fa fa-clock-o"></span>일시적</li>
+		                                    <li><span class="fa fa-calendar"></span> 6월 28일(수) 19:00 ~ 21:00</li>
+		                                </ul>
+		                                <div class="clearfix"></div>
+		                            </a>
+		                        </div>
+		                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+		                            <a href="ClubDetail.jsp" class="card">
+		                                <div class="figure">
 		                                    <img src="/Yolo/images_yolo/club/wooden1.jpg" alt="image">
 		                                    <div class="figCaption">
 		                                        <div><span class="icon-users"> 총 30 명 / 10명 신청가능</span> </div>
@@ -218,15 +267,119 @@
 		                                <div class="clearfix"></div>
 		                            </a>
 		                        </div>
+	                        	<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+		                            <a href="ClubDetail.jsp" class="card">
+		                                <div class="figure">
+		                                    <img src="/Yolo/images_yolo/club/wooden2.jpg" alt="image">
+		                                    <div class="figCaption">
+		                                        <div><span class="icon-users"> 총 30 명 / 10명 신청가능</span> </div>
+		                                        <span class="icon-eye"> 200</span>
+		                                        <span class="icon-star"> 54</span>
+		                                    </div>
+		                                    <div class="figView"><span class="icon-eye"></span></div>
+		                                    <div class="figType">취미활동</div>
+		                                </div>
+		                                <h2>목공예 기초과정 7월 (토) 주말반(스툴 만들기)</h2>
+		                                <div class="cardAddress"><span class="icon-pointer"></span>서울 용산구 후암동 서울특별시 용산구 후암로 38, 지하 1층</div>
+		                                <ul class="cardFeat">
+		                                    <li><span class="fa fa-clock-o"></span>정기적</li>
+		                                    <li><span class="fa fa-calendar"></span>7월 8일 (토) ~ 7월 29일 (토)</li>
+		                                </ul>
+		                                <div class="clearfix"></div>
+		                            </a>
+		                        </div>
+	                       		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+		                            <a href="ClubDetail.jsp" class="card">
+		                                <div class="figure">
+		                                    <img src="/Yolo/images_yolo/club/network.jpg" alt="image">
+		                                    <div class="figCaption">
+		                                        <div><span class="icon-users"> 총 30 명 / 10명 신청가능</span> </div>
+		                                        <span class="icon-eye"> 200</span>
+		                                        <span class="icon-star"> 16</span>
+		                                    </div>
+		                                    <div class="figView"><span class="icon-eye"></span></div>
+		                                    <div class="figType">취미활동</div>
+		                                </div>
+		                                <h2>1인미디어 비즈니스 매칭 네트워킹 모임</h2>
+		                                <div class="cardAddress"><span class="icon-pointer"></span>서울 용산구 후암동 서울특별시 용산구 후암로 38, 지하 1층</div>
+		                                <ul class="cardFeat">
+		                                    <li><span class="fa fa-clock-o"></span>일시적</li>
+		                                    <li><span class="fa fa-calendar"></span> 6월 28일(수) 19:00 ~ 21:00</li>
+		                                </ul>
+		                                <div class="clearfix"></div>
+		                            </a>
+		                        </div>
+		                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+		                            <a href="ClubDetail.jsp" class="card">
+		                                <div class="figure">
+		                                    <img src="/Yolo/images_yolo/club/wooden1.jpg" alt="image">
+		                                    <div class="figCaption">
+		                                        <div><span class="icon-users"> 총 30 명 / 10명 신청가능</span> </div>
+		                                        <span class="icon-eye"> 200</span>
+		                                        <span class="icon-star"> 54</span>
+		                                    </div>
+		                                    <div class="figView"><span class="icon-eye"></span></div>
+		                                    <div class="figType">취미활동</div>
+		                                </div>
+		                                <h2>목공예 기초과정 7월 (토) 주말반(스툴 만들기)</h2>
+		                                <div class="cardAddress"><span class="icon-pointer"></span>서울 용산구 후암동 서울특별시 용산구 후암로 38, 지하 1층</div>
+		                                <ul class="cardFeat">
+		                                    <li><span class="fa fa-clock-o"></span>정기적</li>
+		                                    <li><span class="fa fa-calendar"></span>7월 8일 (토) ~ 7월 29일 (토)</li>
+		                                </ul>
+		                                <div class="clearfix"></div>
+		                            </a>
+		                        </div>
+	                        	<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+		                            <a href="ClubDetail.jsp" class="card">
+		                                <div class="figure">
+		                                    <img src="/Yolo/images_yolo/club/wooden2.jpg" alt="image">
+		                                    <div class="figCaption">
+		                                        <div><span class="icon-users"> 총 30 명 / 10명 신청가능</span> </div>
+		                                        <span class="icon-eye"> 200</span>
+		                                        <span class="icon-star"> 54</span>
+		                                    </div>
+		                                    <div class="figView"><span class="icon-eye"></span></div>
+		                                    <div class="figType">취미활동</div>
+		                                </div>
+		                                <h2>목공예 기초과정 7월 (토) 주말반(스툴 만들기)</h2>
+		                                <div class="cardAddress"><span class="icon-pointer"></span>서울 용산구 후암동 서울특별시 용산구 후암로 38, 지하 1층</div>
+		                                <ul class="cardFeat">
+		                                    <li><span class="fa fa-clock-o"></span>정기적</li>
+		                                    <li><span class="fa fa-calendar"></span>7월 8일 (토) ~ 7월 29일 (토)</li>
+		                                </ul>
+		                                <div class="clearfix"></div>
+		                            </a>
+		                        </div>
+	                       		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+		                            <a href="ClubDetail.jsp" class="card">
+		                                <div class="figure">
+		                                    <img src="/Yolo/images_yolo/club/network.jpg" alt="image">
+		                                    <div class="figCaption">
+		                                        <div><span class="icon-users"> 총 30 명 / 10명 신청가능</span> </div>
+		                                        <span class="icon-eye"> 200</span>
+		                                        <span class="icon-star"> 16</span>
+		                                    </div>
+		                                    <div class="figView"><span class="icon-eye"></span></div>
+		                                    <div class="figType">취미활동</div>
+		                                </div>
+		                                <h2>1인미디어 비즈니스 매칭 네트워킹 모임</h2>
+		                                <div class="cardAddress"><span class="icon-pointer"></span>서울 용산구 후암동 서울특별시 용산구 후암로 38, 지하 1층</div>
+		                                <ul class="cardFeat">
+		                                    <li><span class="fa fa-clock-o"></span>일시적</li>
+		                                    <li><span class="fa fa-calendar"></span> 6월 28일(수) 19:00 ~ 21:00</li>
+		                                </ul>
+		                                <div class="clearfix"></div>
+		                            </a>
+		                        </div>
                               </div>
                               <div class="blog-pagination">
                                  <!-- 이전버튼 -->
                                  <a href="#" class="btn btn-o btn-round btn-green">
-                                 <span class="fa fa-angle-left"></span> Older Articles</a> 
+                                 <span class="fa fa-angle-left"></span> Previous </a> 
                                  <!-- 다음버튼 -->
-                                 <a href="#" class="btn btn-o btn-round btn-green pull-right">Newer Articles 
-                                 <span class="fa fa-angle-right"></span>
-                                 </a>
+                                 <a href="#" class="btn btn-o btn-round btn-green pull-right">
+                                 <span class="fa fa-angle-right"></span> Next </a>
                               </div>                              
                            </div><!-- / 상품 content -->
                         </div>
