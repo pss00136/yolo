@@ -69,12 +69,11 @@ border: 0.5px solid #9f9f9f;
 				</div>
 						
 			</div>
-			<hr id="lec_title_hr" class="bounds padding"/>
-			
+			<hr id="lec_title_hr" class="bounds padding"/>	
 			<!-- 리스트 목록 -->
 			<div class="bounds padding">
 				<!-- 리스트 -->
-				<a href="/Main/Page/Products" class="item zoom active">
+				<a href="/Yolo/view/comLecture/LectureView.jsp" class="item zoom active">
 					<div class="column">
 						<div class="image">
 							<img id="ctl00_body_rptProducts_ctl00_imgProduct"
@@ -99,7 +98,7 @@ border: 0.5px solid #9f9f9f;
 					</div>
 				</a><!-- 리스트의 끝 -->
 				<!-- 리스트 -->
-				<a href="/Main/Page/Products" class="item zoom active">
+				<a href="/Yolo/view/comLecture/LectureView.jsp" class="item zoom active">
 					<div class="column">
 						<div class="image">
 							<img id="ctl00_body_rptProducts_ctl00_imgProduct"
@@ -124,7 +123,7 @@ border: 0.5px solid #9f9f9f;
 					</div>
 				</a><!-- 리스트의 끝 -->
 				<!-- 리스트 -->
-				<a href="/Main/Page/Products" class="item zoom active">
+				<a href="/Yolo/view/comLecture/LectureView.jsp" class="item zoom active">
 					<div class="column">
 						<div class="image">
 							<img id="ctl00_body_rptProducts_ctl00_imgProduct"
@@ -149,7 +148,7 @@ border: 0.5px solid #9f9f9f;
 					</div>
 				</a><!-- 리스트의 끝 -->
 				<!-- 리스트 -->
-				<a href="/Main/Page/Products" class="item zoom active">
+				<a href="/Yolo/view/comLecture/LectureView.jsp" class="item zoom active">
 					<div class="column">
 						<div class="image">
 							<img id="ctl00_body_rptProducts_ctl00_imgProduct"
@@ -170,31 +169,6 @@ border: 0.5px solid #9f9f9f;
 							</p>
 							<p>by LeeYJ</p>
 							<p style="float:right;">10000원</p>
-						</div>
-					</div>
-				</a><!-- 리스트의 끝 -->
-				<!-- 리스트 -->
-				<a href="/Main/Page/Products" class="item zoom active">
-					<div class="column">
-						<div class="image">
-							<img id="ctl00_body_rptProducts_ctl00_imgProduct"
-								class="cover accelerate"
-								src="https://bufiles.blob.core.windows.net/co3657/products/bvh_products1.jpg"
-								alt="antimicrobial alphasan additive prevents odors" />
-							<div class="link-abs">
-								<p class="link-col-text">View More...</p>
-							</div>
-						</div>
-					</div>
-					<div class="column">
-						<div class="text">
-							<h2>재미있는 철학이야기</h2>
-							<hr />
-							<p>
-								<span class="text-smaller">쉽게 듣는 철학 강연</span>
-							</p>
-							<p>by LeeYJ</p>
-							<p style="float: right;">10000원</p>
 						</div>
 					</div>
 				</a><!-- 리스트의 끝 -->
@@ -216,8 +190,6 @@ border: 0.5px solid #9f9f9f;
 					<div class="col-md-4"></div>
 				</div><!-- 페이징 부분 끝 -->
 			</div><!-- 리스트 목록 끝 -->
-
-
 			<!-- ------------------------------------------------------- -->
 			<!-- Footer -->
 			<%@include file="/view/common/footer.jsp"%>
