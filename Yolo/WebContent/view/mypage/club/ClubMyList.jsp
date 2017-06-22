@@ -9,9 +9,7 @@
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <title>reales | real estate web application</title>
 
-<!-- Custom CSS -->
-<link href="/Yolo/css_yolo/cssView/MyClub/portfolio-item.css"
-	rel="stylesheet">
+
 <link href="/Yolo/css/font-awesome.css" rel="stylesheet">
 <link href="/Yolo/css/simple-line-icons.css" rel="stylesheet">
 <link href="/Yolo/css/jquery-ui.css" rel="stylesheet">
@@ -19,41 +17,13 @@
 <link href="/Yolo/css/fileinput.min.css" rel="stylesheet">
 <link href="/Yolo/css/bootstrap.css" rel="stylesheet">
 <link href="/Yolo/css/app.css" rel="stylesheet">
-<style type="text/css">
-.home-content h2 {
-	padding: 0 0 10px 0;
-}
 
-.userWidget-2 {
-	margin-bottom: 0px;
-}
-
-.blog-r-nav li {
-	padding-bottom: 1px;
-}
-
-.filterForm{
-    padding: 0 5px;
-}
-.filter{
-	margin: 0 0 15px 0;
-}
-.blog-r-nav{
-    padding-bottom: 0px;
-}
-
-a.handleFilter{
-	margin: 5px 5px 0 0;
-}
-
-.article h4 {
-    font-size: 20px;
-    font-weight: normal;
-    margin: 0;
-    padding: 0 20px;
-    line-height: 26px;
-}
-</style>
+<!-- Custom CSS -->
+<link href="/Yolo/css_yolo/cssView/MyClub/portfolio-item.css"
+	rel="stylesheet">
+<link href="/Yolo/css_yolo/cssView/MyClub/ClubMyList.css"
+	rel="stylesheet">
+	
 <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>

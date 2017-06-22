@@ -16,27 +16,9 @@
 <link href="/Yolo/css/fileinput.min.css" rel="stylesheet">
 <link href="/Yolo/css/bootstrap.css" rel="stylesheet">
 <link href="/Yolo/css/app.css" rel="stylesheet">
-<style type="text/css">
-.propWidget-2 {
-	margin: 10px;
-}
 
-.responsive {
-	margin: 10px;
-}
-
-.fleamarket {
-	background-color: white;
-	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.13);
-	margin-bottom: 2px;
-}
-
-.btn-modify {
-	float: right;
-	margin-bottom: 5px;
-	margin-right: 5px;
-}
-</style>
+<link href="/Yolo/css_yolo/cssView/MyMarket/MarketMyList.css"
+	rel="stylesheet">
 <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>

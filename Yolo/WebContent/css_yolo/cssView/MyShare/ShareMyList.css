@@ -1,0 +1,10 @@
+@CHARSET "UTF-8";
+
+.propWidget-1{
+    margin-bottom: 5px;
+}
+#share{
+	background-color:white;
+	padding: 10px 10px 10px 10px;
+	border: 1px solid #f3f3f3;
+}
