@@ -23,8 +23,20 @@
 <style>
 
 .carousel, .item, .active {
-	height: 60%;
+    height: 60%;
     width: 30%;
+}
+
+@media (max-width: 768px) { 
+   .carousel, .item, .active, img { 
+    width: 100%; 
+    height: 80%; 
+   } 
+} 
+
+img{
+	width: 100%;
+    height: 100%;
 }
 
 .carousel-inner {
@@ -34,6 +46,11 @@
 
 .carousel-inner > .active {
     width: 100%;
+    height: 100%;
+}
+
+.carousel-inner > .active img{
+    width: 100%; 
     height: 100%;
 }
 
@@ -47,12 +64,15 @@
     -o-background-size: cover;
 }
 
+.carousel-inner > .next {
+	height: 100%;
+} 
 </style>
 
 <!-- -------슬라이드 JS-------- -->
 <script>
     $('.carousel').carousel({
-        interval: 5000 //화면 넘기는 속도
+        interval: 5000 //화면 넘기는 속도     
     })
 </script>
 
@@ -62,21 +82,21 @@
 
 </head>
 <body class="notransition">   
-	<!-- Header -->
-	<%@include file="/view/common/header.jsp"%>
-	
-	<!-- Content -->
-	<div id="wrapper" class="full">
-		<div id="mapView" class="min"><div class="mapPlaceholder"><span class="fa fa-spin fa-spinner"></span> Loading map...</div></div>
-		<div id="content" class="max">
-		    <!-- ------------------------------------------------------- -->
-		    <!-- 본문내용 -->
-		    
-		    
-		    
-		    
+   <!-- Header -->
+   <%@include file="/view/common/header.jsp"%>
+   
+   <!-- Content -->
+   <div id="wrapper" class="full">
+      <div id="mapView" class="min"><div class="mapPlaceholder"><span class="fa fa-spin fa-spinner"></span> Loading map...</div></div>
+      <div id="content" class="max">
+          <!-- ------------------------------------------------------- -->
+          <!-- 본문내용 -->
+          
+          
+          
+          
 <!-- ------------------이미지 슬라이드------------------------------------------ -->
-		    
+          
     <header id="myCarousel" class="carousel slide">
     
         <ol class="carousel-indicators">
@@ -89,7 +109,7 @@
             <div class="item active">
                 <!-- Set the first background image using inline CSS below. -->
                 <div class="fill">
-                	<img src="/Yolo/images_yolo/comMarket/dress1.PNG" alt="First slide" >
+                   <img src="/Yolo/images_yolo/comMarket/dress1.PNG" alt="First slide" >
                 </div>
                 <div class="carousel-caption">
                 </div>
@@ -97,14 +117,14 @@
             <div class="item">
                 <!-- Set the second background image using inline CSS below. -->
                 <div class="fill">
-                	<img src="/Yolo/images_yolo/comMarket/dress2.PNG" alt="First slide">
+                   <img src="/Yolo/images_yolo/comMarket/dress2.PNG" alt="Second slide">
                 </div>
                 <div class="carousel-caption">
                 </div>
             </div>
             <div class="item">
                 <div class="fill">
-                	<img src="/Yolo/images_yolo/comMarket/dress3.PNG" alt="First slide">
+                   <img src="/Yolo/images_yolo/comMarket/dress3.PNG" alt="Third slide">
                 </div>
                 <div class="carousel-caption">
                 </div>
@@ -127,13 +147,13 @@
 
 
 
-		    <!-- ------------------------------------------------------- -->
-		    <!-- Footer -->
-			<%@include file="/view/common/footer.jsp"%>   
-			        
-		</div> <!-- / 본문내용 -->
-		<div class="clearfix"></div>
-	</div> <!-- /Content -->
+          <!-- ------------------------------------------------------- -->
+          <!-- Footer -->
+         <%@include file="/view/common/footer.jsp"%>   
+                 
+      </div> <!-- / 본문내용 -->
+      <div class="clearfix"></div>
+   </div> <!-- /Content -->
 
 <script src="/Yolo/js/json2.js"></script>
 <script src="/Yolo/js/jquery-2.1.1.min.js"></script>
@@ -158,4 +178,4 @@
 <!-- 추가JS -->
 
 </body>
-</html>	
+</html>   
