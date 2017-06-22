@@ -170,12 +170,11 @@
                       			</div>
                               </div>
                               <div class="blog-pagination">
-                                 <!-- 이전버튼 -->
-                                 <a href="#" class="btn btn-o btn-round btn-green">
-                                 <span class="fa fa-angle-left"></span> Previous </a> 
-                                 <!-- 다음버튼 -->
-                                 <a href="#" class="btn btn-o btn-round btn-green pull-right">
-                                 <span class="fa fa-angle-right"></span> Next </a>
+                                 <a href="#" class="btn btn-o btn-round btn-green"><span
+                                    class="fa fa-angle-left"></span> older articles</a> <a href="#"
+                                    class="btn btn-o btn-round btn-green pull-right">newer
+                                    articles <span class="fa fa-angle-right"></span>
+                                 </a>
                                  <div class="clearfix"></div>
                               </div>
                            </div><!-- / 플리마켓 content -->
