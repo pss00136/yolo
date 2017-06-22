@@ -71,7 +71,7 @@
                                  <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
                                     <div class="article">
                                        <a href="blog-post.html" class="image"><img
-                                          src="/Yolo/images_yolo/flea/dress1.PNG" alt="image"></a>
+                                          src="/Yolo/images_yolo/comMarket/dress1.PNG" alt="image"></a>
                                        <div class="article-category">
                                           <a href="#" class="text-green">Architecture</a>
                                        </div>
@@ -92,7 +92,7 @@
                                  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                                     <div class="article">
                                        <a href="blog-post.html" class="image"><img
-                                          src="/Yolo/images_yolo/flea/dress6.PNG" alt="image"></a>
+                                          src="/Yolo/images_yolo/comMarket/dress6.PNG" alt="image"></a>
                                        <div class="article-category">
                                           <a href="#" class="text-green">Architecture</a>
                                        </div>
@@ -110,7 +110,7 @@
                                  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                                     <div class="article">
                                        <a href="blog-post.html" class="image"><img
-                                          src="/Yolo/images_yolo/flea/dress2.PNG" alt="image"></a>
+                                          src="/Yolo/images_yolo/comMarket/dress2.PNG" alt="image"></a>
                                        <div class="article-category">
                                           <a href="#" class="text-green">Apartments</a>
                                        </div>
@@ -126,7 +126,7 @@
                                  <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
                                     <div class="article">
                                        <a href="blog-post.html" class="image"><img
-                                          src="/Yolo/images_yolo/flea/dress3.PNG" alt="image"></a>
+                                          src="/Yolo/images_yolo/comMarket/dress3.PNG" alt="image"></a>
                                        <div class="article-category">
                                           <a href="#" class="text-green">Living Room</a>
                                        </div>
@@ -198,7 +198,7 @@
                                  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                                     <div class="article">
                                        <a href="blog-post.html" class="image"><img
-                                          src="/Yolo/images_yolo/flea/dress4.PNG" alt="image"></a>
+                                          src="/Yolo/images_yolo/comMarket/dress4.PNG" alt="image"></a>
                                        <div class="article-category">
                                           <a href="#" class="text-green">Architecture</a>
                                        </div>
@@ -214,7 +214,7 @@
                                  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                                     <div class="article">
                                        <a href="blog-post.html" class="image"><img
-                                          src="/Yolo/images_yolo/flea/dress5.PNG" alt="image"></a>
+                                          src="/Yolo/images_yolo/comMarket/dress5.PNG" alt="image"></a>
                                        <div class="article-category">
                                           <a href="#" class="text-green">Architecture</a>
                                        </div>
@@ -230,7 +230,7 @@
                                  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                                     <div class="article">
                                        <a href="blog-post.html" class="image"><img
-                                          src="/Yolo/images_yolo/flea/dress6.PNG" alt="image"></a>
+                                          src="/Yolo/images_yolo/comMarket/dress6.PNG" alt="image"></a>
                                        <div class="article-category">
                                           <a href="#" class="text-green">Architecture</a>
                                        </div>
@@ -248,7 +248,7 @@
                                  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                                     <div class="article">
                                        <a href="blog-post.html" class="image"><img
-                                          src="/Yolo/images_yolo/flea/dress4.PNG" alt="image"></a>
+                                          src="/Yolo/images_yolo/comMarket/dress4.PNG" alt="image"></a>
                                        <div class="article-category">
                                           <a href="#" class="text-green">Architecture</a>
                                        </div>
@@ -264,7 +264,7 @@
                                  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                                     <div class="article">
                                        <a href="blog-post.html" class="image"><img
-                                          src="/Yolo/images_yolo/flea/dress5.PNG" alt="image"></a>
+                                          src="/Yolo/images_yolo/comMarket/dress5.PNG" alt="image"></a>
                                        <div class="article-category">
                                           <a href="#" class="text-green">Architecture</a>
                                        </div>
@@ -280,7 +280,7 @@
                                  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                                     <div class="article">
                                        <a href="blog-post.html" class="image"><img
-                                          src="/Yolo/images_yolo/flea/dress6.PNG" alt="image"></a>
+                                          src="/Yolo/images_yolo/comMarket/dress6.PNG" alt="image"></a>
                                        <div class="article-category">
                                           <a href="#" class="text-green">Architecture</a>
                                        </div>
