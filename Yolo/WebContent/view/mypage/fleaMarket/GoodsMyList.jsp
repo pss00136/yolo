@@ -9,7 +9,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Portfolio Item - Start Bootstrap Template</title>
+<title>내 상품 등록 리스트</title>
 
 <!-- Bootstrap Core CSS -->
 <!--     <link href="/Yolo/css_yolo/cssView/MyMarket/bootstrap.css" rel="stylesheet"> -->
