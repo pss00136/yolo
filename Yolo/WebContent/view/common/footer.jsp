@@ -4,6 +4,11 @@
 #footer_title{
 	font-size: 3em;
 }
+
+.home-footer{
+    position: relative;
+}
+
 </style>
 <!-- Footer -->
 <div class="home-footer">
