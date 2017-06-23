@@ -119,9 +119,7 @@ int intToday = Integer.parseInt(sdf.format(todayCal.getTime()));
 
 							<!--------- 달력으로 예약날짜보기 ---------->
 							<div class="row" style="margin-bottom: 30px;">
-								<h2
-									style="padding: 8px; border-top: 2px solid #fc7937;"
-									class="osLight align-left">날짜 선택</h2>
+								<h2 id="lot_reserve" class="osLight align-left">날짜 선택</h2>
 								<div class="col-md-12 col-xs-12"
 									style="display: inline-block; background-color: white;">
 
@@ -323,8 +321,7 @@ while(newLine > 0 && newLine < 7)
 							<!--------- 인원선택 ---------->
 							<div class="row" style="margin-bottom: 30px;">
 								<!-- 예약자 정보 보기 -->
-								<h2
-									style="margin-bottom: 10px; padding: 8px; border-top: 2px solid #fc7937;"
+								<h2 id="lot_reserve" 
 									class="osLight align-left">인원 선택</h2>
 
 								
@@ -427,9 +424,7 @@ while(newLine > 0 && newLine < 7)
 							
 							<div class="row">
 								<!-- 예약자 정보 보기 -->
-								<h2
-									style="margin-bottom: 10px; padding: 8px; border-top: 2px solid #fc7937;"
-									class="osLight align-left">결제 예정금액</h2>
+								<h2 id="lot_reserve" class="osLight align-left">결제 예정금액</h2>
 
 								<!-- 예약날짜-->
 								<div id="pay" class="form-group">
