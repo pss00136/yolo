@@ -20,13 +20,36 @@
 
 <style>
 
+img {
+  max-width: 100%; }
+
+h4{
+	float: right;
+	font-family: 'open sans';
+	font-size: 20px;
+} 
+
+.rating span{
+	float: right;
+}
+
+#content h3{
+	font-family: 'open sans';
+	font-size: 27px;
+}
+
+a.card, div.card{
+	cursor: default;
+	margin : 5%;
+}
+
+
+
+
 /*****************globals*************/
 body {
   font-family: 'open sans';
   overflow-x: hidden; }
-
-img {
-  max-width: 100%; }
 
 .preview {
   display: -webkit-box;
@@ -40,7 +63,10 @@ img {
           flex-direction: column; }
   @media screen and (max-width: 996px) {
     .preview {
-      margin-bottom: 20px; } }
+    margin-bottom: -25px;
+    margin-top: -40px;
+    margin-right: -80px;
+    margin-left: -80px;} }
 
 .preview-pic {
   -webkit-box-flex: 1;
@@ -66,19 +92,18 @@ img {
 .tab-content {
   overflow: hidden; }
   .tab-content img {
-    width: 100%;
+    width: 70%;
+    margin-left: 15%;
     -webkit-animation-name: opacity;
             animation-name: opacity;
     -webkit-animation-duration: .3s;
             animation-duration: .3s; }
 
 .card {
-  margin: 5% 10%;
+  margin-top: 50px;
   background: #eee;
   padding: 3em;
-  line-height: 1.5em; 
-
-  }
+  line-height: 1.5em; }
 
 @media screen and (min-width: 997px) {
   .wrapper {
@@ -92,8 +117,6 @@ img {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  
-  
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -108,7 +131,8 @@ img {
 
 .product-title, .price, .sizes, .colors {
   text-transform: UPPERCASE;
-  font-weight: bold; }
+  font-weight: bold;
+  font-size: 23px; }
 
 .checked, .price span {
   color: #ff9f1a; }
@@ -189,27 +213,6 @@ img {
 
 /*# sourceMappingURL=style.css.map */
 
-.details h4{
-	float: right;
-	margin-top : -5%;
-}
-
-a.card, div.card{
-	cursor: default;
-}
-
-.stars{
-	float: right;
-	margin-top: -3%;
-}
-hr {
-    margin-top: -10px;
-}
-
-h1, .h1 {
-    font-size: 30px;
-}
-
 
 </style>
 
@@ -229,55 +232,58 @@ h1, .h1 {
 			
 			<!-- ------------------------------------------------------- -->
 			<!-- 본문내용 -->
-
-			<div class="card">
-				<div class="container-fliud">
-					<div class="wrapper row">
-						<div class="preview col-md-6 ">
-							<div class="preview-pic tab-content">
-								<div class="tab-pane active" id="pic-1">
-									<img src="/Yolo/images_yolo/comMarket/dress1.PNG" />
-								</div>
-							</div>
-						</div>
-						<div class="details col-md-6">
-
-							<h1>상품 이름</h1>
-							<div>
-								<h4>made by "ooooo"</h4>
-								<div>
-									<div class="rating">
-										<div class="stars">
-											<span class="fa fa-star checked"></span> <span
-												class="fa fa-star checked"></span> <span
-												class="fa fa-star checked"></span> <span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-										</div>
-										<span class="review-no"></span>
-									</div>
-									<br />
-									<hr>
-									
-									<div class="price">
-										<h2 style="font-size: 30px;float: right;color: black; height: 40px;">9000 원</h2>
-									</div>
-
-									
-
-
-
-									<div class="action">
-										<button class="add-to-cart btn btn-default" type="button">찜하기</button>
-										<button class="add-to-cart btn btn-default" type="button">주문하기</button>
-									</div>
-								</div>
-							</div>
+		<div class="card">
+			<div class="container-fliud">
+				<div class="wrapper row">
+					<div class="preview col-md-6">
+						
+						<div class="preview-pic tab-content">
+						  <div class="tab-pane active" id="pic-1"><img src="/Yolo/images_yolo/comMarket/dress1.PNG" /></div>
 						</div>
 					</div>
+					
+					<div class="details col-md-6">
+						<h3><hr>상품 이름</h3> 
+						<div><h4>made by "ooooooo"</h4></div>
+						<div class="rating">
+							<div class="stars">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+							</div><hr>
+						</div>
+						<div><h4 class="price">PRICE <span>27,000</span></h4></div>
+                        <div class="form-group">
+	                        <label class="col-sm-2 control-label">수량</label>
+		                    <div class="col-sm-2">
+		                        <input class="form-control" type="text">
+	                        </div>
+                        </div>		
+						<div class="form-group">
+	                        <label class="col-sm-2 control-label">상품선택</label>
+		                    <div class="col-sm-10">
+		                        <select class="form-control" value="option 1">
+								  <option>option 1</option>
+								  <option>option 2</option>
+								  <option>option 3</option>
+								  <option>option 4</option>
+								  <option>option 5</option>
+								</select>
+	                        </div>
+                        </div> 
+						<div class="form-group">
+	                        <label class="col-sm-2 control-label">옵션</label>
+		                    <div class="col-sm-10">
+		                        <input class="form-control" type="text">
+	                        </div>
+                        </div>                				
+					</div>
 				</div>
-
 			</div>
-
+		</div>
+			
 			<!-- ------------------------------------------------------- -->
 			<!-- Footer -->
 			<%@include file="/view/common/footer.jsp"%>
