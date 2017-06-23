@@ -46,32 +46,58 @@
 						
 						<!-- 공간유형 선택 -->
 						<div class="form-group">
-								<div class="col-sm-8">
-									<div class="col-md-4 col-xs-12">
+								<div class="col-sm-7">
+									<div class="col-md-12 col-xs-12">
+									
+										<div style="margin-top:-5px;" class="col-md-2 col-xs-4 checkbox custom-checkbox">
+											<label><input type="checkbox"><span
+												>회의실</span></label>
+										</div>
+										
 										<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
 											<label><input type="checkbox"><span
-												class="fa fa-check">취미활동</span></label>
+												>세미나실</span></label>
 										</div>
 										<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
 											<label><input type="checkbox"><span
-												class="fa fa-check">문화/예술</span></label>
+												>작업실</span></label>
 										</div>
 										<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
 											<label><input type="checkbox"><span
-												class="fa fa-check">전시</span></label>
+												>레저시설</span></label>
 										</div>
 										<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
 											<label><input type="checkbox"><span
-												class="fa fa-check">친목활동</span></label>
-										</div>
-										<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
-											<label><input type="checkbox"><span
-												class="fa fa-check">스터디</span></label>
+												>파티룸</span></label>
 										</div>
 
 										<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
 											<label><input type="checkbox"><span
-												class="fa fa-check">이벤트/파티</span></label>
+											>스터디룸</span></label>
+										</div>
+										<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
+											<label><input type="checkbox"><span
+												>공연장</span></label>
+										</div>
+										<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
+											<label><input type="checkbox"><span
+												>연습실</span></label>
+										</div>
+										<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
+											<label><input type="checkbox"><span
+												>다목적실</span></label>
+										</div>
+										<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
+											<label><input type="checkbox"><span
+												>스토어</span></label>
+										</div>
+										<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
+											<label><input type="checkbox"><span
+												>농장</span></label>
+										</div>
+										<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
+											<label><input type="checkbox"><span
+												>루프탑</span></label>
 										</div>
 
 

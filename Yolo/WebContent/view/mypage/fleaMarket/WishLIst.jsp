@@ -1,5 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,7 +31,9 @@
             <div id="mapView" class="min"><div class="mapPlaceholder"><span class="fa fa-spin fa-spinner"></span> Loading map...</div></div>
             <div id="content" class="max">
 		        <!-- -----------------여기에 컨텐츠 div넣으세요----------------- -->
-		        <!-- 이 사이에! -->
+		        <!--이 사이에! -->
+		        
+		        
 		        
 		        <!-- ------------------------------------------------------- -->
 		        <!-- Footer -->
@@ -59,7 +63,7 @@
         <script src="/Yolo/js/app.js"></script>
         <script src="/Yolo/js/calendar.js"></script>
         
-        <!-- 추가  -->
+        <!-- ì¶ê°  -->
 		<script src="/Yolo/js/home.js" type="text/javascript"></script>
 		
 		
