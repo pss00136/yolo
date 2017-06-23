@@ -55,7 +55,7 @@
                                             <img class="avatar pull-left" src="/Yolo/images/avatar-3.png" alt="avatar">
                                             <div class="notify pull-left">
                                             	<div class="name">Rust Cohle</div>
-                                            	<div class="message">Sed ut perspiciatis undeSed ut perspiciatis undeSed ut perspiciatis undeSed ut perspiciatis undeSed ut perspiciatis unde</div>
+                                            	<p>Sed ut perspiciatis undeSed ut perspiciatis undeSed ut perspiciatis undeSed ut perspiciatis undeSed ut perspiciatis undeSed ut perspiciatis undeSed ut perspiciatis undeSed ut perspiciatis undeSed ut perspiciatis undeSed ut perspiciatis unde</p>
                                             	
                                             </div>
                                             <div class="notifyRound notifyRound-red fa fa-envelope-o imgmessage"></div>

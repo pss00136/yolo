@@ -27,6 +27,13 @@
 <link href="/Yolo/css/bootstrap.css" rel="stylesheet">
 <link href="/Yolo/css/app.css" rel="stylesheet">
 
+<style type="text/css">
+.chang{
+	padding-right: 0;
+    padding-left: 0;
+}
+</style>
+
 </head>
 <body class="notransition">
 
@@ -61,16 +68,14 @@
 			<!-- Portfolio Item Row -->
 			<div class="row">
 
-				<div class="col-md-6 responsive">
+				<div class="col-md-6 responsive chang">
 
 					<img class="img-responsive" src="/Yolo/images/prop/2-1.png" alt="">
-					<br /> <a href="#"
-						class="btn btn-round btn-o btn-blue col-xs-6 col-md-6">수정</a> <a
-						href="#" class="btn btn-round btn-o btn-red col-xs-6 col-md-6">삭제</a>
+					<br /> 
 				</div>
 				<br /> <br />
 
-				<div class="col-md-5 responsive">
+				<div class="col-md-5 responsive chang">
 					<h3>플리마켓 설명</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
 						viverra euismod odio, gravida pellentesque urna varius vitae. Sed
@@ -88,9 +93,6 @@
 			</div>
 			<!-- /.row -->
 
-
-			<br /> <br />
-
 			<!-- Related Projects Row -->
 			<div class="row">
 				<div class="col-md-12">
@@ -107,11 +109,8 @@
 										Welcoming Feel</a>
 								</h4>
 								<div class="footer">
-									<a href="#"
-										class="btn btn-round btn-o btn-blue col-xs-6 col-md-6">수정</a>
-									<a href="#"
-										class="btn btn-round btn-o btn-red col-xs-6 col-md-6">삭제</a>
-								</div>
+                                          <a href="#">John Smith</a>, <a href="#">Sep 4, 2014</a>
+                                </div>
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
@@ -126,11 +125,8 @@
 										Balancing Openness</a>
 								</h4>
 								<div class="footer">
-									<a href="#"
-										class="btn btn-round btn-o btn-blue col-xs-6 col-md-6">수정</a>
-									<a href="#"
-										class="btn btn-round btn-o btn-red col-xs-6 col-md-6">삭제</a>
-								</div>
+                                          <a href="#">John Smith</a>, <a href="#">Sep 4, 2014</a>
+                                </div>
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
@@ -145,11 +141,8 @@
 										Angeles</a>
 								</h4>
 								<div class="footer">
-									<a href="#"
-										class="btn btn-round btn-o btn-blue col-xs-6 col-md-6">수정</a>
-									<a href="#"
-										class="btn btn-round btn-o btn-red col-xs-6 col-md-6">삭제</a>
-								</div>
+                                          <a href="#">John Smith</a>, <a href="#">Sep 4, 2014</a>
+                                </div>
 							</div>
 						</div>
 					</div>
@@ -166,11 +159,8 @@
 										Welcoming Feel</a>
 								</h4>
 								<div class="footer">
-									<a href="#"
-										class="btn btn-round btn-o btn-blue col-xs-6 col-md-6">수정</a>
-									<a href="#"
-										class="btn btn-round btn-o btn-red col-xs-6 col-md-6">삭제</a>
-								</div>
+                                          <a href="#">John Smith</a>, <a href="#">Sep 4, 2014</a>
+                                </div>
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
@@ -185,11 +175,8 @@
 										Balancing Openness</a>
 								</h4>
 								<div class="footer">
-									<a href="#"
-										class="btn btn-round btn-o btn-blue col-xs-6 col-md-6">수정</a>
-									<a href="#"
-										class="btn btn-round btn-o btn-red col-xs-6 col-md-6">삭제</a>
-								</div>
+                                          <a href="#">John Smith</a>, <a href="#">Sep 4, 2014</a>
+                                </div>
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
@@ -204,11 +191,8 @@
 										Angeles</a>
 								</h4>
 								<div class="footer">
-									<a href="#"
-										class="btn btn-round btn-o btn-blue col-xs-6 col-md-6">수정</a>
-									<a href="#"
-										class="btn btn-round btn-o btn-red col-xs-6 col-md-6">삭제</a>
-								</div>
+                                          <a href="#">John Smith</a>, <a href="#">Sep 4, 2014</a>
+                                </div>
 							</div>
 						</div>
 					</div>
