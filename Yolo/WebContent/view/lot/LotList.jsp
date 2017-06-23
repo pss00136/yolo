@@ -259,7 +259,7 @@
                                     <label>인원</label>
                                     <div class="volume">
                                         <a href="#" class="btn btn-gray btn-round-left"><span class="fa fa-angle-left"></span></a>
-                                        <input type="text" class="form-control" readonly="readonly" value="1">
+                                        <input type="text" class="form-control" value="1">
                                         <a href="#" class="btn btn-gray btn-round-right"><span class="fa fa-angle-right"></span></a>
                                         <div class="clearfix"></div>
                                     </div>
