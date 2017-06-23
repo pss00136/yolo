@@ -20,6 +20,24 @@
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+<style >
+.table {
+    
+    text-align: center;
+}
+.table > thead > tr > th {
+    border-top-right-radius: 2px;
+    text-align: center;
+}
+img {
+	height: 60px;
+	
+}
+
+</style>
+        
+        
+        
     </head>
     <body class="notransition">
     
@@ -65,7 +83,8 @@
                             <table class="table" id="inboxTable">
                                 <thead>
                                     <tr>
-										<th colspan="2">상품명</th>
+                                    	<th></th>
+										<th>상품명</th>
                                         <th>옵션</th>
                                         <th>수량</th>
                                         <th style="width:100px;">상태</th>
@@ -73,42 +92,42 @@
                                 </thead>
                                 <tbody class="table">
                                     <tr>
-                                    	<th>상품명</th>
-                                        <td>John Smith</td>
-                                        <td>John Smith</td>
-                                        <td>Modern Residence in New York</td>
+                                    	<th><div class="fig"><img src="/Yolo/images_yolo/comMarket/dress1.PNG" alt="image"></div></th>
+                                        <td>어디서든 볼 수 있는 옷</td>
+                                        <td>신발은 사은품으로 드림</td>
+                                        <td>5</td>
                                         <td>입금대기</td>
                                     </tr>
                                     <tr>
-                                    	<th>상품명</th>
+                                    	<th><div class="fig"><img src="/Yolo/images_yolo/comMarket/dress1.PNG" alt="image"></div></th>
                                         <td>Jane Smith</td>
                                         <td>John Smith</td>
                                         <td>Hauntingly Beautiful Estate</td>
                                         <td>입금완료</td>
                                     </tr>
                                     <tr>
-                                    	<th>상품명</th>
+                                    	<th><div class="fig"><img src="/Yolo/images_yolo/comMarket/dress1.PNG" alt="image"></div></th>
                                         <td>Rust Cohle</td>
                                         <td>John Smith</td>
                                         <td>Sophisticated Residence</td>
                                         <td>배송대기중</td>
                                     </tr>
                                     <tr>
-                                    	<th>상품명</th>
+                                    	<th><div class="fig"><img src="/Yolo/images_yolo/comMarket/dress1.PNG" alt="image"></div></th>
                                         <td>Antony Iglesias</td>
                                         <td>John Smith</td>
                                         <td>House With a Lovely Glass Roof</td>
                                         <td>배송중</td>
                                     </tr>
                                     <tr>
-                                    	<th>상품명</th>
+                                    	<th><div class="fig"><img src="/Yolo/images_yolo/comMarket/dress1.PNG" alt="image"></div></th>
                                         <td>John Smith</td>
                                         <td>John Smith</td>
                                         <td>Modern Residence in New York</td>
                                         <td>배송완료</td>
                                     </tr>
                                     <tr>
-                                    	<th>상품명</th>
+                                    	<th><div class="fig"><img src="/Yolo/images_yolo/comMarket/dress1.PNG" alt="image"></div></th>
                                         <td>John Smith</td>
                                         <td>John Smith</td>
                                         <td>Modern Residence in New York</td>
@@ -119,6 +138,11 @@
                         </div>
                     </div>
                 </div>
+                
+                
+		        <div class="clearfix"></div>
+		        
+		        
 		        
 		        <!-- ------------------------------------------------------- -->
 		        <!-- Footer -->
