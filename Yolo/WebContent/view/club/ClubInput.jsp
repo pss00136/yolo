@@ -16,6 +16,7 @@
 <link href="/Yolo/css/fileinput.min.css" rel="stylesheet">
 <link href="/Yolo/css/bootstrap.css" rel="stylesheet">
 <link href="/Yolo/css/app.css" rel="stylesheet">
+<link href="/Yolo/css/jquery.tagsinput.css" rel="stylesheet">
 
 <!-- 추가 css -->
 <link href="/Yolo/css_yolo/cssView/Lecture/Lecture_inputstyle.css" rel="stylesheet">
@@ -81,13 +82,21 @@
 							</div>
 						</div>
 						<!-- 해쉬태그 입력 -->
-						<div class="form-group">
-							<label class="col-sm-2 control-label">해시태그</label>
-							<div class="col-sm-8">
-								<input type="text" id="tags"
-									placeholder="#내용 으로 적어주세요">
-							</div>
-						</div>
+<!-- 						<div class="form-group"> -->
+<!-- 							<label class="col-sm-2 control-label">해시태그</label> -->
+<!-- 							<div class="col-sm-8"> -->
+<!-- 								<input type="text" id="tags" -->
+<!-- 									placeholder="#내용 으로 적어주세요"> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
+
+                        <div class="form-group">
+                       		<label class="col-sm-2 control-label">Tags input</label>
+	                       <div class="col-sm-8">
+	                           <input type="text" class="form-control" id="tags" placeholder="Add a tag">
+	                       </div>
+                  		</div>
+
 						<!-- 최대 인원 입력 -->
 						<div class="form-group">
 							<label class="col-sm-2 control-label">최대 인원</label>
