@@ -169,7 +169,7 @@
 							<li><a href="mypage/appStatus/appliedClub.myinfo">참여모임보기</a></li>
 							<li><a href="mypage/appStatus/InterestList.myinfo">관심리스트</a></li>
 							<li class="align-center"><h5 style="color:#fff;">플리마켓</h5></li>
-							<li><a href="mypage/fleaMarket/WishLIst.myinfo">찜목록</a></li>
+							<li><a href="mypage/fleaMarket/WishList.myinfo">찜목록</a></li>
 							<li><a href="mypage/fleaMarket/State.myinfo">주문현황</a></li>				
 							<li class="align-center"><h5 style="color:#fff;">나의 등록글</h5></li>
 							<li><a href="mypage/myReg/ClubMyList.myreg">나의 모임</a></li>
