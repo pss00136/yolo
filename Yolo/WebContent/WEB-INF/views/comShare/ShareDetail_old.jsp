@@ -1,8 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    <body class="notransition">
+    
+		<!-- Header -->
+		<%@include file="/view/common/header.jsp"%>
 
-
-
+        <!-- Content -->
+        <div id="wrapper" class="full">
+            <div id="mapView" class="min"><div class="mapPlaceholder"><span class="fa fa-spin fa-spinner"></span> Loading map...</div></div>
+            <div id="content" class="max">
+		        <!-- -----------------여기에 컨텐츠 div넣으세요----------------- -->
+		        <!-- 이 사이에! -->
 		    <div class="home-wrapper">
 				<div class="home-content">
 		    
@@ -130,4 +139,4 @@
 				
 				<div class="clearfix"></div>
 		        <!-- ------------------------------------------------------- -->
-		       
+		        

@@ -10,6 +10,6 @@ public class MainController {
 	@RequestMapping("/main.main")
 	public String main(){
 		
-		return "/common/main";
+		return "/common/main.nofooter";
 	}
 }

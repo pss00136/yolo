@@ -1,6 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
+
+    <body class="notransition">
+    
+<!-- 		<!-- Header --> -->
+<%-- 		<%@include file="/view/common/header.jsp"%> --%>
+
+<!--         Content -->
+<!--         <div id="wrapper" class="full"> -->
+<!--             <div id="mapView" class="min"><div class="mapPlaceholder"><span class="fa fa-spin fa-spinner"></span> Loading map...</div></div> -->
+<!--             <div id="content" class="max"> -->
+		        <!-- -----------------여기에 컨텐츠 div넣으세요----------------- -->
+		        <!-- 이 사이에! -->
 		<div class="home-wrapper">
 			<div class="home-content">
 			<div class="row pb20">
@@ -22,7 +34,7 @@
 					</div>
                     
 					<div class="col-xs-12 col-sm-2 col-md-3 col-lg-3">
-						<a href="ShareInput.share" class="btn btn-round btn-o btn-success">쉐어링 글쓰기</a>
+						<a href="comShare/ShareInput.share" class="btn btn-round btn-o btn-success">쉐어링 글쓰기</a>
 					</div>
 					
 				</div> 
@@ -33,7 +45,7 @@
 			
                 <div class="row pb40">
                     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                        <a href="ShareDetail.share" class="propWidget-2">
+                        <a href="comShare/ShareDetail.share" class="propWidget-2">
                             <div class="fig">
                                 <img src="/Yolo/images_yolo/lot/1.PNG" alt="Modern Residence in New York">
                                 <img class="blur" src="/Yolo/images_yolo/lot/1.PNG" alt="Modern Residence in New York">
@@ -45,7 +57,7 @@
                         </a>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                        <a href="ShareDetail.share" class="propWidget-2">
+                        <a href="comShare/ShareDetail.share" class="propWidget-2">
                             <div class="fig">
                                 <img src="/Yolo/images_yolo/lot/1.PNG" alt="Modern Residence in New York">
                                 <img class="blur" src="/Yolo/images_yolo/lot/1.PNG" alt="Modern Residence in New York">
@@ -57,7 +69,7 @@
                         </a>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                        <a href="ShareDetail.share" class="propWidget-2">
+                        <a href="comShare/ShareDetail.share" class="propWidget-2">
                             <div class="fig">
                                 <img src="/Yolo/images_yolo/lot/1.PNG" alt="Modern Residence in New York">
                                 <img class="blur" src="/Yolo/images_yolo/lot/1.PNG" alt="Modern Residence in New York">
@@ -69,7 +81,7 @@
                         </a>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                        <a href="ShareDetail.share" class="propWidget-2">
+                        <a href="comShare/ShareDetail.share" class="propWidget-2">
                             <div class="fig">
                                 <img src="/Yolo/images_yolo/lot/1.PNG" alt="Modern Residence in New York">
                                 <img class="blur" src="/Yolo/images_yolo/lot/1.PNG" alt="Modern Residence in New York">
@@ -81,7 +93,7 @@
                         </a>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                        <a href="ShareDetail.share" class="propWidget-2">
+                        <a href="comShare/ShareDetail.share" class="propWidget-2">
                             <div class="fig">
                                 <img src="/Yolo/images_yolo/lot/1.PNG" alt="Modern Residence in New York">
                                 <img class="blur" src="/Yolo/images_yolo/lot/1.PNG" alt="Modern Residence in New York">
@@ -93,7 +105,7 @@
                         </a>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                        <a href="ShareDetail.share" class="propWidget-2">
+                        <a href="comShare/ShareDetail.share" class="propWidget-2">
                             <div class="fig">
                                 <img src="/Yolo/images_yolo/lot/1.PNG" alt="Modern Residence in New York">
                                 <img class="blur" src="/Yolo/images_yolo/lot/1.PNG" alt="Modern Residence in New York">
@@ -112,4 +124,3 @@
                     
                     <div class="clearfix"></div>
 		        <!-- ------------------------------------------------------- -->
-	
