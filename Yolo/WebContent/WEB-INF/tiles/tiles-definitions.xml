@@ -4,27 +4,6 @@
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 <tiles-definitions>
 
-
-<!--  no template -->
-<definition name='noTemplate' template='/WEB-INF/template/default/noTiles.jsp'>
-	<put-attribute name="noTemplate" value=''></put-attribute>
-</definition>
-
-<definition name='*.notile' extends='noTemplate'>
-	<put-attribute name="noTemplate" value='/WEB-INF/views/{1}.jsp'></put-attribute>
-</definition>
-
-<!-- default Template -->
- <definition name='defaultTemplate' template="/WEB-INF/template/default/template.jsp">
- 	<put-attribute name="header" value="/WEB-INF/template/default/header.jsp"></put-attribute>
- 	<put-attribute name="menu" value="/WEB-INF/template/default/menu.jsp"></put-attribute>
- 	<put-attribute name="footer" value="/WEB-INF/template/default/footer.jsp"></put-attribute>
- </definition>
- 
- <definition name='/*/*' extends='defaultTemplate'>
- 	<put-attribute name="body" value='/WEB-INF/views/{1}/{2}.jsp'></put-attribute>
- </definition>
- 
   <!-- nofooter Template -->
  <definition name='nofooterTemplate' template="/WEB-INF/template/nofooter/template_nofooter.jsp">
  	<put-attribute name="header" value="/WEB-INF/template/nomap/header_nomap.jsp"></put-attribute>
@@ -57,6 +36,26 @@
  	<put-attribute name="title" value='YoloWowLotHost'></put-attribute>
  	<put-attribute name="body" value='/WEB-INF/views/{1}/{2}.jsp'></put-attribute>
  </definition>
-  	
+
+<!--  no template -->
+<definition name='noTemplate' template='/WEB-INF/template/default/noTiles.jsp'>
+	<put-attribute name="noTemplate" value=''></put-attribute>
+</definition>
+
+<definition name='*.notile' extends='noTemplate'>
+	<put-attribute name="noTemplate" value='/WEB-INF/views/{1}.jsp'></put-attribute>
+</definition>
+
+<!-- default Template -->
+ <definition name='defaultTemplate' template="/WEB-INF/template/default/template.jsp">
+ 	<put-attribute name="header" value="/WEB-INF/template/default/header.jsp"></put-attribute>
+ 	<put-attribute name="menu" value="/WEB-INF/template/default/menu.jsp"></put-attribute>
+ 	<put-attribute name="footer" value="/WEB-INF/template/default/footer.jsp"></put-attribute>
+ </definition>
+ 
+ <definition name='/*/*' extends='defaultTemplate'>
+ 	<put-attribute name="body" value='/WEB-INF/views/{1}/{2}.jsp'></put-attribute>
+ </definition>
+ 
 
 </tiles-definitions>

@@ -15,7 +15,7 @@
         <link href="<c:url value='/css/fileinput.min.css'/>" rel="stylesheet">
         <link href="<c:url value='/css/bootstrap.css'/>" rel="stylesheet">
         <link href="<c:url value='/css/fullscreen-slider.css'/>" rel="stylesheet">
-        <link href="<c:url value='/Yolo/css/app.css'/>" rel="stylesheet">
+        <link href="<c:url value='/css/app.css'/>" rel="stylesheet">
         <link href="<c:url value='/css_yolo/cssView/common/app.css'/>" rel="stylesheet">
 		<style type="text/css">
 		#footer_title{
