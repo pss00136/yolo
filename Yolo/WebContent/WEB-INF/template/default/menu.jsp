@@ -51,7 +51,7 @@
 				</ul>
 			</li>			
 
-		</ul>네비게이션 메뉴 끝
+		</ul><!-- 네비게이션 메뉴 끝 -->
 	</nav>
 	<!-- 좌측 네비게이션 유저부분 -->
 	<div class="leftUserWraper dropup">
@@ -72,6 +72,6 @@
 			<li class="divider"></li>
 			<li><a href="#"><span class="icon-power"></span>Logout</a></li>
 		</ul>
-	</div>좌측 네비게이션 유저부분 끝
-</div>좌측 네비게이션 메뉴 끝
+	</div><!-- 좌측 네비게이션 유저부분 끝-->
+</div><!-- 좌측 네비게이션 메뉴 끝 -->
 <div class="closeLeftSide"></div>

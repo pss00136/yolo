@@ -75,6 +75,6 @@
         <script src=" <c:url value='/js/calendar.js'/> "></script>
         
         <!-- 추가  -->
-		<script src=" <c:url value='/js/home.js'/> " type="text/javascript"></script>
+		<script src=" <c:url value='/Yolo/js/home.js'/> " type="text/javascript"></script>
 </body>
 </html>
