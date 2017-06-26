@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<title>reales | real estate web application</title>
+<title>내 모임 등록 리스트</title>
 
 
 <link href="/Yolo/css/font-awesome.css" rel="stylesheet">
@@ -23,7 +23,7 @@
 	rel="stylesheet">
 <link href="/Yolo/css_yolo/cssView/MyClub/ClubMyList.css"
 	rel="stylesheet">
-	
+
 <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -46,18 +46,25 @@
 			<!-- 이 사이에! -->
 			<!-- Portfolio Item Heading -->
 			<!-- Content -->
-			
+
 			<div class="home-content">
 				<div class="home-wrapper">
+					<div class="row">
+						<div class="col-lg-12 responsive">
+							<h1>
+								내 모임 <small>내 모임 정보</small>
+							</h1>
+
+						</div>
+					</div>
+					<!-- /.row -->
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
 
 							<div class="post-content">
 								<div class="image-block">
 									<img src="/Yolo/images/blog-3.jpg" alt="blog image">
-									<div class="ib-title">
-										
-									</div>
+									<div class="ib-title"></div>
 								</div>
 								<h2 class="osLight">모임 제목</h2>
 								<p>It is a long established fact that a reader will be
@@ -74,12 +81,10 @@
 									and the like).</p>
 							</div>
 							<div class="f-pn-articles">
-								<a href="#" class="f-p-article">
-									<span class="fpna-header">이전 모임</span>
-									<span class="fa fa-angle-left pull-left pn-icon"></span>
-								</a> <a href="#" class="f-n-article">
-									<span class="fpna-header">다음 모임</span>
-									<span class="fa fa-angle-right pull-right pn-icon"></span>
+								<a href="#" class="f-p-article"> <span class="fpna-header">이전
+										모임</span> <span class="fa fa-angle-left pull-left pn-icon"></span>
+								</a> <a href="#" class="f-n-article"> <span class="fpna-header">다음
+										모임</span> <span class="fa fa-angle-right pull-right pn-icon"></span>
 								</a>
 								<div class="clearfix"></div>
 							</div>
@@ -91,8 +96,7 @@
 									<!-- filter Form -->
 									<div class="filter">
 										<h1 class="osLight">회원리스트 보기</h1>
-										<a href="#" class="handleFilter"><span
-											class="fa fa-bars"></span></a>
+										<a href="#" class="handleFilter"><span class="fa fa-bars"></span></a>
 										<div class="clearfix"></div>
 										<form class="filterForm">
 											<h2 class="osLight h-r align-center">회원 리스트</h2>
@@ -187,7 +191,7 @@
 														<div class="clearfix"></div>
 													</div>
 												</li>
-												
+
 												<li>
 													<div class="userWidget-2">
 														<div class="avatar">
@@ -233,10 +237,9 @@
 							</div>
 						</div>
 						<!-- 회원리스트 보기 end -->
-						
-						<br/>
-						<br/>
-						
+
+						<br /> <br />
+
 						<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
 
 							<h2 class="osLight align-left">Related Articles</h2>
@@ -385,7 +388,7 @@
 										</div>
 									</div>
 								</div>
-								
+
 							</div>
 						</div>
 					</div>

@@ -26,7 +26,6 @@
 
         <!-- Content -->
         <div id="wrapper" class="full">
-<!--             <div id="mapView" class="min"><div class="mapPlaceholder"><span class="fa fa-spin fa-spinner"></span> Loading map...</div></div> -->
             <div id="content" class="max">
             	<div id="hero-container">
 		            <ul class="cb-slideshow">
@@ -43,10 +42,17 @@
 		            </div>
 		            
 		        </div>
-<!-- 		        <div class="highlight"> -->
-<!-- 		            <div class="h-title osLight">Find your new place with Reales</div> -->
-<!-- 		            <div class="h-text osLight">Fusce risus metus, placerat in consectetur eu, porttitor a est sed sed dolor lorem cras adipiscing</div> -->
-<!-- 		        </div> -->
+		        <div class="highlight">
+		            <div class="h-title osLight">About YOLO WOW LOT</div>
+		            <div class="h-text osLight"> You Only Live Once! <br/>
+		            	YOLO WOW LOT에서는 전국의 공공시설과 민간시설을 한 눈에 비교하며 필요한 공간을 찾으실 수 있습니다.
+		            	모임을 직접 개설하여 운영할 수 있고, 카테고리별로 모임에 알맞은 공간을 추천해드립니다.
+		            	모임이나 취미활동을 통해 만든 개성있고 크리에이티브한 물건들을 YOLO 마켓에서 판매해 볼 수 있습니다.
+		            	좋은 컨텐츠와 강의력을 가지고 있고 그것을 나누고자 하는 분들은 WOW 톡에서 강연을 등록할 수 있습니다. 
+		            	쉐어 LOT을 통해 사용자들간에 소통을 할 수 있도록	하여 하루 대관이 필수인 공간을 시간별로 나눠쓸 수 있도록 도와드립니다.
+		            	당신의 YOLO Life를 지지합니다!
+	            	</div>
+		        </div>
 	
 				<!-- 컨텐츠2 -->
 		       <div class="home-wrapper">

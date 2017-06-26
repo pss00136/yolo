@@ -1,210 +1,162 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-		<meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-        <title>reales | real estate web application</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-        <link href="/Yolo/css/font-awesome.css" rel="stylesheet">
-        <link href="/Yolo/css/simple-line-icons.css" rel="stylesheet">
-        <link href="/Yolo/css/jquery-ui.css" rel="stylesheet">
-        <link href="/Yolo/css/datepicker.css" rel="stylesheet">
-        <link href="/Yolo/css/fileinput.min.css" rel="stylesheet">
-        <link href="/Yolo/css/bootstrap.css" rel="stylesheet">
-        <link href="/Yolo/css/app.css" rel="stylesheet">
-<style type="text/css">
-	.notificationsWidget .notification .notifyContent{
-	    margin-left: 0;
-	}
-	.imgmessage{
-		float:right;
-	}
-	.message{
-		line-height: 17px;
-	}
-	</style>
-        <!--[if lt IE 9]>
-          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
+<link href="/Yolo/css/bootstrap.css" rel="stylesheet">
+<link href="/Yolo/css/jquery-ui.css" rel="stylesheet">
+<link href="/Yolo/css/font-awesome.css" rel="stylesheet">
+<link href="/Yolo/css/simple-line-icons.css" rel="stylesheet">
+<link href="/Yolo/css/fullscreen-slider.css" rel="stylesheet">
+<link href="/Yolo/css/app.css" rel="stylesheet">
+
+<!-- custom css-->
+<link href="/Yolo/css_yolo/cssView/Message/MessageDetail.css"
+	rel="stylesheet">
+
+
+<title>메세지 (채팅형식)</title>
 </head>
-<body class="notransition">
-    	
-		<!-- Header -->
-		<%@include file="/view/common/header.jsp"%>
+<body class="notransition no-hidden">
+	<!-- Content -->
 
-        <!-- Content -->
-        <div id="wrapper" class="full">
-            <div id="mapView" class="min"><div class="mapPlaceholder"><span class="fa fa-spin fa-spinner"></span> Loading map...</div></div>
-            <div id="content" class="max">
-		        <!-- -----------------여기에 컨텐츠 div넣으세요----------------- -->
-		        <!-- 이 사이에! -->
-		        <div class="home-wrapper">
-		        <div class="row">
-		        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-		        
-                            <div class="notificationsWidget">
-                                <h5><span class="badge">5</span> Notifications</h5>
-                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 notification">
-                                    
-                                    <div class="notifyContent">
-                                        <div class="notifyBody">
-                                            <img class="avatar pull-left" src="/Yolo/images/avatar-3.png" alt="avatar">
-                                            <div class="notify pull-left">
-                                            	<div class="name">Rust Cohle</div>
-                                            	<p>Sed ut perspiciatis undeSed ut perspiciatis undeSed ut perspiciatis undeSed ut perspiciatis undeSed ut perspiciatis undeSed ut perspiciatis undeSed ut perspiciatis undeSed ut perspiciatis undeSed ut perspiciatis undeSed ut perspiciatis unde</p>
-                                            	
-                                            </div>
-                                            <div class="notifyRound notifyRound-red fa fa-envelope-o imgmessage"></div>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <!-- notification end -->
-                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 notification">
-                                    
-                                    <div class="notifyContent">
-                                        <div class="notifyBody">
-                                            <img class="avatar pull-left" src="/Yolo/images/avatar-3.png" alt="avatar">
-                                            <div class="notify pull-left">
-                                            	<div class="name">Rust Cohle</div>
-                                            	<div class="message">Sed ut perspiciatis undeSed ut perspiciatis undeSed ut perspiciatis undeSed ut perspiciatis undeSed ut perspiciatis unde</div>
-                                            	
-                                            </div>
-                                            <div class="notifyRound notifyRound-red fa fa-envelope-o imgmessage"></div>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <!-- notification end -->
-                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 notification">
-                                    
-                                    <div class="notifyContent">
-                                        <div class="notifyBody">
-                                            <img class="avatar pull-left" src="/Yolo/images/avatar-3.png" alt="avatar">
-                                            <div class="notify pull-left">
-                                            	<div class="name">Rust Cohle</div>
-                                            	<div class="message">Sed ut perspiciatis undeSed ut perspiciatis undeSed ut perspiciatis undeSed ut perspiciatis undeSed ut perspiciatis unde</div>
-                                            	
-                                            </div>
-                                            <div class="notifyRound notifyRound-red fa fa-envelope-o imgmessage"></div>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <!-- notification end -->
-                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 notification">
-                                    
-                                    <div class="notifyContent">
-                                        <div class="notifyBody">
-                                            <img class="avatar pull-left" src="/Yolo/images/avatar-3.png" alt="avatar">
-                                            <div class="notify pull-left">
-                                            	<div class="name">Rust Cohle</div>
-                                            	<div class="message">Sed ut perspiciatis undeSed ut perspiciatis undeSed ut perspiciatis undeSed ut perspiciatis undeSed ut perspiciatis unde</div>
-                                            	
-                                            </div>
-                                            <div class="notifyRound notifyRound-red fa fa-envelope-o imgmessage"></div>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <!-- notification end -->
-                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 notification">
-                                    
-                                    <div class="notifyContent">
-                                        <div class="notifyBody">
-                                            <img class="avatar pull-left" src="/Yolo/images/avatar-3.png" alt="avatar">
-                                            <div class="notify pull-left">
-                                            	<div class="name">Rust Cohle</div>
-                                            	<div class="message">Sed ut perspiciatis undeSed ut perspiciatis undeSed ut perspiciatis undeSed ut perspiciatis undeSed ut perspiciatis unde</div>
-                                            	
-                                            </div>
-                                            <div class="notifyRound notifyRound-red fa fa-envelope-o imgmessage"></div>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <!-- notification end -->
-                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 notification">
-                                    
-                                    <div class="notifyContent">
-                                        <div class="notifyBody">
-                                            <img class="avatar pull-left" src="/Yolo/images/avatar-3.png" alt="avatar">
-                                            <div class="notify pull-left">
-                                            	<div class="name">Rust Cohle</div>
-                                            	<div class="message">Sed ut perspiciatis undeSed ut perspiciatis undeSed ut perspiciatis undeSed ut perspiciatis undeSed ut perspiciatis unde</div>
-                                            	
-                                            </div>
-                                            <div class="notifyRound notifyRound-red fa fa-envelope-o imgmessage"></div>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <!-- notification end -->
-                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 notification">
-                                    
-                                    <div class="notifyContent">
-                                        <div class="notifyBody">
-                                            <img class="avatar pull-left" src="/Yolo/images/avatar-3.png" alt="avatar">
-                                            <div class="notify pull-left">
-                                            	<div class="name">Rust Cohle</div>
-                                            	<div class="message">Sed ut perspiciatis undeSed ut perspiciatis undeSed ut perspiciatis undeSed ut perspiciatis undeSed ut perspiciatis unde</div>
-                                            	
-                                            </div>
-                                            <div class="notifyRound notifyRound-red fa fa-envelope-o imgmessage"></div>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <!-- notification end -->
-                            </div>
-                            <!-- notificationsWidget end -->
-                        </div>
-		        </div>
-		        <!-- row -->
-		        </div>
-		        <!-- home-wrapper -->
-		        
-		        <!-- ------------------------------------------------------- -->
-		        <!-- Footer -->
-		        <%@include file="/view/common/footer.jsp"%>   
-		        
-            </div>
-            <div class="clearfix"></div>
-        </div>
+	<div class="home-wrapper">
+		<div class="home-content panel panel-primary">
+			<div class="panel-heading">
+				<span class="glyphicon glyphicon-comment"></span> Comments
+			</div>
+			<div class="panel-body">
+			<ul class="chat">
 
-        <script src="/Yolo/js/json2.js"></script>
-        <script src="/Yolo/js/jquery-2.1.1.min.js"></script>
-        <script src="/Yolo/js/underscore.js"></script>
-        <script src="/Yolo/js/moment-2.5.1.js"></script>
-        <script src="/Yolo/js/jquery-ui.min.js"></script>
-        <script src="/Yolo/js/jquery-ui-touch-punch.js"></script>
-        <script src="/Yolo/js/jquery.placeholder.js"></script>
-        <script src="/Yolo/js/bootstrap.js"></script>
-        <script src="/Yolo/js/jquery.touchSwipe.min.js"></script>
-        <script src="/Yolo/js/jquery.slimscroll.min.js"></script>
-        <script src="/Yolo/js/jquery.visible.js"></script>
-        <script src="http://maps.googleapis.com/maps/api/js?sensor=true&amp;libraries=geometry&amp;libraries=places" type="text/javascript"></script>
-        <script src="/Yolo/js/infobox.js"></script>
-        <script src="/Yolo/js/clndr.js"></script>
-        <script src="/Yolo/js/jquery.tagsinput.min.js"></script>
-        <script src="/Yolo/js/bootstrap-datepicker.js"></script>
-        <script src="/Yolo/js/fileinput.min.js"></script>
-        <script src="/Yolo/js/app.js"></script>
-        <script src="/Yolo/js/calendar.js"></script>
-        
-        <!-- 추가  -->
-		<script src="/Yolo/js/home.js" type="text/javascript"></script>
+				<li class="left clearfix"><span class="chat-img pull-left">
+						<img src="http://placehold.it/50/55C1E7/fff&text=U"
+						alt="User Avatar" class="img-circle" />
+				</span>
+					<div class="chat-body clearfix">
+						<div class="header">
+							<strong class="primary-font">Jack Sparrow</strong> <small
+								class="pull-right text-muted"> <span
+								class="glyphicon glyphicon-time"></span>12 mins ago
+							</small>
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+						</p>
+					</div></li>
+				<li class="right clearfix"><span class="chat-img pull-right">
+						<img src="http://placehold.it/50/FA6F57/fff&text=ME"
+						alt="User Avatar" class="img-circle" />
+				</span>
+					<div class="chat-body clearfix">
+						<div class="header">
+							<small class=" text-muted"><span
+								class="glyphicon glyphicon-time"></span>13 mins ago</small> <strong
+								class="pull-right primary-font">Bhaumik Patel</strong>
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+						</p>
+					</div></li>
+				<li class="left clearfix"><span class="chat-img pull-left">
+						<img src="http://placehold.it/50/55C1E7/fff&text=U"
+						alt="User Avatar" class="img-circle" />
+				</span>
+					<div class="chat-body clearfix">
+						<div class="header">
+							<strong class="primary-font">Jack Sparrow</strong> <small
+								class="pull-right text-muted"> <span
+								class="glyphicon glyphicon-time"></span>14 mins ago
+							</small>
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+						</p>
+					</div></li>
+				<li class="right clearfix"><span class="chat-img pull-right">
+						<img src="http://placehold.it/50/FA6F57/fff&text=ME"
+						alt="User Avatar" class="img-circle" />
+				</span>
+					<div class="chat-body clearfix">
+						<div class="header">
+							<small class=" text-muted"><span
+								class="glyphicon glyphicon-time"></span>15 mins ago</small> <strong
+								class="pull-right primary-font">Bhaumik Patel</strong>
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+						</p>
+					</div>
+				</li>
+				<li class="right clearfix"><span class="chat-img pull-right">
+						<img src="http://placehold.it/50/FA6F57/fff&text=ME"
+						alt="User Avatar" class="img-circle" />
+				</span>
+					<div class="chat-body clearfix">
+						<div class="header">
+							<small class=" text-muted"><span
+								class="glyphicon glyphicon-time"></span>15 mins ago</small> <strong
+								class="pull-right primary-font">Bhaumik Patel</strong>
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+						</p>
+					</div>
+				</li>
+				<li class="right clearfix"><span class="chat-img pull-right">
+						<img src="http://placehold.it/50/FA6F57/fff&text=ME"
+						alt="User Avatar" class="img-circle" />
+				</span>
+					<div class="chat-body clearfix">
+						<div class="header">
+							<small class=" text-muted"><span
+								class="glyphicon glyphicon-time"></span>15 mins ago</small> <strong
+								class="pull-right primary-font">Bhaumik Patel</strong>
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+						</p>
+					</div>
+				</li>
+			</ul>
+			</div>
+			<!-- panel body end -->
+			<div class="panel-footer clearfix">
+                    <textarea class="form-control" rows="3"></textarea>
+                    <span class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-xs-12" style="margin-top: 10px">
+                        <button class="btn btn-warning btn-lg btn-block" id="btn-chat">Send</button>
+                    </span>
+             </div>
+             <!-- panel footer end -->
+		</div>
+	</div>
+	</div>
 
-    </body>
+	<!-- Footer -->
+
+	<div class="home-footer">
+		<div class="home-wrapper">
+			<div class="row">
+				
+			</div>
+		</div>
+	</div>
+
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery-ui-touch-punch.js"></script>
+	<script src="js/jquery.placeholder.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/jquery.touchSwipe.min.js"></script>
+	<script
+		src="http://maps.googleapis.com/maps/api/js?sensor=true&amp;libraries=geometry&amp;libraries=places"
+		type="text/javascript"></script>
+	<script src="js/infobox.js"></script>
+	<script src="js/jquery.visible.js"></script>
+	<script src="js/home.js" type="text/javascript"></script>
+</body>
 </html>
