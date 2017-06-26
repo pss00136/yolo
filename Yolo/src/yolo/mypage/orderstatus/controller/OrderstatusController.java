@@ -10,6 +10,6 @@ public class OrderstatusController {
 	@RequestMapping("mypage/fleaMarket/State.myinfo")
 	public String View(@PathVariable String url){
 		System.out.println("Orderstatus"+url);
-		return "/mypage/"+url;
+		return "mypage/fleaMarket/State";
 	}
 }
