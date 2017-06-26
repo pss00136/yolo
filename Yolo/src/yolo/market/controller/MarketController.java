@@ -15,19 +15,19 @@ public class MarketController {
 	@RequestMapping("/FleaList.market")
 	public String fleaList(){
 		
-		return "/comMarket/FleaList.nofooter";
+		return "/comMarket/FleaList";
 	}
 	
 	//상품 등록하기 버튼
 	@RequestMapping("/1_FleaInput.market")
 	public String Input(){
-		return "/comMarket/1_FleaInput.nofooter";
+		return "/comMarket/1_FleaInput";
 	}
 	
 	//마켓 상세보기
 	@RequestMapping("/MarketDetail.market")
 	public String marketDetail(){
-		return "/comMarket/MarketDetail.nofooter";
+		return "/comMarket/MarketDetail";
 	}
 	
 	//상품 상세보기
@@ -39,7 +39,7 @@ public class MarketController {
 	//상품 주문
 	@RequestMapping("/GoodsPay.market")
 	public String goodsPay(){
-		return "/comMarket/GoodsPay.nofooter";
+		return "/comMarket/GoodsPay";
 	}
 	
 	
@@ -47,14 +47,14 @@ public class MarketController {
 	@RequestMapping("/2_FleaInput.market")
 	public String Input2(){
 		
-		return "/comMarket/2_FleaInput.nofooter";
+		return "/comMarket/2_FleaInput";
 	}
 	
 	//상품 등록
 	@RequestMapping("/3_FleaGoodsInput.market")
 	public String Input3(){
 		
-		return "/comMarket/3_FleaGoodsInput.nofooter";
+		return "/comMarket/3_FleaGoodsInput";
 	}
 	
 	

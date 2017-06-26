@@ -21,7 +21,13 @@
 <link href="/Yolo/css_yolo/cssView/comMarket/inputStarRating.css" rel="stylesheet">
 <link href="/Yolo/css_yolo/cssView/comMarket/fileUpload.css" rel="stylesheet"> 
 <link href="/Yolo/css_yolo/cssView/comMarket/1_fleaInput.css" rel="stylesheet"> 
-        
+
+<style>
+.home-content{
+    min-height: 561px;
+}
+
+</style>      
 
 </head>
 <body class="notransition no-hidden">
@@ -38,8 +44,7 @@
 		<div id="content" class="max">
 
 			<!-- -----------------여기에 컨텐츠 div넣으세요----------------- -->
-
-			<div class="blog-content">
+			<div class="home-content">
 				<div class="home-wrapper">
 					<div class="panel-group" id="accordion">
 
@@ -163,9 +168,10 @@
 				<!-- / home-wrapper -->
 			</div>
 			<!-- / blog-content -->
+			
 			<!-- ------------------------------------------------------- -->
 			<!-- Footer -->
-			<%-- 							<%@include file="/view/common/footer.jsp"%> --%>
+										<%@include file="/view/common/footer.jsp"%>
 
 		</div>
 		<!-- /content -->

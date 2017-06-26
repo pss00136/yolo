@@ -215,29 +215,32 @@
 	<!-- /Content -->
 
 
-			<!-- modal popup -->
-	        <div style="z-index:1000000;" class="modal fade" id="contactAgent" role="dialog" aria-labelledby="contactLabel" aria-hidden="true">
-	            <div class="modal-dialog">
-	                <div class="modal-content">
-	                    <div class="modal-header">
-	                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-	                    </div>
-	                    <div class="modal-body">
-	                        <form class="contactForm">
-	                            <div class="row">
-	                                <img src="/Yolo/images_yolo/comMarket/cart.PNG" alt="image">
-	                            </div>
-	                        </form>
-	                    </div>
-	                    <div class="modal-footer">
-	                        <a href="#" data-dismiss="modal" class="btn btn-round btn-o btn-gray">계속 쇼핑</a>
-	                        <a href="#" class="btn btn-round btn-green">마이페이지로</a>
-	                    </div>
-	                </div>
-	            </div>
-	        </div>
+	<!-- modal popup -->
+	<div style="z-index: 1000000;" class="modal fade" id="contactAgent"
+		role="dialog" aria-labelledby="contactLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true">×</button>
+				</div>
+				<div class="modal-body">
+					<form class="contactForm">
+						<div class="row">
+							<img src="/Yolo/images_yolo/comMarket/cart.PNG" alt="image">
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<a href="#" data-dismiss="modal"
+						class="btn btn-round btn-o btn-gray">계속쇼핑하기</a> <a href="#"
+						class="btn btn-round btn-green">마이페이지로</a>
+				</div>
+			</div>
+		</div>
+	</div>
 
-<script src="/Yolo/js/json2.js"></script>
+	<script src="/Yolo/js/json2.js"></script>
 <script src="/Yolo/js/jquery-2.1.1.min.js"></script>
 <script src="/Yolo/js/underscore.js"></script>
 <script src="/Yolo/js/moment-2.5.1.js"></script>

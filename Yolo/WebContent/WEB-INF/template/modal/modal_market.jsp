@@ -18,9 +18,8 @@
 				</form>
 			</div>
 			<div class="modal-footer">
-				<a href="#" data-dismiss="modal"
-					class="btn btn-round btn-o btn-gray">계속 쇼핑</a> <a href="#"
-					class="btn btn-round btn-green">마이페이지로</a>
+				<a href="#" data-dismiss="modal" class="btn btn-round btn-o btn-gray">계속 쇼핑</a> 
+				<a href="/Yolo/mypage/fleaMarket/WishList.myinfo" class="btn btn-round btn-green">마이페이지로</a>
 			</div>
 		</div>
 	</div>
