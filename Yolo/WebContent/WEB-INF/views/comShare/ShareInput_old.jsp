@@ -1,34 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<title>ShareInput.jsp</title>
-
-<link href="/Yolo/css/font-awesome.css" rel="stylesheet">
-<link href="/Yolo/css/simple-line-icons.css" rel="stylesheet">
-<link href="/Yolo/css/jquery-ui.css" rel="stylesheet">
-<link href="/Yolo/css/datepicker.css" rel="stylesheet">
-<link href="/Yolo/css/fileinput.min.css" rel="stylesheet">
-<link href="/Yolo/css/bootstrap.css" rel="stylesheet">
-<link href="/Yolo/css/app.css" rel="stylesheet">
-
-<!-- 추가CSS -->
-<link href="/Yolo/css_yolo/cssView/comMarket/2_fleaInput.css" rel="stylesheet"> 
-
-<!--[if lt IE 9]> n
-          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
-        
 
 
-
-</head>
+<link href="<c:url value='/css_yolo/cssView/comMarket/2_fleaInput.css'/>" rel="stylesheet">
 <body class="notransition">
 
 	<!-- Header -->
@@ -89,7 +63,9 @@
 									<!-- 상품 등록하러 가기 버튼 -->
 									<div id="nextbtn" class="col-md-12">
 										<div class="col-md-5"></div>
+										<a href="comShare/ShareList.share">
 										<button class="col-xs-offset-4 col-xs-4 col-sm-offset-4 col-sm-4 col-md-offset-4 col-md-4 col-lg-offset-4 col-lg-4 btn btn-round btn-o btn-green">쉐어링 등록하기</button>
+										</a>										
 										<div class="col-md-5"></div>
 									</div>
 
