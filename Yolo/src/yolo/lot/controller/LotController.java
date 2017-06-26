@@ -17,6 +17,12 @@ public class LotController {
 		public String lotinput2(){
 			return "/lot/LotInputSecond.host";
 		}
+	   
+	   @RequestMapping("/LotList.lot")
+		public String lotlist(){
+			return "/lot/LotList.host";
+		}
+	   
      
-    //host에서 lot으로 오기	   
+    	   
 }

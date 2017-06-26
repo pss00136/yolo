@@ -40,8 +40,9 @@
         <tiles:insertAttribute name="menu" />
         
         <div id="wrapper" class="full">
-            <div id="mapView" class="min"><div class="mapPlaceholder"><span class="fa fa-spin fa-spinner"></span> Loading map...</div></div>
+<!--             <div id="mapView" class="min"><div class="mapPlaceholder"><span class="fa fa-spin fa-spinner"></span> Loading map...</div></div> -->
             <div id="content" class="max">
+            <div id="mapView" class="min"><div class="mapPlaceholder"><span class="fa fa-spin fa-spinner"></span> Loading map...</div></div>
 		        <!-- -----------------여기에 컨텐츠 div넣으세요----------------- -->
 		        <!-- 이 사이에! -->
 		        
@@ -66,7 +67,7 @@
         <script src=" <c:url value='/js/jquery.touchSwipe.min.js'/> "></script>
         <script src=" <c:url value='/js/jquery.slimscroll.min.js'/> "></script>
         <script src=" <c:url value='/js/jquery.visible.js'/> "></script>
-        <script src=" <c:url value='http://maps.googleapis.com/maps/api/js?sensor=true&amp;libraries=geometry&amp;libraries=places" type="text/javascript'/> "></script>
+        <script src=" <c:url value='http://maps.googleapis.com/maps/api/js?sensor=true&amp;libraries=geometry&amp;libraries=places' type='text/javascript'/> "></script>
         <script src=" <c:url value='/js/infobox.js'/>"></script>
         <script src=" <c:url value='/js/clndr.js'/> "></script>
         <script src=" <c:url value='/js/jquery.tagsinput.min.js'/> "></script>
