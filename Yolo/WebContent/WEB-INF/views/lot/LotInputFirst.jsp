@@ -179,7 +179,7 @@
 					<div>
 						<div style="text-align: center;">
 							<div style="display: inline-block;">
-								<button id="btn_next" class="btn btn-o btn-green">다음</button>
+								<a href="LotInputSecond.lot" id="btn_next" class="btn btn-o btn-green">다음</a>
 							</div>
 						</div>					
 					</div>	
@@ -203,10 +203,3 @@
 	<script src="/Yolo/js/home.js" type="text/javascript"></script>
 	<script type="text/javascript" src='/Yolo/js_yolo/host/hostregister.js'></script>
 
-
-
-
-
-
-</body>
-</html>

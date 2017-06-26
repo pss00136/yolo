@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.*"%>
 
@@ -50,22 +49,6 @@ int intToday = Integer.parseInt(sdf.format(todayCal.getTime()));
 
 %>
  
-<html>
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<meta http-equiv="content-type" content="text/html; charset=utf-8">
-<title>HostBook.jsp</title>
-
-<link href="/Yolo/css/font-awesome.css" rel="stylesheet">
-<link href="/Yolo/css/simple-line-icons.css" rel="stylesheet">
-<link href="/Yolo/css/jquery-ui.css" rel="stylesheet">
-<link href="/Yolo/css/datepicker.css" rel="stylesheet">
-<link href="/Yolo/css/fileinput.min.css" rel="stylesheet">
-<link href="/Yolo/css/bootstrap.css" rel="stylesheet">
-<link href="/Yolo/css/app.css" rel="stylesheet">
 
 <!-- 추가 css -->
 <link href="/Yolo/css_yolo/cssView/Host/host.css" rel="stylesheet">
@@ -81,22 +64,8 @@ int intToday = Integer.parseInt(sdf.format(todayCal.getTime()));
 	href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
 	rel="stylesheet">
 
-</head>
 
-
-<body class="notransition">
-
-	<!-- HostHeader -->
-	<%@include file="/view/host/HostHeader.jsp"%>
-
-	<!-- Content -->
-	<div id="wrapper" class="full">
-		<div id="mapView" class="min">
-			<div class="mapPlaceholder">
-				<span class="fa fa-spin fa-spinner"></span> Loading map...
-			</div>
-		</div>
-		<div id="content" class="max">
+	
 			<div class="widgets">
 				<h4
 					style="margin-bottom: 30px; font-size: 20px; font-family: 'Nanum Brush Script';">예약
@@ -400,41 +369,12 @@ while(newLine > 0 && newLine < 7)
 				<!------------------ 달력으로 스케줄보여주기 끝 ----------------------->
 
 			</div>
-			<div class="clearfix"></div>
-		</div>
+		
 
 
 
 
-
-
-
-
-
-		<script src="/Yolo/js/json2.js"></script>
-		<script src="/Yolo/js/jquery-2.1.1.min.js"></script>
-		<script src="/Yolo/js/underscore.js"></script>
-		<script src="/Yolo/js/moment-2.5.1.js"></script>
-		<script src="/Yolo/js/jquery-ui.min.js"></script>
-		<script src="/Yolo/js/jquery-ui-touch-punch.js"></script>
-		<script src="/Yolo/js/jquery.placeholder.js"></script>
-		<script src="/Yolo/js/bootstrap.js"></script>
-		<script src="/Yolo/js/jquery.touchSwipe.min.js"></script>
-		<script src="/Yolo/js/jquery.slimscroll.min.js"></script>
-		<script src="/Yolo/js/jquery.visible.js"></script>
-		<script
-			src="http://maps.googleapis.com/maps/api/js?sensor=true&amp;libraries=geometry&amp;libraries=places"
-			type="text/javascript"></script>
-		<script src="/Yolo/js/infobox.js"></script>
-		<script src="/Yolo/js/clndr.js"></script>
-		<script src="/Yolo/js/jquery.tagsinput.min.js"></script>
-		<script src="/Yolo/js/bootstrap-datepicker.js"></script>
-		<script src="/Yolo/js/fileinput.min.js"></script>
-		<script src="/Yolo/js/app.js"></script>
-		<script src="/Yolo/js/calendar.js"></script>
 
 		<!-- 추가 js -->
 		<script src="/Yolo/js/home.js" type="text/javascript"></script>
 		<script src="//code.jboxcdn.com/0.4.7/jBox.min.js"></script>
-</body>
-</html>

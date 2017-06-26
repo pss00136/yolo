@@ -8,13 +8,13 @@
 	<nav class="leftNav scrollable">
 
 		<ul>
-			<li><a href="/Yolo/view/host/HostMyLot.jsp"><span
+			<li><a href="HostMyLot.host"><span
 					class="navIcon glyphicon glyphicon-th-large"></span><span
 					class="navLabel">내 공간보기</span></a></li>
-			<li><a href="single.html"><span
+			<li><a href="/Yolo/lot/LotInputFirst.lot"><span
 					class="navIcon glyphicon glyphicon-plus"></span><span
 					class="navLabel">공간 등록</span></a></li>
-			<li><a href="single.html"><span
+			<li><a href="HostBook.host"><span
 					class="navIcon glyphicon glyphicon-user"></span><span
 					class="navLabel">예약 관리</span></a></li>
 			<li><a href="single.html"><span

@@ -9,7 +9,7 @@
 		                <div class="home-title">자신의 공간을 공유해보세요!</div>
 		                <div id="home_subtitle">With YOLO WOW LOT!!!!</div>
 		                   <div id="space" class="col-md-12">
-									<a href="lot/LotInputFirst.lot" id="bregister" class="btn btn-round  btn-o btn-green col-md-5">
+									<a href="/Yolo/lot/LotInputFirst.lot" id="bregister" class="btn btn-round  btn-o btn-green col-md-5">
 										<span class="icon-puzzle" aria-hidden="true"></span>공간 등록하기
 									</a>
 									<a href="HostMyLot.host" id="bmanage" class="btn btn-round  btn-o btn-green col-md-5">
@@ -34,7 +34,7 @@
 		                <h2 class="osLight">Our Services</h2>
 		                <div class="row">
 		                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 s-menu-item">
-		                     <a href="/Yolo/view/host/HostMyLot.jsp">
+		                     <a href="HostMyLot.host">
 		                            <span class="glyphicon glyphicon-th-large s-icon"></span>
 		                            <div class="s-content">
 		                                <h2 class="s-main osLight">내 공간보기</h2>
@@ -44,7 +44,7 @@
 		                      
 		                    </div>
 		                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 s-menu-item">
-		                        <a href="#">
+		                        <a href="/Yolo/lot/LotInputFirst.lot">
 		                            <span class="glyphicon glyphicon-plus s-icon"></span>
 		                            <div class="s-content">
 		                  	              <h2 class="s-main osLight">공간 등록</h2>
@@ -53,7 +53,7 @@
 		                        </a>
 		                    </div>
 		                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 s-menu-item">
-		                        <a href="#">
+		                        <a href="HostBook.host">
 		                            <span class="glyphicon glyphicon-user s-icon"></span>
 		                            <div class="s-content">
 		                                <h2 class="s-main osLight">예약 관리</h2>

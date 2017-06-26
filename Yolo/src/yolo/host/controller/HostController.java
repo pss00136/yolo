@@ -20,10 +20,15 @@ public class HostController {
 	   return "/host/HostInput.host";
 	   		
    }
-   
-   @RequestMapping("/lot/LotInputFirst.host")
-	public String lotinput1(){
-		return "/lot/LotInputFirst.host";
-	}
 
+   @RequestMapping("/HostMyLot.host")
+   public String hostmylot(){
+	   return "/host/HostMyLot.host";
+   }
+   
+   @RequestMapping("/HostBook.host")
+   public String hostbook(){
+	   return "/host/HostBook.host";
+   }
+   
 }
