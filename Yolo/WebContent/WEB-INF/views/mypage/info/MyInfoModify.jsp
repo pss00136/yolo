@@ -4,7 +4,7 @@
 <!-- 추가 css -->
 <link href="/Yolo/css_yolo/cssView/MyPage/mypage.css" rel="stylesheet">
 <script type="text/javascript" src='/Yolo/js_yolo/host/hostregister.js'></script>
-			<!-------- -------개인정보 수정하기 ------------------------>
+			<!-------- ------- 개인정보 수정하기 ------------------------>
 			<div class="home-wrapper info">
 
 				<h4
