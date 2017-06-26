@@ -9,7 +9,7 @@ public class LotController {
 	
 	   @RequestMapping("/LotInputFirst.lot")
 		public String lotinput1(){
-			return "/lot/LotInputFirst.host";
+			return "/lot/LotInputFirst";
 		}
 	   
 
@@ -20,7 +20,7 @@ public class LotController {
 	   
 	   @RequestMapping("/LotList.lot")
 		public String lotlist(){
-			return "/lot/LotList.host";
+			return "/lot/LotList";
 		}
 	   
      
