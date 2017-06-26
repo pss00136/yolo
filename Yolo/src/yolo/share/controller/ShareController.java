@@ -10,7 +10,7 @@ public class ShareController {
 	
 	@RequestMapping("/{url}.share")
 	public String shareView(@PathVariable String url){
-		System.out.println("url");
-		return "/comShare/"+url+".nofooter";
+		System.out.println(url);
+		return "/comShare/"+url;
 	}
 }
