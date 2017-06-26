@@ -48,7 +48,7 @@
 							class="fa fa-angle-down"></span>
 					</div>
 					<div class="clearfix"></div>
-				</a>
+				</a>	
 				<div class="dropdown-menu pull-right userMenu" role="menu">
 					<div class="mobAvatar">
 						<img class="avatar mobAvatarImg" src="/Yolo/images/avatar-1.png"
@@ -117,6 +117,16 @@
 					<a href="#" class="notifyAll">See All</a>
 				</div>
 			</div><!-- 상단 메뉴 알림부분 끝 -->
+			<!-- 호스트센터 들어가기 -->
+			<div class="headerUserWraper">
+	<a href="host/HostMain.host" class="userHandler"><span class="icon-user-follow"></span></a> 
+			<a href="host/HostMain.host" class="headerUser btn btn-o btn-gray"> 
+			호스트 센터
+		</a>
+	
+	</div>
+	<!-- 호스트 센터 들어가기 끝 -->
+			
 			<!-- 맵 아이콘 -->
 		<!-- 	<a href="#" class="mapHandler"><span class="icon-map"></span></a> -->
 			<div class="clearfix"></div>
