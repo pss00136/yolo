@@ -4,27 +4,7 @@
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 <tiles-definitions>
 
-  <!-- nofooter Template -->
- <definition name='nofooterTemplate' template="/WEB-INF/template/nofooter/template_nofooter.jsp">
- 	<put-attribute name="header" value="/WEB-INF/template/nomap/header_nomap.jsp"></put-attribute>
- 	<put-attribute name="menu" value="/WEB-INF/template/default/menu.jsp"></put-attribute>
- </definition>
- 
- <definition name='/*/*.nofooter' extends='nofooterTemplate'>
- 	<put-attribute name="title" value='YoloWowLot'></put-attribute>
- 	<put-attribute name="body" value='/WEB-INF/views/{1}/{2}.jsp'></put-attribute>
- </definition>
- 
- <!-- nomap Template -->
- <definition name='nomapTemplate' template="/WEB-INF/template/nomap/template_nomap.jsp">
- 	<put-attribute name="header" value="/WEB-INF/template/nomap/header_nomap.jsp"></put-attribute>
- 	<put-attribute name="menu" value="/WEB-INF/template/default/menu.jsp"></put-attribute>
- </definition>
- 
- <definition name='/*/*.nomap' extends='nomapTemplate'>
- 	<put-attribute name="title" value='YoloWowLot'></put-attribute>
- 	<put-attribute name="body" value='/WEB-INF/views/{1}/{2}.jsp'></put-attribute>
- </definition>
+
  
  <!-- host Template -->
   <definition name='hostTemplate' template="/WEB-INF/template/host/template_host.jsp">
@@ -46,6 +26,17 @@
  </definition>
  
  <definition name='/*/*.modal' extends='modalTemplate'>
+ 	<put-attribute name="body" value='/WEB-INF/views/{1}/{2}.jsp'></put-attribute>
+ </definition>
+ 
+  <!-- map Template -->
+ <definition name='mapTemplate' template="/WEB-INF/template/map/template_map.jsp">
+ 	<put-attribute name="header" value="/WEB-INF/template/default/header.jsp"></put-attribute>
+ 	<put-attribute name="menu" value="/WEB-INF/template/default/menu.jsp"></put-attribute>
+ 	<put-attribute name="footer" value="/WEB-INF/template/default/footer.jsp"></put-attribute>
+ </definition>
+ 
+ <definition name='/*/*.map' extends='mapTemplate'>
  	<put-attribute name="body" value='/WEB-INF/views/{1}/{2}.jsp'></put-attribute>
  </definition>
 

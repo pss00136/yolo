@@ -25,7 +25,7 @@
 					</div>
                     
 					<div class="col-xs-12 col-sm-2 col-md-3 col-lg-3">
-						<a href="#" class="btn btn-round btn-o btn-success">쉐어링 글쓰기</a>
+						<a href="ShareInput.share" class="btn btn-round btn-o btn-success">쉐어링 글쓰기</a>
 					</div>
 					
 				</div> 
@@ -121,7 +121,7 @@
                 		
  					</div>
  						<div class="col-xs-offset-4 col-xs-4 col-sm-offset-4 col-sm-4 col-md-offset-4 col-md-4 col-lg-offset-4 col-lg-4">
- 						<a href="#" class="btn btn-round btn-success">쉐어 신청하기</a>
+ 						<a href="ShareList.share" class="btn btn-round btn-success">쉐어 신청하기</a>
  						</div>
 				</div>
 			</div>

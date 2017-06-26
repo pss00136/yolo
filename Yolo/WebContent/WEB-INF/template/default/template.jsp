@@ -17,16 +17,16 @@
         <link href="<c:url value='/css/fullscreen-slider.css'/>" rel="stylesheet">
         <link href="<c:url value='/css/app.css'/>" rel="stylesheet">
         <link href="<c:url value='/css_yolo/cssView/common/app.css'/>" rel="stylesheet">
-		<style type="text/css">
-		#footer_title{
-			font-size: 3em;
-		}
+      <style type="text/css">
+      #footer_title{
+         font-size: 3em;
+      }
 
-		.home-footer{
-    		position: relative;
-		}
+      .home-footer{
+          position: relative;
+      }
 
-		</style>
+      </style>
         <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -35,22 +35,22 @@
  
 </head>
 <body class="notransition">
-		<!-- Header -->
+      <!-- Header -->
         <tiles:insertAttribute name="header" />
         <tiles:insertAttribute name="menu" />
         
         <div id="wrapper" class="full">
             <div id="mapView" class="min"><div class="mapPlaceholder"><span class="fa fa-spin fa-spinner"></span> Loading map...</div></div>
             <div id="content" class="max">
-		        <!-- -----------------여기에 컨텐츠 div넣으세요----------------- -->
-		        <!-- 이 사이에! -->
-		        
-		        <tiles:insertAttribute name="body" />
-		        
-		        <!-- ------------------------------------------------------- -->
-		        <!-- Footer -->
-		        <tiles:insertAttribute name="footer" />
-		        
+              <!-- -----------------여기에 컨텐츠 div넣으세요----------------- -->
+              <!-- 이 사이에! -->
+              
+              <tiles:insertAttribute name="body" />
+              
+              <!-- ------------------------------------------------------- -->
+              <!-- Footer -->
+              <tiles:insertAttribute name="footer" />
+              
             </div>
             <div class="clearfix"></div>
         </div>
@@ -76,6 +76,6 @@
         <script src=" <c:url value='/js/calendar.js'/> "></script>
         
         <!-- 추가  -->
-		<script src=" <c:url value='/js/home.js'/> " type="text/javascript"></script>
+      <script src=" <c:url value='/js/home.js'/> " type="text/javascript"></script>
 </body>
 </html>

@@ -12,7 +12,7 @@
 									<a href="/Yolo/lot/LotInputFirst.lot" id="bregister" class="btn btn-round  btn-o btn-green col-md-5">
 										<span class="icon-puzzle" aria-hidden="true"></span>공간 등록하기
 									</a>
-									<a href="HostMyLot.host" id="bmanage" class="btn btn-round  btn-o btn-green col-md-5">
+									<a href="/Yolo/host/HostMyLot.host" id="bmanage" class="btn btn-round  btn-o btn-green col-md-5">
 										<span class="icon-wrench" aria-hidden="true"></span>공간 관리하기
 									</a>
 								</div>
@@ -34,7 +34,7 @@
 		                <h2 class="osLight">Our Services</h2>
 		                <div class="row">
 		                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 s-menu-item">
-		                     <a href="HostMyLot.host">
+		                     <a href="/Yolo/host/HostMyLot.host">
 		                            <span class="glyphicon glyphicon-th-large s-icon"></span>
 		                            <div class="s-content">
 		                                <h2 class="s-main osLight">내 공간보기</h2>
@@ -53,7 +53,7 @@
 		                        </a>
 		                    </div>
 		                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 s-menu-item">
-		                        <a href="HostBook.host">
+		                        <a href="/Yolo/host/HostBook.host">
 		                            <span class="glyphicon glyphicon-user s-icon"></span>
 		                            <div class="s-content">
 		                                <h2 class="s-main osLight">예약 관리</h2>

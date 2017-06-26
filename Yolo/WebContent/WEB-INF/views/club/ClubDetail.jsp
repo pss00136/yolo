@@ -1,39 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-        <title>ClubDetail</title>
-
-        <link href="/Yolo/css/font-awesome.css" rel="stylesheet">
-        <link href="/Yolo/css/simple-line-icons.css" rel="stylesheet">
-        <link href="/Yolo/css/jquery-ui.css" rel="stylesheet">
-        <link href="/Yolo/css/datepicker.css" rel="stylesheet">
-        <link href="/Yolo/css/bootstrap.css" rel="stylesheet">
-        <link href="/Yolo/css/app.css" rel="stylesheet">
-        
-        <!-- 추가 속성 CSS -->
+    
+	<!-- 추가 속성 CSS -->
         <link href="/Yolo/css_yolo/cssView/Club/clubDetail.css" rel="stylesheet">
         <link href="/Yolo/css_yolo/cssView/Club/tagPlus.css" rel="stylesheet">
-
-        <!--[if lt IE 9]>
-          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
-    </head>
-    <body class="notransition">
-
-       	<!-- Header -->
-		<%@include file="/view/common/header.jsp"%>
-
-        <!-- Content -->
-
-        <div id="wrapper">
-            <div id="mapView" class="mob-min"><div class="mapPlaceholder"><span class="fa fa-spin fa-spinner"></span> Loading map...</div></div>
-            <div id="content" class="mob-max">
+        
+        
                 <div class="singleTop">
                     <div id="carouselFull" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
@@ -235,7 +207,7 @@
                         <div class="clearfix"></div>
                     </div>
                 </div>
-            </div>
+<!--             </div> -->
             <div class="commentsFormWrapper">
                 <div class="cfAvatar">
                     <img class="avatar" src="/Yolo/images/avatar-1.png" alt="avatar">
@@ -249,53 +221,38 @@
                 <div class="clearfix"></div>
             </div>
             <div class="clearfix"></div>
-        </div>
+<!--         </div> -->
 
-        <div class="modal fade" id="contactAgent" role="dialog" aria-labelledby="contactLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        <h4 class="modal-title" id="contactLabel">Contact Agent</h4>
-                    </div>
-                    <div class="modal-body">
-                        <form class="contactForm">
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 cfItem">
-                                    <input type="text" placeholder="Name" class="form-control">
-                                 </div>
-                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 cfItem">
-                                    <input type="text" placeholder="Email" class="form-control">
-                                </div>
-                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cfItem">
-                                    <input type="text" placeholder="Subject" class="form-control">
-                                </div>
-                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cfItem">
-                                    <textarea placeholder="Message" rows="3" class="form-control"></textarea>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="#" data-dismiss="modal" class="btn btn-round btn-o btn-gray">Close</a>
-                        <a href="#" class="btn btn-round btn-green">Send message</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!--         <div class="modal fade" id="contactAgent" role="dialog" aria-labelledby="contactLabel" aria-hidden="true"> -->
+<!--             <div class="modal-dialog"> -->
+<!--                 <div class="modal-content"> -->
+<!--                     <div class="modal-header"> -->
+<!--                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> -->
+<!--                         <h4 class="modal-title" id="contactLabel">Contact Agent</h4> -->
+<!--                     </div> -->
+<!--                     <div class="modal-body"> -->
+<!--                         <form class="contactForm"> -->
+<!--                             <div class="row"> -->
+<!--                                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 cfItem"> -->
+<!--                                     <input type="text" placeholder="Name" class="form-control"> -->
+<!--                                  </div> -->
+<!--                                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 cfItem"> -->
+<!--                                     <input type="text" placeholder="Email" class="form-control"> -->
+<!--                                 </div> -->
+<!--                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cfItem"> -->
+<!--                                     <input type="text" placeholder="Subject" class="form-control"> -->
+<!--                                 </div> -->
+<!--                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cfItem"> -->
+<!--                                     <textarea placeholder="Message" rows="3" class="form-control"></textarea> -->
+<!--                                 </div> -->
+<!--                             </div> -->
+<!--                         </form> -->
+<!--                     </div> -->
+<!--                     <div class="modal-footer"> -->
+<!--                         <a href="#" data-dismiss="modal" class="btn btn-round btn-o btn-gray">Close</a> -->
+<!--                         <a href="#" class="btn btn-round btn-green">Send message</a> -->
+<!--                     </div> -->
+<!--                 </div> -->
+<!--             </div> -->
+<!--         </div> -->
 
- 		<script src="/Yolo/js/jquery-2.1.1.min.js"></script>
-        <script src="/Yolo/js/jquery-ui.min.js"></script>
-        <script src="/Yolo/js/jquery-ui-touch-punch.js"></script>
-        <script src="/Yolo/js/jquery.placeholder.js"></script>
-        <script src="/Yolo/js/bootstrap.js"></script>
-        <script src="/Yolo/js/jquery.touchSwipe.min.js"></script>
-        <script src="/Yolo/js/jquery.slimscroll.min.js"></script>
-        <script src="/Yolo/js/jquery.visible.js"></script>
-        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBh5iJnCJrUZugfpicBfCPv3pCLOTat6gM&sensor=true&amp;libraries=geometry&amp;libraries=places" type="text/javascript"></script>
-        <script src="/Yolo/js/infobox.js"></script>
-        <script src="/Yolo/js/jquery.tagsinput.min.js"></script>
-        <script src="/Yolo/js/bootstrap-datepicker.js"></script>
-        <script src="/Yolo/js/app.js" type="text/javascript"></script>
-    </body>
-</html>
