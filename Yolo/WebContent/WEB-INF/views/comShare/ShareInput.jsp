@@ -32,9 +32,9 @@
 											</button>
 											<ul class="dropdown-menu dropdown-select">
 												<li class="active"><input type="radio" name="ds1"
-													checked="checked"><a href="#">인혁이형 댁 아 주 좋 음</a></li>
-												<li><input type="radio" name="ds1"><a href="#">창수형 댁 아 주 좋 음</a></li>
-												<li><input type="radio" name="ds1"><a href="#">찬종이집 안 됨 그냥 안됌 무조건 안됌</a></li>
+													checked="checked"><a href="#">인혁이형집 </a></li>
+												<li><input type="radio" name="ds1"><a href="#">창수형집 </a></li>
+												<li><input type="radio" name="ds1"><a href="#">찬종이집</a></li>
 												<li class="disabled"><input type="radio" name="ds1"
 													disabled=""><a href="#">Option disabled</a></li>
 											</ul>
@@ -50,9 +50,9 @@
 									</div>
 									<!-- 상품 등록하러 가기 버튼 -->
 									<div id="nextbtn" class="col-md-12">
-										<div class="col-md-5"></div>
-										<button class="col-xs-offset-4 col-xs-4 col-sm-offset-4 col-sm-4 col-md-offset-4 col-md-4 col-lg-offset-4 col-lg-4 btn btn-round btn-o btn-green">쉐어링 등록하기</button>
-										<div class="col-md-5"></div>
+										<a href="ShareList.share">
+											<button class="col-xs-offset-4 col-xs-4 col-sm-offset-4 col-sm-4 col-md-offset-4 col-md-4 col-lg-offset-4 col-lg-4 btn btn-round btn-o btn-green">쉐어링 등록하기</button>
+										</a>
 									</div>
 
 								</form>
