@@ -8,306 +8,218 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <title>상품 상세보기 페이지</title>
 
-<link href="/Yolo/css/font-awesome.css" rel="stylesheet">
-<link href="/Yolo/css/simple-line-icons.css" rel="stylesheet">
-<link href="/Yolo/css/jquery-ui.css" rel="stylesheet">
-<link href="/Yolo/css/datepicker.css" rel="stylesheet">
-<link href="/Yolo/css/fileinput.min.css" rel="stylesheet">
-<link href="/Yolo/css/bootstrap.css" rel="stylesheet">
-<link href="/Yolo/css/app.css" rel="stylesheet">
 
 <!-- 추가 CSS -->
-
-<style>
-
-/*****************globals*************/
-body {
-  font-family: 'open sans';
-  overflow-x: hidden; }
-
-img {
-  max-width: 100%; }
-
-.preview {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column; }
-  @media screen and (max-width: 996px) {
-    .preview {
-      margin-bottom: 20px; } }
-
-.preview-pic {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1; }
-
-.preview-thumbnail.nav-tabs {
-  border: none;
-  margin-top: 15px; }
-  .preview-thumbnail.nav-tabs li {
-    width: 18%;
-    margin-right: 2.5%; }
-    .preview-thumbnail.nav-tabs li img {
-      max-width: 100%;
-      display: block; }
-    .preview-thumbnail.nav-tabs li a {
-      padding: 0;
-      margin: 0; }
-    .preview-thumbnail.nav-tabs li:last-of-type {
-      margin-right: 0; }
-
-.tab-content {
-  overflow: hidden; }
-  .tab-content img {
-    width: 100%;
-    -webkit-animation-name: opacity;
-            animation-name: opacity;
-    -webkit-animation-duration: .3s;
-            animation-duration: .3s; }
-
-.card {
-  margin: 5% 10%;
-  background: #eee;
-  padding: 3em;
-  line-height: 1.5em; 
-
-  }
-
-@media screen and (min-width: 997px) {
-  .wrapper {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex; } }
-
-.details {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  
-  
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column; }
-
-.colors {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1; }
-
-.product-title, .price, .sizes, .colors {
-  text-transform: UPPERCASE;
-  font-weight: bold; }
-
-.checked, .price span {
-  color: #ff9f1a; }
-
-.product-title, .rating, .product-description, .price, .vote, .sizes {
-  margin-bottom: 15px; }
-
-.product-title {
-  margin-top: 0; }
-
-.size {
-  margin-right: 10px; }
-  .size:first-of-type {
-    margin-left: 40px; }
-
-.color {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 10px;
-  height: 2em;
-  width: 2em;
-  border-radius: 2px; }
-  .color:first-of-type {
-    margin-left: 20px; }
-
-.add-to-cart, .like {
-  background: #ff9f1a;
-  padding: 1.2em 1.5em;
-  border: none;
-  text-transform: UPPERCASE;
-  font-weight: bold;
-  color: #fff;
-  -webkit-transition: background .3s ease;
-          transition: background .3s ease; }
-  .add-to-cart:hover, .like:hover {
-    background: #b36800;
-    color: #fff; }
-
-.not-available {
-  text-align: center;
-  line-height: 2em; }
-  .not-available:before {
-    font-family: fontawesome;
-    content: "\f00d";
-    color: #fff; }
-
-.orange {
-  background: #ff9f1a; }
-
-.green {
-  background: #85ad00; }
-
-.blue {
-  background: #0076ad; }
-
-.tooltip-inner {
-  padding: 1.3em; }
-
-@-webkit-keyframes opacity {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(3);
-            transform: scale(3); }
-  100% {
-    opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1); } }
-
-@keyframes opacity {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(3);
-            transform: scale(3); }
-  100% {
-    opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1); } }
-
-/*# sourceMappingURL=style.css.map */
-
-.details h4{
-	float: right;
-	margin-top : -5%;
-}
-
-a.card, div.card{
-	cursor: default;
-}
-
-.stars{
-	float: right;
-	margin-top: -3%;
-}
-hr {
-    margin-top: -10px;
-}
-
-h1, .h1 {
-    font-size: 30px;
-}
-
-
-</style>
+<link href="/Yolo/css_yolo/cssView/comMarket/GoodsDetail.css" rel="stylesheet">
 
 </head>
 <body class="notransition">
-	<!-- Header -->
-	<%@include file="/view/common/header.jsp"%>
 
-	<!-- Content -->
-	<div id="wrapper" class="full">
-		<div id="mapView" class="min">
-			<div class="mapPlaceholder">
-				<span class="fa fa-spin fa-spinner"></span> Loading map...
-			</div>
-		</div>
-		<div id="content" class="max">
-			
 			<!-- ------------------------------------------------------- -->
 			<!-- 본문내용 -->
-
-			<div class="card">
+		<div class="card">
 				<div class="container-fliud">
 					<div class="wrapper row">
-						<div class="preview col-md-6 ">
+						<div class="preview col-md-6">
+
 							<div class="preview-pic tab-content">
 								<div class="tab-pane active" id="pic-1">
-									<img src="/Yolo/images_yolo/comMarket/dress1.PNG" />
+									<img src="/Yolo/images_yolo/comMarket/dress4.PNG" />
 								</div>
 							</div>
 						</div>
+
 						<div class="details col-md-6">
-
-							<h1>상품 이름</h1>
+							<!-- 상품명 & 만든 플리마켓 -->
+							<h3>
+								<hr>
+								상품 이름
+							</h3>
 							<div>
-								<h4>made by "ooooo"</h4>
-								<div>
-									<div class="rating">
-										<div class="stars">
-											<span class="fa fa-star checked"></span> <span
-												class="fa fa-star checked"></span> <span
-												class="fa fa-star checked"></span> <span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-										</div>
-										<span class="review-no"></span>
-									</div>
-									<br />
-									<hr>
-									
-									<div class="price">
-										<h2 style="font-size: 30px;float: right;color: black; height: 40px;">9000 원</h2>
-									</div>
-
-									
-
-
-
-									<div class="action">
-										<button class="add-to-cart btn btn-default" type="button">찜하기</button>
-										<button class="add-to-cart btn btn-default" type="button">주문하기</button>
-									</div>
+								<h4>made by "ooooooo"</h4>
+							</div>
+							<!-- 평균 별점 -->
+							<div class="rating">
+								<div class="stars">
+									<span class="fa fa-star checked"></span> <span
+										class="fa fa-star checked"></span> <span
+										class="fa fa-star checked"></span> <span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+								</div>
+								<hr>
+							</div>
+							<!-- 가격 -->
+							<div>
+								<h4 class="price">
+									PRICE <span>27,000</span>
+								</h4>
+							</div>
+							<!-- 수량폼 -->
+							<div class="form-group">
+								<label class="col-sm-2 control-label">수량</label>
+								<div class="col-sm-2">
+									<input class="form-control" type="text">
 								</div>
 							</div>
+							<!-- 상품선택 -->
+							<div class="form-group">
+								<label class="col-sm-2 control-label">상품선택</label>
+								<div class="col-sm-10">
+									<select class="form-control" value="option 1">
+										<option>option 1</option>
+										<option>option 2</option>
+										<option>option 3</option>
+										<option>option 4</option>
+										<option>option 5</option>
+									</select>
+								</div>
+							</div>
+							<!-- 옵션폼 -->
+							<div class="form-group">
+								<label class="col-sm-2 control-label">옵션</label>
+								<div class="col-sm-10">
+									<input class="form-control" type="text">
+								</div>
+							</div>
+							<!-- 옵션폼 -->
+							<div class="form-group">
+								<div class="col-sm-6">
+									<a data-toggle="modal" href="#contactAgent" class="btn btn-round btn-green btn_flea">찜하기</a>
+								</div>
+								<div class="col-sm-6">
+									<a href="GoodsPay.market" class="btn btn-round btn-green btn_flea">주문하기</a>
+								</div>
+							</div>							
+						</div>
+					</div>
+					<!-- 상품 설명 이미지 공간 -->
+					<div class="wrapper row">
+						<div class="panel-heading col-md-12">상품 이미지</div>
+					</div>
+					<div class="wrapper row">
+						<div class="col-md-12">~이미지공간~</div>
+					</div>
+					<!--상품평 -->
+					<div class="wrapper row">
+						<div class="panel-heading col-md-12">상품 평</div>
+					</div>
+					<!-- 상품평1 -->
+					<div class="wrapper row flea_comment">
+						<div class="panel-body col-md-2 col-xs-6">
+							<span class="fa fa-star checked"></span> <span
+								class="fa fa-star checked"></span> <span
+								class="fa fa-star checked"></span> <span
+								class="fa fa-star checked"></span> <span
+								class="fa fa-star checked"></span>
+						</div>
+						<div class="panel-body col-md-2 col-xs-6">
+							<label>2017-06-23</label>
+						</div>
+						<div class="panel-body col-md-6 col-xs-12">
+							<label>정말 맘에들어요.</label>
+						</div>
+					</div>
+					<!-- 상품평2 -->
+					<div class="wrapper row flea_comment" >
+						<div class="panel-body col-md-2 col-xs-6">
+							<span class="fa fa-star checked"></span> <span
+								class="fa fa-star checked"></span> <span
+								class="fa fa-star checked"></span> <span
+								class="fa fa-star checked"></span> <span
+								class="fa fa-star checked"></span>
+						</div>
+						<div class="panel-body col-md-2 col-xs-6">
+							<label>2017-06-23</label>
+						</div>
+						<div class="panel-body col-md-6 col-xs-12">
+							<label>정말 맘에들어요.</label>
+						</div>
+					</div>
+					<!-- 상품평3 -->
+					<div class="wrapper row flea_comment">
+						<div class="panel-body col-md-2 col-xs-6">
+							<span class="fa fa-star checked"></span> <span
+								class="fa fa-star checked"></span> <span
+								class="fa fa-star checked"></span> <span
+								class="fa fa-star checked"></span> <span
+								class="fa fa-star checked"></span>
+						</div>
+						<div class="panel-body col-md-2 col-xs-6">
+							<label>2017-06-23</label>
+						</div>
+						<div class="panel-body col-md-6 col-xs-12">
+							<label>정말 맘에들어요.</label>
+						</div>
+					</div>
+					<!-- 상품평4 -->
+					<div class="wrapper row flea_comment">
+						<div class="panel-body col-md-2 col-xs-6">
+							<span class="fa fa-star checked"></span> <span
+								class="fa fa-star checked"></span> <span
+								class="fa fa-star checked"></span> <span
+								class="fa fa-star checked"></span> <span
+								class="fa fa-star checked"></span>
+						</div>
+						<div class="panel-body col-md-2 col-xs-6">
+							<label>2017-06-23</label>
+						</div>
+						<div class="panel-body col-md-6 col-xs-12">
+							<label>ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ</label>
+						</div>
+					</div>
+					<!-- 상품평 페이징 -->
+					<div class="wrapper row" style="text-align:center;">
+						<div class="panel-body col-md-12 col-xs-12" style="display:inline-block">
+							<ul class="pagination pagination-round pagination-sm">
+								<li class="disabled"><a href="#"><span
+										class="fa fa-angle-left"></span></a></li>
+								<li class="active"><a href="#">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li><a href="#">5</a></li>
+								<li><a href="#"><span class="fa fa-angle-right"></span></a></li>
+							</ul>
 						</div>
 					</div>
 				</div>
-
 			</div>
-
+			
+			<!-- modal popup -->
+			<div class="modal fade" id="contactAgent" role="dialog" aria-labelledby="contactLabel" aria-hidden="true">
+	            <div class="modal-dialog">
+	                <div class="modal-content">
+	                    <div class="modal-header">
+	                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+	                    </div>
+	                    <div class="modal-body">
+	                        <form class="contactForm">
+	                            <div class="row">
+	                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 cfItem">
+	                                    <input type="text" placeholder="Name" class="form-control">
+	                                 </div>
+	                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 cfItem">
+	                                    <input type="text" placeholder="Email" class="form-control">
+	                                </div>
+	                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cfItem">
+	                                    <input type="text" placeholder="Subject" class="form-control">
+	                                </div>
+	                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cfItem">
+	                                    <textarea placeholder="Message" rows="3" class="form-control"></textarea>
+	                                </div>
+	                            </div>
+	                        </form>
+	                    </div>
+	                    <div class="modal-footer">
+	                        <a href="#" data-dismiss="modal" class="btn btn-round btn-o btn-gray">Close</a>
+	                        <a href="#" class="btn btn-round btn-green">Send message</a>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+			
 			<!-- ------------------------------------------------------- -->
-			<!-- Footer -->
-			<%@include file="/view/common/footer.jsp"%>
 
-		</div>
-		<!-- / 본문내용 -->
-		<div class="clearfix"></div>
-	</div>
-	<!-- /Content -->
-
-
-<script src="/Yolo/js/json2.js"></script>
-<script src="/Yolo/js/jquery-2.1.1.min.js"></script>
-<script src="/Yolo/js/underscore.js"></script>
-<script src="/Yolo/js/moment-2.5.1.js"></script>
-<script src="/Yolo/js/jquery-ui.min.js"></script>
-<script src="/Yolo/js/jquery-ui-touch-punch.js"></script>
-<script src="/Yolo/js/jquery.placeholder.js"></script>
-<script src="/Yolo/js/bootstrap.js"></script>
-<script src="/Yolo/js/jquery.touchSwipe.min.js"></script>
-<script src="/Yolo/js/jquery.slimscroll.min.js"></script>
-<script src="/Yolo/js/jquery.visible.js"></script>
-<script src="http://maps.googleapis.com/maps/api/js?sensor=true&amp;libraries=geometry&amp;libraries=places" type="text/javascript"></script>
-<script src="/Yolo/js/infobox.js"></script>
-<script src="/Yolo/js/clndr.js"></script>
-<script src="/Yolo/js/jquery.tagsinput.min.js"></script>
-<script src="/Yolo/js/bootstrap-datepicker.js"></script>
-<script src="/Yolo/js/fileinput.min.js"></script>
-<script src="/Yolo/js/app.js"></script>
-<script src="/Yolo/js/calendar.js"></script>
 
 <!-- 추가JS -->
 

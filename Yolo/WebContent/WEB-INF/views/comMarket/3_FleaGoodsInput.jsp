@@ -9,14 +9,6 @@
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <title>상품 정보 입력</title>
 
-<link href="/Yolo/css/font-awesome.css" rel="stylesheet">
-<link href="/Yolo/css/simple-line-icons.css" rel="stylesheet">
-<link href="/Yolo/css/jquery-ui.css" rel="stylesheet">
-<link href="/Yolo/css/datepicker.css" rel="stylesheet">
-<link href="/Yolo/css/bootstrap.css" rel="stylesheet">
-<link href="/Yolo/css/app.css" rel="stylesheet">
-<link href="/Yolo/css/fileinput.min.css" rel="stylesheet">
-
 <!-- 추가 속성 CSS -->
 <link href="/Yolo/css_yolo/cssView/comMarket/3_fleaInput.css" rel="stylesheet"> 
 
@@ -24,16 +16,6 @@
 </head>
 <body class="notransition">
 
-	<!-- Header -->
-	<%@include file="/view/common/header.jsp"%>
-
-	<div id="wrapper" class="full">
-		<div id="mapView" class="min">
-			<div class="mapPlaceholder">
-				<span class="fa fa-spin fa-spinner"></span> Loading map...
-			</div>
-		</div>
-		<div id="content" class="max">
 			<!-- ------------------------------------------------------- -->
 			<div class="tables">
 				<div class="row">
@@ -140,7 +122,7 @@
 											<button class="col-md-2 btn btn-round btn-o btn-green add">추가하기</button>
 										</div>
 										<div class="col-md-6">
-											<button class="col-md-2 btn btn-round btn-o btn-green app">신청하기</button>
+											<a href="/Yolo/mypage/myReg/MarketMyList.myreg" class="col-md-2 btn btn-round btn-o btn-green app">신청하기</a>
 										</div>
 									</div>
 
@@ -151,39 +133,9 @@
 				</div>
 			</div>
 			<!-- / tables -->
-
+			
 
 			<!-- ------------------------------------------------------- -->
-			<!-- Footer -->
-			<%@include file="/view/common/footer.jsp"%>
-
-		</div>
-		<!-- / content -->
-		<div class="clearfix"></div>
-	</div>
-	<!-- / wrapper -->
-
-	<script src="/Yolo/js/json2.js"></script>
-	<script src="/Yolo/js/jquery-2.1.1.min.js"></script>
-	<script src="/Yolo/js/underscore.js"></script>
-	<script src="/Yolo/js/moment-2.5.1.js"></script>
-	<script src="/Yolo/js/jquery-ui.min.js"></script>
-	<script src="/Yolo/js/jquery-ui-touch-punch.js"></script>
-	<script src="/Yolo/js/jquery.placeholder.js"></script>
-	<script src="/Yolo/js/bootstrap.js"></script>
-	<script src="/Yolo/js/jquery.touchSwipe.min.js"></script>
-	<script src="/Yolo/js/jquery.slimscroll.min.js"></script>
-	<script src="/Yolo/js/jquery.visible.js"></script>
-	<script
-		src="http://maps.googleapis.com/maps/api/js?sensor=true&amp;libraries=geometry&amp;libraries=places"
-		type="text/javascript"></script>
-	<script src="/Yolo/js/infobox.js"></script>
-	<script src="/Yolo/js/clndr.js"></script>
-	<script src="/Yolo/js/jquery.tagsinput.min.js"></script>
-	<script src="/Yolo/js/bootstrap-datepicker.js"></script>
-	<script src="/Yolo/js/fileinput.min.js"></script>
-	<script src="/Yolo/js/app.js"></script>
-	<script src="/Yolo/js/calendar.js"></script>
 
 	<!-- 추가JS  -->
 	<script src="/Yolo/js/home.js" type="text/javascript"></script>

@@ -9,38 +9,15 @@
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <title>플리마켓 정보 입력</title>
 
-<link href="/Yolo/css/font-awesome.css" rel="stylesheet">
-<link href="/Yolo/css/simple-line-icons.css" rel="stylesheet">
-<link href="/Yolo/css/jquery-ui.css" rel="stylesheet">
-<link href="/Yolo/css/datepicker.css" rel="stylesheet">
-<link href="/Yolo/css/fileinput.min.css" rel="stylesheet">
-<link href="/Yolo/css/bootstrap.css" rel="stylesheet">
-<link href="/Yolo/css/app.css" rel="stylesheet">
 
 <!-- 추가CSS -->
 <link href="/Yolo/css_yolo/cssView/comMarket/2_fleaInput.css" rel="stylesheet"> 
-
-<!--[if lt IE 9]> n
-          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
-        
-
+    
 
 
 </head>
 <body class="notransition">
 
-	<!-- Header -->
-	<%@include file="/view/common/header.jsp"%>
-
-	<div id="wrapper" class="full">
-		<div id="mapView" class="min">
-			<div class="mapPlaceholder">
-				<span class="fa fa-spin fa-spinner"></span> Loading map...
-			</div>
-		</div>
-		<div id="content" class="max">
 			<!-- ------------------------------------------------------- -->
 			<div class="tables">
 				<div class="row">
@@ -80,8 +57,9 @@
 									<!-- 상품 등록하러 가기 버튼 -->
 									<div id="nextbtn" class="col-md-12">
 										<div class="col-md-5"></div>
-										<button class="col-md-2 btn btn-round btn-o btn-green">상품
-											등록하러 가기</button>
+										<a href="3_FleaGoodsInput.market" class="col-md-2 btn btn-round btn-o btn-green">
+											상품 등록하러 가기
+										</a>
 										<div class="col-md-5"></div>
 									</div>
 
@@ -95,36 +73,6 @@
 
 
 			<!-- ------------------------------------------------------- -->
-			<!-- Footer -->
-			<%@include file="/view/common/footer.jsp"%>
-
-		</div>
-		<!-- / content -->
-		<div class="clearfix"></div>
-	</div>
-	<!-- / wrapper -->
-
-	<script src="/Yolo/js/json2.js"></script>
-	<script src="/Yolo/js/jquery-2.1.1.min.js"></script>
-	<script src="/Yolo/js/underscore.js"></script>
-	<script src="/Yolo/js/moment-2.5.1.js"></script>
-	<script src="/Yolo/js/jquery-ui.min.js"></script>
-	<script src="/Yolo/js/jquery-ui-touch-punch.js"></script>
-	<script src="/Yolo/js/jquery.placeholder.js"></script>
-	<script src="/Yolo/js/bootstrap.js"></script>
-	<script src="/Yolo/js/jquery.touchSwipe.min.js"></script>
-	<script src="/Yolo/js/jquery.slimscroll.min.js"></script>
-	<script src="/Yolo/js/jquery.visible.js"></script>
-	<script
-		src="http://maps.googleapis.com/maps/api/js?sensor=true&amp;libraries=geometry&amp;libraries=places"
-		type="text/javascript"></script>
-	<script src="/Yolo/js/infobox.js"></script>
-	<script src="/Yolo/js/clndr.js"></script>
-	<script src="/Yolo/js/jquery.tagsinput.min.js"></script>
-	<script src="/Yolo/js/bootstrap-datepicker.js"></script>
-	<script src="/Yolo/js/fileinput.min.js"></script>
-	<script src="/Yolo/js/app.js"></script>
-	<script src="/Yolo/js/calendar.js"></script>
 
 	<!-- 추가JS  -->
 	<script src="/Yolo/js/home.js" type="text/javascript"></script>
