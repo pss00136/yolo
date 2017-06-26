@@ -20,7 +20,7 @@
 
 			<!-- -----------------여기에 컨텐츠 div넣으세요----------------- -->
 
-			<div class="blog-content">
+			<div class="home-content">
 				<div class="home-wrapper">
 					<div class="panel-group" id="accordion">
 

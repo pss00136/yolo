@@ -1,19 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<title>상품 상세보기 페이지</title>
 
 
 <!-- 추가 CSS -->
 <link href="/Yolo/css_yolo/cssView/comMarket/GoodsDetail.css" rel="stylesheet">
-
-</head>
-<body class="notransition">
+<link href="/Yolo/css/jquery-ui.css" rel="stylesheet">
+<link href="/Yolo/css_yolo/cssView/comMarket/modal.css" rel="stylesheet">
 
 			<!-- ------------------------------------------------------- -->
 			<!-- 본문내용 -->
@@ -184,45 +176,9 @@
 					</div>
 				</div>
 			</div>
-			
-			<!-- modal popup -->
-			<div class="modal fade" id="contactAgent" role="dialog" aria-labelledby="contactLabel" aria-hidden="true">
-	            <div class="modal-dialog">
-	                <div class="modal-content">
-	                    <div class="modal-header">
-	                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-	                    </div>
-	                    <div class="modal-body">
-	                        <form class="contactForm">
-	                            <div class="row">
-	                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 cfItem">
-	                                    <input type="text" placeholder="Name" class="form-control">
-	                                 </div>
-	                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 cfItem">
-	                                    <input type="text" placeholder="Email" class="form-control">
-	                                </div>
-	                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cfItem">
-	                                    <input type="text" placeholder="Subject" class="form-control">
-	                                </div>
-	                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cfItem">
-	                                    <textarea placeholder="Message" rows="3" class="form-control"></textarea>
-	                                </div>
-	                            </div>
-	                        </form>
-	                    </div>
-	                    <div class="modal-footer">
-	                        <a href="#" data-dismiss="modal" class="btn btn-round btn-o btn-gray">Close</a>
-	                        <a href="#" class="btn btn-round btn-green">Send message</a>
-	                    </div>
-	                </div>
-	            </div>
-	        </div>
-			
+	
 			<!-- ------------------------------------------------------- -->
+			
 
 
 <!-- 추가JS -->
-
-
-</body>
-</html>

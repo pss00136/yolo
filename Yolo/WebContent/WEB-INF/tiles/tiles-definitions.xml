@@ -36,6 +36,18 @@
  	<put-attribute name="title" value='YoloWowLotHost'></put-attribute>
  	<put-attribute name="body" value='/WEB-INF/views/{1}/{2}.jsp'></put-attribute>
  </definition>
+ 
+ <!-- modal Template -->
+ <definition name='modalTemplate' template="/WEB-INF/template/modal/template_modal.jsp">
+ 	<put-attribute name="header" value="/WEB-INF/template/default/header.jsp"></put-attribute>
+ 	<put-attribute name="menu" value="/WEB-INF/template/default/menu.jsp"></put-attribute>
+ 	<put-attribute name="footer" value="/WEB-INF/template/default/footer.jsp"></put-attribute>
+ 	<put-attribute name="modal" value="/WEB-INF/template/modal/modal_market.jsp"></put-attribute>
+ </definition>
+ 
+ <definition name='/*/*.modal' extends='modalTemplate'>
+ 	<put-attribute name="body" value='/WEB-INF/views/{1}/{2}.jsp'></put-attribute>
+ </definition>
 
 <!--  no template -->
 <definition name='noTemplate' template='/WEB-INF/template/default/noTiles.jsp'>
@@ -61,5 +73,7 @@
  	<put-attribute name="body" value='/WEB-INF/views/{1}/{2}/{3}.jsp'></put-attribute>
  </definition>
  
+ 
+
 
 </tiles-definitions>
