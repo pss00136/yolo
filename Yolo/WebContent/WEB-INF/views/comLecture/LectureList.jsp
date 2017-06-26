@@ -10,7 +10,7 @@
 			<div class="row bounds padding" >
 				<div class="col-md-12 col-xs-12" style="text-align:right;">
 					<div style="display:inline-block;">
-					<a href="LectureInput.lecture" class="btn btn-round btn-green ">세미나/강연 등록하기</a>
+					<a href="/Yolo/comLecture/LectureInput.lecture" class="btn btn-round btn-green ">세미나/강연 등록하기</a>
 					</div>
 				</div>				
 			</div>
@@ -25,7 +25,7 @@
 			<!-- 리스트 목록 -->
 			<div class="bounds padding">
 				<!-- 리스트 -->
-				<a href="LectureView.lecture" class="item zoom active">
+				<a href="/Yolo/comLecture/LectureView.lecture" class="item zoom active">
 					<div class="column">
 						<div class="image">
 							<img id="ctl00_body_rptProducts_ctl00_imgProduct"
@@ -50,7 +50,7 @@
 					</div>
 				</a><!-- 리스트의 끝 -->
 				<!-- 리스트 -->
-				<a href="LectureView.lecture" class="item zoom active">
+				<a href="/Yolo/comLecture/LectureView.lecture" class="item zoom active">
 					<div class="column">
 						<div class="image">
 							<img id="ctl00_body_rptProducts_ctl00_imgProduct"
@@ -75,7 +75,7 @@
 					</div>
 				</a><!-- 리스트의 끝 -->
 				<!-- 리스트 -->
-				<a href="LectureView.lecture" class="item zoom active">
+				<a href="/Yolo/comLecture/LectureView.lecture" class="item zoom active">
 					<div class="column">
 						<div class="image">
 							<img id="ctl00_body_rptProducts_ctl00_imgProduct"
@@ -100,7 +100,7 @@
 					</div>
 				</a><!-- 리스트의 끝 -->
 				<!-- 리스트 -->
-				<a href="LectureView.lecture" class="item zoom active">
+				<a href="/Yolo/comLecture/LectureView.lecture" class="item zoom active">
 					<div class="column">
 						<div class="image">
 							<img id="ctl00_body_rptProducts_ctl00_imgProduct"
