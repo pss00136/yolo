@@ -10,6 +10,6 @@ public class WishlistController {
 	@RequestMapping("mypage/fleaMarket/WishList.myinfo")
 	public String View(@PathVariable String url){
 		System.out.println("Wishlist"+url);
-		return "/mypage/"+url;
+		return "mypage/fleaMarket/WishList";
 	}
 }
