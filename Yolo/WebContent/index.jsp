@@ -67,61 +67,15 @@
 			</div><!-- 상단 메뉴 유저부분 끝 -->
 			<!-- 상단 메뉴 알림부분 -->
 			<div class="headerNotifyWraper">
-				<a href="message/MessageDetail.message" class="headerNotify dropdown-toggle"
-					data-toggle="dropdown"> <span class="notifyIcon icon-envelope"></span>
+				<a href="/Yolo/message/MessageDetail.message" class="headerNotify"><span class="notifyIcon icon-envelope"></span>
 					<span class="counter">5</span>
 				</a>
-				<div class="dropdown-menu pull-right notifyMenu" role="menu">
-					<div class="notifyHeader">
-						<span>Notifications</span> <a href="#"
-							class="notifySettings icon-settings"></a>
-						<div class="clearfix"></div>
-					</div>
-					<ul class="notifyList">
-						<li><a href="#"> <img class="avatar pull-left"
-								src="/Yolo/images/avatar-1.png" alt="John Smith">
-								<div class="pulse border-grey"></div>
-								<div class="notify pull-left">
-									<div class="notifyName">Sed ut perspiciatis unde</div>
-									<div class="notifyTime">5 minutes ago</div>
-								</div>
-								<div class="clearfix"></div>
-						</a></li>
-						<li><a href="#">
-								<div class="notifyRound notifyRound-red fa fa-envelope-o"></div>
-								<div class="pulse border-red"></div>
-								<div class="notify pull-left">
-									<div class="notifyName">Lorem Ipsum is simply dummy text</div>
-									<div class="notifyTime">20 minutes ago</div>
-								</div>
-								<div class="clearfix"></div>
-						</a></li>
-						<li><a href="#">
-								<div class="notifyRound notifyRound-yellow fa fa-heart-o"></div>
-								<div class="pulse border-yellow"></div>
-								<div class="notify pull-left">
-									<div class="notifyName">It is a long established fact</div>
-									<div class="notifyTime">2 hours ago</div>
-								</div>
-								<div class="clearfix"></div>
-						</a></li>
-						<li><a href="#">
-								<div class="notifyRound notifyRound-magenta fa fa-paper-plane-o"></div>
-								<div class="pulse border-magenta"></div>
-								<div class="notify pull-left">
-									<div class="notifyName">There are many variations</div>
-									<div class="notifyTime">1 day ago</div>
-								</div>
-								<div class="clearfix"></div>
-						</a></li>
-					</ul>
-					<a href="#" class="notifyAll">See All</a>
-				</div>
+				
 			</div><!-- 상단 메뉴 알림부분 끝 -->
 			<!-- 호스트센터 들어가기 -->
 			<div class="headerUserWraper">
-	<a href="host/HostMain.host" class="userHandler"><span class="icon-user-follow"></span></a> 
-			<a href="host/HostMain.host" id="hostcenter" class="headerUser btn btn-o btn-gray"> 
+	<a href="/Yolo/host/HostMain.host" class="userHandler"><span class="icon-user-follow"></span></a> 
+			<a href="/Yolo/host/HostMain.host" id="hostcenter" class="headerUser btn btn-o btn-gray"> 
 			호스트 센터
 		</a>
 	
@@ -144,20 +98,20 @@
 				<!-- 네비게이션 메뉴 -->
 				<ul>
 					<li>
-						<a href="lot/LotList.lot"><span class="navIcon icon-compass"></span>
+						<a href="/Yolo/lot/LotList.lot"><span class="navIcon icon-compass"></span>
 						<span class="navLabel">공간찾기</span></a>
 					</li>
 					<li>
-						<a href="club/ClubList.club"><span class="navIcon fa fa-group"></span>
+						<a href="/Yolo/club/ClubList.club"><span class="navIcon fa fa-group"></span>
 						<span class="navLabel">모임찾기</span></a>
 					</li>
 					<li class="hasSub"><a href="#"><span
 							class="navIcon fa fa-globe"></span><span class="navLabel">커뮤니티</span><span
 							class="fa fa-angle-left arrowRight"></span></a>
 						<ul>
-							<li><a href="comLecture/LectureList.lecture">세미나/강연</a></li>
-							<li><a href="comMarket/FleaList.market">플리마켓</a></li>
-							<li><a href="comShare/ShareList.share">공간 쉐어링</a></li>
+							<li><a href="/Yolo/comLecture/LectureList.lecture">세미나/강연</a></li>
+							<li><a href="/Yolo/comMarket/FleaList.market">플리마켓</a></li>
+							<li><a href="/Yolo/comShare/ShareList.share">공간 쉐어링</a></li>
 						</ul>
 					</li>
 					<li class="hasSub"><a href="#">
@@ -166,20 +120,20 @@
 						<span class="fa fa-angle-left arrowRight"></span></a>
 						<ul>
 							<li class="align-center"><h5 style="color:#fff;">신청현황</h5></li>
-							<li><a href="mypage/appStatus/appliedLot.myinfo">예약공간보기</a></li>
-							<li><a href="mypage/appStatus/appliedClub.myinfo">참여모임보기</a></li>
-							<li><a href="mypage/appStatus/InterestList.myinfo">관심리스트</a></li>
+							<li><a href="/Yolo/mypage/appStatus/appliedLot.myinfo">예약공간보기</a></li>
+							<li><a href="/Yolo/mypage/appStatus/appliedClub.myinfo">참여모임보기</a></li>
+							<li><a href="/Yolo/mypage/appStatus/InterestList.myinfo">관심리스트</a></li>
 							<li class="align-center"><h5 style="color:#fff;">플리마켓</h5></li>
-							<li><a href="mypage/fleaMarket/WishList.myinfo">찜목록</a></li>
-							<li><a href="mypage/fleaMarket/State.myinfo">주문현황</a></li>				
+							<li><a href="/Yolo/mypage/fleaMarket/WishList.myinfo">찜목록</a></li>
+							<li><a href="/Yolo/mypage/fleaMarket/State.myinfo">주문현황</a></li>				
 							<li class="align-center"><h5 style="color:#fff;">나의 등록글</h5></li>
-							<li><a href="mypage/myReg/ClubMyList.myreg">나의 모임</a></li>
-							<li><a href="mypage/myReg/MarketMyList.myreg">나의 플리마켓</a></li>
-							<li><a href="mypage/myReg/LectureMyList.myreg">나의 세미나/강연</a></li>
-							<li><a href="mypage/myReg/ShareMyList.myreg">나의 쉐어링</a></li>				
+							<li><a href="/Yolo/mypage/myReg/ClubMyList.myreg">나의 모임</a></li>
+							<li><a href="/Yolo/mypage/myReg/MarketMyList.myreg">나의 플리마켓</a></li>
+							<li><a href="/Yolo/mypage/myReg/LectureMyList.myreg">나의 세미나/강연</a></li>
+							<li><a href="/Yolo/mypage/myReg/ShareMyList.myreg">나의 쉐어링</a></li>				
 							<li class="align-center"><h5 style="color:#fff;">정보수정</h5></li>
-							<li><a href="mypage/info/MyInfoModify.myinfo">개인정보수정</a></li>
-							<li><a href="mypage/info/MyInfoModify.myinfo">비밀번호변경</a></li>				
+							<li><a href="/Yolo/mypage/info/MyInfoModify.myinfo">개인정보수정</a></li>
+							<li><a href="/Yolo/mypage/info/MyInfoModify.myinfo">비밀번호변경</a></li>				
 						</ul>
 					</li>			
 		
@@ -337,8 +291,8 @@
 						<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 							<div class="osLight footer-header">Company</div>
 							<ul class="footer-nav pb20">
-								<li><a href="footermenu/aboutUs.main">About US</a></li>
-								<li><a href="footermenu/QnA.main">Q&A</a></li>
+								<li><a href="/Yolo/footermenu/aboutUs.main">About US</a></li>
+								<li><a href="/Yolo/footermenu/QnA.main">Q&A</a></li>
 							</ul>
 						</div>
 			

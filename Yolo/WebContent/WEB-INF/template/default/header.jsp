@@ -94,8 +94,8 @@
 	</div><!-- 상단 메뉴 알림부분 끝 -->
 			<!-- 호스트센터 들어가기 -->
 			<div class="headerUserWraper">
-	<a href="host/HostMain.host" class="userHandler"><span class="icon-user-follow"></span></a> 
-			<a href="host/HostMain.host" class="headerUser btn btn-o btn-gray"> 
+	<a href="/Yolo/host/HostMain.host" class="userHandler"><span class="icon-user-follow"></span></a> 
+			<a href="/Yolo/host/HostMain.host" class="headerUser btn btn-o btn-gray"> 
 			호스트 센터
 		</a>
 	
