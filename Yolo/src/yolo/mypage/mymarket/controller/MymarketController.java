@@ -15,6 +15,6 @@ public class MymarketController {
 	@RequestMapping("mypage/myReg/GoodsMyList.myreg")
 	public String goodsmylist(){
 		
-		return "mypage/myReg/GoodsMyList";
+		return "/mypage/myReg/GoodsMyList";
 	}
 }

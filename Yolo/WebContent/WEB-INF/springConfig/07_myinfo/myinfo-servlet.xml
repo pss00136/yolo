@@ -9,4 +9,5 @@
 	<context:component-scan base-package="yolo.mypage.appliedclub"></context:component-scan>
 	<context:component-scan base-package="yolo.mypage.orderstatus"></context:component-scan>
 	<context:component-scan base-package="yolo.mypage.wishlist"></context:component-scan>
+	<context:component-scan base-package="yolo.mypage.info"></context:component-scan>
 </beans>

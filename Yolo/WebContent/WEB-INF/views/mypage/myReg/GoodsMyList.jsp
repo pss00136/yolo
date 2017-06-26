@@ -187,4 +187,4 @@
 
 
 			<!-- ------------------------------------------------------- -->
-	
+	<script src="/Yolo/js/home.js" type="text/javascript"></script>

@@ -1,38 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<title>MypageInput.jsp</title>
-
-<link href="/Yolo/css/font-awesome.css" rel="stylesheet">
-<link href="/Yolo/css/simple-line-icons.css" rel="stylesheet">
-<link href="/Yolo/css/jquery-ui.css" rel="stylesheet">
-<link href="/Yolo/css/datepicker.css" rel="stylesheet">
-<link href="/Yolo/css/fileinput.min.css" rel="stylesheet">
-<link href="/Yolo/css/bootstrap.css" rel="stylesheet">
-<link href="/Yolo/css/app.css" rel="stylesheet">
 
 <!-- 추가 css -->
 <link href="/Yolo/css_yolo/cssView/MyPage/mypage.css" rel="stylesheet">
-
-</head>
-
-<body class="notransition">
-
-	<!-- Header -->
-	<%@include file="/view/common/header.jsp"%>
-
-	<!-- Content -->
-	<div id="wrapper" class="full">
-		<div id="content" class="max">
-
+<script type="text/javascript" src='/Yolo/js_yolo/host/hostregister.js'></script>
 			<!-------- -------개인정보 수정하기 ------------------------>
-			<div class="home-wrapper">
+			<div class="home-wrapper info">
 
 				<h4
 					style="text-align: center; margin-bottom: 30px; border-bottom: 1px solid silver; padding-bottom: 10px;">MY
@@ -125,75 +98,4 @@
 				</div>
 			</div>
 			<!---------------개인정보  수정하기 끝 ------------------------>
-
-
-		</div>
-		<!-- content 끝 -->
-
-		<!-- Footer -->
-
-
-
-
-	</div>
-	<div class="clearfix"></div>
-
-
-
-
-
-
-
-
-
-	<script src="/Yolo/js/json2.js"></script>
-	<script src="/Yolo/js/jquery-2.1.1.min.js"></script>
-	<script src="/Yolo/js/underscore.js"></script>
-	<script src="/Yolo/js/moment-2.5.1.js"></script>
-	<script src="/Yolo/js/jquery-ui.min.js"></script>
-	<script src="/Yolo/js/jquery-ui-touch-punch.js"></script>
-	<script src="/Yolo/js/jquery.placeholder.js"></script>
-	<script src="/Yolo/js/bootstrap.js"></script>
-	<script src="/Yolo/js/jquery.touchSwipe.min.js"></script>
-	<script src="/Yolo/js/jquery.slimscroll.min.js"></script>
-	<script src="/Yolo/js/jquery.visible.js"></script>
-	<script
-		src="http://maps.googleapis.com/maps/api/js?sensor=true&amp;libraries=geometry&amp;libraries=places"
-		type="text/javascript"></script>
-	<script src="/Yolo/js/infobox.js"></script>
-	<script src="/Yolo/js/clndr.js"></script>
-	<script src="/Yolo/js/jquery.tagsinput.min.js"></script>
-<!-- 	<script src="/Yolo/js/bootstrap-datepicker.js"></script> -->
-	<script src="/Yolo/js/fileinput.min.js"></script>
-	<script src="/Yolo/js/app.js"></script>
-	<script src="/Yolo/js/calendar.js"></script>
-
-	<!-- 추가 js  -->
-	<script src="/Yolo/js/home.js" type="text/javascript"></script>
-	<script type="text/javascript" src='/Yolo/js_yolo/host/hostregister.js'></script>
-	<script type="text/javascript">
-	$(function(){
-		$("#datepicker").datepicker();
-	});
 	
-	$.datepicker.setDefaults({
-	    dateFormat: 'yy/mm/dd',
-	    prevText: '이전 달',
-	    nextText: '다음 달',
-	    monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-	    monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-	    dayNames: ['일', '월', '화', '수', '목', '금', '토'],
-	    dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
-	    dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
-	    showMonthAfterYear: true,
-	    yearSuffix: '년'
-	});
-	
-	</script>
-
-
-
-
-
-</body>
-</html>

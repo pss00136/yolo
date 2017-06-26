@@ -11,7 +11,7 @@
 
 <!-- Custom CSS -->
 <link href="/Yolo/css_yolo/cssView/MyClub/portfolio-item.css"
-	rel="stylesheet">
+	rel="stylesh`et">
 <link href="/Yolo/css/font-awesome.css" rel="stylesheet">
 <link href="/Yolo/css/simple-line-icons.css" rel="stylesheet">
 <link href="/Yolo/css/jquery-ui.css" rel="stylesheet">
