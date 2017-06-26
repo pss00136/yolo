@@ -1,38 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-        <title>ClubList</title>
-
-        <link href="/Yolo/css/font-awesome.css" rel="stylesheet">
-        <link href="/Yolo/css/simple-line-icons.css" rel="stylesheet">
-        <link href="/Yolo/css/jquery-ui.css" rel="stylesheet">
-        <link href="/Yolo/css/datepicker.css" rel="stylesheet">
-        <link href="/Yolo/css/bootstrap.css" rel="stylesheet">
-        <link href="/Yolo/css/app.css" rel="stylesheet">
-        
-        <!-- 추가 속성 CSS -->
+    
+ <!-- 추가 속성 CSS -->
         <link href="/Yolo/css_yolo/cssView/Club/clubList.css" rel="stylesheet">
-
-        <!--[if lt IE 9]>
-          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
-    </head>
-    <body class="notransition">
-
-		<!-- Header -->
-		<%@include file="/view/common/header_noMap.jsp"%>
-		
-		
-        <!-- Content -->
-
-        <div id="wrapper">
-            <div id="content">
+            
+            <!-- 카테고리 선택 바 -->
                 <div class="filter">
                     <h1 class="osLight">Filter your results</h1>
                     <a href="#" class="handleFilter"><span class="icon-equalizer"></span></a>
@@ -41,6 +13,8 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 formItem">
                                 <div class="formField">
+                                
+                                <!-- 카테고리별 -->
                                    <label>Category</label>
                                    <div class="checkbox custom-checkbox">
 	                                   <div class="row">
@@ -115,6 +89,8 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 formItem">
                                 <div class="formField">
+                                
+                                <!-- 지역별 -->
                                    <label>Location</label>
                                    <div class="checkbox custom-checkbox">
 	                                   <div class="row">
@@ -189,11 +165,11 @@
                     </form>
                 </div>
                 
-                
+                <!-- 검색결과 모임리스트 -->
                 <div class="resultsList">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                            <a href="ClubDetail.jsp" class="card">
+                            <a href="ClubDetail.club" class="card">
                                 <div class="figure">
                                     <img src="/Yolo/images_yolo/club/wooden1.jpg" alt="image">
                                     <div class="figCaption">
@@ -214,7 +190,7 @@
                             </a>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                            <a href="ClubDetail.jsp" class="card">
+                            <a href="ClubDetail.club" class="card">
                                 <div class="figure">
                                     <img src="/Yolo/images_yolo/club/network.jpg" alt="image">
                                     <div class="figCaption">
@@ -235,7 +211,7 @@
                             </a>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                            <a href="ClubDetail.jsp" class="card">
+                            <a href="ClubDetail.club" class="card">
                                 <div class="figure">
                                     <img src="/Yolo/images_yolo/club/diet.jpg" alt="image">
                                     <div class="figCaption">
@@ -256,7 +232,7 @@
                             </a>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                            <a href="ClubDetail.jsp" class="card">
+                            <a href="ClubDetail.club" class="card">
                                 <div class="figure">
                                     <img src="/Yolo/images_yolo/club/diet.jpg" alt="image">
                                     <div class="figCaption">
@@ -455,21 +431,3 @@
                         <li><a href="#"><span class="fa fa-angle-right"></span></a></li>
                     </ul>
                 </div>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-
-        <script src="/Yolo/js/jquery-2.1.1.min.js"></script>
-        <script src="/Yolo/js/jquery-ui.min.js"></script>
-        <script src="/Yolo/js/jquery-ui-touch-punch.js"></script>
-        <script src="/Yolo/js/jquery.placeholder.js"></script>
-        <script src="/Yolo/js/bootstrap.js"></script>
-        <script src="/Yolo/js/jquery.touchSwipe.min.js"></script>
-        <script src="/Yolo/js/jquery.slimscroll.min.js"></script>
-        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBh5iJnCJrUZugfpicBfCPv3pCLOTat6gM&sensor=true&amp;libraries=geometry&amp;libraries=places" type="text/javascript"></script>
-        <script src="/Yolo/js/infobox.js"></script>
-        <script src="/Yolo/js/jquery.tagsinput.min.js"></script>
-        <script src="/Yolo/js/bootstrap-datepicker.js"></script>
-        <script src="/Yolo/js/app.js" type="text/javascript"></script>
-    </body>
-</html>
