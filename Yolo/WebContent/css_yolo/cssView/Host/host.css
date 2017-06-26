@@ -43,13 +43,14 @@
 	position: relative;
 }
 
-.img-circle {
+.img-circle { 	 
 	border-radius: 50%;
 }
 
 #imagePreview {
 	display: block;
 	width: 100%;
+	height: 30%;
 }
 
 #panel {

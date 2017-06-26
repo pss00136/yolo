@@ -1,9 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	
+<link href="/Yolo/css_yolo/cssView/Host/host.css" rel="stylesheet">
+
 <!-- Header -->
 <div id="header">
 	<div class="logo">
-		<a href="/Yolo/view/common/main.jsp"> <span
+		<a href="common/main.main"> <span
 			class="fa fa-home marker"></span> <span class="logoText">Host
 				Center</span>
 		</a>
@@ -43,10 +46,11 @@
 
 	<!-------------- 호스트 등록하기 ---------->
 	<div class="headerUserWraper">
-	<a href="#" class="userHandler dropdown-toggle" data-toggle="dropdown"><span
-			class="icon-user-follow"></span></a> 
-			<a href="#" class="headerUser dropdown-toggle" data-toggle="dropdown"> 
-			<button id="hostregister" class="btn btn-o btn-gray">호스트 등록하기</button>
+	<a href="HostInput.host" class="userHandler" ><span
+			class="icon-user-follow"></span>
+			</a> 
+			<a id="hostregister"  href="HostInput.host" class="headerUser btn btn-o btn-gray"> 
+			호스트 등록하기
 		</a>
 	
 	</div>

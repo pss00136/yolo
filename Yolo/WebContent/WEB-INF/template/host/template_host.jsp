@@ -15,8 +15,9 @@
         <link href="<c:url value='/css/fileinput.min.css'/>" rel="stylesheet">
         <link href="<c:url value='/css/bootstrap.css'/>" rel="stylesheet">
         <link href="<c:url value='/css/fullscreen-slider.css'/>" rel="stylesheet">
-        <link href="<c:url value='/Yolo/css/app.css'/>" rel="stylesheet">
         <link href="<c:url value='/css_yolo/cssView/common/app.css'/>" rel="stylesheet">
+        
+		<link href="<c:url value='/css_yolo/cssView/Host/host.css'/>" rel="stylesheet">
 		<style type="text/css">
 		#footer_title{
 			font-size: 3em;
@@ -48,9 +49,7 @@
 		        <tiles:insertAttribute name="body" />
 		        
 		        <!-- ------------------------------------------------------- -->
-		        <!-- Footer -->
-		        <tiles:insertAttribute name="footer" />
-		        
+		       
             </div>
             <div class="clearfix"></div>
         </div>
