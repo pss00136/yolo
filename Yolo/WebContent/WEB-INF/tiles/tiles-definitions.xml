@@ -31,7 +31,7 @@
  	<put-attribute name="menu" value="/WEB-INF/template/default/menu.jsp"></put-attribute>
  </definition>
  
- <definition name='*/*.nomap' extends='nofooterTemplate'>
+ <definition name='/*/*.nofooter' extends='nofooterTemplate'>
  	<put-attribute name="title" value='YoloWowLot'></put-attribute>
  	<put-attribute name="body" value='/WEB-INF/views/{1}/{2}.jsp'></put-attribute>
  </definition>
@@ -42,7 +42,7 @@
  	<put-attribute name="menu" value="/WEB-INF/template/default/menu.jsp"></put-attribute>
  </definition>
  
- <definition name='*/*.nomap' extends='nomapTemplate'>
+ <definition name='/*/*.nomap' extends='nomapTemplate'>
  	<put-attribute name="title" value='YoloWowLot'></put-attribute>
  	<put-attribute name="body" value='/WEB-INF/views/{1}/{2}.jsp'></put-attribute>
  </definition>
@@ -53,7 +53,7 @@
  	<put-attribute name="menu" value="/WEB-INF/template/host/menu_host.jsp"></put-attribute>
  </definition>
  
- <definition name='*/*.host' extends='hostTemplate'>
+ <definition name='/*/*.host' extends='hostTemplate'>
  	<put-attribute name="title" value='YoloWowLotHost'></put-attribute>
  	<put-attribute name="body" value='/WEB-INF/views/{1}/{2}.jsp'></put-attribute>
  </definition>
