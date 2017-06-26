@@ -27,7 +27,8 @@
     
 		<!-- Header -->
 		<%@include file="/view/common/header.jsp"%>
-
+		
+		
         <!-- Content -->
         <div id="wrapper" class="full">
             <div id="mapView" class="min"><div class="mapPlaceholder"><span class="fa fa-spin fa-spinner"></span> Loading map...</div></div>
@@ -44,6 +45,7 @@
 				</ul>
 				<div class="home-caption">
 					<div class="home-title">인생을 즐길 줄 아는 사람들을 위한 공간 공유 서비스</div>
+					<a href='common/main.main'>홈이지</a><br/>
 					<div class="home-subtitle">Yolo Wow Lot</div>
 				</div>
 				<!-- 통합 검색 폼 -->
