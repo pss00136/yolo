@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 public class WishlistController {
 	@RequestMapping("mypage/fleaMarket/WishList.myinfo")
-	public String View(@PathVariable String url){
+	public String View(String url){
 		System.out.println("Wishlist"+url);
-		return "mypage/fleaMarket/WishList";
+		return "/mypage/fleaMarket/WishList";
 	}
 }
