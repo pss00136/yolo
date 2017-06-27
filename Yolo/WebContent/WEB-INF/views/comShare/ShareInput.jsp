@@ -3,6 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <link href="<c:url value='/css_yolo/cssView/comMarket/2_fleaInput.css'/>" rel="stylesheet">
+
 			<!-- ------------------------------------------------------- -->
 			<div class="tables">
 				<div class="row">
@@ -12,12 +13,12 @@
 								<h4>쉐어링 정보 입력</h4>
 								<hr>
 								<br />
-								<form class="form-horizontal" role="form">
+								<form name="form" method="post" action="ShareList.share" class="form-horizontal" role="form">
 									<!-- 마켓 명 입력 -->
 									<div class="form-group">
 										<label class="col-sm-2 control-label">글 제목</label>
 										<div class="col-sm-9">
-											<input class="form-control input-sm" type="text">
+											<input name="slTitle" id="slTitle" class="form-control input-sm" type="text">
 										</div>
 									</div>
 									<!-- 예약공간선택 -->
@@ -45,14 +46,12 @@
 									<div class="form-group">
 										<label class="col-sm-2 control-label">글내용</label>
 										<div class="col-sm-9">
-											<textarea class="form-control" rows="15"></textarea>
+											<textarea name="slContent" id="slContent" class="form-control" rows="15"></textarea>
 										</div>
 									</div>
 									<!-- 상품 등록하러 가기 버튼 -->
-									<div id="nextbtn" class="col-md-12">
-										<a href="ShareList.share">
-											<button class="col-xs-offset-4 col-xs-4 col-sm-offset-4 col-sm-4 col-md-offset-4 col-md-4 col-lg-offset-4 col-lg-4 btn btn-round btn-o btn-green">쉐어링 등록하기</button>
-										</a>
+									<div  class="col-md-12">
+										<button id ="share_check_ok" class="col-xs-offset-4 col-xs-4 col-sm-offset-4 col-sm-4 col-md-offset-4 col-md-4 col-lg-offset-4 col-lg-4 btn btn-round btn-o btn-green">쉐어링 등록하기</button>
 									</div>
 
 								</form>
