@@ -3,7 +3,7 @@
 
 <!-- 추가 속성 CSS -->
 <link href="/Yolo/css_yolo/cssView/comMarket/fleaList.css" rel="stylesheet">
-
+<link href="/Yolo/css_yolo/cssView/comMarket/listfont.css" rel="stylesheet">
 
 
 <!-- -----------------여기에 컨텐츠 div넣으세요----------------- -->
@@ -20,6 +20,12 @@
 
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+				<div class="row bounds padding" >			
+					<div class="col-md-12 col-xs-12">
+						<h1 id="lec_title" class="tab center bounds padding active">플리마켓/상품</h1>	
+					</div>
+				</div>
+				<hr id="lec_title_hr" class="bounds padding"/>			
 				<!-- 플리마켓, 상품 Tab  -->
 				<div class="tabsContainer">
 					<ul class="nav nav-tabs nav-justified" role="tablist">						
