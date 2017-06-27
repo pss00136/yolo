@@ -1,5 +1,10 @@
 package yolo.market.service;
 
-public interface MarketService {
 
+import yolo.market.dao.MarketDAO;
+import yolo.market.dto.MarketVO;
+
+public interface MarketService {
+	
+	public void MarketInput(MarketVO vo);
 }

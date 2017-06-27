@@ -2,14 +2,14 @@ package yolo.market.dto;
 
 public class GoodsVO {
 
-	private String gNum; 		 /* 상품 번호 */
-	private String fNum; 		 /* 플리마켓 번호 */
-	private String gTitle; 		 /* 상품명 */
-	private int gPrice;			 /* 상품가격 */
-	private String gType;		 /* 상품종류 */
-	private int gStock;  		 /* 재고량 */
-	private String gOption;	  	 /* 옵션 */
-	private int gWish;  		 /* 찜수 */
+	private String g_num; 		 /* 상품 번호 */
+	private String f_num; 		 /* 플리마켓 번호 */
+	private String g_title; 	 /* 상품명 */
+	private int g_price;		 /* 상품가격 */
+	private String g_type;		 /* 상품종류 */
+	private int g_stock;  		 /* 재고량 */
+	private String g_option;  	 /* 옵션 */
+	private int g_wish;  		 /* 찜수 */
 	
 	
 	
@@ -17,72 +17,119 @@ public class GoodsVO {
 	public GoodsVO(){
 		
 	}
-	
-	public GoodsVO(String gNum, String fNum, String gTitle, int gPrice, String gType, int gStock, String gOption,
-			int gWish) {
+
+	public GoodsVO(String g_num, String f_num, String g_title, int g_price, String g_type, int g_stock, String g_option,
+			int g_wish) {
 		super();
-		this.gNum = gNum;
-		this.fNum = fNum;
-		this.gTitle = gTitle;
-		this.gPrice = gPrice;
-		this.gType = gType;
-		this.gStock = gStock;
-		this.gOption = gOption;
-		this.gWish = gWish;
+		this.g_num = g_num;
+		this.f_num = f_num;
+		this.g_title = g_title;
+		this.g_price = g_price;
+		this.g_type = g_type;
+		this.g_stock = g_stock;
+		this.g_option = g_option;
+		this.g_wish = g_wish;
 	}
 	/* Constructor end */
 	
 	
 	
 	/* Setter & Getter */
-	public String getgNum() {
-		return gNum;
+	public String getG_num() {
+		return g_num;
 	}
-	public void setgNum(String gNum) {
-		this.gNum = gNum;
+
+
+
+	public void setG_num(String g_num) {
+		this.g_num = g_num;
 	}
-	public String getfNum() {
-		return fNum;
+
+
+
+	public String getF_num() {
+		return f_num;
 	}
-	public void setfNum(String fNum) {
-		this.fNum = fNum;
+
+
+
+	public void setF_num(String f_num) {
+		this.f_num = f_num;
 	}
-	public String getgTitle() {
-		return gTitle;
+
+
+
+	public String getG_title() {
+		return g_title;
 	}
-	public void setgTitle(String gTitle) {
-		this.gTitle = gTitle;
+
+
+
+	public void setG_title(String g_title) {
+		this.g_title = g_title;
 	}
-	public int getgPrice() {
-		return gPrice;
+
+
+
+	public int getG_price() {
+		return g_price;
 	}
-	public void setgPrice(int gPrice) {
-		this.gPrice = gPrice;
+
+
+
+	public void setG_price(int g_price) {
+		this.g_price = g_price;
 	}
-	public String getgType() {
-		return gType;
+
+
+
+	public String getG_type() {
+		return g_type;
 	}
-	public void setgType(String gType) {
-		this.gType = gType;
+
+
+
+	public void setG_type(String g_type) {
+		this.g_type = g_type;
 	}
-	public int getgStock() {
-		return gStock;
+
+
+
+	public int getG_stock() {
+		return g_stock;
 	}
-	public void setgStock(int gStock) {
-		this.gStock = gStock;
+
+
+
+	public void setG_stock(int g_stock) {
+		this.g_stock = g_stock;
 	}
-	public String getgOption() {
-		return gOption;
+
+
+
+	public String getG_option() {
+		return g_option;
 	}
-	public void setgOption(String gOption) {
-		this.gOption = gOption;
+
+
+
+	public void setG_option(String g_option) {
+		this.g_option = g_option;
 	}
-	public int getgWish() {
-		return gWish;
+
+
+
+	public int getG_wish() {
+		return g_wish;
 	}
-	public void setgWish(int gWish) {
-		this.gWish = gWish;
+
+
+
+	public void setG_wish(int g_wish) {
+		this.g_wish = g_wish;
 	}
+
+
 	
 	
 	
