@@ -15,112 +15,110 @@ public class UserVO {
 //			U_IPATH VARCHAR(255), /* 회원 이미지 위치 */
 //			U_INAME VARCHAR(100) /* 회원 이미지 이름 */
 //		);
-	private String uId;  /* 아이디 */
-	private String uPass; /* 패스워드 */
-	private String uName;  /* 이름 */
-	private String uTel;  /* 전화번호 */
-	private String uEmail;  /* 이메일 */
-	private String uBirth;  /* 생년월일 */
-	private String uAddr;  /* 주소 */
-	private String uIpath;  /* 회원 이미지 위치 */
-	private String uIname;  /* 회원 이미지 이름 */
+	private String u_id;  /* 아이디 */
+	private String u_pass; /* 패스워드 */
+	private String u_name;  /* 이름 */
+	private String u_tel;  /* 전화번호 */
+	private String u_email;  /* 이메일 */
+	private String u_birth;  /* 생년월일 */
+	private String u_addr;  /* 주소 */
+	private String u_ipath;  /* 회원 이미지 위치 */
+	private String u_iname;  /* 회원 이미지 이름 */
 	
 	/* Constructor */
-	
-	public UserVO(String uId, String uPass, String uName, String uTel, String uEmail, String uBirth, String uAddr,
-			String uIpath, String uIname) {
+	public UserVO(String u_id, String u_pass, String u_name, String u_tel, String u_email, String u_birth,
+			String u_addr, String u_ipath, String u_iname) {
 		super();
-		this.uId = uId;
-		this.uPass = uPass;
-		this.uName = uName;
-		this.uTel = uTel;
-		this.uEmail = uEmail;
-		this.uBirth = uBirth;
-		this.uAddr = uAddr;
-		this.uIpath = uIpath;
-		this.uIname = uIname;
+		this.u_id = u_id;
+		this.u_pass = u_pass;
+		this.u_name = u_name;
+		this.u_tel = u_tel;
+		this.u_email = u_email;
+		this.u_birth = u_birth;
+		this.u_addr = u_addr;
+		this.u_ipath = u_ipath;
+		this.u_iname = u_iname;
 	}
-
+	
 	public UserVO() {
 		super();
 	}
+
 	/* Constructor end*/
-	
-	
+
 	/* Setter & Getter*/
-
-	public String getuId() {
-		return uId;
-	}
-
-	public void setuId(String uId) {
-		this.uId = uId;
-	}
-
-	public String getuPass() {
-		return uPass;
-	}
-
-	public void setuPass(String uPass) {
-		this.uPass = uPass;
-	}
-
-	public String getuName() {
-		return uName;
-	}
-
-	public void setuName(String uName) {
-		this.uName = uName;
-	}
-
-	public String getuTel() {
-		return uTel;
-	}
-
-	public void setuTel(String uTel) {
-		this.uTel = uTel;
-	}
-
-	public String getuEmail() {
-		return uEmail;
-	}
-
-	public void setuEmail(String uEmail) {
-		this.uEmail = uEmail;
-	}
-
-	public String getuBirth() {
-		return uBirth;
-	}
-
-	public void setuBirth(String uBirth) {
-		this.uBirth = uBirth;
-	}
-
-	public String getuAddr() {
-		return uAddr;
-	}
-
-	public void setuAddr(String uAddr) {
-		this.uAddr = uAddr;
-	}
-
-	public String getuIpath() {
-		return uIpath;
-	}
-
-	public void setuIpath(String uIpath) {
-		this.uIpath = uIpath;
-	}
-
-	public String getuIname() {
-		return uIname;
-	}
-
-	public void setuIname(String uIname) {
-		this.uIname = uIname;
+	public String getU_id() {
+		return u_id;
 	}
 	
+	public void setU_id(String u_id) {
+		this.u_id = u_id;
+	}
+	
+	public String getU_pass() {
+		return u_pass;
+	}
+	
+	public void setU_pass(String u_pass) {
+		this.u_pass = u_pass;
+	}
+	
+	public String getU_name() {
+		return u_name;
+	}
+	
+	public void setU_name(String u_name) {
+		this.u_name = u_name;
+	}
+	
+	public String getU_tel() {
+		return u_tel;
+	}
+	
+	public void setU_tel(String u_tel) {
+		this.u_tel = u_tel;
+	}
+	
+	public String getU_email() {
+		return u_email;
+	}
+	
+	public void setU_email(String u_email) {
+		this.u_email = u_email;
+	}
+	
+	public String getU_birth() {
+		return u_birth;
+	}
+	
+	public void setU_birth(String u_birth) {
+		this.u_birth = u_birth;
+	}
+	
+	public String getU_addr() {
+		return u_addr;
+	}
+	
+	public void setU_addr(String u_addr) {
+		this.u_addr = u_addr;
+	}
+	
+	public String getU_ipath() {
+		return u_ipath;
+	}
+	
+	public void setU_ipath(String u_ipath) {
+		this.u_ipath = u_ipath;
+	}
+	
+	public String getU_iname() {
+		return u_iname;
+	}
+	
+	public void setU_iname(String u_iname) {
+		this.u_iname = u_iname;
+	}
+
 	/* Setter & Getter End*/
 	
 }

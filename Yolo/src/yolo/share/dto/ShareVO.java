@@ -14,78 +14,91 @@ public class ShareVO {
 //	);
 	
 	
-		private String slNum; /* 공유 번호 */
-		private String uId; /* 아이디 */
-		private String slTitle;  /* 공유 제목 */
-		private String slContent;  /* 공유 내용 */
-		private String slTime;/* 공유 시간 */
-		private String slRsvnum; /* 예약 번호 */
-		private String slRegdate;  /* 등록일 */
+		private String sl_num; /* 공유 번호 */
+		private String u_id; /* 아이디 */
+		private String sl_title;  /* 공유 제목 */
+		private String sl_content;  /* 공유 내용 */
+		private String sl_time;/* 공유 시간 */
+		private String sl_rsvnum; /* 예약 번호 */
+		private String sl_regdate;  /* 등록일 */
 		
 //		Constructor
 		
-		
-		public ShareVO(String slNum, String uId, String slTitle, String slContent, String slTime, String slRsvnum,
-		String slRegdate) {
+		public ShareVO(String sl_num, String u_id, String sl_title, String sl_content, String sl_time, String sl_rsvnum,
+				String sl_regdate) {
 			super();
-			this.slNum = slNum;
-			this.uId = uId;
-			this.slTitle = slTitle;
-			this.slContent = slContent;
-			this.slTime = slTime;
-			this.slRsvnum = slRsvnum;
-			this.slRegdate = slRegdate;
+			this.sl_num = sl_num;
+			this.u_id = u_id;
+			this.sl_title = sl_title;
+			this.sl_content = sl_content;
+			this.sl_time = sl_time;
+			this.sl_rsvnum = sl_rsvnum;
+			this.sl_regdate = sl_regdate;
 		}
 		
 		public ShareVO() {
 			super();
 		}
-		
-//		Constructor END
 
-//		Setter & Getter
-		public String getSlNum() {
-			return slNum;
+//		Constructor END
+		
+		//		Setter & Getter
+		public String getSl_num() {
+			return sl_num;
 		}
-		public void setSlNum(String slNum) {
-			this.slNum = slNum;
+
+		public void setSl_num(String sl_num) {
+			this.sl_num = sl_num;
 		}
-		public String getuId() {
-			return uId;
+
+		public String getU_id() {
+			return u_id;
 		}
-		public void setuId(String uId) {
-			this.uId = uId;
+
+		public void setU_id(String u_id) {
+			this.u_id = u_id;
 		}
-		public String getSlTitle() {
-			return slTitle;
+
+		public String getSl_title() {
+			return sl_title;
 		}
-		public void setSlTitle(String slTitle) {
-			this.slTitle = slTitle;
+
+		public void setSl_title(String sl_title) {
+			this.sl_title = sl_title;
 		}
-		public String getSlContent() {
-			return slContent;
+
+		public String getSl_content() {
+			return sl_content;
 		}
-		public void setSlContent(String slContent) {
-			this.slContent = slContent;
+
+		public void setSl_content(String sl_content) {
+			this.sl_content = sl_content;
 		}
-		public String getSlTime() {
-			return slTime;
+
+		public String getSl_time() {
+			return sl_time;
 		}
-		public void setSlTime(String slTime) {
-			this.slTime = slTime;
+
+		public void setSl_time(String sl_time) {
+			this.sl_time = sl_time;
 		}
-		public String getSlRsvnum() {
-			return slRsvnum;
+
+		public String getSl_rsvnum() {
+			return sl_rsvnum;
 		}
-		public void setSlRsvnum(String slRsvnum) {
-			this.slRsvnum = slRsvnum;
+
+		public void setSl_rsvnum(String sl_rsvnum) {
+			this.sl_rsvnum = sl_rsvnum;
 		}
-		public String getSlRegdate() {
-			return slRegdate;
+
+		public String getSl_regdate() {
+			return sl_regdate;
 		}
-		public void setSlRegdate(String slRegdate) {
-			this.slRegdate = slRegdate;
+
+		public void setSl_regdate(String sl_regdate) {
+			this.sl_regdate = sl_regdate;
 		}
+		
 		
 //		Setter & Getter End
 

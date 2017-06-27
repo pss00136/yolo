@@ -2,77 +2,78 @@ package yolo.lot.dto;
 
 public class PostscriptVO {
 
-	private String psNum;       /* 후기번호 */
-	private String bId;         /* 예약 번호 */
-	private String psContent;   /* 후기내용 */
-	private String psRegdate;   /* 등록일 */
-	private int psStar;         /* 별점 */
-	
-	
+	private String ps_num;        /* 후기번호 */
+	private String b_id;          /* 예약 번호 */
+	private String ps_content;    /* 후기내용 */
+	private String ps_regdate;    /* 등록일 */
+	private int ps_star;          /* 별점 */
+
 	/* Constructor */
 	PostscriptVO(){}
 
 
-	public PostscriptVO(String psNum, String bId, String psContent, String psRegdate, int psStar) {
+	public PostscriptVO(String ps_num, String b_id, String ps_content, String ps_regdate, int ps_star) {
 		super();
-		this.psNum = psNum;
-		this.bId = bId;
-		this.psContent = psContent;
-		this.psRegdate = psRegdate;
-		this.psStar = psStar;
+		this.ps_num = ps_num;
+		this.b_id = b_id;
+		this.ps_content = ps_content;
+		this.ps_regdate = ps_regdate;
+		this.ps_star = ps_star;
 	}
 	/* End of Constructor */
-    
+
 	/* Getters and Setters */
-	public String getPsNum() {
-		return psNum;
+	public String getPs_num() {
+		return ps_num;
 	}
 
 
-	public void setPsNum(String psNum) {
-		this.psNum = psNum;
+	public void setPs_num(String ps_num) {
+		this.ps_num = ps_num;
 	}
 
 
-	public String getbId() {
-		return bId;
+	public String getB_id() {
+		return b_id;
 	}
 
 
-	public void setbId(String bId) {
-		this.bId = bId;
+	public void setB_id(String b_id) {
+		this.b_id = b_id;
 	}
 
 
-	public String getPsContent() {
-		return psContent;
+	public String getPs_content() {
+		return ps_content;
 	}
 
 
-	public void setPsContent(String psContent) {
-		this.psContent = psContent;
+	public void setPs_content(String ps_content) {
+		this.ps_content = ps_content;
 	}
 
 
-	public String getPsRegdate() {
-		return psRegdate;
+	public String getPs_regdate() {
+		return ps_regdate;
 	}
 
 
-	public void setPsRegdate(String psRegdate) {
-		this.psRegdate = psRegdate;
+	public void setPs_regdate(String ps_regdate) {
+		this.ps_regdate = ps_regdate;
 	}
 
 
-	public int getPsStar() {
-		return psStar;
+	public int getPs_star() {
+		return ps_star;
 	}
 
 
-	public void setPsStar(int psStar) {
-		this.psStar = psStar;
+	public void setPs_star(int ps_star) {
+		this.ps_star = ps_star;
 	}
-	
-	
-	
+
+
+
+
+
 }

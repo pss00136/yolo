@@ -8,49 +8,48 @@ public class WishlisgVO {
 //		U_ID VARCHAR(20), /* 아이디 */
 //		W_SELNUM VARCHAR(100) /* 선택번호 */
 //	);
-	private String wNum;  /* 찜번호 */
-	private String uId;  /* 아이디 */
-	private String wSelnum;  /* 선택번호 */
+	private String w_num;  /* 찜번호 */
+	private String u_id;  /* 아이디 */
+	private String w_selnum;  /* 선택번호 */
 	
-	
-	
-	/* Constructor */
-	public WishlisgVO(String wNum, String uId, String wSelnum) {
-		super();
-		this.wNum = wNum;
-		this.uId = uId;
-		this.wSelnum = wSelnum;
-	}
 
+	/* Constructor */
+	public WishlisgVO(String w_num, String u_id, String w_selnum) {
+		super();
+		this.w_num = w_num;
+		this.u_id = u_id;
+		this.w_selnum = w_selnum;
+	}
+	
 	public WishlisgVO() {
 		super();
 	}
+
 	/* Constructor end*/
-	
-	
+
 	/* Setter & Getter*/
-	public String getwNum() {
-		return wNum;
+	public String getW_num() {
+		return w_num;
 	}
-
-	public void setwNum(String wNum) {
-		this.wNum = wNum;
+	
+	public void setW_num(String w_num) {
+		this.w_num = w_num;
 	}
-
-	public String getuId() {
-		return uId;
+	
+	public String getU_id() {
+		return u_id;
 	}
-
-	public void setuId(String uId) {
-		this.uId = uId;
+	
+	public void setU_id(String u_id) {
+		this.u_id = u_id;
 	}
-
-	public String getwSelnum() {
-		return wSelnum;
+	
+	public String getW_selnum() {
+		return w_selnum;
 	}
-
-	public void setwSelnum(String wSelnum) {
-		this.wSelnum = wSelnum;
+	
+	public void setW_selnum(String w_selnum) {
+		this.w_selnum = w_selnum;
 	}
 	
 	/* Setter & Getter end*/
