@@ -1,7 +1,10 @@
 package yolo.lecture.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import yolo.lecture.dto.LectureVO;
 
 /*
 * @클래스명: LectureController
@@ -16,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class LectureController {
 	
 	/* 멤버필드 */
-	//이 한줄은 지우고 여기에 변수들을 써주세요
+
 	
 	/*
 	* @메소드명: lecList
@@ -51,6 +54,12 @@ public class LectureController {
 	*/
 	@RequestMapping("/LectureInput.lecture")
 	public String lecInput(){
+		return "/comLecture/LectureInput";
+	}
+	
+	@RequestMapping("/LectureInputOk.lecture")
+	public String lecInputOk( LectureVO vo ){
+		System.out.println( vo.getlTitle() );
 		return "/comLecture/LectureInput";
 	}
 

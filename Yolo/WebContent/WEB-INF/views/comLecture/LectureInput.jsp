@@ -10,7 +10,7 @@
 				<h4 style="text-align: center; margin-bottom: 30px; border-bottom: 1px solid silver; padding-bottom: 10px;">세미나/강연 등록하기</h4>
 				<!-- 세미나/강연 정보 입력 -->
 				<div class="panel-heading">세미나/강연 정보 입력</div>
-				<form class="form-horizontal" role="form">
+				<form class="form-horizontal" role="form" method="post" action="LectureInputOk.lecture">
 					<div class="panel-body">
 						<!-- 입력 폼 -->
 							<!-- 제목 입력 -->
@@ -139,7 +139,7 @@
 							<div class="form-group">
 								<label class="col-sm-2 control-label">대표이미지</label>
 								<div class="col-sm-8">
-									<input type="file" class="file" multiple data-show-upload="false" data-show-caption="false" data-show-remove="false" accept="image/jpeg,image/png" data-browse-class="btn btn-o btn-default" data-browse-label="이미지 첨부하기">
+									<input type="file" name="limgName" class="file" multiple data-show-upload="false" data-show-caption="false" data-show-remove="false" accept="image/jpeg,image/png" data-browse-class="btn btn-o btn-default" data-browse-label="이미지 첨부하기">
 									<p class="help-block">대표 이미지를 첨부해주세요.</p>
 								</div>
 							</div>
@@ -160,7 +160,7 @@
 								<label class="col-sm-2 control-label">증빙서류 제출</label>
 								<div class="col-sm-8">
 									<p class="help-block">예시) 경력증명서</p>
-									<input type="file" class="file" multiple data-show-upload="false" data-show-caption="false" 
+									<input type="file" name="lfileName1" class="file" multiple data-show-upload="false" data-show-caption="false" 
 									data-show-remove="false" accept="*" data-browse-class="btn btn-o btn-default" data-browse-label="파일 첨부하기">
 								</div>
 							</div>					
@@ -169,7 +169,7 @@
 								<label class="col-sm-2 control-label">제안서 제출</label>
 								<div class="col-sm-8">
 									<p class="help-block">양식 다운로드 : <a href="#">문서파일.hwp</a></p>
-									<input type="file" class="file" multiple data-show-upload="false" data-show-caption="false" 
+									<input type="file" name="lfileName2" class="file" multiple data-show-upload="false" data-show-caption="false" 
 									data-show-remove="false" accept="*" data-browse-class="btn btn-o btn-default" data-browse-label="파일 첨부하기">
 								</div>
 							</div>				
@@ -177,7 +177,7 @@
 						<div>
 							<div style="text-align: center;">
 								<div style="display: inline-block;">
-									<button id="btn_modify" class="btn btn-o btn-green">신청하기</button>
+									<button type="submit" id="btn_modify" class="btn btn-o btn-green">신청하기</button>
 								</div>
 							</div>					
 						</div>				
