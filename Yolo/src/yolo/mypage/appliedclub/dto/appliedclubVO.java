@@ -1,6 +1,7 @@
 package yolo.mypage.appliedclub.dto;
 
-public class appliedclubVO {
+public class appliedclubVO {//signClubVO와 같은 인자값
+	
 //	SC_NUM VARCHAR(100) NOT NULL, /* 신청 번호 */
 //	C_NUM VARCHAR(100), /* 모임 번호 */
 //	U_ID VARCHAR(20), /* 아이디 */
