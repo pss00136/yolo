@@ -3,47 +3,54 @@ package yolo.lecture.dto;
 public class LectimageVO {
 	
 	/* 세미나&강연 이미지 */
-	private String limgNum; /* 이미지 번호 */
-	private String lNum; 	/* 세미나 번호 */
-	private String limgPath; /* 이미지 위치 */
-	private String limgName; /* 이미지 이름 */
+	private String limg_num; /* 이미지 번호 */
+	private String l_num; 	/* 세미나 번호 */
+	private String limg_path; /* 이미지 위치 */
+	private String limg_name; /* 이미지 이름 */
 	
 	/* Constructor */
 	public LectimageVO(){}
-	
-	public LectimageVO(String limgNum, String lNum, String limgPath, String limgName) {
+
+	public LectimageVO(String limg_num, String l_num, String limg_path, String limg_name) {
 		super();
-		this.limgNum = limgNum;
-		this.lNum = lNum;
-		this.limgPath = limgPath;
-		this.limgName = limgName;
+		this.limg_num = limg_num;
+		this.l_num = l_num;
+		this.limg_path = limg_path;
+		this.limg_name = limg_name;
 	}
 	/* Constructor END */
-	
+
 	/* Setter & Getter */
-	public String getLimgNum() {
-		return limgNum;
+	public String getLimg_num() {
+		return limg_num;
 	}
-	public void setLimgNum(String limgNum) {
-		this.limgNum = limgNum;
+
+	public void setLimg_num(String limg_num) {
+		this.limg_num = limg_num;
 	}
-	public String getlNum() {
-		return lNum;
+
+	public String getL_num() {
+		return l_num;
 	}
-	public void setlNum(String lNum) {
-		this.lNum = lNum;
+
+	public void setL_num(String l_num) {
+		this.l_num = l_num;
 	}
-	public String getLimgPath() {
-		return limgPath;
+
+	public String getLimg_path() {
+		return limg_path;
 	}
-	public void setLimgPath(String limgPath) {
-		this.limgPath = limgPath;
+
+	public void setLimg_path(String limg_path) {
+		this.limg_path = limg_path;
 	}
-	public String getLimgName() {
-		return limgName;
+
+	public String getLimg_name() {
+		return limg_name;
 	}
-	public void setLimgName(String limgName) {
-		this.limgName = limgName;
+
+	public void setLimg_name(String limg_name) {
+		this.limg_name = limg_name;
 	}
 	/* Setter & Getter END */
 

@@ -1,5 +1,7 @@
 package yolo.lecture.service;
 
-public interface LectureService {
+import yolo.lecture.dto.LectureVO;
 
+public interface LectureService {
+	public void lectureInput( LectureVO vo );
 }
