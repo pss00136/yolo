@@ -76,5 +76,7 @@
         
         <!-- 추가  -->
 		<script src=" <c:url value='/Yolo/js/home.js'/> " type="text/javascript"></script>
+		<script type="text/javascript" src='/Yolo/js_yolo/host/hostregister.js'></script>
+		
 </body>
 </html>

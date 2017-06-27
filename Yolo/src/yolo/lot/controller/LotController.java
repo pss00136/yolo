@@ -23,6 +23,19 @@ public class LotController {
 			return "/lot/LotList";
 		}
 	   
+	   @RequestMapping("/LotView.lot")
+		public String lotview(){
+			return "/lot/LotView";
+		}
+	   
+	   
+	   @RequestMapping("/LotReserve.lot")
+		public String lotreserve(){
+			return "/lot/LotReserve";
+		}
+	   
+	   
+	   
      
     	   
 }

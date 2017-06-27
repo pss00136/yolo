@@ -98,7 +98,7 @@
                     <h3>공간검색결과</h3>
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                            <a href="single.html" class="card">
+                            <a href="/Yolo/lot/LotView.lot" class="card">
                                 <div class="figure">
                                     <img src="/Yolo/images_yolo/lot/1.PNG" alt="image">
                                     <div class="figCaption">
