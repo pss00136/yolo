@@ -61,31 +61,31 @@
 										</button>
 										<!-- 시간 선택 -->
 										<ul id="lec_timeselec" class="dropdown-menu dropdown-select">
-											<li class="active"><input type="radio" name="ds1" checked="checked"><a href="#">오전 12:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오전 12:30</a></li><li><input type="radio" name="ds1"><a href="#">오전 01:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오전 01:30</a></li><li><input type="radio" name="ds1"><a href="#">오전 02:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오전 02:30</a></li><li><input type="radio" name="ds1"><a href="#">오전 03:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오전 03:30</a></li><li><input type="radio" name="ds1"><a href="#">오전 04:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오전 04:30</a></li><li><input type="radio" name="ds1"><a href="#">오전 05:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오전 05:30</a></li><li><input type="radio" name="ds1"><a href="#">오전 06:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오전 06:30</a></li><li><input type="radio" name="ds1"><a href="#">오전 07:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오전 07:30</a></li><li><input type="radio" name="ds1"><a href="#">오전 08:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오전 08:30</a></li><li><input type="radio" name="ds1"><a href="#">오전 09:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오전 09:30</a></li><li><input type="radio" name="ds1"><a href="#">오전 10:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오전 10:30</a></li><li><input type="radio" name="ds1"><a href="#">오전 11:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오전 11:30</a></li><li><input type="radio" name="ds1"><a href="#">오후 12:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오후 12:30</a></li><li><input type="radio" name="ds1"><a href="#">오후 01:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오후 01:30</a></li><li><input type="radio" name="ds1"><a href="#">오후 02:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오후 02:30</a></li><li><input type="radio" name="ds1"><a href="#">오후 03:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오후 03:30</a></li><li><input type="radio" name="ds1"><a href="#">오후 04:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오후 04:30</a></li><li><input type="radio" name="ds1"><a href="#">오후 05:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오후 05:30</a></li><li><input type="radio" name="ds1"><a href="#">오후 06:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오후 06:30</a></li><li><input type="radio" name="ds1"><a href="#">오후 07:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오후 07:30</a></li><li><input type="radio" name="ds1"><a href="#">오후 08:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오후 08:30</a></li><li><input type="radio" name="ds1"><a href="#">오후 09:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오후 09:30</a></li><li><input type="radio" name="ds1"><a href="#">오후 10:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오후 10:30</a></li><li><input type="radio" name="ds1"><a href="#">오후 11:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오후 11:30</a></li>										
+											<li class="active"><input type="radio" name="ds1" checked="checked" value="00:00"><a href="#">오전 12:00</a></li>
+											<li><input type="radio" name="ds1" value="00:30"><a href="#">오전 12:30</a></li><li><input type="radio" name="ds1" value="01:00"><a href="#">오전 01:00</a></li>
+											<li><input type="radio" name="ds1" value="01:30"><a href="#">오전 01:30</a></li><li><input type="radio" name="ds1" value="02:00"><a href="#">오전 02:00</a></li>
+											<li><input type="radio" name="ds1" value="02:30"><a href="#">오전 02:30</a></li><li><input type="radio" name="ds1" value="03:00"><a href="#">오전 03:00</a></li>
+											<li><input type="radio" name="ds1" value="03:30"><a href="#">오전 03:30</a></li><li><input type="radio" name="ds1" value="04:00"><a href="#">오전 04:00</a></li>
+											<li><input type="radio" name="ds1" value="04:30"><a href="#">오전 04:30</a></li><li><input type="radio" name="ds1" value="05:00"><a href="#">오전 05:00</a></li>
+											<li><input type="radio" name="ds1" value="05:30"><a href="#">오전 05:30</a></li><li><input type="radio" name="ds1" value="06:00"><a href="#">오전 06:00</a></li>
+											<li><input type="radio" name="ds1" value="06:30"><a href="#">오전 06:30</a></li><li><input type="radio" name="ds1" value="07:00"><a href="#">오전 07:00</a></li>
+											<li><input type="radio" name="ds1" value="07:30"><a href="#">오전 07:30</a></li><li><input type="radio" name="ds1" value="08:00"><a href="#">오전 08:00</a></li>
+											<li><input type="radio" name="ds1" value="08:30"><a href="#">오전 08:30</a></li><li><input type="radio" name="ds1" value="09:00"><a href="#">오전 09:00</a></li>
+											<li><input type="radio" name="ds1" value="09:30"><a href="#">오전 09:30</a></li><li><input type="radio" name="ds1" value="10:00"><a href="#">오전 10:00</a></li>
+											<li><input type="radio" name="ds1" value="10:30"><a href="#">오전 10:30</a></li><li><input type="radio" name="ds1" value="11:00"><a href="#">오전 11:00</a></li>
+											<li><input type="radio" name="ds1" value="11:30"><a href="#">오전 11:30</a></li><li><input type="radio" name="ds1" value="12:00"><a href="#">오후 12:00</a></li>
+											<li><input type="radio" name="ds1" value="12:30"><a href="#">오후 12:30</a></li><li><input type="radio" name="ds1" value="13:00"><a href="#">오후 01:00</a></li>
+											<li><input type="radio" name="ds1" value="13:30"><a href="#">오후 01:30</a></li><li><input type="radio" name="ds1" value="14:00"><a href="#">오후 02:00</a></li>
+											<li><input type="radio" name="ds1" value="14:30"><a href="#">오후 02:30</a></li><li><input type="radio" name="ds1" value="15:00"><a href="#">오후 03:00</a></li>
+											<li><input type="radio" name="ds1" value="15:30"><a href="#">오후 03:30</a></li><li><input type="radio" name="ds1" value="16:00"><a href="#">오후 04:00</a></li>
+											<li><input type="radio" name="ds1" value="16:30"><a href="#">오후 04:30</a></li><li><input type="radio" name="ds1" value="17:00"><a href="#">오후 05:00</a></li>
+											<li><input type="radio" name="ds1" value="17:30"><a href="#">오후 05:30</a></li><li><input type="radio" name="ds1" value="18:00"><a href="#">오후 06:00</a></li>
+											<li><input type="radio" name="ds1" value="18:30"><a href="#">오후 06:30</a></li><li><input type="radio" name="ds1" value="19:00"><a href="#">오후 07:00</a></li>
+											<li><input type="radio" name="ds1" value="19:30"><a href="#">오후 07:30</a></li><li><input type="radio" name="ds1" value="20:00"><a href="#">오후 08:00</a></li>
+											<li><input type="radio" name="ds1" value="20:30"><a href="#">오후 08:30</a></li><li><input type="radio" name="ds1" value="21:00"><a href="#">오후 09:00</a></li>
+											<li><input type="radio" name="ds1" value="21:30"><a href="#">오후 09:30</a></li><li><input type="radio" name="ds1" value="22:00"><a href="#">오후 10:00</a></li>
+											<li><input type="radio" name="ds1" value="22:30"><a href="#">오후 10:30</a></li><li><input type="radio" name="ds1" value="23:00"><a href="#">오후 11:00</a></li>
+											<li><input type="radio" name="ds1" value="23:30"><a href="#">오후 11:30</a></li>										
 										</ul>
 									</div>
 								</div>
@@ -106,31 +106,31 @@
 										</button>
 										<!-- 시간 선택 -->
 										<ul id="lec_timeselec" class="dropdown-menu dropdown-select">
-											<li class="active"><input type="radio" name="ds1" checked="checked"><a href="#">오전 12:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오전 12:30</a></li><li><input type="radio" name="ds1"><a href="#">오전 01:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오전 01:30</a></li><li><input type="radio" name="ds1"><a href="#">오전 02:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오전 02:30</a></li><li><input type="radio" name="ds1"><a href="#">오전 03:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오전 03:30</a></li><li><input type="radio" name="ds1"><a href="#">오전 04:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오전 04:30</a></li><li><input type="radio" name="ds1"><a href="#">오전 05:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오전 05:30</a></li><li><input type="radio" name="ds1"><a href="#">오전 06:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오전 06:30</a></li><li><input type="radio" name="ds1"><a href="#">오전 07:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오전 07:30</a></li><li><input type="radio" name="ds1"><a href="#">오전 08:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오전 08:30</a></li><li><input type="radio" name="ds1"><a href="#">오전 09:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오전 09:30</a></li><li><input type="radio" name="ds1"><a href="#">오전 10:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오전 10:30</a></li><li><input type="radio" name="ds1"><a href="#">오전 11:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오전 11:30</a></li><li><input type="radio" name="ds1"><a href="#">오후 12:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오후 12:30</a></li><li><input type="radio" name="ds1"><a href="#">오후 01:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오후 01:30</a></li><li><input type="radio" name="ds1"><a href="#">오후 02:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오후 02:30</a></li><li><input type="radio" name="ds1"><a href="#">오후 03:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오후 03:30</a></li><li><input type="radio" name="ds1"><a href="#">오후 04:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오후 04:30</a></li><li><input type="radio" name="ds1"><a href="#">오후 05:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오후 05:30</a></li><li><input type="radio" name="ds1"><a href="#">오후 06:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오후 06:30</a></li><li><input type="radio" name="ds1"><a href="#">오후 07:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오후 07:30</a></li><li><input type="radio" name="ds1"><a href="#">오후 08:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오후 08:30</a></li><li><input type="radio" name="ds1"><a href="#">오후 09:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오후 09:30</a></li><li><input type="radio" name="ds1"><a href="#">오후 10:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오후 10:30</a></li><li><input type="radio" name="ds1"><a href="#">오후 11:00</a></li>
-											<li><input type="radio" name="ds1"><a href="#">오후 11:30</a></li>										
+											<li class="active"><input type="radio" name="ds1" checked="checked" value="00:00"><a href="#">오전 12:00</a></li>
+											<li><input type="radio" name="ds1" value="00:30"><a href="#">오전 12:30</a></li><li><input type="radio" name="ds1" value="01:00"><a href="#">오전 01:00</a></li>
+											<li><input type="radio" name="ds1" value="01:30"><a href="#">오전 01:30</a></li><li><input type="radio" name="ds1" value="02:00"><a href="#">오전 02:00</a></li>
+											<li><input type="radio" name="ds1" value="02:30"><a href="#">오전 02:30</a></li><li><input type="radio" name="ds1" value="03:00"><a href="#">오전 03:00</a></li>
+											<li><input type="radio" name="ds1" value="03:30"><a href="#">오전 03:30</a></li><li><input type="radio" name="ds1" value="04:00"><a href="#">오전 04:00</a></li>
+											<li><input type="radio" name="ds1" value="04:30"><a href="#">오전 04:30</a></li><li><input type="radio" name="ds1" value="05:00"><a href="#">오전 05:00</a></li>
+											<li><input type="radio" name="ds1" value="05:30"><a href="#">오전 05:30</a></li><li><input type="radio" name="ds1" value="06:00"><a href="#">오전 06:00</a></li>
+											<li><input type="radio" name="ds1" value="06:30"><a href="#">오전 06:30</a></li><li><input type="radio" name="ds1" value="07:00"><a href="#">오전 07:00</a></li>
+											<li><input type="radio" name="ds1" value="07:30"><a href="#">오전 07:30</a></li><li><input type="radio" name="ds1" value="08:00"><a href="#">오전 08:00</a></li>
+											<li><input type="radio" name="ds1" value="08:30"><a href="#">오전 08:30</a></li><li><input type="radio" name="ds1" value="09:00"><a href="#">오전 09:00</a></li>
+											<li><input type="radio" name="ds1" value="09:30"><a href="#">오전 09:30</a></li><li><input type="radio" name="ds1" value="10:00"><a href="#">오전 10:00</a></li>
+											<li><input type="radio" name="ds1" value="10:30"><a href="#">오전 10:30</a></li><li><input type="radio" name="ds1" value="11:00"><a href="#">오전 11:00</a></li>
+											<li><input type="radio" name="ds1" value="11:30"><a href="#">오전 11:30</a></li><li><input type="radio" name="ds1" value="12:00"><a href="#">오후 12:00</a></li>
+											<li><input type="radio" name="ds1" value="12:30"><a href="#">오후 12:30</a></li><li><input type="radio" name="ds1" value="13:00"><a href="#">오후 01:00</a></li>
+											<li><input type="radio" name="ds1" value="13:30"><a href="#">오후 01:30</a></li><li><input type="radio" name="ds1" value="14:00"><a href="#">오후 02:00</a></li>
+											<li><input type="radio" name="ds1" value="14:30"><a href="#">오후 02:30</a></li><li><input type="radio" name="ds1" value="15:00"><a href="#">오후 03:00</a></li>
+											<li><input type="radio" name="ds1" value="15:30"><a href="#">오후 03:30</a></li><li><input type="radio" name="ds1" value="16:00"><a href="#">오후 04:00</a></li>
+											<li><input type="radio" name="ds1" value="16:30"><a href="#">오후 04:30</a></li><li><input type="radio" name="ds1" value="17:00"><a href="#">오후 05:00</a></li>
+											<li><input type="radio" name="ds1" value="17:30"><a href="#">오후 05:30</a></li><li><input type="radio" name="ds1" value="18:00"><a href="#">오후 06:00</a></li>
+											<li><input type="radio" name="ds1" value="18:30"><a href="#">오후 06:30</a></li><li><input type="radio" name="ds1" value="19:00"><a href="#">오후 07:00</a></li>
+											<li><input type="radio" name="ds1" value="19:30"><a href="#">오후 07:30</a></li><li><input type="radio" name="ds1" value="20:00"><a href="#">오후 08:00</a></li>
+											<li><input type="radio" name="ds1" value="20:30"><a href="#">오후 08:30</a></li><li><input type="radio" name="ds1" value="21:00"><a href="#">오후 09:00</a></li>
+											<li><input type="radio" name="ds1" value="21:30"><a href="#">오후 09:30</a></li><li><input type="radio" name="ds1" value="22:00"><a href="#">오후 10:00</a></li>
+											<li><input type="radio" name="ds1" value="22:30"><a href="#">오후 10:30</a></li><li><input type="radio" name="ds1" value="23:00"><a href="#">오후 11:00</a></li>
+											<li><input type="radio" name="ds1" value="23:30"><a href="#">오후 11:30</a></li>											
 										</ul>
 									</div>
 								</div>
