@@ -59,6 +59,7 @@ public class LectureController {
 	
 	@RequestMapping("/LectureInputOk.lecture")
 	public String lecInputOk( LectureVO vo ){
+		System.out.println("인풋오케이~");
 		System.out.println( vo.getlTitle() );
 		return "/comLecture/LectureInput";
 	}
