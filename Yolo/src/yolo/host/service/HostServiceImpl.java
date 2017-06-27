@@ -14,7 +14,7 @@ public class HostServiceImpl implements HostService {
 
 	
 	@Override
-	public void hostinput(HostinfoVO hvo) {
+	public void hostinputok(HostinfoVO hvo) {
 		
 		
 	}
