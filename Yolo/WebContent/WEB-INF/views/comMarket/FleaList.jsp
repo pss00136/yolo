@@ -22,107 +22,16 @@
 			<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
 				<!-- 플리마켓, 상품 Tab  -->
 				<div class="tabsContainer">
-					<ul class="nav nav-tabs nav-justified" role="tablist">
-						<li class="active"><a href="#home" role="tab"
-							data-toggle="tab"><span class="icon-home"></span> FLEA MARKET</a></li>
-						<li><a href="#profile" role="tab" data-toggle="tab"><span
-								class="icon-handbag"></span> GOODS</a></li>
+					<ul class="nav nav-tabs nav-justified" role="tablist">						
+						<li class="active"><a href="#profile" role="tab" data-toggle="tab">
+							<span class="icon-handbag"></span> GOODS</a></li>
+						<li><a href="#home" role="tab" data-toggle="tab">
+							<span class="icon-home"></span>FLEA MARKET</a></li>
 					</ul>
 
 					<div class="tab-content">
-						<!-- 플리마켓 content -->
-						<div class="tab-pane fade in active" id="home">
-							<div class="row">
-								<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-									<div class="article">
-										<a href="/Yolo/comMarket/MarketDetail.market" class="image"><img
-											src="/Yolo/images_yolo/comMarket/dress1.PNG" alt="image"></a>
-										<div class="article-category">
-											<a href="MarketDetail.market" class="text-green">Architecture</a>
-										</div>
-										<h4 id="oslight" class="osLight">
-											<a href="MarketDetail.market">Subtly Twisting Geometry
-												Inserted in Raw Nature</a>
-										</h4>
-										<p>Lorem Ipsum is simply dummy text of the printing and
-											typesetting industry. Lorem Ipsum has been the industry's
-											standard dummy text ever since the 1500s, when an unknown
-											printer took a galley of type and scrambled it to make a type
-											specimen book.</p>
-										<div class="footer">
-											<a>John Smith</a>, <a href="#">Sep 4, 2014</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-									<div class="article">
-										<a href="blog-post.html" class="image"><img
-											src="/Yolo/images_yolo/comMarket/dress6.PNG" alt="image"></a>
-										<div class="article-category">
-											<a href="#" class="text-green">Architecture</a>
-										</div>
-										<h4 class="osLight">
-											<a href="blog-post.html">Provocative Home Design
-												Re-Shaping The Landscape</a>
-										</h4>
-										<div class="footer">
-											<a href="#">Jane Smith</a>, <a href="#">Sep 3, 2014</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-									<div class="article">
-										<a href="blog-post.html" class="image"><img
-											src="/Yolo/images_yolo/comMarket/dress2.PNG" alt="image"></a>
-										<div class="article-category">
-											<a href="#" class="text-green">Apartments</a>
-										</div>
-										<h4 class="osLight">
-											<a href="blog-post.html">Luminous 3 Bedroom Apartment
-												Flaunting Modern Style</a>
-										</h4>
-										<div class="footer">
-											<a href="#">John Smith</a>, <a href="#">Sep 3, 2014</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-									<div class="article">
-										<a href="blog-post.html" class="image"><img
-											src="/Yolo/images_yolo/comMarket/dress3.PNG" alt="image"></a>
-										<div class="article-category">
-											<a href="#" class="text-green">Living Room</a>
-										</div>
-										<h4 class="osLight">
-											<a href="blog-post.html">How Does A Designer Home Look
-												Like</a>
-										</h4>
-										<p>Lorem Ipsum is simply dummy text of the printing and
-											typesetting industry. Lorem Ipsum has been the industry's
-											standard dummy text ever since the 1500s, when an unknown
-											printer took a galley of type and scrambled it to make a type
-											specimen book.</p>
-										<div class="footer">
-											<a href="#">John Smith</a>, <a href="#">Sep 4, 2014</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="blog-pagination">
-								<a href="#" class="btn btn-o btn-round btn-green"><span
-									class="fa fa-angle-left"></span> Older Articles</a> <a href="#"
-									class="btn btn-o btn-round btn-green pull-right">Newer
-									Articles <span class="fa fa-angle-right"></span>
-								</a>
-								<div class="clearfix"></div>
-							</div>
-						</div>
-						<!-- / 플리마켓 content -->
-
 						<!-- 상품 content -->
-						<div class="tab-pane fade" id="profile">
+						<div class="tab-pane fade in active" id="profile">
 
 							<label><h5>Category</h5></label>
 							<div class="checkbox custom-checkbox">
@@ -272,6 +181,97 @@
 							</div>
 						</div>
 						<!-- / 상품 content -->
+						
+						<!-- 플리마켓 content -->
+						<div class="tab-pane fade" id="home">
+							<div class="row">
+								<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+									<div class="article">
+										<a href="/Yolo/comMarket/MarketDetail.market" class="image"><img
+											src="/Yolo/images_yolo/comMarket/dress1.PNG" alt="image"></a>
+										<div class="article-category">
+											<a href="MarketDetail.market" class="text-green">Architecture</a>
+										</div>
+										<h4 id="oslight" class="osLight">
+											<a href="MarketDetail.market">Subtly Twisting Geometry
+												Inserted in Raw Nature</a>
+										</h4>
+										<p>Lorem Ipsum is simply dummy text of the printing and
+											typesetting industry. Lorem Ipsum has been the industry's
+											standard dummy text ever since the 1500s, when an unknown
+											printer took a galley of type and scrambled it to make a type
+											specimen book.</p>
+										<div class="footer">
+											<a>John Smith</a>, <a href="#">Sep 4, 2014</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+									<div class="article">
+										<a href="blog-post.html" class="image"><img
+											src="/Yolo/images_yolo/comMarket/dress6.PNG" alt="image"></a>
+										<div class="article-category">
+											<a href="#" class="text-green">Architecture</a>
+										</div>
+										<h4 class="osLight">
+											<a href="blog-post.html">Provocative Home Design
+												Re-Shaping The Landscape</a>
+										</h4>
+										<div class="footer">
+											<a href="#">Jane Smith</a>, <a href="#">Sep 3, 2014</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+									<div class="article">
+										<a href="blog-post.html" class="image"><img
+											src="/Yolo/images_yolo/comMarket/dress2.PNG" alt="image"></a>
+										<div class="article-category">
+											<a href="#" class="text-green">Apartments</a>
+										</div>
+										<h4 class="osLight">
+											<a href="blog-post.html">Luminous 3 Bedroom Apartment
+												Flaunting Modern Style</a>
+										</h4>
+										<div class="footer">
+											<a href="#">John Smith</a>, <a href="#">Sep 3, 2014</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+									<div class="article">
+										<a href="blog-post.html" class="image"><img
+											src="/Yolo/images_yolo/comMarket/dress3.PNG" alt="image"></a>
+										<div class="article-category">
+											<a href="#" class="text-green">Living Room</a>
+										</div>
+										<h4 class="osLight">
+											<a href="blog-post.html">How Does A Designer Home Look
+												Like</a>
+										</h4>
+										<p>Lorem Ipsum is simply dummy text of the printing and
+											typesetting industry. Lorem Ipsum has been the industry's
+											standard dummy text ever since the 1500s, when an unknown
+											printer took a galley of type and scrambled it to make a type
+											specimen book.</p>
+										<div class="footer">
+											<a href="#">John Smith</a>, <a href="#">Sep 4, 2014</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="blog-pagination">
+								<a href="#" class="btn btn-o btn-round btn-green"><span
+									class="fa fa-angle-left"></span> Older Articles</a> <a href="#"
+									class="btn btn-o btn-round btn-green pull-right">Newer
+									Articles <span class="fa fa-angle-right"></span>
+								</a>
+								<div class="clearfix"></div>
+							</div>
+						</div>
+						<!-- / 플리마켓 content -->
 					</div>
 
 				</div>
