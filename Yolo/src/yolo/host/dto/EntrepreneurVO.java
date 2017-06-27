@@ -1,116 +1,136 @@
 package yolo.host.dto;
 
 public class EntrepreneurVO {
-	
-	private String eNum;     /* 사업자 번호 */
-	private String hNum;     /* 호스트번호 */
-	private String eType;    /* 사업자 분류 */
-	private String eTitle;   /* 사업자 상호명 */
-	private String eAddr;    /* 사업장 주소 */
-	private String eRnum;    /* 사업자 등록번호 */
-	private String eFname;   /* 사업자 등록증 파일이름 */
-	private String eFpath;   /* 사업자 등록증 파일위치 */
-	
-	
+
+
+	private String e_num;    /* 사업자 번호 */
+	private String h_num;    /* 호스트번호 */
+	private String e_type;   /* 사업자 분류 */
+	private String e_title;  /* 사업자 상호명 */
+	private String e_addr;   /* 사업장 주소 */
+	private String e_rnum;   /* 사업자 등록번호 */
+	private String e_fname;  /* 사업자 등록증 파일이름 */
+	private String e_fpath;  /* 사업자 등록증 파일위치 */
+
 	/* Constructor */
 	public EntrepreneurVO(){}
 
 
-	public EntrepreneurVO(String eNum, String hNum, String eType, String eTitle, String eAddr, String eRnum,
-			String eFname, String eFpath) {
-		super();
-		this.eNum = eNum;
-		this.hNum = hNum;
-		this.eType = eType;
-		this.eTitle = eTitle;
-		this.eAddr = eAddr;
-		this.eRnum = eRnum;
-		this.eFname = eFname;
-		this.eFpath = eFpath;
-	}
+	
 	/* End of Constructor */
 
-	   /* Getters and Setters */
-	public String geteNum() {
-		return eNum;
+	public EntrepreneurVO(String e_num, String h_num, String e_type, String e_title, String e_addr, String e_rnum,
+			String e_fname, String e_fpath) {
+		super();
+		this.e_num = e_num;
+		this.h_num = h_num;
+		this.e_type = e_type;
+		this.e_title = e_title;
+		this.e_addr = e_addr;
+		this.e_rnum = e_rnum;
+		this.e_fname = e_fname;
+		this.e_fpath = e_fpath;
 	}
 
 
-	public void seteNum(String eNum) {
-		this.eNum = eNum;
+
+	/* Getters and Setters */
+	public String getE_num() {
+		return e_num;
 	}
 
 
-	public String gethNum() {
-		return hNum;
+
+	public void setE_num(String e_num) {
+		this.e_num = e_num;
 	}
 
 
-	public void sethNum(String hNum) {
-		this.hNum = hNum;
+
+	public String getH_num() {
+		return h_num;
 	}
 
 
-	public String geteType() {
-		return eType;
+
+	public void setH_num(String h_num) {
+		this.h_num = h_num;
 	}
 
 
-	public void seteType(String eType) {
-		this.eType = eType;
+
+	public String getE_type() {
+		return e_type;
 	}
 
 
-	public String geteTitle() {
-		return eTitle;
+
+	public void setE_type(String e_type) {
+		this.e_type = e_type;
 	}
 
 
-	public void seteTitle(String eTitle) {
-		this.eTitle = eTitle;
+
+	public String getE_title() {
+		return e_title;
 	}
 
 
-	public String geteAddr() {
-		return eAddr;
+
+	public void setE_title(String e_title) {
+		this.e_title = e_title;
 	}
 
 
-	public void seteAddr(String eAddr) {
-		this.eAddr = eAddr;
+
+	public String getE_addr() {
+		return e_addr;
 	}
 
 
-	public String geteRnum() {
-		return eRnum;
+
+	public void setE_addr(String e_addr) {
+		this.e_addr = e_addr;
 	}
 
 
-	public void seteRnum(String eRnum) {
-		this.eRnum = eRnum;
+
+	public String getE_rnum() {
+		return e_rnum;
 	}
 
 
-	public String geteFname() {
-		return eFname;
+
+	public void setE_rnum(String e_rnum) {
+		this.e_rnum = e_rnum;
 	}
 
 
-	public void seteFname(String eFname) {
-		this.eFname = eFname;
+
+	public String getE_fname() {
+		return e_fname;
 	}
 
 
-	public String geteFpath() {
-		return eFpath;
+
+	public void setE_fname(String e_fname) {
+		this.e_fname = e_fname;
 	}
 
 
-	public void seteFpath(String eFpath) {
-		this.eFpath = eFpath;
+
+	public String getE_fpath() {
+		return e_fpath;
 	}
+
+
+
+	public void setE_fpath(String e_fpath) {
+		this.e_fpath = e_fpath;
+	}
+
+
+
 	
- 
 	
-
 }

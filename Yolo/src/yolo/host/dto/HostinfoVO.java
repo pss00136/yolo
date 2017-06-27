@@ -2,78 +2,75 @@ package yolo.host.dto;
 
 public class HostinfoVO {
 	
-	private String hNum;     /* 호스트번호 */
-	private String uId;      /* 아이디 */
-	private String hName;    /* 호스트 이름 */
-	private String hContent; /* 호스트 소개 */
-	private String hIpath;   /* 호스트 이미지 위치 */
-	private String hIname;   /* 호스트 이미지 이름 */
+	private String h_num;     /* 호스트번호 */
+	private String u_id;      /* 아이디 */
+	private String h_name;    /* 호스트 이름 */
+	private String h_content; /* 호스트 소개 */
+	private String h_ipath;   /* 호스트 이미지 위치 */
+	private String h_iname;   /* 호스트 이미지 이름 */
 	
 	/* Constructor */
 	public HostinfoVO(){}
 
-	public HostinfoVO(String hNum, String uId, String hName, String hContent, String hIpath, String hIname) {
+	public HostinfoVO(String h_num, String u_id, String h_name, String h_content, String h_ipath, String h_iname) {
 		super();
-		this.hNum = hNum;
-		this.uId = uId;
-		this.hName = hName;
-		this.hContent = hContent;
-		this.hIpath = hIpath;
-		this.hIname = hIname;
+		this.h_num = h_num;
+		this.u_id = u_id;
+		this.h_name = h_name;
+		this.h_content = h_content;
+		this.h_ipath = h_ipath;
+		this.h_iname = h_iname;
 	}
 	/* End of Constructor */
-	
-    /* Getters and Setters */
-	public String gethNum() {
-		return hNum;
+
+	/* Getters and Setters */
+	public String getH_num() {
+		return h_num;
 	}
 
-	public void sethNum(String hNum) {
-		this.hNum = hNum;
+	public void setH_num(String h_num) {
+		this.h_num = h_num;
 	}
 
-	public String getuId() {
-		return uId;
+	public String getU_id() {
+		return u_id;
 	}
 
-	public void setuId(String uId) {
-		this.uId = uId;
+	public void setU_id(String u_id) {
+		this.u_id = u_id;
 	}
 
-	public String gethName() {
-		return hName;
+	public String getH_name() {
+		return h_name;
 	}
 
-	public void sethName(String hName) {
-		this.hName = hName;
+	public void setH_name(String h_name) {
+		this.h_name = h_name;
 	}
 
-	public String gethContent() {
-		return hContent;
+	public String getH_content() {
+		return h_content;
 	}
 
-	public void sethContent(String hContent) {
-		this.hContent = hContent;
+	public void setH_content(String h_content) {
+		this.h_content = h_content;
 	}
 
-	public String gethIpath() {
-		return hIpath;
+	public String getH_ipath() {
+		return h_ipath;
 	}
 
-	public void sethIpath(String hIpath) {
-		this.hIpath = hIpath;
+	public void setH_ipath(String h_ipath) {
+		this.h_ipath = h_ipath;
 	}
 
-	public String gethIname() {
-		return hIname;
+	public String getH_iname() {
+		return h_iname;
 	}
 
-	public void sethIname(String hIname) {
-		this.hIname = hIname;
+	public void setH_iname(String h_iname) {
+		this.h_iname = h_iname;
 	}
-	
-	
-	
-	
-
+   
+     
 }

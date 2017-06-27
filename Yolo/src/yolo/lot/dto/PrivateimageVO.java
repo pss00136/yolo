@@ -1,57 +1,67 @@
 package yolo.lot.dto;
 
 public class PrivateimageVO {
-	
-	private String priimgNum;    /* 이미지 번호 */
-	private String priNum;       /* 민간시설 공간 번호 */
-	private String priimgPath;   /* 이미지 위치 */
-	private String priimgName;   /* 이미지 이름 */
-	
+
+	private String priimg_num;    /* 이미지 번호 */
+	private String pri_num;       /* 민간시설 공간 번호 */
+	private String priimg_path;   /* 이미지 위치 */
+	private String priimg_name;   /* 이미지 이름 */
+
 	/* Constructor */
 	public PrivateimageVO(){}
 
-	public PrivateimageVO(String priimgNum, String priNum, String priimgPath, String priimgName) {
+
+	public PrivateimageVO(String priimg_num, String pri_num, String priimg_path, String priimg_name) {
 		super();
-		this.priimgNum = priimgNum;
-		this.priNum = priNum;
-		this.priimgPath = priimgPath;
-		this.priimgName = priimgName;
+		this.priimg_num = priimg_num;
+		this.pri_num = pri_num;
+		this.priimg_path = priimg_path;
+		this.priimg_name = priimg_name;
 	}
+
 	/* End of Constructor  */
 
-	  /* Getters and Setters */
-	public String getPriimgNum() {
-		return priimgNum;
+	/* Getters and Setters */
+	public String getPriimg_num() {
+		return priimg_num;
 	}
 
-	public void setPriimgNum(String priimgNum) {
-		this.priimgNum = priimgNum;
+
+	public void setPriimg_num(String priimg_num) {
+		this.priimg_num = priimg_num;
 	}
 
-	public String getPriNum() {
-		return priNum;
+
+	public String getPri_num() {
+		return pri_num;
 	}
 
-	public void setPriNum(String priNum) {
-		this.priNum = priNum;
+
+	public void setPri_num(String pri_num) {
+		this.pri_num = pri_num;
 	}
 
-	public String getPriimgPath() {
-		return priimgPath;
+
+	public String getPriimg_path() {
+		return priimg_path;
 	}
 
-	public void setPriimgPath(String priimgPath) {
-		this.priimgPath = priimgPath;
+
+	public void setPriimg_path(String priimg_path) {
+		this.priimg_path = priimg_path;
 	}
 
-	public String getPriimgName() {
-		return priimgName;
+
+	public String getPriimg_name() {
+		return priimg_name;
 	}
 
-	public void setPriimgName(String priimgName) {
-		this.priimgName = priimgName;
+
+	public void setPriimg_name(String priimg_name) {
+		this.priimg_name = priimg_name;
 	}
-	 
- 
-	
+
+
+
+
 }

@@ -2,324 +2,361 @@ package yolo.lot.dto;
 
 public class PrivatelotVO {
 
-	private String pubNum;       /* 공공시설 공간 번호 */
-	private String pubName;      /* 개방시설명 */
-	private String pubPlace;     /* 개방장소명 */
-	private String pubType;      /* 개방시설유형구분 */
-	private String pubClose;     /* 휴관일 */
-	private String pubWeekdayo;  /* 평일운영시간 */
-	private String pubWeekdaye;  /* 평일운영종료시간 */
-	private String pubWeekendo;  /* 주말운영시간 */
-	private String pubWeekende;  /* 주말운영종료시간 */
-	private String pubCharge;    /* 유료사용여부 */
-	private int pubTime;         /* 사용기준시간 */
-	private int pubFee;          /* 사용료 */
-	private int pubPeople;       /* 수용가능인원 */
-	private int pubArea;         /* 면적 */
-	private String pubFacility;  /* 부대시설 */
-	private String pubAppltype;  /* 신청방법 */
-	private String pubPicture;   /* 시설사진정보 */
-	private String pubAddr;      /* 소재지도로명주소 */
-	private String pubAgency;    /* 관리기관명 */
-	private String pubDept;      /* 담당부서명 */
-	private String pubTel;       /* 사용안내전화번호 */
-	private String pubWeb;       /* 홈페이지 */
-	private String pubLat;       /* 위도 */
-	private String pubLong;      /* 경도 */
-	private int pubHits;         /* 조회수 */
-    
+	private String pri_num;       /* 민간시설 공간 번호 */
+	private String h_num;         /* 호스트번호 */
+	private String pri_type;      /* 공간 유형 */
+	private String pri_charge;    /* 유료사용여부 */
+	private String pri_booktype;  /* 예약 유형 */
+	private String pri_title;     /* 공간명 */
+	private String pri_addr;      /* 공간 주소 */
+	private String pri_tag;       /* 태그 */
+	private String pri_content;   /* 공간 소개 */
+	private String pri_info;      /* 공간 정보 */
+	private String pri_account;   /* 계좌정보 */
+	private int pri_weekprice;    /* 주중 가격 */
+	private int pri_weekendprice; /* 주말 /휴일 가격 */
+	private String pri_facility;  /* 편의시설 */
+	private int pri_minpeople;    /* 최소 인원 */
+	private int pri_maxpeople;    /* 최대 인원 */
+	private String pri_weekdayo;  /* 평일운영시간 */
+	private String pri_weekdaye;  /* 평일종료시간 */
+	private String pri_weekendo;  /* 주말운영시간 */
+	private String pri_weekende;  /* 주말종료시간 */
+	private String pri_lat;       /* 위도 */
+	private String pir_long;      /* 경도 */
+	private String pri_tel;       /* 전화번호 */
+	private String pri_web;       /* 홈페이지 */
+	private int pri_bookcount;    /* 예약수 */
+	private int pri_bookmark;     /* 관심지수 */
+	private String pri_regdate;   /* 등록일 */
+	private String pri_confirm;   /* 관리자승인여부 */
 	
-	/* Counstructor */
-    public PrivatelotVO(){}
+	/* Constructor */
+	public PrivatelotVO(){}
 
-
-	public PrivatelotVO(String pubNum, String pubName, String pubPlace, String pubType, String pubClose, String pubWeekdayo,
-			String pubWeekdaye, String pubWeekendo, String pubWeekende, String pubCharge, int pubTime, int pubFee,
-			int pubPeople, int pubArea, String pubFacility, String pubAppltype, String pubPicture, String pubAddr,
-			String pubAgency, String pubDept, String pubTel, String pubWeb, String pubLat, String pubLong,
-			int pubHits) {
-		super();
-		this.pubNum = pubNum;
-		this.pubName = pubName;
-		this.pubPlace = pubPlace;
-		this.pubType = pubType;
-		this.pubClose = pubClose;
-		this.pubWeekdayo = pubWeekdayo;
-		this.pubWeekdaye = pubWeekdaye;
-		this.pubWeekendo = pubWeekendo;
-		this.pubWeekende = pubWeekende;
-		this.pubCharge = pubCharge;
-		this.pubTime = pubTime;
-		this.pubFee = pubFee;
-		this.pubPeople = pubPeople;
-		this.pubArea = pubArea;
-		this.pubFacility = pubFacility;
-		this.pubAppltype = pubAppltype;
-		this.pubPicture = pubPicture;
-		this.pubAddr = pubAddr;
-		this.pubAgency = pubAgency;
-		this.pubDept = pubDept;
-		this.pubTel = pubTel;
-		this.pubWeb = pubWeb;
-		this.pubLat = pubLat;
-		this.pubLong = pubLong;
-		this.pubHits = pubHits;
-	}
+     
 	/* End of Counstructor */
 
-    
-	
+	public PrivatelotVO(String pri_num, String h_num, String pri_type, String pri_charge, String pri_booktype,
+			String pri_title, String pri_addr, String pri_tag, String pri_content, String pri_info, String pri_account,
+			int pri_weekprice, int pri_weekendprice, String pri_facility, int pri_minpeople, int pri_maxpeople,
+			String pri_weekdayo, String pri_weekdaye, String pri_weekendo, String pri_weekende, String pri_lat,
+			String pir_long, String pri_tel, String pri_web, int pri_bookcount, int pri_bookmark, String pri_regdate,
+			String pri_confirm) {
+		super();
+		this.pri_num = pri_num;
+		this.h_num = h_num;
+		this.pri_type = pri_type;
+		this.pri_charge = pri_charge;
+		this.pri_booktype = pri_booktype;
+		this.pri_title = pri_title;
+		this.pri_addr = pri_addr;
+		this.pri_tag = pri_tag;
+		this.pri_content = pri_content;
+		this.pri_info = pri_info;
+		this.pri_account = pri_account;
+		this.pri_weekprice = pri_weekprice;
+		this.pri_weekendprice = pri_weekendprice;
+		this.pri_facility = pri_facility;
+		this.pri_minpeople = pri_minpeople;
+		this.pri_maxpeople = pri_maxpeople;
+		this.pri_weekdayo = pri_weekdayo;
+		this.pri_weekdaye = pri_weekdaye;
+		this.pri_weekendo = pri_weekendo;
+		this.pri_weekende = pri_weekende;
+		this.pri_lat = pri_lat;
+		this.pir_long = pir_long;
+		this.pri_tel = pri_tel;
+		this.pri_web = pri_web;
+		this.pri_bookcount = pri_bookcount;
+		this.pri_bookmark = pri_bookmark;
+		this.pri_regdate = pri_regdate;
+		this.pri_confirm = pri_confirm;
+	}
+
+
 	/* Getters and Setters */
-	public String getPubNum() {
-		return pubNum;
+	public String getPri_num() {
+		return pri_num;
 	}
 
 
-	public void setPubNum(String pubNum) {
-		this.pubNum = pubNum;
+	public void setPri_num(String pri_num) {
+		this.pri_num = pri_num;
 	}
 
 
-	public String getPubName() {
-		return pubName;
+	public String getH_num() {
+		return h_num;
 	}
 
 
-	public void setPubName(String pubName) {
-		this.pubName = pubName;
+	public void setH_num(String h_num) {
+		this.h_num = h_num;
 	}
 
 
-	public String getPubPlace() {
-		return pubPlace;
+	public String getPri_type() {
+		return pri_type;
 	}
 
 
-	public void setPubPlace(String pubPlace) {
-		this.pubPlace = pubPlace;
+	public void setPri_type(String pri_type) {
+		this.pri_type = pri_type;
 	}
 
 
-	public String getPubType() {
-		return pubType;
+	public String getPri_charge() {
+		return pri_charge;
 	}
 
 
-	public void setPubType(String pubType) {
-		this.pubType = pubType;
+	public void setPri_charge(String pri_charge) {
+		this.pri_charge = pri_charge;
 	}
 
 
-	public String getPubClose() {
-		return pubClose;
+	public String getPri_booktype() {
+		return pri_booktype;
 	}
 
 
-	public void setPubClose(String pubClose) {
-		this.pubClose = pubClose;
+	public void setPri_booktype(String pri_booktype) {
+		this.pri_booktype = pri_booktype;
 	}
 
 
-	public String getPubWeekdayo() {
-		return pubWeekdayo;
+	public String getPri_title() {
+		return pri_title;
 	}
 
 
-	public void setPubWeekdayo(String pubWeekdayo) {
-		this.pubWeekdayo = pubWeekdayo;
+	public void setPri_title(String pri_title) {
+		this.pri_title = pri_title;
 	}
 
 
-	public String getPubWeekdaye() {
-		return pubWeekdaye;
+	public String getPri_addr() {
+		return pri_addr;
 	}
 
 
-	public void setPubWeekdaye(String pubWeekdaye) {
-		this.pubWeekdaye = pubWeekdaye;
+	public void setPri_addr(String pri_addr) {
+		this.pri_addr = pri_addr;
 	}
 
 
-	public String getPubWeekendo() {
-		return pubWeekendo;
+	public String getPri_tag() {
+		return pri_tag;
 	}
 
 
-	public void setPubWeekendo(String pubWeekendo) {
-		this.pubWeekendo = pubWeekendo;
+	public void setPri_tag(String pri_tag) {
+		this.pri_tag = pri_tag;
 	}
 
 
-	public String getPubWeekende() {
-		return pubWeekende;
+	public String getPri_content() {
+		return pri_content;
 	}
 
 
-	public void setPubWeekende(String pubWeekende) {
-		this.pubWeekende = pubWeekende;
+	public void setPri_content(String pri_content) {
+		this.pri_content = pri_content;
 	}
 
 
-	public String getPubCharge() {
-		return pubCharge;
+	public String getPri_info() {
+		return pri_info;
 	}
 
 
-	public void setPubCharge(String pubCharge) {
-		this.pubCharge = pubCharge;
+	public void setPri_info(String pri_info) {
+		this.pri_info = pri_info;
 	}
 
 
-	public int getPubTime() {
-		return pubTime;
+	public String getPri_account() {
+		return pri_account;
 	}
 
 
-	public void setPubTime(int pubTime) {
-		this.pubTime = pubTime;
+	public void setPri_account(String pri_account) {
+		this.pri_account = pri_account;
 	}
 
 
-	public int getPubFee() {
-		return pubFee;
+	public int getPri_weekprice() {
+		return pri_weekprice;
 	}
 
 
-	public void setPubFee(int pubFee) {
-		this.pubFee = pubFee;
+	public void setPri_weekprice(int pri_weekprice) {
+		this.pri_weekprice = pri_weekprice;
 	}
 
 
-	public int getPubPeople() {
-		return pubPeople;
+	public int getPri_weekendprice() {
+		return pri_weekendprice;
 	}
 
 
-	public void setPubPeople(int pubPeople) {
-		this.pubPeople = pubPeople;
+	public void setPri_weekendprice(int pri_weekendprice) {
+		this.pri_weekendprice = pri_weekendprice;
 	}
 
 
-	public int getPubArea() {
-		return pubArea;
+	public String getPri_facility() {
+		return pri_facility;
 	}
 
 
-	public void setPubArea(int pubArea) {
-		this.pubArea = pubArea;
+	public void setPri_facility(String pri_facility) {
+		this.pri_facility = pri_facility;
 	}
 
 
-	public String getPubFacility() {
-		return pubFacility;
+	public int getPri_minpeople() {
+		return pri_minpeople;
 	}
 
 
-	public void setPubFacility(String pubFacility) {
-		this.pubFacility = pubFacility;
+	public void setPri_minpeople(int pri_minpeople) {
+		this.pri_minpeople = pri_minpeople;
 	}
 
 
-	public String getPubAppltype() {
-		return pubAppltype;
+	public int getPri_maxpeople() {
+		return pri_maxpeople;
 	}
 
 
-	public void setPubAppltype(String pubAppltype) {
-		this.pubAppltype = pubAppltype;
+	public void setPri_maxpeople(int pri_maxpeople) {
+		this.pri_maxpeople = pri_maxpeople;
 	}
 
 
-	public String getPubPicture() {
-		return pubPicture;
+	public String getPri_weekdayo() {
+		return pri_weekdayo;
 	}
 
 
-	public void setPubPicture(String pubPicture) {
-		this.pubPicture = pubPicture;
+	public void setPri_weekdayo(String pri_weekdayo) {
+		this.pri_weekdayo = pri_weekdayo;
 	}
 
 
-	public String getPubAddr() {
-		return pubAddr;
+	public String getPri_weekdaye() {
+		return pri_weekdaye;
 	}
 
 
-	public void setPubAddr(String pubAddr) {
-		this.pubAddr = pubAddr;
+	public void setPri_weekdaye(String pri_weekdaye) {
+		this.pri_weekdaye = pri_weekdaye;
 	}
 
 
-	public String getPubAgency() {
-		return pubAgency;
+	public String getPri_weekendo() {
+		return pri_weekendo;
 	}
 
 
-	public void setPubAgency(String pubAgency) {
-		this.pubAgency = pubAgency;
+	public void setPri_weekendo(String pri_weekendo) {
+		this.pri_weekendo = pri_weekendo;
 	}
 
 
-	public String getPubDept() {
-		return pubDept;
+	public String getPri_weekende() {
+		return pri_weekende;
 	}
 
 
-	public void setPubDept(String pubDept) {
-		this.pubDept = pubDept;
+	public void setPri_weekende(String pri_weekende) {
+		this.pri_weekende = pri_weekende;
 	}
 
 
-	public String getPubTel() {
-		return pubTel;
+	public String getPri_lat() {
+		return pri_lat;
 	}
 
 
-	public void setPubTel(String pubTel) {
-		this.pubTel = pubTel;
+	public void setPri_lat(String pri_lat) {
+		this.pri_lat = pri_lat;
 	}
 
 
-	public String getPubWeb() {
-		return pubWeb;
+	public String getPir_long() {
+		return pir_long;
 	}
 
 
-	public void setPubWeb(String pubWeb) {
-		this.pubWeb = pubWeb;
+	public void setPir_long(String pir_long) {
+		this.pir_long = pir_long;
 	}
 
 
-	public String getPubLat() {
-		return pubLat;
+	public String getPri_tel() {
+		return pri_tel;
 	}
 
 
-	public void setPubLat(String pubLat) {
-		this.pubLat = pubLat;
+	public void setPri_tel(String pri_tel) {
+		this.pri_tel = pri_tel;
 	}
 
 
-	public String getPubLong() {
-		return pubLong;
+	public String getPri_web() {
+		return pri_web;
 	}
 
 
-	public void setPubLong(String pubLong) {
-		this.pubLong = pubLong;
+	public void setPri_web(String pri_web) {
+		this.pri_web = pri_web;
 	}
 
 
-	public int getPubHits() {
-		return pubHits;
+	public int getPri_bookcount() {
+		return pri_bookcount;
 	}
 
 
-	public void setPubHits(int pubHits) {
-		this.pubHits = pubHits;
+	public void setPri_bookcount(int pri_bookcount) {
+		this.pri_bookcount = pri_bookcount;
 	}
-    
-	
+
+
+	public int getPri_bookmark() {
+		return pri_bookmark;
+	}
+
+
+	public void setPri_bookmark(int pri_bookmark) {
+		this.pri_bookmark = pri_bookmark;
+	}
+
+
+	public String getPri_regdate() {
+		return pri_regdate;
+	}
+
+
+	public void setPri_regdate(String pri_regdate) {
+		this.pri_regdate = pri_regdate;
+	}
+
+
+	public String getPri_confirm() {
+		return pri_confirm;
+	}
+
+
+	public void setPri_confirm(String pri_confirm) {
+		this.pri_confirm = pri_confirm;
+	}
+
+
+
 	
 	
 }
