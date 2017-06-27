@@ -9,8 +9,5 @@
 	
 	<context:component-scan base-package="yolo.share"></context:component-scan>
 	
-	<!-- JNDI설정 -->
-	<bean id='share' class="org.springframework.jndi.JndiObjectFactoryBean">
-		<property name="jndiName" value="java:comp/env/jdbc/myora"></property>	
-	</bean>
+	
 </beans>
