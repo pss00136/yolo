@@ -95,15 +95,15 @@
 			<!-- 호스트센터 들어가기 -->
 			<div class="headerUserWraper">
 	<a href="/Yolo/host/HostMain.host" class="userHandler"><span class="icon-user-follow"></span></a> 
-			<a href="/Yolo/host/HostMain.host" class="headerUser btn btn-o btn-gray"> 
+			<a id="hostbtn" href="/Yolo/host/HostMain.host" class="headerUser btn btn-o btn-gray"> 
 			호스트 센터
 		</a>
 	</div>
 	<!-- 호스트 센터 들어가기 끝 -->
 	<!-- 로그인 회원가입 -->
-	<div class="headerUserWraper">
-		<a href="/Yolo/login/login.user" class="btn btn-round btn-o btn-green">로그인</a>
-		<a href="/Yolo/join/join.user" class="btn btn-round btn-o btn-green">회원가입</a>
+	<div id="signdiv" class="headerUserWraper">
+		<a href="#signin" data-toggle="modal" class="btn btn-round btn-o btn-green">로그인</a>
+		<a href="#signup" data-toggle="modal" class="btn btn-round btn-o btn-green">회원가입</a>
 	</div>
 	<!-- 맵 아이콘 -->
 <!-- 	<a href="#" class="mapHandler"><span class="icon-map"></span></a> -->

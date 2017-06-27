@@ -8,17 +8,19 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
         <title>YOLO</title>
-
+	
+		<!-- 기본 CSS -->
         <link href="/Yolo/css/font-awesome.css" rel="stylesheet">
         <link href="/Yolo/css/simple-line-icons.css" rel="stylesheet">
         <link href="/Yolo/css/fileinput.min.css" rel="stylesheet">
         <link href="/Yolo/css/bootstrap.css" rel="stylesheet">
         <link href="/Yolo/css/fullscreen-slider.css" rel="stylesheet">
-<!--         <link href="/Yolo/css/app.css" rel="stylesheet"> -->
 
 		<!-- app.css 색상 수정본 -->
         <link href="/Yolo/css_yolo/cssView/common/app.css" rel="stylesheet">
-      <link href="/Yolo/css_yolo/cssView/Host/host.css" rel="stylesheet">
+        <!-- 추가 CSS -->
+        <link href="/Yolo/css_yolo/cssView/common/main_style.css" rel="stylesheet">
+        
         <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -75,16 +77,16 @@
 			<!-- 호스트센터 들어가기 -->
 			<div class="headerUserWraper">
 	<a href="/Yolo/host/HostMain.host" class="userHandler"><span class="icon-user-follow"></span></a> 
-			<a href="/Yolo/host/HostMain.host" id="hostcenter" class="headerUser btn btn-o btn-gray"> 
+			<a id="hostbtn" href="/Yolo/host/HostMain.host" id="hostcenter" class="headerUser btn btn-o btn-gray"> 
 			호스트 센터
 		</a>
 	
 	</div>
 	<!-- 호스트 센터 들어가기 끝 -->
 	<!-- 로그인 회원가입 -->
-	<div class="headerUserWraper">
-		<a href="/Yolo/login/login.user" class="btn btn-round btn-o btn-green">로그인</a>
-		<a href="/Yolo/join/join.user" class="btn btn-round btn-o btn-green">회원가입</a>
+	<div class="headerUserWraper" id="signdiv">
+		<a href="#signin" data-toggle="modal" class="btn btn-round btn-o btn-green">로그인</a>
+		<a href="#signup" data-toggle="modal" class="btn btn-round btn-o btn-green">회원가입</a>
 	</div>			
 			<!-- 맵 아이콘 -->
 		<!-- 	<a href="#" class="mapHandler"><span class="icon-map"></span></a> -->
@@ -310,8 +312,111 @@
 		</div>
 		<div class="clearfix"></div>
 	</div>
-        
-        
+		<!-- Login Modal -->
+       <div class="modal fade" id="signin" role="dialog" aria-labelledby="signinLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="signLogo osLight"><span class="fa fa-home"></span> Yolo와lot</div>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="signinLabel">로그인</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form role="form">
+                            
+                            <div class="form-group">
+                                <input type="text" placeholder="ID" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" placeholder="Password" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <div class="checkbox custom-checkbox"><label><input type="checkbox"><span class="fa fa-check"></span> ID 기억하기</label></div>
+                                    </div>
+                                    <div class="col-xs-6 align-right">
+                                        <p class="help-block"><a href="#" class="text-green">아이디를 잊으셨나요?</a></p>
+                                    </div>
+                                    <div class="col-xs-offset-6 col-xs-6 align-right">
+                                    	<p class="help-block"><a href="#" class="text-green">비밀번호를 잊으셨나요?</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="btn-group-justified">
+                                    <a href="explore.html" class="btn btn-lg btn-green">LOGIN</a>
+                                </div>
+                            </div>
+                            <p class="help-block">아직 회원이 아니십니까? <a href="/Yolo/view/join/join.jsp" class="text-green">회원가입하기</a></p>
+                        </form>
+                    </div>
+                </div>
+                <div class="signFooter">Yolo와lot web application<br>&copy; 2017</div>
+            </div>
+        </div><!-- Login Modal END -->        
+		
+		<!-- Join Modal -->
+        <div class="modal fade" id="signup" role="dialog" aria-labelledby="signupLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="signLogo osLight"><span class="fa fa-home"></span> Yolo와lot</div>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="signupLabel">회원가입</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form role="form">
+                        	<div class="form-group">
+                            	<div class="input-group">
+                                	<input type="text" placeholder="아이디" class="form-control">
+                            		<span class="input-group-btn">
+                            			<button class="btn btn-success" type="button">중복확인</button>
+                            		</span>
+                            	</div>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" placeholder="비밀번호" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" placeholder="비밀번호확인" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="성명" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" placeholder="휴대전화" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Email" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="date" placeholder="생년월일" class="form-control">
+                            </div>
+                            <div class="form-group">
+                            	<select class="form-control">
+          							<option value="서울특별시">서울특별시</option>
+          							<option value="경기도">경기도</option>
+          							<option value="강원도">강원도</option>
+          							<option value="충청도">충청도</option>
+          							<option value="전라도">전라도</option>
+          							<option value="경상도">경상도</option>
+        						</select>
+                            </div>
+                            <div class="form-group">
+                                <div class="btn-group-justified">
+                                    <a href="explore.html" class="btn btn-lg btn-green">가입하기</a>
+                                </div>
+                            </div>
+                            <p class="help-block">회원이신가요? <a href="/Yolo/view/login/login.jsp" class="text-green">로그인하기</a></p>
+                        </form>
+                    </div>
+                </div>
+                <div class="signFooter">Yolo와lot web application<br>&copy; 2017</div>
+            </div>
+        </div><!-- Join Modal END -->
+
+
+
+     
         
 		<!-- javascript -->
         <script src="/Yolo/js/json2.js"></script>
@@ -336,6 +441,7 @@
         
         <!-- 추가  -->
 		<script src="/Yolo/js/home.js" type="text/javascript"></script>
+<!-- 		        <script src="/Yolo/js/signin.js" type="text/javascript"></script> -->
 		
 		
     </body>

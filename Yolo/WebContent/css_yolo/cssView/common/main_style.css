@@ -1,0 +1,17 @@
+@CHARSET "UTF-8";
+
+#signdiv{
+	margin-top:10px;
+}
+
+#hostbtn{
+	padding-top: 20px;
+}
+
+#footer_title{
+	font-size: 3em;
+}
+
+.home-footer{
+	position: relative;
+}
