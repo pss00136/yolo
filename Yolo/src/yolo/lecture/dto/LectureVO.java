@@ -5,8 +5,8 @@ public class LectureVO {
 	/* 세미나&강연 등록 */
 	private String lNum; 		/* 세미나 번호 */
 	private String uId; 		/* 아이디 */
-	private String lType; 		/* 세미나 제목 */
-	private String  lTitle; 	/* 세미나 주제 */
+	private String lType; 		/* 세미나 주제 */
+	private String lTitle; 		/* 세미나 제목 */
 	private int lPeople; 		/* 최대 인원 */
 	private String lPeriod; 	/* 모집기간 */
 	private String lStart; 		/* 일시 */

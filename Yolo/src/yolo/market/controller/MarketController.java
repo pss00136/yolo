@@ -33,7 +33,7 @@ public class MarketController {
 	//상품 상세보기
 	@RequestMapping("/GoodsDetail.market")
 	public String goodsDetail(){
-		return "/comMarket/GoodsDetail.modal";
+		return "/comMarket/GoodsDetail/modal_market.modal";
 	}
 	
 	//상품 주문
