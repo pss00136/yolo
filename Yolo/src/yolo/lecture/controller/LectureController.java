@@ -4,7 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import yolo.lecture.dao.LectureDAO;
 import yolo.lecture.dto.LectureVO;
+import yolo.lecture.service.LectureService;
 
 /*
 * @클래스명: LectureController
@@ -19,6 +21,8 @@ import yolo.lecture.dto.LectureVO;
 public class LectureController {
 	
 	/* 멤버필드 */
+	@Autowired
+	LectureService service;
 	
 	/*
 	* @메소드명: lecList
@@ -59,7 +63,7 @@ public class LectureController {
 	
 	@RequestMapping("/LectureInputOk.lecture")
 	public String lecInputOk( LectureVO vo ){
-		System.out.println("인풋오케이~");
+		service.lectureInput(vo);
 		System.out.println( vo.getL_title() );
 		return "/comLecture/LectureInputOk";
 	}

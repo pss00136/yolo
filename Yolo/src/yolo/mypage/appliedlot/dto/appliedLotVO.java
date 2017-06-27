@@ -1,4 +1,4 @@
-package yolo.mypage.appliedLot.dto;
+package yolo.mypage.appliedlot.dto;
 
 public class appliedLotVO { //BooklotVO와 같은 인자값
 	

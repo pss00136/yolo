@@ -1,4 +1,4 @@
-package yolo.mypage.appliedLot.service;
+package yolo.mypage.appliedlot.service;
 
 public interface appliedLotService {
 

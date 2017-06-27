@@ -3,47 +3,54 @@ package yolo.lecture.dto;
 public class LectpayVO {
 
 	/* 세미나&강연 결제 */
-	private String lpayNum; /* 강연 결제 번호 */
-	private String lNum; 	/* 세미나 번호 */
-	private int lpayCost; 	/* 결제금액 */
-	private String lpayDate; /* 결제날짜 */
+	private String lpay_num; /* 강연 결제 번호 */
+	private String l_num; 	/* 세미나 번호 */
+	private int lpay_cost; 	/* 결제금액 */
+	private String lpay_date; /* 결제날짜 */
 	
 	/* Constructor */
 	public LectpayVO(){}
 	
-	public LectpayVO(String lpayNum, String lNum, int lpayCost, String lpayDate) {
+	public LectpayVO(String lpay_num, String l_num, int lpay_cost, String lpay_date) {
 		super();
-		this.lpayNum = lpayNum;
-		this.lNum = lNum;
-		this.lpayCost = lpayCost;
-		this.lpayDate = lpayDate;
+		this.lpay_num = lpay_num;
+		this.l_num = l_num;
+		this.lpay_cost = lpay_cost;
+		this.lpay_date = lpay_date;
 	}
 	/* Constructor END */
-	
+
 	/* Setter & Getter */
-	public String getLpayNum() {
-		return lpayNum;
+	public String getLpay_num() {
+		return lpay_num;
 	}
-	public void setLpayNum(String lpayNum) {
-		this.lpayNum = lpayNum;
+
+	public void setLpay_num(String lpay_num) {
+		this.lpay_num = lpay_num;
 	}
-	public String getlNum() {
-		return lNum;
+
+	public String getL_num() {
+		return l_num;
 	}
-	public void setlNum(String lNum) {
-		this.lNum = lNum;
+
+	public void setL_num(String l_num) {
+		this.l_num = l_num;
 	}
-	public int getLpayCost() {
-		return lpayCost;
+
+	public int getLpay_cost() {
+		return lpay_cost;
 	}
-	public void setLpayCost(int lpayCost) {
-		this.lpayCost = lpayCost;
+
+	public void setLpay_cost(int lpay_cost) {
+		this.lpay_cost = lpay_cost;
 	}
-	public String getLpayDate() {
-		return lpayDate;
+
+	public String getLpay_date() {
+		return lpay_date;
 	}
-	public void setLpayDate(String lpayDate) {
-		this.lpayDate = lpayDate;
+
+	public void setLpay_date(String lpay_date) {
+		this.lpay_date = lpay_date;
 	}
 	/* Setter & Getter END */
 	

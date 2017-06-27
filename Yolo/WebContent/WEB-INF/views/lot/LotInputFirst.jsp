@@ -14,7 +14,7 @@
 						<!------- 공간 유형 선택 ----------->
 				<div class="panel-heading">공간 유형</div>
 				<div class="panel-body">
-						
+					<form class="form-horizontal" role="form">	
 						<!-- 공간유형 선택 -->
 						<div class="form-group">
 								<div class="col-sm-7">
@@ -74,13 +74,11 @@
 
 									</div>
 							</div>
-						</div>					
+						</div>	<!-- 공간유형 선택 끝 -->				
 							
-				</div><!-- 공간유형 선택 끝 -->
-				
 				<!------- 예약 유형 선택 ----------->
 				<div class="panel-heading">예약 유형</div>
-				<div class="panel-body">
+			
 
 					<!-- 공간유형 선택 -->
 
@@ -114,21 +112,21 @@
 					</div>
 
 
-				</div>
+			
 				<!-- 예약유형 선택 끝 -->
 
 
 				<!-- 세미나/강연 정보 입력 -->
 							
 				<div class="panel-heading">공간정보 입력하기</div>
-				<form class="form-horizontal" role="form">
-				<div class="panel-body">
+				
+				
 					<!-- 입력 폼 -->
 						<!-- 공간명 입력 -->
 						<div class="form-group">
 							<label class="col-sm-2 control-label">공간명</label>
 							<div class="col-sm-8">
-								<input type="text" name="uId" class="form-control" value="">
+								<input type="text" name="pri_title" class="form-control" value="">
 							</div>
 						</div>
 						<!-- 주 소 입력 -->
@@ -136,20 +134,20 @@
 							<label class="col-sm-2 control-label">주 소</label>
 							<div class="col-sm-8">
 								<div class="col-xs-5 col-md-3 addr">
-									<input type="text" name="uAddr" class="form-control" value="">
+									<input type="text" name="pri_addr" class="form-control" value="">
 								</div>
 								<div class="col-xs-3 col-md-3" style="margin-bottom: 5px;">
 									<button id="btn_addr" class="btn btn-o btn-green">우편번호 검색</button>
 								</div>
 								
-								<input type="text" name="uAddr" class="form-control" value="">
+								<input type="text" name="pri_addr" class="form-control" value="">
 							</div>
 						</div>
 						<!-- 태그 입력 -->
 						<div class="form-group">
 							<label class="col-sm-2 control-label">해시 태그</label>
 							<div class="col-sm-8">
-								<input type="text" class="form-control" id="tags"
+								<input type="text" class="form-control" name="pri_tag" id="tags"
 											placeholder="#내용 으로 적어주세요" style="display: none;">
 										
 							</div>
@@ -158,7 +156,7 @@
 						<div class="form-group">
 							<label class="col-sm-2 control-label">공간 소개</label>
 							<div class="col-sm-8">
-								<textarea class="form-control" rows="5"></textarea>
+								<textarea class="form-control" name="pri_content" rows="5"></textarea>
 							</div>
 													
 						</div>
@@ -168,14 +166,13 @@
 						<div class="form-group">
 							<label class="col-sm-2 control-label">이미지</label>
 							<div class="col-sm-8">
-								<input type="file" class="file" multiple data-show-upload="false" data-show-caption="false" data-show-remove="false" accept="image/jpeg,image/png" data-browse-class="btn btn-o btn-default" data-browse-label="이미지 첨부하기">
+								<input type="file" name="priimg_path" class="file" multiple data-show-upload="false" data-show-caption="false" data-show-remove="false" accept="image/jpeg,image/png" data-browse-class="btn btn-o btn-default" data-browse-label="이미지 첨부하기">
 								<p class="help-block">등록할 공간의 이미지를 첨부해주세요.</p>
 							</div>
 						</div>
-						
-						
-					
-					<!-- 제출버튼 -->
+				
+				    
+				    <!-- 제출버튼 -->
 					<div>
 						<div style="text-align: center;">
 							<div style="display: inline-block;">
@@ -184,21 +181,13 @@
 						</div>					
 					</div>	
 					<!-- 제출버튼 끝 -->
-					
-				</div><!-- 공간 정보 입력 끝 -->
-				
-			
+	
 				</form>
-			</div>
-			<!---------------공간 정보입력 끝 ------------------------>
+	
+				</div><!-- panel body 끝 -->
 
-
-
-
-
-
-
-
+			</div><!-- home wrapper 끝 -->
+		
 
 
 	<!-- 추가 js  -->

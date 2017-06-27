@@ -11,7 +11,7 @@
 		REGISTER</h4>
 	<div class="panel-body">
 
-		<form class="form-horizontal" method="post" role="form">
+		<form class="form-horizontal" method="post" role="form" action="HostInput_Ok.host">
 			<!-- 호스트 이미지 -->
 			<div class="form-group">
 				<label class="col-sm-2 control-label"> 호스트 이미지 </label>
@@ -52,8 +52,8 @@
 			<!-- 호스트 등록버튼-->
 			<div style="text-align: center;">
 				<div style="display: inline-block;">
-					<a href="/Yolo/host/HostInput.host" id="btn_register"
-						class="btn btn-o btn-green">호스트 등록하기</a>
+					<button id="btn_register" type="submit"
+						class="btn btn-o btn-green">호스트 등록하기</button>
 				</div>
 			</div>
 			<!-- 호스트 등록버튼 끝 -->
