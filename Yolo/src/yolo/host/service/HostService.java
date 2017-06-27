@@ -6,7 +6,7 @@ public interface HostService {
 	
 	
 	/* host 등록 기능 구현 */
-	public void hostinputok(HostinfoVO hvo);
+	public int hostinputok(HostinfoVO hvo);
 	
 
 }

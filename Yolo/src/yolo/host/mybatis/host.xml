@@ -5,7 +5,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="host">
 <insert id="hostInputok" parameterType="hvo">
-	insert into HOSTINFO values
-	 (HOST_NO_SEQ.nextVal,#{u_id},#{h_name},#{h_content},#{h_ipath},#{h_iname})
+	insert into HOSTINFO(h_num, h_name, h_content) values(HOST_NO_SEQ.nextVal,#{h_name},#{h_content})
 	</insert>
 </mapper>
