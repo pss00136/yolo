@@ -6,7 +6,7 @@
             
             <!-- 카테고리 선택 바 -->
                 <div class="filter">
-                    <h1 class="osLight">Filter your results</h1>
+                    <h1 class="osLight">모임찾기</h1>
                     <a href="#" class="handleFilter"><span class="icon-equalizer"></span></a>
                     <div class="clearfix"></div>
                     <form class="filterForm">
@@ -165,6 +165,15 @@
                     </form>
                 </div>
                 
+                <!-- 등록버튼 -->
+				<div class="row bounds padding" >
+				<br/>
+					<div class="col-md-12 col-xs-12" style="text-align:right;">
+						<div style="display:inline-block;">
+						<a href="ClubInput.club" class="btn btn-round btn-green ">모임 등록하기</a>
+						</div>
+					</div>				
+				</div>
                 <!-- 검색결과 모임리스트 -->
                 <div class="resultsList">
                     <div class="row">
