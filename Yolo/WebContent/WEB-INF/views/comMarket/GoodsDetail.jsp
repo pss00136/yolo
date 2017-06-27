@@ -29,7 +29,7 @@
 					상품 이름
 				</h3>
 				<div>
-					<h4>made by "ooooooo"</h4>
+					<a href="MarketDetail.market"><h4>made by "ooooooo"</h4></a>
 				</div>
 				<!-- 평균 별점 -->
 				<div class="rating">

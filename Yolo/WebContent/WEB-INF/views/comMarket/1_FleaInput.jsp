@@ -52,26 +52,26 @@
 								</table>
 							</div>
 						</div>
-						<div class="epilogue">
-							<h5>후기 작성하기</h5>
-							<div id="hearts" class="starrr"></div>
-							<hr>
-						</div>
-						<div class="checktable">
-							<input class="form-control" type="text"
-								placeholder="Readonly input here…" readonly>
-						</div>
-						<textarea class="form-control" rows="10"></textarea>
-						<div class="form-group">
-							<label class="col-sm-2 control-label">File upload</label>
-							<div class="col-sm-10">
-								<input type="file" class="file" multiple
-									data-show-upload="false" data-show-caption="false"
-									data-show-remove="false" accept="image/jpeg,image/png"
-									data-browse-class="btn btn-o btn-default"
-									data-browse-label="Browse Images">
-							</div>
-						</div>
+<!-- 						<div class="epilogue"> -->
+<!-- 							<h5>후기 작성하기</h5> -->
+<!-- 							<div id="hearts" class="starrr"></div> -->
+<!-- 							<hr> -->
+<!-- 						</div> -->
+<!-- 						<div class="checktable"> -->
+<!-- 							<input class="form-control" type="text" -->
+<!-- 								placeholder="Readonly input here…" readonly> -->
+<!-- 						</div> -->
+<!-- 						<textarea class="form-control" rows="10"></textarea> -->
+<!-- 						<div class="form-group"> -->
+<!-- 							<label class="col-sm-2 control-label">File upload</label> -->
+<!-- 							<div class="col-sm-10"> -->
+<!-- 								<input type="file" class="file" multiple -->
+<!-- 									data-show-upload="false" data-show-caption="false" -->
+<!-- 									data-show-remove="false" accept="image/jpeg,image/png" -->
+<!-- 									data-browse-class="btn btn-o btn-default" -->
+<!-- 									data-browse-label="Browse Images"> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
 						<!-- 다음버튼 -->
 						<div id="nextbtn" class="col-md-12">
 							<div class="col-md-5"></div>
