@@ -20,4 +20,42 @@
 	<property name="definitions" value='/WEB-INF/tiles/tiles-definitions.xml'></property>
 </bean>
 
+<!-- JNDI 설정 -->
+<bean id='dataSource' class="org.springframework.jndi.JndiObjectFactoryBean">
+	<property name="jndiName" value="java:comp/env/jdbc/myora"></property>
+</bean>
+<!-- 마이바티즈 설정 -->
+<bean id='factoryBean' class="org.mybatis.spring.SqlSessionFactoryBean">
+	<property name="dataSource" ref="dataSource"/>
+	<property name="mapperLocations">
+		<array>
+			<value>classpath*:yolo/club/mybatis/*.xml</value>
+			<value>classpath*:yolo/footermenu/mybatis/*.xml</value>
+			<value>classpath*:yolo/host/mybatis/*.xml</value>
+			<value>classpath*:yolo/lecture/mybatis/*.xml</value>
+			<value>classpath*:yolo/lot/mybatis/*.xml</value>
+			<value>classpath*:yolo/main/mybatis/*.xml</value>
+			<value>classpath*:yolo/market/mybatis/*.xml</value>
+			<value>classpath*:yolo/message/mybatis/*.xml</value>
+			<value>classpath*:yolo/share/mybatis/*.xml</value>
+			<value>classpath*:yolo/user/mybatis/*.xml</value>
+			<value>classpath*:yolo/mypage/appliedclub/mybatis/*.xml</value>
+			<value>classpath*:yolo/mypage/appliedlot/mybatis/*.xml</value>
+			<value>classpath*:yolo/mypage/bookmark/mybatis/*.xml</value>
+			<value>classpath*:yolo/mypage/myclub/mybatis/*.xml</value>
+			<value>classpath*:yolo/mypage/info/mybatis/*.xml</value>
+			<value>classpath*:yolo/mypage/myclub/mybatis/*.xml</value>
+			<value>classpath*:yolo/mypage/mylecture/mybatis/*.xml</value>
+			<value>classpath*:yolo/mypage/mymarket/mybatis/*.xml</value>
+			<value>classpath*:yolo/mypage/myshare/mybatis/*.xml</value>
+			<value>classpath*:yolo/mypage/orderstatus/mybatis/*.xml</value>
+			<value>classpath*:yolo/mypage/wishlist/mybatis/*.xml</value>
+		</array>
+	</property>
+	<property name="configLocation" value="classpath:yolo/mybatis/config/config.xml"></property>
+</bean>
+<bean id='member' class="org.mybatis.spring.SqlSessionTemplate">
+	<constructor-arg ref="factoryBean"></constructor-arg>
+</bean>
+
 </beans>
