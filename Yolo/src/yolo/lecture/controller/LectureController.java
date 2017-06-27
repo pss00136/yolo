@@ -19,7 +19,6 @@ import yolo.lecture.dto.LectureVO;
 public class LectureController {
 	
 	/* 멤버필드 */
-
 	
 	/*
 	* @메소드명: lecList
@@ -30,6 +29,7 @@ public class LectureController {
 	*/
 	@RequestMapping("/LectureList.lecture")
 	public String lecList(){
+		System.out.println("LectureList");
 		return "/comLecture/LectureList";
 	}
 	
@@ -60,8 +60,8 @@ public class LectureController {
 	@RequestMapping("/LectureInputOk.lecture")
 	public String lecInputOk( LectureVO vo ){
 		System.out.println("인풋오케이~");
-		System.out.println( vo.getlTitle() );
-		return "/comLecture/LectureInput";
+		System.out.println( vo.getL_title() );
+		return "/comLecture/LectureInputOk";
 	}
 
 }

@@ -1,5 +1,7 @@
 package yolo.lecture.dao;
 
-public class LectureDAO {
+import yolo.lecture.dto.LectureVO;
 
+public interface LectureDAO {
+	public void lectureInput( LectureVO lectureVO );
 }

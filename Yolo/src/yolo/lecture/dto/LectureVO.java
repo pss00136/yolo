@@ -3,105 +3,126 @@ package yolo.lecture.dto;
 public class LectureVO {
 	
 	/* 세미나&강연 등록 */
-	private String lNum; 		/* 세미나 번호 */
-	private String uId; 		/* 아이디 */
-	private String lType; 		/* 세미나 주제 */
-	private String lTitle; 		/* 세미나 제목 */
-	private int lPeople; 		/* 최대 인원 */
-	private String lPeriod; 	/* 모집기간 */
-	private String lStart; 		/* 일시 */
-	private String lContent; 	/* 세미나 설명 */
-	private String lConfirm; 	/* 승인여부 */
-	private String lPay; 		/* 결제여부 */
-	private String lRegdate; 	/* 등록일 */
+	private String l_num; 		/* 세미나 번호 */
+	private String u_id; 		/* 아이디 */
+	private String l_type; 		/* 세미나 주제 */
+	private String l_title; 		/* 세미나 제목 */
+	private int l_people; 		/* 최대 인원 */
+	private String l_period; 	/* 모집기간 */
+	private String l_start; 		/* 일시 */
+	private String l_content; 	/* 세미나 설명 */
+	private String l_confirm; 	/* 승인여부 */
+	private String l_pay; 		/* 결제여부 */
+	private String l_regdate; 	/* 등록일 */
 	
 	/* Constructor */
 	public LectureVO(){}
 	
-	public LectureVO(String lNum, String uId, String lType, String lTitle, int lPeople, String lPeriod, String lStart,
-			String lContent, String lConfirm, String lPay, String lRegdate) {
+	public LectureVO(String l_num, String u_id, String l_type, String l_title, int l_people, String l_period,
+			String l_start, String l_content, String l_confirm, String l_pay, String l_regdate) {
 		super();
-		this.lNum = lNum;
-		this.uId = uId;
-		this.lType = lType;
-		this.lTitle = lTitle;
-		this.lPeople = lPeople;
-		this.lPeriod = lPeriod;
-		this.lStart = lStart;
-		this.lContent = lContent;
-		this.lConfirm = lConfirm;
-		this.lPay = lPay;
-		this.lRegdate = lRegdate;
+		this.l_num = l_num;
+		this.u_id = u_id;
+		this.l_type = l_type;
+		this.l_title = l_title;
+		this.l_people = l_people;
+		this.l_period = l_period;
+		this.l_start = l_start;
+		this.l_content = l_content;
+		this.l_confirm = l_confirm;
+		this.l_pay = l_pay;
+		this.l_regdate = l_regdate;
 	}
 	/* Constructor END */
 	
 	/* Setter & Getter */
-	public String getlNum() {
-		return lNum;
+	public String getL_num() {
+		return l_num;
 	}
-	public void setlNum(String lNum) {
-		this.lNum = lNum;
+
+	public void setL_num(String l_num) {
+		this.l_num = l_num;
 	}
-	public String getuId() {
-		return uId;
+
+	public String getU_id() {
+		return u_id;
 	}
-	public void setuId(String uId) {
-		this.uId = uId;
+
+	public void setU_id(String u_id) {
+		this.u_id = u_id;
 	}
-	public String getlType() {
-		return lType;
+
+	public String getL_type() {
+		return l_type;
 	}
-	public void setlType(String lType) {
-		this.lType = lType;
+
+	public void setL_type(String l_type) {
+		this.l_type = l_type;
 	}
-	public String getlTitle() {
-		return lTitle;
+
+	public String getL_title() {
+		return l_title;
 	}
-	public void setlTitle(String lTitle) {
-		this.lTitle = lTitle;
+
+	public void setL_title(String l_title) {
+		this.l_title = l_title;
 	}
-	public int getlPeople() {
-		return lPeople;
+
+	public int getL_people() {
+		return l_people;
 	}
-	public void setlPeople(int lPeople) {
-		this.lPeople = lPeople;
+
+	public void setL_people(int l_people) {
+		this.l_people = l_people;
 	}
-	public String getlPeriod() {
-		return lPeriod;
+
+	public String getL_period() {
+		return l_period;
 	}
-	public void setlPeriod(String lPeriod) {
-		this.lPeriod = lPeriod;
+
+	public void setL_period(String l_period) {
+		this.l_period = l_period;
 	}
-	public String getlStart() {
-		return lStart;
+
+	public String getL_start() {
+		return l_start;
 	}
-	public void setlStart(String lStart) {
-		this.lStart = lStart;
+
+	public void setL_start(String l_start) {
+		this.l_start = l_start;
 	}
-	public String getlContent() {
-		return lContent;
+
+	public String getL_content() {
+		return l_content;
 	}
-	public void setlContent(String lContent) {
-		this.lContent = lContent;
+
+	public void setL_content(String l_content) {
+		this.l_content = l_content;
 	}
-	public String getlConfirm() {
-		return lConfirm;
+
+	public String getL_confirm() {
+		return l_confirm;
 	}
-	public void setlConfirm(String lConfirm) {
-		this.lConfirm = lConfirm;
+
+	public void setL_confirm(String l_confirm) {
+		this.l_confirm = l_confirm;
 	}
-	public String getlPay() {
-		return lPay;
+
+	public String getL_pay() {
+		return l_pay;
 	}
-	public void setlPay(String lPay) {
-		this.lPay = lPay;
+
+	public void setL_pay(String l_pay) {
+		this.l_pay = l_pay;
 	}
-	public String getlRegdate() {
-		return lRegdate;
+
+	public String getL_regdate() {
+		return l_regdate;
 	}
-	public void setlRegdate(String lRegdate) {
-		this.lRegdate = lRegdate;
-	}
+
+	public void setL_regdate(String l_regdate) {
+		this.l_regdate = l_regdate;
+	}	
 	/* Setter & Getter END */
 	
 }
