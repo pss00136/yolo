@@ -1,6 +1,6 @@
-package yolo.mypage.appliedclub.dto;
+package yolo.club.dto;
 
-public class appliedclubVO {
+public class signClubVO {
 //	SC_NUM VARCHAR(100) NOT NULL, /* 신청 번호 */
 //	C_NUM VARCHAR(100), /* 모임 번호 */
 //	U_ID VARCHAR(20), /* 아이디 */
@@ -12,9 +12,9 @@ public class appliedclubVO {
 	private String scDate; /* 신청 날짜 */
 	
 	/* Constructor */
-	public appliedclubVO(){}
+	public signClubVO(){}
 	
-	public appliedclubVO(String scNum, String cNum, String uId, String scDate) {
+	public signClubVO(String scNum, String cNum, String uId, String scDate) {
 		super();
 		this.scNum = scNum;
 		this.cNum = cNum;
