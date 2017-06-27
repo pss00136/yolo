@@ -10,10 +10,10 @@ import yolo.host.dto.HostinfoVO;
 public class HostDAO {
 	
 	@Autowired
-	SqlSessionTemplate 
+	SqlSessionTemplate session;
 	
 	public void hostinputok(HostinfoVO hvo){
-		
+		session.insert("hostInputok", hvo);
 	}
 	
 
