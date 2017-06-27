@@ -54,8 +54,5 @@
 	</property>
 	<property name="configLocation" value="classpath:yolo/mybatis/config/config.xml"></property>
 </bean>
-<bean id='member' class="org.mybatis.spring.SqlSessionTemplate">
-	<constructor-arg ref="factoryBean"></constructor-arg>
-</bean>
 
 </beans>
