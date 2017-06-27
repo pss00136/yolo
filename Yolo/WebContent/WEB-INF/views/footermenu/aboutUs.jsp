@@ -1,32 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-        <title>about us</title>
-
-        <link href="/Yolo/css/font-awesome.css" rel="stylesheet">
-        <link href="/Yolo/css/simple-line-icons.css" rel="stylesheet">
-        <link href="/Yolo/css/fileinput.min.css" rel="stylesheet">
-        <link href="/Yolo/css/bootstrap.css" rel="stylesheet">
-        <link href="/Yolo/css/fullscreen-slider.css" rel="stylesheet">
-        <link href="/Yolo/css_yolo/cssView/common/app.css" rel="stylesheet">
-        
-        <!-- 추가 css -->
-        <link href="/Yolo/css_yolo/cssView/footermenu/aboutUs.css" rel="stylesheet">
-
-    </head>
-    <body class="notransition">
     
-		<!-- Header -->
-		<%@include file="/view/common/header.jsp"%>
-
-        <!-- Content -->
-        <div id="wrapper" class="full">
-            <div id="content" class="max">
+<!-- 추가 css -->
+ 	<link href="/Yolo/css_yolo/cssView/footermenu/aboutUs.css" rel="stylesheet">
+        
             	<div id="hero-container">
 		            <ul class="cb-slideshow">
 		                <li><span></span></li>
@@ -175,35 +152,3 @@
 		        	<h2 class="osLight">Our Location</h2>
 		            <div id="home-map"></div>
 		        </div>
-				        
-		        <!-- Footer -->
-		        <%@include file="/view/common/footer.jsp"%>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-        
-        <script src="/Yolo/js/json2.js"></script>
-        <script src="/Yolo/js/jquery-2.1.1.min.js"></script>
-        <script src="/Yolo/js/underscore.js"></script>
-        <script src="/Yolo/js/moment-2.5.1.js"></script>
-        <script src="/Yolo/js/jquery-ui.min.js"></script>
-        <script src="/Yolo/js/jquery-ui-touch-punch.js"></script>
-        <script src="/Yolo/js/jquery.placeholder.js"></script>
-        <script src="/Yolo/js/bootstrap.js"></script>
-        <script src="/Yolo/js/jquery.touchSwipe.min.js"></script>
-        <script src="/Yolo/js/jquery.slimscroll.min.js"></script>
-        <script src="/Yolo/js/jquery.visible.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdr4Ul6T6VHRn7H9wlqH63xNmKWuUbMy4&callback=initMap" type="text/javascript"></script>
-        <script src="/Yolo/js/infobox.js"></script>
-        <script src="/Yolo/js/clndr.js"></script>
-        <script src="/Yolo/js/jquery.tagsinput.min.js"></script>
-        <script src="/Yolo/js/bootstrap-datepicker.js"></script>
-        <script src="/Yolo/js/fileinput.min.js"></script>
-        <script src="/Yolo/js/app.js"></script>
-        <script src="/Yolo/js/calendar.js"></script>
-        
-        <!-- 추가  -->
-		<script src="/Yolo/js/home.js" type="text/javascript"></script>
-		
-    </body>
-</html>

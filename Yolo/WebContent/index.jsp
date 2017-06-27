@@ -297,8 +297,8 @@
 						<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 							<div class="osLight footer-header">Company</div>
 							<ul class="footer-nav pb20">
-								<li><a href="/Yolo/footermenu/aboutUs.main">About US</a></li>
-								<li><a href="/Yolo/footermenu/QnA.main">Q&A</a></li>
+								<li><a href="/Yolo/footermenu/aboutUs.footermenu">About US</a></li>
+								<li><a href="/Yolo/footermenu/QnA.footermenu">Q&A</a></li>
 							</ul>
 						</div>
 			
