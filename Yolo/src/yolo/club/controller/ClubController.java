@@ -48,7 +48,7 @@ public class ClubController {
 	@RequestMapping("/ClubDetail.club")
 	public String clubDetail(){
 		
-		return "/club/ClubDetail";
+		return "/club/ClubDetail.map";
 	}
 	
 	/*
