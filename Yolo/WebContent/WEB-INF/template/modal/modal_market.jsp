@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 
 <!-- modal popup -->
-<div style="z-index: 1000000;" class="modal fade" id="contactAgent"
+<div class="modal fade" id="contactAgent"
 	role="dialog" aria-labelledby="contactLabel" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
