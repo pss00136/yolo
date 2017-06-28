@@ -49,7 +49,7 @@
 					<div class="userTop pull-left">
 						<span class="headerUserName">John Smith</span> <span
 							class="fa fa-angle-down"></span>
-					</div>
+					</div> 
 					<div class="clearfix"></div>
 				</a>	
 				<div class="dropdown-menu pull-right userMenu" role="menu">
@@ -228,9 +228,9 @@
 			
 			<!-- 중간 문구부분 -->
 			<div class="highlight">
-				<div class="h-title osLight">Find your new place with Reales</div>
-				<div class="h-text osLight">Fusce risus metus, placerat in
-					consectetur eu, porttitor a est sed sed dolor lorem cras adipiscing</div>
+				<div class="h-title osLight">Find your new place with YoloWowLot</div>
+				<div class="h-text osLight">It is easy to find your place. 
+					Also you can share your place each other</div>
 			</div><!-- 중간 문구부분 끝 -->
 
 			<!-- 하단 부분 -->
