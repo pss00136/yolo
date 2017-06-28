@@ -1,10 +1,12 @@
 package yolo.share.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import yolo.share.dao.ShareDAOImpl;
 import yolo.share.dto.ShareVO;
 
 /*
@@ -18,6 +20,11 @@ import yolo.share.dto.ShareVO;
 @Controller
 @RequestMapping("comShare")
 public class ShareController {
+	
+	@Autowired
+	ShareDAOImpl ShareDAO;
+	
+	
 	/* 멤버필드 */
 	
 	/*
@@ -42,8 +49,13 @@ public class ShareController {
 	 */
 	@RequestMapping("ShareInputOk.share")
 	public ModelAndView shareInput(ShareVO vo){
+		int result = ShareDAO.shareInput(vo);
+		String message = "입력실패";
+		if(result > 0){
+			message = "입력완료";
+		}
 		
-		
+		System.out.println(message);
 		ModelAndView mv = new ModelAndView();
 		
 		mv.setViewName("/comShare/ShareList.jsp");

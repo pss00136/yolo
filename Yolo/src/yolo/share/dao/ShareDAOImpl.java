@@ -10,14 +10,14 @@ import yolo.share.dto.ShareVO;
 public class ShareDAOImpl implements ShareDAO{
 	
 	@Autowired
-	SqlSessionTemplate share;
+	SqlSessionTemplate session;
 	
 	
 	@Override
 	public int shareInput(ShareVO vo) {
 		int result = 0;
-			result = share.insert("share.shareInsert", vo);
-		return 0;
+			result = session.insert("share.shareInsert", vo);
+		return result;
 	}
 
 }
