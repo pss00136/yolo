@@ -5,42 +5,18 @@ public class BookmarkVO {
 //	U_ID VARCHAR(20), /* 아이디 */
 //	BM_SELNUM VARCHAR(100) /* 희망번호 */
 
-	private String bmNum; /* 즐겨찾기 번호 */
-	private String uId;  /* 아이디 */
-	private String bmSelNum; /* 희망번호 */
+	private String bm_num; /* 즐겨찾기 번호 */
+	private String u_id;  /* 아이디 */
+	private String bm_selNum; /* 희망번호 */
 	
 	/* Constructor */
-	public BookmarkVO(){}
-	
-	public BookmarkVO(String bmNum, String uId, String bmSelNum) {
+	public BookmarkVO(String bm_num, String u_id, String bm_selNum) {
 		super();
-		this.bmNum = bmNum;
-		this.uId = uId;
-		this.bmSelNum = bmSelNum;
+		this.bm_num = bm_num;
+		this.u_id = u_id;
+		this.bm_selNum = bm_selNum;
 	}
-
-	public String getBmNum() {
-		return bmNum;
-	}
-
-	public void setBmNum(String bmNum) {
-		this.bmNum = bmNum;
-	}
-
-	public String getuId() {
-		return uId;
-	}
-
-	public void setuId(String uId) {
-		this.uId = uId;
-	}
-
-	public String getBmSelNum() {
-		return bmSelNum;
-	}
-
-	public void setBmSelNum(String bmSelNum) {
-		this.bmSelNum = bmSelNum;
-	}
+	
+	
 	
 }
