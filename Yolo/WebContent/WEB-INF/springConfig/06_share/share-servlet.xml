@@ -9,5 +9,19 @@
 	
 	<context:component-scan base-package="yolo.share"></context:component-scan>
 	
+	<!-- JNDI설정 -->
+	<bean id='shareDataSource' class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiName" value="java:comp/env/jdbc/myora"></property>
+	</bean>
 	
+	<!-- 마이바티즈 설정 -->
+	<bean id='shareFactoryBean' class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="shareDataSource"></property>
+		<property name="mapperLocations" value="classpath*:yolo/share/mybatis/*.xml"></property>
+		<property name="configLocation" value="classpath:myproj/mybatis/config/config.xml"></property>
+	</bean>
+	
+	<bean id='share' class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg ref="shareFactoryBean"></constructor-arg>
+	</bean>
 </beans>

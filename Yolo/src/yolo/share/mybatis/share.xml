@@ -6,4 +6,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="share">
 
 
+<!-- 회원가입 sql -->
+<insert id="shareInsert" parameterType="sharevo"> <!-- insert,delete,update는 리턴타입 필요없음 -->
+	INSERT INTO membertemp VALUES(#{userId}, #{userPass}, #{userName})
+</insert>
+
 </mapper>

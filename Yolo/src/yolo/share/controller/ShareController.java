@@ -40,7 +40,7 @@ public class ShareController {
 	 *  @param 없음
 	 *  @return ModelAndView로 반환
 	 */
-	@RequestMapping("ShareList.share")
+	@RequestMapping("ShareInputOk.share")
 	public ModelAndView shareInput(ShareVO vo){
 		
 		

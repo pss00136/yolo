@@ -13,7 +13,7 @@
 								<h4>쉐어링 정보 입력</h4>
 								<hr>
 								<br />
-								<form name="form" method="post" action="ShareList.share" class="form-horizontal" role="form">
+								<form name="form" method="post" action="ShareInputOk.share" class="form-horizontal" role="form">
 									<!-- 마켓 명 입력 -->
 									<div class="form-group">
 										<label class="col-sm-2 control-label">글 제목</label>

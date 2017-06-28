@@ -4,6 +4,7 @@
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
  <configuration>
 <typeAliases>
- 		<typeAlias type="yolo.host.dto.HostinfoVO" alias="hvo"/>	
+ 		<typeAlias type="yolo.host.dto.HostinfoVO" alias="hvo"/>
+ 		<typeAlias type="yolo.share.dto.ShareVO" alias="sharevo"/>	
  	</typeAliases>
  </configuration>
