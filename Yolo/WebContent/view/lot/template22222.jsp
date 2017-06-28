@@ -44,7 +44,9 @@
 
         <!-- Content -->
         <div id="wrapper" class="full">
-            <div id="mapView" class="min"><div class="mapPlaceholder"><span class="fa fa-spin fa-spinner"></span> Loading map...</div></div>
+            <div id="mapView" class="mob-min">
+            <div class="mapPlaceholder"><span class="fa fa-spin fa-spinner">
+            </span> Loading map...</div></div>
             <div id="content" class="max">
 		        <!-- -----------------ì¬ê¸°ì ì»¨íì¸  divë£ì¼ì¸ì----------------- -->
 		        <!-- ì´ ì¬ì´ì! -->
