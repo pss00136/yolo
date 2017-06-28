@@ -8,12 +8,14 @@ public class QnAVO {
 //	A_CONTENT VARCHAR(255), /* 도움말 내용 */
 //	A_DATE VARCHAR(50) /* 도움말 등록날짜 */
 	
+	/* QnA */
 	private String aNum; /* 도움말 번호 */
 	private String aType; /* 도움말 타입 */
 	private String aTitle; /* 도움말 제목 */
 	private String aContent; /* 도움말 내용 */
 	private String aDate; /* 도움말 등록날짜 */
 	
+	/* Constructor */
 	public QnAVO(){}
 	
 	public QnAVO(String aNum, String aType, String aTitle, String aContent, String aDate) {
@@ -24,7 +26,9 @@ public class QnAVO {
 		this.aContent = aContent;
 		this.aDate = aDate;
 	}
+	/* Constructor END */
 
+	/* Setter & Getter */
 	public String getaNum() {
 		return aNum;
 	}
@@ -64,6 +68,6 @@ public class QnAVO {
 	public void setaDate(String aDate) {
 		this.aDate = aDate;
 	}
-	
+	/* Setter & Getter END */
 	
 }
