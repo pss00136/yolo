@@ -1,8 +1,12 @@
 package yolo.club.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import yolo.club.dto.ClubVO;
+import yolo.club.service.ClubService;
 
 /*
 * @클래스명: ClubController
@@ -18,6 +22,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ClubController {
 	
 	/* 멤버필드 */
+	@Autowired
+	ClubService service;
 	
 	/*
 	* @메소드명: clubList
@@ -59,9 +65,22 @@ public class ClubController {
 		return "/club/ClubInput";
 	}
 	
+	/*
+	* @메소드명: clubInputOk
+	* @역할: ClubService를 호출하여 웹에서 가져온 Club 등록값을 전달 
+	*
+	* @param   ClubVO:jsp form에서 가져온 값
+	* @return  String:반환하는 경로
+	*/
 	@RequestMapping("/ClubInputOk.club")
-	public String clubInputOk(){
-		
+	public String clubInputOk( ClubVO vo){
+		int result = service.clubinput(vo);
+		if( result == 1){
+			System.out.println("DB입력 성공");
+		}else{
+			System.out.println("DB입력 실패");
+		}
+		System.out.println( vo.getC_title() );
 		return "/club/ClubInputOk";
 	}
 
