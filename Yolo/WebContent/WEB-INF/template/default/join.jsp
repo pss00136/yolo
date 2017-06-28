@@ -14,7 +14,7 @@
 				</div>
 				<div class="modal-body">
 
-					<form role="form">
+					<form role="form"  method="post" action="/Yolo/join/join_ok.main">
 						<div class="form-group">
 							<div class="input-group">
 								<input type="text" placeholder="아이디" id="u_id" name="u_id" class="form-control">
@@ -53,7 +53,7 @@
 						</div>
 						<div class="form-group">
 							<div class="btn-group-justified">
-								<a href="/Yolo/views/join/join_ok.user" class="btn btn-lg btn-green">가입하기</a>
+								<button type="submit" class="btn btn-lg btn-green">가입하기</button>
 							</div>
 						</div>
 						<p class="help-block">

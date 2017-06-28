@@ -18,7 +18,6 @@ import yolo.user.service.UserService;
 * @since       JDK1.8
 */
 @Controller
-@RequestMapping("join")
 public class UserController {
 	
 	/* 멤버필드 */
@@ -30,9 +29,9 @@ public class UserController {
 	* @역할: views/join/join_ok로 페이지 전환
 	*
 	* @param   UserVO
-	* @return  ModelAndView:반환하는 경로
+	* @return  ModelAndView:반환하는 경로 
 	*/
-	@RequestMapping("/join_ok.user")
+	@RequestMapping("join/join_ok.main")
 	public ModelAndView joinUser(UserVO userVO){
 		ModelAndView mv = new ModelAndView();
 		int result = service.joinUser(userVO);

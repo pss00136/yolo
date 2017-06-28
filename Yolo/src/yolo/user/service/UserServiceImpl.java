@@ -8,7 +8,7 @@ import yolo.user.dto.UserVO;
 
 @Service
 public class UserServiceImpl implements UserService {
-	
+	/* 멤버필드 */
 	@Autowired
 	UserDAO udao;
 	
