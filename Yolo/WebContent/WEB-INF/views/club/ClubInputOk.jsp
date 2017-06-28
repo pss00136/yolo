@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-dd
+등록됨
 </body>
 </html>
