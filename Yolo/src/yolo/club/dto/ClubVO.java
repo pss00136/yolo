@@ -15,6 +15,7 @@ public class ClubVO {
 //	C_CONFIRM VARCHAR(5), /* 승인 여부 */
 //	C_REGDATE VARCHAR(100) /* 등록일 */
 	
+	/* 모임 등록 */
 	private String c_num; /* 모임 번호 */
 	private String u_id;/* 아이디 */
 	private String c_type; /* 모임 유형 */
@@ -33,7 +34,7 @@ public class ClubVO {
 	public ClubVO() {}
 
 	public ClubVO(String c_num, String u_id, String c_type, String c_title, String c_tag, int c_people,
-			String c_rectuit, String c_period, String c_date, String c_place, String c_content, String c_confirm,
+			String c_recruit, String c_period, String c_date, String c_place, String c_content, String c_confirm,
 			String c_regdate) {
 		super();
 		this.c_num = c_num;
@@ -50,7 +51,9 @@ public class ClubVO {
 		this.c_confirm = c_confirm;
 		this.c_regdate = c_regdate;
 	}
+	/* Constructor END */
 
+	/* Setter & Getter */
 	public String getC_num() {
 		return c_num;
 	}
@@ -154,7 +157,7 @@ public class ClubVO {
 	public void setC_regdate(String c_regdate) {
 		this.c_regdate = c_regdate;
 	}
-
+	/* Setter & Getter END */
 	
 	
 }
