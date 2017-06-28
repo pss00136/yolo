@@ -3,6 +3,12 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="host">
+<mapper namespace="club">
 
+<!-- club 등록 sql -->
+<insert id = "clubInsert" parameterType="yolo.club.dto.ClubVO">
+	INSERT INTO CLUB(c_num, VALUES(concat('c_',CLUB_NO_SEQ.nextval), #{u_id}, #{c_type}, #{c_title}, #{c_tag}
+	, #{c_people}, #{c_recruit}, #{c_period}, #{c_date}, #{c_place}, #{c_content}, #{c_confirm}
+	, #{c_regdate})
+</insert>
 </mapper>

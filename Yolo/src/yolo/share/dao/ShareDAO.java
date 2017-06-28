@@ -6,5 +6,5 @@ public interface ShareDAO {
 	/*
 	 * ShareInput 글등록하기 
 	 */
-	
+	int shareInput(ShareVO vo);
 }

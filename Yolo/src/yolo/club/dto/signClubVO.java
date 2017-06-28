@@ -6,47 +6,53 @@ public class signClubVO {
 //	U_ID VARCHAR(20), /* 아이디 */
 //	SC_DATE VARCHAR(50) /* 신청 날짜 */
 	
-	private String scNum; /* 신청 번호 */
-	private String cNum; /* 모임 번호 */
-	private String uId; /* 아이디 */
-	private String scDate; /* 신청 날짜 */
+	private String sc_num; /* 신청 번호 */
+	private String c_num; /* 모임 번호 */
+	private String u_id; /* 아이디 */
+	private String sc_date; /* 신청 날짜 */
 	
 	/* Constructor */
 	public signClubVO(){}
-	
-	public signClubVO(String scNum, String cNum, String uId, String scDate) {
+
+	public signClubVO(String sc_num, String c_num, String u_id, String sc_date) {
 		super();
-		this.scNum = scNum;
-		this.cNum = cNum;
-		this.uId = uId;
-		this.scDate = scDate;
+		this.sc_num = sc_num;
+		this.c_num = c_num;
+		this.u_id = u_id;
+		this.sc_date = sc_date;
 	}
-	
-	public String getScNum() {
-		return scNum;
+
+	public String getSc_num() {
+		return sc_num;
 	}
-	public void setScNum(String scNum) {
-		this.scNum = scNum;
+
+	public void setSc_num(String sc_num) {
+		this.sc_num = sc_num;
 	}
-	public String getcNum() {
-		return cNum;
+
+	public String getC_num() {
+		return c_num;
 	}
-	public void setcNum(String cNum) {
-		this.cNum = cNum;
+
+	public void setC_num(String c_num) {
+		this.c_num = c_num;
 	}
-	public String getuId() {
-		return uId;
+
+	public String getU_id() {
+		return u_id;
 	}
-	public void setuId(String uId) {
-		this.uId = uId;
+
+	public void setU_id(String u_id) {
+		this.u_id = u_id;
 	}
-	public String getScDate() {
-		return scDate;
+
+	public String getSc_date() {
+		return sc_date;
 	}
-	public void setScDate(String scDate) {
-		this.scDate = scDate;
+
+	public void setSc_date(String sc_date) {
+		this.sc_date = sc_date;
 	}
-	
 	
 	
 }

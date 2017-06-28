@@ -61,9 +61,21 @@ public class LectureController {
 		return "/comLecture/LectureInput";
 	}
 	
+	/*
+	* @메소드명: lecInputOk
+	* @역할: LectureService를 호출하여 웹에서 가져온 Lecture등록값을 전달 
+	*
+	* @param   LectureVO:jsp form에서 가져온 값
+	* @return  String:반환하는 경로
+	*/
 	@RequestMapping("/LectureInputOk.lecture")
 	public String lecInputOk( LectureVO vo ){
-		service.lectureInput(vo);
+		int result = service.lectureInput(vo);
+		if(result == 1){
+			System.out.println("DB입력 성공");
+		}else{
+			System.out.println("DB입력 실패");
+		}
 		System.out.println( vo.getL_title() );
 		return "/comLecture/LectureInputOk";
 	}
