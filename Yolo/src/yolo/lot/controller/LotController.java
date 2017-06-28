@@ -12,7 +12,7 @@ public class LotController {
 	
 	@Autowired
 	LotService service;
-	   
+
 	/*
 	* @메소드명: lotinputfirst
 	* @역할: 공간 등록 두번째 페이지로 전환
