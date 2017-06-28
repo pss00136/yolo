@@ -13,5 +13,11 @@ public class ClubController {
 		
 		return "/club/" + url;
 	}
+	
+	@RequestMapping("/ClubInput.club")
+	public String club(){
+		
+		return "/club/ClubInput";
+	}
 
 }
