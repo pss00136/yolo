@@ -2,6 +2,7 @@ package yolo.mypage.appliedlot.dto;
 
 public class appliedLotVO { //BooklotVO와 같은 인자값
 	
+	/* 예약한 공간 */
 	private String bId;       /* 예약 번호 */
 	private String uId;       /* 아이디 */
 	private String priNum;    /* 민간시설 공간 번호 */
