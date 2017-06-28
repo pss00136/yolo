@@ -4,6 +4,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="lecture">
-
+<insert id="insert" parameterType="yolo.lecture.dto.LectureVO">
+INSERT INTO LECTURE(l_title,l_type,l_people) VALUES( #{l_title},#{l_type},#{l_people} )
+</insert>
 
 </mapper>
