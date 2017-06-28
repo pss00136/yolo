@@ -1,5 +1,10 @@
 package yolo.lecture.dto;
 
+import java.io.File;
+import java.io.IOException;
+
+import org.springframework.web.multipart.MultipartFile;
+
 public class LectimageVO {
 	
 	/* 세미나&강연 이미지 */
@@ -52,6 +57,5 @@ public class LectimageVO {
 	public void setLimg_name(String limg_name) {
 		this.limg_name = limg_name;
 	}
-	/* Setter & Getter END */
 
 }

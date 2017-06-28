@@ -139,11 +139,11 @@
 							<div class="form-group">
 								<label class="col-sm-2 control-label">대표이미지</label>
 								<div class="col-sm-8">
-									<input type="file" class="file" multiple data-show-upload="false" data-show-caption="false" data-show-remove="false" accept="image/jpeg,image/png" data-browse-class="btn btn-o btn-default" data-browse-label="이미지 첨부하기">
+									<input type="file" name="thumImgFile" class="file" multiple data-show-upload="false" data-show-caption="false" data-show-remove="false" accept="image/jpeg,image/png" data-browse-class="btn btn-o btn-default" data-browse-label="이미지 첨부하기">
 									<p class="help-block">대표 이미지를 첨부해주세요.</p>
 								</div>
 							</div>
-							<!-- 썸네일 이미지 선택 -->
+							<!-- 설명란 입력 -->
 							<div class="form-group">
 								<label class="col-sm-2 control-label">설명란</label>
 								<div class="col-sm-8">

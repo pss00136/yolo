@@ -5,7 +5,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="lecture">
 <insert id="insert" parameterType="yolo.lecture.dto.LectureVO">
-INSERT INTO LECTURE(l_title,l_type,l_people) VALUES( #{l_title},#{l_type},#{l_people} )
+INSERT INTO LECTURE(l_num, l_title,l_type,l_people) VALUES( LECTURE_NO_SEQ.nextval, #{l_title},#{l_type},#{l_people} )
 </insert>
 
 </mapper>

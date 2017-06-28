@@ -5,6 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import yolo.lecture.dao.LectureDAO;
+import yolo.lecture.dto.LecInputFileVO;
+import yolo.lecture.dto.LectimageVO;
 import yolo.lecture.dto.LectureVO;
 import yolo.lecture.service.LectureService;
 
@@ -23,6 +25,7 @@ public class LectureController {
 	/* 멤버필드 */
 	@Autowired
 	LectureService service;
+	LectimageVO imgvo;
 	
 	/*
 	* @메소드명: lecList
@@ -69,14 +72,15 @@ public class LectureController {
 	* @return  String:반환하는 경로
 	*/
 	@RequestMapping("/LectureInputOk.lecture")
-	public String lecInputOk( LectureVO vo ){
-		int result = service.lectureInput(vo);
+	public String lecInputOk( LectureVO lecvo, LecInputFileVO filevo){
+		imgvo.setLimg_name( filevo.getLimg_name() );
+		imgvo.setLimg_path( filevo.getLimg_path() );
+		int result = service.lectureInput(lecvo,imgvo);
 		if(result == 1){
 			System.out.println("DB입력 성공");
 		}else{
 			System.out.println("DB입력 실패");
 		}
-		System.out.println( vo.getL_title() );
 		return "/comLecture/LectureInputOk";
 	}
 
