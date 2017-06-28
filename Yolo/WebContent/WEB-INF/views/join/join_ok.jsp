@@ -11,7 +11,7 @@
   alert("${message}");
   
   if(${result} > 0 ){
-	  location.href="/Yolo/views/common/main.main";
+	  location.href="/Yolo/common/main.main";
   }else{
 	  history.back();
   }

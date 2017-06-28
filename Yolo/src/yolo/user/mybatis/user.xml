@@ -7,7 +7,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <insert id="userinsert" parameterType="yolo.user.dto.UserVO">
 INSERT INTO USERINFO(U_ID, U_PASS, U_NAME, U_TEL, U_EMAIL, U_BIRTH, U_ADDR)
-VALUES(concat('u_',USER_NO_SEQ.nextval), #{u_pass} , #{u_name}, #{u_tel}, #{u_email}, #{u_birth}, #{u_addr})
+VALUES(#{u_id}, #{u_pass} , #{u_name}, #{u_tel}, #{u_email}, #{u_birth}, #{u_addr})
 </insert>
 	
 </mapper>

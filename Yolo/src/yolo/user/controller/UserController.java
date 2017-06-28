@@ -33,6 +33,7 @@ public class UserController {
 	*/
 	@RequestMapping("join/join_ok.main")
 	public ModelAndView joinUser(UserVO userVO){
+		System.out.println("");
 		ModelAndView mv = new ModelAndView();
 		int result = service.joinUser(userVO);
 		String message ="가입실패";
