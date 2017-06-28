@@ -113,7 +113,6 @@
 									class="col-md-2 btn btn-round btn-o btn-green app">신청하기</a>
 							</div>
 						</div>
-
 					</form>
 				</div>
 			</div>
