@@ -38,13 +38,13 @@ public class ShareController {
 	 */
 	@RequestMapping("ShareInputOk.share")
 	public String shareInput(ShareVO vo){
-		System.out.println(vo.getSl_title());
-//		int result = ShareDAO.shareInput(vo);
-		String message = "입력실패";
-//		if(result > 0){
-//			message = "입력완료";
-//		}
 		
+		int result = ShareDAO.shareInput(vo);
+		String message = "입력실패";
+		if(result > 0){
+			message = "입력완료";
+		}
+		System.out.println(message);
 //		System.out.println(message);
 //		ModelAndView mv = new ModelAndView();
 //		
