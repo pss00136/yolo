@@ -52,7 +52,7 @@
 			<value>classpath*:yolo/mypage/wishlist/mybatis/*.xml</value>
 		</array>
 	</property>
-	<property name="configLocation" value="classpath:yolo/mybatis/config/config.xml"></property>
+	<property name="configLocation" value="classpath:mybatis/config/config.xml"></property>
 </bean>
 
 <bean id="session" class="org.mybatis.spring.SqlSessionTemplate">

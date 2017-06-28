@@ -71,7 +71,13 @@
 				<div class="form-group">
 					<label class="col-sm-2 control-label">옵션</label>
 					<div class="col-sm-10">
-						<input class="form-control" type="text">
+						<select class="form-control" value="option 1">
+							<option>option 1</option>
+							<option>option 2</option>
+							<option>option 3</option>
+							<option>option 4</option>
+							<option>option 5</option>
+						</select>
 					</div>
 				</div>
 				<!-- 옵션폼 -->

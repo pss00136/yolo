@@ -2,11 +2,11 @@ package yolo.market.dto;
 
 public class GoodsImageVO {
 	
-	private String gimgNum;  	/* 이미지 번호 */
-	private String gNum;  		/* 상품 번호 */
-	private String gimgPath; 	/* 이미지 위치 */
-	private String gimgName;  	/* 이미지 이름 */
-	private String gimgType;  	/* 이미지 종류 */
+	private String gimg_num; 	 	/* 이미지 번호 */
+	private String g_num;  			/* 상품 번호 */
+	private String gimg_path; 		/* 이미지 위치 */
+	private String gimg_name;  		/* 이미지 이름 */
+	private String gimg_type;  		/* 이미지 종류 */
 	
 	
 	
@@ -14,51 +14,77 @@ public class GoodsImageVO {
 	public GoodsImageVO(){
 		
 	}
-	
-	public GoodsImageVO(String gimgNum, String gNum, String gimgPath, String gimgName, String gimgType) {
+
+	public GoodsImageVO(String gimg_num, String g_num, String gimg_path, String gimg_name, String gimg_type) {
 		super();
-		this.gimgNum = gimgNum;
-		this.gNum = gNum;
-		this.gimgPath = gimgPath;
-		this.gimgName = gimgName;
-		this.gimgType = gimgType;
+		this.gimg_num = gimg_num;
+		this.g_num = g_num;
+		this.gimg_path = gimg_path;
+		this.gimg_name = gimg_name;
+		this.gimg_type = gimg_type;
 	}
 	/* Constructor end */ 
 	
 	
 	
 	/* Setter & Getter */
-	public String getGimgNum() {
-		return gimgNum;
+	public String getGimg_num() {
+		return gimg_num;
 	}
-	public void setGimgNum(String gimgNum) {
-		this.gimgNum = gimgNum;
+
+
+
+	public void setGimg_num(String gimg_num) {
+		this.gimg_num = gimg_num;
 	}
-	public String getgNum() {
-		return gNum;
+
+
+
+	public String getG_num() {
+		return g_num;
 	}
-	public void setgNum(String gNum) {
-		this.gNum = gNum;
+
+
+
+	public void setG_num(String g_num) {
+		this.g_num = g_num;
 	}
-	public String getGimgPath() {
-		return gimgPath;
+
+
+
+	public String getGimg_path() {
+		return gimg_path;
 	}
-	public void setGimgPath(String gimgPath) {
-		this.gimgPath = gimgPath;
+
+
+
+	public void setGimg_path(String gimg_path) {
+		this.gimg_path = gimg_path;
 	}
-	public String getGimgName() {
-		return gimgName;
+
+
+
+	public String getGimg_name() {
+		return gimg_name;
 	}
-	public void setGimgName(String gimgName) {
-		this.gimgName = gimgName;
+
+
+
+	public void setGimg_name(String gimg_name) {
+		this.gimg_name = gimg_name;
 	}
-	public String getGimgType() {
-		return gimgType;
+
+
+
+	public String getGimg_type() {
+		return gimg_type;
 	}
-	public void setGimgType(String gimgType) {
-		this.gimgType = gimgType;
+
+
+
+	public void setGimg_type(String gimg_type) {
+		this.gimg_type = gimg_type;
 	}
 	
-	
-	
+
 }

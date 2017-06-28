@@ -2,12 +2,12 @@ package yolo.market.dto;
 
 public class RepleVO {
 
-	private String reNum; /* 댓글번호 */
-	private String uId; /* 아이디 */
-	private String gNum;  /* 상품 번호 */
-	private String reStar; /* 별점 */
-	private String reContent;  /* 내용 */
-	private String reRegdate;  /* 등록일 */
+	private String re_num; 			/* 댓글번호 */
+	private String u_id; 			/* 아이디 */
+	private String g_num; 			/* 상품 번호 */
+	private String re_star;			/* 별점 */
+	private String re_content; 	 	/* 내용 */
+	private String re_regdate; 	 	/* 등록일 */
 	
 	
 	
@@ -15,61 +15,92 @@ public class RepleVO {
 	public RepleVO(){
 		
 	}
-	
-	public RepleVO(String reNum, String uId, String gNum, String reStar, String reContent, String reRegdate) {
+
+	public RepleVO(String re_num, String u_id, String g_num, String re_star, String re_content, String re_regdate) {
 		super();
-		this.reNum = reNum;
-		this.uId = uId;
-		this.gNum = gNum;
-		this.reStar = reStar;
-		this.reContent = reContent;
-		this.reRegdate = reRegdate;
+		this.re_num = re_num;
+		this.u_id = u_id;
+		this.g_num = g_num;
+		this.re_star = re_star;
+		this.re_content = re_content;
+		this.re_regdate = re_regdate;
 	}
 	/* Constructor end */	
 	
 	
 	
 	/* Setter & Getter */
-	public String getReNum() {
-		return reNum;
+	public String getRe_num() {
+		return re_num;
 	}
-	public void setReNum(String reNum) {
-		this.reNum = reNum;
+
+
+
+	public void setRe_num(String re_num) {
+		this.re_num = re_num;
 	}
-	public String getuId() {
-		return uId;
+
+
+
+	public String getU_id() {
+		return u_id;
 	}
-	public void setuId(String uId) {
-		this.uId = uId;
+
+
+
+	public void setU_id(String u_id) {
+		this.u_id = u_id;
 	}
-	public String getgNum() {
-		return gNum;
+
+
+
+	public String getG_num() {
+		return g_num;
 	}
-	public void setgNum(String gNum) {
-		this.gNum = gNum;
+
+
+
+	public void setG_num(String g_num) {
+		this.g_num = g_num;
 	}
-	public String getReStar() {
-		return reStar;
+
+
+
+	public String getRe_star() {
+		return re_star;
 	}
-	public void setReStar(String reStar) {
-		this.reStar = reStar;
+
+
+
+	public void setRe_star(String re_star) {
+		this.re_star = re_star;
 	}
-	public String getReContent() {
-		return reContent;
+
+
+
+	public String getRe_content() {
+		return re_content;
 	}
-	public void setReContent(String reContent) {
-		this.reContent = reContent;
+
+
+
+	public void setRe_content(String re_content) {
+		this.re_content = re_content;
 	}
-	public String getReRegdate() {
-		return reRegdate;
+
+
+
+	public String getRe_regdate() {
+		return re_regdate;
 	}
-	public void setReRegdate(String reRegdate) {
-		this.reRegdate = reRegdate;
+
+
+
+	public void setRe_regdate(String re_regdate) {
+		this.re_regdate = re_regdate;
 	}
 	
-	
-	
-	
-	
-	
+
+
+
 }

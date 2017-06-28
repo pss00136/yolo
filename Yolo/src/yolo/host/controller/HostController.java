@@ -28,13 +28,7 @@ public class HostController {
 	   		
    }
    
-   /*
-	* @메소드명: hostinput
-	* @역할: 호스트 정보 등록
-	*
-	* @param   없음
-	* @return  String:반환하는 경로
-	*/
+  
    @RequestMapping("/HostInput.host")	
    public String hostinput(){  
 	   
@@ -42,6 +36,13 @@ public class HostController {
 	   		
    }
    
+   /*
+  	* @메소드명: hostinput
+  	* @역할: 호스트 정보 등록
+  	*
+  	* @param   없음
+  	* @return  String:반환하는 경로
+  	*/
    @RequestMapping("/HostInput_Ok.host")	
    public String hostinputok(HostinfoVO hvo){  
 	   service.hostinputok(hvo);
