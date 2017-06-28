@@ -16,7 +16,7 @@
         <link href="/Yolo/css/bootstrap.css" rel="stylesheet">
         <link href="/Yolo/css/fullscreen-slider.css" rel="stylesheet">
 
-		<!-- app.css 색상 수정본 -->
+		<!-- app.css 색상 수정본 --> 
         <link href="/Yolo/css_yolo/cssView/common/app.css" rel="stylesheet">
         <!-- 추가 CSS -->
         <link href="/Yolo/css_yolo/cssView/common/main_style.css" rel="stylesheet">

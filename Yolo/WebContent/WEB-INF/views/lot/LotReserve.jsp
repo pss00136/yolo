@@ -61,7 +61,7 @@ int intToday = Integer.parseInt(sdf.format(todayCal.getTime()));
 			<!-- -----------------여기에 컨텐츠 div넣으세요----------------- -->
 
 			<div class="home-content">
-				<div class="home-wrapper">
+				<div id="home-wrapper" class="home-wrapper">
 					<div class="row">
 
 						<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
