@@ -8,18 +8,30 @@ import org.springframework.web.servlet.ModelAndView;
 import yolo.host.dto.HostinfoVO;
 import yolo.host.service.HostService;
 
-
+/*
+* @클래스명: HostController
+*
+* @version     1.0 17/06/28
+* @author      김일주
+* @see         yolo.host.controller
+* @since       JDK1.8
+*/
 @Controller
 @RequestMapping("host")
 public class HostController {
 	
+	/* 멤버필드 */
 	@Autowired
 	HostService service;
 	
-	/* 멤버필드 */
 	
-	
- 
+	/*
+	* @메소드명: hostmain
+	* @역할: views/host/HostMain 시작 화면
+	*
+	* @param   없음
+	* @return  String:반환하는 경로
+	*/
    @RequestMapping("/HostMain.host")	
    public String hostmain(){
 	  	   
@@ -28,7 +40,13 @@ public class HostController {
 	   		
    }
    
-  
+   /*
+	* @메소드명: hostinput
+	* @역할: views/host/HostInput으로 페이지 전환
+	*
+	* @param   없음
+	* @return  String:반환하는 경로
+	*/
    @RequestMapping("/HostInput.host")	
    public String hostinput(){  
 	   
@@ -37,10 +55,10 @@ public class HostController {
    }
    
    /*
-  	* @메소드명: hostinput
-  	* @역할: 호스트 정보 등록
+  	* @메소드명: hostinputok
+  	* @역할: 호스트 등록후 views/host/hostMain으로 페이지 전환
   	*
-  	* @param   없음
+  	* @param   HostinfoVO: jsp form에서 가져온 값
   	* @return  String:반환하는 경로
   	*/
    @RequestMapping("/HostInput_Ok.host")	
@@ -60,5 +78,5 @@ public class HostController {
 	   return "/host/HostBook.host";
    }
    
-   //문의함 남았다   
+  
 }
