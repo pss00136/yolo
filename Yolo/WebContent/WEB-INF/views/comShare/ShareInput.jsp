@@ -18,7 +18,7 @@
 									<div class="form-group">
 										<label class="col-sm-2 control-label">글 제목</label>
 										<div class="col-sm-9">
-											<input name="slTitle" id="slTitle" class="form-control input-sm" type="text">
+											<input name="sl_title" id="sl_title" class="form-control input-sm" type="text">
 										</div>
 									</div>
 									<!-- 예약공간선택 -->
@@ -46,7 +46,7 @@
 									<div class="form-group">
 										<label class="col-sm-2 control-label">글내용</label>
 										<div class="col-sm-9">
-											<textarea name="slContent" id="slContent" class="form-control" rows="15"></textarea>
+											<textarea name="sl_content" id="sl_content" class="form-control" rows="15"></textarea>
 										</div>
 									</div>
 									<!-- 상품 등록하러 가기 버튼 -->

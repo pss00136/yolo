@@ -104,110 +104,24 @@
                     <h3>상세설명</h3>
                     <p>이 강좌는 해쉬에서 디자인된 원목 스툴만들기 목공예 기초과정입니다. 원목의 특징, 수종, 구조의 체계적인 이론을 배우며 원목가공에 필요한 기계 및 장비사용법과 안전사항을 숙지합니다. 가구제작에 필수적인 재단방법, 결합방법, 마감등 체계적으로 배울 수 있는 정규교육과정입니다.</p>
                 </div>
-<!--                 <div class="share"> -->
-<!--                     <h3>Share on Social Networks</h3> -->
-<!--                     <div class="row"> -->
-<!--                         <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 shareItem"> -->
-<!--                             <a href="#" class="btn btn-sm btn-round btn-o btn-facebook"><span class="fa fa-facebook"></span> Facebook</a> -->
-<!--                         </div> -->
-<!--                         <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 shareItem"> -->
-<!--                             <a href="#" class="btn btn-sm btn-round btn-o btn-twitter"><span class="fa fa-twitter"></span> Twitter</a> -->
-<!--                         </div> -->
-<!--                         <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 shareItem"> -->
-<!--                             <a href="#" class="btn btn-sm btn-round btn-o btn-google"><span class="fa fa-google-plus"></span> Google+</a> -->
-<!--                         </div> -->
-<!--                         <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 shareItem"> -->
-<!--                             <a href="#" class="btn btn-sm btn-round btn-o btn-pinterest"><span class="fa fa-pinterest"></span> Pinterest</a> -->
-<!--                         </div> -->
-<!--                     </div> -->
-<!--                 </div> -->
-                <div class="comments">
-                    <h3><span>4</span> Comments</h3>
-                    <div class="comment">
-                        <div class="commentAvatar">
-                            <img class="avatar" src="/Yolo/images/avatar-3.png" alt="avatar">
-                            <div class="commentArrow"><span class="fa fa-caret-left"></span></div>
+                <div class="share">
+                    <h3>모임 정보 공유하기</h3>
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 shareItem">
+                            <a href="#" class="btn btn-sm btn-round btn-o btn-facebook"><span class="fa fa-facebook"></span> Facebook</a>
                         </div>
-                        <div class="commentContent">
-                            <div class="commentName">Rust Cohle</div>
-                            <div class="commentBody">
-                                It is a long established fact that a reader will be distracted by the readable content
-                            </div>
-                            <div class="commentActions">
-                                <div class="commentTime"><span class="icon-clock"></span> 1 day ago</div>
-                                <ul>
-                                    <li><a href="#"><span class="icon-action-undo"></span></a></li>
-                                    <li><a href="#"><span class="icon-like"></span> 13</a></li>
-                                </ul>
-                                <div class="clearfix"></div>
-                            </div>
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 shareItem">
+                            <a href="#" class="btn btn-sm btn-round btn-o btn-twitter"><span class="fa fa-twitter"></span> Twitter</a>
                         </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="comment reply">
-                        <div class="commentAvatar">
-                            <img class="avatar" src="/Yolo/images/avatar-1.png" alt="avatar">
-                            <div class="commentArrow"><span class="fa fa-caret-left"></span></div>
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 shareItem">
+                            <a href="#" class="btn btn-sm btn-round btn-o btn-google"><span class="fa fa-google-plus"></span> Google+</a>
                         </div>
-                        <div class="commentContent">
-                            <div class="commentName">John Smith</div>
-                            <div class="commentBody">
-                                Comment posted by me. I have the power to remove it.
-                            </div>
-                            <div class="commentActions">
-                                <div class="commentTime"><span class="icon-clock"></span> 2 hours ago</div>
-                                <ul>
-                                    <li><a href="#"><span class="fa fa-trash-o"></span></a></li>
-                                </ul>
-                                <div class="clearfix"></div>
-                            </div>
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 shareItem">
+                            <a href="#" class="btn btn-sm btn-round btn-o btn-pinterest"><span class="fa fa-pinterest"></span> Pinterest</a>
                         </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="comment">
-                        <div class="commentAvatar">
-                            <img class="avatar" src="/Yolo/images/avatar-5.png" alt="avatar">
-                            <div class="commentArrow"><span class="fa fa-caret-left"></span></div>
-                        </div>
-                        <div class="commentContent">
-                            <div class="commentName">Alex Rogers</div>
-                            <div class="commentBody">
-                                Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit
-                            </div>
-                            <div class="commentActions">
-                                <div class="commentTime"><span class="icon-clock"></span> 20 minutes ago</div>
-                                <ul>
-                                    <li><a href="#"><span class="icon-action-undo"></span></a></li>
-                                    <li><a href="#"><span class="icon-like"></span> 13</a></li>
-                                </ul>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="comment">
-                        <div class="commentAvatar">
-                            <img class="avatar" src="/Yolo/images/avatar-2.png" alt="avatar">
-                            <div class="commentArrow"><span class="fa fa-caret-left"></span></div>
-                        </div>
-                        <div class="commentContent">
-                            <div class="commentName">Jane Smith</div>
-                            <div class="commentBody">
-                                Lorem ipsum dolor sit amet, consecteter adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-                            </div>
-                            <div class="commentActions">
-                                <div class="commentTime"><span class="icon-clock"></span> 5 minutes ago</div>
-                                <ul>
-                                    <li><a href="#"><span class="icon-action-undo"></span></a></li>
-                                    <li><a href="#"><span class="icon-like"></span> 13</a></li>
-                                </ul>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
                     </div>
                 </div>
-<!--             </div> -->
+            </div>
             <div class="commentsFormWrapper">
                 <div class="cfAvatar">
                     <img class="avatar" src="/Yolo/images/avatar-1.png" alt="avatar">

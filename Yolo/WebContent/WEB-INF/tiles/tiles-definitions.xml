@@ -36,6 +36,8 @@
  	<put-attribute name="header" value="/WEB-INF/template/default/header.jsp"></put-attribute>
  	<put-attribute name="menu" value="/WEB-INF/template/default/menu.jsp"></put-attribute>
  	<put-attribute name="footer" value="/WEB-INF/template/default/footer.jsp"></put-attribute>
+ 	<put-attribute name="login" value="/WEB-INF/template/default/login.jsp"></put-attribute>
+ 	<put-attribute name="join" value="/WEB-INF/template/default/join.jsp"></put-attribute>
  </definition>
  
  <definition name='/*/*.map' extends='mapTemplate'>

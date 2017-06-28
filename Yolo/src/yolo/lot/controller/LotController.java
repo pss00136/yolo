@@ -34,12 +34,12 @@ public class LotController {
 	   
 	   @RequestMapping("/LotList.lot")
 		public String lotlist(){
-			return "/lot/LotList";
+			return "/lot/LotList.map";
 		}
 	   
 	   @RequestMapping("/LotView.lot")
 		public String lotview(){
-			return "/lot/LotView";
+			return "/lot/LotView.map";
 		}
 	   
 	   

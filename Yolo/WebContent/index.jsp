@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
         <title>YOLO</title>
-	
+		
 		<!-- 기본 CSS -->
         <link href="/Yolo/css/font-awesome.css" rel="stylesheet">
         <link href="/Yolo/css/simple-line-icons.css" rel="stylesheet">

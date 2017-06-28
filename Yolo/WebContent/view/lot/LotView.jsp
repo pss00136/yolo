@@ -221,7 +221,7 @@
 		</div>
 	</div>
 	<div id="wrapper">
-		<div id="content" class="mob-max">
+		<div id="cont	ent" class="mob-max">
 			<div class="singleTop">
 				<div id="carouselFull" class="carousel slide" data-ride="carousel">
 					<ol class="carousel-indicators">
