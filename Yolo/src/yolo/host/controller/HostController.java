@@ -47,7 +47,7 @@ public class HostController {
    public String hostinputok(HostinfoVO hvo){  
 	   service.hostinputok(hvo);
 	   System.out.println(hvo.getH_name() + "그리고" + hvo.getH_content());
-	   return "/host/HostInput_Ok.host";  		
+	   return "/host/HostMain.host";  		
    }
 
    @RequestMapping("/HostMyLot.host")

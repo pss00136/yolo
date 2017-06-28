@@ -3,7 +3,7 @@
 
 <link href="/Yolo/css_yolo/cssView/Host/host.css" rel="stylesheet">
 
-            	<div id="hero-container" style="background-image: url("Yolo/images_yolo/lot/1.PNG");">
+            	<div id="hero-container" style="background-image:url('/Yolo/images_yolo/host/hostmain.jpg'); background-size: 100%;">
 		           
 		            <div class="home-caption">
 		                <div class="home-title">자신의 공간을 공유해보세요!</div>
