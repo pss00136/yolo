@@ -1,5 +1,6 @@
 package yolo.club.service;
 
+import yolo.club.dto.ClubImageVO;
 import yolo.club.dto.ClubVO;
 
 /*
@@ -12,6 +13,6 @@ import yolo.club.dto.ClubVO;
 */
 public interface ClubService {
 	
-	int clubinput( ClubVO clubVO);
+	int clubinput( ClubVO clubVO, ClubImageVO cimgVO);
 
 }

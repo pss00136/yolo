@@ -7,4 +7,10 @@
  
  <context:component-scan base-package="yolo.club"></context:component-scan>
 
+<!-- 파일업로드 : MultipartResolver 빈 생성 -->
+<bean id = 'multipartResolver' 
+class = "org.springframework.web.multipart.commons.CommonsMultipartResolver"></bean>
+
 </beans>
+
+

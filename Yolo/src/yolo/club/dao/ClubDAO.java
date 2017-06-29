@@ -4,6 +4,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import yolo.club.dto.ClubImageVO;
 import yolo.club.dto.ClubVO;
 
 /*
@@ -27,9 +28,15 @@ public class ClubDAO {
 	* @param   ClubVO
 	* @return  int: DB insert쿼리문 결과값
 	*/
-	public int clubinput(ClubVO clubVO){
+	public int clubinput(ClubVO clubVO, ClubImageVO cimgVO){
 		
 		int result = session.insert("club.clubInsert", clubVO);
+		result += session.insert("club.clubimgInsert", cimgVO);
+		if(result > 1){
+			session.commit();
+		}else{
+			session.rollback();
+		}
 		
 		return result;
 	}
