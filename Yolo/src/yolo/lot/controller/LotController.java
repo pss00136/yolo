@@ -1,5 +1,7 @@
 package yolo.lot.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,7 +39,7 @@ public class LotController {
 	}
 	
 	 @RequestMapping("lot/LotInputSecond.lot")
-		public ModelAndView lotinputfirst(PrivatelotVO priVO, PrivateimageVO primgVO){	    
+		public ModelAndView lotinputfirst(PrivatelotVO priVO, PrivateimageVO primgVO, HttpSession session ){	    
 		    service.lotinputfirst(priVO,primgVO);
 		    ModelAndView mv = new ModelAndView();
 		    mv.setViewName("/lot/LotInputSecond");
