@@ -26,7 +26,7 @@ public class HostinfoVO {
 			this.h_iname = file.getOriginalFilename();
 			//this.b_fsize = file.getSize();
 			
-			File f = new File("C:\\Users\\gkack\\Documents\\yolo\\Yolo\\WebContent\\upload\\host\\"+h_iname);
+			File f = new File("C:\\Users\\gkack\\git\\yolo\\Yolo\\WebContent\\upload\\host\\"+h_iname);
 			
 			try {
 				file.transferTo(f);

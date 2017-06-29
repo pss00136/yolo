@@ -11,7 +11,7 @@
 		REGISTER</h4>
 	<div class="panel-body">
 
-		<form class="form-horizontal" method="post" role="form" action="HostInput_Ok.host">
+		<form class="form-horizontal" method="post" role="form" action="/Yolo/host/HostInput_Ok.host" enctype="multipart/form-data">
 			<!-- 호스트 이미지 -->
 			<div class="form-group">
 				<label class="col-sm-2 control-label"> 호스트 이미지 </label>
