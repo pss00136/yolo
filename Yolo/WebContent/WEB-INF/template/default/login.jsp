@@ -13,14 +13,13 @@
 					<h4 class="modal-title" id="signinLabel">로그인</h4>
 				</div>
 				<div class="modal-body">
-					<form role="form">
+					 <form role="form" method="post" action="/Yolo/login/login.main">
 
 						<div class="form-group">
-							<input type="text" placeholder="ID" class="form-control">
+							<input type="text" placeholder="ID" name="u_id" class="form-control">
 						</div>
 						<div class="form-group">
-							<input type="password" placeholder="Password"
-								class="form-control">
+							<input type="password" placeholder="Password" name="u_pass" class="form-control">
 						</div>
 						<div class="form-group">
 							<div class="row">
@@ -44,7 +43,7 @@
 						</div>
 						<div class="form-group">
 							<div class="btn-group-justified">
-								<a href="explore.html" class="btn btn-lg btn-green">LOGIN</a>
+								<button type="submit" class="btn btn-lg btn-green">LOGIN</button>
 							</div>
 						</div>
 						<p class="help-block">

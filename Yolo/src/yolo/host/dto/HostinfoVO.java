@@ -1,5 +1,10 @@
 package yolo.host.dto;
 
+import java.io.File;
+import java.io.IOException;
+
+import org.springframework.web.multipart.MultipartFile;
+
 public class HostinfoVO {
 	
 	private String h_num;     /* 호스트번호 */
@@ -8,6 +13,32 @@ public class HostinfoVO {
 	private String h_content; /* 호스트 소개 */
 	private String h_ipath;   /* 호스트 이미지 위치 */
 	private String h_iname;   /* 호스트 이미지 이름 */
+	MultipartFile file;	// write.jsp에 파일첨부시 name="file"과 동일한 변수명
+	
+	public MultipartFile getFile() {
+		return file;
+	}
+	public void setFile(MultipartFile file) {
+		this.file = file;
+		
+		// 업로드 파일 접근
+		if(! file.isEmpty()){
+			this.h_iname = file.getOriginalFilename();
+			//this.b_fsize = file.getSize();
+			
+			File f = new File("C:\\Users\\gkack\\Documents\\yolo\\Yolo\\WebContent\\upload\\host\\"+h_iname);
+			
+			try {
+				file.transferTo(f);
+				
+			} catch (IllegalStateException e) {				
+				e.printStackTrace();
+			} catch (IOException e) {
+				
+				e.printStackTrace();
+			}
+		}
+	}
 	
 	/* Constructor */
 	public HostinfoVO(){}
@@ -22,8 +53,10 @@ public class HostinfoVO {
 		this.h_iname = h_iname;
 	}
 	/* End of Constructor */
-
+	
 	/* Getters and Setters */
+	
+	
 	public String getH_num() {
 		return h_num;
 	}

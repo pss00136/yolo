@@ -12,6 +12,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <select id="usercheck" parameterType="yolo.user.dto.UserVO" resultType="yolo.user.dto.UserVO">
 	SELECT * FROM USERINFO WHERE U_ID= #{u_id}
+	<if test="u_pass != null">
+		AND U_PASS =#{u_pass}
+	</if>
 </select>
 	
 </mapper>

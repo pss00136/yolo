@@ -1,6 +1,8 @@
 package yolo.user.controller;
 
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -62,8 +64,12 @@ public class UserController {
 	}
 	
 	@RequestMapping("login/login.main")
-	public String login(UserVO userVO){
-		
+	public String login(UserVO userVO, HttpSession session){
+		UserVO reVO = service.loginUser(userVO);
+		if(reVO != null){
+			session.setAttribute("u_id",reVO.getU_id());
+			System.out.println("로그인 완료");
+		}
 		return "/common/main";
 	}
 }

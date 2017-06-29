@@ -16,7 +16,7 @@
 			<div class="form-group">
 				<label class="col-sm-2 control-label"> 호스트 이미지 </label>
 				<div class="col-sm-2">
-					<input type="file" name="h_ipath" id="ImageUpload"
+					<input type="file" name="file" id="ImageUpload"
 						style="display: none;" /> <img src="" id="ImagePreview" alt=""
 						class="img-circle" /><br />
 

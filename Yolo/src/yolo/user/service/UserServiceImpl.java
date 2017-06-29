@@ -21,5 +21,9 @@ public class UserServiceImpl implements UserService {
 	public UserVO idCheck(UserVO vo) {
 		return udao.idCheck(vo);
 	}
+	
+	public UserVO loginUser(UserVO vo) {
+		return udao.loginUser(vo);
+	}
 
 }

@@ -61,5 +61,8 @@
 	<constructor-arg ref="factoryBean"></constructor-arg>
 </bean>
 
+<!--  파일 업로드 : MultipartResolver 빈 생성 -->
+<bean id='multipartResolver' class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
+
 
 </beans>

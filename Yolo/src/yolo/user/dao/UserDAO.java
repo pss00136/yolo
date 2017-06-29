@@ -34,7 +34,26 @@ public class UserDAO {
 		
 	}
 	
+	/*
+	* @메소드명: idCheck
+	* @역할: UserService에서 전달받은 값을 DB에 있는 id값을 비교
+	*
+	* @param   UserVO
+	* @return  UserVO: DB selectOne쿼리문 결과값
+	*/
 	public UserVO idCheck(UserVO userVO) {
+		UserVO vo = session.selectOne("user.usercheck", userVO);
+		return vo;
+	}
+	
+	/*
+	* @메소드명: idCheck
+	* @역할: UserService에서 전달받은 값을 DB에 있는 id값과 pass를 비교
+	*
+	* @param   UserVO
+	* @return  UserVO: DB selectOne쿼리문 결과값
+	*/
+	public UserVO loginUser(UserVO userVO){
 		UserVO vo = session.selectOne("user.usercheck", userVO);
 		return vo;
 	}
