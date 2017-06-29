@@ -17,7 +17,7 @@
 	<!------- 공간 유형 선택 ----------->
 	<div class="panel-heading">공간 유형</div>
 	<div class="panel-body">
-		<form class="form-horizontal" method="post" action="/Yolo/lot/LotInputSecond.lot">
+		<form class="form-horizontal" method="post" enctype="multipart/form-data" action="/Yolo/lot/LotInputSecond.lot">
 			<!-- 공간유형 선택 -->
 			<div class="form-group">
 				<div class="col-sm-7">

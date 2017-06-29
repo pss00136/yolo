@@ -26,8 +26,17 @@ public interface UserService {
 	* @역할: UserController에서 전달받은 값을 DAO로 전달, 결과값 리턴
 	*
 	* @param   UserVO:UserController에서 전달받은 값
-	* @return  int : 결과값
+	* @return  UserVO : 결과값
 	*/
 	public UserVO idCheck(UserVO vo);
+	
+	/*
+	* @메소드명:  idCheck
+	* @역할: UserController에서 전달받은 값을 DAO로 전달, 결과값 리턴
+	*
+	* @param   UserVO:UserController에서 전달받은 값
+	* @return  int : 결과값
+	*/
+	public UserVO loginUser(UserVO vo);
 
 }

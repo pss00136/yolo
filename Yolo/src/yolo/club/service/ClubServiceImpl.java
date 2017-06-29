@@ -13,9 +13,9 @@ public class ClubServiceImpl implements ClubService {
 	ClubDAO clubdao;
 	
 	@Override
-	public int clubinput(ClubVO vo) {
-		System.out.println( "파일이름:" + vo.getC_title() );
-		int result = clubdao.clubinput(vo);
+	public int clubinput(ClubVO clubVO) {
+		System.out.println( "파일이름:" + clubVO.getC_title() );
+		int result = clubdao.clubinput(clubVO);
 		
 		return result;
 	}

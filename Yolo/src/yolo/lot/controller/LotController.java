@@ -1,11 +1,11 @@
 package yolo.lot.controller;
 
-import javax.servlet.http.HttpSession;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.support.SessionStatus;
 
 import yolo.lot.dto.PrivateimageVO;
 import yolo.lot.dto.PrivatelotVO;
@@ -20,11 +20,16 @@ import yolo.lot.service.LotService;
 * @since       JDK1.8
 */
 @Controller 
+@SessionAttributes("privateVO")
 public class LotController {
 	
 	@Autowired
 	LotService service;
 	
+	 @ModelAttribute("privateVO")
+	   public PrivatelotVO saveSession(){
+	      return new PrivatelotVO();
+	   }
 
 	/*
 	* @메소드명: lotInputFirst, lotInputSecond
@@ -38,18 +43,19 @@ public class LotController {
 		return "/lot/LotInputFirst";
 	}
 	
-	 @RequestMapping("lot/LotInputSecond.lot")
-		public ModelAndView lotinputfirst(PrivatelotVO priVO, PrivateimageVO primgVO, HttpSession session ){	    
-		    service.lotinputfirst(priVO,primgVO);
-		    ModelAndView mv = new ModelAndView();
-		    mv.setViewName("/lot/LotInputSecond");
-		    
-			return mv;
+	 @RequestMapping("lot/LotInputSecond.lot" )
+		public String lotinputfirst(@ModelAttribute("privateVO") PrivatelotVO privateVO, PrivateimageVO primgVO){	    
+//		    service.lotinputfirst(priVO,primgVO);
+//		    session.setAttribute("primgVO", primgVO);
+		   
+			return "/lot/LotInputSecond";
 		}
 	 
 	 @RequestMapping("lot/LotInputLast.lot")
-		public String lotinputsecond(){
-		 
+		public String lotinputsecond(@ModelAttribute("privateVO") PrivatelotVO privateVO, SessionStatus sessStatus){
+//		 PrivateimageVO primgVO = (PrivateimageVO)session.getAttribute("primgVO");
+		 System.out.println(privateVO.getPri_title() + " > " + privateVO.getPri_minpeople());
+		 sessStatus.setComplete(); 
 			return "/lot/LotList.map";
 		}
 	 

@@ -27,9 +27,9 @@ public class ClubDAO {
 	* @param   ClubVO
 	* @return  int: DB insert쿼리문 결과값
 	*/
-	public int clubinput(ClubVO vo){
+	public int clubinput(ClubVO clubVO){
 		
-		int result = session.insert("club.clubInsert", vo);
+		int result = session.insert("club.clubInsert", clubVO);
 		
 		return result;
 	}

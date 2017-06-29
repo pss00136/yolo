@@ -1,5 +1,7 @@
 package yolo.club.controller;
 
+import javax.sound.midi.Synthesizer;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -73,9 +75,15 @@ public class ClubController {
 	* @return  String:반환하는 경로
 	*/
 	@RequestMapping("/ClubInputOk.club")
-	public String clubInputOk( ClubVO clubVO){
-		System.out.println("모임공간:"+clubVO.getC_title());
+	public String clubInputOk( ClubVO clubVO, String c_dateFrom, String c_timeFrom, 
+			String c_dateTo, String c_timeTo, String c_recruitFrom, String c_recruitTo ){
 		System.out.println("모임공간:"+clubVO.getC_recruit());
+		String c_date = c_dateFrom + "/" + c_timeFrom + "~" + c_dateTo + "/" + c_timeTo;
+		String c_recruit = c_recruitFrom + "~" + c_recruitTo;
+		clubVO.setC_date(c_date);
+		clubVO.setC_recruit(c_recruit);
+		System.out.println("시작~끝"+c_date);
+		System.out.println("시작~끝"+c_recruit);
 		int result = service.clubinput(clubVO);
 		if( result == 1){
 			System.out.println("DB입력 성공");

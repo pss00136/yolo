@@ -10,7 +10,7 @@
 				<h4 style="text-align: center; margin-bottom: 30px; border-bottom: 1px solid silver; padding-bottom: 10px;">공 간 등 록</h4>
 				<!-- 사업자 등록 여부 입력 -->
 				<div class="panel-heading">사업자 등록 여부</div>
-				<form class="form-horizontal" method="post" action="/Yolo/lot/LotInputLast.lot">
+				<form class="form-horizontal" method="post" enctype="multipart/form-data" action="/Yolo/lot/LotInputLast.lot">
 				<div class="panel-body">
 					<!-- 입력 폼 -->
 						<!-- 사업자/비사업자 선택 -->
@@ -129,11 +129,11 @@
 						<div class="form-group">
 							<label class="col-sm-2 control-label">주중 기본</label>
 							<div class="col-sm-3">
-								<input type="text" name="uId" class="form-control" value="">
+								<input type="text" name="pri_weekprice" class="form-control" value="">
 							</div>
 							<label class="col-sm-2 control-label align-right">주말/휴일 기본</label>
 							<div class="col-sm-3">
-								<input type="text" name="uId" class="form-control" value="">
+								<input type="text" name="pri_weekendprice" class="form-control" value="">
 							</div>														
 						</div>				
 				</div><!-- 가격 기준 등록 끝 -->	
@@ -221,11 +221,11 @@
 							<div class="form-group">
 								<label class="col-sm-1 control-label">*최소 인원</label>
 								<div class="col-sm-2">
-									<input type="text" name="uId" class="form-control" value="">
+									<input type="text" name="pri_minpeople" class="form-control" value="">
 								</div>
 								<label class="col-sm-1 control-label align-right">*최대 인원</label>
 								<div class="col-sm-2">
-									<input type="text" name="uId" class="form-control" value="">
+									<input type="text" name="pri_maxpeople" class="form-control" value="">
 								</div>														
 							</div>
 							<label class="col-sm-10 control-label"></label>								
