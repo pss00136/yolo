@@ -4,7 +4,9 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 import yolo.lot.dto.PrivateimageVO;
@@ -20,11 +22,16 @@ import yolo.lot.service.LotService;
 * @since       JDK1.8
 */
 @Controller 
+@SessionAttributes("priVO")
 public class LotController {
 	
 	@Autowired
 	LotService service;
 	
+	 @ModelAttribute("priVO")
+	   public PrivatelotVO saveSession(){
+	      return new PrivatelotVO();
+	   }
 
 	/*
 	* @메소드명: lotInputFirst, lotInputSecond
@@ -39,8 +46,9 @@ public class LotController {
 	}
 	
 	 @RequestMapping("lot/LotInputSecond.lot")
-		public ModelAndView lotinputfirst(PrivatelotVO priVO, PrivateimageVO primgVO, HttpSession session ){	    
-		    service.lotinputfirst(priVO,primgVO);
+		public ModelAndView lotinputfirst(@ModelAttribute("priVO") PrivatelotVO privatelotVO, PrivateimageVO primgVO, HttpSession session ){	    
+//		    service.lotinputfirst(priVO,primgVO);
+		    session.setAttribute("primgVO", primgVO);
 		    ModelAndView mv = new ModelAndView();
 		    mv.setViewName("/lot/LotInputSecond");
 		    
@@ -48,8 +56,9 @@ public class LotController {
 		}
 	 
 	 @RequestMapping("lot/LotInputLast.lot")
-		public String lotinputsecond(){
-		 
+		public String lotinputsecond(@ModelAttribute("priVO") PrivatelotVO privatelotVO ,HttpSession session){
+		 PrivateimageVO primgVO = (PrivateimageVO)session.getAttribute("primgVO");
+		 System.out.println(privatelotVO.getPri_title() + ">" + privatelotVO.getPri_minpeople());
 			return "/lot/LotList.map";
 		}
 	 

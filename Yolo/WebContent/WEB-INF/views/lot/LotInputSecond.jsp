@@ -129,11 +129,11 @@
 						<div class="form-group">
 							<label class="col-sm-2 control-label">주중 기본</label>
 							<div class="col-sm-3">
-								<input type="text" name="uId" class="form-control" value="">
+								<input type="text" name="pri_weekprice" class="form-control" value="">
 							</div>
 							<label class="col-sm-2 control-label align-right">주말/휴일 기본</label>
 							<div class="col-sm-3">
-								<input type="text" name="uId" class="form-control" value="">
+								<input type="text" name="pri_weekendprice" class="form-control" value="">
 							</div>														
 						</div>				
 				</div><!-- 가격 기준 등록 끝 -->	
@@ -221,11 +221,11 @@
 							<div class="form-group">
 								<label class="col-sm-1 control-label">*최소 인원</label>
 								<div class="col-sm-2">
-									<input type="text" name="uId" class="form-control" value="">
+									<input type="text" name="pri_minpeople" class="form-control" value="">
 								</div>
 								<label class="col-sm-1 control-label align-right">*최대 인원</label>
 								<div class="col-sm-2">
-									<input type="text" name="uId" class="form-control" value="">
+									<input type="text" name="pri_maxpeople" class="form-control" value="">
 								</div>														
 							</div>
 							<label class="col-sm-10 control-label"></label>								
