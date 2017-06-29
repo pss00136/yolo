@@ -20,25 +20,18 @@ import yolo.share.dto.ShareVO;
 @Controller
 @RequestMapping("comShare")
 public class ShareController {
-	
+
+	/* 멤버필드 */
 	@Autowired
 	ShareDAOImpl ShareDAO;
 	
 	
-	/* 멤버필드 */
-	
-	@RequestMapping("ShareInput.share")
-	public String shareInputPage(){
-		
-		return "/comShare/ShareInput";
-	}
 	
 	/*
 	 * @메소드명: shareInput
 	 * @역활 : 쉐어링 글등록하고 ShareList로 페이지 전환
-	 * 
-	 *  @param 없음
-	 *  @return ModelAndView로 반환
+	 * @param 없음
+	 * @return ModelAndView로 반환
 	 */
 	@RequestMapping("ShareInputOk.share")
 	public String shareInput(ShareVO vo){
@@ -49,17 +42,12 @@ public class ShareController {
 			message = "입력완료";
 		}
 		System.out.println(message);
-//		System.out.println(message);
-//		ModelAndView mv = new ModelAndView();
-//		
-//		mv.setViewName("/comShare/ShareList.jsp");
 		return "/comShare/ShareList";
 	}
 	
 	/*
 	 * @메소드명: shareView
 	 * @역활 : url 따라서 페이지 전환
-	 * 
 	 * @param 없음
 	 * @return	String:반환하는 경로
 	 */

@@ -31,7 +31,7 @@
 			<!-- 리스트 목록 -->
 			<div class="bounds padding">
 				<!-- 리스트 -->
-				<a href="/Yolo/view/comLecture/LectureView.jsp" class="item zoom active">
+				<a href="/Yolo/view/comShare/ShareDetail.jsp" class="item zoom active">
 					<div class="column">
 						<div class="image">
 							<img id="ctl00_body_rptProducts_ctl00_imgProduct"
@@ -56,7 +56,7 @@
 					</div>
 				</a><!-- 리스트의 끝 -->
 				<!-- 리스트 -->
-				<a href="/Yolo/view/comLecture/LectureView.jsp" class="item zoom active">
+				<a href="/Yolo/view/comShare/ShareDetail.jsp" class="item zoom active">
 					<div class="column">
 						<div class="image">
 							<img id="ctl00_body_rptProducts_ctl00_imgProduct"
@@ -81,7 +81,7 @@
 					</div>
 				</a><!-- 리스트의 끝 -->
 				<!-- 리스트 -->
-				<a href="/Yolo/view/comLecture/LectureView.jsp" class="item zoom active">
+				<a href="/Yolo/view/comShare/ShareDetail.jsp" class="item zoom active">
 					<div class="column">
 						<div class="image">
 							<img id="ctl00_body_rptProducts_ctl00_imgProduct"
@@ -106,7 +106,7 @@
 					</div>
 				</a><!-- 리스트의 끝 -->
 				<!-- 리스트 -->
-				<a href="/Yolo/view/comLecture/LectureView.jsp" class="item zoom active">
+				<a href="/Yolo/view/comShare/ShareDetail.jsp" class="item zoom active">
 					<div class="column">
 						<div class="image">
 							<img id="ctl00_body_rptProducts_ctl00_imgProduct"
