@@ -12,6 +12,6 @@ import yolo.club.dto.ClubVO;
 */
 public interface ClubService {
 	
-	int clubinput( ClubVO vo);
+	int clubinput( ClubVO clubVO);
 
 }
