@@ -31,7 +31,7 @@
 			<!-- 리스트 목록 -->
 			<div class="bounds padding">
 				<!-- 리스트 -->
-				<a href="/Yolo/view/comShare/ShareDetail.jsp" class="item zoom active">
+				<a href="/Yolo/comShare/ShareDetail.share" class="item zoom active">
 					<div class="column">
 						<div class="image">
 							<img id="ctl00_body_rptProducts_ctl00_imgProduct"
@@ -45,18 +45,18 @@
 					</div>
 					<div class="column">
 						<div class="text">
-							<h2>스터디룸 쉐어링</h2>
+							<h2>스터디룸 쉐어해요!</h2>
 							<hr/>
 							<p>
-								<span class="text-smaller">스터디룸 쉐어해요!</span>
+								<span class="text-smaller">스터디룸 쉐어링</span>
 							</p>
 							<p>by LeeYJ</p>
-							<p style="float:right;">17.07.12 / 3pm ~ 9pm</p>
+							<p style="float:right;">2017-07-12 / 3pm ~ 9pm</p>
 						</div>
 					</div>
 				</a><!-- 리스트의 끝 -->
 				<!-- 리스트 -->
-				<a href="/Yolo/view/comShare/ShareDetail.jsp" class="item zoom active">
+				<a href="/Yolo/comShare/ShareDetail.share" class="item zoom active">
 					<div class="column">
 						<div class="image">
 							<img id="ctl00_body_rptProducts_ctl00_imgProduct"
@@ -70,18 +70,18 @@
 					</div>
 					<div class="column">
 						<div class="text">
-							<h2>파티룸 쉐어링</h2>
+							<h2>파티룸 쉐어해요~~~</h2>
 							<hr/>
 							<p>
-								<span class="text-smaller">파티룸 쉐어해요~~~</span>
+								<span class="text-smaller">파티룸 쉐어링</span>
 							</p>
 							<p>by LeeYJ</p>
-							<p style="float:right;">17.07.12 / 3pm ~ 9pm</p>
+							<p style="float:right;">2017-07-12 / 3pm ~ 9pm</p>
 						</div>
 					</div>
 				</a><!-- 리스트의 끝 -->
 				<!-- 리스트 -->
-				<a href="/Yolo/view/comShare/ShareDetail.jsp" class="item zoom active">
+				<a href="/Yolo/comShare/ShareDetail.share" class="item zoom active">
 					<div class="column">
 						<div class="image">
 							<img id="ctl00_body_rptProducts_ctl00_imgProduct"
@@ -95,18 +95,18 @@
 					</div>
 					<div class="column">
 						<div class="text">
-							<h2>다목적실 쉐어링</h2>
+							<h2>다목적실 쉐어합니다</h2>
 							<hr/>
 							<p>
-								<span class="text-smaller">다목적실 쉐어합니다</span>
+								<span class="text-smaller">다목적실 쉐어링</span>
 							</p>
 							<p>by LeeYJ</p>
-							<p style="float:right;">17.07.12 / 3pm ~ 9pm</p>
+							<p style="float:right;">2017-07-12 / 3pm ~ 9pm</p>
 						</div>
 					</div>
 				</a><!-- 리스트의 끝 -->
 				<!-- 리스트 -->
-				<a href="/Yolo/view/comShare/ShareDetail.jsp" class="item zoom active">
+				<a href="/Yolo/comShare/ShareDetail.share" class="item zoom active">
 					<div class="column">
 						<div class="image">
 							<img id="ctl00_body_rptProducts_ctl00_imgProduct"
@@ -120,13 +120,13 @@
 					</div>
 					<div class="column">
 						<div class="text">
-							<h2>연습실 쉐어링</h2>
+							<h2>연습실 쉐어합니다~~~~</h2>
 							<hr/>
 							<p>
-								<span class="text-smaller">연습실 쉐어합니다~~~~</span>
+								<span class="text-smaller">연습실 쉐어링</span>
 							</p>
-							<p>by LeeCJ</p>
-							<p style="float:right;">17.07.12 / 3pm ~ 9pm</p>
+							<p>by KimCJ</p>
+							<p style="float:right;">2017-07-12 / 3pm ~ 9pm</p>
 						</div>
 					</div>
 				</a><!-- 리스트의 끝 -->

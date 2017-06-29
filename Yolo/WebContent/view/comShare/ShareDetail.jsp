@@ -21,22 +21,9 @@
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
         
+        <!-- 추가 CSS -->
+        <link href="/Yolo/css_yolo/cssView/comShare/ShareDetail.css" rel="stylesheet">
         
-        <style>
-        .post-top{
-        	padding-bottom: 0;
-        	
-        }
-        .row {
-		    margin-right: 0;
-		    margin-left: 0;
-		}
-		
-		.home-content h2{
-			padding: 0;
-		}
-        
-        </style>
     </head>
     <body class="notransition">
     
@@ -56,83 +43,78 @@
 			<div class="home-content">
 				<div class="home-wrapper">
 					<div class="row">
+					
 						<!-- 글전체 -->
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-							<!-- 세미나/강연 제목부분 -->
+						
+							<!-- 공간 쉐어링 제목부분 -->
 							<div class="post-top" id="post-top">
 								<div class="post-author">
 									<h1 id="lec_title">공간 쉐어링</h1>
 								</div>
 								<div class="clearfix"></div>
-								<div class="post-author">
-									<h2 id="lec_title">서울시 금천구 - 함께 공부할 분 구해요</h2>
-								</div>
-							</div><!-- 세미나/강연 제목부분 끝 -->
+							</div><!-- 공간 쉐어링 제목부분 끝 -->
+							
 							<!-- 글 메인 -->
 							<div class="post-content">
 								<!-- 상단 부분 -->
 								<div class="row">
 									<!-- 등록 이미지 삽입 -->
-									<div id="image_div" class="image-block col-md-6 col-xs-12 col-sm-12">
-										<img src="/Yolo/images/blog-3.jpg" alt="blog image">
-										<div  id="btn_lecjoin" class="col-md-12 col-xs-12">
-											<a href="" class="btn btn-round btn-green align-center" style="width:80%;">세미나/강연 신청하기</a>
+									<div class="col-md-6">
+										<div id="image_div" class="image-block col-md-12 col-xs-12 col-sm-12">
+											<img src="/Yolo/images/blog-3.jpg" alt="blog image">
 										</div>
 									</div>
 									<!-- 등록 이미지 삽입 끝 -->
 									<!-- 내용 -->
-									<div class="singleTop col-md-6 col-xs-12 col-sm-12">
-										<div>
-											<blockquote>주제</blockquote>
-											<p class="align-left">주제:쉽게 풀어 설명하는 다양한 철학</p>
-											<blockquote>모집인원</blockquote>
-											<p class="align-left">인원:00명</p>
-											<blockquote>모집기간</blockquote>
-											<p class="align-left">2017-06-13 ~ 2017-06-24</p>
-											<blockquote>일시</blockquote>
-											<p class="align-left">2017-07-30</p>
-										</div>
-									</div>
+									<h3>스터디룸 쉐어합니다</h3>
+		                            <div class="form-group col-md-6">
+		                                <div class="profile-card">
+		                                    <div class="pc-avatar"><img src="/Yolo/images/avatar-1.png" alt="avatar"></div>
+		                                    <div class="pc-name">LeeYJ</div>
+		                                        
+		                                    <a></a>
+		                                    <div class="mainFunction summaryItem">
+				                                <div class="clearfix"></div>
+				                                <div class="btn">
+					                                <div class="btn"><a data-toggle="modal" href="#contactAgent" class="btn btn-lg btn-round btn-green contactBtn">문의하기</a></div>
+					                                <div class="btn"><a href="#confirmSigning" class="btn btn-lg btn-round btn-green applyBtn">신청하기</a></div>
+				                                </div>
+				                            </div>
+		                                </div>
+		                            </div>
 								</div>
 								<!-- 상단 부분 끝 -->
 								<div class="clearfix"></div>
 								<!-- 하단 부분 -->
-								<h2 class="osLight">[강연 순서]</h2>
-								<p>It is a long established fact that a reader will be
-									distracted by the readable content of a page when looking at
-									its layout. The point of using Lorem Ipsum is that it has a
-									more-or-less normal distribution of letters, as opposed to
-									using 'Content here, content here', making it look like
-									readable English.</p>
-								<p>Many desktop publishing packages and web page editors now
-									use Lorem Ipsum as their default model text, and a search for
-									'lorem ipsum' will uncover many web sites still in their
-									infancy. Various versions have evolved over the years,
-									sometimes by accident, sometimes on purpose (injected humour
-									and the like).</p>
-								<p>Many desktop publishing packages and web page editors now
-									use Lorem Ipsum as their default model text, and a search for
-									'lorem ipsum' will uncover many web sites still in their
-									infancy. Various versions have evolved over the years,
-									sometimes by accident, sometimes on purpose (injected humour
-									and the like).</p>									
-								<!-- 하단 부분 끝 -->
+	                            <div class="panel panel-default">
+	                                <div class="panel-body">
+	                                    <form class="form-horizontal" role="form">
+	                                        <div class="form-group">
+	                                            <label class="col-sm-2 control-label">시간</label>
+	                                            <div class="col-sm-10">
+	                                                <a>17.07.12 / 3pm ~ 6pm</a>
+	                                            </div>
+	                                        </div>
+	                                        <div class="form-group">
+	                                       		<label class="col-sm-2 control-label">상세내용</label>
+	                                            <div class="col-sm-10">
+	                                                <a>아아아아아아아아아아아아아아아아아</a><br/>
+	                                                <a>아아아아아아아아아아아아아아아아아</a><br/>
+	                                                <a>아아아아아아아아아아아아아아아아아</a><br/>
+	                                                <a>아아아아아아아아아아아아아아아아아</a><br/>
+	                                                <a>아아아아아아아아아아아아아아아아아</a>
+	                                            </div>
+	                                        </div>
+	                                    </form>
+	                                    <!-- 지도 부분 -->                              
+									    <div id="hero-container-map">
+								            <div id="home-map"></div>
+								        </div>
+	                                    <!-- 지도 부분 끝 -->
+	                                </div>
+	                            </div>								
 							</div><!-- 글 메인 끝-->
-							<!-- 이전글 & 다음글 -->
-							<div class="f-pn-articles">
-								<a href="#" class="f-p-article">
-									<div class="fpna-title">이전 글</div> <span
-									class="fpna-header">Why Green Architecture Is The
-										Perfect Investment for Your Home</span> <span
-									class="fa fa-angle-left pull-left pn-icon"></span>
-								</a> <a href="#" class="f-n-article">
-									<div class="fpna-title">다음 글</div> <span
-									class="fpna-header">Practical Lighting Size & Placement
-										Guide for Every Corner of the House</span> <span
-									class="fa fa-angle-right pull-right pn-icon"></span>
-								</a>
-								<div class="clearfix"></div>
-							</div><!-- 이전글 & 다음글 끝 -->
 						</div><!-- 글 전체 끝 -->
 					</div>
 				</div>
