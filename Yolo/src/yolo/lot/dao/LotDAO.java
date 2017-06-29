@@ -14,12 +14,12 @@ public class LotDAO {
 	SqlSessionTemplate session;
 	
 	
-	public int lotinputfirst(PrivatelotVO priVO, PrivateimageVO primgVO){
+	public int lotinput(PrivatelotVO privateVO){
 		int result=0;
 		try{
-			result = session.insert("lotinputfirst", priVO);			
+			result = session.insert("lotinput", privateVO);			
 		}catch(Exception ex){
-			System.out.println("lotinputfirst 실패: " + ex.getMessage());
+			System.out.println("lotinput 실패: " + ex.getMessage());
 		}
 		return result;
 		

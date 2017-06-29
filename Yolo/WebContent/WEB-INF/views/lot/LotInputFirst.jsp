@@ -25,42 +25,42 @@
 
 						<div style="margin-top: -5px;"
 							class="col-md-2 col-xs-4 checkbox custom-checkbox">
-							<label><input type="checkbox"><span>회의실</span></label>
+							<label><input name="pri_type" type="checkbox" value="회의실"><span>회의실</span></label>
 						</div>
 
 						<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
-							<label><input type="checkbox"><span>세미나실</span></label>
+							<label><input name="pri_type" type="checkbox" value="세미나실"><span>세미나실</span></label>
 						</div>
 						<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
-							<label><input type="checkbox"><span>작업실</span></label>
+							<label><input name="pri_type" type="checkbox" value="작업실"><span>작업실</span></label>
 						</div>
 						<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
-							<label><input type="checkbox"><span>레저시설</span></label>
+							<label><input name="pri_type" type="checkbox" value="레저시설"><span>레저시설</span></label>
 						</div>
 						<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
-							<label><input type="checkbox"><span>파티룸</span></label>
+							<label><input name="pri_type" type="checkbox" value="파티룸"><span>파티룸</span></label>
 						</div>
 
 						<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
-							<label><input type="checkbox"><span>스터디룸</span></label>
+							<label><input name="pri_type" type="checkbox" value="스터디룸"><span>스터디룸</span></label>
 						</div>
 						<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
-							<label><input type="checkbox"><span>공연장</span></label>
+							<label><input name="pri_type" type="checkbox" value="공연장"><span>공연장</span></label>
 						</div>
 						<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
-							<label><input type="checkbox"><span>연습실</span></label>
+							<label><input name="pri_type" type="checkbox" value="연습실"><span>연습실</span></label>
 						</div>
 						<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
-							<label><input type="checkbox"><span>다목적실</span></label>
+							<label><input name="pri_type" type="checkbox" value="다목적실"><span>다목적실</span></label>
 						</div>
 						<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
-							<label><input type="checkbox"><span>스토어</span></label>
+							<label><input name="pri_type" type="checkbox" value="스토어"><span>스토어</span></label>
 						</div>
 						<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
-							<label><input type="checkbox"><span>농장</span></label>
+							<label><input name="pri_type" type="checkbox" value="농장"><span>농장</span></label>
 						</div>
 						<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
-							<label><input type="checkbox"><span>루프탑</span></label>
+							<label><input name="pri_type" type="checkbox" value="루프탑"><span>루프탑</span></label>
 						</div>
 
 
@@ -79,25 +79,25 @@
 
 				<div class="col-sm-6">
 					<div class="radio custom-radio">
-						<label><input type="radio" name="radio1"><span
+						<label><input type="radio" name="pri_charge" value="유료"><span
 							class="fa fa-circle"></span> 유료</label>
 					</div>
 				</div>
 				<div class="col-sm-6">
 					<div class="radio custom-radio">
-						<label><input type="radio" name="radio1"><span
+						<label><input type="radio" name="pri_charge" value="무료"><span
 							class="fa fa-circle"></span> 무료</label>
 					</div>
 				</div>
 				<div class="col-sm-6">
 					<div class="radio custom-radio">
-						<label><input type="radio" name="radio2"><span
+						<label><input type="radio" name="pri_booktype" value="시간단위"><span
 							class="fa fa-circle"></span> 시간단위</label>
 					</div>
 				</div>
 				<div class="col-sm-6">
 					<div class="radio custom-radio">
-						<label><input type="radio" name="radio2"><span
+						<label><input type="radio" name="pri_booktype" value="시간단위"><span
 							class="fa fa-circle"></span> 일단위</label>
 					</div>
 				</div>
@@ -124,13 +124,13 @@
 				<label class="col-sm-2 control-label">주 소</label>
 				<div class="col-sm-8">
 					<div class="col-xs-5 col-md-3 addr">
-						<input type="text" name="pri_addr" class="form-control" value="">
+						<input type="text" name="pri_addr1" class="form-control" value="">
 					</div>
 					<div class="col-xs-3 col-md-3" style="margin-bottom: 5px;">
 						<button id="btn_addr" class="btn btn-o btn-green">우편번호 검색</button>
 					</div>
 
-					<input type="text" name="pri_addr" class="form-control" value="">
+					<input type="text" name="pri_addr1" class="form-control" value="">
 				</div>
 			</div>
 			<!-- 태그 입력 -->

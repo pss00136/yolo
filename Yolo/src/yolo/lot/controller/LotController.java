@@ -1,5 +1,7 @@
 package yolo.lot.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -32,10 +34,10 @@ public class LotController {
 	   }
 
 	/*
-	* @메소드명: lotInputFirst, lotInputSecond
-	* @역할: 공간 등록을 단계별로 
+	* @메소드명: lotInputFirst
+	* @역할: 공간 등록 첫번째 
 	*
-	* @param   PrivatelotVO 값
+	* @param   PrivatelotVO
 	* @return  String:반환하는 경로
 	*/	  
 	@RequestMapping("lot/LotInputFirst.lot")
@@ -44,17 +46,24 @@ public class LotController {
 	}
 	
 	 @RequestMapping("lot/LotInputSecond.lot" )
-		public String lotinputfirst(@ModelAttribute("privateVO") PrivatelotVO privateVO, PrivateimageVO primgVO){	    
-//		    service.lotinputfirst(priVO,primgVO);
+		public String lotinputfirst(@ModelAttribute("privateVO") PrivatelotVO privateVO){	    
 //		    session.setAttribute("primgVO", primgVO);
 		   
 			return "/lot/LotInputSecond";
 		}
-	 
+	  
+	 /*
+		* @메소드명: lotInputSecond
+		* @역할: 공간 등록 두번째 
+		*
+		* @param   PrivatelotVO, PrivateimageVO 값
+		* @return  String:반환하는 경로
+		*/
 	 @RequestMapping("lot/LotInputLast.lot")
-		public String lotinputsecond(@ModelAttribute("privateVO") PrivatelotVO privateVO, SessionStatus sessStatus){
-//		 PrivateimageVO primgVO = (PrivateimageVO)session.getAttribute("primgVO");
-		 System.out.println(privateVO.getPri_title() + " > " + privateVO.getPri_minpeople());
+		public String lotinputsecond(@ModelAttribute("privateVO") PrivatelotVO privateVO, String pri_accountbank, String pri_accountnum, String pri_accountname,SessionStatus sessStatus){
+		 //PrivateimageVO primgVO = (PrivateimageVO)session.getAttribute("primgVO");
+		 privateVO.setPri_account(pri_accountbank + "/" + pri_accountnum + "/" + pri_accountname );
+		 service.lotinput(privateVO);
 		 sessStatus.setComplete(); 
 			return "/lot/LotList.map";
 		}

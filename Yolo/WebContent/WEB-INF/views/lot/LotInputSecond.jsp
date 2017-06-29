@@ -18,13 +18,13 @@
 							<label class="col-sm-2 control-label"></label>
 							<div class="col-sm-3">
 								<div class="radio custom-radio">
-									<label><input type="radio" name="radio1"><span
+									<label><input type="radio" name="e_type"><span
 										class="fa fa-circle"></span> 사업자</label>
 								</div>
 							</div>
 							<div class="col-sm-3">
 								<div class="radio custom-radio">
-									<label><input type="radio" name="radio1"><span
+									<label><input type="radio" name="e_type"><span
 										class="fa fa-circle"></span>비사업자</label>
 								</div>
 							</div>
@@ -33,7 +33,7 @@
 						<div class="form-group">
 							<label class="col-sm-2 control-label">상호명</label>
 							<div class="col-sm-8">
-								<input type="text" name="uId" class="form-control" value="">
+								<input type="text" name="e_title" class="form-control" value="">
 							</div>
 						</div>
 						<!-- 사업장 주소 입력 -->
@@ -41,7 +41,7 @@
 							<label class="col-sm-2 control-label">사업장 주소</label>
 							<div class="col-sm-8">
 								<div class="col-xs-5 col-md-3 addr">
-									<input type="text" name="uAddr" class="form-control" value="">
+									<input type="text" name="e_addr" class="form-control" value="">
 								</div>
 								<div class="col-xs-3 col-md-3" style="margin-bottom: 5px;">
 									<button id="btn_addr" class="btn btn-o btn-green">우편번호 검색</button>
@@ -54,13 +54,13 @@
 						<div class="form-group">
 							<label class="col-sm-2 control-label">사업자 등록번호</label>
 							<div class="col-sm-2">
-								<input type="text" name="uId" class="form-control" value="">
+								<input type="text" name="e_rnum1" class="form-control" value="">
 							</div>
 							<div class="col-sm-2">
-								<input type="text" name="uId" class="form-control" value="">
+								<input type="text" name="e_rnum2" class="form-control" value="">
 							</div>
 							<div class="col-sm-2">
-								<input type="text" name="uId" class="form-control" value="">
+								<input type="text" name="e_rnum3" class="form-control" value="">
 							</div>														
 						</div>
 						<!-- 사업자 등록증 첨부 -->
@@ -106,7 +106,7 @@
 						<div class="form-group">
 							<label class="col-sm-2 control-label"></label>
 							<div class="col-sm-2">
-								<select class="form-control">
+								<select name="pri_accountbank" class="form-control">
 									<option>은행선택</option>
 									<option>농협</option>
 									<option>국민</option>
@@ -116,10 +116,10 @@
 								</select>
 							</div>
 							<div class="col-sm-3">
-								<input type="text" name="uId" class="form-control" value="" placeholder="계좌번호">
+								<input type="text" name="pri_accountnum" class="form-control" value="" placeholder="계좌번호">
 							</div>
 							<div class="col-sm-2">
-								<input type="text" name="uId" class="form-control" value="" placeholder="예금주명">
+								<input type="text" name="pri_accountname" class="form-control" value="" placeholder="예금주명">
 							</div>																			
 						</div>					
 				</div><!-- 계좌 정보 등록 끝 -->				
@@ -147,22 +147,22 @@
 							<label class="col-sm-2 control-label">편의시설</label>
 							<div class="col-sm-2">
 								<div class="checkbox custom-checkbox">
-									<label><input type="checkbox"><span class="fa fa-check"></span>TV/프로젝터</label>
+									<label><input name="pri_facility" type="checkbox" value="TV/프로젝터"><span class="fa fa-check"></span>TV/프로젝터</label>
 								</div>
 							</div>
 							<div class="col-sm-2">
 								<div class="checkbox custom-checkbox">
-									<label><input type="checkbox"><span class="fa fa-check"></span>인터넷/WIFI</label>
+									<label><input name="pri_facility" type="checkbox" value="인터넷/WIFI"><span class="fa fa-check"></span>인터넷/WIFI</label>
 								</div>
 							</div>
 							<div class="col-sm-2">
 								<div class="checkbox custom-checkbox">
-									<label><input type="checkbox"><span class="fa fa-check"></span>복사/인쇄기</label>
+									<label><input name="pri_facility" type="checkbox" value="복사/인쇄기"><span class="fa fa-check"></span>복사/인쇄기</label>
 								</div>
 							</div>
 							<div class="col-sm-2">
 								<div class="checkbox custom-checkbox">
-									<label><input type="checkbox"><span class="fa fa-check"></span>화이트보드</label>
+									<label><input name="pri_facility" type="checkbox" value="화이트보드"><span class="fa fa-check"></span>화이트보드</label>
 								</div>
 							</div>																				
 						</div>
@@ -171,22 +171,22 @@
 							<label class="col-sm-2 control-label"></label>
 							<div class="col-sm-2">
 								<div class="checkbox custom-checkbox">
-									<label><input type="checkbox"><span class="fa fa-check"></span>음향/마이크</label>
+									<label><input name="pri_facility" type="checkbox" value="음향/마이크"><span class="fa fa-check"></span>음향/마이크</label>
 								</div>
 							</div>
 							<div class="col-sm-2">
 								<div class="checkbox custom-checkbox">
-									<label><input type="checkbox"><span class="fa fa-check"></span>취사시설</label>
+									<label><input name="pri_facility" type="checkbox" value="취사시설"><span class="fa fa-check"></span>취사시설</label>
 								</div>
 							</div>
 							<div class="col-sm-2">
 								<div class="checkbox custom-checkbox">
-									<label><input type="checkbox"><span class="fa fa-check"></span>음식물반입가능</label>
+									<label><input name="pri_facility" type="checkbox" value="음식물반입가능"><span class="fa fa-check"></span>음식물반입가능</label>
 								</div>
 							</div>
 							<div class="col-sm-2">
 								<div class="checkbox custom-checkbox">
-									<label><input type="checkbox"><span class="fa fa-check"></span>주류반입가능</label>
+									<label><input name="pri_facility" type="checkbox" value="주류반입가능"><span class="fa fa-check"></span>주류반입가능</label>
 								</div>
 							</div>																				
 						</div>
@@ -195,22 +195,22 @@
 							<label class="col-sm-2 control-label"></label>
 							<div class="col-sm-2">
 								<div class="checkbox custom-checkbox">
-									<label><input type="checkbox"><span class="fa fa-check"></span>주차</label>
+									<label><input name="pri_facility" type="checkbox" value="주차"><span class="fa fa-check"></span>주차</label>
 								</div>
 							</div>
 							<div class="col-sm-2">
 								<div class="checkbox custom-checkbox">
-									<label><input type="checkbox"><span class="fa fa-check"></span>금연</label>
+									<label><input name="pri_facility" type="checkbox" value="금연"><span class="fa fa-check"></span>금연</label>
 								</div>
 							</div>
 							<div class="col-sm-2">
 								<div class="checkbox custom-checkbox">
-									<label><input type="checkbox"><span class="fa fa-check"></span>PC/노트북</label>
+									<label><input name="pri_facility" type="checkbox" value="PC/노트북"><span class="fa fa-check"></span>PC/노트북</label>
 								</div>
 							</div>
 							<div class="col-sm-2">
 								<div class="checkbox custom-checkbox">
-									<label><input type="checkbox"><span class="fa fa-check"></span>의자/테이블</label>
+									<label><input name="pri_facility" type="checkbox" value="의자/테이블"><span class="fa fa-check"></span>의자/테이블</label>
 								</div>
 							</div>
 							<label class="col-sm-10 control-label"></label>																				

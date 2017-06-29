@@ -5,6 +5,7 @@
  <configuration>
 <typeAliases>
  		<typeAlias type="yolo.host.dto.HostinfoVO" alias="hvo"/>
+ 		<typeAlias type="yolo.lot.dto.PrivatelotVO" alias="privateVO"/>
  		<typeAlias type="yolo.share.dto.ShareVO" alias="sharevo"/>
  		<typeAlias type="yolo.club.dto.ClubVO" alias="ClubVO"/>		
  	</typeAliases>
