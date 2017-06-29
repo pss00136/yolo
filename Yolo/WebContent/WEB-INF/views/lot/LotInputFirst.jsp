@@ -97,7 +97,7 @@
 				</div>
 				<div class="col-sm-6">
 					<div class="radio custom-radio">
-						<label><input type="radio" name="pri_booktype" value="시간단위"><span
+						<label><input type="radio" name="pri_booktype" value="일단위"><span
 							class="fa fa-circle"></span> 일단위</label>
 					</div>
 				</div>
@@ -156,7 +156,7 @@
 			<div class="form-group">
 				<label class="col-sm-2 control-label">이미지</label>
 				<div class="col-sm-8">
-					<input type="file" name="priimg_path" class="file" multiple
+					<input type="file" name="file" class="file" multiple
 						data-show-upload="false" data-show-caption="false"
 						data-show-remove="false" accept="image/jpeg,image/png"
 						data-browse-class="btn btn-o btn-default"

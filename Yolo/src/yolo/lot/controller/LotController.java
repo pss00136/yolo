@@ -46,8 +46,8 @@ public class LotController {
 	}
 	
 	 @RequestMapping("lot/LotInputSecond.lot" )
-		public String lotinputfirst(@ModelAttribute("privateVO") PrivatelotVO privateVO){	    
-//		    session.setAttribute("primgVO", primgVO);
+		public String lotinputfirst(@ModelAttribute("privateVO") PrivatelotVO privateVO, PrivateimageVO primgVO, HttpSession session ){	    
+		    session.setAttribute("primgVO", primgVO);
 		   
 			return "/lot/LotInputSecond";
 		}
@@ -60,10 +60,12 @@ public class LotController {
 		* @return  String:반환하는 경로
 		*/
 	 @RequestMapping("lot/LotInputLast.lot")
-		public String lotinputsecond(@ModelAttribute("privateVO") PrivatelotVO privateVO, String pri_accountbank, String pri_accountnum, String pri_accountname,SessionStatus sessStatus){
-		 //PrivateimageVO primgVO = (PrivateimageVO)session.getAttribute("primgVO");
+		public String lotinputsecond(@ModelAttribute("privateVO") PrivatelotVO privateVO, HttpSession session, String pri_accountbank, String pri_accountnum, String pri_accountname,SessionStatus sessStatus){
+		 PrivateimageVO primgVO = (PrivateimageVO)session.getAttribute("primgVO");
 		 privateVO.setPri_account(pri_accountbank + "/" + pri_accountnum + "/" + pri_accountname );
-		 service.lotinput(privateVO);
+		 service.lotinput(privateVO, primgVO);
+		 //이미지 넘겨오나?
+		 System.out.println(primgVO.getPriimg_name());
 		 sessStatus.setComplete(); 
 			return "/lot/LotList.map";
 		}

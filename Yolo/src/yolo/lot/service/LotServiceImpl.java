@@ -13,8 +13,8 @@ public class LotServiceImpl implements LotService {
 	@Autowired
 	LotDAO ldao;
 	
-	public int lotinput(PrivatelotVO privateVO){
-		 int result = ldao.lotinput(privateVO);
+	public int lotinput(PrivatelotVO privateVO, PrivateimageVO primgVO){
+		 int result = ldao.lotinput(privateVO, primgVO);
 		 return result;
 	}
 	

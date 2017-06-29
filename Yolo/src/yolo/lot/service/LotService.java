@@ -5,6 +5,6 @@ import yolo.lot.dto.PrivatelotVO;
 
 public interface LotService {
 	
-	public int lotinput(PrivatelotVO privateVO);
+	public int lotinput(PrivatelotVO privateVO, PrivateimageVO primgVO);
 
 }

@@ -9,4 +9,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 values(PRIVATELOT_NO_SEQ.nextVal,#{pri_type},#{pri_booktype},#{pri_charge},#{pri_title},#{pri_tag},#{pri_content},#{pri_account},#{pri_weekprice},#{pri_weekendprice},#{pri_facility},#{pri_minpeople},#{pri_maxpeople})
 </insert>
 
+<insert id="lotimginput" parameterType="primgVO">
+	<selectKey keyColumn='pri_num' keyProperty='pri_num' order='BEFORE'  resultType='string'>
+         SELECT PRIVATELOT_NO_SEQ.currval FROM dual
+      </selectKey>
+ 	insert into privateimage(priimg_num, pri_num ,priimg_name, priimg_path)
+ 	values(PRIVATEIMAGE_NO_SEQ.nextVal, #{pri_num}, #{priimg_name}, #{priimg_path})
+</insert>
+
 </mapper>

@@ -11,7 +11,8 @@ public class PrivateimageVO {
 	private String pri_num;       /* 민간시설 공간 번호 */
 	private String priimg_path;   /* 이미지 위치 */
 	private String priimg_name;   /* 이미지 이름 */
-
+	MultipartFile file;
+	
 	/* Constructor */
 	public PrivateimageVO(){}
 
@@ -26,7 +27,6 @@ public class PrivateimageVO {
 
 	/* End of Constructor  */
 	
-    MultipartFile file;	// write.jsp에 파일첨부시 name="file"과 동일한 변수명
 	
 	public MultipartFile getFile() {
 		return file;
@@ -37,9 +37,10 @@ public class PrivateimageVO {
 		// 업로드 파일 접근
 		if(! file.isEmpty()){
 			this.priimg_name = file.getOriginalFilename();
+			this.priimg_path = "C:\\Users\\kosta\\git\\yolo\\Yolo\\WebContent\\upload\\lot\\";
 			//this.b_fsize = file.getSize();
 			
-			File f = new File("C:\\Users\\kosta\\git\\yolo\\Yolo\\WebContent\\upload\\lot\\"+priimg_name);
+			File f = new File(priimg_path+priimg_name);
 			
 			try {
 				file.transferTo(f);
