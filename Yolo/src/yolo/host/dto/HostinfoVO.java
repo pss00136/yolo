@@ -56,7 +56,6 @@ public class HostinfoVO {
 	
 	/* Getters and Setters */
 	
-	
 	public String getH_num() {
 		return h_num;
 	}

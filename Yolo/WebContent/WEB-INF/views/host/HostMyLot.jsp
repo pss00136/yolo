@@ -11,8 +11,6 @@
                    <div class="col-md-12">
                     <div class="row" style="margin-bottom: 10px;">
                      <h3 style="margin: 5px;">승인 요청중인 공간 &nbsp;<span class="label label-warning">승인 대기</span></h3>
-                     
-                    
                             <div class="row">
                              
                                 <div class="col-md-4 col-xs-12">
