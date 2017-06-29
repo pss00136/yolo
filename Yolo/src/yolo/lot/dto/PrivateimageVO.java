@@ -1,5 +1,10 @@
 package yolo.lot.dto;
 
+import java.io.File;
+import java.io.IOException;
+
+import org.springframework.web.multipart.MultipartFile;
+
 public class PrivateimageVO {
 
 	private String priimg_num;    /* 이미지 번호 */
@@ -20,6 +25,33 @@ public class PrivateimageVO {
 	}
 
 	/* End of Constructor  */
+	
+    MultipartFile file;	// write.jsp에 파일첨부시 name="file"과 동일한 변수명
+	
+	public MultipartFile getFile() {
+		return file;
+	}
+	public void setFile(MultipartFile file) {
+		this.file = file;
+		
+		// 업로드 파일 접근
+		if(! file.isEmpty()){
+			this.priimg_name = file.getOriginalFilename();
+			//this.b_fsize = file.getSize();
+			
+			File f = new File("C:\\Users\\kosta\\git\\yolo\\Yolo\\WebContent\\upload\\lot\\"+priimg_name);
+			
+			try {
+				file.transferTo(f);
+				
+			} catch (IllegalStateException e) {				
+				e.printStackTrace();
+			} catch (IOException e) {
+				
+				e.printStackTrace();
+			}
+		}
+	}
 
 	/* Getters and Setters */
 	public String getPriimg_num() {

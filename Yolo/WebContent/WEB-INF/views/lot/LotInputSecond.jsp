@@ -10,7 +10,7 @@
 				<h4 style="text-align: center; margin-bottom: 30px; border-bottom: 1px solid silver; padding-bottom: 10px;">공 간 등 록</h4>
 				<!-- 사업자 등록 여부 입력 -->
 				<div class="panel-heading">사업자 등록 여부</div>
-				<form class="form-horizontal" method="post" action="/Yolo/lot/LotInputLast.lot">
+				<form class="form-horizontal" method="post" enctype="multipart/form-data" action="/Yolo/lot/LotInputLast.lot">
 				<div class="panel-body">
 					<!-- 입력 폼 -->
 						<!-- 사업자/비사업자 선택 -->
