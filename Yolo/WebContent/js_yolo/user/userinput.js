@@ -5,7 +5,6 @@
  $(function(){
 	 $("#idcheck").click(function(){
 		 alert("클릭");
-		 
 		 $.ajax({
 	            type: 'post',
 	            async: true,

@@ -48,6 +48,7 @@ public class UserController {
 		return mv;
 	}
 	
+	
 	@RequestMapping("join/idCheck.main")
 	@ResponseBody
 	public String idcheck(UserVO userVO){
@@ -58,5 +59,11 @@ public class UserController {
 			result = " 이미사용중 ";
 		}
 		return result;
+	}
+	
+	@RequestMapping("login/login.main")
+	public String login(UserVO userVO){
+		
+		return "/common/main";
 	}
 }

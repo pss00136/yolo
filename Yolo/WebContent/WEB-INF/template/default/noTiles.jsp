@@ -6,8 +6,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<tiles:insertAttribute name="noTemplate"/>
 </head>
 <body>
-      <tiles:insertAttribute name="noTemplate"/>
+
 </body>
 </html>

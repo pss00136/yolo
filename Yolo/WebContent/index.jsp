@@ -376,9 +376,10 @@
 								<span class="input-group-btn">
 									<button class="btn btn-success" type="button" id="idcheck">중복확인</button>
 								</span>
-								<span id="idCheckResult" style="width:150px;color:red"></span>
 							</div>
+							<span id="idCheckResult" style="width:150px;color:red"></span>
 						</div>
+					
 						<div class="form-group">
 							<input type="password" placeholder="비밀번호" id="u_pass" name="u_pass" class="form-control">
 						</div>

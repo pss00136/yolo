@@ -63,12 +63,6 @@
         
         <!-- 추가  -->
 		<script src="/Yolo/js/home.js" type="text/javascript"></script>
-		
-		
-		
-		
-		
-		
-		
+		<script  src="/Yolo/js_yolo/user/userinput.js" type="text/javascript"></script>
     </body>
 </html>
