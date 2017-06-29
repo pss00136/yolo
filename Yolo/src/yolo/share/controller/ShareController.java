@@ -27,7 +27,11 @@ public class ShareController {
 	
 	/* 멤버필드 */
 	
-	
+	@RequestMapping("ShareInput.share")
+	public String shareInputPage(){
+		
+		return "/comShare/ShareInput";
+	}
 	
 	/*
 	 * @메소드명: shareInput
