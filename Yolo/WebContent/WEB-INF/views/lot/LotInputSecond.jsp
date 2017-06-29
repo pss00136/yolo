@@ -10,7 +10,7 @@
 				<h4 style="text-align: center; margin-bottom: 30px; border-bottom: 1px solid silver; padding-bottom: 10px;">공 간 등 록</h4>
 				<!-- 사업자 등록 여부 입력 -->
 				<div class="panel-heading">사업자 등록 여부</div>
-				<form class="form-horizontal" role="form">
+				<form class="form-horizontal" method="post" action="/Yolo/lot/LotInputLast.lot">
 				<div class="panel-body">
 					<!-- 입력 폼 -->
 						<!-- 사업자/비사업자 선택 -->
@@ -234,10 +234,10 @@
 						<div>
 							<div style="text-align: center;">
 								<div style="display: inline-block;">
-									<a href="LotInputFirst.lot" id="btn_modify" class="btn btn-o btn-green">이전으로</a>
+									<a href="/Yolo/lot/LotInputFirst.lot" id="btn_modify" class="btn btn-o btn-green">이전으로</a>
 								</div>
 								<div style="display: inline-block;">
-									<a id="btn_modify" class="btn btn-o btn-green">등록하기</a>
+									<button id="btn_modify" class="btn btn-o btn-green">등록하기</button>
 								</div>								
 							</div>
 						</div>

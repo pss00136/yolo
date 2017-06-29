@@ -3,53 +3,70 @@ package yolo.lot.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
+import yolo.lot.dto.PrivateimageVO;
+import yolo.lot.dto.PrivatelotVO;
 import yolo.lot.service.LotService;
 
-@Controller
-@RequestMapping("lot")
+/*
+* @클래스명: LotController
+*
+* @version     1.0 17/06/29
+* @author      김일주
+* @see         yolo.lot.controller
+* @since       JDK1.8
+*/
+@Controller 
 public class LotController {
 	
 	@Autowired
 	LotService service;
+	
 
 	/*
-	* @메소드명: lotinputfirst
-	* @역할: 공간 등록 두번째 페이지로 전환
+	* @메소드명: lotInputFirst, lotInputSecond
+	* @역할: 공간 등록을 단계별로 
 	*
-	* @param   없음
+	* @param   PrivatelotVO 값
 	* @return  String:반환하는 경로
-	*/
-	   @RequestMapping("/LotInputFirst.lot")
-		public String lotinput1(){
-		    service.lotinputfirst();
-			return "/lot/LotInputFirst";
+	*/	  
+	@RequestMapping("lot/LotInputFirst.lot")
+	public String lotinput(){
+		return "/lot/LotInputFirst";
+	}
+	
+	 @RequestMapping("lot/LotInputSecond.lot")
+		public ModelAndView lotinputfirst(PrivatelotVO priVO, PrivateimageVO primgVO){	    
+		    service.lotinputfirst(priVO,primgVO);
+		    ModelAndView mv = new ModelAndView();
+		    mv.setViewName("/lot/LotInputSecond");
+		    
+			return mv;
 		}
-	   
-
-	   @RequestMapping("/LotInputSecond.lot")
-		public String lotinput2(){
-			return "/lot/LotInputSecond.host";
+	 
+	 @RequestMapping("lot/LotInputLast.lot")
+		public String lotinputsecond(){
+		 
+			return "/lot/LotList.map";
 		}
+	 
 	   
-	   @RequestMapping("/LotList.lot")
+	   @RequestMapping("lot/LotList.lot")
 		public String lotlist(){
 			return "/lot/LotList.map";
 		}
 	   
-	   @RequestMapping("/LotView.lot")
+	   @RequestMapping("lot/LotView.lot")
 		public String lotview(){
 			return "/lot/LotView.map";
 		}
 	   
 	   
-	   @RequestMapping("/LotReserve.lot")
+	   @RequestMapping("lot/LotReserve.lot")
 		public String lotreserve(){
 			return "/lot/LotReserve";
 		}
-	   
-	   
-	   
-     
+ 
     	   
 }
