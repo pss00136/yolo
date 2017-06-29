@@ -29,7 +29,7 @@ public class ClubDAO {
 	*/
 	public int clubinput(ClubVO vo){
 		
-		int result = session.insert("clubInsert", vo);
+		int result = session.insert("club.clubInsert", vo);
 		
 		return result;
 	}

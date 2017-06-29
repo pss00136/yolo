@@ -61,7 +61,7 @@ public class ClubController {
 	
 	@RequestMapping("/ClubInput.club")
 	public String clubInput(){
-		
+		System.out.println("ClubInput");
 		return "/club/ClubInput";
 	}
 	
@@ -73,14 +73,15 @@ public class ClubController {
 	* @return  String:반환하는 경로
 	*/
 	@RequestMapping("/ClubInputOk.club")
-	public String clubInputOk( ClubVO vo){
-		int result = service.clubinput(vo);
+	public String clubInputOk( ClubVO clubVO){
+		System.out.println("모임공간:"+clubVO.getC_title());
+		System.out.println("모임공간:"+clubVO.getC_recruit());
+		int result = service.clubinput(clubVO);
 		if( result == 1){
 			System.out.println("DB입력 성공");
 		}else{
 			System.out.println("DB입력 실패");
 		}
-		System.out.println( vo.getC_title() );
 		return "/club/ClubInputOk";
 	}
 

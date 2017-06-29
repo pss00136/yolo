@@ -14,7 +14,7 @@ public class ClubServiceImpl implements ClubService {
 	
 	@Override
 	public int clubinput(ClubVO vo) {
-		// TODO Auto-generated method stub
+		System.out.println( "파일이름:" + vo.getC_title() );
 		int result = clubdao.clubinput(vo);
 		
 		return result;

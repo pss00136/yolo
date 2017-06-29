@@ -106,7 +106,7 @@ public class ClubVO {
 		return c_recruit;
 	}
 
-	public void setC_rectuit(String c_recruit) {
+	public void setC_recruit(String c_recruit) {
 		this.c_recruit = c_recruit;
 	}
 

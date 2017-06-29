@@ -2,11 +2,16 @@ package yolo.club.service;
 
 import yolo.club.dto.ClubVO;
 
+/*
+* @인터페이스명: ClubService
+*
+* @version     1.0 17/06/29
+* @author      차인혁
+* @see         yolo.club.service
+* @since       JDK1.8
+*/
 public interface ClubService {
 	
-	/**
-	 * 모임등록 기능 구현
-	 */
 	int clubinput( ClubVO vo);
 
 }
