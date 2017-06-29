@@ -40,8 +40,9 @@
                             	<div class="input-group">
                                 	<input type="text" placeholder="아이디" class="form-control">
                             		<span class="input-group-btn">
-                            			<button class="btn btn-success" type="button">중복확인</button>
+                            			<button class="btn btn-success" type="button" id="idcheck">중복확인</button>
                             		</span>
+                            		<span id="idCheckResult" style="width:150px;color:red"></span>
                             	</div>
                             </div>
                             <div class="form-group">

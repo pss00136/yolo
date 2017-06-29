@@ -31,6 +31,12 @@ public class UserDAO {
 	public int joinUser(UserVO userVO){ 
 		int result = session.insert("user.userinsert", userVO);
 		return result;
+		
+	}
+	
+	public UserVO idCheck(UserVO userVO) {
+		UserVO vo = session.selectOne("user.usercheck", userVO);
+		return vo;
 	}
 
 }

@@ -13,9 +13,13 @@ public class UserServiceImpl implements UserService {
 	UserDAO udao;
 	
 	@Override
-	public int joinUser(UserVO userVO) {
-		
+	public int joinUser(UserVO userVO) {	
 		return udao.joinUser(userVO);
+	}
+
+	@Override
+	public UserVO idCheck(UserVO vo) {
+		return udao.idCheck(vo);
 	}
 
 }

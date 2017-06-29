@@ -19,8 +19,9 @@
 							<div class="input-group">
 								<input type="text" placeholder="아이디" id="u_id" name="u_id" class="form-control">
 								<span class="input-group-btn">
-									<button class="btn btn-success" type="button">중복확인</button>
+									<button class="btn btn-success" type="button" id="check" name="check">중복확인</button>
 								</span>
+								<span id="idCheckResult" style="width:150px;color:red"></span>
 							</div>
 						</div>
 						<div class="form-group">
@@ -33,7 +34,7 @@
 							<input type="text" placeholder="성명" id="u_name" name="u_name" class="form-control">
 						</div>
 						<div class="form-group">
-							<input type="tel" placeholder="휴대전화" id="u_tell" name="u_tell" class="form-control">
+							<input type="tel" placeholder="휴대전화" id="u_tell" name="u_tel" class="form-control">
 						</div>
 						<div class="form-group">
 							<input type="email" placeholder="Email" id="u_email" name="u_email" class="form-control">

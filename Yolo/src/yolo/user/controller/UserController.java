@@ -4,6 +4,7 @@ package yolo.user.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import yolo.user.dto.UserVO;
@@ -33,7 +34,6 @@ public class UserController {
 	*/
 	@RequestMapping("join/join_ok.main")
 	public ModelAndView joinUser(UserVO userVO){
-		System.out.println("");
 		ModelAndView mv = new ModelAndView();
 		int result = service.joinUser(userVO);
 		String message ="가입실패";
@@ -46,5 +46,17 @@ public class UserController {
 		mv.setViewName("/join/join_ok");
 
 		return mv;
+	}
+	
+	@RequestMapping("join/idCheck.main")
+	@ResponseBody
+	public String idcheck(UserVO userVO){
+		System.out.println(userVO.getU_id());
+		String result = "ID 사용가능";
+		UserVO reVO = service.idCheck(userVO);
+		if(reVO != null){
+			result = " 이미사용중 ";
+		}
+		return result;
 	}
 }
