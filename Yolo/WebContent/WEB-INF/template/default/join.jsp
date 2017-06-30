@@ -42,16 +42,22 @@
 						<div class="form-group">
 							<input type="date" placeholder="생년월일" id="u_birth" name="u_birth" class="form-control">
 						</div>
+						<!-- 우편번호 검색 -->
 						<div class="form-group">
-							<select id="u_addr" name="u_addr" class="form-control">
-								<option value="서울특별시">서울특별시</option>
-								<option value="경기도">경기도</option>
-								<option value="강원도">강원도</option>
-								<option value="충청도">충청도</option>
-								<option value="전라도">전라도</option>
-								<option value="경상도">경상도</option>
-							</select>
+							<div class="input-group">
+								<input type="text" class="form-control" id="postcode" name="postcode" placeholder="우편번호">
+								<span class="input-group-btn">
+								<input type="button"  class="btn btn-success form-control" onclick="DaumPostcode()" value="우편번호 찾기">
+								</span>
+							</div>	
 						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" id="main_address" name="main_address" placeholder="주소">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" id="detail_address" name="detail_address" placeholder="상세주소">
+						</div>
+						<span id="guide" style="color:#999"></span>
 						<div class="form-group">
 							<div class="btn-group-justified">
 								<button type="submit" class="btn btn-lg btn-green">가입하기</button>

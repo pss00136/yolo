@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 
+import yolo.host.dto.EntrepreneurVO;
 import yolo.lot.dto.PrivateimageVO;
 import yolo.lot.dto.PrivatelotVO;
 import yolo.lot.service.LotService;
@@ -60,10 +61,16 @@ public class LotController {
 		* @return  String:반환하는 경로
 		*/
 	 @RequestMapping("lot/LotInputLast.lot")
-		public String lotinputsecond(@ModelAttribute("privateVO") PrivatelotVO privateVO, HttpSession session, String pri_accountbank, String pri_accountnum, String pri_accountname,SessionStatus sessStatus){
+		public String lotinputsecond(@ModelAttribute("privateVO") PrivatelotVO privateVO 
+				, HttpSession session, String pri_accountbank
+				, String pri_accountnum, String pri_accountname,SessionStatus sessStatus
+				, EntrepreneurVO entrepreneurVO, String e_rnum1, String e_rnum2, String e_rnum3){
 		 PrivateimageVO primgVO = (PrivateimageVO)session.getAttribute("primgVO");
+		 //pri 계좌번호 합치기
 		 privateVO.setPri_account(pri_accountbank + "/" + pri_accountnum + "/" + pri_accountname );
-		 service.lotinput(privateVO, primgVO);
+		 //entre 번호 합치기
+		 entrepreneurVO.setE_rnum(e_rnum1+"-"+e_rnum2+"-"+e_rnum3);
+		 service.lotinput(privateVO, primgVO, entrepreneurVO);
 		 //이미지 넘겨오나?
 		 System.out.println(primgVO.getPriimg_name());
 		 sessStatus.setComplete(); 

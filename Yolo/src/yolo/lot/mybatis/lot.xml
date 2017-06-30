@@ -17,4 +17,6 @@ values(PRIVATELOT_NO_SEQ.nextVal,#{pri_type},#{pri_booktype},#{pri_charge},#{pri
  	values(PRIVATEIMAGE_NO_SEQ.nextVal, #{pri_num}, #{priimg_name}, #{priimg_path})
 </insert>
 
+
+
 </mapper>

@@ -49,7 +49,7 @@
 	<put-attribute name="noTemplate" value=''></put-attribute>
 </definition>
 
-<definition name='*.notile' extends='noTemplate'>
+<definition name='/*/*.notile' extends='noTemplate'>
 	<put-attribute name="noTemplate" value='/WEB-INF/views/{1}.jsp'></put-attribute>
 </definition>
 

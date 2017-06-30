@@ -1,5 +1,10 @@
 package yolo.host.dto;
 
+import java.io.File;
+import java.io.IOException;
+
+import org.springframework.web.multipart.MultipartFile;
+
 public class EntrepreneurVO {
 
 
@@ -12,6 +17,8 @@ public class EntrepreneurVO {
 	private String e_fname;  /* 사업자 등록증 파일이름 */
 	private String e_fpath;  /* 사업자 등록증 파일위치 */
 
+	MultipartFile e_file;
+	
 	/* Constructor */
 	public EntrepreneurVO(){}
 
@@ -30,6 +37,32 @@ public class EntrepreneurVO {
 		this.e_rnum = e_rnum;
 		this.e_fname = e_fname;
 		this.e_fpath = e_fpath;
+	}
+	
+	public MultipartFile getE_file() {
+		return e_file;
+	}
+	public void setE_file(MultipartFile e_file) {
+		this.e_file = e_file;
+		
+		// 업로드 파일 접근
+		if(! e_file.isEmpty()){
+			this.e_fname = e_file.getOriginalFilename();
+			this.e_fpath = "C:\\Users\\gkack\\git\\yolo\\Yolo\\WebContent\\upload\\entrefile\\";
+			//this.b_fsize = file.getSize();
+			
+			File f = new File(e_fpath+e_fname);
+			
+			try {
+				e_file.transferTo(f);
+				
+			} catch (IllegalStateException e) {				
+				e.printStackTrace();
+			} catch (IOException e) {
+				
+				e.printStackTrace();
+			}
+		}
 	}
 
 

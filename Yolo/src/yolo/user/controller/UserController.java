@@ -35,7 +35,8 @@ public class UserController {
 	* @return  ModelAndView:반환하는 경로 
 	*/
 	@RequestMapping("join/join_ok.main")
-	public ModelAndView joinUser(UserVO userVO){
+	public ModelAndView joinUser(UserVO userVO, String postcode,String main_address , String detail_address){
+		userVO.setU_addr(postcode+" " + main_address + " " + detail_address);
 		ModelAndView mv = new ModelAndView();
 		int result = service.joinUser(userVO);
 		String message ="가입실패";
@@ -45,7 +46,7 @@ public class UserController {
 		}
 		mv.addObject(result);
 		mv.addObject(message);
-		mv.setViewName("/join/join_ok");
+		mv.setViewName("/join/join_ok.notile");
 
 		return mv;
 	}

@@ -50,6 +50,8 @@
 							아직 회원이 아니십니까? <a href="/Yolo/view/join/join.jsp"
 								class="text-green">회원가입하기</a>
 						</p>
+						
+
 					</form>
 				</div>
 			</div>
