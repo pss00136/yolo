@@ -24,7 +24,16 @@
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-        
+<style type="text/css">
+
+.panel-default > .panel-heading {
+    padding: 0px;
+}
+
+.panel-body {
+    padding: 0px;
+}
+</style>        
 
 
 
@@ -59,26 +68,77 @@
                               </div>
                            </div>
                            <!-- 예약공간선택 -->
-                           <div class="form-group">
-                              <label class="col-sm-2 control-label">예약공간선택</label>
-                              <div class="col-sm-9">
-                              <div class="btn-group">
-                                 <button data-toggle="dropdown"
-                                    class="btn btn-o btn-gray dropdown-toggle">
-                                    <span class="dropdown-label">예약한 공간 목록</span> <span
-                                       class="caret"></span>
-                                 </button>
-                                 <ul class="dropdown-menu dropdown-select">
-                                    <li class="active"><input type="radio" name="ds1"
-                                       checked="checked"><a href="#">인혁이형 댁 아 주 좋 음</a></li>
-                                    <li><input type="radio" name="ds1"><a href="#">창수형 댁 아 주 좋 음</a></li>
-                                    <li><input type="radio" name="ds1"><a href="#">찬종이집 안 됨 그냥 안됌 무조건 안됌</a></li>
-                                    <li class="disabled"><input type="radio" name="ds1"
-                                       disabled=""><a href="#">Option disabled</a></li>
-                                 </ul>
-                              </div>
-                              </div>
-                           </div>
+<div class="form-group">
+	<label class="col-sm-2 control-label">예약공간선택</label>
+	<div class="col-sm-9">
+
+		<div class="panel panel-default dd">
+			<div class="col-xs-12 panel-heading">
+				<a href="#ddPanel" class="btn btn-o btn-default btn-block btn-lg align-left" data-toggle="collapse">예약한 공간<span class="fa fa-angle-down pull-right"></span></a>
+			</div>
+			
+			
+			
+			<div id="ddPanel" class="panel-collapse collapse">
+				<div class="panel-body">
+					<div class="table-overflow">
+						<table class="table" id="inboxTable">
+							
+							<tbody class="table">
+								<tr>
+									<td><input type="checkbox"></td>
+									<td><img alt="" src="/Yolo/images_yolo/lot/1.PNG"></td>
+									<td>John Smith</td>
+									<td>Modern Residence in New York</td>
+									<td>6:07 pm</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox"></td>
+									<td><img alt="" src="/Yolo/images_yolo/lot/2-1.PNG"></td>
+									<td>Jane Smith</td>
+									<td>Hauntingly Beautiful Estate</td>
+									<td>Sep 27</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox"></td>
+									<td><img alt="" src="/Yolo/images_yolo/lot/2-2.PNG"></td>
+									<td>Rust Cohle</td>
+									<td>Sophisticated Residence</td>
+									<td>Sep 25</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox"></td>
+									<td><img alt="" src="/Yolo/images_yolo/lot/2-3.PNG"></td>
+									<td>Antony Iglesias</td>
+									<td>House With a Lovely Glass Roof</td>
+									<td>Sep 23</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox"></td>
+									<td><img alt="" src="/Yolo/images_yolo/lot/4.PNG"></td>
+									<td>John Smith</td>
+									<td>Modern Residence in New York</td>
+									<td>Sep 21</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+
+			</div>
+		</div>
+	</div>
+
+
+
+
+                           
+                           
+                           
+                           
+                           
                            <!-- 마켓 설명 입력 -->
                            <div class="form-group">
                               <label class="col-sm-2 control-label">글내용</label>
@@ -136,8 +196,7 @@
 
    <!-- 추가JS   -->
    <script src="/Yolo/js/home.js" type="text/javascript"></script>
-
-
+	
 </body>
 
 
