@@ -17,8 +17,8 @@
 <link href="/Yolo/css/bootstrap.css" rel="stylesheet">
 <link href="/Yolo/css/fullscreen-slider.css" rel="stylesheet">
 
-<!-- app.css 색상 수정본 -->
-<link href="/Yolo/css_yolo/cssView/common/app.css" rel="stylesheet">
+<!-- app.css 색상 / 왼쪽네비 수정 CSS : 메인용 -->
+<link href="/Yolo/css_yolo/cssView/common/app_main.css" rel="stylesheet">
 <!-- 추가 CSS -->
 <link href="/Yolo/css_yolo/cssView/common/main_style.css" rel="stylesheet">
 <link href="/Yolo/css_yolo/cssPlugin/icongrid/component.css" rel="stylesheet">
@@ -28,40 +28,13 @@
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-
+        
 <style type="text/css">
-#mainbody #wrapper  {
-	margin: 60px 0 0 0;
+#header_title{
+padding-top:9px;
+font-weight:300;
+letter-spacing:5px;
 }
-
-#menu1{
-background-image: url("/Yolo/images_yolo/host/main.jpg");
-background-size: cover;
-}
-
-#menu1 > a > h3{
-font-size:3em; 
-padding-top: 28px;
-}
-
-#menu2{
-background-image: url("/Yolo/images_yolo/host/main2.jpg");
-background-size: cover;
-}
-#menu2 > a > h3{
-font-size:3em; 
-padding-top: 28px;
-}
-
-#menu3{
-background-image: url("/Yolo/images_yolo/host/main3.jpg");
-background-size: cover;
-}
-#menu3 > a > h3{
-font-size:3em; 
-padding-top: 28px;
-}
-
 </style>
 </head>
 <body class="notransition" id="mainbody">
@@ -74,9 +47,13 @@ padding-top: 28px;
 			</a>
 		</div>
 		<a href="#" class="navHandler"><span class="fa fa-bars"></span></a>
+<!-- 		<div class="search"> -->
+<!-- 			<span class="searchIcon icon-magnifier"></span> <input type="text" -->
+<!-- 				placeholder="Search for houses, apartments..."> -->
+<!-- 		</div> -->
+
 		<div class="search">
-			<span class="searchIcon icon-magnifier"></span> <input type="text"
-				placeholder="Search for houses, apartments...">
+			<h4 id="header_title">YOLO WOW LOT</h4>
 		</div>
 		<!-- 상단 메뉴 유저부분 -->
 		<div class="headerUserWraper">
@@ -133,6 +110,69 @@ padding-top: 28px;
 		</div>
 		<div class="clearfix"></div>
 	</div>
+			<!-- 좌측 네비게이션 메뉴 -->
+		<div id="leftSide">
+			<nav class="leftNav scrollable">
+<!-- 				<div class="search"> -->
+<!-- 					<span class="searchIcon icon-magnifier"></span> <input type="text" -->
+<!-- 						placeholder="Search for houses, apartments..."> -->
+<!-- 					<div class="clearfix"></div> -->
+<!-- 				</div> -->
+				<!-- 네비게이션 메뉴 -->
+				<ul>
+					<li>
+						<a href="/Yolo/lot/LotList.lot"><span class="navIcon icon-compass"></span>
+						<span class="navLabel">공간찾기</span></a>
+					</li>
+					<li>
+						<a href="/Yolo/club/ClubList.club"><span class="navIcon fa fa-group"></span>
+						<span class="navLabel">모임찾기</span></a>
+					</li>
+					<li class="hasSub">
+						<a href="/Yolo/comShare/ShareList.share"><span class="navIcon fa fa-globe"></span>
+						<span class="navLabel">공간쉐어링</span></a>
+					</li>
+					<li class="hasSub"><a href="#">
+						<span class="navIcon fa fa-cog"></span>
+						<span class="navLabel">마이페이지</span>
+						<span class="fa fa-angle-left arrowRight"></span></a>
+						<ul>
+							<li class="align-center"><h5 style="color:#fff;">신청현황</h5></li>
+							<li><a href="/Yolo/mypage/appStatus/appliedLot.myinfo">예약공간보기</a></li>
+							<li><a href="/Yolo/mypage/appStatus/appliedClub.myinfo">참여모임보기</a></li>
+							<li><a href="/Yolo/mypage/appStatus/InterestList.myinfo">관심리스트</a></li>			
+							<li class="align-center"><h5 style="color:#fff;">나의 등록글</h5></li>
+							<li><a href="/Yolo/mypage/myReg/ClubMyList.myreg">나의 모임</a></li>
+							<li><a href="/Yolo/mypage/myReg/ShareMyList.myreg">나의 쉐어링</a></li>				
+							<li class="align-center"><h5 style="color:#fff;">정보수정</h5></li>
+							<li><a href="/Yolo/mypage/info/MyInfoModify.myinfo">개인정보수정</a></li>
+							<li><a href="/Yolo/mypage/info/MyInfoModify.myinfo">비밀번호변경</a></li>				
+						</ul>
+					</li>			
+		
+				</ul><!-- 네비게이션 메뉴 끝 -->
+			</nav>
+			<!-- 좌측 네비게이션 유저부분 -->
+			<div class="leftUserWraper dropup">
+				<a href="#" class="avatarAction dropdown-toggle"
+					data-toggle="dropdown"> 
+					<img class="avatar" src="/Yolo/images/avatar-1.png" alt="John Smith">
+					<span class="counter">5</span>
+					<div class="userBottom pull-left">
+						<span class="bottomUserName">John Smith</span> <span
+							class="fa fa-angle-up pull-right arrowUp"></span>
+					</div>
+					<div class="clearfix"></div>
+				</a>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#"><span class="icon-user"></span>마이페이지</a></li>
+					<li><a href="#"><span class="icon-bell"></span>메세지
+							<span class="badge pull-right bg-red">5</span></a></li>
+					<li class="divider"></li>
+					<li><a href="#"><span class="icon-power"></span>Logout</a></li>
+				</ul>
+			</div><!-- 좌측 네비게이션 유저부분 끝 -->
+		</div><!-- 좌측 네비게이션 메뉴 끝 -->
 	<div class="closeLeftSide"></div>
 	<!-- Header End-->
 

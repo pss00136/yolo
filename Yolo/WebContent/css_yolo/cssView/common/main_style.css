@@ -15,3 +15,37 @@
 .home-footer{
 	position: relative;
 }
+
+
+/* 쓰리버튼 메인용 스타일시트 추가*/
+#mainbody #wrapper  {
+	margin: 60px 0 0 0;
+}
+
+#menu1{
+background-image: url("/Yolo/images_yolo/common/lot.jpg");
+background-size: cover;
+}
+
+#menu1 > a > h3{
+font-size:3em; 
+padding-top: 28px;
+}
+
+#menu2{
+background-image: url("/Yolo/images_yolo/common/club.jpg");
+background-size: cover;
+}
+#menu2 > a > h3{
+font-size:3em; 
+padding-top: 28px;
+}
+
+#menu3{
+background-image: url("/Yolo/images_yolo/common/share.jpg");
+background-size: cover;
+}
+#menu3 > a > h3{
+font-size:3em; 
+padding-top: 28px;
+}

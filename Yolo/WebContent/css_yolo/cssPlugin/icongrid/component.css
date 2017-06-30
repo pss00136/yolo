@@ -52,7 +52,7 @@
 	background-color: rgba( 255, 255, 255, 0.3 );
 	display: block;
 	height: 100%;
-	color: #ff8124;
+	color: #333;
 	-webkit-transition: background 0.2s;
 	-moz-transition: background 0.2s;
 	transition: background 0.2s;
@@ -117,7 +117,7 @@
 .cbp-ig-grid .cbp-ig-title:before {
 	content: '';
 	position: absolute;
-	background: #ff8124;
+	background: #333;
 	width: 160px;
 	height: 6px;
 	top: 0px;
@@ -156,7 +156,7 @@
 /* Hover styles */
 
 .cbp-ig-grid li > a:hover {
-	background: #ff8124 ;
+	background: #fff ;
 	background-color: rgba( 255, 129, 36, 0.5 );
 }
 
@@ -216,7 +216,7 @@
 @media screen and (max-width: 41.6em) { 
 	.cbp-ig-grid li {
 		width: 100%;
-		height:420px;
+		height:100%;
 	}
 
 	.cbp-ig-grid li:nth-child(-n+2){
