@@ -46,5 +46,16 @@ public class LotDAO {
 				
 		return list;
 	}
+	
+	public List<LotListVO> lotdetailview(){
+		List<LotListVO>	list = null;
+		try{
+			list = session.selectList("lot.lotdetailview");
+		}catch(Exception ex){
+			System.out.println("lotdetailview 실패: " + ex.getMessage());
+		}
+				
+		return list;
+	}
 
 }

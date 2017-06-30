@@ -23,7 +23,7 @@ public class PrivatelotVO {
 	private String pri_weekendo;  /* 주말운영시간 */
 	private String pri_weekende;  /* 주말종료시간 */
 	private String pri_lat;       /* 위도 */
-	private String pir_long;      /* 경도 */
+	private String pri_long;      /* 경도 */
 	private String pri_tel;       /* 전화번호 */
 	private String pri_web;       /* 홈페이지 */
 	private int pri_bookcount;    /* 예약수 */
@@ -65,7 +65,7 @@ public class PrivatelotVO {
 		this.pri_weekendo = pri_weekendo;
 		this.pri_weekende = pri_weekende;
 		this.pri_lat = pri_lat;
-		this.pir_long = pir_long;
+		this.pri_long = pir_long;
 		this.pri_tel = pri_tel;
 		this.pri_web = pri_web;
 		this.pri_bookcount = pri_bookcount;
@@ -286,13 +286,13 @@ public class PrivatelotVO {
 	}
 
 
-	public String getPir_long() {
-		return pir_long;
+	public String getPri_long() {
+		return pri_long;
 	}
 
 
-	public void setPir_long(String pir_long) {
-		this.pir_long = pir_long;
+	public void setPri_long(String pir_long) {
+		this.pri_long = pri_long;
 	}
 
 

@@ -30,9 +30,9 @@
 										<span class="dropdown-label">오전 12:00</span> <span
 											class="caret"></span>
 									</button>
-									<ul id="lec_timeselec" class="dropdown-menu dropdown-select">
+									<ul id="lec_timeselec" name="pri_weekdayo" class="dropdown-menu dropdown-select">
 										<li class="active">
-										<input type="radio" name="pri_weekdayo" checked="checked" value="00:00"><a href="#">오전 12:00</a>
+										<input type="radio"  checked="checked" value="00:00"><a href="#">오전 12:00</a>
 										</li>
 										<li><input type="radio"   value="01:00"><a href="#">오전 01:00</a></li>
 										<li><input type="radio"   value="02:00"><a href="#">오전 02:00</a></li>
@@ -72,9 +72,9 @@
 										<span class="dropdown-label">오전 12:00</span> <span
 											class="caret"></span>
 									</button>
-									<ul id="lec_timeselec" class="dropdown-menu dropdown-select">
+									<ul id="lec_timeselec" name="pri_weekdaye" class="dropdown-menu dropdown-select">
 										<li class="active">
-										<input type="radio" name="pri_weekdaye" checked="checked" value="00:00"><a href="#">오전 12:00</a>
+										<input type="radio"  checked="checked" value="00:00"><a href="#">오전 12:00</a>
 										</li>
 										<li><input type="radio"   value="01:00"><a href="#">오전 01:00</a></li>
 										<li><input type="radio"   value="02:00"><a href="#">오전 02:00</a></li>
@@ -121,9 +121,9 @@
 										<span class="dropdown-label">오전 12:00</span> <span
 											class="caret"></span>
 									</button>
-									<ul id="lec_timeselec" class="dropdown-menu dropdown-select">
+									<ul id="lec_timeselec" name="pri_weekendo" class="dropdown-menu dropdown-select">
 										<li class="active">
-										<input type="radio" name="pri_weekendo" checked="checked" value="00:00"><a href="#">오전 12:00</a>
+										<input type="radio"  checked="checked" value="00:00"><a href="#">오전 12:00</a>
 										</li>
 										<li><input type="radio"   value="01:00"><a href="#">오전 01:00</a></li>
 										<li><input type="radio"   value="02:00"><a href="#">오전 02:00</a></li>
@@ -163,9 +163,9 @@
 										<span class="dropdown-label">오전 12:00</span> <span
 											class="caret"></span>
 									</button>
-									<ul id="lec_timeselec" class="dropdown-menu dropdown-select">
+									<ul id="lec_timeselec" name="pri_weekende"  class="dropdown-menu dropdown-select">
 										<li class="active">
-										<input type="radio" name="pri_weekende" checked="checked" value="00:00"><a href="#">오전 12:00</a>
+										<input type="radio" checked="checked" value="00:00"><a href="#">오전 12:00</a>
 										</li>
 										<li><input type="radio"   value="01:00"><a href="#">오전 01:00</a></li>
 										<li><input type="radio"   value="02:00"><a href="#">오전 02:00</a></li>
@@ -245,7 +245,7 @@
 		</div>
 	</form>
 </div>
-<!---------------세미나/강연 정보입력 끝 ------------------------>
+<!---------------공간등록 정보입력 끝 ------------------------>
 
 
 <!-- 추가 js  -->

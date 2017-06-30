@@ -1,6 +1,6 @@
 package yolo.lot.controller;
 
-import java.util.ArrayList;
+import java.io.IOException;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -12,6 +12,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.google.code.geocoder.Geocoder;
+import com.google.code.geocoder.GeocoderRequestBuilder;
+import com.google.code.geocoder.model.GeocodeResponse;
+import com.google.code.geocoder.model.GeocoderRequest;
+import com.google.code.geocoder.model.GeocoderResult;
+import com.google.code.geocoder.model.GeocoderStatus;
+import com.google.code.geocoder.model.LatLng;
 
 import yolo.host.dto.EntrepreneurVO;
 import yolo.lot.dto.LotListVO;
@@ -65,9 +73,42 @@ public class LotController {
 		    session.setAttribute("primgVO", primgVO);
 		    //address 합치기
 			 privateVO.setPri_addr(lot_main_address +" "+ lot_detail_address);
-			
+			 //경도,위도
+			 Float[] coords = new Float[2];
+		      coords = geoCoding(lot_main_address);
+		      //coords[0] : 위도 , coords[1] : 경도 
+		       privateVO.setPri_lat(Float.toString(coords[0]));
+		       privateVO.setPri_long(Float.toString(coords[1]));
 			 return "/lot/LotInputSecond";
 		}
+	    
+	    public Float[] geoCoding(String location){ 
+	      if (location == null) {
+	         return null;
+	      }     
+	         Geocoder geocoder = new Geocoder();
+	         // setAddress : 변환하려는 주소 (경기도 성남시 분당구 등)
+	         // setLanguate : 인코딩 설정
+	         GeocoderRequest geocoderRequest = new GeocoderRequestBuilder().setAddress(location).setLanguage("ko").getGeocoderRequest();
+	         GeocodeResponse geocoderResponse;
+
+	         try {
+	            geocoderResponse = geocoder.geocode(geocoderRequest);
+	            if (geocoderResponse.getStatus() == GeocoderStatus.OK & !geocoderResponse.getResults().isEmpty()) {
+
+	               GeocoderResult geocoderResult=geocoderResponse.getResults().iterator().next();
+	               LatLng latitudeLongitude = geocoderResult.getGeometry().getLocation();
+	                       
+	               Float[] coords = new Float[2];
+	               coords[0] = latitudeLongitude.getLat().floatValue();
+	               coords[1] = latitudeLongitude.getLng().floatValue();
+	               return coords;
+	            }
+	         } catch (IOException ex) {
+	            ex.printStackTrace();
+	         }
+	      return null;
+	   }
 	    
 	   /*
 		* @메소드명: lotinputsecond
@@ -125,7 +166,7 @@ public class LotController {
 		* @메소드명: lotlist
 		* @역할: 공간 검색, 검색 결과 보여주기 
 		*
-		* @param   PrivatelotVO, PrivateimageVO 값
+		* @param   LotListVO 값
 		* @return  String:반환하는 경로
 		*/
 	   @RequestMapping("lot/LotList.lot")
@@ -141,12 +182,16 @@ public class LotController {
 	 		* @메소드명: lotview
 	 		* @역할: 공간 상세 페이지 
 	 		*
-	 		* @param   PrivatelotVO, PrivateimageVO 값
+	 		* @param   LotListVO 값
 	 		* @return  String:반환하는 경로
 	 		*/
 	   @RequestMapping("lot/LotView.lot")
-		public String lotview(){
-			return "/lot/LotView.map";
+		public ModelAndView lotview(LotListVO lotlistVO){
+		   ModelAndView mv = new ModelAndView();
+		    List<LotListVO> list = service.lotdetailview();
+		    mv.addObject("list", list);
+		    mv.setViewName("/lot/LotView.map");
+			return mv;
 		}
 	   
 	   

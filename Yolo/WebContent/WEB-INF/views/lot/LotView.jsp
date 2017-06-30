@@ -18,13 +18,6 @@
 		</style>	
 
 
-<!-- 	<!-- Content --> -->
-<!-- 	<div id="mapView" class="mob-min"> -->
-<!-- 		<div class="mapPlaceholder"> -->
-<!-- 			<span class="fa fa-spin fa-spinner"></span> Loading map... -->
-<!-- 		</div> -->
-<!-- 	</div> -->
-
 	
 			<div class="singleTop">
 				<div id="carouselFull" class="carousel slide" data-ride="carousel">
@@ -38,7 +31,7 @@
 					  <!------------- 슬라이더로 사진, 상세사진 보여주기 --------------------->
 					<div class="carousel-inner">
 						<div class="item active">
-							<img src="/Yolo/images_yolo/lot/2.PNG" alt="First slide">
+							<img src="/Yolo/upload/lot/${priimg_name}" alt="First slide">
 							<div class="container">
 								<div class="carousel-caption"></div>
 							</div>
@@ -73,18 +66,13 @@
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-8">
 							<div class="summaryItem">
-								<h1 class="pageTitle">왕십리 아지트스튜디오</h1>
-								<strong style="margin-top: 0px; font-size: 25px;">20,000원/시간</strong>
+								<h1 class="pageTitle">#{pri_title}</h1>
+								<strong style="margin-top: 0px; font-size: 25px;">${pri_weekprice}</strong>
 								<div class="address">
-									<span class="icon-pointer"></span>왕십리
+									<span class="icon-pointer"></span>${pri_addr}
 								</div>
-								<ul class="tags">
-                                        <li><span style="cursor: pointer;">#왕십리</span></li>
-                                        <li><span style="cursor: pointer;">#파티</span> </li>
-                                        <li><span class="tag" style="cursor: pointer;">#아지트스튜디오</span></li>
-                                        <li><span class="tag" style="cursor: pointer;">#왕십리스튜디오</span></li>
-                                        <li><span class="tag" style="cursor: pointer;">#아지트스튜디오</span></li>
-                                        <li><span class="tag" style="cursor: pointer;">#아지트스튜디오</span></li>
+								<ul class="tags" >
+                                        <li><span style="cursor: pointer;">${pri_tag}</span></li>
                                 </ul>
 							</div>
 						</div>
@@ -114,11 +102,9 @@
 			<div class="clearfix"></div>
 			<div class="description">
 				<h3>상세정보</h3>
-				<p>
-					너와 나 사이 마음을 잇는 공간<br /> 어느사이 우리가 만날 시간이 되었군요 :)<br /> 인생샷을 위한 조명이
-					비치되어 있습니다. HVR-600S / 60w 신촌에 위치한 어느사이는 여러분의 파티/모임과 함께 합니다.<br />
-					3M의 키친과 BAR, 16명까지 수용가능한 넓은 공간까지~!
-				</p>
+				<div>
+					${pri_content}
+				</div>
 			</div>
 
         <!------------- 편의시설 항목들 --------------------->
@@ -126,7 +112,7 @@
 				<h3>편의시설</h3>
 				<div class="row">
 					<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem">
-						<span class="fa fa-car"></span> Garage
+						<span class="fa fa-car"></span> ${pri_facility}
 					</div>
 					<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem">
 						<span class="fa fa-tint"></span> Outdoor Pool
