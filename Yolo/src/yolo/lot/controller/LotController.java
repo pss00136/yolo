@@ -8,8 +8,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
+import org.springframework.web.servlet.ModelAndView;
 
 import yolo.host.dto.EntrepreneurVO;
+import yolo.lot.dto.LotListVO;
 import yolo.lot.dto.PrivateimageVO;
 import yolo.lot.dto.PrivatelotVO;
 import yolo.lot.service.LotService;
@@ -78,9 +80,21 @@ public class LotController {
 		}
 	 
 	   
+	 
+	 /*
+		* @메소드명: lotlist
+		* @역할: 공간 검색, 검색 결과 보여주기 
+		*
+		* @param   PrivatelotVO, PrivateimageVO 값
+		* @return  String:반환하는 경로
+		*/
 	   @RequestMapping("lot/LotList.lot")
-		public String lotlist(){
-			return "/lot/LotList.map";
+		public ModelAndView lotlist(LotListVO lotlistVO){
+		    service.lotlistview();
+		    ModelAndView mv = new ModelAndView();
+		    mv.addObject("lotlistVO", lotlistVO);
+		    mv.setViewName("/lot/LotList.map");
+			return mv;
 		}
 	   
 	   @RequestMapping("lot/LotView.lot")

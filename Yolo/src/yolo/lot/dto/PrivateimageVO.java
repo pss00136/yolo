@@ -11,6 +11,7 @@ public class PrivateimageVO {
 	private String pri_num;       /* 민간시설 공간 번호 */
 	private String priimg_path;   /* 이미지 위치 */
 	private String priimg_name;   /* 이미지 이름 */
+	
 	MultipartFile file;
 	
 	/* Constructor */

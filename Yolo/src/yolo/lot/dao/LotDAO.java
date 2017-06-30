@@ -1,10 +1,13 @@
 package yolo.lot.dao;
 
+import java.util.List;
+
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import yolo.host.dto.EntrepreneurVO;
+import yolo.lot.dto.LotListVO;
 import yolo.lot.dto.PrivateimageVO;
 import yolo.lot.dto.PrivatelotVO;
 
@@ -31,6 +34,11 @@ public class LotDAO {
 		}
 		return result;
 		
+	}
+	
+	public List<LotListVO> lotlistview(){
+		List<LotListVO>	list = session.selectList("lot.lotlistview");
+		return list;
 	}
 
 }

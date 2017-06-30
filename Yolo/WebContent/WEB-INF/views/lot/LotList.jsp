@@ -11,14 +11,7 @@
 
 
         <!-- Content -->
-
-      
-<!--             <div id="mapView"> -->
-<!--                 <div class="mapPlaceholder"><span class="fa fa-spin fa-spinner"></span> Loading map...</div> -->
-<!--             </div> -->
-<!--             <div id="content"> -->
-            
-            
+         
             <!-------------- 필터 --------------------->
                 <div class="filter">
                     <h1 class="osLight">공간찾기</h1>
@@ -88,21 +81,17 @@
                             
                         </div>
                         
-                    
-                    </form>
-                </div>
-                
-                
-                <!------------- 공간 검색 결과 리스트 보여주기 --------------------->
+                        
+                        <!------------- 공간 검색 결과 리스트 보여주기 --------------------->
                 <div class="row rightContainer">
                     <h3>공간검색결과</h3>
                     <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <d1iv class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                             <a href="/Yolo/lot/LotView.lot" class="card">
                                 <div class="figure">
-                                    <img src="/Yolo/images_yolo/lot/1.PNG" alt="image">
+                                    <img src="/Yolo/upload/lot/${lotlistVO.priimg_name}" alt="image">
                                     <div class="figCaption">
-                                        <div>5,000원/시간</div>
+                                        <div>${lotlistVO.pri_weekprice}</div>
                                         <span class="icon-eye"> 200</span>
                                         <span class="icon-heart"> 54</span>
                                         <span class="icon-bubble"> 13</span>
@@ -110,8 +99,8 @@
                                     <div class="figView"><span class="icon-eye"></span></div>
                                     
                                 </div>
-                                <h2>공상온도</h2>
-                                <div class="cardAddress"><span class="icon-pointer"></span>홍대 합정	</div>
+                                <h2>${lotlistVO.pri_title}</h2>
+                                <div class="cardAddress"><span class="icon-pointer"></span>${lotlistVO.pri_addr}</div>
                                 <div class="cardRating">
                                     <span class="fa fa-star"></span>
                                     <span class="fa fa-star"></span>
@@ -124,6 +113,7 @@
                                 <div class="clearfix"></div>
                             </a>
                         </div>
+                        
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                             <a href="/Yolo/view/lot/LotView.jsp" class="card">
                                 <div class="figure">
@@ -178,89 +168,9 @@
                                 <div class="clearfix"></div>
                             </a>
                         </div>
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                            <a href="single.html" class="card">
-                                <div class="figure">
-                                    <img src="/Yolo/images_yolo/lot/4.PNG" alt="image">
-                                    <div class="figCaption">
-                                        <div>2,000원/시간</div>
-                                        <span class="icon-eye"> 145</span>
-                                        <span class="icon-heart"> 99</span>
-                                        <span class="icon-bubble"> 25</span>
-                                    </div>
-                                    <div class="figView"><span class="icon-eye"></span></div>
-                                 
-                                </div>
-                                <h2>윙스터디 강남역점</h2>
-                                <div class="cardAddress"><span class="icon-pointer"></span>강남</div>
-                                <div class="cardRating">
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star-o"></span>
-                                    (170)
-                                </div>
-                                
-                                <div class="clearfix"></div>
-                            </a>
-                        </div>
-                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                            <a href="single.html" class="card">
-                                <div class="figure">
-                                    <img src="/Yolo/images_yolo/lot/1.PNG" alt="image">
-                                    <div class="figCaption">
-                                        <div>5,000원/시간</div>
-                                        <span class="icon-eye"> 200</span>
-                                        <span class="icon-heart"> 54</span>
-                                        <span class="icon-bubble"> 13</span>
-                                    </div>
-                                    <div class="figView"><span class="icon-eye"></span></div>
-                                    
-                                </div>
-                                <h2>공상온도</h2>
-                                <div class="cardAddress"><span class="icon-pointer"></span>홍대 합정	</div>
-                                <div class="cardRating">
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star-o"></span>
-                                    (146)
-                                </div>
-                                
-                                <div class="clearfix"></div>
-                            </a>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                            <a href="single.html" class="card">
-                                <div class="figure">
-                                    <img src="/Yolo/images_yolo/lot/2.PNG" alt="image">
-                                    <div class="figCaption">
-                                        <div>20,000원/시간</div>
-                                        <span class="icon-eye"> 175</span>
-                                        <span class="icon-heart"> 67</span>
-                                        <span class="icon-bubble"> 9</span>
-                                    </div>
-                                    <div class="figView"><span class="icon-eye"></span></div>
-                                    
-                                </div>
-                                <h2>왕십리 아지트스튜디오</h2>
-                                <div class="cardAddress"><span class="icon-pointer"></span>왕십리</div>
-                                <div class="cardRating">
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    (123)
-                                </div>
-                              
-                                <div class="clearfix"></div>
-                            </a>
-                        </div>
                     </div>
                     
+                    <!-- 페이징 넘기기 -->
                     <ul class="pagination">
                         <li class="disabled"><a href="#"><span class="fa fa-angle-left"></span></a></li>
                         <li class="active"><a href="#">1</a></li>
@@ -271,5 +181,13 @@
                         <li><a href="#"><span class="fa fa-angle-right"></span></a></li>
                     </ul>
                 </div>
-<!--             </div> -->
+                <!------------- 공간 검색 결과 리스트 보여주기 --------------------->
+                    
+                    </form>
+                </div>
+                <!---- 필터 끝 -----> 
+                
+                
+                
+
        
