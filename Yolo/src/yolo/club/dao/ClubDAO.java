@@ -1,10 +1,13 @@
 package yolo.club.dao;
 
+import java.util.List;
+
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import yolo.club.dto.ClubImageVO;
+import yolo.club.dto.ClubListVO;
 import yolo.club.dto.ClubVO;
 
 /*
@@ -39,6 +42,12 @@ public class ClubDAO {
 		}
 		
 		return result;
+	}
+	
+	public List<ClubListVO> clublistview(){
+		List<ClubListVO> list = null;
+		list = session.selectList("club.clublistview");
+		return list;
 	}
 
 }
