@@ -22,17 +22,18 @@
 				<label class="col-sm-2 control-label"></label>
 				<div class="col-sm-3">
 					<div class="radio custom-radio">
-						<label><input type="radio" name="e_type" value="사업자"><span
+						<label><input type="radio" name="e_type" value="사업자" onclick="div_OnOff(this.value,'en');"><span
 							class="fa fa-circle"></span> 사업자</label>
 					</div>
 				</div>
 				<div class="col-sm-3">
 					<div class="radio custom-radio">
-						<label><input type="radio" name="e_type" value="비사업자"><span
+						<label><input type="radio" name="e_type" value="비사업자" onclick="div_OnOff(this.value,'en');"><span
 							class="fa fa-circle"></span>비사업자</label>
 					</div>
 				</div>
 			</div>
+			<div id="en"  style="display:none">
 			<!-- 상호명 입력 -->
 			<div class="form-group">
 				<label class="col-sm-2 control-label">상호명</label>
@@ -89,6 +90,7 @@
 			</div>
 
 		</div>
+		</div>
 		<!-- 사업자 등록 여부 입력 끝 -->
 		<!-- 예약 방법 등록 -->
 		<div class="panel-heading">예약 방법</div>
@@ -97,19 +99,19 @@
 				<label class="col-sm-2 control-label"></label>
 				<div class="col-sm-3">
 					<div class="radio custom-radio">
-						<label><input type="radio" name="radio2"><span
+						<label><input type="radio" name="pri_info" value="바로결제"><span
 							class="fa fa-circle"></span>바로결제</label>
 					</div>
 				</div>
 				<div class="col-sm-3">
 					<div class="radio custom-radio">
-						<label><input type="radio" name="radio2"><span
+						<label><input type="radio" name="pri_info" value="승인결제"><span
 							class="fa fa-circle"></span>승인결제</label>
 					</div>
 				</div>
 				<div class="col-sm-3">
 					<div class="radio custom-radio">
-						<label><input type="radio" name="radio2"><span
+						<label><input type="radio" name="pri_info" value="승인예약"><span
 							class="fa fa-circle"></span>승인예약</label>
 					</div>
 				</div>
@@ -286,7 +288,19 @@
 		<!-- 세부 정보 등록 끝 -->
 	</form>
 </div>
-<!---------------세미나/강연 정보입력 끝 ------------------------>
+<!---------------공간등록 정보입력 끝 ------------------------>
+
+<!-- 사업자/비사업자에  따른 hidden Div -->
+	<script>
+		function div_OnOff(v,id){
+		 // 라디오 버튼 value 값 조건 비교
+		 if(v == "사업자"){
+		  document.getElementById(id).style.display = ""; 
+		 }else{
+		  document.getElementById(id).style.display = "none"; 
+		 }
+		}
+	</script>
 
 
 <!-- 추가 js  -->
