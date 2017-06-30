@@ -105,7 +105,7 @@
 		<a href="#signin" data-toggle="modal" class="btn btn-round btn-o btn-green">로그인</a>
 		<a href="#signup" data-toggle="modal" class="btn btn-round btn-o btn-green">회원가입</a>
 	</div>
-	<!-- 맵 아이콘 -->
-<!-- 	<a href="#" class="mapHandler"><span class="icon-map"></span></a> -->
+	<!-- 맵 아이콘 보여주기-->
+	<a href="#" class="mapHandler"><span class="icon-map"></span></a>
 	<div class="clearfix"></div>
 </div>

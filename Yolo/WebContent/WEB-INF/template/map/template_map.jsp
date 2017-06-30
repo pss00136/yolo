@@ -33,9 +33,9 @@
 				<span class="fa fa-spin fa-spinner"></span> Loading map...
 			</div>
 		</div>
-		<div id="content">
+		<div id="content" class="mob-max">
 			<!-- -----------------여기에 컨텐츠 div넣으세요----------------- -->
-			<!-- 이 사이에! -->
+			
 
 			<tiles:insertAttribute name="body" />
 
