@@ -101,7 +101,7 @@ public class LotController {
 		* @역할: 마지막공간등록 페이지  
 		*
 		* @param   PrivatelotVO, PrivateimageVO 값
-		* @return  String:반환하는 경로
+		* @return  String:반환하는 경로 
 		*/
 	 @RequestMapping("lot/LotInputFinish.lot")
 		public String lotinputlast(@ModelAttribute("privateVO") PrivatelotVO privateVO
