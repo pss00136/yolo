@@ -2,126 +2,117 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<link href="<c:url value='/css_yolo/cssView/comMarket/2_fleaInput.css'/>" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="/Yolo/css_yolo/cssView/Club/tagPlus.css" />
-<link rel="stylesheet" type="text/css" href="/Yolo/css_yolo/cssView/lot/lotDetail.css" />
-<style type="text/css">
-		.commentsFormWrapper.active {
-    width: 100%;
-}
-		
-</style>
+<!-- 추가CSS -->
+<link href="/Yolo/css_yolo/cssView/comShare/ShareInput.css" rel="stylesheet">
 
 <!-- ------------------------------------------------------- -->
 
-
-	<div class="row">
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-			<div class="panel panel-default">
-				<div class="panel-body">
-					<h4>쉐어링 정보 입력</h4>
-					<hr>
-					<br />
-					<form name="form" method="post" action="ShareInputOk.share"
-						class="form-horizontal" role="form">
-						<!-- 마켓 명 입력 -->
-						<div class="form-group">
-							<label class="col-sm-2 control-label">글 제목</label>
-							<div class="col-sm-9">
-								<input name="sl_title" id="sl_title"
-									class="form-control input-sm" type="text">
-							</div>
-						</div>
-						<!-- 예약공간선택 -->
-						<div class="form-group">
-							<label class="col-sm-2 control-label">예약공간선택</label>
-							<div class="col-sm-9">
-								<div class="btn-group">
-									<button data-toggle="dropdown"
-										class="btn btn-o btn-gray dropdown-toggle">
-										<span class="dropdown-label">예약한 공간 목록</span> <span
-											class="caret"></span>
-									</button>
-									<ul class="dropdown-menu dropdown-select">
-										<li class="active"><input type="radio" name="ds1"
-											checked="checked"><a href="#">인혁이형집 </a></li>
-										<li><input type="radio" name="ds1"><a href="#">창수형집
-										</a></li>
-										<li><input type="radio" name="ds1"><a href="#">찬종이집</a></li>
-										<li class="disabled"><input type="radio" name="ds1"
-											disabled=""><a href="#">Option disabled</a></li>
-									</ul>
+<div class="home-content">
+	<div class="home-wrapper">
+		<div class="tables">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<h4>쉐어링 정보입력</h4>
+							<hr>
+							<br />
+							<form class="form-horizontal" role="form">
+								<!-- 글 제목 입력 -->
+								<div class="form-group">
+									<label class="col-sm-2 control-label">글 제목</label>
+									<div class="col-sm-9">
+										<input class="form-control input-sm" type="text">
+									</div>
 								</div>
-							</div>
-						</div>
-						<!-- 예약공간선택 끝-->
-	
-						<!-- 마켓 설명 입력 -->
-						<div class="form-group">
-							<label class="col-sm-2 control-label">글내용</label>
-							<div class="col-sm-9">
-								<textarea name="sl_content" id="sl_content" class="form-control"
-									rows="15"></textarea>
-							</div>
-						</div>
-						<!-- 상품 등록하러 가기 버튼 -->
-						
-							<button id="share_check_ok"
-								class="col-xs-offset-4 col-xs-4 col-sm-offset-4 col-sm-4 col-md-offset-4 col-md-4 col-lg-offset-4 col-lg-4 btn btn-round btn-o btn-green">쉐어링
-								등록하기</button>
-						
+								<!-- 예약공간 선택 -->
+								<div class="form-group">
+									<label class="col-sm-2 control-label">예약공간 선택</label>
+									<div class="col-sm-9 panel panel-default dd">
+										<a href="#ddPanel"
+											class="btn btn-o btn-default btn-block btn-lg align-left"
+											data-toggle="collapse"><span
+											class="fa fa-angle-down pull-right"></span></a>
+										<div id="ddPanel" class="panel-collapse collapse">
+											<div class="panel-body">
+												<!-- 내가 예약한 공간 리스트 -->
+												<div class="table-overflow">
+													<table class="table" id="inboxTable">
+														<tbody class="table">
+															<tr>
+																<td><div class="radio custom-radio">
+																		<label><input type="radio" name="radio1"><span
+																			class="fa fa-circle"></span></label>
+																	</div></td>
+																<td><img alt="" src="/Yolo/images_yolo/lot/1.PNG"
+																	width="150px;" height="100px;"></td>
+																<td>John Smith</td>
+																<td>Modern Residence in New York</td>
+																<td>6:07 pm</td>
+															</tr>
+															<tr>
+																<td><div class="radio custom-radio">
+																		<label><input type="radio" name="radio1"><span
+																			class="fa fa-circle"></span></label>
+																	</div></td>
+																<td><img alt="" src="/Yolo/images_yolo/lot/2.PNG"
+																	width="150px;" height="100px;"></td>
+																<td>Jane Smith</td>
+																<td>Hauntingly Beautiful Estate</td>
+																<td>Sep 27</td>
+															</tr>
+															<tr>
+																<td><div class="radio custom-radio">
+																		<label><input type="radio" name="radio1"><span
+																			class="fa fa-circle"></span></label>
+																	</div></td>
+																<td><img alt="" src="/Yolo/images_yolo/lot/3.PNG"
+																	width="150px;" height="100px;"></td>
+																<td>Rust Cohle</td>
+																<td>Sophisticated Residence</td>
+																<td>Sep 25</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+												<!-- 내가 예약한 공간 리스트 END-->
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- 선택한 공간 카테고리 -->
+								<div class="form-group">
+									<label class="col-sm-2 control-label">쉐어링 공간</label>
+									<div class="col-sm-9">
+										<textarea class="form-control" rows="10" readonly="readonly"></textarea>
+									</div>
+								</div>
+								<!-- 글 내용 입력 -->
+								<div class="form-group">
+									<label class="col-sm-2 control-label">글 내용</label>
+									<div class="col-sm-9">
+										<textarea class="form-control" rows="15"
+											placeholder="쉐어링 날짜/시간 및 상세 내용 입력"></textarea>
+									</div>
+								</div>
+								<!-- 쉐어링 등록하기 버튼 -->
+								<div id="nextbtn" class="col-md-12">
+									<div class="col-md-5"></div>
+									<button class="col-md-2 btn btn-round btn-o btn-green">쉐어링
+										등록하기</button>
+									<div class="col-md-5"></div>
+								</div>
 
-					</form>
+							</form>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
+		<!-- / tables -->
 	</div>
+</div>
 
 
-
-<!-- <!------------- 상세정보, 해시태그 ---------------------> -->
-<!-- 				<div class="singleTop"> -->
-<!-- 					<div class="summary"> -->
-						
-<!-- 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> -->
-<!-- 								<div class="summaryItem"> -->
-<!-- 									<h1 class="pageTitle">왕십리 아지트스튜디오</h1> -->
-<!-- 									<strong style="margin-top: 0px; font-size: 25px;">20,000원/시간</strong> -->
-<!-- 									<div class="address"> -->
-<!-- 										<span class="icon-pointer"></span>왕십리 -->
-<!-- 									</div> -->
-<!-- 									<ul class="tags"> -->
-<!--                                         	<li><span style="cursor: pointer;">#왕십리</span></li> -->
-<!--                                         	<li><span style="cursor: pointer;">#파티</span> </li> -->
-<!--                                         	<li><span style="cursor: pointer;">#아지트스튜디오</span></li> -->
-<!--                                         	<li><span style="cursor: pointer;">#왕십리스튜디오</span></li> -->
-<!--                                         	<li><span style="cursor: pointer;">#아지트스튜디오</span></li> -->
-<!--                                         	<li><span style="cursor: pointer;">#아지트스튜디오</span></li> -->
-<!--                                 	</ul> -->
-<!-- 								</div> -->
-<!-- 							</div> -->
-
-<!-- 							<div id="reservation"> -->
-						
-<!-- 								<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> -->
-					
-<!-- 									<div id="reservation"> -->
-<!-- 										<label>예약날짜</label> -->
-<!-- 										<div class="input-append date form_datetime"> -->
-<!-- 											<input class="form-control" type="text" value="" readonly> <span -->
-<!-- 												class="add-on"><i class="icon-th"></i></span> -->
-<!-- 										</div> -->
-<!-- 									</div> -->
-								
-								
-<!-- 								</div> -->
-<!-- 							</div> -->
-						
-<!-- 					</div> -->
-<!-- 				</div> -->
-
-<!-- / tables -->
-
-
-			<!-- ------------------------------------------------------- -->
+<!-- ------------------------------------------------------- -->
 		

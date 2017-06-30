@@ -23,7 +23,11 @@
         
         <!-- 추가 CSS -->
         <link href="/Yolo/css_yolo/cssView/comShare/ShareDetail.css" rel="stylesheet">
-        
+    
+    <style>
+    
+    
+    </style>
     </head>
     <body class="notransition">
     
@@ -76,10 +80,16 @@
 		                                    <a></a>
 		                                    <div class="mainFunction summaryItem">
 				                                <div class="clearfix"></div>
-				                                <div class="btn">
-					                                <div class="btn"><a data-toggle="modal" href="#contactAgent" class="btn btn-lg btn-round btn-green contactBtn">문의하기</a></div>
-					                                <div class="btn"><a href="#confirmSigning" class="btn btn-lg btn-round btn-green applyBtn">신청하기</a></div>
-				                                </div>
+							            		<div class="btn">
+													<div class="btn">
+														<a data-toggle="modal" href="#contactAgent"
+															class="btn btn-lg btn-round btn-green">문의하기</a>
+													</div>
+													<div class="btn">
+														<a data-toggle="modal" href="#application"
+															class="btn btn-lg btn-round btn-green">신청하기</a>
+													</div>
+												</div>
 				                            </div>
 		                                </div>
 		                            </div>
@@ -135,6 +145,37 @@
             </div>
             <div class="clearfix"></div>
         </div>
+
+
+
+
+
+
+	<!-- modal popup -->
+	<div style="z-index: 1000000;" class="modal fade" id="application"
+		role="dialog" aria-labelledby="contactLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true">×</button>
+				</div>
+				<div class="modal-body">
+					<form class="contactForm">
+						<div class="row">
+							<img src="/Yolo/images_yolo/comMarket/cart.PNG" alt="image">
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<a href="#" data-dismiss="modal"
+						class="btn btn-round btn-o btn-gray">계속쇼핑하기</a> <a href="#"
+						class="btn btn-round btn-green">마이페이지로</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
 
         <script src="/Yolo/js/json2.js"></script>
         <script src="/Yolo/js/jquery-2.1.1.min.js"></script>
