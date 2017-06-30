@@ -7,15 +7,19 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <!-- club 등록 sql -->
 <insert id = "clubInsert" parameterType="yolo.club.dto.ClubVO">
-	INSERT INTO CLUB(c_num, c_type, c_title, c_tag, c_people, c_recruit, c_period, c_date, c_place, c_content) 
-	VALUES(CLUB_NO_SEQ.nextval, #{c_type}, #{c_title}, #{c_tag}, #{c_people}, #{c_recruit}, #{c_period}, #{c_date}, #{c_place}, #{c_content})
+	INSERT INTO CLUB(c_num, c_type, c_title, c_tag, c_people, c_recruit, c_period, c_date, c_place, c_content, c_confirm, c_regdate) 
+	VALUES( concat('c_', CLUB_NO_SEQ.nextval), #{c_type}, #{c_title}, #{c_tag}, #{c_people}, #{c_recruit}, #{c_period}, #{c_date}, #{c_place}, #{c_content}, 'n', sysdate )
 </insert>
 <insert id = "clubimgInsert" parameterType="yolo.club.dto.ClubImageVO">
 	<selectKey keyColumn="c_num" keyProperty="c_num" order="BEFORE" resultType='string'>
-         SELECT CLUB_NO_SEQ.currval FROM dual
+         SELECT concat('c_',CLUB_NO_SEQ.currval) FROM dual
 	</selectKey>
 	INSERT INTO CLUBIMAGE (CIMG_NUM , C_NUM , CIMG_PATH , CIMG_NAME) 
-	VALUES(CLUBIMAGE_NO_SEQ.nextval, #{c_num}, #{cimg_path}, #{cimg_name})
+	VALUES(concat('cimg_', CLUBIMAGE_NO_SEQ.nextval), #{c_num}, #{cimg_path}, #{cimg_name})
 </insert>
+
+<select id = "clubsearch" parameterType="yolo.club.dto.ClubVO">
+
+</select>
 
 </mapper>
