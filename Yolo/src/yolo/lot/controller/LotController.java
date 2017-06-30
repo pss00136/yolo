@@ -38,35 +38,56 @@ public class LotController {
 	   public PrivatelotVO saveSession(){
 	      return new PrivatelotVO();
 	   }
-
-	/*
-	* @메소드명: lotInputFirst
-	* @역할: 공간 등록 첫번째 
-	*
-	* @param   PrivatelotVO
-	* @return  String:반환하는 경로
-	*/	  
+  
+		/*
+		* @메소드명: lotinput
+		* @역할: 메뉴 -> 공간 등록 첫번째 전환 
+		*
+		* @param   PrivatelotVO
+		* @return  String:반환하는 경로
+		*/	
 	@RequestMapping("lot/LotInputFirst.lot")
 	public String lotinput(){
 		return "/lot/LotInputFirst";
 	}
 	
+	
+	/*
+	* @메소드명: lotinputfirst
+	* @역할: 첫번째 공간등록 페이지 
+	*
+	* @param   PrivatelotVO
+	* @return  String:반환하는 경로
+	*/	
 	 @RequestMapping("lot/LotInputSecond.lot" )
 		public String lotinputfirst(@ModelAttribute("privateVO") PrivatelotVO privateVO, PrivateimageVO primgVO, HttpSession session ){	    
 		    session.setAttribute("primgVO", primgVO);
 		   
 			return "/lot/LotInputSecond";
 		}
+	    
+	   /*
+		* @메소드명: lotinputsecond
+		* @역할: 두번째 공간등록 페이지  
+		*
+		* @param   PrivatelotVO, PrivateimageVO 값
+		* @return  String:반환하는 경로
+		*/
+	    @RequestMapping("lot/LotInputLast.lot")
+	    public String lotinputsecond(){
+	    	
+			return "/lot/LotInputLast.map";
+		}
 	  
 	 /*
-		* @메소드명: lotInputSecond
-		* @역할: 공간 등록 두번째 
+		* @메소드명: lotinputlast
+		* @역할: 마지막공간등록 페이지  
 		*
 		* @param   PrivatelotVO, PrivateimageVO 값
 		* @return  String:반환하는 경로
 		*/
 	 @RequestMapping("lot/LotInputLast.lot")
-		public String lotinputsecond(@ModelAttribute("privateVO") PrivatelotVO privateVO
+		public String lotinputlast(@ModelAttribute("privateVO") PrivatelotVO privateVO
 				, String lot_postcode, String lot_main_address, String lot_detail_address
 				, String pri_accountbank, String pri_accountnum, String pri_accountname 
 				, SessionStatus sessStatus, HttpSession session
@@ -83,17 +104,23 @@ public class LotController {
 		 entrepreneurVO.setE_addr(main_address +" "+ detail_address);
 		 
 		 entrepreneurVO.setE_rnum(e_rnum1+"-"+e_rnum2+"-"+e_rnum3);
+		//호스트번호
+		 privateVO.setH_num("h_61"); 
 		 service.lotinput(privateVO, primgVO, entrepreneurVO);
+		 
 		 
 		 //이미지 넘겨오나?
 		 System.out.println(primgVO.getPriimg_name());
 		 sessStatus.setComplete(); 
-			return "/lot/LotList.map";
+			return "/lot/LotLast";
 		}
+	 
+	  
+		
 	 
 	   
 	 
-	 /*
+	    /*
 		* @메소드명: lotlist
 		* @역할: 공간 검색, 검색 결과 보여주기 
 		*
@@ -109,12 +136,26 @@ public class LotController {
 			return mv;
 		}
 	   
+	        /*
+	 		* @메소드명: lotview
+	 		* @역할: 공간 상세 페이지 
+	 		*
+	 		* @param   PrivatelotVO, PrivateimageVO 값
+	 		* @return  String:반환하는 경로
+	 		*/
 	   @RequestMapping("lot/LotView.lot")
 		public String lotview(){
 			return "/lot/LotView.map";
 		}
 	   
 	   
+	   /*
+		* @메소드명: lotreserve
+		* @역할: 공간 예약하기 
+		*
+		* @param   PrivatelotVO, PrivateimageVO 값
+		* @return  String:반환하는 경로
+		*/
 	   @RequestMapping("lot/LotReserve.lot")
 		public String lotreserve(){
 			return "/lot/LotReserve";

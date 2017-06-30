@@ -29,7 +29,11 @@
 
 
 
-#btn_modify{
+#btn_before{
+	width: 150px;
+}
+
+#btn_next{
 	width: 150px;
 }
 

@@ -267,20 +267,19 @@
 					</div>
 					<label class="col-sm-10 control-label"></label>
 				</div>
-				<!-- 제출 버튼 -->
-				<div>
-					<div style="text-align: center;">
-						<div style="display: inline-block;">
-							<a href="/Yolo/lot/LotInputFirst.lot" id="btn_modify"
+			<!-- 제출버튼 -->
+			<div>
+				<div style="text-align: center;">
+				        <div style="display: inline-block;">
+							<a href="/Yolo/lot/LotInputFirst.lot" id="btn_before"
 								class="btn btn-o btn-green">이전으로</a>
 						</div>
-						<div style="display: inline-block;">
-							<button id="btn_modify" class="btn btn-o btn-green">등록하기</button>
-						</div>
+					<div style="display: inline-block;">
+						<button type="submit" id="btn_next" class="btn btn-o btn-green">다음</button>
 					</div>
 				</div>
-
-				<!-- 제출 버튼 끝 -->
+			</div>
+			<!-- 제출버튼 끝 -->
 			<!-- panel-body 끝 -->
 		</div>
 		<!-- 세부 정보 등록 끝 -->
