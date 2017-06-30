@@ -61,5 +61,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
      from privatelot p JOIN privateimage i
      ON p.pri_num = i.pri_num
 	</select>
+	
+	<insert parameterType="yolo.host.dto.EntrepreneurVO" id="entrepreneurinput">
+	 insert into ENTREPRENEUR(E_NUM, H_NUM, E_TYPE, E_TITLE, E_ADDR, E_RNUM, E_FNAME, E_FPATH)
+	 VALUES (concat('e_',ENTREPRENEUR_NO_SEQ.nextval),'21', #{e_type}, #{e_title}, #{e_addr}, #{e_rnum}, #{e_fname}, #{e_fpath})
+	</insert>
 
 </mapper>

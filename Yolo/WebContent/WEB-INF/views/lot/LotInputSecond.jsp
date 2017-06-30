@@ -46,22 +46,19 @@
 				<div class="col-sm-8 col-md-8">
 					<!-- 우편번호 검색 -->
 
-						<div class="input-group addr">
-							<input type="text" class="form-control" id="postcode"
-								name="postcode" placeholder="우편번호"> <span
-								class="input-group-btn"> <input type="button"
-								class="btn btn-success form-control" onclick="DaumPostcode()"
-								value="우편번호 찾기">
-							</span>
-						</div>
+					<div class="input-group addr">
+						<input type="text" class="form-control" id="postcode"
+							name="postcode" placeholder="우편번호"> <span
+							class="input-group-btn"> <input type="button"
+							class="btn btn-success form-control" onclick="DaumPostcode()"
+							value="우편번호 찾기">
+						</span>
+					</div>
 
-
-						<input type="text" class="form-control addr" id="main_address"
-							name="main_address" placeholder="주소">
-
-
-						<input type="text" class="form-control addr" id="detail_address"
-							name="detail_address" placeholder="상세주소">
+					<input type="text" class="form-control addr" id="main_address"
+						name="main_address" placeholder="주소"> <input type="text"
+						class="form-control addr" id="detail_address"
+						name="detail_address" placeholder="상세주소">
 
 				</div>
 			</div>
@@ -253,36 +250,38 @@
 				</div>
 				<label class="col-sm-10 control-label"></label>
 			</div>
+
 			<!-- 예약 허용 -->
-			<div class="form-group">
-				<label class="col-sm-2 control-label">예약허용</label>
-				<div class="form-group">
-					<label class="col-sm-1 control-label">*최소 인원</label>
-					<div class="col-sm-2">
-						<input type="text" name="pri_minpeople" class="form-control"
-							value="">
+			<div class="panel-heading">허용인원</div>
+				<div class="panel-body">
+					<div class="form-group">
+						<label class="col-sm-2 control-label">*최소 인원</label>
+						<div class="col-sm-3">
+							<input type="text" name="pri_minpeople" class="form-control"
+								value="">
+						</div>
+						<label class="col-sm-2 control-label align-right">*최대 인원</label>
+						<div class="col-sm-3">
+							<input type="text" name="pri_maxpeople" class="form-control" value="">
+						</div>
 					</div>
-					<label class="col-sm-1 control-label align-right">*최대 인원</label>
-					<div class="col-sm-2">
-						<input type="text" name="pri_maxpeople" class="form-control"
-							value="">
+					<label class="col-sm-10 control-label"></label>
+				</div>
+				<!-- 제출 버튼 -->
+				<div>
+					<div style="text-align: center;">
+						<div style="display: inline-block;">
+							<a href="/Yolo/lot/LotInputFirst.lot" id="btn_modify"
+								class="btn btn-o btn-green">이전으로</a>
+						</div>
+						<div style="display: inline-block;">
+							<button id="btn_modify" class="btn btn-o btn-green">등록하기</button>
+						</div>
 					</div>
 				</div>
-				<label class="col-sm-10 control-label"></label>
-			</div>
-			<!-- 제출 버튼 -->
-			<div>
-				<div style="text-align: center;">
-					<div style="display: inline-block;">
-						<a href="/Yolo/lot/LotInputFirst.lot" id="btn_modify"
-							class="btn btn-o btn-green">이전으로</a>
-					</div>
-					<div style="display: inline-block;">
-						<button id="btn_modify" class="btn btn-o btn-green">등록하기</button>
-					</div>
-				</div>
-			</div>
-			<!-- 제출 버튼 끝 -->
+
+				<!-- 제출 버튼 끝 -->
+			<!-- panel-body 끝 -->
 		</div>
 		<!-- 세부 정보 등록 끝 -->
 	</form>
