@@ -118,7 +118,7 @@
 				<!-- 예약유형 선택 끝 -->
 
 
-				<!-- 세미나/강연 정보 입력 -->
+				<!-- 공간 정보 입력 -->
 							
 				<div class="panel-heading">공간정보 입력하기</div>
 				<form class="form-horizontal" role="form">

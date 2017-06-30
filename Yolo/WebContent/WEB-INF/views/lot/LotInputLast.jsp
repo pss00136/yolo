@@ -32,7 +32,7 @@
 									</button>
 									<ul id="lec_timeselec" class="dropdown-menu dropdown-select">
 										<li class="active">
-										<input type="radio" name="c_timeFrom" checked="checked" value="00:00"><a href="#">오전 12:00</a>
+										<input type="radio" name="pri_weekdayo" checked="checked" value="00:00"><a href="#">오전 12:00</a>
 										</li>
 										<li><input type="radio"   value="01:00"><a href="#">오전 01:00</a></li>
 										<li><input type="radio"   value="02:00"><a href="#">오전 02:00</a></li>
@@ -74,7 +74,7 @@
 									</button>
 									<ul id="lec_timeselec" class="dropdown-menu dropdown-select">
 										<li class="active">
-										<input type="radio" name="c_timeFrom" checked="checked" value="00:00"><a href="#">오전 12:00</a>
+										<input type="radio" name="pri_weekdaye" checked="checked" value="00:00"><a href="#">오전 12:00</a>
 										</li>
 										<li><input type="radio"   value="01:00"><a href="#">오전 01:00</a></li>
 										<li><input type="radio"   value="02:00"><a href="#">오전 02:00</a></li>
@@ -123,7 +123,7 @@
 									</button>
 									<ul id="lec_timeselec" class="dropdown-menu dropdown-select">
 										<li class="active">
-										<input type="radio" name="c_timeFrom" checked="checked" value="00:00"><a href="#">오전 12:00</a>
+										<input type="radio" name="pri_weekendo" checked="checked" value="00:00"><a href="#">오전 12:00</a>
 										</li>
 										<li><input type="radio"   value="01:00"><a href="#">오전 01:00</a></li>
 										<li><input type="radio"   value="02:00"><a href="#">오전 02:00</a></li>
@@ -165,7 +165,7 @@
 									</button>
 									<ul id="lec_timeselec" class="dropdown-menu dropdown-select">
 										<li class="active">
-										<input type="radio" name="c_timeFrom" checked="checked" value="00:00"><a href="#">오전 12:00</a>
+										<input type="radio" name="pri_weekende" checked="checked" value="00:00"><a href="#">오전 12:00</a>
 										</li>
 										<li><input type="radio"   value="01:00"><a href="#">오전 01:00</a></li>
 										<li><input type="radio"   value="02:00"><a href="#">오전 02:00</a></li>
@@ -205,7 +205,7 @@
 			 <div class="form-group">
 							<label class="col-sm-2 control-label">연락처</label>
 							<div class="col-sm-5">
-								<input type="text" name="c_title" class="form-control">
+								<input type="text" name="pri_tel" class="form-control">
 							</div>
 						</div>
 		</div>
@@ -218,7 +218,7 @@
 			  <div class="form-group">
 							<label class="col-sm-2 control-label">주 소</label>
 							<div class="col-sm-5">
-								<input type="text" name="c_title" class="form-control">
+								<input type="text" name="pri_web" class="form-control">
 							</div>
 						</div>
 		

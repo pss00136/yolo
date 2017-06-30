@@ -60,10 +60,13 @@ public class LotController {
 	* @return  String:반환하는 경로
 	*/	
 	 @RequestMapping("lot/LotInputSecond.lot" )
-		public String lotinputfirst(@ModelAttribute("privateVO") PrivatelotVO privateVO, PrivateimageVO primgVO, HttpSession session ){	    
+		public String lotinputfirst(@ModelAttribute("privateVO") PrivatelotVO privateVO, PrivateimageVO primgVO, HttpSession session
+				,String lot_postcode, String lot_main_address, String lot_detail_address){	    
 		    session.setAttribute("primgVO", primgVO);
-		   
-			return "/lot/LotInputSecond";
+		    //address 합치기
+			 privateVO.setPri_addr(lot_main_address +" "+ lot_detail_address);
+			
+			 return "/lot/LotInputSecond";
 		}
 	    
 	   /*
@@ -74,9 +77,22 @@ public class LotController {
 		* @return  String:반환하는 경로
 		*/
 	    @RequestMapping("lot/LotInputLast.lot")
-	    public String lotinputsecond(){
+	    public String lotinputsecond(@ModelAttribute("privateVO") PrivatelotVO privateVO, HttpSession session
+	        , String pri_accountbank, String pri_accountnum, String pri_accountname
+	        , EntrepreneurVO entrepreneurVO, String e_rnum1, String e_rnum2, String e_rnum3
+			, String postcode, String main_address, String detail_address){
 	    	
-			return "/lot/LotInputLast.map";
+	    	//pri 계좌번호 합치기
+			 privateVO.setPri_account(pri_accountbank + "/" + pri_accountnum + "/" + pri_accountname );
+			 
+			 //entre 번호 합치기
+			 entrepreneurVO.setE_addr(main_address +" "+ detail_address);
+			 
+			 entrepreneurVO.setE_rnum(e_rnum1+"-"+e_rnum2+"-"+e_rnum3);
+			 
+			 session.setAttribute("entrepreneurVO", entrepreneurVO);
+			 
+			return "/lot/LotInputLast";
 		}
 	  
 	 /*
@@ -86,40 +102,23 @@ public class LotController {
 		* @param   PrivatelotVO, PrivateimageVO 값
 		* @return  String:반환하는 경로
 		*/
-	 @RequestMapping("lot/LotInputLast.lot")
+	 @RequestMapping("lot/LotInputFinish.lot")
 		public String lotinputlast(@ModelAttribute("privateVO") PrivatelotVO privateVO
-				, String lot_postcode, String lot_main_address, String lot_detail_address
-				, String pri_accountbank, String pri_accountnum, String pri_accountname 
-				, SessionStatus sessStatus, HttpSession session
-				, EntrepreneurVO entrepreneurVO, String e_rnum1, String e_rnum2, String e_rnum3
-				, String postcode, String main_address, String detail_address){
+				, SessionStatus sessStatus, HttpSession session){
 		 PrivateimageVO primgVO = (PrivateimageVO)session.getAttribute("primgVO");
-		 //address 합치기
-		 privateVO.setPri_addr(lot_main_address +" "+ lot_detail_address);
+		 EntrepreneurVO entrepreneurVO = (EntrepreneurVO)session.getAttribute("entrepreneurVO");
 		 
-		 //pri 계좌번호 합치기
-		 privateVO.setPri_account(pri_accountbank + "/" + pri_accountnum + "/" + pri_accountname );
-		 
-		 //entre 번호 합치기
-		 entrepreneurVO.setE_addr(main_address +" "+ detail_address);
-		 
-		 entrepreneurVO.setE_rnum(e_rnum1+"-"+e_rnum2+"-"+e_rnum3);
-		//호스트번호
+		 //호스트번호
 		 privateVO.setH_num("h_61"); 
 		 service.lotinput(privateVO, primgVO, entrepreneurVO);
-		 
 		 
 		 //이미지 넘겨오나?
 		 System.out.println(primgVO.getPriimg_name());
 		 sessStatus.setComplete(); 
-			return "/lot/LotLast";
+			return "/host/HostMyLot.host";
 		}
 	 
-	  
-		
-	 
-	   
-	 
+ 
 	    /*
 		* @메소드명: lotlist
 		* @역할: 공간 검색, 검색 결과 보여주기 
