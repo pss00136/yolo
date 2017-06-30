@@ -23,7 +23,7 @@ public class HostinfoVO {
 		this.h_content = h_content;
 
 	}
-	/* End of Constructor */
+	/* End of Constructor  */
 	
 	/* Getters and Setters */
 	

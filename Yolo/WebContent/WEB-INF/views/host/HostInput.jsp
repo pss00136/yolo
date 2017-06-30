@@ -13,7 +13,7 @@
 
 		<form class="form-horizontal" method="post" role="form" action="/Yolo/host/HostInput_Ok.host" enctype="multipart/form-data">
 		
-			<!-- 호스트명 -->
+			<!-- 호스트명  -->
 			<div class="form-group">
 				<label class="col-sm-2 control-label">호스트 명</label>
 				<div class="col-sm-8">
