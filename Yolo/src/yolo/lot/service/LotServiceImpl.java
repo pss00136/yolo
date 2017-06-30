@@ -24,7 +24,7 @@ public class LotServiceImpl implements LotService {
 		 return result;
 	}
 	
-	public List<LotListVO> lotlistview(){
+	public List<LotListVO> lotlistview(){      
 		return ldao.lotlistview();
 	}
 	

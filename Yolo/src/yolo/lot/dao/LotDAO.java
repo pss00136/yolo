@@ -37,7 +37,13 @@ public class LotDAO {
 	}
 	
 	public List<LotListVO> lotlistview(){
-		List<LotListVO>	list = session.selectList("lot.lotlistview");
+		List<LotListVO>	list = null;
+		try{
+			list = session.selectList("lot.lotlistview");
+		}catch(Exception ex){
+			System.out.println("lotlistview 실패: " + ex.getMessage());
+		}
+				
 		return list;
 	}
 

@@ -1,5 +1,8 @@
 package yolo.lot.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -90,9 +93,9 @@ public class LotController {
 		*/
 	   @RequestMapping("lot/LotList.lot")
 		public ModelAndView lotlist(LotListVO lotlistVO){
-		    service.lotlistview();
 		    ModelAndView mv = new ModelAndView();
-		    mv.addObject("lotlistVO", lotlistVO);
+		    List<LotListVO> list = service.lotlistview();
+		    mv.addObject("list", list);
 		    mv.setViewName("/lot/LotList.map");
 			return mv;
 		}
