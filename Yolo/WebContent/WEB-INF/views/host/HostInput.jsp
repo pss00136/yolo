@@ -12,25 +12,7 @@
 	<div class="panel-body">
 
 		<form class="form-horizontal" method="post" role="form" action="/Yolo/host/HostInput_Ok.host" enctype="multipart/form-data">
-			<!-- 호스트 이미지 -->
-			<div class="form-group">
-				<label class="col-sm-2 control-label"> 호스트 이미지 </label>
-				<div class="col-sm-2">
-					<input type="file" name="file" id="ImageUpload"
-						style="display: none;" /> <img src="" id="ImagePreview" alt=""
-						class="img-circle" /><br />
-
-					<div style="text-align: center;">
-						<div style="display: inline-block;">
-							<label for="ImageUpload" id="btn_profile"
-								class="btn btn-o btn-green">프로필 등록</label>
-						</div>
-					</div>
-					<!-------호스트 사진 등록버튼 가운데정렬 -->
-				</div>
-			</div>
-			<!-- 호스트 이미지 끝 -->
-
+		
 			<!-- 호스트명 -->
 			<div class="form-group">
 				<label class="col-sm-2 control-label">호스트 명</label>
