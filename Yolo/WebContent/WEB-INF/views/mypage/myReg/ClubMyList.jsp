@@ -14,6 +14,14 @@
 			<div class="home-content">
 				<div class="home-wrapper">
 					<div class="row">
+						<div class="col-lg-12 responsive">
+							<h1>
+								내 모임 <small>모임 정보</small>
+							</h1>
+
+						</div>
+					</div>
+					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
 
 							<div class="post-content">

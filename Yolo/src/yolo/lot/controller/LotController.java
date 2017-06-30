@@ -91,6 +91,7 @@ public class LotController {
 			 entrepreneurVO.setE_rnum(e_rnum1+"-"+e_rnum2+"-"+e_rnum3);
 			 
 			 session.setAttribute("entrepreneurVO", entrepreneurVO);
+			 System.out.println(entrepreneurVO.getE_title());
 			 
 			return "/lot/LotInputLast";
 		}
@@ -107,7 +108,8 @@ public class LotController {
 				, SessionStatus sessStatus, HttpSession session){
 		 PrivateimageVO primgVO = (PrivateimageVO)session.getAttribute("primgVO");
 		 EntrepreneurVO entrepreneurVO = (EntrepreneurVO)session.getAttribute("entrepreneurVO");
-		 
+		 System.out.println(privateVO.getPri_booktype());
+
 		 //호스트번호
 		 privateVO.setH_num("h_61"); 
 		 service.lotinput(privateVO, primgVO, entrepreneurVO);
