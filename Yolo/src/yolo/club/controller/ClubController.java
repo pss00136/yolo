@@ -1,10 +1,16 @@
 package yolo.club.controller;
 
+
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
+import yolo.club.dao.ClubDAO;
 import yolo.club.dto.ClubImageVO;
+import yolo.club.dto.ClubListVO;
 import yolo.club.dto.ClubVO;
 import yolo.club.service.ClubService;
 
@@ -30,14 +36,18 @@ public class ClubController {
 	* @역할: views/club/clubList로 페이지 전환
 	*
 	* @param   없음
-	* @return  String:반환하는 경로
+	* @return  ModelAndView :반환하는 경로
 	*/
 	@RequestMapping("/ClubList.club")
-	public String clubList(){
-		
-		return "/club/ClubList";
+	public ModelAndView clubList(ClubListVO clublistVO){
+		ModelAndView mv = new ModelAndView();
+		List<ClubListVO> list = service.clublistview();
+		mv.addObject("list", list);
+		mv.setViewName("/club/ClubList");
+		System.out.println(list.size());
+		return mv;
 	}
-
+	
 	/*
 	* @메소드명: clubDetail
 	* @역할: views/club/clubList로 페이지 전환
