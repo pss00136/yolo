@@ -73,11 +73,10 @@
 								<div class="address">
 									<span class="icon-pointer"></span>${list.pri_addr}
 								</div>
-							
+							   <!-- 해시태그  부분-->
 								<%
 								LotListVO lotlistVO = (LotListVO)request.getAttribute("list");
 								String str = lotlistVO.getPri_tag();
-								//String str = ${list.pri_tag}; 
 								StringTokenizer st = new StringTokenizer(str,",");
 								while(st.hasMoreTokens() ) 
 								{   %>
@@ -89,7 +88,7 @@
 								
 							    <% 	} %>
 								
-                               
+                                <!-- 해시태그 부분 끝 -->
                               
 							</div>
 						</div>
@@ -128,40 +127,48 @@
 			<div class="amenities">
 				<h3>편의시설</h3>
 				<div class="row">
-				
-					<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem">
-						<span class="fa fa-car"></span> ${list.pri_facility}
-					</div>
-					<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem">
-						<span class="fa fa-tint"></span> Outdoor Pool
-					</div>
-					<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem inactive">
-						<span class="fa fa-leaf"></span> Garden
-					</div>
-					<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem inactive">
-						<span class="fa fa-shield"></span> Security System
-					</div>
-					<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem">
-						<span class="fa fa-wifi"></span> Internet
-					</div>
-					<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem inactive">
-						<span class="fa fa-phone"></span> Telephone
-					</div>
-					<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem">
-						<span class="fa fa-asterisk"></span> Air Conditioning
-					</div>
-					<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem inactive">
-						<span class="fa fa-sun-o"></span> Heating
-					</div>
-					<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem">
-						<span class="fa fa-fire"></span> Fireplace
-					</div>
-					<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem">
-						<span class="fa fa-arrows-v"></span> Balcony
-					</div>
-					<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem">
-						<span class="fa fa-desktop"></span> TV Cable
-					</div>
+				    <%
+								
+								String f = lotlistVO.getPri_facility();
+								StringTokenizer st2 = new StringTokenizer(f,",");
+						        String icon = null;
+						        String fac[]={"TV/프로젝터", "인터넷/WIFI","복사/인쇄기","화이트보드","음향/마이크","취사시설","음식물반입가능","주류반입가능",
+						        		"주차", "금연","PC/노트북","의자/테이블"};
+						        String confirm = st2.nextToken();
+						        for( int i=0; i<fac.length; i++ ){
+									switch(fac[i]){
+									  case "TV/프로젝터" : icon="fa-film"; break;
+									  case "인터넷/WIFI" : icon="fa-wifi"; break;
+									  case "복사/인쇄기" : icon="fa-print"; break;
+									  case "화이트보드" : icon="fa-square-o"; break;
+									  case "음향/마이크" : icon="fa-microphone"; break;
+									  case "취사시설" : icon="fa-cutlery"; break;
+									  case "음식물반입가능" : icon="fa-shopping-cart"; break;
+									  case "주류반입가능" : icon="fa-beer"; break;
+									  case "주차" : icon="fa-automobile"; break;
+									  case "금연" : icon="fa-arrows-v"; break;
+									  case "PC/노트북" : icon="fa-laptop"; break;
+									  case "의자/테이블" : icon="fa-users"; break;		  
+									} //End of switch
+									
+									if(fac[i].equals(confirm)){%>
+									<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem">
+									<span class="fa <%=icon%>"></span><%= fac[i] %>
+									</div>										
+									<%
+										if(st2.hasMoreTokens()){
+											confirm = st2.nextToken();
+										} //End of if
+									
+									}else {%>
+									
+									<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem inactive">
+									<span class="fa <%=icon%>"></span><%= fac[i] %>
+									</div>
+									
+						        <%	}//End of else
+						        	
+								}//End of for %>
 				</div>
 			</div>
 
