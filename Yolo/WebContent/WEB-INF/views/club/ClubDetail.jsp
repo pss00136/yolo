@@ -16,37 +16,37 @@
                         </ol>
                         <div class="carousel-inner">
                             <div class="item active">
-                                <img src="/Yolo/images_yolo/club/wooden1.jpg" alt="First slide">
+                                <img src="/Yolo/upload/club/${c.cimg_name}" alt="First slide">
                                 <div class="container">
                                     <div class="carousel-caption">
                                         
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
-                                <img src="/Yolo/images_yolo/club/wooden2.jpg" alt="Second slide">
-                                <div class="container">
-                                    <div class="carousel-caption">
+<!--                             <div class="item"> -->
+<!--                                 <img src="/Yolo/images_yolo/club/wooden2.jpg" alt="Second slide"> -->
+<!--                                 <div class="container"> -->
+<!--                                     <div class="carousel-caption"> -->
                                         
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src="/Yolo/images_yolo/club/wooden3.jpg" alt="Third slide">
-                                <div class="container">
-                                    <div class="carousel-caption">
+<!--                                     </div> -->
+<!--                                 </div> -->
+<!--                             </div> -->
+<!--                             <div class="item"> -->
+<!--                                 <img src="/Yolo/images_yolo/club/wooden3.jpg" alt="Third slide"> -->
+<!--                                 <div class="container"> -->
+<!--                                     <div class="carousel-caption"> -->
                                         
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src="/Yolo/images/prop/4-4.png" alt="Fourth slide">
-                                <div class="container">
-                                    <div class="carousel-caption">
+<!--                                     </div> -->
+<!--                                 </div> -->
+<!--                             </div> -->
+<!--                             <div class="item"> -->
+<!--                                 <img src="/Yolo/images/prop/4-4.png" alt="Fourth slide"> -->
+<!--                                 <div class="container"> -->
+<!--                                     <div class="carousel-caption"> -->
                                         
-                                    </div>
-                                </div>
-                            </div>
+<!--                                     </div> -->
+<!--                                 </div> -->
+<!--                             </div> -->
                         </div>
                         <a class="left carousel-control" href="#carouselFull" role="button" data-slide="prev"><span class="fa fa-chevron-left"></span></a>
                         <a class="right carousel-control" href="#carouselFull" role="button" data-slide="next"><span class="fa fa-chevron-right"></span></a>
@@ -55,7 +55,7 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
                                 <div class="summaryItem">
-                                    <h1 class="pageTitle">목공예 기초과정 7월 (토) 주말반(스툴 만들기)</h1>
+                                    <h1 class="pageTitle">${c.c_title}</h1>
                                     <div class="address"><span class="icon-pointer"></span>서울 용산구 후암동 서울특별시 용산구 후암로 38, 지하 1층</div>
                                     <ul class="users">
                                     	<li><span class="icon-users"></span> 총 30 명</li>

@@ -28,5 +28,10 @@ public class ClubServiceImpl implements ClubService {
 		
 		return clubdao.clublistview();
 	}
+	
+	public ClubListVO clubdetail(ClubListVO clublistVO){
+	
+		return clubdao.clubdetail();
+	}
 
 }

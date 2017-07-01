@@ -44,10 +44,30 @@ public class ClubDAO {
 		return result;
 	}
 	
+	/*
+	* @메소드명: clublistview
+	* @역할:  DB에서 모든 clubList를 검색
+	*
+	* @param   
+	* @return  List<ClubListVO>: DB select쿼리문 결과값
+	*/
 	public List<ClubListVO> clublistview(){
 		List<ClubListVO> list = null;
 		list = session.selectList("club.clublistview");
 		return list;
+	}
+	
+	/*
+	* @메소드명: clubdetail
+	* @역할:  DB에서 모든 clubList를 검색
+	*
+	* @param   
+	* @return  List<ClubListVO>: DB select쿼리문 결과값
+	*/
+	public ClubListVO clubdetail(){
+		ClubListVO detail = null;
+		detail = session.selectOne("club.clubdetail");
+		return detail;
 	}
 
 }

@@ -56,9 +56,18 @@ public class ClubController {
 	* @return  String:반환하는 경로
 	*/
 	@RequestMapping("/ClubDetail.club")
-	public String clubDetail(){
+	public ModelAndView clubDetail(ClubListVO clublistVO){
+		ClubListVO club = service.
 		
 		return "/club/ClubDetail.map";
+	}
+	
+	public ModelAndView view(BoardVO vo){
+		BoardVO board =boardDAO.boardView(vo);
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("model", board);
+		mv.setViewName("board/view");	
+		return mv;
 	}
 	
 	/*

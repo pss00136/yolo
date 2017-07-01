@@ -20,5 +20,7 @@ public interface ClubService {
 	public int clubinput( ClubVO clubVO, ClubImageVO cimgVO);
 	
 	public List<ClubListVO> clublistview();
+	
+	public ClubListVO clubdetail(ClubListVO clublistVO);
 
 }
