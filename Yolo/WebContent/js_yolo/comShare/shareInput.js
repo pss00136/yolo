@@ -4,8 +4,8 @@
 		
 		if($("#sl_title").val() ==""){
 		    alert("글제목을 입력해주세요.");
-		    
+		    return false;
 		}
 		
-		$("#shareInputForm1").submit("ShareInputOk.share");
+		$("#shareInputForm1").submit();
 	});

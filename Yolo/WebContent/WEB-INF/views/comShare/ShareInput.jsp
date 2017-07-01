@@ -17,7 +17,7 @@
 							<h4>쉐어링 정보입력</h4>
 							<hr>
 							<br />
-							<form id="shareInputForm1" name="shareInputForm1" method="post" class="form-horizontal" role="form" >
+							<form id="shareInputForm1" name="shareInputForm1" method="post" action="ShareInputOk.share" class="form-horizontal" role="form" >
 								<!-- 글 제목 입력 -->
 								<div class="form-group">
 									<label class="col-sm-2 control-label">글 제목</label>
