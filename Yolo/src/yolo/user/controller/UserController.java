@@ -50,9 +50,9 @@ public class UserController {
 		ModelAndView mv = new ModelAndView();
 		
 		Float[] coords = new Float[2];
-		coords = geoCoding(main_address);
-		System.out.println("위도" + coords[0] + "경도" + coords[1]);
-		int result=1;
+		int result = service.joinUser(userVO);
+
+	
 		String message ="가입실패";
 		
 		if(result>0){
@@ -65,33 +65,33 @@ public class UserController {
 		return mv;
 	}
 	
-	public Float[] geoCoding(String location){
-		if (location == null) {
-			return null;
-		}     
-			Geocoder geocoder = new Geocoder();
-			// setAddress : 변환하려는 주소 (경기도 성남시 분당구 등)
-			// setLanguate : 인코딩 설정
-			GeocoderRequest geocoderRequest = new GeocoderRequestBuilder().setAddress(location).setLanguage("ko").getGeocoderRequest();
-			GeocodeResponse geocoderResponse;
-
-			try {
-				geocoderResponse = geocoder.geocode(geocoderRequest);
-				if (geocoderResponse.getStatus() == GeocoderStatus.OK & !geocoderResponse.getResults().isEmpty()) {
-
-					GeocoderResult geocoderResult=geocoderResponse.getResults().iterator().next();
-					LatLng latitudeLongitude = geocoderResult.getGeometry().getLocation();
-							  
-					Float[] coords = new Float[2];
-					coords[0] = latitudeLongitude.getLat().floatValue();
-					coords[1] = latitudeLongitude.getLng().floatValue();
-					return coords;
-				}
-			} catch (IOException ex) {
-				ex.printStackTrace();
-			}
-		return null;
-	}
+//	public Float[] geoCoding(String location){
+//		if (location == null) {
+//			return null;
+//		}     
+//			Geocoder geocoder = new Geocoder();
+//			// setAddress : 변환하려는 주소 (경기도 성남시 분당구 등)
+//			// setLanguate : 인코딩 설정
+//			GeocoderRequest geocoderRequest = new GeocoderRequestBuilder().setAddress(location).setLanguage("ko").getGeocoderRequest();
+//			GeocodeResponse geocoderResponse;
+//
+//			try {
+//				geocoderResponse = geocoder.geocode(geocoderRequest);
+//				if (geocoderResponse.getStatus() == GeocoderStatus.OK & !geocoderResponse.getResults().isEmpty()) {
+//
+//					GeocoderResult geocoderResult=geocoderResponse.getResults().iterator().next();
+//					LatLng latitudeLongitude = geocoderResult.getGeometry().getLocation();
+//							  
+//					Float[] coords = new Float[2];
+//					coords[0] = latitudeLongitude.getLat().floatValue();
+//					coords[1] = latitudeLongitude.getLng().floatValue();
+//					return coords;
+//				}
+//			} catch (IOException ex) {
+//				ex.printStackTrace();
+//			}
+//		return null;
+//	}
 	
 	@RequestMapping("join/idCheck.main")
 	@ResponseBody

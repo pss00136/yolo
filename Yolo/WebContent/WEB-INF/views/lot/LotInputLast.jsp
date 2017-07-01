@@ -30,33 +30,24 @@
 										<span class="dropdown-label">오전 12:00</span> <span
 											class="caret"></span>
 									</button>
-									<ul id="lec_timeselec" name="pri_weekdayo" class="dropdown-menu dropdown-select">
-										<li class="active">
-										<input type="radio"  checked="checked" value="00:00"><a href="#">오전 12:00</a>
-										</li>
-										<li><input type="radio"   value="01:00"><a href="#">오전 01:00</a></li>
-										<li><input type="radio"   value="02:00"><a href="#">오전 02:00</a></li>
-										<li><input type="radio"   value="03:00"><a href="#">오전 03:00</a></li>
-									    <li><input type="radio"   value="04:00"><a href="#">오전 04:00</a></li>
-										<li><input type="radio"   value="05:00"><a href="#">오전 05:00</a></li>
-										<li><input type="radio"   value="06:00"><a href="#">오전 06:00</a></li>
-									    <li><input type="radio"   value="07:00"><a href="#">오전 07:00</a></li>
-										<li><input type="radio"   value="08:00"><a href="#">오전 08:00</a></li>
-										<li><input type="radio"   value="09:00"><a href="#">오전 09:00</a></li>
-									    <li><input type="radio"   value="10:00"><a href="#">오전 10:00</a></li>
-										<li><input type="radio"   value="11:00"><a href="#">오전 11:00</a></li>
-										<li><input type="radio"   value="12:00"><a href="#">오후 12:00</a></li>
-									    <li><input type="radio"   value="13:00"><a href="#">오후 01:00</a></li>
-										<li><input type="radio"   value="14:00"><a href="#">오후 02:00</a></li>
-										<li><input type="radio"   value="15:00"><a href="#">오후 03:00</a></li>
-										<li><input type="radio"   value="16:00"><a href="#">오후 04:00</a></li>
-										<li><input type="radio"   value="17:00"><a href="#">오후 05:00</a></li>
-								    	<li><input type="radio"   value="18:00"><a href="#">오후 06:00</a></li>
-										<li><input type="radio"   value="19:00"><a href="#">오후 07:00</a></li>
-										<li><input type="radio"   value="20:00"><a href="#">오후 08:00</a></li>
-										<li><input type="radio"   value="21:00"><a href="#">오후 09:00</a></li>
-										<li><input type="radio"   value="22:00"><a href="#">오후 10:00</a></li>
-										<li><input type="radio"   value="23:00"><a href="#">오후 11:00</a></li>
+									<ul id="lec_timeselec" class="dropdown-menu dropdown-select">
+										
+										<li class="active"><input type="radio" name="pri_weekdayo" value="08:00"><a href="#">오전 08:00</a></li>
+										<li><input type="radio" name="pri_weekdayo"  value="09:00"><a href="#">오전 09:00</a></li>
+									    <li><input type="radio" name="pri_weekdayo"  value="10:00"><a href="#">오전 10:00</a></li>
+										<li><input type="radio" name="pri_weekdayo"  value="11:00"><a href="#">오전 11:00</a></li>
+										<li><input type="radio" name="pri_weekdayo"  value="12:00"><a href="#">오후 12:00</a></li>
+									    <li><input type="radio" name="pri_weekdayo"  value="13:00"><a href="#">오후 01:00</a></li>
+										<li><input type="radio" name="pri_weekdayo"  value="14:00"><a href="#">오후 02:00</a></li>
+										<li><input type="radio" name="pri_weekdayo"  value="15:00"><a href="#">오후 03:00</a></li>
+										<li><input type="radio" name="pri_weekdayo"  value="16:00"><a href="#">오후 04:00</a></li>
+										<li><input type="radio" name="pri_weekdayo"  value="17:00"><a href="#">오후 05:00</a></li>
+								    	<li><input type="radio" name="pri_weekdayo"  value="18:00"><a href="#">오후 06:00</a></li>
+										<li><input type="radio" name="pri_weekdayo"  value="19:00"><a href="#">오후 07:00</a></li>
+										<li><input type="radio" name="pri_weekdayo"  value="20:00"><a href="#">오후 08:00</a></li>
+										<li><input type="radio" name="pri_weekdayo"  value="21:00"><a href="#">오후 09:00</a></li>
+										<li><input type="radio" name="pri_weekdayo"  value="22:00"><a href="#">오후 10:00</a></li>
+										<li><input type="radio" name="pri_weekdayo"  value="23:00"><a href="#">오후 11:00</a></li>
 									
 									</ul>
 								   </div>
@@ -73,32 +64,22 @@
 											class="caret"></span>
 									</button>
 									<ul id="lec_timeselec" name="pri_weekdaye" class="dropdown-menu dropdown-select">
-										<li class="active">
-										<input type="radio"  checked="checked" value="00:00"><a href="#">오전 12:00</a>
-										</li>
-										<li><input type="radio"   value="01:00"><a href="#">오전 01:00</a></li>
-										<li><input type="radio"   value="02:00"><a href="#">오전 02:00</a></li>
-										<li><input type="radio"   value="03:00"><a href="#">오전 03:00</a></li>
-									    <li><input type="radio"   value="04:00"><a href="#">오전 04:00</a></li>
-										<li><input type="radio"   value="05:00"><a href="#">오전 05:00</a></li>
-										<li><input type="radio"   value="06:00"><a href="#">오전 06:00</a></li>
-									    <li><input type="radio"   value="07:00"><a href="#">오전 07:00</a></li>
-										<li><input type="radio"   value="08:00"><a href="#">오전 08:00</a></li>
-										<li><input type="radio"   value="09:00"><a href="#">오전 09:00</a></li>
-									    <li><input type="radio"   value="10:00"><a href="#">오전 10:00</a></li>
-										<li><input type="radio"   value="11:00"><a href="#">오전 11:00</a></li>
-										<li><input type="radio"   value="12:00"><a href="#">오후 12:00</a></li>
-									    <li><input type="radio"   value="13:00"><a href="#">오후 01:00</a></li>
-										<li><input type="radio"   value="14:00"><a href="#">오후 02:00</a></li>
-										<li><input type="radio"   value="15:00"><a href="#">오후 03:00</a></li>
-										<li><input type="radio"   value="16:00"><a href="#">오후 04:00</a></li>
-										<li><input type="radio"   value="17:00"><a href="#">오후 05:00</a></li>
-								    	<li><input type="radio"   value="18:00"><a href="#">오후 06:00</a></li>
-										<li><input type="radio"   value="19:00"><a href="#">오후 07:00</a></li>
-										<li><input type="radio"   value="20:00"><a href="#">오후 08:00</a></li>
-										<li><input type="radio"   value="21:00"><a href="#">오후 09:00</a></li>
-										<li><input type="radio"   value="22:00"><a href="#">오후 10:00</a></li>
-										<li><input type="radio"   value="23:00"><a href="#">오후 11:00</a></li>
+										<li class="active"><input type="radio" name="pri_weekdayo" value="08:00"><a href="#">오전 08:00</a></li>
+										<li><input type="radio" name="pri_weekdayo"  value="09:00"><a href="#">오전 09:00</a></li>
+									    <li><input type="radio" name="pri_weekdayo"  value="10:00"><a href="#">오전 10:00</a></li>
+										<li><input type="radio" name="pri_weekdayo"  value="11:00"><a href="#">오전 11:00</a></li>
+										<li><input type="radio" name="pri_weekdayo"  value="12:00"><a href="#">오후 12:00</a></li>
+									    <li><input type="radio" name="pri_weekdayo"  value="13:00"><a href="#">오후 01:00</a></li>
+										<li><input type="radio" name="pri_weekdayo"  value="14:00"><a href="#">오후 02:00</a></li>
+										<li><input type="radio" name="pri_weekdayo"  value="15:00"><a href="#">오후 03:00</a></li>
+										<li><input type="radio" name="pri_weekdayo"  value="16:00"><a href="#">오후 04:00</a></li>
+										<li><input type="radio" name="pri_weekdayo"  value="17:00"><a href="#">오후 05:00</a></li>
+								    	<li><input type="radio" name="pri_weekdayo"  value="18:00"><a href="#">오후 06:00</a></li>
+										<li><input type="radio" name="pri_weekdayo"  value="19:00"><a href="#">오후 07:00</a></li>
+										<li><input type="radio" name="pri_weekdayo"  value="20:00"><a href="#">오후 08:00</a></li>
+										<li><input type="radio" name="pri_weekdayo"  value="21:00"><a href="#">오후 09:00</a></li>
+										<li><input type="radio" name="pri_weekdayo"  value="22:00"><a href="#">오후 10:00</a></li>
+										<li><input type="radio" name="pri_weekdayo"  value="23:00"><a href="#">오후 11:00</a></li>
 									
 									</ul>
 								</div>

@@ -353,14 +353,14 @@
         var styledMapType = new google.maps.StyledMapType(styles, {
             name : 'Styled'
         });
-
+        
         map.mapTypes.set('Styled', styledMapType);
-        map.setCenter(new google.maps.LatLng(40.6984237,-73.9890044));
+        map.setCenter(new google.maps.LatLng(37.479479,126.884181));
         map.setZoom(14);
 
         if ($('#address').length > 0) {
             newMarker = new google.maps.Marker({
-                position: new google.maps.LatLng(40.6984237,-73.9890044),
+                position: new google.maps.LatLng(37.479479,126.884181),
                 map: map,
                 icon: new google.maps.MarkerImage( 
                     'images/marker-new.png',
