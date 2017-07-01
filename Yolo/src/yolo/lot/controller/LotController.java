@@ -199,13 +199,18 @@ public class LotController {
 		* @메소드명: lotreserve
 		* @역할: 공간 예약하기 
 		*
-		* @param   PrivatelotVO, PrivateimageVO 값
+		* @param   LotListVO 값
 		* @return  String:반환하는 경로
 		*/
 	   @RequestMapping("lot/LotReserve.lot")
-		public String lotreserve(){
-			return "/lot/LotReserve";
+		public ModelAndView lotreserve(LotListVO lotlistVO){
+		   ModelAndView mv = new ModelAndView();
+		   LotListVO list = service.lotreserve(lotlistVO);
+		    mv.addObject("list", list);
+		    mv.setViewName("/lot/LotReserve");
+			return mv;
 		}
+	   
  
     	   
 }

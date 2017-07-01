@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.*"%>
+<%@ page import="yolo.lot.dto.*" %>
 <!-----달력 날짜 받아오기 ----->
 <%
 //년도와 월을 받아옴
@@ -69,23 +70,72 @@ int intToday = Integer.parseInt(sdf.format(todayCal.getTime()));
 							<!-- 사진, 상세정보보기 -->
 							<div class="row" style="margin-bottom: 20px; padding: 8px; border-top: 2px solid #fc7937;">
 								<div class="image-block">
-									<img src="/Yolo/images_yolo/lot/2.PNG" alt="image">
+									<img src="/Yolo/images_yolo/lot/${list.priimg_name}" alt="image">
 									<div class="ib-title"></div>
 								</div>
 								<h2 style="padding: 8px; border-top: 2px solid #fc7937"
 									class="osLight align-left">공간상세정보</h2>
-								<p>It is a long established fact that a reader will be
-									distracted by the readable content of a page when looking at
-									its layout. The point of using Lorem Ipsum is that it has a
-									more-or-less normal distribution of letters, as opposed to
-									using 'Content here, content here', making it look like
-									readable English.</p>
-								<p>Many desktop publishing packages and web page editors now
-									use Lorem Ipsum as their default model text, and a search for
-									'lorem ipsum' will uncover many web sites still in their
-									infancy. Various versions have evolved over the years,
-									sometimes by accident, sometimes on purpose (injected humour
-									and the like).</p>
+								<!-- 공간 상세정보 보여주기 -->
+								<div>
+								    <p>${list.pri_content}</p>
+								   
+								   
+								      <!------------- 편의시설 항목들 --------------------->
+			    <div class="amenities">
+				<h3>편의시설</h3>
+				<div class="row">
+				    <%
+								LotListVO lotlistVO = (LotListVO)request.getAttribute("list");;
+								String f = lotlistVO.getPri_facility();
+								StringTokenizer st2 = new StringTokenizer(f,",");
+						        String icon = null;
+						        String fac[]={"TV/프로젝터", "인터넷/WIFI","복사/인쇄기","화이트보드","음향/마이크","취사시설","음식물반입가능","주류반입가능",
+						        		"주차", "금연","PC/노트북","의자/테이블"};
+						        String confirm = st2.nextToken();
+						        for( int i=0; i<fac.length; i++ ){
+									switch(fac[i]){
+									  case "TV/프로젝터" : icon="fa-film"; break;
+									  case "인터넷/WIFI" : icon="fa-wifi"; break;
+									  case "복사/인쇄기" : icon="fa-print"; break;
+									  case "화이트보드" : icon="fa-square-o"; break;
+									  case "음향/마이크" : icon="fa-microphone"; break;
+									  case "취사시설" : icon="fa-cutlery"; break;
+									  case "음식물반입가능" : icon="fa-shopping-cart"; break;
+									  case "주류반입가능" : icon="fa-beer"; break;
+									  case "주차" : icon="fa-automobile"; break;
+									  case "금연" : icon="fa-arrows-v"; break;
+									  case "PC/노트북" : icon="fa-laptop"; break;
+									  case "의자/테이블" : icon="fa-users"; break;		  
+									} //End of switch
+									
+									if(fac[i].equals(confirm)){%>
+									<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem">
+									<span class="fa <%=icon%>"></span><%= fac[i] %>
+									</div>										
+									<%
+										if(st2.hasMoreTokens()){
+											confirm = st2.nextToken();
+										} //End of if
+									
+									}else {%>
+									
+									<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem inactive">
+									<span class="fa <%=icon%>"></span><%= fac[i] %>
+									</div>
+									
+						        <%	}//End of else
+						        	
+								}//End of for %>
+				</div>
+			</div>
+			<!------------- 편의시설 항목들 끝--------------------->
+								   
+								   <div class="address">
+									<span class="icon-pointer"></span>${list.pri_addr}
+								</div> 
+					
+								</div>
+								<!-- 공간 상세정보 보여주기 끝-->
 							</div>
 							<!-- 사진, 상세정보보기 끝 -->
 

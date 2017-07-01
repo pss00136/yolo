@@ -14,4 +14,6 @@ public interface LotService {
 	public List<LotListVO> lotlistview();
 
 	public LotListVO lotdetailview(LotListVO lotlistVO);
+	
+	public LotListVO lotreserve(LotListVO lotlistVO);
 }

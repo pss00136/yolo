@@ -57,5 +57,18 @@ public class LotDAO {
 				
 		return list;
 	}
+	
+	public LotListVO lotreserve(LotListVO lotlistVO){
+		LotListVO list = null;
+		try{
+			list = session.selectOne("lot.lotreserve", lotlistVO);
+		}catch(Exception ex){
+			System.out.println("lotlistview 실패: " + ex.getMessage());
+		}
+				
+		return list;
+	}
+	
+	
 
 }

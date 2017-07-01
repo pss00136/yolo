@@ -32,5 +32,8 @@ public class LotServiceImpl implements LotService {
 		return ldao.lotdetailview(lotlistVO);
 	}
 	
+	public LotListVO lotreserve(LotListVO lotlistVO){      
+		return ldao.lotreserve(lotlistVO);
+	}
 
 }
