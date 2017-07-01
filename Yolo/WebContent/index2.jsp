@@ -40,10 +40,6 @@
 			</a>
 		</div>
 		<a href="#" class="navHandler"><span class="fa fa-bars"></span></a>
-<!-- 		<div class="search"> -->
-<!-- 			<span class="searchIcon icon-magnifier"></span> <input type="text" -->
-<!-- 				placeholder="Search for houses, apartments..."> -->
-<!-- 		</div> -->
 
 		<div class="search">
 			<h4 id="header_title">YOLO WOW LOT</h4>
@@ -107,11 +103,6 @@
 			<!-- 좌측 네비게이션 메뉴 -->
 		<div id="leftSide">
 			<nav class="leftNav scrollable">
-<!-- 				<div class="search"> -->
-<!-- 					<span class="searchIcon icon-magnifier"></span> <input type="text" -->
-<!-- 						placeholder="Search for houses, apartments..."> -->
-<!-- 					<div class="clearfix"></div> -->
-<!-- 				</div> -->
 				<!-- 네비게이션 메뉴 -->
 				<ul id="lefynav_menu_ul">
 					<li>
@@ -154,11 +145,11 @@
 
 	<!-- Content -->
 	<div id="wrapper" class="full">
-		<div id="content" class="max">
-			<div class="main">
-				<ul class="cbp-ig-grid">
+		<div id="content" class="max full">
+			<div class="main" style="height:100%;">
+				<ul class="cbp-ig-grid" style="height:100%;">
 					<li class="gridmenu_li" id="menu1">
-						<a href="#">
+						<a href="/Yolo/lot/LotList.lot">
 							<h3 class="cbp-ig-title">공간찾기</h3> 
 							<span class="cbp-ig-category">LOT</span>
 							<hr/>
@@ -166,7 +157,7 @@
 						</a>
 					</li>
 					<li class="gridmenu_li" id="menu2">
-						<a href="#">
+						<a href="/Yolo/club/ClubList.club">
 							<h3 class="cbp-ig-title">모임찾기</h3> 
 							<span class="cbp-ig-category">CLUB</span>
 							<hr/>
@@ -174,7 +165,7 @@
 						</a>
 					</li>
 					<li class="gridmenu_li" id="menu3">
-						<a href="#">
+						<a href="/Yolo/comShare/ShareList.share">
 							<h3 class="cbp-ig-title">공간쉐어링</h3> 
 							<span class="cbp-ig-category">SHARE</span>
 							<hr/>
