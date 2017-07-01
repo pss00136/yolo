@@ -5,10 +5,13 @@ import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.ModelAndView;
@@ -173,10 +176,45 @@ public class LotController {
 		public ModelAndView lotlist(LotListVO lotlistVO){
 		    ModelAndView mv = new ModelAndView();
 		    List<LotListVO> list = service.lotlistview();
+		    String jsonList = json(list);
+		    mv.addObject("jsonList",jsonList);
 		    mv.addObject("list", list);
 		    mv.setViewName("/lot/LotList.map");
 			return mv;
 		}
+	   
+	   public String json(List<LotListVO> list){
+	       //최종 완성될 JSONObject 선언(전체)
+	           JSONObject jsonObject = new JSONObject();
+	           //props의 JSON정보를 담을 Array 선언
+	           JSONArray propsArray = new JSONArray();
+	           
+	           
+	           for(LotListVO lotVO: list){
+	              //props의 한명 정보가 들어갈 JSONObject 선언
+	              JSONObject propsInfo = new JSONObject();
+	              //위도 경도의 한명 정보
+	              JSONObject positionInfo = new JSONObject();
+	              
+	              propsInfo.put("title", lotVO.getPri_title());
+	               propsInfo.put("image", "2-1-thmb.png");
+	               propsInfo.put("type", lotVO.getPri_info());
+	               propsInfo.put("price", lotVO.getPri_charge());
+	               propsInfo.put("address", lotVO.getPri_addr());
+	               propsInfo.put("position", positionInfo);
+	               //위도 경도 추가
+	               positionInfo.put("lat", lotVO.getPri_lat());
+	               positionInfo.put("lng", lotVO.getPir_long());
+	               propsInfo.put("markerIcon", "marker-green.png");
+	               propsArray.add(propsInfo);
+	           }
+	           jsonObject.put("props", propsArray);
+	           
+	           String jsonInfo = jsonObject.toJSONString();
+	           System.out.println(jsonInfo);
+	           
+	           return jsonInfo;
+	     }
 	   
 	        /*
 	 		* @메소드명: lotview

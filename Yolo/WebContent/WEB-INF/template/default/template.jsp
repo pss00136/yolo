@@ -23,37 +23,8 @@
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-        
- 
-</head>
-<body class="notransition">
-      <!-- Header -->
-        <tiles:insertAttribute name="header" />
-        <tiles:insertAttribute name="menu" />
-
-	<div id="wrapper" class="full">
-		<div id="mapView" class="min">
-			<div class="mapPlaceholder">
-				<span class="fa fa-spin fa-spinner"></span> Loading map...
-			</div>	
-		</div>
-		<div id="content" class="max">
-			<!-- -----------------여기에 컨텐츠 div넣으세요----------------- -->
-			<!-- 이 사이에! -->
-
-			<tiles:insertAttribute name="body" />
-
-			<!-- ------------------------------------------------------- -->
-			<!-- Footer -->
-			<tiles:insertAttribute name="footer" />
-
-		</div>
-		<div class="clearfix"></div>
-	</div>
-	<tiles:insertAttribute name="login"></tiles:insertAttribute>
-	<tiles:insertAttribute name="join"></tiles:insertAttribute>
-
-	<script src=" <c:url value='/js/json2.js'/> "></script>
+        <!-- javascript -->
+        	<script src=" <c:url value='/js/json2.js'/> "></script>
         <script src=" <c:url value='/js/jquery-2.1.1.min.js'/> "></script>
         <script src=" <c:url value='/js/underscore.js'/> "></script>
         <script src=" <c:url value='/js/moment-2.5.1.js'/> "></script>
@@ -82,5 +53,35 @@
       <!-- 다음 맵 -->
       <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
       <script src=" <c:url value='/js_yolo/postcode/postcode.js'/> " type="text/javascript"></script>
+ 		<!-- javascript end -->
+        
+</head>
+<body class="notransition">
+      <!-- Header -->
+        <tiles:insertAttribute name="header" />
+        <tiles:insertAttribute name="menu" />
+
+	<div id="wrapper" class="full">
+		<div id="mapView" class="min">
+			<div class="mapPlaceholder">
+				<span class="fa fa-spin fa-spinner"></span> Loading map...
+			</div>	
+		</div>
+		<div id="content" class="max">
+			<!-- -----------------여기에 컨텐츠 div넣으세요----------------- -->
+			<!-- 이 사이에! -->
+
+			<tiles:insertAttribute name="body" />
+
+			<!-- ------------------------------------------------------- -->
+			<!-- Footer -->
+			<tiles:insertAttribute name="footer" />
+
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<tiles:insertAttribute name="login"></tiles:insertAttribute>
+	<tiles:insertAttribute name="join"></tiles:insertAttribute>
+	
 </body>
 </html>

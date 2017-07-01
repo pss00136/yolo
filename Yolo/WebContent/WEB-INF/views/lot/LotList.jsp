@@ -8,7 +8,16 @@
 	max-width: 200px;
 }
 </style>
-
+<% String jsonList = (String)request.getAttribute("jsonList"); System.out.println(jsonList);%>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	var temp = '<%=jsonList%>';
+	alert(temp);
+	var props = jQuery.parseJSON(temp);
+	alert("출력" + props[0].image);
+});
+</script>
 
 <!-- Content -->
 

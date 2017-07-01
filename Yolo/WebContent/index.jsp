@@ -178,7 +178,7 @@
 		</div>
 		<div class="clearfix"></div>
 	</div>
-<!-- 로그인 Modal -->
+	<!-- Login Modal -->
 	<div class="modal fade" id="signin" role="dialog"
 		aria-labelledby="signinLabel" aria-hidden="true">
 		<div class="modal-dialog modal-sm">
@@ -190,13 +190,14 @@
 					<h4 class="modal-title" id="signinLabel">로그인</h4>
 				</div>
 				<div class="modal-body">
-					 <form role="form" method="post" action="/Yolo/login/login.main">
+					<form role="form">
 
 						<div class="form-group">
-							<input type="text" placeholder="ID" name="u_id" class="form-control">
+							<input type="text" placeholder="ID" class="form-control">
 						</div>
 						<div class="form-group">
-							<input type="password" placeholder="Password" name="u_pass" class="form-control">
+							<input type="password" placeholder="Password"
+								class="form-control">
 						</div>
 						<div class="form-group">
 							<div class="row">
@@ -220,15 +221,13 @@
 						</div>
 						<div class="form-group">
 							<div class="btn-group-justified">
-								<button type="submit" class="btn btn-lg btn-green">LOGIN</button>
+								<a href="explore.html" class="btn btn-lg btn-green">LOGIN</a>
 							</div>
 						</div>
 						<p class="help-block">
 							아직 회원이 아니십니까? <a href="/Yolo/view/join/join.jsp"
 								class="text-green">회원가입하기</a>
 						</p>
-						
-
 					</form>
 				</div>
 			</div>
@@ -236,7 +235,8 @@
 				Yolo와lot web application<br>&copy; 2017
 			</div>
 		</div>
-	</div><!-- 로그인 Modal END -->
+	</div>
+	<!-- Login Modal END -->
 
 	<!-- Join Modal -->
 	<div class="modal fade" id="signup" role="dialog"
@@ -250,58 +250,50 @@
 					<h4 class="modal-title" id="signupLabel">회원가입</h4>
 				</div>
 				<div class="modal-body">
-
-					<form role="form"  method="post" action="/Yolo/join/join_ok.main">
+					<form role="form">
 						<div class="form-group">
 							<div class="input-group">
-								<input type="text" placeholder="아이디" id="u_id" name="u_id" class="form-control">
+								<input type="text" placeholder="아이디" class="form-control">
 								<span class="input-group-btn">
-									<button class="btn btn-success" type="button" id="check" name="check">중복확인</button>
+									<button class="btn btn-success" type="button">중복확인</button>
 								</span>
-								<span id="idCheckResult" style="width:150px;color:red"></span>
 							</div>
 						</div>
 						<div class="form-group">
-							<input type="password" placeholder="비밀번호" id="u_pass" name="u_pass" class="form-control">
+							<input type="password" placeholder="비밀번호" class="form-control">
 						</div>
 						<div class="form-group">
-							<input type="password" placeholder="비밀번호확인" id="u_passconfirm" name="u_passconfirm" class="form-control">
+							<input type="password" placeholder="비밀번호확인" class="form-control">
 						</div>
 						<div class="form-group">
-							<input type="text" placeholder="성명" id="u_name" name="u_name" class="form-control">
+							<input type="text" placeholder="성명" class="form-control">
 						</div>
 						<div class="form-group">
-							<input type="tel" placeholder="휴대전화" id="u_tell" name="u_tel" class="form-control">
+							<input type="tel" placeholder="휴대전화" class="form-control">
 						</div>
 						<div class="form-group">
-							<input type="email" placeholder="Email" id="u_email" name="u_email" class="form-control">
+							<input type="email" placeholder="Email" class="form-control">
 						</div>
 						<div class="form-group">
-							<input type="date" placeholder="생년월일" id="u_birth" name="u_birth" class="form-control">
-						</div>
-						<!-- 우편번호 검색 -->
-						<div class="form-group">
-							<div class="input-group">
-								<input type="text" class="form-control" id="postcode" name="postcode" placeholder="우편번호">
-								<span class="input-group-btn">
-								<input type="button"  class="btn btn-success form-control" onclick="DaumPostcode()" value="우편번호 찾기">
-								</span>
-							</div>	
+							<input type="date" placeholder="생년월일" class="form-control">
 						</div>
 						<div class="form-group">
-							<input type="text" class="form-control" id="main_address" name="main_address" placeholder="주소">
+							<select class="form-control">
+								<option value="서울특별시">서울특별시</option>
+								<option value="경기도">경기도</option>
+								<option value="강원도">강원도</option>
+								<option value="충청도">충청도</option>
+								<option value="전라도">전라도</option>
+								<option value="경상도">경상도</option>
+							</select>
 						</div>
-						<div class="form-group">
-							<input type="text" class="form-control" id="detail_address" name="detail_address" placeholder="상세주소">
-						</div>
-						<span id="guide" style="color:#999"></span>
 						<div class="form-group">
 							<div class="btn-group-justified">
-								<button type="submit" class="btn btn-lg btn-green" style="width:100%;">가입하기</button>
+								<a href="explore.html" class="btn btn-lg btn-green">가입하기</a>
 							</div>
 						</div>
 						<p class="help-block">
-							회원이신가요? <a href="/Yolo/views/login/login.user" class="text-green">로그인하기</a>
+							회원이신가요? <a href="/Yolo/view/login/login.jsp" class="text-green">로그인하기</a>
 						</p>
 					</form>
 				</div>
@@ -343,11 +335,6 @@
 	<!-- 추가  -->
 	<script src="/Yolo/js/home.js" type="text/javascript"></script>
 	<script src="/Yolo/js_yolo/icongrid/modernizr.custom.js" type="text/javascript"></script>
-	<!-- userInput.js by 찬종 -->
-	<script  src="/Yolo/js_yolo/user/userinput.js" type="text/javascript"></script>
-	<!-- 다음 맵 -->
-	<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
-	<script src="/Yolo/js_yolo/postcode/postcode.js" type="text/javascript"></script>	
 
 
 </body>
