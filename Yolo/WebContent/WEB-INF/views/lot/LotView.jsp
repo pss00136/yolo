@@ -117,7 +117,7 @@
 			</div>
 			<div class="clearfix"></div>
 			<div class="description">
-				<h3>상세정보</h3>
+				<h3>공간소개</h3>
 				<div>
 					${list.pri_content}
 				</div>

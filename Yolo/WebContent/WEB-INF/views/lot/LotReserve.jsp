@@ -64,27 +64,49 @@ int intToday = Integer.parseInt(sdf.format(todayCal.getTime()));
 			<div class="home-content">
 				<div id="home-wrapper" class="home-wrapper">
 					<div class="row">
-
+                        
+                        <!-- 전체정보 보기 끝 -->
 						<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
 
-							<!-- 사진, 상세정보보기 -->
-							<div class="row" style="margin-bottom: 20px; padding: 8px; border-top: 2px solid #fc7937;">
-								<div class="image-block">
+							<!-- 사진 보여주기  -->
+							<div class="row" style="margin-bottom:15px;">
+							    <h2 id="lot_reserve"></h2>
+									<div class="image-block">
 									<img src="/Yolo/images_yolo/lot/${list.priimg_name}" alt="image">
-									<div class="ib-title"></div>
+								    </div>	
+								    <!-- 공간명, 주소, 가격 -->
+									<div class="col-md-12">
+								<div class="col-md-8">	  
+								 <h1 style="margin-top: -15px; font-size: 20px; ">${list.pri_title}</h1>
+							   <div class="address">
+									<span class="icon-pointer"></span>${list.pri_addr}
 								</div>
-								<h2 style="padding: 8px; border-top: 2px solid #fc7937"
-									class="osLight align-left">공간상세정보</h2>
+								</div>
+								<div class="col-md-3">
+							        <strong style="margin-top: 0px; font-size: 25px; float: right;">${list.pri_weekprice}</strong>	
+								</div>
+							 
+									
+									
+									</div>
+								    
+								<!-- 공간명, 주소, 가격 끝 -->
+								</div>
+								
 								<!-- 공간 상세정보 보여주기 -->
-								<div>
-								    <p>${list.pri_content}</p>
-								   
-								   
+								<div class="row" style="margin-bottom:10px;">
+								<h2 id="lot_reserve" class="osLight align-left">공간상세정보</h2>
+								
+								    <div style="margin-top: 10px;">
+								    <h3> 공간소개</h3>
+								    ${list.pri_content}
+								    </div>
+
 								      <!------------- 편의시설 항목들 --------------------->
-			    <div class="amenities">
-				<h3>편의시설</h3>
-				<div class="row">
-				    <%
+			                    <div class="row" style="margin-top: 10px; padding: 8px;	">
+ 			                          <h3> 편의시설</h3>
+							         
+				                      <%
 								LotListVO lotlistVO = (LotListVO)request.getAttribute("list");;
 								String f = lotlistVO.getPri_facility();
 								StringTokenizer st2 = new StringTokenizer(f,",");
@@ -126,18 +148,11 @@ int intToday = Integer.parseInt(sdf.format(todayCal.getTime()));
 						        <%	}//End of else
 						        	
 								}//End of for %>
-				</div>
-			</div>
-			<!------------- 편의시설 항목들 끝--------------------->
-								   
-								   <div class="address">
-									<span class="icon-pointer"></span>${list.pri_addr}
-								</div> 
-					
-								</div>
-								<!-- 공간 상세정보 보여주기 끝-->
+							          
+						             </div>
+			                     <!------------- 편의시설 항목들 끝--------------------->
 							</div>
-							<!-- 사진, 상세정보보기 끝 -->
+							<!--상세정보보기 끝 -->
 
 							<!--------- 달력으로 예약날짜보기 ---------->
 							<div class="row" style="margin-bottom: 30px;">
@@ -368,7 +383,7 @@ while(newLine > 0 && newLine < 7)
 									class="osLight align-left">예약자 정보</h2>
 
 								<!-- 예약자 명 -->
-								<div class="form-group">
+								<div class="col-md-12 form-group">
 									<label class="tit col-sm-2 col-md-3 ">예약자 명</label>
 									<div class="col-sm-8">
 										<input type="text" name="uName" class="form-control" value="">
@@ -376,7 +391,7 @@ while(newLine > 0 && newLine < 7)
 								</div>
 
 								<!-- 예약자 명 -->
-								<div class="form-group">
+								<div class="col-md-12 form-group">
 									<label class="tit col-sm-2 col-md-3	">연락처</label>
 									<div class="col-sm-8">
 										<input type="text" name="uPhone" class="form-control" value="">
@@ -443,8 +458,8 @@ while(newLine > 0 && newLine < 7)
 
 						<!-- 결제창 -->
 						<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+							<div class="row col-md-12">
 							
-							<div class="row">
 								<!-- 예약자 정보 보기 -->
 								<h2 id="lot_reserve" class="osLight align-left">결제 예정금액</h2>
 
@@ -472,24 +487,21 @@ while(newLine > 0 && newLine < 7)
 									</div>
 								</div>
 								
-
-						<div style="text-align: center;">
-							<div style="display: inline-block;">
-								<button id="btn_next" class="btn btn-o btn-green">결제하기</button>
+								<!-- 결제하기 버튼 -->
+						      <div style="text-align: center;">
+							     <div style="display: inline-block;">
+								    <button id="btn_next" class="btn btn-o btn-green">결제하기</button>
+							    </div>
+						     </div>		
+									
+					        <!-- 예약자 정보 보기 끝 --> 
+					         </div>
 							</div>
-						</div>					
-					</div>
-
-							</div>
+							<!-- 결제창 끝 -->
 							
-						</div>
-						<!-- 결제창 끝 -->
-
-						<br /> <br />
-
-
-					</div>
-				</div>
+						</div><!-- End of row -->
+					</div> <!-- End of home-wrapper -->
+				</div> <!-- End of home-content -->
 
 
 		<!-- 추가  -->

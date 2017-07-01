@@ -85,9 +85,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 	
 	<select id="lotreserve" resultMap="lotlistMap">
-	 select i.priimg_name priimg_name, p.pri_facility pri_facility, p.pri_addr pri_addr, p.pri_num pri_num, p.pri_content pri_content, p.pri_num pri_num
+	 select i.priimg_name priimg_name, p.pri_title pri_title, p.pri_weekprice pri_weekprice, p.pri_facility pri_facility, p.pri_addr pri_addr, p.pri_num pri_num, p.pri_content pri_content
      from privatelot p JOIN privateimage i
      ON p.pri_num = i.pri_num
+     WHERE p.pri_num = #{pri_num}
 	</select>
 
 </mapper>
