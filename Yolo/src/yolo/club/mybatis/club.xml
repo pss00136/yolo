@@ -26,9 +26,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 </select>
 
 <select id="clubdetail" parameterType="yolo.club.dto.ClubListVO" resultType="yolo.club.dto.ClubListVO">
-	SELECT C.C_NUM C_NUM, I.CIMG_NAME CIMG_NAME, C.C_TYPE C_TYPE, C.C_TITLE C_TITLE, C.c_people c_people, C.C_PERIOD C_PERIOD, C.C_DATE C_DATE, C.C_PLACE C_PLACE
-	FROM CLUB C JOIN CLUBIMAGE I
+	SELECT C.C_NUM C_NUM, I.CIMG_NAME CIMG_NAME, C.C_TYPE C_TYPE, C.C_TITLE C_TITLE, C.C_TAG C_TAG, C.C_PEOPLE C_PEOPLE, C.C_RECRUIT C_RECRUIT, C.C_PERIOD C_PERIOD, C.C_DATE C_DATE, C.C_PLACE C_PLACE, 
+    C.C_CONTENT C_CONTENT, C.C_REGDATE C_REGDATE
+    FROM CLUB C JOIN CLUBIMAGE I
 	ON c.c_num = i.c_num
+	WHERE C.C_NUM = #{c_num}
 </select>
 
 

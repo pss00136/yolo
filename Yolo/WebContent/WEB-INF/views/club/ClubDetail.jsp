@@ -1,11 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page import="java.util.*" %>
+<%@ page import="yolo.club.dto.*" %>
     
 	<!-- 추가 속성 CSS -->
         <link href="/Yolo/css_yolo/cssView/Club/clubDetail.css" rel="stylesheet">
         <link href="/Yolo/css_yolo/cssView/Club/tagPlus.css" rel="stylesheet">
         
-        
+   			<div class="home-wrapper">
                 <div class="singleTop">
                     <div id="carouselFull" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
@@ -16,37 +19,21 @@
                         </ol>
                         <div class="carousel-inner">
                             <div class="item active">
-                                <img src="/Yolo/upload/club/${c.cimg_name}" alt="First slide">
+                                <img src="/Yolo/upload/club/${list.cimg_name}" alt="First slide">
                                 <div class="container">
                                     <div class="carousel-caption">
                                         
                                     </div>
                                 </div>
                             </div>
-<!--                             <div class="item"> -->
-<!--                                 <img src="/Yolo/images_yolo/club/wooden2.jpg" alt="Second slide"> -->
-<!--                                 <div class="container"> -->
-<!--                                     <div class="carousel-caption"> -->
+                            <div class="item">
+                                <img src="/Yolo/images_yolo/club/wooden3.jpg" alt="Third slide">
+                                <div class="container">
+                                    <div class="carousel-caption">
                                         
-<!--                                     </div> -->
-<!--                                 </div> -->
-<!--                             </div> -->
-<!--                             <div class="item"> -->
-<!--                                 <img src="/Yolo/images_yolo/club/wooden3.jpg" alt="Third slide"> -->
-<!--                                 <div class="container"> -->
-<!--                                     <div class="carousel-caption"> -->
-                                        
-<!--                                     </div> -->
-<!--                                 </div> -->
-<!--                             </div> -->
-<!--                             <div class="item"> -->
-<!--                                 <img src="/Yolo/images/prop/4-4.png" alt="Fourth slide"> -->
-<!--                                 <div class="container"> -->
-<!--                                     <div class="carousel-caption"> -->
-                                        
-<!--                                     </div> -->
-<!--                                 </div> -->
-<!--                             </div> -->
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <a class="left carousel-control" href="#carouselFull" role="button" data-slide="prev"><span class="fa fa-chevron-left"></span></a>
                         <a class="right carousel-control" href="#carouselFull" role="button" data-slide="next"><span class="fa fa-chevron-right"></span></a>
@@ -55,10 +42,10 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
                                 <div class="summaryItem">
-                                    <h1 class="pageTitle">${c.c_title}</h1>
+                                    <h1 class="pageTitle">${list.c_title}</h1>
                                     <div class="address"><span class="icon-pointer"></span>서울 용산구 후암동 서울특별시 용산구 후암로 38, 지하 1층</div>
                                     <ul class="users">
-                                    	<li><span class="icon-users"></span> 총 30 명</li>
+                                    	<li><span class="icon-users"></span> 총 ${list.c_people} 명</li>
                                     	<li> / 10명 신청가능</li>
                                    	</ul>
                                     <div class="favLink"><a href="#"><span class="icon-star"></span></a>54</div>
@@ -67,19 +54,26 @@
                                         <li><span class="icon-bubble"></span> 13</li>
                                     </ul>
                                     <div class="clearfix"></div>
-                                   <ul class="tags">
-                                        <li><span style="cursor: pointer;">#목공교육</span></li>
-                                        <li><span style="cursor: pointer;">#가구제작</span> </li>
-                                        <li><span class="tag" style="cursor: pointer;">#가구디자인</span></li>
-                                        <li><span class="tag" style="cursor: pointer;">#가구공방</span></li>
-                                        <li><span class="tag" style="cursor: pointer;">#목공배우기</span></li>
-                                        <li><span class="tag" style="cursor: pointer;">#욜루와랏</span></li>
+                                    
+                                    <% 
+                                    ClubListVO clublistVO = (ClubListVO)request.getAttribute("list");
+                                    String tags = clublistVO.getC_tag();
+                                    StringTokenizer Onetag = new StringTokenizer(tags,",");
+                                    while(Onetag.hasMoreTokens())
+                                    {
+                                    %>
+                                   	<ul class="tags">
+                                        	<li><span class="tag" style="cursor: pointer;"><%=Onetag.nextToken()%></span></li>
                                     </ul>
+                                    <% 
+                                    }
+                                    %>
+                                    
 									<div class="clearfix"></div>
                                     <ul class="features">
-                                        <li><span class="fa fa-calendar-o"> 신청기간</span><div>6월 19일 (월) ~ 6월 30일 (금)</div></li>
-                                        <li><span class="fa fa-clock-o"> 활동주기</span><div>정기적</div></li>
-                                        <li><span class="fa fa-calendar"> 모임기간</span><div>7월 8일 (토) ~ 7월 29일 (토)</div></li>
+                                        <li><span class="fa fa-calendar-o"> 신청기간</span><div>${list.c_recruit}</div></li>
+                                        <li><span class="fa fa-clock-o"> 활동주기</span><div>${list.c_period}</div></li>
+                                        <li><span class="fa fa-calendar"> 모임기간</span><div>${list.c_date}</div></li>
                                     </ul>
                                     <div class="clearfix"></div>
                                 </div>
@@ -102,7 +96,7 @@
                 <div class="clearfix"></div>
                 <div class="description">
                     <h3>상세설명</h3>
-                    <p>이 강좌는 해쉬에서 디자인된 원목 스툴만들기 목공예 기초과정입니다. 원목의 특징, 수종, 구조의 체계적인 이론을 배우며 원목가공에 필요한 기계 및 장비사용법과 안전사항을 숙지합니다. 가구제작에 필수적인 재단방법, 결합방법, 마감등 체계적으로 배울 수 있는 정규교육과정입니다.</p>
+                    <p>${list.c_content}</p>
                 </div>
                 <div class="share">
                     <h3>모임 정보 공유하기</h3>
@@ -121,7 +115,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
             <div class="commentsFormWrapper">
                 <div class="cfAvatar">
                     <img class="avatar" src="/Yolo/images/avatar-1.png" alt="avatar">
@@ -135,38 +128,9 @@
                 <div class="clearfix"></div>
             </div>
             <div class="clearfix"></div>
-<!--         </div> -->
-
-<!--         <div class="modal fade" id="contactAgent" role="dialog" aria-labelledby="contactLabel" aria-hidden="true"> -->
-<!--             <div class="modal-dialog"> -->
-<!--                 <div class="modal-content"> -->
-<!--                     <div class="modal-header"> -->
-<!--                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> -->
-<!--                         <h4 class="modal-title" id="contactLabel">Contact Agent</h4> -->
-<!--                     </div> -->
-<!--                     <div class="modal-body"> -->
-<!--                         <form class="contactForm"> -->
-<!--                             <div class="row"> -->
-<!--                                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 cfItem"> -->
-<!--                                     <input type="text" placeholder="Name" class="form-control"> -->
-<!--                                  </div> -->
-<!--                                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 cfItem"> -->
-<!--                                     <input type="text" placeholder="Email" class="form-control"> -->
-<!--                                 </div> -->
-<!--                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cfItem"> -->
-<!--                                     <input type="text" placeholder="Subject" class="form-control"> -->
-<!--                                 </div> -->
-<!--                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cfItem"> -->
-<!--                                     <textarea placeholder="Message" rows="3" class="form-control"></textarea> -->
-<!--                                 </div> -->
-<!--                             </div> -->
-<!--                         </form> -->
-<!--                     </div> -->
-<!--                     <div class="modal-footer"> -->
-<!--                         <a href="#" data-dismiss="modal" class="btn btn-round btn-o btn-gray">Close</a> -->
-<!--                         <a href="#" class="btn btn-round btn-green">Send message</a> -->
-<!--                     </div> -->
-<!--                 </div> -->
-<!--             </div> -->
-<!--         </div> -->
-
+            <!-- 지도 부분 시작 -->
+            <div id="hero-container-map">
+				<div id="home-map"></div>
+			</div>
+			<!-- 지도 부분 끝 -->
+		</div>

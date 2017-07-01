@@ -15,6 +15,7 @@ import yolo.club.dto.ClubVO;
 * @see         yolo.club.service
 * @since       JDK1.8
 */
+
 public interface ClubService {
 	
 	public int clubinput( ClubVO clubVO, ClubImageVO cimgVO);

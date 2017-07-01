@@ -50,25 +50,22 @@ public class ClubController {
 	
 	/*
 	* @메소드명: clubDetail
-	* @역할: views/club/clubList로 페이지 전환
+	* @역할: views/club/clubDetail로 페이지 전환
 	*
 	* @param   없음
-	* @return  String:반환하는 경로
+	* @return  ModelAndView :반환하는 경로
 	*/
 	@RequestMapping("/ClubDetail.club")
 	public ModelAndView clubDetail(ClubListVO clublistVO){
-		ClubListVO club = service.
-		
-		return "/club/ClubDetail.map";
-	}
-	
-	public ModelAndView view(BoardVO vo){
-		BoardVO board =boardDAO.boardView(vo);
 		ModelAndView mv = new ModelAndView();
-		mv.addObject("model", board);
-		mv.setViewName("board/view");	
+		ClubListVO list = service.clubdetail(clublistVO);
+		mv.addObject("list", list);
+		mv.setViewName("/club/ClubDetail");
+		System.out.println("태그"+list.getC_tag());
+		System.out.println("모집"+list.getC_recruit());
 		return mv;
 	}
+	
 	
 	/*
 	* @메소드명: clubInput

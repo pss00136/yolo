@@ -64,9 +64,14 @@ public class ClubDAO {
 	* @param   
 	* @return  List<ClubListVO>: DB select쿼리문 결과값
 	*/
-	public ClubListVO clubdetail(){
+	public ClubListVO clubdetail(ClubListVO clublistVO){
 		ClubListVO detail = null;
-		detail = session.selectOne("club.clubdetail");
+		try {
+			detail = session.selectOne("club.clubdetail", clublistVO);
+		} catch (Exception ex) {
+			System.out.println("clubdetail 실패: " + ex.getMessage());
+		}
+		System.out.println("모집"+clublistVO.getC_recruit());
 		return detail;
 	}
 
