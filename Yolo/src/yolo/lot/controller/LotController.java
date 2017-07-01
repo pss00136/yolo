@@ -70,7 +70,7 @@ public class LotController {
 	 @RequestMapping("lot/LotInputSecond.lot" )
 		public String lotinputfirst(@ModelAttribute("privateVO") PrivatelotVO privateVO, PrivateimageVO primgVO, HttpSession session
 				,String lot_postcode, String lot_main_address, String lot_detail_address){	    
-		    session.setAttribute("primgVO", primgVO);
+		     session.setAttribute("primgVO", primgVO);
 		    //address 합치기
 			 privateVO.setPri_addr(lot_main_address +" "+ lot_detail_address);
 			 //경도,위도
@@ -79,6 +79,7 @@ public class LotController {
 		      //coords[0] : 위도 , coords[1] : 경도 
 		       privateVO.setPri_lat(Float.toString(coords[0]));
 		       privateVO.setPri_long(Float.toString(coords[1]));
+		       System.out.println(privateVO.getPri_lat() +"<>"+ privateVO.getPri_long());
 			 return "/lot/LotInputSecond";
 		}
 	    
@@ -102,6 +103,7 @@ public class LotController {
 	               Float[] coords = new Float[2];
 	               coords[0] = latitudeLongitude.getLat().floatValue();
 	               coords[1] = latitudeLongitude.getLng().floatValue();
+	                System.out.println(coords[1] +  "> " + coords[0] );
 	               return coords;
 	            }
 	         } catch (IOException ex) {
@@ -132,7 +134,6 @@ public class LotController {
 			 entrepreneurVO.setE_rnum(e_rnum1+"-"+e_rnum2+"-"+e_rnum3);
 			 
 			 session.setAttribute("entrepreneurVO", entrepreneurVO);
-			 System.out.println(entrepreneurVO.getE_title());
 			 
 			return "/lot/LotInputLast";
 		}
@@ -149,14 +150,13 @@ public class LotController {
 				, SessionStatus sessStatus, HttpSession session){
 		 PrivateimageVO primgVO = (PrivateimageVO)session.getAttribute("primgVO");
 		 EntrepreneurVO entrepreneurVO = (EntrepreneurVO)session.getAttribute("entrepreneurVO");
-		 System.out.println(privateVO.getPri_booktype());
+		 System.out.println(entrepreneurVO.getE_fname());
 
 		 //호스트번호
 		 privateVO.setH_num("h_61"); 
 		 service.lotinput(privateVO, primgVO, entrepreneurVO);
 		 
 		 //이미지 넘겨오나?
-		 System.out.println(primgVO.getPriimg_name());
 		 sessStatus.setComplete(); 
 			return "/host/HostMyLot.host";
 		}

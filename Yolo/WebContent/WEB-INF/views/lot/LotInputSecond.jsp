@@ -273,11 +273,11 @@
 				<div>
 					<div style="text-align: center;">
 						<div style="display: inline-block;">
-							<a href="/Yolo/lot/LotInputFirst.lot" id="btn_modify"
+							<a href="/Yolo/lot/LotInputFirst.lot" id="btn_before"
 								class="btn btn-o btn-green">이전으로</a>
 						</div>
 						<div style="display: inline-block;">
-							<button id="btn_modify" class="btn btn-o btn-green">등록하기</button>
+							<button id="btn_next" class="btn btn-o btn-green">다음으로</button>
 						</div>
 					</div>
 				</div>

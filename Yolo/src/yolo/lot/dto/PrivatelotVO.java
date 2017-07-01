@@ -65,7 +65,7 @@ public class PrivatelotVO {
 		this.pri_weekendo = pri_weekendo;
 		this.pri_weekende = pri_weekende;
 		this.pri_lat = pri_lat;
-		this.pri_long = pir_long;
+		this.pri_long = pri_long;
 		this.pri_tel = pri_tel;
 		this.pri_web = pri_web;
 		this.pri_bookcount = pri_bookcount;
@@ -291,7 +291,7 @@ public class PrivatelotVO {
 	}
 
 
-	public void setPri_long(String pir_long) {
+	public void setPri_long(String pri_long) {
 		this.pri_long = pri_long;
 	}
 

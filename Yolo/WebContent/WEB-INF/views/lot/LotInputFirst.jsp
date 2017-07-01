@@ -172,7 +172,7 @@
 			<div>
 				<div style="text-align: center;">
 					<div style="display: inline-block;">
-						<button type="submit" id="btn_next" class="btn btn-o btn-green">다음</button>
+						<button type="submit" id="btn_next" class="btn btn-o btn-green">다음으로</button>
 					</div>
 				</div>
 			</div>
