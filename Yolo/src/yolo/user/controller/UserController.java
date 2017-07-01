@@ -60,7 +60,7 @@ public class UserController {
 		}
 		mv.addObject(result);
 		mv.addObject(message);
-		mv.setViewName("/join/join_ok.notile");
+		mv.setViewName("/common/main");
 
 		return mv;
 	}
