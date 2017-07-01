@@ -23,10 +23,50 @@
         
         <!-- 추가 CSS -->
         <link href="/Yolo/css_yolo/cssView/comShare/ShareDetail.css" rel="stylesheet">
-    	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"/>
-
+        
+        
+        <!-- date time picker CSS-->
+		<link href="/Yolo/css_yolo/cssView/comShare/jquery.datetimepicker.css" rel="stylesheet">
+<!-- 		<link rel="stylesheet"  href="http://code.jquery.com/mobile/git/jquery.mobile-git.css" />  -->
+<!-- 		<link href="/Yolo/css_yolo/cssView/comShare/datepicker/jquery.mobile.datepicker.css" rel="stylesheet"> -->
+<!--     	<link href="/Yolo/css_yolo/cssView/comShare/datepicker/jquery.mobile.datepicker.theme.css" rel="stylesheet"> -->
     	
+    	
+    	
+    	
+	<style>
+	@media(max-width: 768px){
+		.xdsoft_datetimepicker {
+			display: block; 
+			position: absolute;
+			left: 40px;
 
+		}
+	}
+	
+	.xdsoft_datetimepicker .xdsoft_calendar table{
+		width: 80%;
+	}
+	
+	.xdsoft_datetimepicker .xdsoft_month{
+		width: 25%;
+	}
+	
+	.xdsoft_datetimepicker .xdsoft_next {
+	    float: left;
+	    background-position: 0 0;
+	    margin-left: 15%;
+	}
+	
+	.xdsoft_datetimepicker .xdsoft_datepicker.active+.xdsoft_timepicker {
+	    margin-top: 8px;
+	    margin-bottom: 10px;
+	    margin-left: -47px;
+	}
+	
+	
+	</style>
+	
     </head>
     <body class="notransition">
     
@@ -151,7 +191,7 @@
 
 
 	<!-- modal popup -->
-	<div style="z-index: 1000000;" class="modal fade" id="application"
+	<div class="modal fade" id="application"
 		role="dialog" aria-labelledby="contactLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
@@ -160,13 +200,14 @@
 						aria-hidden="true">×</button>
 				</div>
 				<div class="modal-body">
-					<form class="contactForm">
-						<div class="row">
-							<label for="fromDate"><span class="icon-calendar"></span>시작일</label>
-					          <input type="text" name="fromDate" id="fromDate">
-					           - 
-					        <label for="toDate"><span class="icon-calendar"></span>종료일</label>
-					          <input type="text" name="toDate" id="toDate">
+					<form class="contactForm" style="margin: 15px 6px;">
+						<div class="row" style="text-align:center;">
+							<div style="display:inline-block;">
+<!-- 								<input type="text" style="z-index: 1000000;" class="date-input" data-inline="false" data-role="date"> -->
+<!-- 								<input type="text" style="z-index: 1000000;" class="date-input-inline" data-inline="true" data-role="date"> -->
+								<input style="z-index: 100000; margin: 0 8px; width: 100px;" type="text" class=" some_class" value="" id="some_class_1"/>
+								<input style="z-index: 100000; margin: 0 8px; width: 100px;" type="text" class=" some_class" value="" id="some_class_2"/>
+							</div>
 						</div>
 					</form>
 				</div>
@@ -179,6 +220,7 @@
 			</div>
 		</div>
 	</div>
+	
 
 
         <script src="/Yolo/js/json2.js"></script>
@@ -206,60 +248,17 @@
 		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
         
-        <!-- datepicker 한국어로 -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/i18n/datepicker-ko.js"></script>
-		<script>
-            $(function() {
-                
-            
-                //오늘 날짜를 출력
-                $("#today").text(new Date().toLocaleDateString());
-
-                //datepicker 한국어로 사용하기 위한 언어설정
-                $.datepicker.setDefaults($.datepicker.regional['ko']); 
-                
-                // 시작일(fromDate)은 종료일(toDate) 이후 날짜 선택 불가
-                // 종료일(toDate)은 시작일(fromDate) 이전 날짜 선택 불가
-
-                //시작일.
-                $('#fromDate').datepicker({
-                    showOn: "both",                     // 달력을 표시할 타이밍 (both: focus or button)
-//                     buttonImage: "images/calendar.gif", // 버튼 이미지
-//                     buttonImageOnly : true,             // 버튼 이미지만 표시할지 여부
-//                     buttonText: "날짜선택",             // 버튼의 대체 텍스트
-                    dateFormat: "yy-mm-dd",             // 날짜의 형식
-                    changeMonth: true,                  // 월을 이동하기 위한 선택상자 표시여부
-                    //minDate: 0,                       // 선택할수있는 최소날짜, ( 0 : 오늘 이전 날짜 선택 불가)
-                    onClose: function( selectedDate ) {    
-                        // 시작일(fromDate) datepicker가 닫힐때
-                        // 종료일(toDate)의 선택할수있는 최소 날짜(minDate)를 선택한 시작일로 지정
-                        $("#toDate").datepicker( "option", "minDate", selectedDate );
-                    }                
-                });
-
-                //종료일
-                $('#toDate').datepicker({
-                    showOn: "both", 
-//                     buttonImage: "images/calendar.gif", 
-//                     buttonImageOnly : true,
-//                     buttonText: "날짜선택",
-                    dateFormat: "yy-mm-dd",
-                    changeMonth: true,
-                    //minDate: 0, // 오늘 이전 날짜 선택 불가
-                    onClose: function( selectedDate ) {
-                        // 종료일(toDate) datepicker가 닫힐때
-                        // 시작일(fromDate)의 선택할수있는 최대 날짜(maxDate)를 선택한 종료일로 지정 
-                        $("#fromDate").datepicker( "option", "maxDate", selectedDate );
-                    }                
-                });
-            });
-        </script>
-
-
+        <!-- date time picker JS -->
+        <script src="/Yolo/js_yolo/comShare/jquery.js" type="text/javascript"></script>
+		<script src="/Yolo/js_yolo/comShare/jquery.datetimepicker.full.js" type="text/javascript"></script>
+    	
+		<script>/*
+// 		window.onerror = function(errorMsg) {
+// 			$('#console').html($('#console').html()+'<br>'+errorMsg)
+// 		}*/
 		
-
+		$('.some_class').datetimepicker();
 		
-		
-		
+		</script>
     </body>
 </html>
