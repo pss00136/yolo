@@ -28,8 +28,8 @@ public class LotServiceImpl implements LotService {
 		return ldao.lotlistview();
 	}
 	
-	public List<LotListVO> lotdetailview(){
-		return ldao.lotdetailview();
+	public LotListVO lotdetailview(LotListVO lotlistVO){
+		return ldao.lotdetailview(lotlistVO);
 	}
 	
 

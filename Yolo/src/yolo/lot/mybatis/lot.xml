@@ -65,7 +65,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</insert>
 
 	<select id="lotlistview" resultMap="lotlistMap">
-	 select i.priimg_name priimg_name, p.pri_weekprice pri_weekprice, p.pri_title pri_title, p.pri_addr pri_addr
+	 select i.priimg_name priimg_name, p.pri_weekprice pri_weekprice, p.pri_title pri_title, p.pri_addr pri_addr, p.pri_num pri_num
      from privatelot p JOIN privateimage i
      ON p.pri_num = i.pri_num
 	</select>
@@ -76,10 +76,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</insert>
 	
 	
-	<select id="lotdetailview" resultMap="lotlistMap">
-	 select i.priimg_name priimg_name, p.pri_title pri_title, p.pri_weekprice pri_weekprice, p.pri_addr pri_addr, p.pri_tag pri_tag, p.pri_content pri_content, p.pri_facility pri_facility
-     from privatelot p JOIN privateimage i
-     ON p.pri_num = i.pri_num
+	<select id="lotdetailview" parameterType="lotlistVO" resultMap="lotlistMap">
+	 SELECT i.priimg_name priimg_name, p.pri_title pri_title, p.pri_weekprice pri_weekprice, p.pri_addr pri_addr, p.pri_tag pri_tag,
+	 p.pri_content pri_content, p.pri_facility pri_facility
+	 FROM privatelot p JOIN privateimage i
+	 ON p.pri_num = i.pri_num
+	 WHERE p.pri_num = #{pri_num}
 	</select>
 
 </mapper>

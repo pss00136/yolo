@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page import="java.util.*" %>
+<%@ page import="yolo.lot.dto.*" %>
 		
 		<!-- 추가css -->
 		<link rel="stylesheet" type="text/css"
@@ -31,7 +33,7 @@
 					  <!------------- 슬라이더로 사진, 상세사진 보여주기 --------------------->
 					<div class="carousel-inner">
 						<div class="item active">
-							<img src="/Yolo/upload/lot/${priimg_name}" alt="First slide">
+							<img src="/Yolo/upload/lot/${list.priimg_name}" alt="First slide">
 							<div class="container">
 								<div class="carousel-caption"></div>
 							</div>
@@ -66,18 +68,33 @@
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-8">
 							<div class="summaryItem">
-								<h1 class="pageTitle">#{pri_title}</h1>
-								<strong style="margin-top: 0px; font-size: 25px;">${pri_weekprice}</strong>
+								<h1 class="pageTitle">${list.pri_title}</h1>
+								<strong style="margin-top: 0px; font-size: 25px;">${list.pri_weekprice}</strong>
 								<div class="address">
-									<span class="icon-pointer"></span>${pri_addr}
+									<span class="icon-pointer"></span>${list.pri_addr}
 								</div>
-								<ul class="tags" >
-                                        <li><span style="cursor: pointer;">${pri_tag}</span></li>
-                                </ul>
+							
+								<%
+								LotListVO lotlistVO = (LotListVO)request.getAttribute("list");
+								String str = lotlistVO.getPri_tag();
+								//String str = ${list.pri_tag}; 
+								StringTokenizer st = new StringTokenizer(str,",");
+								while(st.hasMoreTokens() ) 
+								{   %>
+									
+									<ul class="tags" >
+                                        <li><span style="cursor: pointer;"><%= st.nextToken() %></span></li>
+                                   </ul>
+									
+								
+							    <% 	} %>
+								
+                               
+                              
 							</div>
 						</div>
 
-						<div id="reservation">
+						<div id="reservation">	
 						
 							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
 					
@@ -103,7 +120,7 @@
 			<div class="description">
 				<h3>상세정보</h3>
 				<div>
-					${pri_content}
+					${list.pri_content}
 				</div>
 			</div>
 
@@ -111,8 +128,9 @@
 			<div class="amenities">
 				<h3>편의시설</h3>
 				<div class="row">
+				
 					<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem">
-						<span class="fa fa-car"></span> ${pri_facility}
+						<span class="fa fa-car"></span> ${list.pri_facility}
 					</div>
 					<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem">
 						<span class="fa fa-tint"></span> Outdoor Pool

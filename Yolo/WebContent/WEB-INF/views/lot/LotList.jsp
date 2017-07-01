@@ -99,7 +99,7 @@
 					<c:otherwise>
 						<c:forEach items="${list}" var="a">
 							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-								<a href="/Yolo/lot/LotView.lot" class="card">
+								<a href="/Yolo/lot/LotView.lot?pri_num=${a.pri_num}" class="card">
 									<div class="figure">
 										<img src="/Yolo/upload/lot/${a.priimg_name}" alt="image">
 										<div class="figCaption">

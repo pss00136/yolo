@@ -188,7 +188,7 @@ public class LotController {
 	   @RequestMapping("lot/LotView.lot")
 		public ModelAndView lotview(LotListVO lotlistVO){
 		   ModelAndView mv = new ModelAndView();
-		    List<LotListVO> list = service.lotdetailview();
+		   LotListVO list = service.lotdetailview(lotlistVO);
 		    mv.addObject("list", list);
 		    mv.setViewName("/lot/LotView.map");
 			return mv;
