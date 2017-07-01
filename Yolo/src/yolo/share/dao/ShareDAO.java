@@ -1,10 +1,36 @@
 package yolo.share.dao;
 
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
 import yolo.share.dto.ShareVO;
 
-public interface ShareDAO {
+/*
+ * @클래스명: ShareDAO
+ * 
+ * @version		1.0 17/07/01
+ * @author		김찬종
+ * @see			yolo.share.dao
+ * @since		JDK1.8
+ *
+ */
+@Repository
+public class ShareDAO {
+	
+	@Autowired
+	SqlSessionTemplate session;
+	
 	/*
-	 * ShareInput 글등록하기 
+	 * @메소명: shareInput
+	 * @역활: ShareService에서 전달받은 값을 DB에 삽입
+	 * 
+	 * @param	ShareVO
+	 * @return int: DB insert쿼리문 결과값
 	 */
-	int shareInput(ShareVO vo);
+	public int shareInput(ShareVO vo) {
+		int result = session.insert("share.shareInsert", vo);
+		
+		return result;
+	}
 }

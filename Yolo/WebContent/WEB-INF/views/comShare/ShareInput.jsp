@@ -17,12 +17,12 @@
 							<h4>쉐어링 정보입력</h4>
 							<hr>
 							<br />
-							<form class="form-horizontal" role="form">
+							<form id="shareInputForm1" name="shareInputForm1" method="post" class="form-horizontal" role="form" >
 								<!-- 글 제목 입력 -->
 								<div class="form-group">
 									<label class="col-sm-2 control-label">글 제목</label>
 									<div class="col-sm-9">
-										<input class="form-control input-sm" type="text">
+										<input name="sl_title" id="sl_title" class="form-control input-sm" type="text">
 									</div>
 								</div>
 								<!-- 예약공간 선택 -->
@@ -91,14 +91,14 @@
 								<div class="form-group">
 									<label class="col-sm-2 control-label">글 내용</label>
 									<div class="col-sm-9">
-										<textarea class="form-control" rows="15"
+										<textarea name="sl_content" id="sl_content" class="form-control" rows="15"
 											placeholder="쉐어링 날짜/시간 및 상세 내용 입력"></textarea>
 									</div>
 								</div>
 								<!-- 쉐어링 등록하기 버튼 -->
-								<div id="nextbtn" class="col-md-12">
+								<div class="col-md-12">
 									<div class="col-md-5"></div>
-									<button class="col-md-2 btn btn-round btn-o btn-green">쉐어링
+									<button id="share_check_ok" class="col-md-2 btn btn-round btn-o btn-green">쉐어링
 										등록하기</button>
 									<div class="col-md-5"></div>
 								</div>

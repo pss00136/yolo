@@ -6,8 +6,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import yolo.share.dao.ShareDAOImpl;
+
 import yolo.share.dto.ShareVO;
+import yolo.share.service.ShareService;
 
 /*
  * @클래스명: ShareController
@@ -23,8 +24,8 @@ public class ShareController {
 
 	/* 멤버필드 */
 	@Autowired
-	ShareDAOImpl ShareDAO;
 	
+	ShareService service;
 	
 	
 	/*
@@ -36,7 +37,7 @@ public class ShareController {
 	@RequestMapping("ShareInputOk.share")
 	public String shareInput(ShareVO vo){
 		
-		int result = ShareDAO.shareInput(vo);
+		int result = service.shareInput(vo);
 		String message = "입력실패";
 		if(result > 0){
 			message = "입력완료";

@@ -6,4 +6,6 @@
 		    alert("글제목을 입력해주세요.");
 		    
 		}
+		
+		$("#shareInputForm1").submit("ShareInputOk.share");
 	});
