@@ -5,7 +5,10 @@
 }
 
 #hostbtn{
-	padding-top: 20px;
+	height: 40px;
+	width: 90px;
+	padding: 10px 0 0 0;
+	margin-top: 10px;
 }
 
 #footer_title{
@@ -36,6 +39,7 @@ padding-top: 28px;
 background-image: url("/Yolo/images_yolo/common/club.jpg");
 background-size: cover;
 }
+
 #menu2 > a > h3{
 font-size:3em; 
 padding-top: 28px;
@@ -45,7 +49,35 @@ padding-top: 28px;
 background-image: url("/Yolo/images_yolo/common/share.jpg");
 background-size: cover;
 }
+
 #menu3 > a > h3{
 font-size:3em; 
 padding-top: 28px;
 }
+
+#header_title{
+padding-top:2px;
+font-weight:300;
+letter-spacing:5px;
+margin-bottom: 0;
+}
+
+#header_subtitle{
+	margin:0;
+	padding: 0;
+	font-size: 13px;
+	letter-spacing: 3px;
+	color: grey;
+}
+
+#lefynav_menu_ul > li > a {
+	padding-top: 20px;
+	height: 60px;
+}
+
+#lefynav_menu_ul > li > a > .navLabel{
+	font-size: 15px;
+	font-weight: 300;
+}
+
+

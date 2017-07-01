@@ -29,13 +29,6 @@
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
         
-<style type="text/css">
-#header_title{
-padding-top:9px;
-font-weight:300;
-letter-spacing:5px;
-}
-</style>
 </head>
 <body class="notransition" id="mainbody">
 
@@ -54,6 +47,7 @@ letter-spacing:5px;
 
 		<div class="search">
 			<h4 id="header_title">YOLO WOW LOT</h4>
+			<p id="header_subtitle">즐길 줄 아는 사람들을 위한 공간 서비스</p>
 		</div>
 		<!-- 상단 메뉴 유저부분 -->
 		<div class="headerUserWraper">
@@ -119,7 +113,7 @@ letter-spacing:5px;
 <!-- 					<div class="clearfix"></div> -->
 <!-- 				</div> -->
 				<!-- 네비게이션 메뉴 -->
-				<ul>
+				<ul id="lefynav_menu_ul">
 					<li>
 						<a href="/Yolo/lot/LotList.lot"><span class="navIcon icon-compass"></span>
 						<span class="navLabel">공간찾기</span></a>
@@ -140,6 +134,7 @@ letter-spacing:5px;
 							<li class="align-center"><h5 style="color:#fff;">신청현황</h5></li>
 							<li><a href="/Yolo/mypage/appStatus/appliedLot.myinfo">예약공간보기</a></li>
 							<li><a href="/Yolo/mypage/appStatus/appliedClub.myinfo">참여모임보기</a></li>
+							<li><a href="#">신청쉐어링보기</a></li>
 							<li><a href="/Yolo/mypage/appStatus/InterestList.myinfo">관심리스트</a></li>			
 							<li class="align-center"><h5 style="color:#fff;">나의 등록글</h5></li>
 							<li><a href="/Yolo/mypage/myReg/ClubMyList.myreg">나의 모임</a></li>
@@ -152,26 +147,7 @@ letter-spacing:5px;
 		
 				</ul><!-- 네비게이션 메뉴 끝 -->
 			</nav>
-			<!-- 좌측 네비게이션 유저부분 -->
-			<div class="leftUserWraper dropup">
-				<a href="#" class="avatarAction dropdown-toggle"
-					data-toggle="dropdown"> 
-					<img class="avatar" src="/Yolo/images/avatar-1.png" alt="John Smith">
-					<span class="counter">5</span>
-					<div class="userBottom pull-left">
-						<span class="bottomUserName">John Smith</span> <span
-							class="fa fa-angle-up pull-right arrowUp"></span>
-					</div>
-					<div class="clearfix"></div>
-				</a>
-				<ul class="dropdown-menu" role="menu">
-					<li><a href="#"><span class="icon-user"></span>마이페이지</a></li>
-					<li><a href="#"><span class="icon-bell"></span>메세지
-							<span class="badge pull-right bg-red">5</span></a></li>
-					<li class="divider"></li>
-					<li><a href="#"><span class="icon-power"></span>Logout</a></li>
-				</ul>
-			</div><!-- 좌측 네비게이션 유저부분 끝 -->
+
 		</div><!-- 좌측 네비게이션 메뉴 끝 -->
 	<div class="closeLeftSide"></div>
 	<!-- Header End-->

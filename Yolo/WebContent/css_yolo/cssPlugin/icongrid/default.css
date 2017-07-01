@@ -23,14 +23,14 @@ body {
     color: #333;
 }
 
-a {
-	color: #f0f0f0;
-	text-decoration: none;
-}
+/* a { */
+/* 	color: #f0f0f0; */
+/* 	text-decoration: none; */
+/* } */
 
-a:hover {
-	color: #000;
-}
+/* a:hover { */
+/* 	color: #000; */
+/* } */
 
 .container > header {
 	width: 100%;
