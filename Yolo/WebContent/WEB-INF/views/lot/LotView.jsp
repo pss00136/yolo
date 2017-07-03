@@ -187,9 +187,9 @@
 			</div>
 		</div>
 		<div class="commentContent">
-			<div class="stars">ps_star</div>
-			<div class="commentName">u_id</div>
-			<div class="commentBody">ps_content</div>
+			<div class="stars">${result.ps_star}</div>
+			<div class="commentName">${result.u_id }</div>
+			<div class="commentBody">${result.ps_content}</div>
 		</div>
 	</div>
 
@@ -204,16 +204,16 @@
 		<form id="commentsForm" class="commentsForm">
             <!-- 별점 -->
           <div class="row rating">
-				<div id="ps_star" class="stars">
-					<input class="star star-5" id="star-5" type="radio" name="ps_star" />
+				<div  class="stars">
+					<input class="star star-5" id="star-5" type="radio" name="p	s_star" value="5" />
 					<label class="star star-5" for="star-5"></label> <input
-						class="star star-4" id="star-4" type="radio" name="ps_star" /> <label
+						class="star star-4" id="star-4" type="radio" name="ps_star" value="4"/> <label
 						class="star star-4" for="star-4"></label> <input
-						class="star star-3" id="star-3" type="radio" name="ps_star" /> <label
+						class="star star-3" id="star-3" type="radio" name="ps_star" value="3"/> <label
 						class="star star-3" for="star-3"></label> <input
-						class="star star-2" id="star-2" type="radio" name="ps_star" /> <label
+						class="star star-2" id="star-2" type="radio" name="ps_star" value="2" /> <label
 						class="star star-2" for="star-2"></label> <input
-						class="star star-1" id="star-1" type="radio" name="ps_star" /> <label
+						class="star star-1" id="star-1" type="radio" name="ps_star"value="1" /> <label
 						class="star star-1" for="star-1"></label>
 
 				</div>
@@ -222,7 +222,7 @@
 			<div id="input-group" class="col-md-12 input-group">
 	
 				<div class="col-md-8">
-					<input type="text" id="rContent" class="form-control"
+					<input type="text" id="ps_content" name="ps_content" class="form-control"
 						placeholder="한 줄 후기 작성하기">
 				</div>
 
@@ -241,41 +241,19 @@
 
 
 <!-- 추가 js -->
-<script src="/Yolo/css_yolo/cssPlugin/bootstrap-datetimepicker.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/Yolo/js_yolo/lot/lotreview.js"></script>
 <script src="/Yolo/css_yolo/cssPlugin/bootstrap-datetimepicker.min.js"></script>
 
 
 <script type="text/javascript">
-
+    //예약날짜선택
 	$(function(){
 	$(".form_datetime").datetimepicker({
 		format : "dd MM yyyy hh:ii"
 	});
 	
 	
-	$("#Reviewbtn").click(function(){
-		if($("#u_id").value == ""){
-			alert("로그인 후 이용가능합니다.");
-		}
-		else{
-			$.ajax({
-				url : "/Yolo/lot/LotView.lot",
-				data : {"uId" : $("#u_id").val(), "pri_num" : $("#pri_num").val(), "rContent" : $("#rContent").val()},
-				dataType : "text",
-				contentType: "application/x-www-form-urlencoded; charset=UTF-8",
-				success : function(data){
-					var obj = {};
-					obj=eval("("+data+")");
-					var tbl = $('#ReviewList');
-					tbl.append('<div>'+ u_id +'</div>'+ '<div>'+ content +'</div>');
-					$("#rContent").val("");
-				},
-				error : function(request,status, error){
-	    			alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
-	    		}
-			});
-		}
-	});
 	
 
     

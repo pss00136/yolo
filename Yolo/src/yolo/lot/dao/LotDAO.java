@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import yolo.host.dto.EntrepreneurVO;
 import yolo.lot.dto.LotListVO;
+import yolo.lot.dto.PostscriptVO;
 import yolo.lot.dto.PrivateimageVO;
 import yolo.lot.dto.PrivatelotVO;
 
@@ -63,10 +64,21 @@ public class LotDAO {
 		try{
 			list = session.selectOne("lot.lotreserve", lotlistVO);
 		}catch(Exception ex){
-			System.out.println("lotlistview 실패: " + ex.getMessage());
+			System.out.println("lotreserve 실패: " + ex.getMessage());
 		}
 				
 		return list;
+	}
+	
+	public List<PostscriptVO> lotreview(){
+		int result=0;
+		try{
+			result = session.insert("lot.lotreview");
+		}catch(Exception ex){
+			System.out.println("lotreview 실패: " + ex.getMessage());
+		}
+				
+		return result;
 	}
 	
 	

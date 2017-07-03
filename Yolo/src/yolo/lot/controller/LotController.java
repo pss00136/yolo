@@ -26,6 +26,7 @@ import com.google.code.geocoder.model.LatLng;
 
 import yolo.host.dto.EntrepreneurVO;
 import yolo.lot.dto.LotListVO;
+import yolo.lot.dto.PostscriptVO;
 import yolo.lot.dto.PrivateimageVO;
 import yolo.lot.dto.PrivatelotVO;
 import yolo.lot.service.LotService;
@@ -82,7 +83,6 @@ public class LotController {
 		      //coords[0] : 위도 , coords[1] : 경도 
 		       privateVO.setPri_lat(Float.toString(coords[0]));
 		       privateVO.setPri_long(Float.toString(coords[1]));
-		       System.out.println(privateVO.getPri_lat() +"<>"+ privateVO.getPri_long());
 			 return "/lot/LotInputSecond";
 		}
 	    
@@ -106,7 +106,6 @@ public class LotController {
 	               Float[] coords = new Float[2];
 	               coords[0] = latitudeLongitude.getLat().floatValue();
 	               coords[1] = latitudeLongitude.getLng().floatValue();
-	                System.out.println(coords[1] +  "> " + coords[0] );
 	               return coords;
 	            }
 	         } catch (IOException ex) {
@@ -153,7 +152,7 @@ public class LotController {
 				, SessionStatus sessStatus, HttpSession session){
 		 PrivateimageVO primgVO = (PrivateimageVO)session.getAttribute("primgVO");
 		 EntrepreneurVO entrepreneurVO = (EntrepreneurVO)session.getAttribute("entrepreneurVO");
-		 System.out.println(entrepreneurVO.getE_fname());
+
 
 		 //호스트번호
 		 privateVO.setH_num("h_61"); 
@@ -188,7 +187,6 @@ public class LotController {
 	           JSONObject jsonObject = new JSONObject();
 	           //props의 JSON정보를 담을 Array 선언
 	           JSONArray propsArray = new JSONArray();
-	           System.out.println(list.size());
 	           
 	           for(LotListVO lotVO: list){
 	              //props의 한명 정보가 들어갈 JSONObject 선언
@@ -206,13 +204,12 @@ public class LotController {
 	               	positionInfo.put("lng", lotVO.getPri_long());
 	               propsInfo.put("position", positionInfo);   	
 	               propsInfo.put("markerIcon", "marker-green.png");
-	               propsArray.add(propsInfo);
-	               System.out.println(propsArray.size());
+
 	           }
 	           jsonObject.put("props", propsArray);
 	           
 	           String jsonInfo = jsonObject.toJSONString();
-	           System.out.println(jsonInfo);
+
 	           
 	           return jsonInfo;
 	     }
@@ -227,11 +224,52 @@ public class LotController {
 	   @RequestMapping("lot/LotView.lot")
 		public ModelAndView lotview(LotListVO lotlistVO){
 		   ModelAndView mv = new ModelAndView();
-		   LotListVO list = service.lotdetailview(lotlistVO);
+		    LotListVO list = service.lotdetailview(lotlistVO);
 		    mv.addObject("list", list);
 		    mv.setViewName("/lot/LotView.map");
 			return mv;
 		}
+	   
+	   /*
+		* @메소드명: lotreview
+		* @역할: 공간 상세 페이지 후기작
+		*
+		* @param   LotListVO 값
+		* @return  String:반환하는 경로
+		*/
+	   @RequestMapping("lot/LotViewRe.lot")
+	   @ResponseBody
+	   public ModelAndView lotreview(PostscriptVO postVO){
+		    //ModelAndView mv = new ModelAndView();
+		    //List<PostscriptVO> rlist = service.lotreview();
+//		    String jsonList = reviewjson(rlist);
+//		    mv.addObject("jsonList",jsonList);
+//		    mv.addObject("rlist", rlist);
+		   // mv.setViewName("/lot/LotList.map");
+		    System.out.println("별점은: " + postVO.getPs_star() + postVO.getPs_content());
+			return null;
+		}
+	   
+
+	   public String reviewjson(List<PostscriptVO> rlist){
+		   JSONObject jsonObject = new JSONObject();
+		   //후기작성 JSON정보를 담을 Array 선언
+		   JSONArray postArray = new JSONArray();
+		   
+		   for(PostscriptVO postVO: rlist){ 
+		   jsonObject.put("ps_star", postVO.getPs_star());
+		   jsonObject.put("u_id", postVO.getU_id());
+		   jsonObject.put("ps_content", postVO.getPs_content());
+		   postArray.add(jsonObject);
+		   }
+		   
+		   jsonObject.put("post", postArray);
+		   String jsonInfo = jsonObject.toJSONString();
+		   
+		
+			return jsonInfo;
+		}
+	   
 	   
 	   
 	   /*

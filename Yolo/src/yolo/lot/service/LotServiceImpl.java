@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import yolo.host.dto.EntrepreneurVO;
 import yolo.lot.dao.LotDAO;
 import yolo.lot.dto.LotListVO;
+import yolo.lot.dto.PostscriptVO;
 import yolo.lot.dto.PrivateimageVO;
 import yolo.lot.dto.PrivatelotVO;
 
@@ -34,6 +35,10 @@ public class LotServiceImpl implements LotService {
 	
 	public LotListVO lotreserve(LotListVO lotlistVO){      
 		return ldao.lotreserve(lotlistVO);
+	}
+	
+	public List<PostscriptVO> lotreview(){
+		return ldao.lotreview();
 	}
 
 }

@@ -4,6 +4,7 @@ import java.util.List;
 
 import yolo.host.dto.EntrepreneurVO;
 import yolo.lot.dto.LotListVO;
+import yolo.lot.dto.PostscriptVO;
 import yolo.lot.dto.PrivateimageVO;
 import yolo.lot.dto.PrivatelotVO;
 
@@ -16,4 +17,6 @@ public interface LotService {
 	public LotListVO lotdetailview(LotListVO lotlistVO);
 	
 	public LotListVO lotreserve(LotListVO lotlistVO);
+	
+	public List<PostscriptVO> lotreview();
 }
