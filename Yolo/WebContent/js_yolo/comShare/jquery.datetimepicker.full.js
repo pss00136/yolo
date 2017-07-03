@@ -1535,7 +1535,7 @@ var DateFormatter;
 
 		createDateTimePicker = function (input) {
 											// 모바일----------------------------------------------
-			var datetimepicker = $('<div style="@media(max-width: 768px){.xdsoft_datetimepicker {display: block; position: absolute; left: 40px; top: 106px;}}" class="xdsoft_datetimepicker xdsoft_noselect"></div>'),
+			var datetimepicker = $('<div style="@media(max-width:768px){.xdsoft_datetimepicker .xdsoft_noselect{display:block; postion:absolute; left:40px; top:165px; }}" class="xdsoft_datetimepicker xdsoft_noselect"></div>'),
 				xdsoft_copyright = $('<div class="xdsoft_copyright"><a target="_blank" href="http://xdsoft.net/jqplugins/datetimepicker/">xdsoft.net</a></div>'),
 				datepicker = $('<div class="xdsoft_datepicker active"></div>'),
 				month_picker = $('<div class="xdsoft_monthpicker"><button type="button" class="xdsoft_prev"></button><button type="button" class="xdsoft_today_button"></button>' +

@@ -40,6 +40,7 @@
 			display: block; 
 			position: absolute;
 			left: 40px;
+			top: 165px;
 
 		}
 	}
