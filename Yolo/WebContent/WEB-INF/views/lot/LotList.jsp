@@ -14,7 +14,7 @@
 $(function(){
 	var temp = '<%=jsonList%>';
 	var props = jQuery.parseJSON(temp);
-
+	
     // Custom options for map
     var options = {
             zoom : 14,
@@ -222,7 +222,7 @@ $(function(){
                 position: new google.maps.LatLng(37.479479,126.884181),
                 map: map,
                 icon: new google.maps.MarkerImage( 
-                    'images/marker-new.png',
+                    '/Yolo/images/marker-new.png',
                     null,
                     null,
                     // new google.maps.Point(0,0),
@@ -525,7 +525,7 @@ $(function(){
     });
 
     $('#datepicker').datepicker();
-
+    
     // functionality for autocomplete address field
     if ($('#address').length > 0) {
         var address = document.getElementById('address');

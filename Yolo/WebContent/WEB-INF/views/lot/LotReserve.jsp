@@ -2,50 +2,43 @@
 	pageEncoding="UTF-8"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.*"%>
-<%@ page import="yolo.lot.dto.*" %>
+<%@ page import="yolo.lot.dto.*"%>
 <!-----달력 날짜 받아오기 ----->
 <%
-//년도와 월을 받아옴
-String strYear = request.getParameter("year");
-String strMonth = request.getParameter("month");
+	//년도와 월을 받아옴
+	String strYear = request.getParameter("year");
+	String strMonth = request.getParameter("month");
 
- //년,월,일 지정
-Calendar cal = Calendar.getInstance();
+	//년,월,일 지정
+	Calendar cal = Calendar.getInstance();
 
-int year = cal.get(Calendar.YEAR);
-int month = cal.get(Calendar.MONTH);
-int date = cal.get(Calendar.DATE);
+	int year = cal.get(Calendar.YEAR);
+	int month = cal.get(Calendar.MONTH);
+	int date = cal.get(Calendar.DATE);
 
-//null이 아닌 다른 값을 받아오면
-if(strYear != null)
-{
-	//다시 지정
-  year = Integer.parseInt(strYear);
-  month = Integer.parseInt(strMonth);
+	//null이 아닌 다른 값을 받아오면
+	if (strYear != null) {
+		//다시 지정
+		year = Integer.parseInt(strYear);
+		month = Integer.parseInt(strMonth);
 
-}else{	
+	} else {
 
-	
-}
+	}
 
-//년도,월 셋팅
-cal.set(year, month, 1);
+	//년도,월 셋팅
+	cal.set(year, month, 1);
 
+	int startDay = cal.getMinimum(java.util.Calendar.DATE);
+	int endDay = cal.getActualMaximum(java.util.Calendar.DAY_OF_MONTH);
+	int start = cal.get(java.util.Calendar.DAY_OF_WEEK);
+	int newLine = 0;
 
-int startDay = cal.getMinimum(java.util.Calendar.DATE);
-int endDay = cal.getActualMaximum(java.util.Calendar.DAY_OF_MONTH);
-int start = cal.get(java.util.Calendar.DAY_OF_WEEK);
-int newLine = 0;
+	//오늘 날짜 저장.
 
- 
-
-//오늘 날짜 저장.
-
-Calendar todayCal = Calendar.getInstance();
-SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
-int intToday = Integer.parseInt(sdf.format(todayCal.getTime()));
-
-
+	Calendar todayCal = Calendar.getInstance();
+	SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
+	int intToday = Integer.parseInt(sdf.format(todayCal.getTime()));
 %>
 
 <!-- Custom CSS -->
@@ -59,451 +52,462 @@ int intToday = Integer.parseInt(sdf.format(todayCal.getTime()));
 <link href="//code.jboxcdn.com/0.4.7/jBox.css" rel="stylesheet">
 
 
-			<!-- -----------------여기에 컨텐츠 div넣으세요----------------- -->
+<!-- -----------------여기에 컨텐츠 div넣으세요----------------- -->
 
-			<div class="home-content">
-				<div id="home-wrapper" class="home-wrapper">
-					<div class="row">
-                        
-                        <!-- 전체정보 보기 끝 -->
-						<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+<div class="home-content">
+	<div id="home-wrapper" class="home-wrapper">
+		<div class="row">
 
-							<!-- 사진 보여주기  -->
-							<div class="row" style="margin-bottom:15px;">
-							    <h2 id="lot_reserve"></h2>
-									<div class="image-block">
-									<img src="/Yolo/images_yolo/lot/${list.priimg_name}" alt="image">
-								    </div>	
-								    <!-- 공간명, 주소, 가격 -->
-									<div class="col-md-12">
-								<div class="col-md-8">	  
-								 <h1 style="margin-top: -15px; font-size: 20px; ">${list.pri_title}</h1>
-							   <div class="address">
-									<span class="icon-pointer"></span>${list.pri_addr}
-								</div>
-								</div>
-								<div class="col-md-3">
-							        <strong style="margin-top: 0px; font-size: 25px; float: right;">${list.pri_weekprice}</strong>	
-								</div>
-							 
-									
-									
-									</div>
-								    
-								<!-- 공간명, 주소, 가격 끝 -->
-								</div>
-								
-								<!-- 공간 상세정보 보여주기 -->
-								<div class="row" style="margin-bottom:10px;">
-								<h2 id="lot_reserve" class="osLight align-left">공간상세정보</h2>
-								
-								    <div style="margin-top: 10px;">
-								    <h3> 공간소개</h3>
-								    ${list.pri_content}
-								    </div>
+			<!-- 전체정보 보기 끝 -->
+			<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
 
-								      <!------------- 편의시설 항목들 --------------------->
-			                    <div class="row" style="margin-top: 10px; padding: 8px;	">
- 			                          <h3> 편의시설</h3>
-							         
-				                      <%
-								LotListVO lotlistVO = (LotListVO)request.getAttribute("list");;
-								String f = lotlistVO.getPri_facility();
-								StringTokenizer st2 = new StringTokenizer(f,",");
-						        String icon = null;
-						        String fac[]={"TV/프로젝터", "인터넷/WIFI","복사/인쇄기","화이트보드","음향/마이크","취사시설","음식물반입가능","주류반입가능",
-						        		"주차", "금연","PC/노트북","의자/테이블"};
-						        String confirm = st2.nextToken();
-						        for( int i=0; i<fac.length; i++ ){
-									switch(fac[i]){
-									  case "TV/프로젝터" : icon="fa-film"; break;
-									  case "인터넷/WIFI" : icon="fa-wifi"; break;
-									  case "복사/인쇄기" : icon="fa-print"; break;
-									  case "화이트보드" : icon="fa-square-o"; break;
-									  case "음향/마이크" : icon="fa-microphone"; break;
-									  case "취사시설" : icon="fa-cutlery"; break;
-									  case "음식물반입가능" : icon="fa-shopping-cart"; break;
-									  case "주류반입가능" : icon="fa-beer"; break;
-									  case "주차" : icon="fa-automobile"; break;
-									  case "금연" : icon="fa-arrows-v"; break;
-									  case "PC/노트북" : icon="fa-laptop"; break;
-									  case "의자/테이블" : icon="fa-users"; break;		  
-									} //End of switch
-									
-									if(fac[i].equals(confirm)){%>
-									<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem">
-									<span class="fa <%=icon%>"></span><%= fac[i] %>
-									</div>										
-									<%
-										if(st2.hasMoreTokens()){
-											confirm = st2.nextToken();
-										} //End of if
-									
-									}else {%>
-									
-									<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem inactive">
-									<span class="fa <%=icon%>"></span><%= fac[i] %>
-									</div>
-									
-						        <%	}//End of else
-						        	
-								}//End of for %>
-							          
-						             </div>
-			                     <!------------- 편의시설 항목들 끝--------------------->
+				<!-- 사진 보여주기  -->
+				<div class="row" style="margin-bottom: 15px;">
+					<h2 id="lot_reserve"></h2>
+					<div class="image-block">
+						<img src="/Yolo/images_yolo/lot/${list.priimg_name}" alt="image">
+					</div>
+					<!-- 공간명, 주소, 가격 -->
+					<div class="col-md-12">
+						<div class="col-md-8">
+							<h1 style="margin-top: -15px; font-size: 20px;">${list.pri_title}</h1>
+							<div class="address">
+								<span class="icon-pointer"></span>${list.pri_addr}
 							</div>
-							<!--상세정보보기 끝 -->
-
-							<!--------- 달력으로 예약날짜보기 ---------->
-							<div class="row" style="margin-bottom: 30px;">
-								<h2 id="lot_reserve" class="osLight align-left">날짜 선택</h2>
-								<div class="col-md-12 col-xs-12"
-									style="display: inline-block; background-color: white;">
-
-									<form name="calendarFrm" id="calendarFrm" action=""
-										method="post">
-
-										<table width="100%" border="0" cellspacing="1" cellpadding="1">
-
-										</table>
-
-										<!--날짜 네비게이션  -->
-
-										<table width="100%" border="0" cellspacing="1" cellpadding="1"
-											id="KOO" bgcolor="#F3F9D7">
+						</div>
+						<div class="col-md-3">
+							<strong style="margin-top: 0px; font-size: 25px; float: right;">${list.pri_weekprice}</strong>
+						</div>
 
 
 
+					</div>
+
+					<!-- 공간명, 주소, 가격 끝 -->
+				</div>
+
+				<!-- 공간 상세정보 보여주기 -->
+				<div class="row" style="margin-bottom: 10px;">
+					<h2 id="lot_reserve" class="osLight align-left">공간상세정보</h2>
+
+					<div style="margin-top: 10px;">
+						<h3>공간소개</h3>
+						${list.pri_content}
+					</div>
+
+					<!------------- 편의시설 항목들 --------------------->
+					<div class="row" style="margin-top: 10px; padding: 8px;">
+						<h3>편의시설</h3>
+
+						<%
+							LotListVO lotlistVO = (LotListVO) request.getAttribute("list");
+							;
+							String f = lotlistVO.getPri_facility();
+							StringTokenizer st2 = new StringTokenizer(f, ",");
+							String icon = null;
+							String fac[] = { "TV/프로젝터", "인터넷/WIFI", "복사/인쇄기", "화이트보드", "음향/마이크", "취사시설", "음식물반입가능", "주류반입가능", "주차",
+									"금연", "PC/노트북", "의자/테이블" };
+							String confirm = st2.nextToken();
+							for (int i = 0; i < fac.length; i++) {
+								switch (fac[i]) {
+								case "TV/프로젝터":
+									icon = "fa-film";
+									break;
+								case "인터넷/WIFI":
+									icon = "fa-wifi";
+									break;
+								case "복사/인쇄기":
+									icon = "fa-print";
+									break;
+								case "화이트보드":
+									icon = "fa-square-o";
+									break;
+								case "음향/마이크":
+									icon = "fa-microphone";
+									break;
+								case "취사시설":
+									icon = "fa-cutlery";
+									break;
+								case "음식물반입가능":
+									icon = "fa-shopping-cart";
+									break;
+								case "주류반입가능":
+									icon = "fa-beer";
+									break;
+								case "주차":
+									icon = "fa-automobile";
+									break;
+								case "금연":
+									icon = "fa-arrows-v";
+									break;
+								case "PC/노트북":
+									icon = "fa-laptop";
+									break;
+								case "의자/테이블":
+									icon = "fa-users";
+									break;
+								} //End of switch
+
+								if (fac[i].equals(confirm)) {
+						%>
+						<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem">
+							<span class="fa <%=icon%>"></span><%=fac[i]%>
+						</div>
+						<%
+							if (st2.hasMoreTokens()) {
+										confirm = st2.nextToken();
+									} //End of if
+
+								} else {
+						%>
+
+						<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem inactive">
+							<span class="fa <%=icon%>"></span><%=fac[i]%>
+						</div>
+
+						<%
+							} //End of else
+
+							} //End of for
+						%>
+
+					</div>
+					<!------------- 편의시설 항목들 끝--------------------->
+				</div>
+				<!--상세정보보기 끝 -->
+
+				<!--------- 달력으로 예약날짜보기 ---------->
+				<div class="row" style="margin-bottom: 30px;">
+					<h2 id="lot_reserve" class="osLight align-left">날짜 선택</h2>
+					<div class="col-md-12 col-xs-12"
+						style="display: inline-block; background-color: white;">
+						<form name="calendarFrm" id="calendarFrm" action="" method="post">
+							<table width="100%" border="0" cellspacing="1" cellpadding="1">
+							</table>
+							<!--날짜 네비게이션  -->
+							<table width="100%" border="0" cellspacing="1" cellpadding="1"
+								id="KOO" bgcolor="#F3F9D7">
+								<tr>
+									<td height="60">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
 											<tr>
+												<td height="10"></td>
+											</tr>
+											<tr>
+												<td align="center">
+													<%
+														if (month > 0) {
+													%> <a href="/mentoring/mento.mento?cmd=calendar-view&year=<%=year%>&month=<%=month - 1%>">
+														<b>&lt;</b> <!-- 이전달 -->
+												</a> <%
+ 	} else {
+ %> <b>&lt;</b> <%
+ 	}
+ %> &nbsp;&nbsp; <%=year%>년 <%=month + 1%>월 &nbsp;&nbsp; <%
+ 	if (month < 11) {
+ %> <a
+													href="/mentoring/mento.mento?cmd=calendar-view&year=<%=year%>&month=<%=month + 1%>">
 
-												<td height="60">
-
-													<table width="100%" border="0" cellspacing="0"
-														cellpadding="0">
-														<tr>
-															<td height="10"></td>
-														</tr>
-
-														<tr>
-															<td align="center">
-																<% if(month > 0 ){ %> <a
-																href="/mentoring/mento.mento?cmd=calendar-view&year=<%=year%>&month=<%=month-1%>">
-																	<b>&lt;</b> <!-- 이전달 -->
-															</a> <% } else { %> <b>&lt;</b> <%} %> &nbsp;&nbsp; <%=year%>년 <%=month+1%>월
-																&nbsp;&nbsp; <%if(month < 11 ) { %> <a
-																href="/mentoring/mento.mento?cmd=calendar-view&year=<%=year%>&month=<%=month+1%>">
-
-																	<b>&gt;</b>
-															</a> <% } else { %> <b>&gt;</b> <% } %>
-
-
-															</td>
-														</tr>
-
-													</table>
-
-
-
+														<b>&gt;</b>
+												</a> <%
+ 	} else {
+ %> <b>&gt;</b> <%
+ 	}
+ %>
 												</td>
 											</tr>
 										</table>
-										<br>
-										<table width="100%" border="0" border-top="20px"
-											cellspacing="1" cellpadding="1" bgcolor="#FFFFFF"
-											style="position: relative;">
-											<THEAD>
+									</td>
+								</tr>
+							</table>
+							<br>
+							<table width="100%" border="0" border-top="20px" cellspacing="1"
+								cellpadding="1" bgcolor="#FFFFFF" style="position: relative;">
+								<THEAD>
 
-												<TR bgcolor="#f79b38">
+									<TR bgcolor="#f79b38">
 
-													<TD width='100px'>
-														<DIV align="center">
-															<font color="red" style="font-size: 15px;">일</font>
-														</DIV>
-													</TD>
-													<TD width='100px'>
-														<DIV align="center">
-															<font color="black" style="font-size: 15px;">월 
-														</DIV>
-													</TD>
-													<TD width='100px'>
-														<DIV align="center">
-															<font color="black" style="font-size: 15px;">화 
-														</DIV>
-													</TD>
-													<TD width='100px'>
-														<DIV align="center">
-															<font color="black" style="font-size: 15px;">수 
-														</DIV>
-													</TD>
-													<TD width='100px'>
-														<DIV align="center">
-															<font color="black" style="font-size: 15px;">목 
-														</DIV>
-													</TD>
-													<TD width='100px'>
-														<DIV align="center">
-															<font color="black" style="font-size: 15px;">금 
-														</DIV>
-													</TD>
-													<TD width='100px'>
-														<DIV align="center">
-															<font color="#529dbc" style="font-size: 15px;">토</font>
-														</DIV>
-													</TD>
-												</TR>
-											</THEAD>
-											<TBODY>
-												<TR>
+										<TD width='100px'>
+											<DIV align="center">
+												<font color="red" style="font-size: 15px;">일</font>
+											</DIV>
+										</TD>
+										<TD width='100px'>
+											<DIV align="center">
+												<font color="black" style="font-size: 15px;">월 
+											</DIV>
+										</TD>
+										<TD width='100px'>
+											<DIV align="center">
+												<font color="black" style="font-size: 15px;">화 
+											</DIV>
+										</TD>
+										<TD width='100px'>
+											<DIV align="center">
+												<font color="black" style="font-size: 15px;">수 
+											</DIV>
+										</TD>
+										<TD width='100px'>
+											<DIV align="center">
+												<font color="black" style="font-size: 15px;">목 
+											</DIV>
+										</TD>
+										<TD width='100px'>
+											<DIV align="center">
+												<font color="black" style="font-size: 15px;">금 
+											</DIV>
+										</TD>
+										<TD width='100px'>
+											<DIV align="center">
+												<font color="#529dbc" style="font-size: 15px;">토</font>
+											</DIV>
+										</TD>
+									</TR>
+								</THEAD>
+								<TBODY>
+									<TR>
 
-													<%
+										<%
+											//처음 빈공란 표시
 
- 
+											for (int index = 1; index < start; index++)
 
-//처음 빈공란 표시
+											{
+												out.println("<TD >&nbsp;</TD>");
+												newLine++;
+											}
 
-for(int index = 1; index < start ; index++ )
+											for (int index = 1; index <= endDay; index++) {
+												String color = "";
 
-{
-  out.println("<TD >&nbsp;</TD>");
-  newLine++;
-}
+												if (newLine == 0) {
+													color = "RED";
+												} else if (newLine == 6) {
+													color = "#529dbc";
+												} else {
+													color = "BLACK";
+												}
+												;
 
- 
+												String sUseDate = Integer.toString(year);
+												sUseDate += Integer.toString(month + 1).length() == 1 ? "0" + Integer.toString(month + 1)
+														: Integer.toString(month + 1);
+												sUseDate += Integer.toString(index).length() == 1 ? "0" + Integer.toString(index)
+														: Integer.toString(index);
 
-for(int index = 1; index <= endDay; index++)
-{
-       String color = "";
+												int iUseDate = Integer.parseInt(sUseDate);
 
-       if(newLine == 0){          color = "RED";
-       }else if(newLine == 6){    color = "#529dbc";
-       }else{                     color = "BLACK"; };
+												String backColor = "#FFF";
+												if (iUseDate == intToday) {
+													backColor = "#ffe6a8";
+												}
+												out.println("<TD valign='top' align='left' height='92px' bgcolor='" + backColor + "' nowrap>");
+										%>
 
- 
-
-       String sUseDate = Integer.toString(year); 
-       sUseDate += Integer.toString(month+1).length() == 1 ? "0" + Integer.toString(month+1) : Integer.toString(month+1);
-       sUseDate += Integer.toString(index).length() == 1 ? "0" + Integer.toString(index) : Integer.toString(index);
-
-       int iUseDate = Integer.parseInt(sUseDate);
-
-
-
-       String backColor = "#FFF";
-       if(iUseDate == intToday ) {
-             backColor = "#ffe6a8";
-       }
-       out.println("<TD valign='top' align='left' height='92px' bgcolor='"+backColor+"' nowrap>");
-
-       %>
-
-													<font color='<%=color%>'> <%=index %>
-													</font>
+										<font color='<%=color%>'> <%=index%>
+										</font>
 
 
 
-													<%   
-       
-   
+										<%
+											out.println("<BR>");
+												out.println("<BR>");
 
-       out.println("<BR>");
-       out.println("<BR>");
-   
+												//기능 제거 
 
-       //기능 제거 
+												out.println("</TD>");
+												newLine++;
 
-       out.println("</TD>");
-       newLine++;
+												if (newLine == 7) {
+													out.println("</TR>");
+													if (index <= endDay)
 
- 
+													{
+														out.println("<TR>");
+													}
+													newLine = 0;
+												}
 
-       if(newLine == 7)
-       {
-         out.println("</TR>");
-         if(index <= endDay)
+											}
 
-         {
-           out.println("<TR>");
-         }
-         newLine=0;
-       }
+											//마지막 공란 LOOP
 
-}
+											while (newLine > 0 && newLine < 7)
 
-//마지막 공란 LOOP
+											{
+												out.println("<TD>&nbsp;</TD>");
+												newLine++;
+											}
+										%>
 
-while(newLine > 0 && newLine < 7)
+									</TR>
+								</TBODY>
+							</TABLE>
 
-{
-  out.println("<TD>&nbsp;</TD>");
-  newLine++;
-}
-
-%>
-
-												</TR>
-											</TBODY>
-										</TABLE>
-
-									</form>
+						</form>
 
 
-								</div>
+					</div>
 
-								<!-- 달력 전체 틀 끝 -->
-
-
-							</div>
-							<!------ 달력으로 예약날짜보기 끝 ------>
-
-							<!--------- 인원선택 ---------->
-							<div class="row" style="margin-bottom: 30px;">
-								<!-- 예약자 정보 보기 -->
-								<h2 id="lot_reserve" 
-									class="osLight align-left">인원 선택</h2>
-
-								
-								<div  style="width: 100%; max-width: 400px;" class="form-group">
-									   <div class="col-sm-2 col-md-5 volume">
-                                        <a href="#" class="btn btn-gray btn-round-left"><span class="fa fa-angle-left"></span></a>
-                                        <input type="text" class="form-control" value="1">
-                                        <a href="#" class="btn btn-gray btn-round-right"><span class="fa fa-angle-right"></span></a>
-                                        <div class="clearfix"></div>
-                                    </div>
-								</div>
+					<!-- 달력 전체 틀 끝 -->
 
 
-							</div>
-							<!------ 인원선택 끝 ------>
+				</div>
+				<!------ 달력으로 예약날짜보기 끝 ------>
 
-							<!--------- 예약자 정보 ---------->
-							<div class="row" style="margin-bottom: 30px;">
-								<!-- 예약자 정보 보기 -->
-								<h2
-									style="margin-bottom: 10px; padding: 8px; border-top: 2px solid #fc7937;"
-									class="osLight align-left">예약자 정보</h2>
-
-								<!-- 예약자 명 -->
-								<div class="col-md-12 form-group">
-									<label class="tit col-sm-2 col-md-3 ">예약자 명</label>
-									<div class="col-sm-8">
-										<input type="text" name="uName" class="form-control" value="">
-									</div>
-								</div>
-
-								<!-- 예약자 명 -->
-								<div class="col-md-12 form-group">
-									<label class="tit col-sm-2 col-md-3	">연락처</label>
-									<div class="col-sm-8">
-										<input type="text" name="uPhone" class="form-control" value="">
-									</div>
-								</div>
-
-							</div>
-							<!------ 예약자정보 끝 ------>
-
-							<!--------- 호스트정보 ---------->
-							<div class="row" style="margin-bottom: 30px;">
-								<!-- 예약자정보 보기 -->
-								<h2 style="padding: 8px; border-top: 2px solid #fc7937;"
-									class="osLight align-left">호스트 정보</h2>
-								<!-- 공간상호명 -->
-								<div class="list_wrap">
-									<d1 class="flex_box">
-
-									<dt class="tit col-md-3">공간상호명</dt>
-									<dd class="flex col-md-8">왕십리아지트스튜디오</dd>
-									</d1>
-								</div>
-
-								<!--대표자명 -->
-								<div class="list_wrap">
-									<d1 class="flex_box">
-
-									<dt class="tit col-md-3">대표자명</dt>
-									<dd class="flex col-md-8">오보환</dd>
-									</d1>
-								</div>
-
-								<!-- 소재지 -->
-								<div class="list_wrap">
-									<d1 class="flex_box">
-
-									<dt class="tit col-md-3">소재지</dt>
-									<dd class="flex col-md-8">서울특별시 성동구 행당동</dd>
-									</d1>
-								</div>
-
-								<!-- 사업자번호-->
-								<div class="list_wrap">
-									<d1 class="flex_box">
-
-									<dt class="tit col-md-3">사업자번호</dt>
-									<dd class="flex col-md-8">829-03-00659</dd>
-									</d1>
-								</div>
-								<!-- 연락처 -->
-								<div class="list_wrap">
-									<d1 class="flex_box">
-
-									<dt class="tit col-md-3">연락처</dt>
-									<dd class="flex col-md-8">050-7790-8221</dd>
-									</d1>
-								</div>
-							</div>
-							<!------ 호스트정보 끝 ------>
+				<!--------- 인원선택 ---------->
+				<div class="row" style="margin-bottom: 30px;">
+					<!-- 예약자 정보 보기 -->
+					<h2 id="lot_reserve" class="osLight align-left">인원 선택</h2>
 
 
+					<div style="width: 100%; max-width: 400px;" class="form-group">
+						<div class="col-sm-2 col-md-5 volume">
+							<a href="#" class="btn btn-gray btn-round-left"><span
+								class="fa fa-angle-left"></span></a> <input type="text"
+								class="form-control" value="1"> <a href="#"
+								class="btn btn-gray btn-round-right"><span
+								class="fa fa-angle-right"></span></a>
+							<div class="clearfix"></div>
 						</div>
-						<!-- 전체정보 보기 끝 -->
-
-						<!-- 결제창 -->
-						<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-							<div class="row col-md-12">
-							
-								<!-- 예약자 정보 보기 -->
-								<h2 id="lot_reserve" class="osLight align-left">결제 예정금액</h2>
-
-								<!-- 예약날짜-->
-								<div id="pay" class="form-group">
-									<label class="tit col-sm-2 col-md-3 ">예약날짜</label>
-									<div class="col-sm-8">
-										<label class="tit col-sm-2 col-md-9 ">2017-06-28</label>
-									</div>
-								</div>
-
-								<!-- 예약인원 -->
-								<div id="pay1" class="form-group" >
-									<label class="tit col-sm-2 col-md-3	">예약인원</label>
-									<div class="col-sm-8">
-										<label class="tit col-sm-2 col-md-9 ">2</label>
-									</div>
-								</div>
-								
-								<!-- 총금액 -->
-								<div id="pay2" class="form-group">
-									<label class="tit col-sm-2 col-md-3	">총 금액</label>
-									<div class="col-sm-8">
-										<label class="tit col-sm-2 col-md-9 ">50,000</label>
-									</div>
-								</div>
-								
-								<!-- 결제하기 버튼 -->
-						      <div style="text-align: center;">
-							     <div style="display: inline-block;">
-								    <button id="btn_next" class="btn btn-o btn-green">결제하기</button>
-							    </div>
-						     </div>		
-									
-					        <!-- 예약자 정보 보기 끝 --> 
-					         </div>
-							</div>
-							<!-- 결제창 끝 -->
-							
-						</div><!-- End of row -->
-					</div> <!-- End of home-wrapper -->
-				</div> <!-- End of home-content -->
+					</div>
 
 
-		<!-- 추가  -->
-		<script src="/Yolo/js/home.js" type="text/javascript"></script>
-		<script src="//code.jboxcdn.com/0.4.7/jBox.min.js"></script>
+				</div>
+				<!------ 인원선택 끝 ------>
+
+				<!--------- 예약자 정보 ---------->
+				<div class="row" style="margin-bottom: 30px;">
+					<!-- 예약자 정보 보기 -->
+					<h2
+						style="margin-bottom: 10px; padding: 8px; border-top: 2px solid #fc7937;"
+						class="osLight align-left">예약자 정보</h2>
+
+					<!-- 예약자 명 -->
+					<div class="col-md-12 form-group">
+						<label class="tit col-sm-2 col-md-3 ">예약자 명</label>
+						<div class="col-sm-8">
+							<input type="text" name="uName" class="form-control" value="">
+						</div>
+					</div>
+
+					<!-- 예약자 명 -->
+					<div class="col-md-12 form-group">
+						<label class="tit col-sm-2 col-md-3	">연락처</label>
+						<div class="col-sm-8">
+							<input type="text" name="uPhone" class="form-control" value="">
+						</div>
+					</div>
+
+				</div>
+				<!------ 예약자정보 끝 ------>
+
+				<!--------- 호스트정보 ---------->
+				<div class="row" style="margin-bottom: 30px;">
+					<!-- 예약자정보 보기 -->
+					<h2 style="padding: 8px; border-top: 2px solid #fc7937;"
+						class="osLight align-left">호스트 정보</h2>
+					<!-- 공간상호명 -->
+					<div class="list_wrap">
+						<d1 class="flex_box">
+
+						<dt class="tit col-md-3">공간상호명</dt>
+						<dd class="flex col-md-8">왕십리아지트스튜디오</dd>
+						</d1>
+					</div>
+
+					<!--대표자명 -->
+					<div class="list_wrap">
+						<d1 class="flex_box">
+
+						<dt class="tit col-md-3">대표자명</dt>
+						<dd class="flex col-md-8">오보환</dd>
+						</d1>
+					</div>
+
+					<!-- 소재지 -->
+					<div class="list_wrap">
+						<d1 class="flex_box">
+
+						<dt class="tit col-md-3">소재지</dt>
+						<dd class="flex col-md-8">서울특별시 성동구 행당동</dd>
+						</d1>
+					</div>
+
+					<!-- 사업자번호-->
+					<div class="list_wrap">
+						<d1 class="flex_box">
+
+						<dt class="tit col-md-3">사업자번호</dt>
+						<dd class="flex col-md-8">829-03-00659</dd>
+						</d1>
+					</div>
+					<!-- 연락처 -->
+					<div class="list_wrap">
+						<d1 class="flex_box">
+
+						<dt class="tit col-md-3">연락처</dt>
+						<dd class="flex col-md-8">050-7790-8221</dd>
+						</d1>
+					</div>
+				</div>
+				<!------ 호스트정보 끝 ------>
+
+
+			</div>
+			<!-- 전체정보 보기 끝 -->
+
+			<!-- 결제창 -->
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+				<div class="row col-md-12">
+
+					<!-- 예약자 정보 보기 -->
+					<h2 id="lot_reserve" class="osLight align-left">결제 예정금액</h2>
+
+					<!-- 예약날짜-->
+					<div id="pay" class="form-group">
+						<label class="tit col-sm-2 col-md-3 ">예약날짜</label>
+						<div class="col-sm-8">
+							<label class="tit col-sm-2 col-md-9 ">2017-06-28</label>
+						</div>
+					</div>
+
+					<!-- 예약인원 -->
+					<div id="pay1" class="form-group">
+						<label class="tit col-sm-2 col-md-3	">예약인원</label>
+						<div class="col-sm-8">
+							<label class="tit col-sm-2 col-md-9 ">2</label>
+						</div>
+					</div>
+
+					<!-- 총금액 -->
+					<div id="pay2" class="form-group">
+						<label class="tit col-sm-2 col-md-3	">총 금액</label>
+						<div class="col-sm-8">
+							<label class="tit col-sm-2 col-md-9 ">50,000</label>
+						</div>
+					</div>
+
+					<!-- 결제하기 버튼 -->
+					<div style="text-align: center;">
+						<div style="display: inline-block;">
+							<button id="btn_next" class="btn btn-o btn-green">결제하기</button>
+						</div>
+					</div>
+
+					<!-- 예약자 정보 보기 끝 -->
+				</div>
+			</div>
+			<!-- 결제창 끝 -->
+
+		</div>
+		<!-- End of row -->
+	</div>
+	<!-- End of home-wrapper -->
+</div>
+<!-- End of home-content -->
+
+
+<!-- 추가  -->
+<script src="/Yolo/js/home.js" type="text/javascript"></script>
+<script src="//code.jboxcdn.com/0.4.7/jBox.min.js"></script>
