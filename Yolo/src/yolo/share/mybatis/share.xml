@@ -5,11 +5,42 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="share">
 
+	<resultMap type="sharelistVO" id="sharelistVO">
+		<result column="sl_num" property="sl_num"/>
+		<result column="u_id" property="u_id"/>
+		<result column="sl_title" property="sl_title"/>
+		<result column="sl_content" property="sl_content"/>
+		<result column="sl_time" property="sl_time"/>
+		<result column="sl_price" property="sl_price"/>
+		<result column="sl_regdate" property="sl_regdate"/>
+		<result column="sl_hits" property="sl_hits"/>
+		<result column="sl_people" property="sl_people"/>
+		<result column="sl_addfee" property="sl_addfee"/>
+		<result column="sl_num" property="sl_num"/>
+		<result column="sl_num" property="sl_num"/>
+		<result column="sl_num" property="sl_num"/>
+		<result column="sl_num" property="sl_num"/>
+		<result column="sl_num" property="sl_num"/>
+		<result column="sl_num" property="sl_num"/>
+		<result column="sl_num" property="sl_num"/>
+		<result column="sl_num" property="sl_num"/>
+		<result column="sl_num" property="sl_num"/>
+		<result column="sl_num" property="sl_num"/>
+	</resultMap>
 
 <!-- 회원가입 sql -->
 <insert id="shareInsert" parameterType="sharevo"> <!-- insert,delete,update는 리턴타입 필요없음 -->
-	INSERT INTO SHARELOT(sl_num, u_id, sl_title, sl_content, sl_time, sl_rsvnum, sl_regdate)
-	VALUES(SHARELOT_NO_SEQ.nextval, 'ckswhd1128', #{sl_title}, #{sl_content}, '시간', '예약번호', '예약날짜')
+	INSERT INTO SHARELOT2
+	(sl_num, u_id, sl_title, sl_content, sl_time, sl_price, sl_regdate, sl_hits, sl_people, sl_addfee)
+	VALUES
+	(SHARELOT_NO_SEQ.nextval, 'ckswhd1128', #{sl_title}, #{sl_content},'공유 시간', '공유 가격', '등록일', '조회수', '제한 인원수', '추가요금')
 </insert>
 
+<select id="shareList" resultType="sharelistVO">
+Select sl_num, u_id, sl_title, sl_content, sl_time, sl_price, sl_regdate, sl_hits, sl_people, sl_addfee
+FROM sharelot2
+
+</select>
+
+<select id="shareInputList" resultType=""></select>
 </mapper>
