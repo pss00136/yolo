@@ -1,9 +1,12 @@
 package yolo.share.dao;
 
+import java.util.List;
+
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import yolo.share.dto.InputListVO;
 import yolo.share.dto.ShareVO;
 
 /*
@@ -32,5 +35,25 @@ public class ShareDAO {
 		int result = session.insert("share.shareInsert", vo);
 		
 		return result;
+	}
+
+	public List<ShareVO> shareList() {
+		List<ShareVO> list = null;
+		try {
+			list = session.selectList("share.shareList");
+		} catch (Exception e) {
+			System.out.println("shareList 실패: "+ e.getMessage());
+		}
+		return list;
+	}
+
+	public List<InputListVO> shareInputList(String uid) {
+		List<InputListVO> list = null;
+		try {
+			list = session.selectList("share.shareInputList");
+		} catch (Exception e) {
+			System.out.println("회원이 예약한 공간보기리스트 에러:" + e.getMessage());
+		}
+		return list;
 	}
 }
