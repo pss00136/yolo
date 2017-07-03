@@ -3,43 +3,7 @@
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.*"%>
 <%@ page import="yolo.lot.dto.*"%>
-<!-----달력 날짜 받아오기 ----->
-<%
-	//년도와 월을 받아옴
-	String strYear = request.getParameter("year");
-	String strMonth = request.getParameter("month");
 
-	//년,월,일 지정
-	Calendar cal = Calendar.getInstance();
-
-	int year = cal.get(Calendar.YEAR);
-	int month = cal.get(Calendar.MONTH);
-	int date = cal.get(Calendar.DATE);
-
-	//null이 아닌 다른 값을 받아오면
-	if (strYear != null) {
-		//다시 지정
-		year = Integer.parseInt(strYear);
-		month = Integer.parseInt(strMonth);
-
-	} else {
-
-	}
-
-	//년도,월 셋팅
-	cal.set(year, month, 1);
-
-	int startDay = cal.getMinimum(java.util.Calendar.DATE);
-	int endDay = cal.getActualMaximum(java.util.Calendar.DAY_OF_MONTH);
-	int start = cal.get(java.util.Calendar.DAY_OF_WEEK);
-	int newLine = 0;
-
-	//오늘 날짜 저장.
-
-	Calendar todayCal = Calendar.getInstance();
-	SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
-	int intToday = Integer.parseInt(sdf.format(todayCal.getTime()));
-%>
 
 <!-- Custom CSS -->
 <link href="/Yolo/css_yolo/cssView/MyClub/portfolio-item.css"
@@ -50,6 +14,74 @@
 
 <link href="/Yolo/css_yolo/cssView/Host/host.css" rel="stylesheet">
 <link href="//code.jboxcdn.com/0.4.7/jBox.css" rel="stylesheet">
+
+<link href='/Yolo/css_yolo/cssView/lot/fullcalendar.min.css' rel='stylesheet' />
+<link href='/Yolo/css_yolo/cssView/lot/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src='/Yolo/js_yolo/lotreserve/moment.min.js'></script>
+<script src='/Yolo/js_yolo/lotreserve/fullcalendar.min.js'></script>
+<script>
+	$(document).ready(function() {
+
+		$('#calendar').fullCalendar({
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month'
+			},
+			defaultDate: '2017-05-12',
+			navLinks: false, // can click day/week names to navigate views
+			editable: true,
+			selectable: true,
+			eventLimit: true, // allow "more" link when too many events
+			loading: function(bool) {
+				$('#loading').toggle(bool);
+			},
+			dayClick: function(date) {
+				//글릭했을시 이시간에 ajax를 써서 이날짜에 맞는 것을 디비에 갔다온다.
+				//토큰라이저를 이용하여 
+				alert(date.format());
+				$.ajax(function(){
+					type: 'post',
+		            async: true,
+		            //url:'${pageContext.request.contextPath}/login_chk.do',
+		            url:'/Yolo/lot/LotTime.lot',
+		            contentType:'application/x-www-form-urlencoded;charset=UTF-8',
+		           // data: $("#userinput").serialize(),
+		            data: "date="+date.format(),
+		            success:function(resultData){
+		            	//alert("resultData = "+resultData)
+		    			$('#idCheckResult').html(resultData);
+		    		}
+		           });
+				//배열
+// 				$.each(props.props, function(i,prop){
+					
+// 				});
+			},
+// 			select: function(startDate, endDate) {
+// 				alert(startDate.format() + " " + endDate.format());
+// 			}
+		});
+
+		// load the list of available timezones, build the <select> options
+// 		$.getJSON('php/get-timezones.php', function(timezones) {
+// 			$.each(timezones, function(i, timezone) {
+// 				if (timezone != 'UTC') { // UTC is already in the list
+// 					$('#timezone-selector').append(
+// 						$("<option/>").text(timezone).attr('value', timezone)
+// 					);
+// 				}
+// 			});
+// 		});
+
+		// when the timezone selector changes, dynamically change the calendar option
+		$('#timezone-selector').on('change', function() {
+			$('#calendar').fullCalendar('option', 'timezone', this.value || false);
+		});
+	});
+
+</script>
 
 
 <!-- -----------------여기에 컨텐츠 div넣으세요----------------- -->
@@ -175,186 +207,8 @@
 					<!-------------  편의시설 항목들 끝--------------------->
 				</div>
 				<!--상세정보보기 끝 -->
-
-				<!--------- 달력으로 예약날짜보기 ---------->
-				<div class="row" style="margin-bottom: 30px;">
-					<h2 id="lot_reserve" class="osLight align-left">날짜 선택</h2>
-					<div class="col-md-12 col-xs-12"
-						style="display: inline-block; background-color: white;">
-						<form name="calendarFrm" id="calendarFrm" action="" method="post">
-							<table width="100%" border="0" cellspacing="1" cellpadding="1">
-							</table>
-							<!--날짜 네비게이션  -->
-							<table width="100%" border="0" cellspacing="1" cellpadding="1"
-								id="KOO" bgcolor="#F3F9D7">
-								<tr>
-									<td height="60">
-										<table width="100%" border="0" cellspacing="0" cellpadding="0">
-											<tr>
-												<td height="10"></td>
-											</tr>
-											<tr>
-												<td align="center">
-													<%
-														if (month > 0) {
-													%> <a href="/mentoring/mento.mento?cmd=calendar-view&year=<%=year%>&month=<%=month - 1%>">
-														<b>&lt;</b> <!-- 이전달 -->
-												</a> <%
- 	} else {
- %> <b>&lt;</b> <%
- 	}
- %> &nbsp;&nbsp; <%=year%>년 <%=month + 1%>월 &nbsp;&nbsp; <%
- 	if (month < 11) {
- %> <a
-													href="/mentoring/mento.mento?cmd=calendar-view&year=<%=year%>&month=<%=month + 1%>">
-
-														<b>&gt;</b>
-												</a> <%
- 	} else {
- %> <b>&gt;</b> <%
- 	}
- %>
-												</td>
-											</tr>
-										</table>
-									</td>
-								</tr>
-							</table>
-							<br>
-							<table width="100%" border="0" border-top="20px" cellspacing="1"
-								cellpadding="1" bgcolor="#FFFFFF" style="position: relative;">
-								<THEAD>
-
-									<TR bgcolor="#f79b38">
-
-										<TD width='100px'>
-											<DIV align="center">
-												<font color="red" style="font-size: 15px;">일</font>
-											</DIV>
-										</TD>
-										<TD width='100px'>
-											<DIV align="center">
-												<font color="black" style="font-size: 15px;">월 
-											</DIV>
-										</TD>
-										<TD width='100px'>
-											<DIV align="center">
-												<font color="black" style="font-size: 15px;">화 
-											</DIV>
-										</TD>
-										<TD width='100px'>
-											<DIV align="center">
-												<font color="black" style="font-size: 15px;">수 
-											</DIV>
-										</TD>
-										<TD width='100px'>
-											<DIV align="center">
-												<font color="black" style="font-size: 15px;">목 
-											</DIV>
-										</TD>
-										<TD width='100px'>
-											<DIV align="center">
-												<font color="black" style="font-size: 15px;">금 
-											</DIV>
-										</TD>
-										<TD width='100px'>
-											<DIV align="center">
-												<font color="#529dbc" style="font-size: 15px;">토</font>
-											</DIV>
-										</TD>
-									</TR>
-								</THEAD>
-								<TBODY>
-									<TR>
-
-										<%
-											//처음 빈공란 표시
-
-											for (int index = 1; index < start; index++)
-
-											{
-												out.println("<TD >&nbsp;</TD>");
-												newLine++;
-											}
-
-											for (int index = 1; index <= endDay; index++) {
-												String color = "";
-
-												if (newLine == 0) {
-													color = "RED";
-												} else if (newLine == 6) {
-													color = "#529dbc";
-												} else {
-													color = "BLACK";
-												}
-												;
-
-												String sUseDate = Integer.toString(year);
-												sUseDate += Integer.toString(month + 1).length() == 1 ? "0" + Integer.toString(month + 1)
-														: Integer.toString(month + 1);
-												sUseDate += Integer.toString(index).length() == 1 ? "0" + Integer.toString(index)
-														: Integer.toString(index);
-
-												int iUseDate = Integer.parseInt(sUseDate);
-
-												String backColor = "#FFF";
-												if (iUseDate == intToday) {
-													backColor = "#ffe6a8";
-												}
-												out.println("<TD valign='top' align='left' height='92px' bgcolor='" + backColor + "' nowrap>");
-										%>
-
-										<font color='<%=color%>'> <%=index%>
-										</font>
-
-
-
-										<%
-											out.println("<BR>");
-												out.println("<BR>");
-
-												//기능 제거 
-
-												out.println("</TD>");
-												newLine++;
-
-												if (newLine == 7) {
-													out.println("</TR>");
-													if (index <= endDay)
-
-													{
-														out.println("<TR>");
-													}
-													newLine = 0;
-												}
-
-											}
-
-											//마지막 공란 LOOP
-
-											while (newLine > 0 && newLine < 7)
-
-											{
-												out.println("<TD>&nbsp;</TD>");
-												newLine++;
-											}
-										%>
-
-									</TR>
-								</TBODY>
-							</TABLE>
-
-						</form>
-
-
-					</div>
-
-					<!-- 달력 전체 틀 끝 -->
-
-
-				</div>
-				<!------ 달력으로 예약날짜보기 끝 ------>
-
+				<!-- 달력보기 -->
+				<div id='calendar'></div>
 				<!--------- 인원선택 ---------->
 				<div class="row" style="margin-bottom: 30px;">
 					<!-- 예약자 정보 보기 -->
