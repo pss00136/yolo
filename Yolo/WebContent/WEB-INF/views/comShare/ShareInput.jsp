@@ -39,39 +39,28 @@
 												<div class="table-overflow">
 													<table class="table" id="inboxTable">
 														<tbody class="table">
-															<tr>
-																<td><div class="radio custom-radio">
+															<c:choose>
+																<c:when test="${list == null }">
+																	<tr>
+																		<td>글록된 게시물이 없습니다.</td>
+																	</tr>															
+																</c:when>
+															</c:choose>
+															<c:otherwise>
+																<c:forEach items="${list}" var="a">
+																	<tr>
+																		<td><div class="radio custom-radio">
 																		<label><input type="radio" name="radio1"><span
 																			class="fa fa-circle"></span></label>
-																	</div></td>
-																<td><img alt="" src="/Yolo/images_yolo/lot/1.PNG"
-																	width="150px;" height="100px;"></td>
-																<td>John Smith</td>
-																<td>Modern Residence in New York</td>
-																<td>6:07 pm</td>
-															</tr>
-															<tr>
-																<td><div class="radio custom-radio">
-																		<label><input type="radio" name="radio1"><span
-																			class="fa fa-circle"></span></label>
-																	</div></td>
-																<td><img alt="" src="/Yolo/images_yolo/lot/2.PNG"
-																	width="150px;" height="100px;"></td>
-																<td>Jane Smith</td>
-																<td>Hauntingly Beautiful Estate</td>
-																<td>Sep 27</td>
-															</tr>
-															<tr>
-																<td><div class="radio custom-radio">
-																		<label><input type="radio" name="radio1"><span
-																			class="fa fa-circle"></span></label>
-																	</div></td>
-																<td><img alt="" src="/Yolo/images_yolo/lot/3.PNG"
-																	width="150px;" height="100px;"></td>
-																<td>Rust Cohle</td>
-																<td>Sophisticated Residence</td>
-																<td>Sep 25</td>
-															</tr>
+																			</div></td>
+																		<td><img alt="" src="/Yolo/images_yolo/lot/${a.priimg_name}"
+																				width="150px;" height="100px;"></td>
+																		<td>${a.pri_title}</td>
+																		<td>${a.pri_addr}</td>
+																		<td>${a.b_date}</td>
+																	</tr>
+																</c:forEach>
+															</c:otherwise>
 														</tbody>
 													</table>
 												</div>

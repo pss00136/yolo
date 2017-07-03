@@ -50,7 +50,8 @@ public class ShareDAO {
 	public List<InputListVO> shareInputList(String uid) {
 		List<InputListVO> list = null;
 		try {
-			list = session.selectList("share.shareInputList");
+			System.out.println("Dao 타고 있냐?");
+			list = session.selectList("share.shareInputList", uid);
 		} catch (Exception e) {
 			System.out.println("회원이 예약한 공간보기리스트 에러:" + e.getMessage());
 		}

@@ -39,12 +39,12 @@ public class ShareController {
 	@RequestMapping("ShareInput.share")
 	public ModelAndView shareInput(String uid){
 		//uid 회원아이디
+		
 		String tempuid = "ckswhd1128";
 		List<InputListVO> list = service.inputList(tempuid);
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("list", list);
 		mv.setViewName("/comShare/ShareInput");
-
 		return mv;
 	}
 	

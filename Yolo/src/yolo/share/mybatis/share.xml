@@ -5,28 +5,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="share">
 
-	<resultMap type="sharelistVO" id="sharelistVO">
-		<result column="sl_num" property="sl_num"/>
-		<result column="u_id" property="u_id"/>
-		<result column="sl_title" property="sl_title"/>
-		<result column="sl_content" property="sl_content"/>
-		<result column="sl_time" property="sl_time"/>
-		<result column="sl_price" property="sl_price"/>
-		<result column="sl_regdate" property="sl_regdate"/>
-		<result column="sl_hits" property="sl_hits"/>
-		<result column="sl_people" property="sl_people"/>
-		<result column="sl_addfee" property="sl_addfee"/>
-		<result column="sl_num" property="sl_num"/>
-		<result column="sl_num" property="sl_num"/>
-		<result column="sl_num" property="sl_num"/>
-		<result column="sl_num" property="sl_num"/>
-		<result column="sl_num" property="sl_num"/>
-		<result column="sl_num" property="sl_num"/>
-		<result column="sl_num" property="sl_num"/>
-		<result column="sl_num" property="sl_num"/>
-		<result column="sl_num" property="sl_num"/>
-		<result column="sl_num" property="sl_num"/>
-	</resultMap>
+	
 
 <!-- 회원가입 sql -->
 <insert id="shareInsert" parameterType="sharevo"> <!-- insert,delete,update는 리턴타입 필요없음 -->
@@ -36,11 +15,15 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	(SHARELOT_NO_SEQ.nextval, 'ckswhd1128', #{sl_title}, #{sl_content},'공유 시간', '공유 가격', '등록일', '조회수', '제한 인원수', '추가요금')
 </insert>
 
-<select id="shareList" resultType="sharelistVO">
+<select id="shareList" resultType="sharevo">
 Select sl_num, u_id, sl_title, sl_content, sl_time, sl_price, sl_regdate, sl_hits, sl_people, sl_addfee
 FROM sharelot2
 
 </select>
 
-<select id="shareInputList" resultType=""></select>
+<select id="shareInputList" parameterType="string" resultType="shareinputlist">
+SELECT i.priimg_num priimg_num, i.priimg_path priimg_path, i.priimg_name priimg_name, p.pri_num pri_num, p.pri_title pri_title, p.pri_addr pri_addr, b.b_id b_id, b.u_id u_id, b.b_date b_date
+FROM privatelot P , booklot b, privateimage i
+WHERE b.U_ID = 'ckswhd1128' and  p.pri_num = b.pri_num and i.PRI_NUM = p.pri_num
+</select>
 </mapper>
