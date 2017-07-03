@@ -6,13 +6,19 @@
 
  <!-- 추가 속성 CSS -->
         <link href="/Yolo/css_yolo/cssView/Club/clubList.css" rel="stylesheet">
-            
+        <link href="/Yolo/css_yolo/cssView/Club/clubInput.css" rel="stylesheet">
+        
+<!-- <script> -->
+	 
+<!-- </script> -->
+            <div class="home-wrapper">
             <!-- 카테고리 선택 바 -->
+<!--             <form class="form-horizontal" role="form" method="post" enctype="multipart/form-data" action="/Yolo/club/ClubInputOk.club"> -->
                 <div class="filter">
                     <h1 class="osLight">모임찾기</h1>
                     <a href="#" class="handleFilter"><span class="icon-equalizer"></span></a>
                     <div class="clearfix"></div>
-                    <form class="filterForm">
+                    <form class="filterForm" name="search" method="post" action="/Yolo/club/ClubList.club">
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 formItem">
                                 <div class="formField">
@@ -21,69 +27,116 @@
                                    <label>Category</label>
                                    <div class="checkbox custom-checkbox">
 	                                   <div class="row">
-		                                   <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 formItem">
-			                                   <label>
-				                                   <input type="checkbox">
-				                                   <span class="fa fa-check"></span>
-				                                   	교육	
-			                                   </label>
-		                                   </div>
-		                                   <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 formItem">
-			                                   <label>
-				                                   <input type="checkbox">
-				                                   <span class="fa fa-check"></span>
-				                                   	방송/연예
-			                                   </label>
-		                                   </div>
-		                                   <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 formItem">
-			                                   <label>
-				                                   <input type="checkbox">
-				                                   <span class="fa fa-check"></span>
-				                                   	전시/박람회
-			                                   </label>
-		                                   </div>
-		                                   <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 formItem">
-			                                   <label>
-				                                   <input type="checkbox">
-				                                   <span class="fa fa-check"></span>
-				                                   	취미활동
-			                                   </label>
-		                                   </div>
-		                                   <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 formItem">
-			                                   <label>
-				                                   <input type="checkbox">
-				                                   <span class="fa fa-check"></span>
-				                                   	패션/뷰티
-			                                   </label>
-		                                   </div>
-		                                   <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 formItem">
-			                                   <label>
-				                                   <input type="checkbox">
-				                                   <span class="fa fa-check"></span>
-				                                   	이벤트/파티
-			                                   </label>
-		                                   </div>
-		                                   <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 formItem">
-			                                   <label>
-				                                   <input type="checkbox">
-				                                   <span class="fa fa-check"></span>
-				                                   	문화/예술
-			                                   </label>
-		                                   </div>
-		                                   <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 formItem">
-			                                   <label>
-				                                   <input type="checkbox">
-				                                   <span class="fa fa-check"></span>
-				                                   	공모전
-			                                   </label>
-		                                   </div>
-		                                   <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 formItem">
-			                                   <label>
-				                                   <input type="checkbox">
-				                                   <span class="fa fa-check"></span>
-				                                   	여행
-			                                   </label>
-		                                   </div>
+	                                  		<div class="col-xs-4 col-sm-4 col-md-2 col-lg-2">
+		                                   		<button type="submit" name="keyWord" class= "btn btn-primary" 
+		                                   		value="교육">교육</button>
+		                                   	</div>
+		                                   	<div class="col-xs-4 col-sm-4 col-md-2 col-lg-2">
+		                                   		<button type="submit" name="keyWord" class= "btn btn-success" 
+		                                   		value="방송/연예">방송/연예</button>
+		                                   	</div>
+		                                   	<div class="col-xs-4 col-sm-4 col-md-2 col-lg-2">
+		                                   		<button type="submit" name="keyWord" class= "btn btn-info" 
+		                                   		value="전시/박람회">전시/박람회</button>
+		                                   	</div>
+		                                   	<div class="col-xs-4 col-sm-4 col-md-2 col-lg-2">
+		                                   		<button type="submit" name="keyWord" class= "btn btn-warning" 
+		                                   		value="취미활동">취미활동</button>
+		                                   	</div>
+		                                   	<div class="col-xs-4 col-sm-4 col-md-2 col-lg-2">
+		                                   		<button type="submit" name="keyWord" class= "btn btn-danger" 
+		                                   		value="패션/뷰티">패션/뷰티</button>
+		                                   	</div>
+		                                    <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2">
+		                                   		<button type="submit" name="keyWord" class= "btn btn-red" 
+		                                   		value="이벤트/파티">이벤트/파티</button>
+		                                   	</div>
+		                                   	<div class="col-xs-4 col-sm-4 col-md-2 col-lg-2">
+		                                   		<button type="submit" name="keyWord" class= "btn btn-gray" 
+		                                   		value="문화/예술">문화/예술</button>
+		                                   	</div>
+		                                   	<div class="col-xs-4 col-sm-4 col-md-2 col-lg-2">
+		                                   		<button type="submit" name="keyWord" class= "btn btn-blue" 
+		                                   		value="공모전">공모전</button>
+		                                   	</div>
+		                                   	<div class="col-xs-4 col-sm-4 col-md-2 col-lg-2">
+		                                   		<button type="submit" name="keyWord" class= "btn btn-yellow" 
+		                                   		value="여행">여행</button>
+		                                   	</div>
+		                                   	<div class="col-xs-4 col-sm-4 col-md-2 col-lg-2">
+		                                   		<button type="submit" name="keyWord" class= "btn btn-magenta" 
+		                                         value="친목/소모임">친목/소모임</button>
+		                                   	</div>
+		                                   	<div class="col-xs-4 col-sm-4 col-md-2 col-lg-2">
+		                                   		<button type="submit" name="keyWord" class= "btn btn-green2" 
+		                                         value="기타">기타</button>
+		                                   	</div>
+		                                   	<div class="col-xs-4 col-sm-4 col-md-2 col-lg-2">
+		                                   		<button type="submit" name="keyWord" class= "btn btn-green" 
+		                                         >전체보기</button>
+		                                   	</div>
+<!-- 		                                   <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 formItem"> -->
+<!-- 			                                   <label> -->
+<!-- 				                                   <input type="checkbox" name="keyWord"  value="교육"> -->
+<!-- 				                                   <span class="fa fa-check"></span> -->
+<!-- 				                                   	교육	 -->
+<!-- 			                                   </label> -->
+<!-- 		                                   </div> -->
+<!-- 		                                   <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 formItem"> -->
+<!-- 			                                   <label> -->
+<!-- 				                                   <input type="checkbox" name="keyWord"  value="방송/연예"> -->
+<!-- 				                                   <span class="fa fa-check"></span> -->
+<!-- 				                                   	방송/연예 -->
+<!-- 			                                   </label> -->
+<!-- 		                                   </div> -->
+<!-- 		                                   <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 formItem"> -->
+<!-- 			                                   <label> -->
+<!-- 				                                   <input type="checkbox" name="keyWord"  value="전시/박람회"> -->
+<!-- 				                                   <span class="fa fa-check"></span> -->
+<!-- 				                                   	전시/박람회 -->
+<!-- 			                                   </label> -->
+<!-- 		                                   </div> -->
+<!-- 		                                   <div class="col-md-2 col-xs-4 checkbox custom-checkbox"> -->
+<!-- 												<label><input type="checkbox" name="c_type" value="취미활동"><span -->
+<!-- 													class="fa fa-check"></span> -->
+<!-- 													취미활동 -->
+<!-- 												</label> -->
+<!-- 											</div> -->
+<!-- 		                                   <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 formItem"> -->
+<!-- 			                                   <label> -->
+<!-- 				                                   <input type="checkbox" name="keyWord"  value="패션/뷰티"> -->
+<!-- 				                                   <span class="fa fa-check"></span> -->
+<!-- 				                                   	패션/뷰티 -->
+<!-- 			                                   </label> -->
+<!-- 		                                   </div> -->
+<!-- 		                                   <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 formItem"> -->
+<!-- 			                                   <label> -->
+<!-- 				                                   <input type="checkbox" name="keyWord"  value="이벤트/파티"> -->
+<!-- 				                                   <span class="fa fa-check"></span> -->
+<!-- 				                                   	이벤트/파티 -->
+<!-- 			                                   </label> -->
+<!-- 		                                   </div> -->
+<!-- 		                                   <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 formItem"> -->
+<!-- 			                                   <label> -->
+<!-- 				                                   <input type="checkbox" name="keyWord"  value="문화/예술"> -->
+<!-- 				                                   <span class="fa fa-check"></span> -->
+<!-- 				                                   	문화/예술 -->
+<!-- 			                                   </label> -->
+<!-- 		                                   </div> -->
+<!-- 		                                   <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 formItem"> -->
+<!-- 			                                   <label> -->
+<!-- 				                                   <input type="checkbox" name="keyWord"  value="공모전"> -->
+<!-- 				                                   <span class="fa fa-check"></span> -->
+<!-- 				                                   	공모전 -->
+<!-- 			                                   </label> -->
+<!-- 		                                   </div> -->
+<!-- 		                                   <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 formItem"> -->
+<!-- 			                                   <label> -->
+<!-- 				                                   <input type="checkbox" name="keyWord"  value="여행"> -->
+<!-- 				                                   <span class="fa fa-check"></span> -->
+<!-- 				                                   	여행 -->
+<!-- 			                                   </label> -->
+<!-- 		                                   </div> -->
 	                                   </div>
                                    </div>
 	                            </div>
@@ -95,89 +148,38 @@
                                    <label>Location</label>
                                    <div class="checkbox custom-checkbox">
 	                                   <div class="row">
-		                                   <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 formItem">
-			                                   <label>
-				                                   <input type="checkbox">
-				                                   <span class="fa fa-check"></span>
-				                                   	서울
-			                                   </label>
-		                                   </div>
-		                                   <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 formItem">
-			                                   <label>
-				                                   <input type="checkbox">
-				                                   <span class="fa fa-check"></span>
-				                                   	경기/인천
-			                                   </label>
-		                                   </div>
-		                                   <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 formItem">
-			                                   <label>
-				                                   <input type="checkbox">
-				                                   <span class="fa fa-check"></span>
-				                                   	대전/충청/세종
-			                                   </label>
-		                                   </div>
-		                                   <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 formItem">
-			                                   <label>
-				                                   <input type="checkbox">
-				                                   <span class="fa fa-check"></span>
-				                                   	대구/경북
-			                                   </label>
-		                                   </div>
-		                                   <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 formItem">
-			                                   <label>
-				                                   <input type="checkbox">
-				                                   <span class="fa fa-check"></span>
-				                                   	부산/울산/경남
-			                                   </label>
-		                                   </div>
-		                                   <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 formItem">
-			                                   <label>
-				                                   <input type="checkbox">
-				                                   <span class="fa fa-check"></span>
-				                                   	광주/전라
-			                                   </label>
-		                                   </div>
-		                                   <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 formItem">
-			                                   <label>
-				                                   <input type="checkbox">
-				                                   <span class="fa fa-check"></span>
-				                                   	강원
-			                                   </label>
-		                                   </div>
-		                                   <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 formItem">
-			                                   <label>
-				                                   <input type="checkbox">
-				                                   <span class="fa fa-check"></span>
-				                                   	제주
-			                                   </label>
-		                                   </div>
-		                                   <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 formItem">
-			                                   <label>
-				                                   <input type="checkbox">
-				                                   <span class="fa fa-check"></span>
-				                                   	기타지역
-			                                   </label>
-		                                   </div>
-	                                   </div>
-                                   </div>
-	                            </div>
-                            </div>
-                            <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 formItem">
-                          	</div>
-                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 formItem">
-								<button style="margin-top: 20px;" class="btn btn-yellow col-md-7">검색</button>
-								<div class="clearfix"></div>
-							</div>
-                            
-<!--                         </div> -->
-<!--                         <div class="row"> -->
-<!--                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 formItem"> -->
-<!--                                 <div class="formField"> -->
-                                
-<!--                                 지역별 -->
-<!--                                    <label>Location</label> -->
-<!--                                    <div class="checkbox custom-checkbox"> -->
-<!-- 	                                   <div class="row"> -->
+	                                   		<div class="col-xs-4 col-sm-4 col-md-3 col-lg-3">
+		                                   		<button type="submit" name="location" class= "btn btn-success" 
+		                                   		value="서울">서울</button>
+		                                   	</div>
+		                                   	<div class="col-xs-4 col-sm-4 col-md-3 col-lg-3">
+		                                   		<button type="submit" name="location" class= "btn btn-warning" 
+		                                   		value="경기/인천">경기/인천</button>
+		                                   	</div>
+		                                   	<div class="col-xs-4 col-sm-4 col-md-3 col-lg-3">
+		                                   		<button type="submit" name="location" class= "btn btn-red" 
+		                                   		value="대전/충청/세종">대전/충청/세종</button>
+		                                   	</div>
+		                                   	<div class="col-xs-4 col-sm-4 col-md-3 col-lg-3">
+		                                   		<button type="submit" name="location" class= "btn btn-blue" 
+		                                   		value="대구/경북">대구/경북</button>
+		                                   	</div>
+		                                   	<div class="col-xs-4 col-sm-4 col-md-3 col-lg-3">
+		                                   		<button type="submit" name="location" class= "btn btn-magenta" 
+		                                   		value="광주/전라">광주/전라</button>
+		                                   	</div>
+		                                   	<div class="col-xs-4 col-sm-4 col-md-3 col-lg-3">
+		                                   		<button type="submit" name="location" class= "btn btn-primary" 
+		                                   		value="부산/울산/경남">부산/울산/경남</button>
+		                                   	</div>
+		                                   	<div class="col-xs-4 col-sm-4 col-md-3 col-lg-3">
+		                                   		<button type="submit" name="location" class= "btn btn-info" 
+		                                   		value="제주">제주</button>
+		                                   	</div>
+		                                   	<div class="col-xs-4 col-sm-4 col-md-3 col-lg-3">
+		                                   		<button type="submit" name="location" class= "btn btn-danger" 
+		                                   		value="기타지역">기타지역</button>
+		                                   	</div>
 <!-- 		                                   <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 formItem"> -->
 <!-- 			                                   <label> -->
 <!-- 				                                   <input type="checkbox"> -->
@@ -241,12 +243,10 @@
 <!-- 				                                   	기타지역 -->
 <!-- 			                                   </label> -->
 <!-- 		                                   </div> -->
-<!-- 	                                   </div> -->
-<!--                                    </div> -->
-<!-- 	                            </div> -->
-<!--                             </div> -->
-<!--                         </div> -->
-                        
+	                                   </div>
+                                   </div>
+	                            </div>
+                            </div>
 						</div>
                     </form>
                 </div>
@@ -306,3 +306,5 @@
                         <li><a href="#"><span class="fa fa-angle-right"></span></a></li>
                     </ul>
                 </div>
+             </div>
+<!--                 </form> -->

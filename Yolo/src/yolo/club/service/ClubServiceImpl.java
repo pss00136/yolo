@@ -31,5 +31,9 @@ public class ClubServiceImpl implements ClubService {
 	public ClubListVO clubdetail(ClubListVO clublistVO){
 		return clubdao.clubdetail(clublistVO);
 	}
+	
+	public List<ClubListVO> clubsearhview(String keyWord){
+		return clubdao.clubsearchview(keyWord);
+	}
 
 }

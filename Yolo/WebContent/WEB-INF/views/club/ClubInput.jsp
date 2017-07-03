@@ -6,6 +6,8 @@
 <link href="/Yolo/css_yolo/cssView/Club/clubInput.css" rel="stylesheet">
 <link href="/Yolo/css_yolo/cssView/Club/tagPlus.css" rel="stylesheet">
 <link href="/Yolo/css/jquery.tagsinput.css" rel="stylesheet">
+<link href="/Yolo/css_yolo/cssView/lot/lotInputSecond.css"
+	rel="stylesheet">
 
 			<div class="home-wrapper">
 				<!-- 제목 -->
@@ -194,27 +196,50 @@
 										class="fa fa-circle"></span> 미확정</label>
 								</div>
 								<div class="col-md-3 radio custom-radio">
-									<label><input type="radio" value="확정" onclick="div_OnOff(this.value,'con');"><span
+									<label><input type="radio" name="c_place" value="확정" onclick="div_OnOff(this.value,'con');"><span
 										class="fa fa-circle"></span> 확정</label>
 								</div>
-								<div id="con" style="display:none">
-								 	<div class="form-group">
-                                        <div class="btn-group">
-                                            <button data-toggle="dropdown" class="btn btn-o btn-gray dropdown-toggle">
-                                                <span class="dropdown-label">예약한 공간 선택</span> <span class="caret"></span>
-                                            </button>
-                                            <ul class="dropdown-menu dropdown-select">
-                                                <li class="active"><input type="radio" name="c_place" checked="checked" value="예약한 공간1"><a href="#">예약한 공간1</a></li>
-                                                <li><input type="radio" name="c_place" value="예약한 공간2"><a href="#">예약한 공간2</a></li>
-                                                <li><input type="radio" name="c_place" value="예약한 공간3"><a href="#">예약한 공간3</a></li>
-<!--                                                 <li class="disabled"><input type="radio" name="ds1" disabled=""><a href="#">Option disabled</a></li> -->
-                                            </ul>
-                                       	</div>
-                                    </div>
-                                </div>
-							</div>
+							</div>			
 						</div>
-							<!-- 라디오버튼 -->				
+						
+						<div id="con" style="display:none">
+						<!-- 예약한 공간 선택 -->
+			 			<div class="form-group">
+			 				<label class="col-sm-2 control-label"></label>
+	                       	 <div class="col-sm-6 btn-group" >
+                        		<button data-toggle="dropdown" class="btn btn-o btn-gray dropdown-toggle">
+	                                  <span class="dropdown-label">예약한 공간 선택</span> <span class="caret"></span>
+	                             </button>
+	                             <ul class="dropdown-menu dropdown-select">
+	                              <li class="active"><input type="radio" name="c_place_v" checked="checked" value="미선택"><a href="#">예약한 공간 선택</a></li>
+	                              <li><input type="radio" name="c_place_v"  value="예약한 공간1"><a href="#">예약한 공간1</a></li>
+	                              <li><input type="radio" name="c_place_v" value="예약한 공간2"><a href="#">예약한 공간2</a></li>
+	                              <li><input type="radio" name="c_place_v" value="예약한 공간3"><a href="#">예약한 공간3</a></li>
+	                             </ul>
+	                   		</div>
+                         </div>
+                         <div class="form-group">
+                         	<label class="col-sm-2 control-label">주소입력</label>
+                             	<div class="col-sm-8">
+								<!-- 우편번호 검색 -->
+									<div class="input-group addr">
+										<input type="text" class="form-control" id="postcode"
+											name="postcode" placeholder="우편번호"> <span
+											class="input-group-btn"> <input type="button"
+											class="btn btn-success form-control" onclick="DaumPostcode()"
+											value="우편번호 찾기">
+										</span>
+									</div>
+									<input type="text" class="form-control addr" id="main_address"
+										name="main_address" placeholder=" 주소"> <input type="text"
+										class="form-control addr" id="detail_address"
+										name="detail_address" placeholder=" 상세주소">
+			
+								</div>
+                            </div>
+                        </div>
+						<!-- 개최 장소 끝 -->	
+									
 						<!-- 대표 이미지 선택 -->
 						<div class="form-group">
 							<label class="col-sm-2 control-label">대표이미지</label>
@@ -249,7 +274,7 @@
 	<script>
 		function div_OnOff(v,id){
 		 // 라디오 버튼 value 값 조건 비교
-		 if(v == "확정"){
+		 if(v != "미확정"){
 		  document.getElementById(id).style.display = ""; // 보여줌
 		 }else{
 		  document.getElementById(id).style.display = "none"; // 숨김

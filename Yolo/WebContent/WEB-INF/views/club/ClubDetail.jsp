@@ -7,6 +7,7 @@
 	<!-- 추가 속성 CSS -->
         <link href="/Yolo/css_yolo/cssView/Club/clubDetail.css" rel="stylesheet">
         <link href="/Yolo/css_yolo/cssView/Club/tagPlus.css" rel="stylesheet">
+        <link href="/Yolo/css_yolo/cssView/Club/slider.css" rel="stylesheet">
         
    			<div class="home-wrapper">
                 <div class="singleTop">

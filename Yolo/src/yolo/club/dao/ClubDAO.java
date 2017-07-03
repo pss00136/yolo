@@ -1,5 +1,6 @@
 package yolo.club.dao;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.mybatis.spring.SqlSessionTemplate;
@@ -58,6 +59,20 @@ public class ClubDAO {
 	}
 	
 	/*
+	* @메소드명: clubsearhview
+	* @역할:  DB에서 조건을 통해 clubList를 검색
+	*
+	* @param   
+	* @return  List<ClubListVO>: DB select쿼리문 결과값
+	*/
+	public List<ClubListVO> clubsearchview(String keyWord){
+		HashMap map = new HashMap<>();
+		map.put("keyWord", keyWord);
+		List<ClubListVO> search = session.selectList("club.clubsearchview", map);
+		return search;
+	}
+	
+	/*
 	* @메소드명: clubdetail
 	* @역할:  DB에서 모든 clubList를 검색
 	*
@@ -74,5 +89,7 @@ public class ClubDAO {
 		System.out.println("모집"+clublistVO.getC_recruit());
 		return detail;
 	}
+	
+	
 
 }

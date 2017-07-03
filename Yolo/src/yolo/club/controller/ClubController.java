@@ -1,6 +1,7 @@
 package yolo.club.controller;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,13 +39,36 @@ public class ClubController {
 	* @param   없음
 	* @return  ModelAndView :반환하는 경로
 	*/
+//	@RequestMapping("/ClubList.club")
+//	public ModelAndView clubList(ClubListVO clublistVO){
+//		ModelAndView mv = new ModelAndView();
+//		List<ClubListVO> list = service.clublistview();
+//		mv.addObject("list", list);
+//		mv.setViewName("/club/ClubList");
+//		System.out.println(list.size());
+//		return mv;
+//	}
+	
+	/*
+	* @메소드명: clubList
+	* @역할: views/club/clubList로 페이지 전환
+	*
+	* @param   없음
+	* @return  ModelAndView :반환하는 경로
+	*/
 	@RequestMapping("/ClubList.club")
-	public ModelAndView clubList(ClubListVO clublistVO){
+	public ModelAndView list(String keyWord, String location){
+		System.out.println("key:"+keyWord);
 		ModelAndView mv = new ModelAndView();
-		List<ClubListVO> list = service.clublistview();
-		mv.addObject("list", list);
+		List<ClubListVO> clublist = new ArrayList<ClubListVO>();
+		if(keyWord !=null  ){
+			System.out.println("들어감");
+			clublist = service.clubsearhview(keyWord);
+		}else{
+			clublist = service.clublistview();
+		}
+		mv.addObject("list", clublist);
 		mv.setViewName("/club/ClubList");
-		System.out.println(list.size());
 		return mv;
 	}
 	
@@ -90,15 +114,20 @@ public class ClubController {
 	*/
 	@RequestMapping("/ClubInputOk.club")
 	public String clubInputOk(ClubVO clubVO, String c_dateFrom, String c_timeFrom, 
-			String c_dateTo, String c_timeTo, String c_recruitFrom, String c_recruitTo, ClubImageVO cimgVO ){
-		System.out.println("모임공간:"+clubVO.getC_recruit());
-		String c_date = c_dateFrom + "/" + c_timeFrom + "~" + c_dateTo + "/" + c_timeTo;
-		String c_recruit = c_recruitFrom + "~" + c_recruitTo;
-		clubVO.setC_date(c_date);
-		clubVO.setC_recruit(c_recruit);
-		System.out.println("시작~끝"+c_date);
-		System.out.println("시작~끝"+c_recruit);
-		System.out.println("파일"+cimgVO.getCimg_name());
+			String c_dateTo, String c_timeTo, String c_recruitFrom, String c_recruitTo, 
+			String c_place_v, String main_address, String detail_address, ClubImageVO cimgVO ){
+//		System.out.println("모임공간:"+clubVO.getC_recruit());
+//		System.out.println("주소11:"+ main_address);
+//		System.out.println("주소12:"+ detail_address);
+//		System.out.println("c_place:"+clubVO.getC_place());
+//		System.out.println("c_place_v:"+c_place_v);
+		clubVO.setC_date(c_dateFrom + "/" + c_timeFrom + "~" + c_dateTo + "/" + c_timeTo);
+		clubVO.setC_recruit(c_recruitFrom + "~" + c_recruitTo);
+		if(clubVO.getC_place().equals("확정") && c_place_v.equals("미선택")){
+			clubVO.setC_place(main_address +" "+ detail_address);
+//			System.out.println("주소"+clubVO.getC_place());
+		}
+//		System.out.println("주소2:"+clubVO.getC_place());
 		
 		int result = service.clubinput(clubVO, cimgVO);
 		if(result > 0){

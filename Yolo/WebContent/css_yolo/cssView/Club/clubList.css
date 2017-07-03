@@ -16,7 +16,15 @@
 .figure img {
     position: relative;
     display: block;
-/*     width: inherit; */
 	height: auto;
     opacity: 1;
+}
+
+.btn{
+    margin-bottom: 5px;
+}
+
+.btn-green2 {
+	background-color: #0eaaa6;
+    color: #fff;
 }

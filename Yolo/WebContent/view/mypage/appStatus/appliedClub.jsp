@@ -1,10 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	
+
 <!-- 추가 Css -->
 <link href="/Yolo/css_yolo/cssView/appStatus/appliedClub.css" rel="stylesheet">
 
+
 			<!-- Content -->
+
 			<div class="home-content">
 				<div class="home-wrapper">
 					<div class="row">
@@ -162,4 +164,3 @@
 				</div>
 			</div>
 
-			
