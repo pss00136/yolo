@@ -22,52 +22,67 @@
         <![endif]-->
         
         <!-- 추가 CSS -->
+        
         <link href="/Yolo/css_yolo/cssView/comShare/ShareDetail.css" rel="stylesheet">
         
         
         <!-- date time picker CSS-->
-		<link href="/Yolo/css_yolo/cssView/comShare/jquery.datetimepicker.css" rel="stylesheet">
-<!-- 		<link rel="stylesheet"  href="http://code.jquery.com/mobile/git/jquery.mobile-git.css" />  -->
-<!-- 		<link href="/Yolo/css_yolo/cssView/comShare/datepicker/jquery.mobile.datepicker.css" rel="stylesheet"> -->
-<!--     	<link href="/Yolo/css_yolo/cssView/comShare/datepicker/jquery.mobile.datepicker.theme.css" rel="stylesheet"> -->
-    	
-    	
-    	
-    	
-	<style>
-	@media(max-width: 768px){
-		.xdsoft_datetimepicker {
-			display: block; 
-			position: absolute;
-			left: 40px;
-			top: 165px;
 
-		}
-	}
-	
-	.xdsoft_datetimepicker .xdsoft_calendar table{
-		width: 80%;
-	}
-	
-	.xdsoft_datetimepicker .xdsoft_month{
-		width: 25%;
-	}
-	
-	.xdsoft_datetimepicker .xdsoft_next {
-	    float: left;
-	    background-position: 0 0;
-	    margin-left: 15%;
-	}
-	
-	.xdsoft_datetimepicker .xdsoft_datepicker.active+.xdsoft_timepicker {
-	    margin-top: 8px;
-	    margin-bottom: 10px;
-	    margin-left: -47px;
-	}
-	
-	
-	</style>
-	
+<style>
+.carousel-control.right {
+    right: 0;
+    left: auto;
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .0001) 0%, rgba(255, 255, 255, 0.5) 100%);
+    color: rgb(242, 118, 0);
+}
+
+.carousel-control {
+    position: absolute;
+    top: -15px;
+    bottom: 0;
+    left: 4px;
+    width: 5%;
+    font-size: 20px;
+    color: #000000;
+    text-align: center;
+    text-shadow: 0 1px 0px rgba(0, 0, 0, 0.57);
+    filter: alpha(opacity=50);
+    opacity: .5;
+}
+
+.carousel-control.left {
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .0001) 0%, rgba(255, 255, 255, 0.5) 100%);
+    color: rgb(242, 118, 0);
+}
+
+.btn-group, .btn-group-vertical{
+	display: inline-flex;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-left: 23px;
+}
+.btn-o.btn-warning{
+	margin-right: 4px;
+}
+</style>
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+	  $('#media').carousel({
+	    pause: true,
+	    interval: false,
+	    
+	  });
+	});
+
+</script>	
+
+
     </head>
     <body class="notransition">
     
@@ -201,22 +216,73 @@
 						aria-hidden="true">×</button>
 				</div>
 				<div class="modal-body">
-					<form class="contactForm" style="margin: 15px 6px;">
-						<div class="row" style="text-align:center;">
-							<div style="display:inline-block;">
-<!-- 								<input type="text" style="z-index: 1000000;" class="date-input" data-inline="false" data-role="date"> -->
-<!-- 								<input type="text" style="z-index: 1000000;" class="date-input-inline" data-inline="true" data-role="date"> -->
-								<input style="z-index: 100000; margin: 0 8px; width: 100px;" type="text" class=" some_class" value="" id="some_class_1"/>
-								<input style="z-index: 100000; margin: 0 8px; width: 100px;" type="text" class=" some_class" value="" id="some_class_2"/>
-							</div>
-						</div>
-					</form>
+				
+					<div id="propWidget-3" class="carousel slide propWidget-3" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="item active">
+                            	 <div class="btn-group" data-toggle="buttons">
+									<label class="btn btn-o btn-warning">
+										<input type="checkbox" autocomplete="off" checked><span>09:00</span>
+									</label>
+									<label class="btn btn-o btn-warning">
+										<input type="checkbox" autocomplete="off"><span>10:00</span>
+									</label>			
+									<label class="btn btn-o btn-warning">
+										<input type="checkbox" autocomplete="off"><span>11:00</span>
+									</label>			
+									<label class="btn btn-o btn-warning">
+										<input type="checkbox" autocomplete="off"><span>12:00</span>
+									</label>			
+									<label class="btn btn-o btn-warning">
+										<input type="checkbox" autocomplete="off"><span>13:00</span>
+									</label>			
+									<label class="btn btn-o btn-warning">
+										<input type="checkbox" autocomplete="off"><span>14:00</span>
+									</label>	
+									<label class="btn btn-o btn-warning">
+										<input type="checkbox" autocomplete="off"><span>15:00</span>
+									</label>			
+									<label class="btn btn-o btn-warning">
+										<input type="checkbox" autocomplete="off"><span>16:00</span>
+									</label>			
+								</div>
+                            </div>
+                            <div class="item">
+                                <div class="btn-group" data-toggle="buttons">
+									<label class="btn btn-o btn-warning">
+										<input type="checkbox" autocomplete="off"><span>17:00</span>
+									</label>
+									<label class="btn btn-o btn-warning">
+										<input type="checkbox" autocomplete="off"><span>18:00</span>
+									</label>			
+									<label class="btn btn-o btn-warning">
+										<input type="checkbox" autocomplete="off"><span>19:00</span>
+									</label>			
+									<label class="btn btn-o btn-warning">
+										<input type="checkbox" autocomplete="off"><span>20:00</span>
+									</label>			
+									<label class="btn btn-o btn-warning">
+										<input type="checkbox" autocomplete="off"><span>21:00</span>
+									</label>			
+									<label class="btn btn-o btn-warning">
+										<input type="checkbox" autocomplete="off"><span>22:00</span>
+									</label>	
+									<label class="btn btn-o btn-warning">
+										<input type="checkbox" autocomplete="off"><span>23:00</span>
+									</label>			
+									<label class="btn btn-o btn-warning">
+										<input type="checkbox" autocomplete="off"><span>24:00</span>
+									</label>			
+								</div>       
+                            </div>
+                        </div>
+                        <a class="left carousel-control" href="#propWidget-3" role="button" data-slide="prev"><span class="fa fa-chevron-left"></span></a>
+                        <a class="right carousel-control" href="#propWidget-3" role="button" data-slide="next"><span class="fa fa-chevron-right"></span></a>
+                    </div>
 				</div>
 				<div class="modal-footer">
 					<a href="#" data-dismiss="modal"
-						class="btn btn-round btn-o btn-gray">계속쇼핑하기</a> 
-					<a href="#"
-						class="btn btn-round btn-green">마이페이지로</a>
+						class="btn btn-round btn-o btn-warning">쉐어신청하기</a> 
 				</div>
 			</div>
 		</div>
@@ -250,16 +316,7 @@
 		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
         
         <!-- date time picker JS -->
-        <script src="/Yolo/js_yolo/comShare/jquery.js" type="text/javascript"></script>
-		<script src="/Yolo/js_yolo/comShare/jquery.datetimepicker.full.js" type="text/javascript"></script>
     	
-		<script>/*
-// 		window.onerror = function(errorMsg) {
-// 			$('#console').html($('#console').html()+'<br>'+errorMsg)
-// 		}*/
-		
-		$('.some_class').datetimepicker();
-		
-		</script>
+    	
     </body>
 </html>

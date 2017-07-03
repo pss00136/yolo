@@ -1534,8 +1534,8 @@ var DateFormatter;
 			};
 
 		createDateTimePicker = function (input) {
-											// 모바일----------------------------------------------
-			var datetimepicker = $('<div style="@media(max-width:768px){.xdsoft_datetimepicker .xdsoft_noselect{display:block; postion:absolute; left:40px; top:165px; }}" class="xdsoft_datetimepicker xdsoft_noselect"></div>'),
+																						// 모바일----------------------------------------------
+			var datetimepicker = $('<div class="xdsoft_datetimepicker xdsoft_noselect" style="@media(max-witdh:768px){.xdsoft_datetimepicker{display: block; position: absolute; left: 10%; top:106px;}}"></div>'),
 				xdsoft_copyright = $('<div class="xdsoft_copyright"><a target="_blank" href="http://xdsoft.net/jqplugins/datetimepicker/">xdsoft.net</a></div>'),
 				datepicker = $('<div class="xdsoft_datepicker active"></div>'),
 				month_picker = $('<div class="xdsoft_monthpicker"><button type="button" class="xdsoft_prev"></button><button type="button" class="xdsoft_today_button"></button>' +
@@ -2615,7 +2615,7 @@ var DateFormatter;
 
 				if ((options.ownerDocument.documentElement.clientWidth - dateInputOffset.left) < datepicker.parent().outerWidth(true)) {
 					var diff = datepicker.parent().outerWidth(true) - dateInputElem.offsetWidth;
-//					left = left - diff;
+					left = left - diff;
 				}
 
 				if ($dateInput.parent().css('direction') === 'rtl') {
@@ -2637,7 +2637,7 @@ var DateFormatter;
 					});
 
 					if (dateInputHasFixedAncestor) {
-						position = 'absolute';
+						position = 'fixed';
 
 						//If the picker won't fit entirely within the viewport then display it above the date input.
 						if (verticalPosition + datetimepicker.outerHeight() > windowHeight + windowScrollTop) {
@@ -2676,7 +2676,7 @@ var DateFormatter;
 
 				datetimepickerCss = {
 					position: position,
-					left: left,
+					left: left ,
 					top: '',  //Initialize to prevent previous values interfering with new ones.
 					bottom: ''  //Initialize to prevent previous values interfering with new ones.
 				};
@@ -2684,6 +2684,7 @@ var DateFormatter;
 				datetimepickerCss[verticalAnchorEdge] = verticalPosition;
 
 				datetimepicker.css(datetimepickerCss);
+				
 			};
 
 			datetimepicker

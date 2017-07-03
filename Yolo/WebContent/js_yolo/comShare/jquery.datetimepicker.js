@@ -2010,7 +2010,7 @@
 				if (options.fixed) {
 					verticalPosition -= windowScrollTop;
 					left -= $(options.contentWindow).scrollLeft();
-//					position = "fixed";
+					position = "absolute";
 				} else {
 					dateInputHasFixedAncestor = false;
 
@@ -2026,7 +2026,7 @@
 					});
 
 					if (dateInputHasFixedAncestor) {
-//						position = 'fixed';
+						position = 'absolute';
 
 						//If the picker won't fit entirely within the viewport then display it above the date input.
 						if (verticalPosition + datetimepicker.outerHeight() > windowHeight + windowScrollTop) {

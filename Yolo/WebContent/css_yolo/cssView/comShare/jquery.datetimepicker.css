@@ -32,7 +32,7 @@
 
 .xdsoft_datetimepicker iframe {
 	position: absolute;
-	left: 0;
+	left: 10%;
 	top: 0;
 	width: 75px;
 	height: 210px;
@@ -84,6 +84,8 @@
 	float: left;
 	margin-left: 8px;
 }
+
+
 .xdsoft_datetimepicker.xdsoft_rtl .xdsoft_datepicker {
 	float: right;
 	margin-right: 8px;
