@@ -52,6 +52,7 @@ public class ShareDAO {
 		try {
 			System.out.println("Dao 타고 있냐?");
 			list = session.selectList("share.shareInputList", uid);
+			System.out.println("DAO "+list.size());
 		} catch (Exception e) {
 			System.out.println("회원이 예약한 공간보기리스트 에러:" + e.getMessage());
 		}

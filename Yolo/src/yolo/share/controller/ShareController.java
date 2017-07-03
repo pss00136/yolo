@@ -45,6 +45,7 @@ public class ShareController {
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("list", list);
 		mv.setViewName("/comShare/ShareInput");
+		System.out.println("controller"+list.size());
 		return mv;
 	}
 	

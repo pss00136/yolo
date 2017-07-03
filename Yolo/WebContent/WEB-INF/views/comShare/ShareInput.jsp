@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <!-- 추가CSS -->
 <link href="/Yolo/css_yolo/cssView/comShare/ShareInput.css" rel="stylesheet">
@@ -45,7 +45,6 @@
 																		<td>글록된 게시물이 없습니다.</td>
 																	</tr>															
 																</c:when>
-															</c:choose>
 															<c:otherwise>
 																<c:forEach items="${list}" var="a">
 																	<tr>
@@ -61,6 +60,7 @@
 																	</tr>
 																</c:forEach>
 															</c:otherwise>
+															</c:choose>
 														</tbody>
 													</table>
 												</div>
