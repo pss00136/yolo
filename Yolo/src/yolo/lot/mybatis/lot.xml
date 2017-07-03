@@ -45,7 +45,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		privatelot(pri_num,h_num,pri_type,pri_booktype,pri_charge,pri_title,pri_addr,pri_tag,
 		pri_content,pri_info,pri_account,pri_weekprice,
 		pri_weekendprice,pri_facility,pri_minpeople,pri_maxpeople,
-		pri_weekdayo,pri_weekdaye,pri_weekendo,pri_weekende,pri_lat, pri_long,
+		pri_weekdayo,pri_weekdaye,pri_weekendo,pri_weekende,pri_lat,pri_long,
 		pri_tel,pri_web,pri_regdate)
 		VALUES(concat('pri_', PRIVATELOT_NO_SEQ.nextVal),#{h_num},#{pri_type},#{pri_booktype},#{pri_charge},#{pri_title},
 		#{pri_addr},#{pri_tag},#{pri_content},#{pri_info},#{pri_account},#{pri_weekprice},
@@ -65,7 +65,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</insert>
 
 	<select id="lotlistview" resultMap="lotlistMap">
-	 select i.priimg_name priimg_name, p.pri_weekprice pri_weekprice, p.pri_title pri_title, p.pri_addr pri_addr, p.pri_num pri_num
+	 select i.priimg_name priimg_name, p.pri_weekprice pri_weekprice, p.pri_title pri_title, p.pri_addr pri_addr, p.pri_num pri_num, p.pri_long pri_long, p.pri_lat pri_lat
      from privatelot p JOIN privateimage i
      ON p.pri_num = i.pri_num
 	</select>

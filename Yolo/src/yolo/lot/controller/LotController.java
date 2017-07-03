@@ -188,7 +188,7 @@ public class LotController {
 	           JSONObject jsonObject = new JSONObject();
 	           //props의 JSON정보를 담을 Array 선언
 	           JSONArray propsArray = new JSONArray();
-	           
+	           System.out.println(list.size());
 	           
 	           for(LotListVO lotVO: list){
 	              //props의 한명 정보가 들어갈 JSONObject 선언
@@ -201,12 +201,13 @@ public class LotController {
 	               propsInfo.put("type", lotVO.getPri_info());
 	               propsInfo.put("price", lotVO.getPri_charge());
 	               propsInfo.put("address", lotVO.getPri_addr());
-	               propsInfo.put("position", positionInfo);
 	               //위도 경도 추가
-	               positionInfo.put("lat", lotVO.getPri_lat());
-	               positionInfo.put("lng", lotVO.getPir_long());
+	               	positionInfo.put("lat", lotVO.getPri_lat());
+	               	positionInfo.put("lng", lotVO.getPri_long());
+	               propsInfo.put("position", positionInfo);   	
 	               propsInfo.put("markerIcon", "marker-green.png");
 	               propsArray.add(propsInfo);
+	               System.out.println(propsArray.size());
 	           }
 	           jsonObject.put("props", propsArray);
 	           

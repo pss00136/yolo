@@ -190,10 +190,9 @@
         pixelOffset: new google.maps.Size(-101, -285),
         zIndex: null,
         boxStyle: {
-            background: "url('images/infobox-bg.png') no-repeat",
+            background: "url('/Yolo/images/infobox-bg.png') no-repeat",
             opacity: 1,
             width: "202px",
-            height: "245px"
         },
         closeBoxMargin: "28px 26px 0px 0px",
         closeBoxURL: "",
@@ -336,6 +335,7 @@
 
     setTimeout(function() {
         $('body').removeClass('notransition');
+        alert(props.props[4].address);
         map = new google.maps.Map(document.getElementById('mapView'), options);
         var styledMapType = new google.maps.StyledMapType(styles, {
             name : 'Styled'

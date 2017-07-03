@@ -27,7 +27,7 @@ public class LotListVO {
 	private String pri_weekendo;  /* 주말운영시간 */
 	private String pri_weekende;  /* 주말종료시간 */
 	private String pri_lat;       /* 위도 */
-	private String pir_long;      /* 경도 */
+	private String pri_long;      /* 경도 */
 	private String pri_tel;       /* 전화번호 */
 	private String pri_web;       /* 홈페이지 */
 	private int pri_bookcount;    /* 예약수 */
@@ -36,19 +36,20 @@ public class LotListVO {
 	private String pri_confirm;   /* 관리자승인여부 */
 	
 	/* Constructor */
-	public LotListVO(){}
 	
-	public LotListVO(String priimg_num, String pri_num, String priimg_path, String priimg_name, String h_num,
+	public LotListVO() {}
+
+	public LotListVO(String priimg_num, String priimg_path, String priimg_name, String pri_num, String h_num,
 			String pri_type, String pri_charge, String pri_booktype, String pri_title, String pri_addr, String pri_tag,
 			String pri_content, String pri_info, String pri_account, int pri_weekprice, int pri_weekendprice,
 			String pri_facility, int pri_minpeople, int pri_maxpeople, String pri_weekdayo, String pri_weekdaye,
-			String pri_weekendo, String pri_weekende, String pri_lat, String pir_long, String pri_tel, String pri_web,
+			String pri_weekendo, String pri_weekende, String pri_lat, String pri_long, String pri_tel, String pri_web,
 			int pri_bookcount, int pri_bookmark, String pri_regdate, String pri_confirm) {
 		super();
 		this.priimg_num = priimg_num;
-		this.pri_num = pri_num;
 		this.priimg_path = priimg_path;
 		this.priimg_name = priimg_name;
+		this.pri_num = pri_num;
 		this.h_num = h_num;
 		this.pri_type = pri_type;
 		this.pri_charge = pri_charge;
@@ -69,7 +70,7 @@ public class LotListVO {
 		this.pri_weekendo = pri_weekendo;
 		this.pri_weekende = pri_weekende;
 		this.pri_lat = pri_lat;
-		this.pir_long = pir_long;
+		this.pri_long = pri_long;
 		this.pri_tel = pri_tel;
 		this.pri_web = pri_web;
 		this.pri_bookcount = pri_bookcount;
@@ -81,6 +82,7 @@ public class LotListVO {
 	/* End of Constructor */
 	
     /* Getters and Setters */
+
 	public String getPriimg_num() {
 		return priimg_num;
 	}
@@ -273,12 +275,12 @@ public class LotListVO {
 		this.pri_lat = pri_lat;
 	}
 
-	public String getPir_long() {
-		return pir_long;
+	public String getPri_long() {
+		return pri_long;
 	}
 
-	public void setPir_long(String pir_long) {
-		this.pir_long = pir_long;
+	public void setPri_long(String pri_long) {
+		this.pri_long = pri_long;
 	}
 
 	public String getPri_tel() {
@@ -328,7 +330,7 @@ public class LotListVO {
 	public void setPri_confirm(String pri_confirm) {
 		this.pri_confirm = pri_confirm;
 	}
-	
+
 	
 	
 	
