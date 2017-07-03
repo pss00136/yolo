@@ -10,5 +10,7 @@
 		<typeAlias type="yolo.lot.dto.LotListVO" alias="lotlistVO" />
 		<typeAlias type="yolo.share.dto.ShareVO" alias="sharevo" />
 		<typeAlias type="yolo.club.dto.ClubVO" alias="ClubVO" />
+		<typeAlias type="yolo.share.dto.InputListVO" alias="shareinputlist" />
+		
 	</typeAliases>
 </configuration>

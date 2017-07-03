@@ -1,5 +1,8 @@
 package yolo.share.service;
 
+import java.util.List;
+
+import yolo.share.dto.InputListVO;
 import yolo.share.dto.ShareVO;
 
 /*
@@ -13,5 +16,9 @@ import yolo.share.dto.ShareVO;
 public interface ShareService {
 	
 	public int shareInput(ShareVO vo);
+
+	public List<ShareVO> shareList();
+
+	public List<InputListVO> inputList(String uid);
 
 }

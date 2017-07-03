@@ -1,12 +1,14 @@
 package yolo.share.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-
+import yolo.share.dto.InputListVO;
 import yolo.share.dto.ShareVO;
 import yolo.share.service.ShareService;
 
@@ -30,12 +32,48 @@ public class ShareController {
 	
 	/*
 	 * @메소드명: shareInput
+	 * @역활 : 쉐어링 Input 페이지 보여주기
+	 * @param 없음
+	 * @return ModelAndView로 반환
+	 */
+	@RequestMapping("ShareInput.share")
+	public ModelAndView shareInput(String uid){
+		//uid 회원아이디
+		String tempuid = "ckswhd1128";
+		List<InputListVO> list = service.inputList(tempuid);
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("list", list);
+		mv.setViewName("/comShare/ShareInput");
+
+		return mv;
+	}
+	
+	/*
+	 * @메소드명: shareList
+	 * @역활 : 쉐어링 List 페이지 보여주기
+	 * @param 없음
+	 * @return ModelAndView로 반환
+	 */
+	@RequestMapping("ShareList.share")
+	public ModelAndView shareList(ShareVO vo){
+		
+		List<ShareVO> list = service.shareList();
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("list", list);
+		mv.setViewName("/comShare/ShareList");
+
+		return mv;
+	}
+	
+	
+	/*
+	 * @메소드명: shareInput
 	 * @역활 : 쉐어링 글등록하고 ShareList로 페이지 전환
 	 * @param 없음
 	 * @return ModelAndView로 반환
 	 */
 	@RequestMapping("ShareInputOk.share")
-	public String shareInput(ShareVO vo){
+	public String shareInputOk(ShareVO vo){
 		
 		int result = service.shareInput(vo);
 		String message = "입력실패";

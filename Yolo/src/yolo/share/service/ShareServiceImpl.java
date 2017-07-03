@@ -1,9 +1,12 @@
 package yolo.share.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import yolo.share.dao.ShareDAO;
+import yolo.share.dto.InputListVO;
 import yolo.share.dto.ShareVO;
 @Service
 public class ShareServiceImpl implements ShareService{
@@ -18,4 +21,17 @@ public class ShareServiceImpl implements ShareService{
 		return result;
 	}
 
+	@Override
+	public List<ShareVO> shareList() {
+		
+		return sharedao.shareList();
+	}
+
+	@Override
+	public List<InputListVO> inputList(String uid) {
+		
+		return sharedao.shareInputList(uid);
+	}
+
+	
 }

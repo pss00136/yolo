@@ -19,8 +19,7 @@
         <link href="<c:url value='/css_yolo/cssView/common/app.css'/>" rel="stylesheet">
         <!-- 추가CSS -->
         <link href="<c:url value='/css_yolo/cssView/common/main_style.css'/>" rel="stylesheet">
-        
- 
+
 </head>
 <body class="notransition">
       <!-- Header -->
@@ -48,7 +47,7 @@
 	</div>
 	<tiles:insertAttribute name="login"></tiles:insertAttribute>
 	<tiles:insertAttribute name="join"></tiles:insertAttribute>
-
+    
 	<script src=" <c:url value='/js/json2.js'/> "></script>
         <script src=" <c:url value='/js/jquery-2.1.1.min.js'/> "></script>
         <script src=" <c:url value='/js/underscore.js'/> "></script>
@@ -73,5 +72,7 @@
       <script src=" <c:url value='/js/home.js'/> " type="text/javascript"></script>
       <!-- ShareInput.js by 찬종 -->
       <script  src=" <c:url value='/js_yolo/comShare/shareInput.js'/> " type="text/javascript"></script>
+     	
+      
 </body>
 </html>
