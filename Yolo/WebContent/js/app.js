@@ -336,7 +336,6 @@
 
     setTimeout(function() {
         $('body').removeClass('notransition');
-        alert("지도 호출");
         map = new google.maps.Map(document.getElementById('mapView'), options);
         var styledMapType = new google.maps.StyledMapType(styles, {
             name : 'Styled'
