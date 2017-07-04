@@ -170,7 +170,7 @@
                         <div class="carousel-inner">
                             <div class="item active">
                             	 <div class="btn-group" data-toggle="buttons">
-									<label class="btn btn-o btn-warning">
+									<label class="btn btn-o btn-warning active">
 										<input type="checkbox" autocomplete="off" checked><span>09:00</span>
 									</label>
 									<label class="btn btn-o btn-warning">
