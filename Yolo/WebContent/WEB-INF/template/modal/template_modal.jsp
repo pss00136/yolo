@@ -21,6 +21,17 @@
 <link href="<c:url value='/css/app.css'/>" rel="stylesheet">
 <link href="<c:url value='/css_yolo/cssView/common/app.css'/>"
 	rel="stylesheet">
+	
+ <!--share date time picker CSS-->
+<link href="<c:url value='/css/jquery-ui.css'/>" rel="stylesheet">
+<link href="<c:url value='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900'/>" rel="stylesheet" type="text/css">
+<link href="<c:url value='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800'/>" rel="stylesheet" type="text/css">
+<link href="<c:url value='http://fonts.googleapis.com/css?family=Montserrat:400,700'/>" rel="stylesheet" type="text/css">
+<link href="<c:url value='http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css'/>" rel="stylesheet" type="text/css">
+<link href="<c:url value='http://www.jqueryscript.net/css/jquerysctipttop.css'/>" rel="stylesheet" type="text/css">
+<link href="<c:url value='/css_yolo/cssView/comShare/datetimePicker.css'/>" rel="stylesheet">	
+	
+<link href="<c:url value='/css_yolo/cssView/common/main_style.css'/>" rel="stylesheet">	
 <style type="text/css">
 #footer_title {
 	font-size: 3em;
@@ -90,5 +101,12 @@
 
 	<!-- 추가  -->
 	<script src=" <c:url value='/js/home.js'/> " type="text/javascript"></script>
+	
+<!-- share date picker JS -->
+<script src=" <c:url value='http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'/>"></script> 
+<script src=" <c:url value='/js_yolo/comShare/ios-7-date-picker.js'/>"></script>
+<script src=" <c:url value='/js_yolo/comShare/datetimePicker.js'/>"></script>
+
+
 </body>
 </html>

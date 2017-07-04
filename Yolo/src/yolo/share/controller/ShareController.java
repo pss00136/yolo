@@ -88,6 +88,17 @@ public class ShareController {
 	}
 	
 	/*
+	 * @메소드명: shareDetail
+	 * @역활 : ShareDetail페이지 전환
+	 * @param 없음
+	 * @returnString:반환하는 경로
+	 */
+	@RequestMapping("/ShareDetail.share")
+	public String shareDetail(){
+		return "/comShare/ShareDetail/modal_share.modal";
+	}
+	
+	/*
 	 * @메소드명: shareView
 	 * @역활 : url 따라서 페이지 전환
 	 * @param 없음

@@ -86,7 +86,7 @@
 		                                    <a></a>
 		                                    <div class="mainFunction summaryItem">
 				                                <div class="clearfix"></div>
-							            		<div class="btn">
+							            		<div id="app" class="btn">
 													<div class="btn">
 														<a data-toggle="modal" href="#contactAgent"
 															class="btn btn-lg btn-round btn-green">문의하기</a>
