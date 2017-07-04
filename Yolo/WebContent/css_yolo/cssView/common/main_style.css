@@ -1,7 +1,7 @@
 @CHARSET "UTF-8";
 
-#modal_login_btn {
-	
+#modal_login_btn, #modal_join_btn {
+	width:100%;
 }
 
 /*상단메뉴 - 로그인,회원가입버튼*/

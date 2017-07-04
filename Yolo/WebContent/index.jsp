@@ -314,7 +314,7 @@
 						</div>
 						<span id="guide" style="color:#999"></span>
 						<div class="form-group">
-							<button type="submit" class="btn btn-lg btn-green">가입하기</button>
+							<button type="submit" id="modal_join_btn" class="btn btn-lg btn-green">가입하기</button>
 						</div>
 						<p class="help-block">
 							회원이신가요? <a href="/Yolo/views/login/login.user" class="text-green">로그인하기</a>
