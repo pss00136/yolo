@@ -22,65 +22,16 @@
         <![endif]-->
         
         <!-- 추가 CSS -->
-        
         <link href="/Yolo/css_yolo/cssView/comShare/ShareDetail.css" rel="stylesheet">
         
-        
         <!-- date time picker CSS-->
+		<link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet" type="text/css">
+		<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+		<link href="/Yolo/css_yolo/cssView/comShare/datetimePicker.css" rel="stylesheet">
 
-<style>
-.carousel-control.right {
-    right: 0;
-    left: auto;
-    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .0001) 0%, rgba(255, 255, 255, 0.5) 100%);
-    color: rgb(242, 118, 0);
-}
-
-.carousel-control {
-    position: absolute;
-    top: -15px;
-    bottom: 0;
-    left: 4px;
-    width: 5%;
-    font-size: 20px;
-    color: #000000;
-    text-align: center;
-    text-shadow: 0 1px 0px rgba(0, 0, 0, 0.57);
-    filter: alpha(opacity=50);
-    opacity: .5;
-}
-
-.carousel-control.left {
-    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .0001) 0%, rgba(255, 255, 255, 0.5) 100%);
-    color: rgb(242, 118, 0);
-}
-
-.btn-group, .btn-group-vertical{
-	display: inline-flex;
-}
-
-.carousel-inner {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    margin-left: 23px;
-}
-.btn-o.btn-warning{
-	margin-right: 4px;
-}
-</style>
-
-
-<script type="text/javascript">
-$(document).ready(function() {
-	  $('#media').carousel({
-	    pause: true,
-	    interval: false,
-	    
-	  });
-	});
-
-</script>	
 
 
     </head>
@@ -186,13 +137,6 @@ $(document).ready(function() {
 			</div>
 
 
-
-
-
-
-
-
-
 		        <!-- ------------------------------------------------------- -->
 		        <!-- Footer -->
 		        <%@include file="/view/common/footer.jsp"%>   
@@ -203,20 +147,24 @@ $(document).ready(function() {
 
 
 
-
-
-
 	<!-- modal popup -->
+	
 	<div class="modal fade" id="application"
 		role="dialog" aria-labelledby="contactLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
+			
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal"
 						aria-hidden="true">×</button>
 				</div>
-				<div class="modal-body">
 				
+				<div class="modal-body">
+					<!-- date picker -->
+					<div class='formInput dateSelector'> 
+						<input type='input' class='icon-calendar' id='hbdsdf' value='yyyy.mm.dd' />
+					</div>
+					
 					<div id="propWidget-3" class="carousel slide propWidget-3" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="item active">
@@ -245,10 +193,6 @@ $(document).ready(function() {
 									<label class="btn btn-o btn-warning">
 										<input type="checkbox" autocomplete="off"><span>16:00</span>
 									</label>			
-								</div>
-                            </div>
-                            <div class="item">
-                                <div class="btn-group" data-toggle="buttons">
 									<label class="btn btn-o btn-warning">
 										<input type="checkbox" autocomplete="off"><span>17:00</span>
 									</label>
@@ -276,10 +220,9 @@ $(document).ready(function() {
 								</div>       
                             </div>
                         </div>
-                        <a class="left carousel-control" href="#propWidget-3" role="button" data-slide="prev"><span class="fa fa-chevron-left"></span></a>
-                        <a class="right carousel-control" href="#propWidget-3" role="button" data-slide="next"><span class="fa fa-chevron-right"></span></a>
                     </div>
 				</div>
+				
 				<div class="modal-footer">
 					<a href="#" data-dismiss="modal"
 						class="btn btn-round btn-o btn-warning">쉐어신청하기</a> 
@@ -312,11 +255,10 @@ $(document).ready(function() {
         
         <!-- 추가  -->
 		<script src="/Yolo/js/home.js" type="text/javascript"></script>
-		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-        
-        <!-- date time picker JS -->
-    	
-    	
+		
+        <!-- date picker JS -->
+    	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script> 
+		<script src="/Yolo/js_yolo/comShare/ios-7-date-picker.js"></script>
+		<script src="/Yolo/js_yolo/comShare/datetimePicker.js"></script>
     </body>
 </html>
