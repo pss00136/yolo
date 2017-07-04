@@ -31,10 +31,6 @@
 }
 
 /* 쓰리버튼 메인용 스타일시트 추가*/
-#mainbody>#wrapper {
-	margin: 60px 0 0 0;
-}
-
 #menu1 {
 	background-image: url("/Yolo/images_yolo/common/lot.jpg");
 	background-size: cover;

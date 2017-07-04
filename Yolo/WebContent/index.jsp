@@ -164,7 +164,7 @@
 	<!-- Header End-->
 
 	<!-- Content -->
-	<div id="wrapper" class="full">
+	<div id="wrapper" class="full" style="margin: 60px 0 0 0;" >
 		<div id="content" class="max full">
 			<div class="main" style="height:100%;">
 				<ul class="cbp-ig-grid" style="height:100%;">

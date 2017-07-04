@@ -34,7 +34,7 @@
         <tiles:insertAttribute name="header" />
         <tiles:insertAttribute name="menu" />
 
-	<div id="wrapper" class="full">
+	<div id="wrapper" class="full" style="margin: 60px 0 0 0;">
 		<div id="content" class="max full">
 			<!-- -----------------여기에 컨텐츠 div넣으세요----------------- -->
 			<!-- 이 사이에! -->
