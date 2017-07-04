@@ -191,7 +191,7 @@
 
 @media screen and (max-width: 62.75em) {
 	.cbp-ig-grid li {
-		width: 50%;
+		width: 33.3%;
 	}
 
 	/* reset the grid lines */
@@ -214,20 +214,39 @@
 }
 
 @media screen and (max-width: 41.6em) { 
+	#mainbody > #wrapper{
+		margin: 50px 0 0 0;
+	}
 	.cbp-ig-grid li {
-		width: 100%;
+		height:33.3%;
+		width:100%;
 	}
 
-	.cbp-ig-grid li:nth-child(-n+2){
-		border-top: 1px solid #ddd;
-	}
+/* 	.cbp-ig-grid li:nth-child(-n+2){ */
+/* 		border-top: 1px solid #ddd; */
+/* 	} */
 
-	.cbp-ig-grid li:nth-child(2n-1) {
-		box-shadow: none
-	}
+/* 	.cbp-ig-grid li:nth-child(2n-1) { */
+/* 		box-shadow: none */
+/* 	} */
 
-	.cbp-ig-grid li:first-child {
-		border-top: none;
+/* 	.cbp-ig-grid li:first-child { */
+/* 		border-top: none; */
+/* 	} */
+	.cbp-ig-grid li > a{
+	padding-top:20%;
+	}
+	.cbp-ig-grid li > a > p{
+	display: none;
+	}
+	.cbp-ig-grid li > a > hr{
+	display: none;
+	}
+	.cbp-ig-grid {
+		font-size: 80%;
+	}
+	.cbp-ig-grid li > a > .cbp-ig-category{
+		display: none;
 	}
 }
 
