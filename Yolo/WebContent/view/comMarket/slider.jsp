@@ -24,13 +24,13 @@
 
 .carousel, .item, .active {
     height: 45%;
-    width: 65%;
+    width: 35%;
 }
 
 @media (max-width: 768px) { 
    .carousel, .item, .active, img { 
     width: 100%; 
-    height: 80%;
+    height: 60%;
     margin : 0; 
    } 
 } 
@@ -67,6 +67,7 @@ img{
 
 .carousel-inner > .next,
 .carousel-inner > .prev{
+	width: 100%;
 	height: 100%;
 } 
 
