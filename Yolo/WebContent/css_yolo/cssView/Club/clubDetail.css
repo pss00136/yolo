@@ -3,7 +3,6 @@
 <!-- clubdetail.css -->
 .singleTop ul.users{
    float: left;
-    list-style-type: none;
     margin: 0;
     padding: 0;
 }
@@ -14,7 +13,7 @@
     color: #333;
     font-size: 13px;
     line-height: 13px;
-    
+    list-style-type: none;
 }
 
 .singleTop ul.features li span {

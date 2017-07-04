@@ -272,7 +272,7 @@
                     		<c:otherwise>
                     			<c:forEach items="${list}" var="c">
 			                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-			                            <a href="ClubDetail.club?c_num=${c.c_num}" class="card">
+			                            <a href="/Yolo/club/ClubDetail.club?c_num=${c.c_num}" class="card">
 			                                <div class="figure">
 			                                    <img src="/Yolo/upload/club/${c.cimg_name}" alt="image">
 			                                    <div class="figCaption">

@@ -6,8 +6,7 @@
 <link href="/Yolo/css_yolo/cssView/Club/clubInput.css" rel="stylesheet">
 <link href="/Yolo/css_yolo/cssView/Club/tagPlus.css" rel="stylesheet">
 <link href="/Yolo/css/jquery.tagsinput.css" rel="stylesheet">
-<link href="/Yolo/css_yolo/cssView/lot/lotInputSecond.css"
-	rel="stylesheet">
+<link href="/Yolo/css_yolo/cssView/lot/lotInputSecond.css" rel="stylesheet">
 
 			<div class="home-wrapper">
 				<!-- 제목 -->

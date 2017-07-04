@@ -88,7 +88,8 @@
                                 <div class="mainFunction summaryItem">
                                      <div class="clearfix"></div>
                                     <a data-toggle="modal" href="#contactAgent" class="btn btn-lg btn-round btn-green contactBtn">문의하기</a>
-                                    <a href="#confirmSigning" class="btn btn-lg btn-round btn-green applyBtn">신청하기</a>
+<!--                                     <a href="#confirmSigning" class="btn btn-lg btn-round btn-green applyBtn">신청하기</a> -->
+                                    <a type="submit" class="btn btn-lg btn-round btn-green applyBtn">신청하기</a>
                                 </div>
                             </div>
                         </div>
