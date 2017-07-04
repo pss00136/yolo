@@ -58,7 +58,7 @@ public class ShareController {
 	 * @return ModelAndView로 반환
 	 */
 	@RequestMapping("ShareList.share")
-	public ModelAndView shareList(ShareVO vo){
+	public ModelAndView shareList(){
 		
 		List<ShareMainListVO> list = service.shareList();
 		ModelAndView mv = new ModelAndView();

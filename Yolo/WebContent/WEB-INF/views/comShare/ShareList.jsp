@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!-- 추가CSS -->
 <link href="/Yolo/css_yolo/cssView/comShare/ShareList.css" rel="stylesheet">
 
@@ -10,7 +10,14 @@
 		    <div id="hero-container-map">
 		        <div id="home-map"></div>
 		    </div>
-		        
+		    <% String u_id = ""; 
+		     // 세션에 있는 id값 가져오기
+		     u_id = (String)session.getAttribute("u_id");
+		     
+		     //로그인해야하는 경우
+		     if( u_id==null || u_id==""){}else{ 
+		     // 로그인 된 경우
+		     %> 
 		    <div class="row bounds padding" >
 				<div class="col-md-12 col-xs-12" style="text-align:right;">
 					<div style="display:inline-block;">
@@ -18,7 +25,7 @@
 					</div>
 				</div>				
 			</div>
-			
+			<%} %> 
 			<!-- 타이틀 부분 -->
 			<div class="row bounds padding" >			
 				<div class="col-md-12 col-xs-12">
@@ -31,106 +38,37 @@
 			<hr id="Share_title_hr" class="bounds padding"/>	
 			<!-- 리스트 목록 -->
 			<div class="bounds padding">
+				<c:choose>
+					<c:when test="${list == null}">
+						<h1 class="tab center bounds padding active">검색된 쉐어링이 없습니다.</h1>
+					</c:when>
 				<!-- 리스트 -->
 				<a href="/Yolo/comShare/ShareDetail.share" class="item zoom active">
 					<div class="column">
 						<div class="image">
-							<img id="ctl00_body_rptProducts_ctl00_imgProduct"
-								class="cover accelerate"
-								src="/Yolo/images_yolo/lot/1.PNG"
-								alt="antimicrobial alphasan additive prevents odors" />
+							<img class="cover accelerate"
+								src="/Yolo/upload/lot/${a.priimg_name}"
+								alt="${a.pri_addr}" />
 							<div class="link-abs">
-								<p class="link-col-text">View More...</p>
+								<p class="link-col-text">자세히 보기</p>
 							</div>
 						</div>
 					</div>
 					<div class="column">
 						<div class="text">
-							<h2>스터디룸 쉐어해요!</h2>
+							<h2>${a.sl_title}</h2>
 							<hr/>
 							<p>
 								<span class="text-smaller">스터디룸 쉐어링</span>
 							</p>
-							<p>by LeeYJ</p>
-							<p style="float:right;">2017-07-12 / 3pm ~ 9pm</p>
+							<p>${a.u_id}</p>
+							<p style="float:right;">${a.sl_time}</p>
 						</div>
 					</div>
 				</a><!-- 리스트의 끝 -->
-				<!-- 리스트 -->
-				<a href="/Yolo/comShare/ShareDetail.share" class="item zoom active">
-					<div class="column">
-						<div class="image">
-							<img id="ctl00_body_rptProducts_ctl00_imgProduct"
-								class="cover accelerate"
-								src="/Yolo/images_yolo/lot/2.PNG"
-								alt="antimicrobial alphasan additive prevents odors" />
-							<div class="link-abs">
-								<p class="link-col-text">View More...</p>
-							</div>
-						</div>
-					</div>
-					<div class="column">
-						<div class="text">
-							<h2>파티룸 쉐어해요~~~</h2>
-							<hr/>
-							<p>
-								<span class="text-smaller">파티룸 쉐어링</span>
-							</p>
-							<p>by LeeYJ</p>
-							<p style="float:right;">2017-07-12 / 3pm ~ 9pm</p>
-						</div>
-					</div>
-				</a><!-- 리스트의 끝 -->
-				<!-- 리스트 -->
-				<a href="/Yolo/comShare/ShareDetail.share" class="item zoom active">
-					<div class="column">
-						<div class="image">
-							<img id="ctl00_body_rptProducts_ctl00_imgProduct"
-								class="cover accelerate"
-								src="/Yolo/images_yolo/lot/3.PNG"
-								alt="antimicrobial alphasan additive prevents odors" />
-							<div class="link-abs">
-								<p class="link-col-text">View More...</p>
-							</div>
-						</div>
-					</div>
-					<div class="column">
-						<div class="text">
-							<h2>다목적실 쉐어합니다</h2>
-							<hr/>
-							<p>
-								<span class="text-smaller">다목적실 쉐어링</span>
-							</p>
-							<p>by LeeYJ</p>
-							<p style="float:right;">2017-07-12 / 3pm ~ 9pm</p>
-						</div>
-					</div>
-				</a><!-- 리스트의 끝 -->
-				<!-- 리스트 -->
-				<a href="/Yolo/comShare/ShareDetail.share" class="item zoom active">
-					<div class="column">
-						<div class="image">
-							<img id="ctl00_body_rptProducts_ctl00_imgProduct"
-								class="cover accelerate"
-								src="/Yolo/images_yolo/lot/4.PNG"
-								alt="antimicrobial alphasan additive prevents odors" />
-							<div class="link-abs">
-								<p class="link-col-text">View More...</p>
-							</div>
-						</div>
-					</div>
-					<div class="column">
-						<div class="text">
-							<h2>연습실 쉐어합니다~~~~</h2>
-							<hr/>
-							<p>
-								<span class="text-smaller">연습실 쉐어링</span>
-							</p>
-							<p>by KimCJ</p>
-							<p style="float:right;">2017-07-12 / 3pm ~ 9pm</p>
-						</div>
-					</div>
-				</a><!-- 리스트의 끝 -->
+				
+				
+				</c:choose>
 				<!-- 페이징 부분 -->
 				<div class="row bounds padding" style="text-align:center;">
 					<div class="col-md-4"></div>

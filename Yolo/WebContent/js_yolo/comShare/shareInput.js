@@ -11,7 +11,7 @@
 		    alert("글내용을 입력해주세요.");
 		    return false;
 		}
-		if( $("input:radio[name=b_id]").is(".checked") == false){
+		if( $("input:radio[name=b_id]:checked").length < 1){
 			alert("예약공간을 선택해주세요");
 			return false;
 		}

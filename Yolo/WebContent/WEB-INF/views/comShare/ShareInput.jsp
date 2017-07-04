@@ -43,7 +43,10 @@
 															<c:choose>
 																<c:when test="${fn:length(list) eq 0 }">
 																	<tr>
-																		<td>글록된 게시물이 없습니다.</td>
+																		<td>예약된 공간이 없습니다.</td>
+																	</tr>
+																	<tr>
+																	<button class="col-md-2 btn btn-round btn-o btn-green">공간 찾아보기</button>
 																	</tr>															
 																</c:when>
 															<c:otherwise>
