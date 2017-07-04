@@ -24,7 +24,7 @@
 									<label class="btn btn-o btn-warning active">
 										<input type="checkbox" autocomplete="off" checked><span>09:00</span>
 									</label>
-									<label class="btn btn-o btn-warning">
+									<label class="btn btn-o btn-warning disabled">
 										<input type="checkbox" autocomplete="off"><span>10:00</span>
 									</label>			
 									<label class="btn btn-o btn-warning">
