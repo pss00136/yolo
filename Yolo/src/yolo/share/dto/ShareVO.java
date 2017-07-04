@@ -37,112 +37,88 @@ public class ShareVO {
 	private String sl_regdate; /* 등록일 */
 	private int sl_hits; /* 조회수 */
 	private int sl_people; /* 제한 인원수 */
-	private int sl_addfee; /* 추가요금 */
-	
-	
-	/* Constructor */
-	public ShareVO(String sl_num, String u_id, String sl_title, String sl_content, String sl_time, int sl_price,
-			String sl_regdate, int sl_hits, int sl_people, int sl_addfee) {
-		super();
-		this.sl_num = sl_num;
-		this.u_id = u_id;
-		this.sl_title = sl_title;
-		this.sl_content = sl_content;
-		this.sl_time = sl_time;
-		this.sl_price = sl_price;
-		this.sl_regdate = sl_regdate;
-		this.sl_hits = sl_hits;
-		this.sl_people = sl_people;
-		this.sl_addfee = sl_addfee;
-	}
-
-	public ShareVO() {
-		super();
-	}
-	/* Constructor end */
-	
-	/* Setter & Getter */
+	private int b_id; /* 예약번호 */
 	public String getSl_num() {
 		return sl_num;
 	}
-
 	public void setSl_num(String sl_num) {
 		this.sl_num = sl_num;
 	}
-
 	public String getU_id() {
 		return u_id;
 	}
-
 	public void setU_id(String u_id) {
 		this.u_id = u_id;
 	}
-
 	public String getSl_title() {
 		return sl_title;
 	}
-
 	public void setSl_title(String sl_title) {
 		this.sl_title = sl_title;
 	}
-
 	public String getSl_content() {
 		return sl_content;
 	}
-
 	public void setSl_content(String sl_content) {
 		this.sl_content = sl_content;
 	}
-
 	public String getSl_time() {
 		return sl_time;
 	}
-
 	public void setSl_time(String sl_time) {
 		this.sl_time = sl_time;
 	}
-
 	public int getSl_price() {
 		return sl_price;
 	}
-
 	public void setSl_price(int sl_price) {
 		this.sl_price = sl_price;
 	}
-
 	public String getSl_regdate() {
 		return sl_regdate;
 	}
-
 	public void setSl_regdate(String sl_regdate) {
 		this.sl_regdate = sl_regdate;
 	}
-
 	public int getSl_hits() {
 		return sl_hits;
 	}
-
 	public void setSl_hits(int sl_hits) {
 		this.sl_hits = sl_hits;
 	}
-
 	public int getSl_people() {
 		return sl_people;
 	}
-
 	public void setSl_people(int sl_people) {
 		this.sl_people = sl_people;
 	}
-
-	public int getSl_addfee() {
-		return sl_addfee;
+	public int getB_id() {
+		return b_id;
 	}
-
-	public void setSl_addfee(int sl_addfee) {
-		this.sl_addfee = sl_addfee;
+	public void setB_id(int b_id) {
+		this.b_id = b_id;
 	}
-		
-	/* Setter & Getter  end*/
+	public ShareVO(String sl_num, String u_id, String sl_title, String sl_content, String sl_time, int sl_price,
+			String sl_regdate, int sl_hits, int sl_people, int b_id) {
+		super();
+		this.sl_num = sl_num;
+		this.u_id = u_id;
+		this.sl_title = sl_title;
+		this.sl_content = sl_content;
+		this.sl_time = sl_time;
+		this.sl_price = sl_price;
+		this.sl_regdate = sl_regdate;
+		this.sl_hits = sl_hits;
+		this.sl_people = sl_people;
+		this.b_id = b_id;
+	}
+	public ShareVO() {
+		super();
+	}
+	
+	
+	/* Constructor */
+	
 	
 	
 	

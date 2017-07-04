@@ -7,12 +7,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 	
 
-<!-- 회원가입 sql -->
+<!-- 등록 sql -->
 <insert id="shareInsert" parameterType="sharevo"> <!-- insert,delete,update는 리턴타입 필요없음 -->
 	INSERT INTO SHARELOT2
-	(sl_num, u_id, sl_title, sl_content, sl_time, sl_price, sl_regdate, sl_hits, sl_people, sl_addfee)
+	(sl_num, u_id, sl_title, sl_content, sl_time, sl_price, sl_regdate, sl_hits, sl_people, b_id)
 	VALUES
-	(SHARELOT_NO_SEQ.nextval, 'ckswhd1128', #{sl_title}, #{sl_content},'공유 시간', '공유 가격', '등록일', '조회수', '제한 인원수', '추가요금')
+	(SHARELOT_NO_SEQ.nextval, 'ckswhd1128', #{sl_title}, #{sl_content},'06:00~15:00', '50000', sysdate , 0 , 5 , #{b_id})
 </insert>
 
 <select id="shareList" resultType="sharevo">
@@ -24,6 +24,6 @@ FROM sharelot2
 <select id="shareInputList" parameterType="string" resultType="shareinputlist">
 SELECT i.priimg_num priimg_num, i.priimg_path priimg_path, i.priimg_name priimg_name, p.pri_num pri_num, p.pri_title pri_title, p.pri_addr pri_addr, b.b_id b_id, b.u_id u_id, b.b_date b_date
 FROM privatelot P , booklot b, privateimage i
-WHERE b.U_ID = 'ckswhd1128' and  p.pri_num = b.pri_num and i.PRI_NUM = p.pri_num
+WHERE b.U_ID = #{uid} and  p.pri_num = b.pri_num and i.PRI_NUM = p.pri_num
 </select>
 </mapper>

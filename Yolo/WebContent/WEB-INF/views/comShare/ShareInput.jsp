@@ -17,7 +17,7 @@
 							<h4>쉐어링 정보입력</h4>
 							<hr>
 							<br />
-							<form id="shareInputForm1" name="shareInputForm1" method="post" action="ShareInputOk.share" class="form-horizontal" role="form" >
+							<form id="shareInputForm1" name="shareInputForm1"  method="post" action="ShareInputOk.share" class="form-horizontal" role="form" >
 								<!-- 글 제목 입력 -->
 								<div class="form-group">
 									<label class="col-sm-2 control-label">글 제목</label>
@@ -49,7 +49,7 @@
 																<c:forEach items="${list}" var="a">
 																	<tr>
 																		<td><div class="radio custom-radio">
-																		<label><input type="radio" name="radio1"><span
+																		<label><input type="radio" name="b_id" value="${a.b_id }"><span
 																			class="fa fa-circle"></span></label>
 																			</div></td>
 																		<td><img alt="" src="/Yolo/images_yolo/lot/${a.priimg_name}"
