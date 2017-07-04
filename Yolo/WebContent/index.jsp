@@ -58,8 +58,6 @@
 		if( u_id==null || u_id=="" ){%>		
 		<!-- 로그인 회원가입 -->
 		<div class="headerUserWraper" id="signdiv">
-			<!-- 호스트 버튼 -->
-<!-- 			<a id="hostbtn" href="/Yolo/host/HostMain.host" class="headerUser btn btn-o btn-gray">호스트 센터</a>						 -->
 			<a href="#signin" class="userHandler modal-toggle" data-toggle="modal"><span class="icon-login"></span>
 			<a href="#signup" class="userHandler modal-toggle" data-toggle="modal"><span class="icon-note"></span>
 			<a href="/Yolo/host/HostMain.host" class="userHandler"><span class="icon-user-follow"></span></a> 
@@ -114,20 +112,11 @@
 			<a href="/Yolo/host/HostMain.host" class="userHandler"><span class="icon-user-follow"></span></a> 
 			<a id="hostbtn" href="/Yolo/host/HostMain.host" class="headerUser btn btn-o btn-gray">호스트 센터</a>
 		</div>
-
-		<!-- 호스트 페이지 버튼 부분 끝 -->
 		<!-- 상단 메뉴 알림부분 끝 -->					
 		<% } %>	
-		<!-- 호스트센터 들어가기 -->
-<!-- 		<div class="headerUserWraper"> -->
-<!-- 			<a href="/Yolo/host/HostMain.host" class="userHandler"><span -->
-<!-- 				class="icon-user-follow"></span></a> <a id="hostbtn" -->
-<!-- 				href="/Yolo/host/HostMain.host" id="hostcenter" -->
-<!-- 				class="headerUser btn btn-o btn-gray"> 호스트 센터 </a> -->
-<!-- 		</div> -->
-		<!-- 호스트 센터 들어가기 끝 -->			
+		
 		<div class="clearfix"></div>
-	</div>
+	</div><!-- Header END -->
 		<!-- 좌측 네비게이션 메뉴 -->
 		<div id="leftSide">
 			<nav class="leftNav scrollable">
@@ -144,7 +133,10 @@
 					<li class="hasSub">
 						<a href="/Yolo/comShare/ShareList.share"><span class="navIcon fa fa-globe"></span>
 						<span class="navLabel">공간쉐어링</span></a>
-					</li>
+					</li>			
+		<% 		
+		if( u_id==null || u_id=="" ){%>	
+		<%}else{%>
 					<li class="hasSub"><a href="#">
 						<span class="navIcon fa fa-cog"></span>
 						<span class="navLabel">마이페이지</span>
@@ -162,8 +154,8 @@
 							<li><a href="/Yolo/mypage/info/MyInfoModify.myinfo">개인정보수정</a></li>
 							<li><a href="/Yolo/mypage/info/MyInfoModify.myinfo">비밀번호변경</a></li>				
 						</ul>
-					</li>			
-		
+					</li>				
+		<%}%>
 				</ul><!-- 네비게이션 메뉴 끝 -->
 			</nav>
 
@@ -335,9 +327,6 @@
 			</div>
 		</div>
 	</div><!-- 회원가입 Modal END -->
-
-
-
 
 
 	<!-- javascript -->

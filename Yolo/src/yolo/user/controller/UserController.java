@@ -60,7 +60,7 @@ public class UserController {
 		}
 		mv.addObject(result);
 		mv.addObject(message);
-		mv.setViewName("/common/main");
+		mv.setViewName("/common/main.main");
 
 		return mv;
 	}
@@ -112,13 +112,13 @@ public class UserController {
 			session.setAttribute("u_id",reVO.getU_id());
 			System.out.println("로그인 완료");
 		}
-		return "/common/index";
+		return "/common/main.main";
 	}
 	
 	@RequestMapping("logout/logout.main")
 	public String logout(HttpSession session){
 		//세션 저장된 로그인 id 삭제
 		session.invalidate();
-		return "/common/index";
+		return "/common/main.main";
 	}
 }

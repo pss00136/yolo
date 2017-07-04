@@ -10,7 +10,8 @@
 			</div>
 			<div class="modal-content">
 				<div class="modal-header">
-					<h4 class="modal-title" id="signupLabel">회원가입</h4>
+					<h4 class="modal-title" id="signupLabel" style="display:inline">회원가입</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
 				</div>
 				<div class="modal-body">
 
@@ -59,9 +60,7 @@
 						</div>
 						<span id="guide" style="color:#999"></span>
 						<div class="form-group">
-							<div class="btn-group-justified">
-								<button type="submit" class="btn btn-lg btn-green">가입하기</button>
-							</div>
+							<button type="submit" class="btn btn-lg btn-green">가입하기</button>
 						</div>
 						<p class="help-block">
 							회원이신가요? <a href="/Yolo/views/login/login.user" class="text-green">로그인하기</a>

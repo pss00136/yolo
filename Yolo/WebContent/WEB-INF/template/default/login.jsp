@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
-<!-- 로그인 Modal -->
+	<!-- 로그인 Modal -->
 	<div class="modal fade" id="signin" role="dialog"
 		aria-labelledby="signinLabel" aria-hidden="true">
 		<div class="modal-dialog modal-sm">
@@ -10,7 +10,8 @@
 			</div>
 			<div class="modal-content">
 				<div class="modal-header">
-					<h4 class="modal-title" id="signinLabel">로그인</h4>
+					<h4 class="modal-title" id="signinLabel" style="display:inline">로그인</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
 				</div>
 				<div class="modal-body">
 					 <form role="form" method="post" action="/Yolo/login/login.main">
@@ -42,16 +43,12 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<div class="btn-group-justified">
-								<button type="submit" class="btn btn-lg btn-green">LOGIN</button>
-							</div>
+							<button id="modal_login_btn" type="submit" class="btn btn-lg btn-green">LOGIN</button>
 						</div>
 						<p class="help-block">
-							아직 회원이 아니십니까? <a href="/Yolo/view/join/join.jsp"
-								class="text-green">회원가입하기</a>
+							아직 회원이 아니십니까? 
+							<a href="/Yolo/view/join/join.jsp" class="text-green">회원가입하기</a>
 						</p>
-						
-
 					</form>
 				</div>
 			</div>
