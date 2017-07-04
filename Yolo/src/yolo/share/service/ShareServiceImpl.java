@@ -17,21 +17,22 @@ public class ShareServiceImpl implements ShareService{
 	
 	@Override
 	public int shareInput(ShareVO vo) {
-		System.out.println("서비스 타고 있니?");
+		
 		int result = sharedao.shareInput(vo);
 		return result;
 	}
 
 	@Override
 	public List<ShareMainListVO> shareList() {
-		
+		System.out.println("list<shareMainListVO 타고 있어요!");
 		List<ShareMainListVO> list = sharedao.shareList();
+		System.out.println(list.size());
 		return list;
 	}
 
 	@Override
 	public List<InputListVO> inputList(String uid) {
-		System.out.println("impl 타고 있니");
+		
 		List<InputListVO> list = sharedao.shareInputList(uid);
 		System.out.println("serviceImpl "+list.size());
 		return list;

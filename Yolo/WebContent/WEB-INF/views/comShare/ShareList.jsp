@@ -37,18 +37,18 @@
 			</div>
 			<hr id="Share_title_hr" class="bounds padding"/>	
 			<!-- 리스트 목록 -->
-			<div class="bounds padding">
-				<c:choose>
-					<c:when test="${list == null}">
-						<h1 class="tab center bounds padding active">검색된 쉐어링이 없습니다.</h1>
-					</c:when>
-				<!-- 리스트 -->
+	<div class="bounds padding">
+	<c:choose>
+		<c:when test="${fn:length(list) eq 0 }">
+			<h1 class="tab center bounds padding active">검색된 쉐어링이 없습니다.</h1>
+		</c:when>
+		<c:otherwise>
+			<c:forEach items="${list}" var="list">
 				<a href="/Yolo/comShare/ShareDetail.share" class="item zoom active">
 					<div class="column">
 						<div class="image">
 							<img class="cover accelerate"
-								src="/Yolo/upload/lot/${a.priimg_name}"
-								alt="${a.pri_addr}" />
+								src="/Yolo/upload/lot/${list.priimg_name}" alt="" />
 							<div class="link-abs">
 								<p class="link-col-text">자세히 보기</p>
 							</div>
@@ -56,20 +56,20 @@
 					</div>
 					<div class="column">
 						<div class="text">
-							<h2>${a.sl_title}</h2>
-							<hr/>
+							<h2>${list.sl_title}</h2>
+							<hr />
 							<p>
-								<span class="text-smaller">스터디룸 쉐어링</span>
+								<span class="text-smaller">${list.pri_addr}</span>
 							</p>
-							<p>${a.u_id}</p>
-							<p style="float:right;">${a.sl_time}</p>
+							<p>${list.u_id}</p>
+							<p style="float: right;">${list.sl_time}</p>
 						</div>
 					</div>
-				</a><!-- 리스트의 끝 -->
-				
-				
-				</c:choose>
-				<!-- 페이징 부분 -->
+				</a>
+			</c:forEach>
+		</c:otherwise>
+</c:choose>
+<!-- 페이징 부분 -->
 				<div class="row bounds padding" style="text-align:center;">
 					<div class="col-md-4"></div>
 					<div class="col-md-4 col-xs-12" style="display:inline-block;">
