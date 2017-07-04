@@ -70,10 +70,11 @@ public class LotDAO {
 		return list;
 	}
 	
-	public List<PostscriptVO> lotreview(){
+	public int lotreview(PostscriptVO postVO){
 		int result=0;
 		try{
-			result = session.insert("lot.lotreview");
+			result = session.insert("lot.lotreview", postVO);
+			
 		}catch(Exception ex){
 			System.out.println("lotreview 실패: " + ex.getMessage());
 		}
