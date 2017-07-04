@@ -71,8 +71,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 	
 	<insert id="lotreview" parameterType="postVO">
-	 insert into postscript2(ps_num, ps_star, u_id, ps_content, ps_regdate) 
-	 values(concat("ps_", POSTSCRIPT_NO_SEQ.nextVal),#{ps_star}, #{u_id}, #{ps_content}, to_char(sysdate,'yy/MM/dd')) 
+	 insert into POSTSCRIPT2(ps_num,  ps_star, u_id, ps_content, ps_regdate) 
+	 values(concat('ps_', POSTSCRIPT_NO_SEQ.nextVal),  #{ps_star}, 'test', #{ps_content}, to_char(sysdate,'yy/MM/dd')) 
 	</insert>
 	
 	<insert id="entrepreneurinput" parameterType="yolo.host.dto.EntrepreneurVO">
@@ -95,5 +95,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
      ON p.pri_num = i.pri_num
      WHERE p.pri_num = #{pri_num}
 	</select>
+
 
 </mapper>

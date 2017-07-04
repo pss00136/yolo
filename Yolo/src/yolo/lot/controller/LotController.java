@@ -239,34 +239,25 @@ public class LotController {
 		*/
 	   @RequestMapping("lot/LotViewRe.lot")
 	   @ResponseBody
-	   public ModelAndView lotreview(PostscriptVO postVO){
-		    //ModelAndView mv = new ModelAndView();
-		    //List<PostscriptVO> rlist = service.lotreview();
-//		    String jsonList = reviewjson(rlist);
-//		    mv.addObject("jsonList",jsonList);
-//		    mv.addObject("rlist", rlist);
-		   // mv.setViewName("/lot/LotList.map");
-		    System.out.println("별점은: " + postVO.getPs_star() + postVO.getPs_content());
-			return null;
+	   public String lotreview(PostscriptVO postVO){
+		    service.lotreview(postVO);
+		    System.out.println( postVO.getU_id() +">"+ postVO.getPs_star() + " & " + postVO.getPs_content());
+		    String jsonInfo = reviewjson(postVO);
+
+			return jsonInfo;
 		}
 	   
 
-	   public String reviewjson(List<PostscriptVO> rlist){
+	   public String reviewjson(PostscriptVO postVO){
 		   JSONObject jsonObject = new JSONObject();
-		   //후기작성 JSON정보를 담을 Array 선언
-		   JSONArray postArray = new JSONArray();
-		   
-		   for(PostscriptVO postVO: rlist){ 
+
 		   jsonObject.put("ps_star", postVO.getPs_star());
 		   jsonObject.put("u_id", postVO.getU_id());
 		   jsonObject.put("ps_content", postVO.getPs_content());
-		   postArray.add(jsonObject);
-		   }
-		   
-		   jsonObject.put("post", postArray);
+
 		   String jsonInfo = jsonObject.toJSONString();
 		   
-		
+
 			return jsonInfo;
 		}
 	   

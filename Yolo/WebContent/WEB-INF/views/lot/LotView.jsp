@@ -99,13 +99,7 @@
 
 				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
 
-					<div id="reservation">
-						<label>예약날짜</label>
-						<div class="input-append date form_datetime">
-							<input class="form-control" type="text" value="" readonly>
-							<span class="add-on"><i class="icon-th"></i></span>
-						</div>
-					</div>
+					
 
 					<div class="mainFunction summaryItem">
 						<div class="clearfix"></div>
@@ -179,17 +173,15 @@
 <div class="comments">
 	<h3>후기작성</h3>
 
-	<div id="ReviewList" class="comment">
+	<div class="comment">
 		<div class="commentAvatar">
 
 			<div class="commentArrow">
 				<span class="fa fa-caret-left"></span>
 			</div>
 		</div>
-		<div class="commentContent">
-			<div class="stars">${result.ps_star}</div>
-			<div class="commentName">${result.u_id }</div>
-			<div class="commentBody">${result.ps_content}</div>
+		<div id="ReviewList" style="background-color: white;" class="col-md-11">
+			
 		</div>
 	</div>
 
@@ -205,7 +197,7 @@
             <!-- 별점 -->
           <div class="row rating">
 				<div  class="stars">
-					<input class="star star-5" id="star-5" type="radio" name="p	s_star" value="5" />
+					<input class="star star-5" id="star-5" type="radio" name="ps_star" value="5" />
 					<label class="star star-5" for="star-5"></label> <input
 						class="star star-4" id="star-4" type="radio" name="ps_star" value="4"/> <label
 						class="star star-4" for="star-4"></label> <input
@@ -227,8 +219,8 @@
 				</div>
 
 				<div class="col-md-2">
-					<button id="Reviewbtn"
-						class="form-control input-group-btn btn btn-green">작성하기</button>
+					<a id="Reviewbtn"
+						class="form-control input-group-btn btn btn-green">작성하기</a>
 				</div>
 
 			</div>
@@ -252,11 +244,7 @@
 	$(".form_datetime").datetimepicker({
 		format : "dd MM yyyy hh:ii"
 	});
-	
-	
-	
-
-    
+	    
 });
 </script>
 
