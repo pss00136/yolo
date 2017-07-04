@@ -2,6 +2,7 @@
 
 	$("#share_check_ok").click(function(){
 		
+		
 		if($("#sl_title").val() ==""){
 		    alert("글제목을 입력해주세요.");
 		    return false;
@@ -10,9 +11,13 @@
 		    alert("글내용을 입력해주세요.");
 		    return false;
 		}
-		if($("input[name=b_id]:checked").val() == ""){
-			alert("예약된 공간을 선택해 주세요");
+		if( $("input:radio[name=b_id]").is(".checked") == false){
+			alert("예약공간을 선택해주세요");
 			return false;
 		}
+//		if($("input:radio[name=b_id]").val() == "0"){
+//			alert($("input[name=b_id]:checked").val());
+//			return false;
+//		}
 		$("#shareInputForm1").submit();
 	});

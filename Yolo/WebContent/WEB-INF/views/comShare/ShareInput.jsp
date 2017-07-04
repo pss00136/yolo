@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 
 <!-- 추가CSS -->
 <link href="/Yolo/css_yolo/cssView/comShare/ShareInput.css" rel="stylesheet">
@@ -40,7 +41,7 @@
 													<table class="table" id="inboxTable">
 														<tbody class="table">
 															<c:choose>
-																<c:when test="${list == null }">
+																<c:when test="${fn:length(list) eq 0 }">
 																	<tr>
 																		<td>글록된 게시물이 없습니다.</td>
 																	</tr>															

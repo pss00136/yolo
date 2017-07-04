@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import yolo.share.dto.InputListVO;
+import yolo.share.dto.ShareMainListVO;
 import yolo.share.dto.ShareVO;
 
 /*
@@ -37,8 +38,8 @@ public class ShareDAO {
 		return result;
 	}
 
-	public List<ShareVO> shareList() {
-		List<ShareVO> list = null;
+	public List<ShareMainListVO> shareList() {
+		List<ShareMainListVO> list = null;
 		try {
 			list = session.selectList("share.shareList");
 		} catch (Exception e) {

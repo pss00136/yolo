@@ -15,9 +15,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	(SHARELOT_NO_SEQ.nextval, 'ckswhd1128', #{sl_title}, #{sl_content},'06:00~15:00', '50000', sysdate , 0 , 5 , #{b_id})
 </insert>
 
-<select id="shareList" resultType="sharevo">
+<select id="shareList" resultType="yolo.share.dto.ShareMainListVO">
 Select sl_num, u_id, sl_title, sl_content, sl_time, sl_price, sl_regdate, sl_hits, sl_people, sl_addfee
-FROM sharelot2
+FROM sharelot2 
 
 </select>
 

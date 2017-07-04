@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import yolo.share.dto.InputListVO;
+import yolo.share.dto.ShareMainListVO;
 import yolo.share.dto.ShareVO;
 import yolo.share.service.ShareService;
 
@@ -39,11 +40,10 @@ public class ShareController {
 	 * @return ModelAndView로 반환
 	 */
 	@RequestMapping("ShareInput.share")
-	public ModelAndView shareInput(){
+	public ModelAndView shareInput(HttpSession session){
 		//uid 회원아이디
-		
-		String tempuid = "ckswhd1128";
-		List<InputListVO> list = service.inputList(tempuid);
+		String uid = (String)session.getAttribute("u_id");
+		List<InputListVO> list = service.inputList(uid);
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("list", list);
 		mv.setViewName("/comShare/ShareInput");
@@ -60,7 +60,7 @@ public class ShareController {
 	@RequestMapping("ShareList.share")
 	public ModelAndView shareList(ShareVO vo){
 		
-		List<ShareVO> list = service.shareList();
+		List<ShareMainListVO> list = service.shareList();
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("list", list);
 		mv.setViewName("/comShare/ShareList");
