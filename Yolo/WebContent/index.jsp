@@ -164,7 +164,7 @@
 	<!-- Header End-->
 
 	<!-- Content -->
-	<div id="wrapper" class="full" style="margin: 60px 0 0 0;" >
+	<div id="wrapper" class="full mainpage_wrapper" >
 		<div id="content" class="max full">
 			<div class="main" style="height:100%;">
 				<ul class="cbp-ig-grid" style="height:100%;">
@@ -355,7 +355,10 @@
 	<!-- 추가  -->
 	<script src="/Yolo/js/home.js" type="text/javascript"></script>
 	<script src="/Yolo/js_yolo/icongrid/modernizr.custom.js" type="text/javascript"></script>
-
+    <!-- 다음 맵 -->
+    <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+    <script src=" <c:url value='/js_yolo/postcode/postcode.js'/> " type="text/javascript"></script>
+ 	<!-- javascript end -->
 
 </body>
 </html>
