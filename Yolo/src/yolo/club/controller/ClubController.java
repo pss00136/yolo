@@ -4,6 +4,8 @@ package yolo.club.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -85,8 +87,9 @@ public class ClubController {
 		ClubListVO list = service.clubdetail(clublistVO);
 		mv.addObject("list", list);
 		mv.setViewName("/club/ClubDetail");
-		System.out.println("태그"+list.getC_tag());
-		System.out.println("모집"+list.getC_recruit());
+//		System.out.println("태그"+list.getC_tag());
+//		System.out.println("모집"+list.getC_recruit());
+//		System.out.println("작성자:"+list.getU_id());
 		return mv;
 	}
 	
@@ -115,20 +118,19 @@ public class ClubController {
 	@RequestMapping("/ClubInputOk.club")
 	public String clubInputOk(ClubVO clubVO, String c_dateFrom, String c_timeFrom, 
 			String c_dateTo, String c_timeTo, String c_recruitFrom, String c_recruitTo, 
-			String c_place_v, String main_address, String detail_address, ClubImageVO cimgVO ){
+			String c_place_v, String main_address, String detail_address, ClubImageVO cimgVO, HttpSession session){
 //		System.out.println("모임공간:"+clubVO.getC_recruit());
 //		System.out.println("주소11:"+ main_address);
 //		System.out.println("주소12:"+ detail_address);
 //		System.out.println("c_place:"+clubVO.getC_place());
 //		System.out.println("c_place_v:"+c_place_v);
+		clubVO.setU_id((String)session.getAttribute("u_id"));
+		System.out.println("u_id:"+clubVO.getU_id());
 		clubVO.setC_date(c_dateFrom + "/" + c_timeFrom + "~" + c_dateTo + "/" + c_timeTo);
 		clubVO.setC_recruit(c_recruitFrom + "~" + c_recruitTo);
 		if(clubVO.getC_place().equals("확정") && c_place_v.equals("미선택")){
 			clubVO.setC_place(main_address +" "+ detail_address);
-//			System.out.println("주소"+clubVO.getC_place());
 		}
-//		System.out.println("주소2:"+clubVO.getC_place());
-		
 		int result = service.clubinput(clubVO, cimgVO);
 		if(result > 0){
 			System.out.println("DB입력 성공");

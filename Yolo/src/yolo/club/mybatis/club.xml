@@ -7,8 +7,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <!-- club 등록 sql -->
 <insert id = "clubInsert" parameterType="yolo.club.dto.ClubVO">
-	INSERT INTO CLUB(c_num, c_type, c_title, c_tag, c_people, c_recruit, c_period, c_date, c_place, c_content, c_confirm, c_regdate) 
-	VALUES( concat('c_', CLUB_NO_SEQ.nextval), #{c_type}, #{c_title}, #{c_tag}, #{c_people}, #{c_recruit}, #{c_period}, #{c_date}, #{c_place}, #{c_content}, 'n', sysdate )
+	INSERT INTO CLUB 
+	VALUES( concat('c_', CLUB_NO_SEQ.nextval), #{u_id}, #{c_type}, #{c_title}, #{c_tag}, #{c_people}, #{c_recruit}, #{c_period}, #{c_date}, #{c_place}, #{c_content}, 'n', sysdate )
 </insert>
 <insert id = "clubimgInsert" parameterType="yolo.club.dto.ClubImageVO">
 	<selectKey keyColumn="c_num" keyProperty="c_num" order="BEFORE" resultType='string'>
@@ -35,7 +35,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 
 <select id="clubdetail" parameterType="yolo.club.dto.ClubListVO" resultType="yolo.club.dto.ClubListVO">
-	SELECT C.C_NUM C_NUM, I.CIMG_NAME CIMG_NAME, C.C_TYPE C_TYPE, C.C_TITLE C_TITLE, C.C_TAG C_TAG, C.C_PEOPLE C_PEOPLE, C.C_RECRUIT C_RECRUIT, C.C_PERIOD C_PERIOD, C.C_DATE C_DATE, C.C_PLACE C_PLACE, 
+	SELECT C.C_NUM C_NUM, C.U_ID U_ID, I.CIMG_NAME CIMG_NAME, C.C_TYPE C_TYPE, C.C_TITLE C_TITLE, C.C_TAG C_TAG, C.C_PEOPLE C_PEOPLE, C.C_RECRUIT C_RECRUIT, C.C_PERIOD C_PERIOD, C.C_DATE C_DATE, C.C_PLACE C_PLACE, 
     C.C_CONTENT C_CONTENT, C.C_REGDATE C_REGDATE
     FROM CLUB C JOIN CLUBIMAGE I
 	ON c.c_num = i.c_num

@@ -17,37 +17,57 @@
 				<div class="panel-body">
 					<!-- 입력 폼 -->
 						<!-- 주제 설정 -->
+						<form name="sendForm" method="get" >
 						<div class="form-group">
 							<label class="col-sm-2 control-label">주제</label>
 							<div class="col-sm-8">
 								<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
-									<label><input type="checkbox" name="c_type" value="취미활동"><span
+									<label><input type="checkbox" name="c_type" value="교육" onclick="oneCheckbox(this)"><span
+										class="fa fa-check"> 교육</span></label>
+								</div>
+								<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
+									<label><input type="checkbox" name="c_type" value="방송/연예" onclick="oneCheckbox(this)"><span
+										class="fa fa-check"> 방송/연예</span></label>
+								</div>
+								<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
+									<label><input type="checkbox" name="c_type" value="전시/박람회" onclick="oneCheckbox(this)"><span
+										class="fa fa-check"> 전시/박람회</span></label>
+								</div>
+								<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
+									<label><input type="checkbox" name="c_type" value=" 취미활동" onclick="oneCheckbox(this)"><span
 										class="fa fa-check"> 취미활동</span></label>
 								</div>
 								<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
-									<label><input type="checkbox" name="c_type" value="문화/예술"><span
-										class="fa fa-check"> 문화/예술</span></label>
+									<label><input type="checkbox" name="c_type" value=" 패션/뷰티" onclick="oneCheckbox(this)"><span
+										class="fa fa-check"> 패션/뷰티</span></label>
 								</div>
 								<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
-									<label><input type="checkbox" name="c_type" value="전시"><span
-										class="fa fa-check"> 전시</span></label>
-								</div>
-								<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
-									<label><input type="checkbox" name="c_type" value="친목활동"><span
-										class="fa fa-check"> 친목활동</span></label>
-								</div>
-								<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
-									<label><input type="checkbox" name="c_type" value="스터디"><span
-										class="fa fa-check"> 스터디</span></label>
-								</div>
-	
-								<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
-									<label><input type="checkbox" name="c_type" value="이벤트/파티"><span
+									<label><input type="checkbox" name="c_type" value="이벤트/파티" onclick="oneCheckbox(this)"><span
 										class="fa fa-check"> 이벤트/파티</span></label>
 								</div>
-								
+								<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
+									<label><input type="checkbox" name="c_type" value="문화/예술" onclick="oneCheckbox(this)"><span
+										class="fa fa-check"> 문화/예술</span></label>
+								</div> 
+								<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
+									<label><input type="checkbox" name="c_type" value="  공모전" onclick="oneCheckbox(this)"><span
+										class="fa fa-check"> 공모전</span></label>
+								</div>
+								<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
+									<label><input type="checkbox" name="c_type" value="여행" onclick="oneCheckbox(this)"><span
+										class="fa fa-check"> 여행</span></label>
+								</div>
+								<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
+									<label><input type="checkbox" name="c_type" value="친목활동" onclick="oneCheckbox(this)"><span
+										class="fa fa-check"> 친목/소모임</span></label>
+								</div>
+								<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
+									<label><input type="checkbox" name="c_type" value="스터디" onclick="oneCheckbox(this)"><span
+										class="fa fa-check"> 기타</span></label>
+								</div>
 							</div>
 						</div>
+						</form>
 						<!-- 제목 입력 -->
 						<div class="form-group">
 							<label class="col-sm-2 control-label">모임명</label>
@@ -279,4 +299,15 @@
 		  document.getElementById(id).style.display = "none"; // 숨김
 		 }
 		}
+		
+		function oneCheckbox(a){
+	        var obj = document.getElementsByName("c_type");
+	        for(var i=0; i<obj.length; i++){
+	            if(obj[i] != a){
+	                obj[i].checked = false;
+	            }
+	        }
+	    }
+		
 	</script>
+	

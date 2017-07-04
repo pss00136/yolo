@@ -52,7 +52,6 @@
                                     <div class="favLink"><a href="#"><span class="icon-star"></span></a>54</div>
                                     <ul class="stats">
                                         <li><span class="icon-eye"></span> 200</li>
-                                        <li><span class="icon-bubble"></span> 13</li>
                                     </ul>
                                     <div class="clearfix"></div>
                                     
@@ -83,7 +82,7 @@
                                 <div class="agentAvatar summaryItem">
                                      <div class="clearfix"></div>
                                     <img class="avatar agentAvatarImg" src="/Yolo/images/avatar-2.png" alt="avatar">
-                                    <div class="agentName">Jane Smith</div>
+                                    <div class="agentName">${list.u_id}</div>
                                 </div>
                                 <div class="mainFunction summaryItem">
                                      <div class="clearfix"></div>
