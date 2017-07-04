@@ -76,7 +76,7 @@ public class ShareController {
 	 * @return ModelAndView로 반환
 	 */
 	@RequestMapping("ShareInputOk.share")
-	public String shareInputOk(ShareVO vo){
+	public ModelAndView shareInputOk(ShareVO vo){
 		
 		int result = service.shareInput(vo);
 		String message = "입력실패";
@@ -84,7 +84,15 @@ public class ShareController {
 			message = "입력완료";
 		}
 		System.out.println(message);
-		return "/comShare/ShareList";
+		
+		
+		
+		List<ShareMainListVO> list = service.shareList();
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("list", list);
+		mv.setViewName("/comShare/ShareList");
+		System.out.println("mv로 list 넘깁니다."+ list.size());
+		return mv;
 	}
 	
 	/*
