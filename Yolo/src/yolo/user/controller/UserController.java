@@ -112,6 +112,13 @@ public class UserController {
 			session.setAttribute("u_id",reVO.getU_id());
 			System.out.println("로그인 완료");
 		}
-		return "/common/main";
+		return "/common/index";
+	}
+	
+	@RequestMapping("logout/logout.main")
+	public String logout(HttpSession session){
+		//세션 저장된 로그인 id 삭제
+		session.invalidate();
+		return "/common/index";
 	}
 }

@@ -45,17 +45,42 @@
 		<div class="search">
 			<h4 id="header_title">YOLO WOW LOT</h4>
 			<p id="header_subtitle">즐길 줄 아는 사람들을 위한 공간 서비스</p>
-		</div>
-		<!-- 상단 메뉴 유저부분 -->
+		</div>		
+		<!-- -----------로그인 처리-------- -->
+		
+		<% 
+		String u_id = "";
+		
+		//세션에 있는 id값 가져오기
+		u_id = (String)session.getAttribute("u_id");
+		
+		//로그인해야하는 경우
+		if( u_id==null || u_id=="" ){%>		
+		<!-- 로그인 회원가입 -->
+		<div class="headerUserWraper" id="signdiv">
+			<!-- 호스트 버튼 -->
+<!-- 			<a id="hostbtn" href="/Yolo/host/HostMain.host" class="headerUser btn btn-o btn-gray">호스트 센터</a>						 -->
+			<a href="#signin" class="userHandler modal-toggle" data-toggle="modal"><span class="icon-login"></span>
+			<a href="#signup" class="userHandler modal-toggle" data-toggle="modal"><span class="icon-note"></span>
+			<a href="/Yolo/host/HostMain.host" class="userHandler"><span class="icon-user-follow"></span></a> 
+			<a href="#signin" id="web_login_btn" data-toggle="modal" class="btn btn-round btn-o btn-green">로그인</a> 
+			<a href="#signup" id="web_join_btn" data-toggle="modal" class="btn btn-round btn-o btn-green">회원가입</a>
+		</div>	
 		<div class="headerUserWraper">
-			<a href="#" class="userHandler dropdown-toggle"
-				data-toggle="dropdown"><span class="icon-user"></span><span
-				class="counter">5</span></a> <a href="#"
-				class="headerUser dropdown-toggle" data-toggle="dropdown"> <img
-				class="avatar headerAvatar pull-left"
-				src="/Yolo/images/avatar-1.png" alt="John Smith">
+			<a id="hostbtn" href="/Yolo/host/HostMain.host" class="headerUser btn btn-o btn-gray">호스트 센터</a>
+		</div>	
+		<!-- 로그인 회원가입 끝 -->				
+		<% }else{
+		//로그인된 경우
+		%>
+		<!-- 상단 메뉴 유저부분 -->
+		<div class="headerUserWraper">	
+			<a href="#" class="userHandler dropdown-toggle" data-toggle="dropdown"><span class="icon-user"></span>
+			<span class="counter">5</span></a> 
+			<a href="#" class="headerUser dropdown-toggle" data-toggle="dropdown"> 
+				<img class="avatar headerAvatar pull-left" src="/Yolo/images/avatar-1.png" alt="John Smith">
 				<div class="userTop pull-left">
-					<span class="headerUserName">John Smith</span> <span
+					<span class="headerUserName"><%=u_id%>님</span> <span
 						class="fa fa-angle-down"></span>
 				</div>
 				<div class="clearfix"></div>
@@ -64,44 +89,46 @@
 				<div class="mobAvatar">
 					<img class="avatar mobAvatarImg" src="/Yolo/images/avatar-1.png"
 						alt="John Smith">
-					<div class="mobAvatarName">John Smith</div>
+					<div class="mobAvatarName"><%=u_id%></div>
 				</div>
 				<ul>
 					<li><a href="#"><span class="icon-user"></span>마이페이지</a></li>
 					<li><a href="#"><span class="icon-envelope"></span>메세지 <span
 							class="badge pull-right bg-red">5</span></a></li>
 					<li class="divider"></li>
-					<li><a href="#"><span class="icon-power"></span>Logout</a></li>
+					<li><a href="/Yolo/logout/logout.main"><span class="icon-power"></span>Logout</a></li>
 				</ul>
 			</div>
 		</div>
-		<!-- 상단 메뉴 유저부분 끝 -->
-		<!-- 상단 메뉴 알림부분 -->
-		<div class="headerNotifyWraper">
-			<a href="/Yolo/message/MessageDetail.message" class="headerNotify"><span
-				class="notifyIcon icon-envelope"></span> <span class="counter">5</span>
-			</a>
-
+		<!-- 상단 메뉴 유저부분 끝 -->	
+		<!-- 호스트 페이지 버튼 부분 -->
+		<div class="headerUserWraper">		
+			<!-- 상단 메뉴 알림부분 -->
+			<div class="headerNotifyWraper">
+				<a href="/Yolo/message/MessageDetail.message" class="headerNotify"><span
+					class="notifyIcon icon-envelope"></span> <span class="counter">5</span>
+				</a>
+			</div>
 		</div>
-		<!-- 상단 메뉴 알림부분 끝 -->
-		<!-- 호스트센터 들어가기 -->
 		<div class="headerUserWraper">
-			<a href="/Yolo/host/HostMain.host" class="userHandler"><span
-				class="icon-user-follow"></span></a> <a id="hostbtn"
-				href="/Yolo/host/HostMain.host" id="hostcenter"
-				class="headerUser btn btn-o btn-gray"> 호스트 센터 </a>
+			<a href="/Yolo/host/HostMain.host" class="userHandler"><span class="icon-user-follow"></span></a> 
+			<a id="hostbtn" href="/Yolo/host/HostMain.host" class="headerUser btn btn-o btn-gray">호스트 센터</a>
+		</div>
 
-		</div>
-		<!-- 호스트 센터 들어가기 끝 -->
-		<!-- 로그인 회원가입 -->
-		<div class="headerUserWraper" id="signdiv">
-			<a href="#signin" data-toggle="modal"
-				class="btn btn-round btn-o btn-green">로그인</a> <a href="#signup"
-				data-toggle="modal" class="btn btn-round btn-o btn-green">회원가입</a>
-		</div>
+		<!-- 호스트 페이지 버튼 부분 끝 -->
+		<!-- 상단 메뉴 알림부분 끝 -->					
+		<% } %>	
+		<!-- 호스트센터 들어가기 -->
+<!-- 		<div class="headerUserWraper"> -->
+<!-- 			<a href="/Yolo/host/HostMain.host" class="userHandler"><span -->
+<!-- 				class="icon-user-follow"></span></a> <a id="hostbtn" -->
+<!-- 				href="/Yolo/host/HostMain.host" id="hostcenter" -->
+<!-- 				class="headerUser btn btn-o btn-gray"> 호스트 센터 </a> -->
+<!-- 		</div> -->
+		<!-- 호스트 센터 들어가기 끝 -->			
 		<div class="clearfix"></div>
 	</div>
-			<!-- 좌측 네비게이션 메뉴 -->
+		<!-- 좌측 네비게이션 메뉴 -->
 		<div id="leftSide">
 			<nav class="leftNav scrollable">
 				<!-- 네비게이션 메뉴 -->
@@ -178,7 +205,8 @@
 		</div>
 		<div class="clearfix"></div>
 	</div>
-	<!-- Login Modal -->
+	
+	<!-- 로그인 Modal -->
 	<div class="modal fade" id="signin" role="dialog"
 		aria-labelledby="signinLabel" aria-hidden="true">
 		<div class="modal-dialog modal-sm">
@@ -187,17 +215,17 @@
 			</div>
 			<div class="modal-content">
 				<div class="modal-header">
-					<h4 class="modal-title" id="signinLabel">로그인</h4>
+					<h4 class="modal-title" id="signinLabel" style="display:inline">로그인</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
 				</div>
 				<div class="modal-body">
-					<form role="form">
+					 <form role="form" method="post" action="/Yolo/login/login.main">
 
 						<div class="form-group">
-							<input type="text" placeholder="ID" class="form-control">
+							<input type="text" placeholder="ID" name="u_id" class="form-control">
 						</div>
 						<div class="form-group">
-							<input type="password" placeholder="Password"
-								class="form-control">
+							<input type="password" placeholder="Password" name="u_pass" class="form-control">
 						</div>
 						<div class="form-group">
 							<div class="row">
@@ -220,13 +248,11 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<div class="btn-group-justified">
-								<a href="explore.html" class="btn btn-lg btn-green">LOGIN</a>
-							</div>
+							<button id="modal_login_btn" type="submit" class="btn btn-lg btn-green">LOGIN</button>
 						</div>
 						<p class="help-block">
-							아직 회원이 아니십니까? <a href="/Yolo/view/join/join.jsp"
-								class="text-green">회원가입하기</a>
+							아직 회원이 아니십니까? 
+							<a href="/Yolo/view/join/join.jsp" class="text-green">회원가입하기</a>
 						</p>
 					</form>
 				</div>
@@ -235,10 +261,9 @@
 				Yolo와lot web application<br>&copy; 2017
 			</div>
 		</div>
-	</div>
-	<!-- Login Modal END -->
+	</div><!-- 로그인 Modal END -->
 
-	<!-- Join Modal -->
+	<!-- 회원가입 Modal -->
 	<div class="modal fade" id="signup" role="dialog"
 		aria-labelledby="signupLabel" aria-hidden="true">
 		<div class="modal-dialog modal-sm">
@@ -247,53 +272,60 @@
 			</div>
 			<div class="modal-content">
 				<div class="modal-header">
-					<h4 class="modal-title" id="signupLabel">회원가입</h4>
+					<h4 class="modal-title" id="signupLabel" style="display:inline">회원가입</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
 				</div>
 				<div class="modal-body">
-					<form role="form">
+
+					<form role="form"  method="post" action="/Yolo/join/join_ok.main">
 						<div class="form-group">
 							<div class="input-group">
-								<input type="text" placeholder="아이디" class="form-control">
+								<input type="text" placeholder="아이디" id="u_id" name="u_id" class="form-control">
 								<span class="input-group-btn">
-									<button class="btn btn-success" type="button">중복확인</button>
+									<button class="btn btn-success" type="button" id="check" name="check">중복확인</button>
 								</span>
+								<span id="idCheckResult" style="width:150px;color:red"></span>
 							</div>
 						</div>
 						<div class="form-group">
-							<input type="password" placeholder="비밀번호" class="form-control">
+							<input type="password" placeholder="비밀번호" id="u_pass" name="u_pass" class="form-control">
 						</div>
 						<div class="form-group">
-							<input type="password" placeholder="비밀번호확인" class="form-control">
+							<input type="password" placeholder="비밀번호확인" id="u_passconfirm" name="u_passconfirm" class="form-control">
 						</div>
 						<div class="form-group">
-							<input type="text" placeholder="성명" class="form-control">
+							<input type="text" placeholder="성명" id="u_name" name="u_name" class="form-control">
 						</div>
 						<div class="form-group">
-							<input type="tel" placeholder="휴대전화" class="form-control">
+							<input type="tel" placeholder="휴대전화" id="u_tell" name="u_tel" class="form-control">
 						</div>
 						<div class="form-group">
-							<input type="email" placeholder="Email" class="form-control">
+							<input type="email" placeholder="Email" id="u_email" name="u_email" class="form-control">
 						</div>
 						<div class="form-group">
-							<input type="date" placeholder="생년월일" class="form-control">
+							<input type="date" placeholder="생년월일" id="u_birth" name="u_birth" class="form-control">
+						</div>
+						<!-- 우편번호 검색 -->
+						<div class="form-group">
+							<div class="input-group">
+								<input type="text" class="form-control" id="postcode" name="postcode" placeholder="우편번호">
+								<span class="input-group-btn">
+								<input type="button"  class="btn btn-success form-control" onclick="DaumPostcode()" value="우편번호 찾기">
+								</span>
+							</div>	
 						</div>
 						<div class="form-group">
-							<select class="form-control">
-								<option value="서울특별시">서울특별시</option>
-								<option value="경기도">경기도</option>
-								<option value="강원도">강원도</option>
-								<option value="충청도">충청도</option>
-								<option value="전라도">전라도</option>
-								<option value="경상도">경상도</option>
-							</select>
+							<input type="text" class="form-control" id="main_address" name="main_address" placeholder="주소">
 						</div>
 						<div class="form-group">
-							<div class="btn-group-justified">
-								<a href="explore.html" class="btn btn-lg btn-green">가입하기</a>
-							</div>
+							<input type="text" class="form-control" id="detail_address" name="detail_address" placeholder="상세주소">
+						</div>
+						<span id="guide" style="color:#999"></span>
+						<div class="form-group">
+							<button type="submit" class="btn btn-lg btn-green">가입하기</button>
 						</div>
 						<p class="help-block">
-							회원이신가요? <a href="/Yolo/view/login/login.jsp" class="text-green">로그인하기</a>
+							회원이신가요? <a href="/Yolo/views/login/login.user" class="text-green">로그인하기</a>
 						</p>
 					</form>
 				</div>
@@ -302,8 +334,7 @@
 				Yolo와lot web application<br>&copy; 2017
 			</div>
 		</div>
-	</div>
-	<!-- Join Modal END -->
+	</div><!-- 회원가입 Modal END -->
 
 
 

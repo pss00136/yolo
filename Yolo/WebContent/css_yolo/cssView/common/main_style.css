@@ -1,14 +1,25 @@
 @CHARSET "UTF-8";
 
-#signdiv {
-	margin-top: 10px;
+#modal_login_btn {
+	
 }
 
+/*상단메뉴 - 로그인,회원가입버튼*/
+#web_login_btn, #web_join_btn{
+	margin: 10px 5px 0 0;
+}
+
+#signdiv{
+/* 	display: -webkit-box; */
+}
+
+/*상단메뉴 - 호스트버튼*/
 #hostbtn {
 	height: 40px;
 	width: 90px;
 	padding: 10px 0 0 0;
 	margin-top: 10px;
+	margin-right: 10px;
 }
 
 #footer_title {

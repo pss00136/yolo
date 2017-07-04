@@ -232,6 +232,9 @@
 }
 
 @media screen and (max-width: 25em) {
+	#mainbody > #wrapper{
+		margin: 50px 0 0 0;
+	}
 	.cbp-ig-grid li {
 		height:33.3%;
 	}
