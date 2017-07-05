@@ -29,6 +29,7 @@ import yolo.lot.dto.LotListVO;
 import yolo.lot.dto.PostscriptVO;
 import yolo.lot.dto.PrivateimageVO;
 import yolo.lot.dto.PrivatelotVO;
+import yolo.lot.dto.ZipcodeVO;
 import yolo.lot.service.LotService;
 
 /*
@@ -172,12 +173,15 @@ public class LotController {
 		* @return  String:반환하는 경로
 		*/
 	   @RequestMapping("lot/LotList.lot")
-		public ModelAndView lotlist(LotListVO lotlistVO){
+		public ModelAndView lotlist(LotListVO lotlistVO, ZipcodeVO zipcodeVO ){
 		    ModelAndView mv = new ModelAndView();
 		    List<LotListVO> list = service.lotlistview();
+		    //시,도 셀렉트박스
+		    List<ZipcodeVO> zlist = service.selectsido();
 		    String jsonList = json(list);
 		    mv.addObject("jsonList",jsonList);
 		    mv.addObject("list", list);
+		    mv.addObject("zlist", zlist);
 		    mv.setViewName("/lot/LotList.map");
 			return mv;
 		}
@@ -204,7 +208,7 @@ public class LotController {
 	               	positionInfo.put("lng", lotVO.getPri_long());
 	               propsInfo.put("position", positionInfo);   	
 	               propsInfo.put("markerIcon", "marker-green.png");
-
+	               propsArray.add(propsInfo);
 	           }
 	           jsonObject.put("props", propsArray);
 	           
@@ -262,6 +266,50 @@ public class LotController {
 
 		   String jsonInfo = jsonObject.toJSONString();
 		   
+
+			return jsonInfo;
+		}
+	   
+	   /*
+		* @메소드명: searchgugun
+		* @역할: 구,군 ajax
+		*
+		* @param   ZipcodeVO 값
+		* @return  String:반환하는 경로
+		*/
+	   @RequestMapping("/lot/LotListSearch.lot")
+	   @ResponseBody
+	   public String gugun(ZipcodeVO zipcodeVO){
+		   System.out.println(zipcodeVO.getSido());
+		    //구,군 data값을 list받아옴
+		   List<ZipcodeVO> gugunlist = service.searchgugun(zipcodeVO);
+		   
+		    String jsonInfo = gugunjson(gugunlist);   
+			
+		    return "성공"; 
+	   }
+	   
+	   public String gugunjson(List<ZipcodeVO> gugunlist){
+		   
+		   JSONObject jsonObject = new JSONObject();
+		   
+		 //gugunlist JSON정보를 담을 Array 선언
+           JSONArray gArray = new JSONArray();
+		   
+           for(ZipcodeVO zipVO : gugunlist){
+	           //props의 한명 정보가 들어갈 JSONObject 선언
+	          JSONObject propsInfo = new JSONObject();
+	          
+	          propsInfo.put("gugun", zipVO.getGugun());
+	         
+	          gArray.add(propsInfo);
+           }
+		   
+           jsonObject.put("g", gArray );
+		   
+
+		   String jsonInfo = jsonObject.toJSONString();
+		   System.out.println(jsonInfo);
 
 			return jsonInfo;
 		}

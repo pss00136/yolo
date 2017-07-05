@@ -13,6 +13,7 @@ import yolo.lot.dto.LotListVO;
 import yolo.lot.dto.PostscriptVO;
 import yolo.lot.dto.PrivateimageVO;
 import yolo.lot.dto.PrivatelotVO;
+import yolo.lot.dto.ZipcodeVO;
 
 @Service
 public class LotServiceImpl implements LotService {
@@ -44,6 +45,14 @@ public class LotServiceImpl implements LotService {
 	
 	public List<PostscriptVO> lotreviewlist(PostscriptVO postVO){
 		return ldao.lotreviewlist(postVO);
+	}
+	
+	public List<ZipcodeVO> selectsido(){
+		return ldao.selectsido();
+	}
+	
+	public List<ZipcodeVO> searchgugun(ZipcodeVO zipcodeVO){
+		return ldao.searchgugun(zipcodeVO);
 	}
 
 }

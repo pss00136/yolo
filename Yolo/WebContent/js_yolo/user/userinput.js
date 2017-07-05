@@ -3,7 +3,7 @@
  */
 
  $(function(){
-	 $("#idcheck").click(function(){
+	 $("#check").click(function(){
 		 alert("클릭");
 		 $.ajax({
 	            type: 'post',

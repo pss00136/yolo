@@ -7,6 +7,7 @@ import yolo.lot.dto.LotListVO;
 import yolo.lot.dto.PostscriptVO;
 import yolo.lot.dto.PrivateimageVO;
 import yolo.lot.dto.PrivatelotVO;
+import yolo.lot.dto.ZipcodeVO;
 /*
 * @인터페이스명: LotService
 *
@@ -69,4 +70,24 @@ public interface LotService {
 	* @return  
 	*/
 	public List<PostscriptVO> lotreviewlist(PostscriptVO postVO); 
+	
+	/*
+	* @메소드명: selectsido
+	* @역할: LotController에서 전달받은 값을 DAO로 전달, 결과값 리턴
+	*
+	* @param   ZipcodeVO 에서 전달받은 값
+	* @return  
+	*/
+	public List<ZipcodeVO> selectsido(); 
+	
+	/*
+	* @메소드명: seachgugun
+	* @역할: LotController에서 전달받은 값을 DAO로 전달, 결과값 리턴
+	*
+	* @param   ZipcodeVO 에서 전달받은 값
+	* @return  
+	*/
+	public List<ZipcodeVO> searchgugun(ZipcodeVO zipcodeVO);
+	
+	
 }

@@ -168,7 +168,7 @@
 <div id="comments" class="comments">
 	<h3>후기작성</h3>
 
-	<div class="comment" style="height: 500px;">
+	<div class="comment" style="height: 700px;">
 
 		<!-- 후기list -->
 		<div id="ReviewList" class="col-md-11">

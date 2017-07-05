@@ -12,6 +12,7 @@ import yolo.lot.dto.LotListVO;
 import yolo.lot.dto.PostscriptVO;
 import yolo.lot.dto.PrivateimageVO;
 import yolo.lot.dto.PrivatelotVO;
+import yolo.lot.dto.ZipcodeVO;
 
 /*
 * @클래스명: LotDAO
@@ -141,6 +142,44 @@ public class LotDAO {
 			list = session.selectList("lot.lotreviewlist", postVO);
 		}catch(Exception ex){
 			System.out.println("lotreviewlist 실패: " + ex.getMessage());
+		}
+				
+		return list;
+	}
+	
+	/*
+	* @메소드명:  selectsido
+	* @역할:     LotService에서 전달받은 값을 DB에 삽입
+	*
+	* @param   ZipcodeVO
+	* @return  list: DB insert쿼리문 결과값
+	*/
+	public List<ZipcodeVO> selectsido(){
+		List<ZipcodeVO> list = new ArrayList<ZipcodeVO>();
+		
+		try{
+			list = session.selectList("zipcode.selectsido");
+		}catch(Exception ex){
+			System.out.println("selectsido 실패: " + ex.getMessage());
+		}
+				
+		return list;
+	}
+	
+	/*
+	* @메소드명:  searchgugun
+	* @역할:     LotService에서 전달받은 값을 DB에 삽입
+	*
+	* @param   ZipcodeVO
+	* @return  list: DB insert쿼리문 결과값
+	*/
+	public List<ZipcodeVO> searchgugun(ZipcodeVO zipcodeVO){
+		List<ZipcodeVO> list = new ArrayList<ZipcodeVO>();
+		
+		try{
+			list = session.selectList("zipcode.searchgugun", zipcodeVO);
+		}catch(Exception ex){
+			System.out.println("selectsido 실패: " + ex.getMessage());
 		}
 				
 		return list;
