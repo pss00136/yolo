@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import yolo.mypage.appliedclub.dao.appliedclubDAO;
 import yolo.mypage.appliedclub.dto.SignclubVO;
+import yolo.mypage.appliedclub.dto.appliedclubVO;
 
 @Service
 public class appliedclubServiceImpl implements appliedclubService {
@@ -14,8 +15,12 @@ public class appliedclubServiceImpl implements appliedclubService {
 	@Autowired
 	appliedclubDAO appclubdao;
 	
-	public List<SignclubVO> signclublist(){
-		return appclubdao.signclublist();
+	public List<SignclubVO> signclublist(String user){
+		return appclubdao.signclublist(user);
+	}
+	
+	public int signclubinput(appliedclubVO appclubVO){
+		return appclubdao.signclubinput(appclubVO);
 	}
 
 }

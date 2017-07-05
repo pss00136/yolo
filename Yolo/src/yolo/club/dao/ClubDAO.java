@@ -36,11 +36,11 @@ public class ClubDAO {
 		
 		int result = session.insert("club.clubInsert", clubVO);
 		result += session.insert("club.clubimgInsert", cimgVO);
-		if(result > 1){
-			session.commit();
-		}else{
-			session.rollback();
-		}
+//		if(result > 1){
+//			session.commit();
+//		}else{
+//			session.rollback();
+//		}
 		
 		return result;
 	}
@@ -86,7 +86,7 @@ public class ClubDAO {
 		} catch (Exception ex) {
 			System.out.println("clubdetail 실패: " + ex.getMessage());
 		}
-		System.out.println("모집"+clublistVO.getC_recruit());
+//		System.out.println("모집"+clublistVO.getC_recruit());
 		return detail;
 	}
 	

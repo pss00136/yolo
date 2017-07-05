@@ -18,7 +18,7 @@ public class ClubServiceImpl implements ClubService {
 	
 	@Override
 	public int clubinput(ClubVO clubVO, ClubImageVO cimgVO) {
-		System.out.println( "파일경로:" + cimgVO.getCimg_path());
+//		System.out.println( "파일경로:" + cimgVO.getCimg_path());
 		int result = clubdao.clubinput(clubVO, cimgVO);
 		
 		return result;

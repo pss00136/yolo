@@ -256,7 +256,7 @@
 				<br/>
 					<div class="col-md-12 col-xs-12" style="text-align:right;">
 						<div style="display:inline-block;">
-						<a href="ClubInput.club" class="btn btn-round btn-green ">모임 등록하기</a>
+						<a href="Yolo/club/ClubInput.club" class="btn btn-round btn-green ">모임 등록하기</a>
 						</div>
 					</div>				
 				</div>

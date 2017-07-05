@@ -2,6 +2,7 @@ package yolo.mypage.appliedclub.service;
 
 import java.util.List;
 import yolo.mypage.appliedclub.dto.SignclubVO;
+import yolo.mypage.appliedclub.dto.appliedclubVO;
 
 /*
 * @인터페이스명: appliedclubService
@@ -15,6 +16,8 @@ import yolo.mypage.appliedclub.dto.SignclubVO;
 
 public interface appliedclubService {
 	
-	public List<SignclubVO> signclublist();
+	public List<SignclubVO> signclublist(String user);
+	
+	public int signclubinput(appliedclubVO appclubVO);
 
 }

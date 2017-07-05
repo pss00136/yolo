@@ -119,11 +119,6 @@ public class ClubController {
 	public String clubInputOk(ClubVO clubVO, String c_dateFrom, String c_timeFrom, 
 			String c_dateTo, String c_timeTo, String c_recruitFrom, String c_recruitTo, 
 			String c_place_v, String main_address, String detail_address, ClubImageVO cimgVO, HttpSession session){
-//		System.out.println("모임공간:"+clubVO.getC_recruit());
-//		System.out.println("주소11:"+ main_address);
-//		System.out.println("주소12:"+ detail_address);
-//		System.out.println("c_place:"+clubVO.getC_place());
-//		System.out.println("c_place_v:"+c_place_v);
 		clubVO.setU_id((String)session.getAttribute("u_id"));
 		System.out.println("u_id:"+clubVO.getU_id());
 		clubVO.setC_date(c_dateFrom + "/" + c_timeFrom + "~" + c_dateTo + "/" + c_timeTo);

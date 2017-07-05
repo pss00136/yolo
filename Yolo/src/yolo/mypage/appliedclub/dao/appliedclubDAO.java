@@ -1,5 +1,6 @@
 package yolo.mypage.appliedclub.dao;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.mybatis.spring.SqlSessionTemplate;
@@ -7,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import yolo.mypage.appliedclub.dto.SignclubVO;
+import yolo.mypage.appliedclub.dto.appliedclubVO;
 
 /*
 * @클래스명: appliedclubDAO
@@ -30,12 +32,18 @@ public class appliedclubDAO {
 	* @param   
 	* @return  List<ClubListVO>: DB select쿼리문 결과값
 	*/
-	public List<SignclubVO> signclublist(){
-		List<SignclubVO> clublist = null;
-		clublist = session.selectList("appliedclub.appclublist");
+	public List<SignclubVO> signclublist(String user){
+		HashMap map = new HashMap<>();
+		map.put("user",  user);
+		 List<SignclubVO> clublist = session.selectList("appliedclub.appclublist", map);
 		return clublist;
 	}
 	
-	
+	public int signclubinput(appliedclubVO appclubVO){
+		
+		int result = session.insert("appliedclub.appclubinput", appclubVO);
+		
+		return result;
+	}
 
 }
