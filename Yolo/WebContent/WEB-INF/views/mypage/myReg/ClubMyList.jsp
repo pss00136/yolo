@@ -79,12 +79,6 @@
 															<div class="title">Administrator</div>
 															<div class="address">Los Angeles, CA, USA</div>
 														</div>
-														<div class="ops">
-															<a href="#"
-																class="btn btn-icon btn-round btn-o btn-magenta btn-sm"><span
-																class="fa fa-envelope-o"></span> </a>
-														</div>
-														<div class="clearfix"></div>
 													</div>
 												</li>
 												<li>
@@ -97,12 +91,6 @@
 															<div class="title">Administrator</div>
 															<div class="address">Los Angeles, CA, USA</div>
 														</div>
-														<div class="ops">
-															<a href="#"
-																class="btn btn-icon btn-round btn-o btn-magenta btn-sm"><span
-																class="fa fa-envelope-o"></span> </a>
-														</div>
-														<div class="clearfix"></div>
 													</div>
 												</li>
 												<li>
@@ -115,12 +103,6 @@
 															<div class="title">Administrator</div>
 															<div class="address">Los Angeles, CA, USA</div>
 														</div>
-														<div class="ops">
-															<a href="#"
-																class="btn btn-icon btn-round btn-o btn-magenta btn-sm"><span
-																class="fa fa-envelope-o"></span> </a>
-														</div>
-														<div class="clearfix"></div>
 													</div>
 												</li>
 												<li>
@@ -133,12 +115,6 @@
 															<div class="title">Administrator</div>
 															<div class="address">Los Angeles, CA, USA</div>
 														</div>
-														<div class="ops">
-															<a href="#"
-																class="btn btn-icon btn-round btn-o btn-magenta btn-sm"><span
-																class="fa fa-envelope-o"></span> </a>
-														</div>
-														<div class="clearfix"></div>
 													</div>
 												</li>
 												<li>
@@ -151,12 +127,6 @@
 															<div class="title">Administrator</div>
 															<div class="address">Los Angeles, CA, USA</div>
 														</div>
-														<div class="ops">
-															<a href="#"
-																class="btn btn-icon btn-round btn-o btn-magenta btn-sm"><span
-																class="fa fa-envelope-o"></span> </a>
-														</div>
-														<div class="clearfix"></div>
 													</div>
 												</li>
 												
@@ -170,11 +140,6 @@
 															<div class="title">Administrator</div>
 															<div class="address">Los Angeles, CA, USA</div>
 														</div>
-														<div class="ops">
-															<a href="#"
-																class="btn btn-icon btn-round btn-o btn-magenta btn-sm"><span
-																class="fa fa-envelope-o"></span> </a>
-														</div>
 														<div class="clearfix"></div>
 													</div>
 												</li>
@@ -188,12 +153,6 @@
 															<div class="title">Administrator</div>
 															<div class="address">Los Angeles, CA, USA</div>
 														</div>
-														<div class="ops">
-															<a href="#"
-																class="btn btn-icon btn-round btn-o btn-magenta btn-sm"><span
-																class="fa fa-envelope-o"></span> </a>
-														</div>
-														<div class="clearfix"></div>
 													</div>
 												</li>
 
