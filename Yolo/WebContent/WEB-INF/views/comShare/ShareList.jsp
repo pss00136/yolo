@@ -10,22 +10,7 @@
 		    <div id="hero-container-map">
 		        <div id="home-map"></div>
 		    </div>
-		    <% String u_id = ""; 
-		     // 세션에 있는 id값 가져오기
-		     u_id = (String)session.getAttribute("u_id");
-		     
-		     //로그인해야하는 경우
-		     if( u_id==null || u_id==""){}else{ 
-		     // 로그인 된 경우
-		     %> 
-		    <div class="row bounds padding" >
-				<div class="col-md-12 col-xs-12" style="text-align:right;">
-					<div style="display:inline-block;">
-					<a href="ShareInput.share" class="btn btn-round btn-green ">쉐어링 글쓰기</a>
-					</div>
-				</div>				
-			</div>
-			<%} %> 
+		    
 			<!-- 타이틀 부분 -->
 			<div class="row bounds padding" >			
 				<div class="col-md-12 col-xs-12">
@@ -35,7 +20,45 @@
 					</div>	
 				</div>
 			</div>
+		    
+		    <!-- 검색 부분 -->
+		    <div class="row bounds padding" >
+		    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    	<div class="form-group">
+							<div class="input-group">
+								<input type="text" class="form-control">
+									<span class="input-group-btn">
+										<a href="#" class="btn btn-green">검색</a>
+									</span>
+							</div>
+						</div>
+					</div>
+		    
+		    <!-- 글 등록 부분 -->
+		    <% String u_id = ""; 
+		     // 세션에 있는 id값 가져오기
+		     u_id = (String)session.getAttribute("u_id");
+		     
+		     //로그인해야하는 경우
+		     if( u_id==null || u_id==""){}else{ 
+		     // 로그인 된 경우
+		     %> 
+		     
+		    <div class="row bounds padding" >
+				<div class="col-md-12 col-xs-12" >
+					<a href="ShareInput.share" class="btn btn-round btn-green ">쉐어링 글쓰기</a>
+					
+				</div>				
+			</div>
+			<%} %> 
+			
+			
+			
+			
+			</div>
 			<hr id="Share_title_hr" class="bounds padding"/>	
+			
+			
 			<!-- 리스트 목록 -->
 	<div class="bounds padding">
 	<c:choose>
@@ -74,14 +97,23 @@
 					<div class="col-md-4"></div>
 					<div class="col-md-4 col-xs-12" style="display:inline-block;">
 						<ul class="pagination pagination-round">
-							<li class="disabled"><a href="#"><span
+							<li><a href="ShareList.share?shareNowPage=${shareNowPage -1 }"><span
 									class="fa fa-angle-left"></span></a></li>
-							<li class="active"><a href="#">1</a></li>
-							<li><a href="#">2</a></li>
-							<li><a href="#">3</a></li>
-							<li><a href="#">4</a></li>
-							<li><a href="#">5</a></li>
-							<li><a href="#"><span class="fa fa-angle-right"></span></a></li>
+										
+									
+									<c:forEach var="paging" begin='${startPage}'  end='${endPage}' step ="1">
+										<c:choose>
+											<c:when test='${paging == shareNowPage }'>
+												<li class="active"><a href="#">${paging }</a></li>
+											</c:when>
+											<c:otherwise>	
+												<li><a href="ShareList.share?shareNowPage=${paging }">${paging }</a></li>	
+											</c:otherwise>								
+										</c:choose>
+									</c:forEach>
+							
+
+							<li><a href="ShareList.share?shareNowPage=${shareNowPage +1}"><span class="fa fa-angle-right"></span></a></li>
 						</ul>				
 					</div>
 					<div class="col-md-4"></div>

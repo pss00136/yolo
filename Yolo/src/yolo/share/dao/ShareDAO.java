@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import yolo.share.dto.InputListVO;
 import yolo.share.dto.ShareMainListVO;
+import yolo.share.dto.SharePagingVO;
 import yolo.share.dto.ShareVO;
 
 /*
@@ -38,10 +39,10 @@ public class ShareDAO {
 		return result;
 	}
 
-	public List<ShareMainListVO> shareList() {
+	public List<ShareMainListVO> shareList(SharePagingVO vo) {
 		List<ShareMainListVO> list = null;
 		try {
-			list = session.selectList("share.shareList");
+			list = session.selectList("share.shareList", vo);
 		} catch (Exception e) {
 			System.out.println("shareList 실패: "+ e.getMessage());
 		}
@@ -51,12 +52,18 @@ public class ShareDAO {
 	public List<InputListVO> shareInputList(String uid) {
 		List<InputListVO> list = null;
 		try {
-			System.out.println("Dao 타고 있냐?");
+			
 			list = session.selectList("share.shareInputList", uid);
-			System.out.println("DAO "+list.size());
+			
 		} catch (Exception e) {
 			System.out.println("회원이 예약한 공간보기리스트 에러:" + e.getMessage());
 		}
 		return list;
+	}
+	
+	public int shareTotalcount() {
+		int shareTotalCount = session.selectOne("share.shareTotalgetCount");
+		
+		return shareTotalCount;
 	}
 }

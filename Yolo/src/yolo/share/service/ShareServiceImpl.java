@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import yolo.share.dao.ShareDAO;
 import yolo.share.dto.InputListVO;
 import yolo.share.dto.ShareMainListVO;
+import yolo.share.dto.SharePagingVO;
 import yolo.share.dto.ShareVO;
 @Service
 public class ShareServiceImpl implements ShareService{
@@ -23,10 +24,10 @@ public class ShareServiceImpl implements ShareService{
 	}
 
 	@Override
-	public List<ShareMainListVO> shareList() {
-		System.out.println("list<shareMainListVO 타고 있어요!");
-		List<ShareMainListVO> list = sharedao.shareList();
-		System.out.println(list.size());
+	public List<ShareMainListVO> shareList(SharePagingVO vo) {
+		
+		List<ShareMainListVO> list = sharedao.shareList(vo);
+		
 		return list;
 	}
 
@@ -34,8 +35,14 @@ public class ShareServiceImpl implements ShareService{
 	public List<InputListVO> inputList(String uid) {
 		
 		List<InputListVO> list = sharedao.shareInputList(uid);
-		System.out.println("serviceImpl "+list.size());
+		
 		return list;
+	}
+
+	@Override
+	public int shareTotalGetCount() {
+		int shareTotalCount = sharedao.shareTotalcount();
+		return shareTotalCount;
 	}
 
 	

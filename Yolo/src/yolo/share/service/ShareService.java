@@ -4,6 +4,7 @@ import java.util.List;
 
 import yolo.share.dto.InputListVO;
 import yolo.share.dto.ShareMainListVO;
+import yolo.share.dto.SharePagingVO;
 import yolo.share.dto.ShareVO;
 
 /*
@@ -18,8 +19,10 @@ public interface ShareService {
 	
 	public int shareInput(ShareVO vo);
 
-	public List<ShareMainListVO> shareList();
+	public List<ShareMainListVO> shareList(SharePagingVO vo);
 
 	public List<InputListVO> inputList(String uid);
+
+	public int shareTotalGetCount();
 
 }
