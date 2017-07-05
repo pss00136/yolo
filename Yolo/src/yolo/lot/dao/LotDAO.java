@@ -1,5 +1,6 @@
 package yolo.lot.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.mybatis.spring.SqlSessionTemplate;
@@ -72,9 +73,10 @@ public class LotDAO {
 	
 	public int lotreview(PostscriptVO postVO){
 		int result=0;
+		List<PostscriptVO> list = null;     
 		try{
 			result = session.insert("lot.lotreview", postVO);
-			
+			list = session.selectList("lot.lotreviewlist");
 		}catch(Exception ex){
 			System.out.println("lotreview 실패: " + ex.getMessage());
 		}
@@ -82,6 +84,16 @@ public class LotDAO {
 		return result;
 	}
 	
-	
+	public List<PostscriptVO> lotreviewlist(PostscriptVO postVO){
+		List<PostscriptVO>	list = new ArrayList<PostscriptVO>();
+		
+		try{
+			list = session.selectList("lot.lotreviewlist", postVO);
+		}catch(Exception ex){
+			System.out.println("lotreviewlist 실패: " + ex.getMessage());
+		}
+				
+		return list;
+	}
 
 }

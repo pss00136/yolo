@@ -19,4 +19,6 @@ public interface LotService {
 	public LotListVO lotreserve(LotListVO lotlistVO);
 	
 	public int lotreview(PostscriptVO postVO);
+	
+	public List<PostscriptVO> lotreviewlist(PostscriptVO postVO); 
 }

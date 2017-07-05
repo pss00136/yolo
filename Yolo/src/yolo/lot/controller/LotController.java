@@ -222,10 +222,12 @@ public class LotController {
 	 		* @return  String:반환하는 경로
 	 		*/
 	   @RequestMapping("lot/LotView.lot")
-		public ModelAndView lotview(LotListVO lotlistVO){
+		public ModelAndView lotview(LotListVO lotlistVO, PostscriptVO postVO){
 		   ModelAndView mv = new ModelAndView();
 		    LotListVO list = service.lotdetailview(lotlistVO);
+		    List<PostscriptVO> review = service.lotreviewlist(postVO);
 		    mv.addObject("list", list);
+		    mv.addObject("review", review);
 		    mv.setViewName("/lot/LotView.map");
 			return mv;
 		}
@@ -239,20 +241,23 @@ public class LotController {
 		*/
 	   @RequestMapping("lot/LotViewRe.lot")
 	   @ResponseBody
-	   public String lotreview(PostscriptVO postVO){
-		    service.lotreview(postVO);
-		    System.out.println( postVO.getU_id() +">"+ postVO.getPs_star() + " & " + postVO.getPs_content());
-		    String jsonInfo = reviewjson(postVO);
-
+	   public String lotreview(PostscriptVO postVO, HttpSession session){
+		    String u_id = (String)session.getAttribute("u_id");
+		    postVO.setU_id(u_id);
+		    service.lotreview(postVO); 
+		    
+		    System.out.println(postVO.getPs_star());	
+		    String jsonInfo = reviewjson(postVO);   
 			return jsonInfo;
 		}
 	   
 
 	   public String reviewjson(PostscriptVO postVO){
 		   JSONObject jsonObject = new JSONObject();
-
+            
 		   jsonObject.put("ps_star", postVO.getPs_star());
 		   jsonObject.put("u_id", postVO.getU_id());
+		   jsonObject.put("pri_num", postVO.getPri_num());
 		   jsonObject.put("ps_content", postVO.getPs_content());
 
 		   String jsonInfo = jsonObject.toJSONString();

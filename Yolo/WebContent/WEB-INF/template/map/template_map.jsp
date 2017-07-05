@@ -39,10 +39,12 @@
 			<tiles:insertAttribute name="body" />
 
 			<!-- ------------------------------------------------------- -->
-			<!-- Footer -->
-			<tiles:insertAttribute name="footer" />
+<!-- 			<!-- Footer --> -->
+<%-- 			<tiles:insertAttribute name="footer" /> --%>
 
 		</div>
+		
+		
 	
 	</div>
 	<tiles:insertAttribute name="login"></tiles:insertAttribute>

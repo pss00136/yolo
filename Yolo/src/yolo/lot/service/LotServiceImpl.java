@@ -41,5 +41,9 @@ public class LotServiceImpl implements LotService {
 		int result = ldao.lotreview(postVO);
 		return result;
 	}
+	
+	public List<PostscriptVO> lotreviewlist(PostscriptVO postVO){
+		return ldao.lotreviewlist(postVO);
+	}
 
 }
