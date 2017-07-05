@@ -539,14 +539,17 @@
 
     $('.volume .btn-round-right').click(function() {
         var currentVal = parseInt($(this).siblings('input').val());
-        if (currentVal < 10) {
-            $(this).siblings('input').val(currentVal + 1);
+        if (currentVal < 40) {
+            $(this).siblings('input').val(currentVal+1);
+           
         }
+      
     });
+    
     $('.volume .btn-round-left').click(function() {
         var currentVal = parseInt($(this).siblings('input').val());
         if (currentVal > 1) {
-            $(this).siblings('input').val(currentVal - 1);
+            $(this).siblings('input').val(currentVal-1);
         }
     });
 

@@ -34,7 +34,7 @@ import yolo.lot.service.LotService;
 /*
 * @클래스명: LotController
 *
-* @version     1.0 17/06/29
+* @version     1.8 17/07/05
 * @author      김일주
 * @see         yolo.lot.controller
 * @since       JDK1.8

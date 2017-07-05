@@ -71,7 +71,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 	
 	<select id="lotreviewlist" parameterType="postVO" resultType="postVO">
-	 select u_id, ps_star, ps_content, pri_num
+	 select u_id, ps_star, ps_content, pri_num, ps_regdate
 	 from postscript2 
 	 where pri_num = #{pri_num}
 	</select> 

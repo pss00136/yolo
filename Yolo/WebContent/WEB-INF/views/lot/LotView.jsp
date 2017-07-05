@@ -168,46 +168,51 @@
 <div id="comments" class="comments">
 	<h3>후기작성</h3>
 
-	<div class="comment">
-		<div class="commentAvatar">
+	<div class="comment" style="height: 500px;">
 
-			<div class="commentArrow">
-				<span class="fa fa-caret-left"></span>
-			</div>
-		</div>
 		<!-- 후기list -->
-		
-			
-					<div id="ReviewList" style="background-color: white;"
-						class="col-md-11">
-					<% List<PostscriptVO> review = (List<PostscriptVO>)request.getAttribute("review");
+		<div id="ReviewList" class="col-md-11">
+			<% List<PostscriptVO> review = (List<PostscriptVO>)request.getAttribute("review");
 		   for(PostscriptVO pvo : review)	{				
 		%>
-						<div class="rating">
-						  <div class="stars">
-						  
-						  <%for(int i = 1; i <= 5; i++) {
+
+			<div class="row commentContent"
+				style="margin-bottom: 7px; padding: 10px;">
+    
+                   	<!-- 아이디 -->
+                   <div class="commentTitle"><%=pvo.getU_id() %></div>
+				<div class="commentBody col-md-12">
+					<!-- 후기글 -->
+					<div id="writereview" class="col-md-9"><%=pvo.getPs_content() %></div>
+					<div  class="col-md-3">
+						<!-- 별점 -->
+						<div class="stars">
+							<%for(int i = 1; i <= 5; i++) {
 							  if( i <= pvo.getPs_star() ){ 
-							  System.out.println(i);
 						  %>
 							<span class="fa fa-star text-yellow"></span>
-						  <% } else { %>
-							 <span class="fa fa-star-o text-yellow"></span>
-						  <% }
+							<% } else { %>
+							<span class="fa fa-star-o text-yellow"></span>
+							<% }
 						  	 }
 						  %>
-						  </div>
-						  </div>
-						<div class="commentTitle"><%=pvo.getU_id() %></div>
-							<div class="commentBody"><%=pvo.getPs_content() %></div>
-						<% } %>
 						</div>
-							
-						</div>
-		
+					</div>
+					
+				</div>
+				<div class="regdate"><%= pvo.getPs_regdate() %></div>
+
+
+
+			</div>
+			<% } %>
+		</div>
 		<!-- 후기list 끝 -->
-		
 	</div>
+
+
+
+</div>
 
 
 
@@ -215,43 +220,42 @@
 
 <!-- 후기작성 modal -->
 
-	<div id="commentsFormWrapper" class="commentsFormWrapper"
-		style='width: 400px;'>
-		<form id="commentsForm" class="commentsForm">
-			
-			<!-- 별점 -->
-			<div class="row rating">
-				<div class="stars">
-					<input class="star star-5" id="star-5" type="radio" name="ps_star"
-						value="5" /> <label class="star star-5" for="star-5"></label> <input
-						class="star star-4" id="star-4" type="radio" name="ps_star"
-						value="4" /> <label class="star star-4" for="star-4"></label> <input
-						class="star star-3" id="star-3" type="radio" name="ps_star"
-						value="3" /> <label class="star star-3" for="star-3"></label> <input
-						class="star star-2" id="star-2" type="radio" name="ps_star"
-						value="2" /> <label class="star star-2" for="star-2"></label> <input
-						class="star star-1" id="star-1" type="radio" name="ps_star"
-						value="1" /> <label class="star star-1" for="star-1"></label>
-				</div>
+<div id="commentsFormWrapper" class="commentsFormWrapper"
+	style='width: 400px;'>
+	<form id="commentsForm" class="commentsForm">
+
+		<!-- 별점 -->
+		<div class="row rating">
+			<div class="stars">
+				<input class="star star-5" id="star-5" type="radio" name="ps_star"
+					value="5" /> <label class="star star-5" for="star-5"></label> <input
+					class="star star-4" id="star-4" type="radio" name="ps_star"
+					value="4" /> <label class="star star-4" for="star-4"></label> <input
+					class="star star-3" id="star-3" type="radio" name="ps_star"
+					value="3" /> <label class="star star-3" for="star-3"></label> <input
+					class="star star-2" id="star-2" type="radio" name="ps_star"
+					value="2" /> <label class="star star-2" for="star-2"></label> <input
+					class="star star-1" id="star-1" type="radio" name="ps_star"
+					value="1" /> <label class="star star-1" for="star-1"></label>
 			</div>
-			
-			<!-- 후기 작성란 -->
-			<div id="input-group" class="col-md-12 input-group">
+		</div>
 
-				<div class="col-md-8">
-					<input type="text" id="ps_content" name="ps_content"
-						class="form-control" placeholder="한 줄 후기 작성하기">
-				</div>
+		<!-- 후기 작성란 -->
+		<div id="input-group" class="col-md-12 input-group">
 
-				<input type="hidden" id="Repri_num" value="${list.pri_num}" />
-				<div class="col-md-2">
-					<a id="Reviewbtn"
-						class="form-control btn btn-green" >작성하기</a>
-				</div>
-
+			<div class="col-md-8">
+				<input type="text" id="ps_content" name="ps_content"
+					class="form-control" placeholder="한 줄 후기 작성하기">
 			</div>
-		</form>
-	</div>
+
+			<input type="hidden" id="Repri_num" value="${list.pri_num}" />
+			<div class="col-md-2">
+				<a id="Reviewbtn" class="form-control btn btn-green">작성하기</a>
+			</div>
+
+		</div>
+	</form>
+</div>
 
 <!------------- 후기 작성하기 끝 --------------------->
 

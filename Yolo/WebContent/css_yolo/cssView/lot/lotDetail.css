@@ -33,6 +33,14 @@
 	background-color: white;
 }
 
+#writereview{
+	font-size: 16px;
+}
+
+.regdate{
+	float:right;
+}
+
 <!--별점 제발 css -->
 .rating{
    float: left;

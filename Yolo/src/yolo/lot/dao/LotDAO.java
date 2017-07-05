@@ -13,13 +13,28 @@ import yolo.lot.dto.PostscriptVO;
 import yolo.lot.dto.PrivateimageVO;
 import yolo.lot.dto.PrivatelotVO;
 
+/*
+* @클래스명: LotDAO
+*
+* @version     1.8 17/07/05
+* @author      김일주
+* @see         yolo.lot.dao
+* @since       JDK1.8
+*/
 @Repository
 public class LotDAO {
 	
+	/* 멤버필드 */
 	@Autowired
 	SqlSessionTemplate session;
 	
-	
+	/*
+	* @메소드명: lotinput
+	* @역할:     LotService에서 전달받은 값을 DB에 삽입
+	*
+	* @param   PrivatelotVO,PrivateimageVO,EntrepreneurVO
+	* @return  int: DB insert쿼리문 결과값
+	*/
 	public int lotinput(PrivatelotVO privateVO, PrivateimageVO primgVO, EntrepreneurVO entrepreneurVO){
 		int result=0;
 		try{
@@ -38,6 +53,13 @@ public class LotDAO {
 		
 	}
 	
+	/*
+	* @메소드명:  lotlistview
+	* @역할:     LotService에서 전달받은 값을 DB에 삽입
+	*
+	* @param   LotListVO
+	* @return  list: DB insert쿼리문 결과값
+	*/
 	public List<LotListVO> lotlistview(){
 		List<LotListVO>	list = null;
 		try{
@@ -49,6 +71,13 @@ public class LotDAO {
 		return list;
 	}
 	
+	/*
+	* @메소드명:  lotdetailview
+	* @역할:     LotService에서 전달받은 값을 DB에 삽입
+	*
+	* @param   LotListVO
+	* @return  list: DB insert쿼리문 결과값
+	*/
 	public LotListVO lotdetailview(LotListVO lotlistVO){
 		LotListVO list = null;                                                   
 		try{
@@ -60,6 +89,13 @@ public class LotDAO {
 		return list;
 	}
 	
+	/*
+	* @메소드명:  lotreserve
+	* @역할:     LotService에서 전달받은 값을 DB에 삽입
+	*
+	* @param   LotListVO
+	* @return  list: DB insert쿼리문 결과값
+	*/
 	public LotListVO lotreserve(LotListVO lotlistVO){
 		LotListVO list = null;
 		try{
@@ -71,6 +107,13 @@ public class LotDAO {
 		return list;
 	}
 	
+	/*
+	* @메소드명:  lotreview
+	* @역할:     LotService에서 전달받은 값을 DB에 삽입
+	*
+	* @param   PostscriptVO
+	* @return  int: DB insert쿼리문 결과값
+	*/
 	public int lotreview(PostscriptVO postVO){
 		int result=0;
 		List<PostscriptVO> list = null;     
@@ -84,6 +127,13 @@ public class LotDAO {
 		return result;
 	}
 	
+	/*
+	* @메소드명:  lotreviewlist
+	* @역할:     LotService에서 전달받은 값을 DB에 삽입
+	*
+	* @param   PostscriptVO
+	* @return  list: DB insert쿼리문 결과값
+	*/
 	public List<PostscriptVO> lotreviewlist(PostscriptVO postVO){
 		List<PostscriptVO>	list = new ArrayList<PostscriptVO>();
 		

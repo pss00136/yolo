@@ -54,6 +54,8 @@
  <definition name='/*/*.map' extends='mapTemplate'>
  	<put-attribute name="body" value='/WEB-INF/views/{1}/{2}.jsp'></put-attribute>
  </definition>
+ 
+
 
 <!--  no template -->
 <definition name='noTemplate' template='/WEB-INF/template/default/noTiles.jsp'>
