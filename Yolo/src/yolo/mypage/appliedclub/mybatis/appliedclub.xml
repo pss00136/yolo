@@ -18,4 +18,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	FROM SIGNCLUB S, CLUB C, CLUBIMAGE I
 	WHERE S.C_NUM = C.C_NUM and C.C_NUM = I.C_NUM and S.U_ID = #{user}
 </select>
+
+<!-- <delete id="appclubdelete" parameterType="yolo.mypage.appliedclub.dto.appliedclubVO"> -->
+<!-- 	DELETE FROM SIGNCLUB WHERE U_ID = #{u_id} AND SC_NUM = #{sc_num} -->
+<!-- </delete> -->
+
 </mapper>

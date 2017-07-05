@@ -35,7 +35,7 @@ public class appliedclubDAO {
 	public List<SignclubVO> signclublist(String user){
 		HashMap map = new HashMap<>();
 		map.put("user",  user);
-		 List<SignclubVO> clublist = session.selectList("appliedclub.appclublist", map);
+		List<SignclubVO> clublist = session.selectList("appliedclub.appclublist", map);
 		return clublist;
 	}
 	
@@ -45,5 +45,12 @@ public class appliedclubDAO {
 		
 		return result;
 	}
+	
+//	public int signclubdelete(){
+//		
+//		int result = session.delete("appliedclub.appclubdelete");
+//		
+//		return result;
+//	}
 
 }

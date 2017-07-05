@@ -1,5 +1,9 @@
 package yolo.mypage.appliedlot.service;
 
+import java.util.List;
+
+import yolo.mypage.appliedlot.dto.BookedlotVO;
+
 /*
 * @클래스명: appliedLotService
 *
@@ -10,5 +14,7 @@ package yolo.mypage.appliedlot.service;
 */
 
 public interface appliedLotService {
+	
+	public List<BookedlotVO> booklotlist(String user);
 
 }

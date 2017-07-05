@@ -19,5 +19,7 @@ public interface appliedclubService {
 	public List<SignclubVO> signclublist(String user);
 	
 	public int signclubinput(appliedclubVO appclubVO);
+	
+//	public int signclubdelete();
 
 }
