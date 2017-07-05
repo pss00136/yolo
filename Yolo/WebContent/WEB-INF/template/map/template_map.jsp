@@ -39,8 +39,6 @@
 			<tiles:insertAttribute name="body" />
 
 			<!-- ------------------------------------------------------- -->
-<!-- 			<!-- Footer --> -->
-<%-- 			<tiles:insertAttribute name="footer" /> --%>
 
 		</div>
 		

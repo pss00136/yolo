@@ -218,6 +218,7 @@
 	<div id="commentsFormWrapper" class="commentsFormWrapper"
 		style='width: 400px;'>
 		<form id="commentsForm" class="commentsForm">
+			
 			<!-- 별점 -->
 			<div class="row rating">
 				<div class="stars">
@@ -233,6 +234,7 @@
 						value="1" /> <label class="star star-1" for="star-1"></label>
 				</div>
 			</div>
+			
 			<!-- 후기 작성란 -->
 			<div id="input-group" class="col-md-12 input-group">
 
