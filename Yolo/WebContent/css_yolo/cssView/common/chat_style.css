@@ -20,6 +20,9 @@
 }
 
 @media screen and (max-width: 767px){
+	.chat_ul{
+		width: 100%;
+	}
 	.headerUserWraper > .headerNotifyWraper{
 		display:block;
 		visibility: visible;
@@ -55,6 +58,9 @@
 	}
 }
 @media screen and (max-width: 480px) {
+	.chat_ul{
+		width: 100%;
+	}
 	.headerUserWraper > .headerNotifyWraper{
 		display:block;
 		visibility: visible;
