@@ -18,7 +18,7 @@ import yolo.share.dto.ShareMainListVO;
  * 
  * @version 	1.0 17/07/05
  * @author		김명희
- * @see			yolo.mypage.mychare.controller
+ * @see			yolo.mypage.myshare.controller
  * @since		JDK1.8
  */
 @Controller

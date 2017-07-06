@@ -5,6 +5,8 @@
 
 <!-- 추가CSS -->
 <link href="/Yolo/css_yolo/cssView/comShare/ShareInput.css" rel="stylesheet">
+<link href="/Yolo/css_yolo/cssView/comShare/datetimePicker.css" rel="stylesheet">
+<link href="/Yolo/css_yolo/cssView/comShare/ShareEdit.css" rel="stylesheet">
 
 <!-- ------------------------------------------------------- -->
 
@@ -80,6 +82,56 @@
 										<textarea class="form-control" rows="10" readonly="readonly"></textarea>
 									</div>
 								</div>
+								<!-- 시간 선택 -->
+								<div class="form-group">
+									<label class="col-sm-2 control-label time">공간사용시간</label>
+									<div class="col-sm-9">
+										<div class="item active">
+											<hr>
+											<div class="btn-group" data-toggle="buttons">
+												<label class="btn btn-o btn-warning active "> <input
+													type="checkbox" autocomplete="off" checked><span>09:00</span>
+												</label> <label class="btn btn-o btn-warning"> <input
+													type="checkbox" autocomplete="off"><span>10:00</span>
+												</label> <label class="btn btn-o btn-warning"> <input
+													type="checkbox" autocomplete="off"><span>11:00</span>
+												</label> <label class="btn btn-o btn-warning"> <input
+													type="checkbox" autocomplete="off"><span>12:00</span>
+												</label> <label class="btn btn-o btn-warning"> <input
+													type="checkbox" autocomplete="off"><span>13:00</span>
+												</label> <label class="btn btn-o btn-warning"> <input
+													type="checkbox" autocomplete="off"><span>14:00</span>
+												</label> <label class="btn btn-o btn-warning"> <input
+													type="checkbox" autocomplete="off"><span>15:00</span>
+												</label> <label class="btn btn-o btn-warning"> <input
+													type="checkbox" autocomplete="off"><span>16:00</span>
+												</label>
+											</div>
+											<div class="btn-group" data-toggle="buttons">
+												<label class="btn btn-o btn-warning"> <input
+													type="checkbox" autocomplete="off"><span>17:00</span>
+												</label> <label class="btn btn-o btn-warning"> <input
+													type="checkbox" autocomplete="off"><span>18:00</span>
+												</label> <label class="btn btn-o btn-warning"> <input
+													type="checkbox" autocomplete="off"><span>19:00</span>
+												</label> <label class="btn btn-o btn-warning"> <input
+													type="checkbox" autocomplete="off"><span>20:00</span>
+												</label> <label class="btn btn-o btn-warning"> <input
+													type="checkbox" autocomplete="off"><span>21:00</span>
+												</label> <label class="btn btn-o btn-warning"> <input
+													type="checkbox" autocomplete="off"><span>22:00</span>
+												</label> <label class="btn btn-o btn-warning"> <input
+													type="checkbox" autocomplete="off"><span>23:00</span>
+												</label> <label class="btn btn-o btn-warning"> <input
+													type="checkbox" autocomplete="off"><span>24:00</span>
+												</label>
+											</div>
+											<hr>
+										</div>
+
+
+									</div>
+								</div>
 								<!-- 글 내용 입력 -->
 								<div class="form-group">
 									<label class="col-sm-2 control-label">글 내용</label>
@@ -108,4 +160,8 @@
 
 
 <!-- ------------------------------------------------------- -->
+
+<!-- 추가JS -->
+<script src="/Yolo/js_yolo/comShare/datetimePicker.js"></script>
+
 		
