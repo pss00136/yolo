@@ -1,7 +1,9 @@
 package yolo.club.dao;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.StringTokenizer;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,16 +61,45 @@ public class ClubDAO {
 	}
 	
 	/*
-	* @메소드명: clubsearhview
+	* @메소드명: clubsearhKey
 	* @역할:  DB에서 조건을 통해 clubList를 검색
 	*
 	* @param   
 	* @return  List<ClubListVO>: DB select쿼리문 결과값
 	*/
-	public List<ClubListVO> clubsearchview(String keyWord){
+	public List<ClubListVO> clubsearhKey(String keyWord){
 		HashMap map = new HashMap<>();
 		map.put("keyWord", keyWord);
-		List<ClubListVO> search = session.selectList("club.clubsearchview", map);
+		List<ClubListVO> search = session.selectList("club.clubsearhKey", map);
+		return search;
+	}
+	
+	/*
+	 * @메소드명: clubsearhLoc
+	 * @역할:  DB에서 조건을 통해 clubList를 검색
+	 *
+	 * @param   
+	 * @return  List<ClubListVO>: DB select쿼리문 결과값
+	 */
+	public List<ClubListVO> clubsearhLoc(String location){
+		HashMap map = new HashMap<>();
+		StringTokenizer st = new StringTokenizer(location, "/");
+//		List locations = new ArrayList();
+		
+		String[] locations = new String[st.countTokens()];
+		int i=0;
+		while(st.hasMoreTokens())
+		{	
+//			locations.add(st.nextToken());
+			locations[i]=st.nextToken();
+			i++; 	
+		}
+		map.put("locations", locations);
+		
+		System.out.println("locations:"+locations);
+		System.out.println("Arr:"+map.toString());
+		List<ClubListVO> search = session.selectList("club.clubsearhLoc", map);
+		
 		return search;
 	}
 	

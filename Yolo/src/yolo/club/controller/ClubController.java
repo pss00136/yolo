@@ -3,6 +3,7 @@ package yolo.club.controller;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.StringTokenizer;
 
 import javax.servlet.http.HttpSession;
 
@@ -60,13 +61,20 @@ public class ClubController {
 	*/
 	@RequestMapping("/ClubList.club")
 	public ModelAndView list(String keyWord, String location){
-		System.out.println("key:"+keyWord);
+//		System.out.println("location:"+location);
+//		System.out.println("key:"+keyWord);
 		ModelAndView mv = new ModelAndView();
 		List<ClubListVO> clublist = new ArrayList<ClubListVO>();
-		if(keyWord !=null  ){
-			System.out.println("들어감");
-			clublist = service.clubsearhview(keyWord);
-		}else{
+		if(keyWord != null){
+			System.out.println("ㅋ워드 들어감");
+			clublist = service.clubsearhKey(keyWord);
+		}else if(location != null){
+			System.out.println("위치 들어감");
+			clublist = service.clubsearhLoc(location);
+		}
+		else if(keyWord == null && location == null)
+		{
+			System.out.println("ㅋ워드 없음");
 			clublist = service.clublistview();
 		}
 		mv.addObject("list", clublist);

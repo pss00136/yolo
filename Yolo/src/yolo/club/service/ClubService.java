@@ -22,7 +22,9 @@ public interface ClubService {
 	
 	public List<ClubListVO> clublistview();
 	
-	public List<ClubListVO> clubsearhview(String keyWord);
+	public List<ClubListVO> clubsearhKey(String keyWord);
+	
+	public List<ClubListVO> clubsearhLoc(String location);
 	
 	public ClubListVO clubdetail(ClubListVO clublistVO);
 	

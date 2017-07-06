@@ -32,8 +32,12 @@ public class ClubServiceImpl implements ClubService {
 		return clubdao.clubdetail(clublistVO);
 	}
 	
-	public List<ClubListVO> clubsearhview(String keyWord){
-		return clubdao.clubsearchview(keyWord);
+	public List<ClubListVO> clubsearhKey(String keyWord){
+		return clubdao.clubsearhKey(keyWord);
+	}
+	
+	public List<ClubListVO> clubsearhLoc(String location){
+		return clubdao.clubsearhLoc(location);
 	}
 
 }
