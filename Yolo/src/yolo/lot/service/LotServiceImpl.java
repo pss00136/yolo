@@ -9,10 +9,12 @@ import org.springframework.stereotype.Service;
 
 import yolo.host.dto.EntrepreneurVO;
 import yolo.lot.dao.LotDAO;
+import yolo.lot.dto.BooklotVO;
 import yolo.lot.dto.LotListVO;
 import yolo.lot.dto.PostscriptVO;
 import yolo.lot.dto.PrivateimageVO;
 import yolo.lot.dto.PrivatelotVO;
+import yolo.lot.dto.TimetableVO;
 import yolo.lot.dto.ZipcodeVO;
 
 @Service
@@ -57,6 +59,18 @@ public class LotServiceImpl implements LotService {
 	
 	public List<ZipcodeVO> searchgugun(ZipcodeVO zipcodeVO){
 		return ldao.searchgugun(zipcodeVO);
+	}
+	
+	@Override
+	public TimetableVO gettime(TimetableVO timetableVO) {
+		 
+		return ldao.gettime(timetableVO);
+	}
+
+	@Override
+	public int lotpay(BooklotVO booklotVO, TimetableVO timetableVO) {
+		// TODO Auto-generated method stub
+		return ldao.lotpay(booklotVO, timetableVO);
 	}
 
 }

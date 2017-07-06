@@ -55,7 +55,7 @@
 																<c:forEach items="${list}" var="a">
 																	<tr>
 																		<td><div class="radio custom-radio">
-																		<label><input type="radio" name="b_id" value="${a.b_id }"><span
+																		<label><input type="radio" name="bl_id" value="${a.bl_id }"><span
 																			class="fa fa-circle"></span></label>
 																			</div></td>
 																		<td><img alt="" src="/Yolo/images_yolo/lot/${a.priimg_name}"
@@ -82,22 +82,29 @@
 										<div class="item active">
 											<hr>
 											<div class="btn-group" data-toggle="buttons">
-												<label class="btn btn-o btn-warning active "> <input
-													type="checkbox" autocomplete="off" checked><span>09:00</span>
-												</label> <label class="btn btn-o btn-warning"> <input
-													type="checkbox" autocomplete="off"><span>10:00</span>
-												</label> <label class="btn btn-o btn-warning"> <input
-													type="checkbox" autocomplete="off"><span>11:00</span>
-												</label> <label class="btn btn-o btn-warning"> <input
-													type="checkbox" autocomplete="off"><span>12:00</span>
-												</label> <label class="btn btn-o btn-warning"> <input
-													type="checkbox" autocomplete="off"><span>13:00</span>
-												</label> <label class="btn btn-o btn-warning"> <input
-													type="checkbox" autocomplete="off"><span>14:00</span>
-												</label> <label class="btn btn-o btn-warning"> <input
-													type="checkbox" autocomplete="off"><span>15:00</span>
-												</label> <label class="btn btn-o btn-warning"> <input
-													type="checkbox" autocomplete="off"><span>16:00</span>
+												<label class="btn btn-o btn-warning active "> 
+												<input type="checkbox" autocomplete="off" checked><span>09:00</span>
+												</label> 
+												<label class="btn btn-o btn-warning"> 
+												<input	type="checkbox" autocomplete="off"><span>10:00</span>
+												</label> 
+												<label class="btn btn-o btn-warning"> 
+												<input	type="checkbox" autocomplete="off"><span>11:00</span>
+												</label> 
+												<label class="btn btn-o btn-warning"> 
+												<input type="checkbox" autocomplete="off"><span>12:00</span>
+												</label> 
+												<label class="btn btn-o btn-warning"> 
+												<input type="checkbox" autocomplete="off"><span>13:00</span>
+												</label> 
+												<label class="btn btn-o btn-warning"> 
+												<input type="checkbox" autocomplete="off"><span>14:00</span>
+												</label> 
+												<label class="btn btn-o btn-warning"> 
+												<input type="checkbox" autocomplete="off"><span>15:00</span>
+												</label> 
+												<label class="btn btn-o btn-warning"> 
+												<input	type="checkbox" autocomplete="off"><span>16:00</span>
 												</label>
 											</div>
 											<div class="btn-group" data-toggle="buttons">
@@ -125,13 +132,7 @@
 
 									</div>
 								</div>
-								<!-- 가격 입력란 -->
-								<div class="form-group">
-									<label class="col-sm-2 control-label">가격</label>
-									<div class="col-sm-9">
-										<input name="sl_title" id="sl_title" class="form-control input-sm" type="text">
-									</div>
-								</div>
+								
 								<!-- 글 내용 입력 -->
 								<div class="form-group">
 									<label class="col-sm-2 control-label">글 내용</label>

@@ -112,6 +112,28 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
      WHERE p.pri_num = #{pri_num}
 	</select>
 	
+	<select id="gettime" parameterType="yolo.lot.dto.TimetableVO" resultType="yolo.lot.dto.TimetableVO">
+	SELECT t_num, pri_num, t_date, t_time
+	FROM timetable
+	WHERE t_date = #{t_date} AND pri_num = #{pri_num}
+	</select>
+	
+	<insert id="bookinsert" parameterType="yolo.lot.dto.BooklotVO">
+		INSERT INTO BOOKLOT(bl_id, u_id, pri_num, bl_name, bl_tel, bl_people, bl_date, bl_time, bl_pay)
+		VALUES (concat('bl_', BOOKLOT_NO_SEQ.nextVal), #{u_id},#{pri_num},#{bl_name},#{bl_tel},#{bl_people},#{bl_date},#{bl_time},#{bl_pay})
+	</insert>
+	
+	<insert id="inserttime" parameterType="yolo.lot.dto.TimetableVO">
+		INSERT INTO TIMETABLE(T_NUM, PRI_NUM, T_DATE, T_TIME)
+		VALUES (concat('t_', TIMETABLE_NO_SEQ.nextVal), #{pri_num}, #{t_date}, #{t_time})
+	</insert> 
+	
+	<update id="updatetime" parameterType="yolo.lot.dto.TimetableVO">
+		UPDATE TIMETABLE
+		SET T_DATE = #{t_date}, T_TIME = #{t_time}
+		WHERE T_NUM = #{t_num}
+	</update>
+	
 	
 
 

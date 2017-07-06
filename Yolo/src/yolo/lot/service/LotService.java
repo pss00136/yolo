@@ -3,10 +3,12 @@ package yolo.lot.service;
 import java.util.List;
 
 import yolo.host.dto.EntrepreneurVO;
+import yolo.lot.dto.BooklotVO;
 import yolo.lot.dto.LotListVO;
 import yolo.lot.dto.PostscriptVO;
 import yolo.lot.dto.PrivateimageVO;
 import yolo.lot.dto.PrivatelotVO;
+import yolo.lot.dto.TimetableVO;
 import yolo.lot.dto.ZipcodeVO;
 /*
 * @인터페이스명: LotService
@@ -98,5 +100,9 @@ public interface LotService {
 	*/
 	public List<ZipcodeVO> searchgugun(ZipcodeVO zipcodeVO);
 	
+	
+	public TimetableVO gettime(TimetableVO timetableVO);
+	
+	public int lotpay(BooklotVO booklotVO, TimetableVO timetableVO);
 	
 }

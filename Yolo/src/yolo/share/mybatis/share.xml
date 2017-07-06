@@ -10,18 +10,18 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <!-- 등록 sql -->
 <insert id="shareInsert" parameterType="sharevo"> <!-- insert,delete,update는 리턴타입 필요없음 -->
 	INSERT INTO SHARELOT2
-	(sl_num, u_id, sl_title, sl_content, sl_time, sl_price, sl_regdate, sl_hits, b_id)
+	(sl_num, u_id, sl_title, sl_content, sl_time, sl_price, sl_regdate, sl_hits, bl_id)
 	VALUES
-	(SHARELOT_NO_SEQ.nextval, #{u_id}, #{sl_title}, #{sl_content},'06:00~15:00', '50000', sysdate , 0 , #{b_id})
+	(SHARELOT_NO_SEQ.nextval, #{u_id}, #{sl_title}, #{sl_content},'06:00~15:00', '50000', sysdate , 0 , #{bl_id})
 </insert>
 
 <select id="shareList" parameterType="yolo.share.dto.SharePagingVO" resultType="yolo.share.dto.ShareMainListVO">
 <![CDATA[
-SELECT b.rnum rnum, b.sl_num sl_num, b.u_id u_id, b.sl_title sl_title, b.sl_content sl_content, b.sl_time sl_time, b.sl_price sl_price, b.sl_regdate sl_regdate, b.sl_hits sl_hits,  b.b_id b_id, b.priimg_num priimg_num, b.priimg_path priimg_path, b.priimg_name priimg_name, b.pri_num pri_num, b.pri_title pri_title, b.pri_addr pri_addr
-FROM  (SELECT  rownum rnum, a.sl_num sl_num, a.u_id u_id, a.sl_title sl_title, a.sl_content sl_content, a.sl_time sl_time, a.sl_price sl_price, a.sl_regdate sl_regdate, a.sl_hits sl_hits,  a.b_id b_id, a.priimg_num priimg_num, a.priimg_path priimg_path, a.priimg_name priimg_name, a.pri_num pri_num, a.pri_title pri_title, a.pri_addr pri_addr
-        FROM (Select s.sl_num sl_num, s.u_id u_id, s.sl_title sl_title, s.sl_content sl_content, s.sl_time sl_time, s.sl_price sl_price, s.sl_regdate sl_regdate, s.sl_hits sl_hits, s.b_id b_id, i.priimg_num priimg_num, i.priimg_path priimg_path, i.priimg_name priimg_name, p.pri_num pri_num, p.pri_title pri_title, p.pri_addr pri_addr
+SELECT b.rnum rnum, b.sl_num sl_num, b.u_id u_id, b.sl_title sl_title, b.sl_content sl_content, b.sl_time sl_time, b.sl_price sl_price, b.sl_regdate sl_regdate, b.sl_hits sl_hits,  b.bl_id bl_id, b.priimg_num priimg_num, b.priimg_path priimg_path, b.priimg_name priimg_name, b.pri_num pri_num, b.pri_title pri_title, b.pri_addr pri_addr
+FROM  (SELECT  rownum rnum, a.sl_num sl_num, a.u_id u_id, a.sl_title sl_title, a.sl_content sl_content, a.sl_time sl_time, a.sl_price sl_price, a.sl_regdate sl_regdate, a.sl_hits sl_hits,  a.bl_id bl_id, a.priimg_num priimg_num, a.priimg_path priimg_path, a.priimg_name priimg_name, a.pri_num pri_num, a.pri_title pri_title, a.pri_addr pri_addr
+        FROM (Select s.sl_num sl_num, s.u_id u_id, s.sl_title sl_title, s.sl_content sl_content, s.sl_time sl_time, s.sl_price sl_price, s.sl_regdate sl_regdate, s.sl_hits sl_hits, s.bl_id bl_id, i.priimg_num priimg_num, i.priimg_path priimg_path, i.priimg_name priimg_name, p.pri_num pri_num, p.pri_title pri_title, p.pri_addr pri_addr
               FROM sharelot2 s, booklot l, privatelot p, privateimage i 
-              WHERE s.b_id = l.bl_id AND l.pri_num = p.pri_num AND p.pri_num = i.pri_num
+              WHERE s.bl_id = l.bl_id AND l.pri_num = p.pri_num AND p.pri_num = i.pri_num
               ORDER BY s.SL_NUM DESC) a
         WHERE ROWNUM <= #{endCount}) b 
 WHERE b.rnum>= #{startCount}
@@ -31,13 +31,13 @@ WHERE b.rnum>= #{startCount}
 <select id="shareTotalgetCount" resultType="int">
 SELECT COUNT(*) totalCount 
 FROM sharelot2 s, booklot b, privatelot p, privateimage i 
-WHERE s.b_id = b.bl_id AND b.pri_num = p.pri_num AND p.pri_num = i.pri_num
+WHERE s.bl_id = b.bl_id AND b.pri_num = p.pri_num AND p.pri_num = i.pri_num
 </select>
 
 
 
 <select id="shareInputList" parameterType="string" resultType="shareinputlist">
-SELECT i.priimg_num priimg_num, i.priimg_path priimg_path, i.priimg_name priimg_name, p.pri_num pri_num, p.pri_title pri_title, p.pri_addr pri_addr, b.bl_id b_id, b.u_id u_id, b.bl_date b_date
+SELECT i.priimg_num priimg_num, i.priimg_path priimg_path, i.priimg_name priimg_name, p.pri_num pri_num, p.pri_title pri_title, p.pri_addr pri_addr, b.bl_id bl_id, b.u_id u_id, b.bl_date b_date
 FROM privatelot P , booklot b, privateimage i
 WHERE b.U_ID = #{uid} and  p.pri_num = b.pri_num and i.PRI_NUM = p.pri_num
 </select>
