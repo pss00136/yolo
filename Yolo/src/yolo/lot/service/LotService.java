@@ -27,6 +27,15 @@ public interface LotService {
 	public int lotinput(PrivatelotVO privateVO, PrivateimageVO primgVO, EntrepreneurVO entrepreneurVO);
 	
 	/*
+	* @메소드명: lotsearch
+	* @역할: LotController에서 전달받은 값을 DAO로 전달, 결과값 리턴
+	*
+	* @param   LotListVO 에서 전달받은 값
+	* @return  
+	*/
+	public List<LotListVO> lotsearch(String sido, String gugun, String rdate, String rcount);
+	
+	/*
 	* @메소드명: lotlistview
 	* @역할: LotController에서 전달받은 값을 DAO로 전달, 결과값 리턴
 	*

@@ -1,6 +1,7 @@
 package yolo.lot.dao;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import org.mybatis.spring.SqlSessionTemplate;
@@ -52,6 +53,29 @@ public class LotDAO {
 		}
 		return result;
 		
+	}
+	
+	/*
+	* @메소드명:  lotsearch
+	* @역할:     LotService에서 전달받은 값을 DB에 삽입
+	*
+	* @param   LotListVO
+	* @return  list: DB insert쿼리문 결과값
+	*/
+	public List<LotListVO> lotsearch(String sido, String gugun, String rdate, String rcount){
+		List<LotListVO>	list = null;
+		HashMap map = new HashMap<>();
+		
+		map.put("sigu", sido+" "+gugun);
+		map.put("rdate", rdate); map.put("rcount", rcount);
+		try{
+			list = session.selectList("lot.lotsearch", map);
+			System.out.println(list.size());
+		}catch(Exception ex){
+			System.out.println("lotlistview 실패: " + ex.getMessage());
+		}
+				
+		return list;
 	}
 	
 	/*

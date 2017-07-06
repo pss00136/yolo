@@ -676,7 +676,17 @@ $(function(){
 	
 
 		
-		
+		$('#lotsearch').click(function(){
+			if( $('#datepicker').val() == null || $('#datepicker').val() == "") 
+			{
+			   alert("날짜를 선택하세요.");
+		    }else if( $('#gugun option:selected').val() == null ||  $('#gugun option:selected').val() == ""){
+		    	alert("구/군을 선택하세요.");
+		    }else{
+		    	$('#frm').submit();
+		    }
+			
+		});
 	    
 	});//end of function
 	
@@ -691,7 +701,7 @@ $(function(){
 	<h1 class="osLight">공간찾기</h1>
 	<a href="#" class="handleFilter"><span class="icon-equalizer"></span></a>
 	<div class="clearfix"></div>
-	<form class="filterForm">
+	<form id="frm" class="filterForm" method="post" action="/Yolo/lot/Lotsearch.lot">
 
 		<div class="row">
 			<div id="search" class="col-xs-12 col-sm-6 col-md-12  formItem">
@@ -721,7 +731,7 @@ $(function(){
 
 		<div class="row">
 			<div class="col-xs-12 col-sm-6 col-md-3 formItem">
-				<label>예약날짜</label> <input type="text"
+				<label>예약날짜</label> <input type="text" name="rdate"
 					class="form-control col-md-12" id="datepicker" />
 			</div>
 
@@ -731,7 +741,7 @@ $(function(){
 					<div class="volume">
 						<a href="#" class="btn btn-gray btn-round-left"><span
 							class="fa fa-angle-left"></span></a> <input type="text"
-							class="form-control" value="1"> <a href="#"
+							class="form-control" id="rcount" name="rcount" value="1"> <a href="#"
 							class="btn btn-gray btn-round-right"><span
 							class="fa fa-angle-right"></span></a>
 						<div class="clearfix"></div>
@@ -740,7 +750,7 @@ $(function(){
 			</div>
 
 			<div class="col-xs-12 col-sm-6 col-md-4 formItem">
-				<button style="margin-top: 20px;" class="btn btn-yellow col-md-7">검색</button>
+				<a id="lotsearch" style="margin-top: 20px;" class="btn btn-yellow col-md-7">검색</a>
 				<div class="clearfix"></div>
 			</div>
 

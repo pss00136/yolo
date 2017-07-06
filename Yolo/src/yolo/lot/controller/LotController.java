@@ -164,7 +164,35 @@ public class LotController {
 		 sessStatus.setComplete(); 
 			return "/host/HostMyLot.host";
 		}
-	 
+	    
+	    /*
+		* @메소드명: lotsearch
+		* @역할: 통합검색 후 결과를 리스트 보여주기
+		*
+		* @param   LotListVO 값
+		* @return  String:반환하는 경로
+		*/
+	   @RequestMapping("lot/Lotsearch.lot")
+		public ModelAndView lotsearch(String sido, String gugun, String rdate, String rcount, 
+				LotListVO lotlistVO, ZipcodeVO zipcodeVO ){
+		    System.out.println(sido+gugun+">>"+ rdate + ":::" + rcount);
+		    
+		    ModelAndView mv = new ModelAndView();
+		    
+		    List<LotListVO> list = service.lotsearch(sido, gugun, rdate, rcount);
+		    //시,도 셀렉트박스
+		    List<ZipcodeVO> zlist = service.selectsido();
+		    //구,군 셀렉트박스
+		    List<ZipcodeVO> gugunlist = service.searchgugun(zipcodeVO);
+		    
+		    String jsonList = json(list);
+		    mv.addObject("jsonList",jsonList);
+		    mv.addObject("list", list);
+		    mv.addObject("zlist", zlist);
+		    mv.addObject("gugunlist", gugunlist);
+		    mv.setViewName("/lot/LotList.map");
+			return mv;
+		}
  
 	    /*
 		* @메소드명: lotlist
