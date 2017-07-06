@@ -30,6 +30,10 @@ public class LotServiceImpl implements LotService {
 		return ldao.lotlistview();
 	}
 	
+	public List<LotListVO> lotsearch(String sido, String gugun, String rdate, String rcount){      
+		return ldao.lotsearch(sido, gugun, rdate, rcount);
+	}
+	
 	public LotListVO lotdetailview(LotListVO lotlistVO){
 		return ldao.lotdetailview(lotlistVO);
 	}

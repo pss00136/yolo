@@ -65,9 +65,17 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</insert>
 
 	<select id="lotlistview" resultMap="lotlistMap">
-	 select i.priimg_name priimg_name, p.pri_weekprice pri_weekprice, p.pri_title pri_title, p.pri_addr pri_addr, p.pri_num pri_num, p.pri_long pri_long, p.pri_lat pri_lat
-     from privatelot p JOIN privateimage i
-     ON p.pri_num = i.pri_num
+	  select i.priimg_name priimg_name, p.pri_weekprice pri_weekprice, p.pri_title pri_title, p.pri_addr pri_addr, p.pri_num pri_num, p.pri_long pri_long, p.pri_lat pri_lat
+      from privatelot p  JOIN privateimage i
+      ON p.pri_num = i.pri_num
+	</select>
+	
+	<select id="lotsearch" parameterType="hashmap" resultMap="lotlistMap">
+	  select i.priimg_name priimg_name, p.pri_weekprice pri_weekprice, p.pri_title pri_title, p.pri_addr pri_addr, p.pri_num pri_num, p.pri_long pri_long, p.pri_lat pri_lat
+      from privatelot p JOIN privateimage i
+      ON p.pri_num = i.pri_num
+      JOIN timetable t ON p.pri_num = t.pri_num
+      where #{rcount} > p.pri_minpeople AND p.pri_maxpeople > #{rcount} AND p.pri_addr like #{sigu} ||'%'
 	</select>
 	
 	<select id="lotreviewlist" parameterType="postVO" resultType="postVO">

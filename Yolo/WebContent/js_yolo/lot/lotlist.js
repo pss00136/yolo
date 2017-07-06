@@ -16,8 +16,6 @@ $(function(){
 			data: {"sido" : $("#sido option:selected").val() },
 			dataType: 'text',
 			success: function(data){
-				
-				alert(data);
 				var g = jQuery.parseJSON(data);
 				$('#gugun').find('option').remove();
 				$.each(g.g ,function(i, gugun) {
