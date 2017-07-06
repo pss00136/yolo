@@ -24,12 +24,12 @@ public class ClubServiceImpl implements ClubService {
 		return result;
 	}
 	
-	public List<InputListVO> inputList(String user){
-		return clubdao.inputlist(user);
-	}
-	
 	public List<ClubListVO> clublistview(){
 		return clubdao.clublistview();
+	}
+	
+	public List<InputListVO> inputList(String user){
+		return clubdao.inputlist(user);
 	}
 	
 	public ClubListVO clubdetail(ClubListVO clublistVO){

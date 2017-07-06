@@ -29,7 +29,7 @@ public class ClubDAO {
 	SqlSessionTemplate session;
 	
 	/*
-	* @메소드명: clubeInsert
+	* @메소드명: clubinput
 	* @역할: ClubService에서 전달받은 값을 DB에 삽입
 	*
 	* @param   ClubVO
@@ -49,7 +49,7 @@ public class ClubDAO {
 	}
 	
 	/*
-	* @메소드명: clublistview
+	* @메소드명: inputlist
 	* @역할:  DB에서 모든 clubList를 검색
 	*
 	* @param   

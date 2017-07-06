@@ -123,10 +123,10 @@ public class ClubController {
 		String user = (String)session.getAttribute("u_id");
 		System.out.println("user:"+user);
 		ModelAndView mv = new ModelAndView();
-		List<InputListVO> applist = service.inputList(user);
-		mv.addObject("list", applist);
+		List<InputListVO> applotlist = service.inputList(user);
+		mv.addObject("list", applotlist);
 		mv.setViewName("/club/ClubInput");
-		System.out.println("Alist:"+applist.size());
+		System.out.println("Alist:"+applotlist.size());
 		return mv;
 	}
 	

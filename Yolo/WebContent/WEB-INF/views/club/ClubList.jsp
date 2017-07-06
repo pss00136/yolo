@@ -161,10 +161,10 @@
 			                                </div>
 			                                <h2>${c.c_title}</h2>
 			                                <div class="cardAddress"><span class="icon-pointer"></span>${c.c_place}</div>
-			                                <ul class="cardFeat">
-			                                    <li><span class="fa fa-clock-o"></span>${c.c_period}</li>
-			                                    <li><span class="fa fa-calendar"></span> ${c.c_date}</li>
-			                                </ul>
+				                                <ul class="cardFeat">
+				                                    <li><span class="fa fa-clock-o"></span>${c.c_period}</li>
+				                                    <li><span class="fa fa-calendar"></span> ${c.c_date}</li>
+				                                </ul>
 			                                <div class="clearfix"></div>
 			                            </a>
 			                        </div>	

@@ -19,6 +19,13 @@ import yolo.share.dto.InputListVO;
 
 public interface ClubService {
 	
+	/*
+	* @메소드명: inputList
+	* @역할: ClubController에서 전달받은 값을 DAO로 전달, 결과값 리턴
+	*
+	* @param   String user 세션에서 얻어온 아이디
+	* @return  List<InputListVO> : 결과값
+	*/
 	public List<InputListVO> inputList(String user);
 	
 	public int clubinput( ClubVO clubVO, ClubImageVO cimgVO);

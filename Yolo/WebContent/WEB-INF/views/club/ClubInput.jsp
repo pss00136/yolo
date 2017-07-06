@@ -225,39 +225,44 @@
 						
 						<div id="con" style="display:none">
 						<!-- 예약한 공간 선택 -->
-			 			<div class="form-group">
-			 				<label class="col-sm-2 control-label"></label>
-	                       	 <div class="col-sm-6 btn-group" >
+<!-- 			 			<div class="form-group"> -->
+<!-- 			 				<label class="col-sm-2 control-label"></label> -->
+<!-- 	                       	 <div class="col-sm-6 btn-group" > -->
 <!--                         		<button data-toggle="dropdown" class="btn btn-o btn-gray dropdown-toggle"> -->
 <!-- 	                                  <span class="dropdown-label">예약한 공간 선택</span> <span class="caret"></span> -->
 <!-- 	                             </button> -->
-	                             <c:choose>
-		                             <c:when test="${fn:length(list) eq 0 }">
-                              			<tr>
-											<td>예약된 공간이 없습니다.</td>
-										</tr>
-		                             </c:when>
-		                             <c:otherwise>
-                            	 		<c:forEach items="${list}" var="a">
-		                              		<tr>
-												<td><div class="radio custom-radio">
-												<label><input type="radio" name="bl_id" value="${a.bl_id}"><span
-													class="fa fa-circle"></span></label>
-													</div></td>
-												<td><img alt="" src="/Yolo/images_yolo/lot/${a.priimg_name}"
-														width="150px;" height="100px;"></td>
-												<td>${a.pri_title}</td>
-												<td>${a.pri_addr}</td>
-												<td>${a.bl_date}</td>
+							<div class="table-overflow">
+								<table class="table" id="inboxTable">
+									<tbody class="table">
+		                             <c:choose>
+			                             <c:when test="${fn:length(list) eq 0 }">
+	                              			<tr>
+												<td>예약된 공간이 없습니다.</td>
 											</tr>
-		                             	</c:forEach>
-<!-- 		                             	<ul class="dropdown-menu dropdown-select"> -->
-<!-- 				                        	<li class="active"><input type="radio" name="c_place_v" checked="checked" value="미선택"><a href="#">예약한 공간 선택</a></li> -->
-<!-- 		                             	</ul> -->
-		                             </c:otherwise>
-	                             </c:choose>
-	                   		</div>
-                         </div>
+			                             </c:when>
+			                             <c:otherwise>
+	                            	 		<c:forEach items="${list}" var="a">
+			                              		<tr>
+													<td><div class="radio custom-radio">
+													<label><input type="radio" name="bl_id" value="${a.bl_id}"><span
+														class="fa fa-circle"></span></label>
+														</div></td>
+													<td><img alt="" src="/Yolo/images_yolo/lot/${a.priimg_name}"
+															width="150px;" height="100px;"></td>
+													<td>${a.pri_title}</td>
+													<td>${a.pri_addr}</td>
+													<td>${a.bl_date}</td>
+												</tr>
+			                             	</c:forEach>
+	<!-- 		                             	<ul class="dropdown-menu dropdown-select"> -->
+	<!-- 				                        	<li class="active"><input type="radio" name="c_place_v" checked="checked" value="미선택"><a href="#">예약한 공간 선택</a></li> -->
+	<!-- 		                             	</ul> -->
+			                             </c:otherwise>
+		                             </c:choose>
+	                            	 </tbody>
+								</table>
+							</div>
+            				</div>
                          <div class="form-group">
                          	<label class="col-sm-2 control-label">주소입력</label>
                              	<div class="col-sm-8">

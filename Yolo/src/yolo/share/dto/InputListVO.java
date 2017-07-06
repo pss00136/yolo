@@ -23,8 +23,8 @@ public class InputListVO {
 	private String u_id;			/* 예약자 아이디 */
 	private String bl_date;			/* 예약날짜 */
 	
+	
 	/* Constructor */
-
 	public InputListVO() {
 		super();
 	}
@@ -43,8 +43,8 @@ public class InputListVO {
 		this.bl_date = bl_date;
 	}
 
-	
 	/* End of Constructor */
+	
 	
 	/* Getters and Setters */
 	public String getPriimg_num() {
@@ -120,7 +120,5 @@ public class InputListVO {
 	}
 	
 	/* Getters and Setters end */
-	
-	
 	
 }
