@@ -125,6 +125,13 @@
 
 									</div>
 								</div>
+								<!-- 가격 입력란 -->
+								<div class="form-group">
+									<label class="col-sm-2 control-label">가격</label>
+									<div class="col-sm-9">
+										<input name="sl_title" id="sl_title" class="form-control input-sm" type="text">
+									</div>
+								</div>
 								<!-- 글 내용 입력 -->
 								<div class="form-group">
 									<label class="col-sm-2 control-label">글 내용</label>

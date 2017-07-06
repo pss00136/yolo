@@ -5,6 +5,7 @@
 <link href="/Yolo/css_yolo/cssView/MyClub/portfolio-item.css" rel="stylesheet">
 <link href="/Yolo/css_yolo/cssView/MyClub/ClubMyList.css" rel="stylesheet">
 
+
 <!-- -----------------여기에 컨텐츠 div넣으세요----------------- -->
 <!-- 이 사이에! -->
 <!-- Portfolio Item Heading -->
@@ -48,11 +49,10 @@
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
 						<!-- filter Form -->
 						<div class="filter">
-							<h1 class="osLight">회원리스트 보기</h1>
+							<h1 class="osLight">회원리스트</h1>
 							<a href="#" class="handleFilter"><span class="fa fa-bars"></span></a>
 							<div class="clearfix"></div>
 							<form class="filterForm">
-								<h2 class="osLight h-r align-center">회원 리스트</h2>
 								<ul class="blog-r-nav align-center">
 									<li>
 										<div class="userWidget-2">
@@ -66,81 +66,6 @@
 											</div>
 										</div>
 									</li>
-									<li>
-										<div class="userWidget-2">
-											<div class="avatar">
-												<img src="/Yolo/images/avatar-3.png" alt="avatar">
-											</div>
-											<div class="info">
-												<div class="name">Rust Cohle</div>
-												<div class="title">Administrator</div>
-												<div class="address">Los Angeles, CA, USA</div>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="userWidget-2">
-											<div class="avatar">
-												<img src="/Yolo/images/avatar-3.png" alt="avatar">
-											</div>
-											<div class="info">
-												<div class="name">Rust Cohle</div>
-												<div class="title">Administrator</div>
-												<div class="address">Los Angeles, CA, USA</div>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="userWidget-2">
-											<div class="avatar">
-												<img src="/Yolo/images/avatar-3.png" alt="avatar">
-											</div>
-											<div class="info">
-												<div class="name">Rust Cohle</div>
-												<div class="title">Administrator</div>
-												<div class="address">Los Angeles, CA, USA</div>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="userWidget-2">
-											<div class="avatar">
-												<img src="/Yolo/images/avatar-3.png" alt="avatar">
-											</div>
-											<div class="info">
-												<div class="name">Rust Cohle</div>
-												<div class="title">Administrator</div>
-												<div class="address">Los Angeles, CA, USA</div>
-											</div>
-										</div>
-									</li>
-
-									<li>
-										<div class="userWidget-2">
-											<div class="avatar">
-												<img src="/Yolo/images/avatar-3.png" alt="avatar">
-											</div>
-											<div class="info">
-												<div class="name">Rust Cohle</div>
-												<div class="title">Administrator</div>
-												<div class="address">Los Angeles, CA, USA</div>
-											</div>
-											<div class="clearfix"></div>
-										</div>
-									</li>
-									<li>
-										<div class="userWidget-2">
-											<div class="avatar">
-												<img src="/Yolo/images/avatar-3.png" alt="avatar">
-											</div>
-											<div class="info">
-												<div class="name">Rust Cohle</div>
-												<div class="title">Administrator</div>
-												<div class="address">Los Angeles, CA, USA</div>
-											</div>
-										</div>
-									</li>
-
 								</ul>
 							</form>
 						</div>
