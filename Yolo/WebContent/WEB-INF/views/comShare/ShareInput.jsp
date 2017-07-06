@@ -75,13 +75,6 @@
 										</div>
 									</div>
 								</div>
-								<!-- 선택한 공간 카테고리 -->
-								<div class="form-group">
-									<label class="col-sm-2 control-label">쉐어링 공간</label>
-									<div class="col-sm-9">
-										<textarea class="form-control" rows="10" readonly="readonly"></textarea>
-									</div>
-								</div>
 								<!-- 시간 선택 -->
 								<div class="form-group">
 									<label class="col-sm-2 control-label time">공간사용시간</label>
