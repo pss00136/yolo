@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
+import org.apache.catalina.util.URLEncoder;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -178,10 +179,14 @@ public class LotController {
 		    List<LotListVO> list = service.lotlistview();
 		    //시,도 셀렉트박스
 		    List<ZipcodeVO> zlist = service.selectsido();
+		    //구,군 셀렉트박스
+		    List<ZipcodeVO> gugunlist = service.searchgugun(zipcodeVO);
+		    
 		    String jsonList = json(list);
 		    mv.addObject("jsonList",jsonList);
 		    mv.addObject("list", list);
 		    mv.addObject("zlist", zlist);
+		    mv.addObject("gugunlist", gugunlist);
 		    mv.setViewName("/lot/LotList.map");
 			return mv;
 		}
@@ -277,16 +282,18 @@ public class LotController {
 		* @param   ZipcodeVO 값
 		* @return  String:반환하는 경로
 		*/
-	   @RequestMapping("/lot/LotListSearch.lot")
+	   @RequestMapping(value="/lot/LotListSearch.lot", produces="text/plain; charset=UTF-8")
 	   @ResponseBody
 	   public String gugun(ZipcodeVO zipcodeVO){
 		   System.out.println(zipcodeVO.getSido());
 		    //구,군 data값을 list받아옴
-		   List<ZipcodeVO> gugunlist = service.searchgugun(zipcodeVO);
 		   
+		   List<ZipcodeVO> gugunlist = service.searchgugun(zipcodeVO);
+		    
+		    
 		    String jsonInfo = gugunjson(gugunlist);   
-			
-		    return "성공"; 
+		     
+		    return jsonInfo; 
 	   }
 	   
 	   public String gugunjson(List<ZipcodeVO> gugunlist){
@@ -297,7 +304,6 @@ public class LotController {
            JSONArray gArray = new JSONArray();
 		   
            for(ZipcodeVO zipVO : gugunlist){
-	           //props의 한명 정보가 들어갈 JSONObject 선언
 	          JSONObject propsInfo = new JSONObject();
 	          
 	          propsInfo.put("gugun", zipVO.getGugun());
@@ -305,6 +311,7 @@ public class LotController {
 	          gArray.add(propsInfo);
            }
 		   
+          
            jsonObject.put("g", gArray );
 		   
 

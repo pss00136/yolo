@@ -4,6 +4,8 @@
 <link href="/Yolo/css/datepicker.css" rel="stylesheet">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@ page import="java.util.*"%>
+<%@ page import="yolo.lot.dto.*"%>
 <style type="text/css">
 .dropdown-btn {
 	max-width: 200px;
@@ -705,7 +707,12 @@ $(function(){
 				<div class="col-md-4">
 					<label>군·구</label> 
 					 <select id="gugun" name="gugun" class="btn btn-default">
+					  	<% List<ZipcodeVO> gugunlist = (List<ZipcodeVO>)request.getAttribute("gugunlist"); 
+					  	for(ZipcodeVO zvo: gugunlist) {
 					  	
+					  	 for(int i=0; i < zvo.getGugun().length(); i++){ %>
+					  	      <option>zvo.getGugun()</option>	
+					  	<%}  }//end of for  %>
 					 </select>
 				</div>
 
