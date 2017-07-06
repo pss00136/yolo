@@ -7,8 +7,7 @@
 <div id="header">
 	<div class="logo">
 		<a href="/Yolo/index.jsp"> <span
-			class="fa fa-home marker"></span> <span class="logoText">Host
-				Center</span>
+			class="fa fa-home marker"></span> <span class="logoText">Host Center</span>
 		</a>
 	</div>
 	<a href="#" class="navHandler"><span class="fa fa-bars"></span></a>
@@ -45,15 +44,18 @@
 	</div>
 	
 	<!-------------- 호스트 등록하기 ---------->
+	
 	<div class="headerUserWraper">
 	<a href="/Yolo/host/HostInput.host" class="userHandler" ><span
 			class="icon-user-follow"></span>
 			</a> 
 			<a id="hostregister"  href="HostInput.host" class="headerUser btn btn-o btn-gray"> 
-			호스트 등록하기
+			호스트 등록
 		</a>
 	
 	</div>
+	
+	
 
 </div>
 

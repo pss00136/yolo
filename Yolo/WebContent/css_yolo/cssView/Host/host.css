@@ -63,8 +63,13 @@
 }
 
 #hostregister{
-	padding: 20px;
 	margin-top:0px;
+	height: 40px;
+	width: 90px;
+	padding: 12px 0 0 0;
+	margin-top: 10px;
+	margin-right: 10px;
+	font-size: 13px;	
 }
 
 #hostcenter{

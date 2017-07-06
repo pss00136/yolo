@@ -33,7 +33,7 @@
 			<a href="#signup" id="web_join_btn" data-toggle="modal" class="btn btn-round btn-o btn-green">회원가입</a>
 		</div>	
 		<div class="headerUserWraper">
-			<a id="hostbtn" href="/Yolo/host/HostMain.host" class="headerUser btn btn-o btn-gray">호스트 센터</a>
+			<a id="hostbtn" href="#signin" data-toggle="modal" class="headerUser btn btn-o btn-gray">호스트 센터</a>
 		</div>	
 		<!-- 로그인 회원가입 끝 -->				
 		<% }else{
