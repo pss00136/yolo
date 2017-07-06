@@ -18,7 +18,7 @@
 			<div class="row">
 				<div class="col-lg-12 responsive">
 					<h1>
-						내 공간 쉐어링 <small>내 공간 쉐어링 리스트</small>
+						내 공간 쉐어링
 					</h1><hr>
 
 				</div>
@@ -32,7 +32,7 @@
 					<c:otherwise>
 						<c:forEach items="${list}" var="l">				
 							<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" id="share">
-								<a  class="propWidget-1">
+								<a class="propWidget-1" href="S_Detail.myreg">
 									<div class="fig">
 										<img src="/Yolo/upload/lot/${l.priimg_name}" alt="image">
 										<div class="priceCap">

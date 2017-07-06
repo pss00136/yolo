@@ -15,7 +15,7 @@
 				<div class="modal-body">
 					<!-- date picker -->
 					<div class='formInput dateSelector'> 
-						<input type='input' class='icon-calendar' id='hbdsdf' value='yyyy.mm.dd' />
+						<input style="display:block;" type='input' class='icon-calendar' id='hbdsdf' value='yyyy.mm.dd' />
 					</div>
 					<div id="propWidget-3" class="carousel slide propWidget-3" data-ride="carousel">
                         <div class="carousel-inner">

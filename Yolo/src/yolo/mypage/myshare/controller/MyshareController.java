@@ -40,5 +40,10 @@ public class MyshareController {
 		
 	}
 	
+	@RequestMapping("/S_Detail.myreg")
+	public String sDetail(){
+		
+		return "/mypage/myReg/S_Detail";
+	}
 	
 }

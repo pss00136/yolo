@@ -48,6 +48,10 @@
 	padding: 9px 26px;
 }
 
+.btn{
+	display: inline;
+}
+
 #hero-container-map {
 	background-color: #fff;
 	height: 520px;

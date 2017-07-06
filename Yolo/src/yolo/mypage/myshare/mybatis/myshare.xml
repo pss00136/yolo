@@ -8,7 +8,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <select id="myshareList" parameterType="string" resultType="yolo.share.dto.ShareMainListVO">
 Select s.sl_num sl_num, s.u_id u_id, s.sl_title sl_title, s.sl_content sl_content, s.sl_time sl_time, s.sl_price sl_price, s.sl_regdate sl_regdate, s.sl_hits sl_hits, s.sl_people sl_people, s.b_id b_id, i.priimg_num priimg_num, i.priimg_path priimg_path, i.priimg_name priimg_name, p.pri_num pri_num, p.pri_title pri_title, p.pri_addr pri_addr
 FROM sharelot2 s, booklot b, privatelot p, privateimage i 
-WHERE s.b_id = b.b_id AND b.pri_num = p.pri_num AND p.pri_num = i.pri_num AND s.u_id = #{uid}
+WHERE s.b_id = b.bl_id AND b.pri_num = p.pri_num AND p.pri_num = i.pri_num AND s.u_id = #{uid}
 </select>
 
 
