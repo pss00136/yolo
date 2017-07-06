@@ -9,6 +9,7 @@ import yolo.club.dao.ClubDAO;
 import yolo.club.dto.ClubImageVO;
 import yolo.club.dto.ClubListVO;
 import yolo.club.dto.ClubVO;
+import yolo.share.dto.InputListVO;
 
 @Service
 public class ClubServiceImpl implements ClubService {
@@ -20,8 +21,11 @@ public class ClubServiceImpl implements ClubService {
 	public int clubinput(ClubVO clubVO, ClubImageVO cimgVO) {
 //		System.out.println( "파일경로:" + cimgVO.getCimg_path());
 		int result = clubdao.clubinput(clubVO, cimgVO);
-		
 		return result;
+	}
+	
+	public List<InputListVO> inputList(String user){
+		return clubdao.inputlist(user);
 	}
 	
 	public List<ClubListVO> clublistview(){

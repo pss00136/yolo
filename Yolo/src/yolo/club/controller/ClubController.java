@@ -17,6 +17,7 @@ import yolo.club.dto.ClubImageVO;
 import yolo.club.dto.ClubListVO;
 import yolo.club.dto.ClubVO;
 import yolo.club.service.ClubService;
+import yolo.share.dto.InputListVO;
 
 /*
 * @클래스명: ClubController
@@ -110,10 +111,23 @@ public class ClubController {
 	* @return  String:반환하는 경로
 	*/
 	
+//	@RequestMapping("/ClubInput.club")
+//	public String clubInput(){
+//		System.out.println("ClubInput");
+//		return "/club/ClubInput";
+//	}
+	
 	@RequestMapping("/ClubInput.club")
-	public String clubInput(){
-		System.out.println("ClubInput");
-		return "/club/ClubInput";
+	public ModelAndView clubInput(HttpSession session){
+//		System.out.println("ClubInput");
+		String user = (String)session.getAttribute("u_id");
+		System.out.println("user:"+user);
+		ModelAndView mv = new ModelAndView();
+		List<InputListVO> applist = service.inputList(user);
+		mv.addObject("list", applist);
+		mv.setViewName("/club/ClubInput");
+		System.out.println("Alist:"+applist.size());
+		return mv;
 	}
 	
 	/*

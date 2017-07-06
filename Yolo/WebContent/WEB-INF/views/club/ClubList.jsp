@@ -3,7 +3,7 @@
     
 <!--  JSTL 선언 -->
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
  <!-- 추가 속성 CSS -->
         <link href="/Yolo/css_yolo/cssView/Club/clubList.css" rel="stylesheet">
         <link href="/Yolo/css_yolo/cssView/Club/clubInput.css" rel="stylesheet">
@@ -139,9 +139,10 @@
                 <div class="resultsList">
                     <div class="row">
                     	<c:choose>
-                    		<c:when test="${list == null}">
+                    		<c:when test="${fn:length(list) eq 0 }">
                     			<tr>
-                    				<td colspan='7'>등록된 게시물이 없습니다.</td>
+                    				<td colspan='7'>등록된 게시물이 없습니다.<br/></td>
+                    				<td></td>
                     			</tr>
                     		</c:when>
                     		<c:otherwise>

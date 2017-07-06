@@ -18,6 +18,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	VALUES(concat('cimg_', CLUBIMAGE_NO_SEQ.nextval), #{c_num}, #{cimg_path}, #{cimg_name})
 </insert>
 
+<!-- club 예약한 공간 list 출력 -->
+<select id="clubinputList" parameterType="string" resultType="yolo.share.dto.InputListVO">
+ SELECT B.BL_DATE B_DATE, B.BL_ID BL_ID, P.PRI_NUM PRI_NUM, P.PRI_TITLE PRI_TITLE, I.PRIIMG_NAME PRIIMG_NAME, P.PRI_ADDR PRI_ADDR 
+FROM PRIVATELOT P, BOOKLOT B, PRIVATEIMAGE I
+WHERE P.PRI_NUM = B.PRI_NUM AND I.PRI_NUM = P.PRI_NUM AND B.U_ID = #{user}
+</select>
+
 <!-- club List 출력 sql -->
 <select id = "clublistview" resultType="yolo.club.dto.ClubListVO">
 	SELECT C.C_NUM C_NUM, I.CIMG_NAME CIMG_NAME, C.C_TYPE C_TYPE, C.C_TITLE C_TITLE, C.c_people c_people, C.C_PERIOD C_PERIOD, C.C_DATE C_DATE, C.C_PLACE C_PLACE

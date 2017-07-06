@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 	
 <!-- 추가 css -->
 <link href="/Yolo/css_yolo/cssView/Lecture/Lecture_inputstyle.css" rel="stylesheet">
@@ -22,15 +24,15 @@
 							<label class="col-sm-2 control-label">주제</label>
 							<div class="col-sm-8">
 								<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
-									<label><input type="checkbox" name="c_type" value="교육" onclick="oneCheckbox(this)"><span
+									<label><input type="checkbox" class="type" name="c_type" value="교육" onclick="oneCheckbox(this)"><span
 										class="fa fa-check"> 교육</span></label>
 								</div>
 								<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
-									<label><input type="checkbox" name="c_type" value="방송/연예" onclick="oneCheckbox(this)"><span
+									<label><input type="checkbox" class="type" name="c_type" value="방송/연예" onclick="oneCheckbox(this)"><span
 										class="fa fa-check"> 방송/연예</span></label>
 								</div>
 								<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
-									<label><input type="checkbox" name="c_type" value="전시/박람회" onclick="oneCheckbox(this)"><span
+									<label><input type="checkbox" class="type" name="c_type" value="전시/박람회" onclick="oneCheckbox(this)"><span
 										class="fa fa-check"> 전시/박람회</span></label>
 								</div>
 								<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
@@ -58,11 +60,11 @@
 										class="fa fa-check"> 여행</span></label>
 								</div>
 								<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
-									<label><input type="checkbox" name="c_type" value="친목활동" onclick="oneCheckbox(this)"><span
+									<label><input type="checkbox" name="c_type" value="친목/소모임" onclick="oneCheckbox(this)"><span
 										class="fa fa-check"> 친목/소모임</span></label>
 								</div>
 								<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
-									<label><input type="checkbox" name="c_type" value="스터디" onclick="oneCheckbox(this)"><span
+									<label><input type="checkbox" name="c_type" value="기타" onclick="oneCheckbox(this)"><span
 										class="fa fa-check"> 기타</span></label>
 								</div>
 							</div>
@@ -226,15 +228,34 @@
 			 			<div class="form-group">
 			 				<label class="col-sm-2 control-label"></label>
 	                       	 <div class="col-sm-6 btn-group" >
-                        		<button data-toggle="dropdown" class="btn btn-o btn-gray dropdown-toggle">
-	                                  <span class="dropdown-label">예약한 공간 선택</span> <span class="caret"></span>
-	                             </button>
-	                             <ul class="dropdown-menu dropdown-select">
-	                              <li class="active"><input type="radio" name="c_place_v" checked="checked" value="미선택"><a href="#">예약한 공간 선택</a></li>
-	                              <li><input type="radio" name="c_place_v"  value="예약한 공간1"><a href="#">예약한 공간1</a></li>
-	                              <li><input type="radio" name="c_place_v" value="예약한 공간2"><a href="#">예약한 공간2</a></li>
-	                              <li><input type="radio" name="c_place_v" value="예약한 공간3"><a href="#">예약한 공간3</a></li>
-	                             </ul>
+<!--                         		<button data-toggle="dropdown" class="btn btn-o btn-gray dropdown-toggle"> -->
+<!-- 	                                  <span class="dropdown-label">예약한 공간 선택</span> <span class="caret"></span> -->
+<!-- 	                             </button> -->
+	                             <c:choose>
+		                             <c:when test="${fn:length(list) eq 0 }">
+                              			<tr>
+											<td>예약된 공간이 없습니다.</td>
+										</tr>
+		                             </c:when>
+		                             <c:otherwise>
+                            	 		<c:forEach items="${list}" var="a">
+		                              		<tr>
+												<td><div class="radio custom-radio">
+												<label><input type="radio" name="bl_id" value="${a.bl_id}"><span
+													class="fa fa-circle"></span></label>
+													</div></td>
+												<td><img alt="" src="/Yolo/images_yolo/lot/${a.priimg_name}"
+														width="150px;" height="100px;"></td>
+												<td>${a.pri_title}</td>
+												<td>${a.pri_addr}</td>
+												<td>${a.bl_date}</td>
+											</tr>
+		                             	</c:forEach>
+<!-- 		                             	<ul class="dropdown-menu dropdown-select"> -->
+<!-- 				                        	<li class="active"><input type="radio" name="c_place_v" checked="checked" value="미선택"><a href="#">예약한 공간 선택</a></li> -->
+<!-- 		                             	</ul> -->
+		                             </c:otherwise>
+	                             </c:choose>
 	                   		</div>
                          </div>
                          <div class="form-group">
@@ -289,6 +310,7 @@
 			</div>
 			<!---------------모임 등록하기 끝 ------------------------>
 			
+	<script src="/Yolo/js/jquery-2.1.1.min.js"></script>
 	<!-- 모임 장소에 따른 hidden Div -->
 	<script>
 		function div_OnOff(v,id){
@@ -309,5 +331,11 @@
 	        }
 	    }
 		
+		
+// 		$(".type").click(function(){
+			
+// 			    alert($(this).val());
+			    
+// 		});
 	</script>
 	

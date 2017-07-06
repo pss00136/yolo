@@ -12,6 +12,7 @@ import org.springframework.stereotype.Repository;
 import yolo.club.dto.ClubImageVO;
 import yolo.club.dto.ClubListVO;
 import yolo.club.dto.ClubVO;
+import yolo.share.dto.InputListVO;
 
 /*
 * @클래스명: ClubDAO
@@ -46,6 +47,26 @@ public class ClubDAO {
 		
 		return result;
 	}
+	
+	/*
+	* @메소드명: clublistview
+	* @역할:  DB에서 모든 clubList를 검색
+	*
+	* @param   
+	* @return  List<ClubListVO>: DB select쿼리문 결과값
+	*/
+	public List<InputListVO> inputlist(String user){
+		
+		List<InputListVO> list = null;
+		try{
+			list = session.selectList("club.clubinputList", user);
+		} catch (Exception e) {
+			System.out.println("회원이 예약한 공간보기리스트 에러:" + e.getMessage());
+		}
+		
+		return list;
+	}
+	
 	
 	/*
 	* @메소드명: clublistview
