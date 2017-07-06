@@ -63,7 +63,7 @@ public class ShareController {
 	 * @return ModelAndView로 반환
 	 */
 	@RequestMapping("ShareList.share")
-	public ModelAndView shareList(SharePagingVO vo){
+	public ModelAndView shareList(SharePagingVO pvo){
 		
 		int shareTotalCount = service.shareTotalGetCount(); //총 게시물 수 구하기
 		System.out.println("위치 controller : db에 있는 sharelot 총 게시물 수"+shareTotalCount);
@@ -75,7 +75,80 @@ public class ShareController {
 		}
 		
 		
-		int shareNowPage = vo.getShareNowPage(); //보여줄 페이지 가져오기
+		int shareNowPage = pvo.getShareNowPage(); //보여줄 페이지 가져오기
+		System.out.println("pvo.getShareNowPage() 값"+shareNowPage);
+		
+		if (shareNowPage < 1) {
+			shareNowPage = 1;
+		} // 보여줄 페이지 요청이 1페이지보다 작을때 1페이지로 변환
+		
+		if (shareTotalPage < shareNowPage) {
+			shareNowPage = shareTotalPage;
+		} //보여줄 페이지 요청이 총 페이지 보다 클때  총 페이지로 변환
+
+		int startPage = ((shareNowPage - 1) / shareCountPage) * shareCountPage + 1; //화면에 보여줄 시작 페이지수
+		int endPage = startPage + shareCountPage - 1; //화면에 보여줄 끝 페이지 수
+		
+		if (endPage > shareTotalPage) {
+		    endPage = shareTotalPage;
+		}// 마지막에 보여줄 페이지 수가 총 페이지 수 보다 클때
+			
+		int startCount = (shareNowPage - 1) * shareCountList + 1; //페이지에 보여줄 첫번째 게시물 
+
+		int endCount = shareNowPage * shareCountList;   // 페이지에 보여줄 마지막 게시물
+		System.out.println("위치: controller = startCount:"+startCount);
+		System.out.println("위치: controller = endCount:"+endCount);
+//		SharePagingVO vo = new SharePagingVO();
+		pvo.setStartCount(startCount);
+		pvo.setEndCount(endCount);
+	
+		System.out.println(pvo.getEndCount());
+		System.out.println(pvo.getStartCount());
+		
+		List<ShareMainListVO> list = service.shareList(pvo);
+		
+		System.out.println("위치: controller: list의크기:"+list.size());
+		
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("startPage",startPage);
+		mv.addObject("endPage",endPage);
+		mv.addObject("shareNowPage", shareNowPage);
+		mv.addObject("list", list);
+		mv.setViewName("/comShare/ShareList");
+		
+		return mv;
+	}
+	
+	
+	/*
+	 * @메소드명: shareInput
+	 * @역활 : 쉐어링 글등록하고 ShareList로 페이지 전환
+	 * @param 없음
+	 * @return ModelAndView로 반환
+	 */
+	@RequestMapping("ShareInputOk.share")
+	public ModelAndView shareInputOk(ShareVO vo, SharePagingVO pvo){
+		
+		int result = service.shareInput(vo);
+		String message = "입력실패";
+		if(result > 0){
+			message = "입력완료";
+		}
+		System.out.println(message);
+		
+		
+		
+		int shareTotalCount = service.shareTotalGetCount(); //총 게시물 수 구하기
+		System.out.println("위치 controller : db에 있는 sharelot 총 게시물 수"+shareTotalCount);
+		int shareCountList = 5; // 한 페이지 출력될 게시물 수
+		int shareCountPage = 5; // 한 화면에 출력될 페이지 수
+		int shareTotalPage = shareTotalCount / shareCountList; // 총 페이지 수
+		if(shareTotalCount % shareCountList >0){
+			shareTotalPage++;
+		}
+		
+		
+		int shareNowPage = pvo.getShareNowPage(); //보여줄 페이지 가져오기
 		System.out.println("vo.getShareNowPage() 값"+shareNowPage);
 		
 		if (shareNowPage < 1) {
@@ -99,13 +172,13 @@ public class ShareController {
 		System.out.println("위치: controller = startCount:"+startCount);
 		System.out.println("위치: controller = endCount:"+endCount);
 //		SharePagingVO vo = new SharePagingVO();
-		vo.setStartCount(startCount);
-		vo.setEndCount(endCount);
+		pvo.setStartCount(startCount);
+		pvo.setEndCount(endCount);
 	
-		System.out.println(vo.getEndCount());
-		System.out.println(vo.getStartCount());
+		System.out.println(pvo.getEndCount());
+		System.out.println(pvo.getStartCount());
 		
-		List<ShareMainListVO> list = service.shareList(vo);
+		List<ShareMainListVO> list = service.shareList(pvo);
 		
 		System.out.println("위치: controller: list의크기:"+list.size());
 		
@@ -118,33 +191,6 @@ public class ShareController {
 		
 		return mv;
 	}
-	
-	
-	/*
-	 * @메소드명: shareInput
-	 * @역활 : 쉐어링 글등록하고 ShareList로 페이지 전환
-	 * @param 없음
-	 * @return ModelAndView로 반환
-	 */
-//	@RequestMapping("ShareInputOk.share")
-//	public ModelAndView shareInputOk(ShareVO vo){
-//		
-//		int result = service.shareInput(vo);
-//		String message = "입력실패";
-//		if(result > 0){
-//			message = "입력완료";
-//		}
-//		System.out.println(message);
-//		
-//		
-//		
-//		List<ShareMainListVO> list = service.shareList();
-//		ModelAndView mv = new ModelAndView();
-//		mv.addObject("list", list);
-//		mv.setViewName("/comShare/ShareList");
-//		System.out.println("mv로 list 넘깁니다."+ list.size());
-//		return mv;
-//	}
 	
 	/*
 	 * @메소드명: shareDetail
