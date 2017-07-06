@@ -5,7 +5,6 @@ import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
-import org.apache.catalina.util.URLEncoder;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,10 +25,12 @@ import com.google.code.geocoder.model.GeocoderStatus;
 import com.google.code.geocoder.model.LatLng;
 
 import yolo.host.dto.EntrepreneurVO;
+import yolo.lot.dto.BooklotVO;
 import yolo.lot.dto.LotListVO;
 import yolo.lot.dto.PostscriptVO;
 import yolo.lot.dto.PrivateimageVO;
 import yolo.lot.dto.PrivatelotVO;
+import yolo.lot.dto.TimetableVO;
 import yolo.lot.dto.ZipcodeVO;
 import yolo.lot.service.LotService;
 
@@ -363,9 +364,56 @@ public class LotController {
 		   ModelAndView mv = new ModelAndView();
 		   LotListVO list = service.lotreserve(lotlistVO);
 		    mv.addObject("list", list);
-		    mv.setViewName("/lot/LotReserve");
+		    mv.setViewName("/lot/LotReserve.lot");
 			return mv;
 		}
+	   
+	   /*
+		* @메소드명: lotreserveajax
+		* @역할: 공간 예약하기 ajax 예약된 시간 확인 방법
+		*
+		* @param   String date 값
+		* @return  String:반환하는 경로
+		*/
+	   
+	   @RequestMapping("lot/LotReserveAjax.lot")
+	   @ResponseBody
+	   public String lotreserveajax(TimetableVO timetableVO){
+		   System.out.println(timetableVO.getT_date());
+		   TimetableVO timeVO = service.gettime(timetableVO);
+		   String time = new String();
+		   if(timeVO == null){
+			   time = "0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0";
+		   }
+		   else{
+			   time = timeVO.getT_time();
+		   }
+		   //데이터베이스에 들어가서 select 해준다음에 셀렉트 값이 있을경우 가지고오고
+		   //없으면 가지고오지 않는다.
+		   //date값이 있으면 0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/
+		   //시간 리턴값
+		   //시간을 string으로 넘겨준다음에
+		   //슬레시를 slice로 자른다음에 넘긴다.
+		   //그리고 동적으로 타임을 넘겨준다.
+		   return time;
+	   }
+	   
+	   @RequestMapping("lot/LotPay.lot") 
+	   public ModelAndView lotpay(BooklotVO booklotVO, TimetableVO timetableVO, HttpSession session){
+		   ModelAndView mv = new ModelAndView();
+		   String u_id = (String)session.getAttribute("u_id");
+		   System.out.println(u_id);
+		   booklotVO.setU_id(u_id);
+		   System.out.println(booklotVO.getU_id());
+		   System.out.println(booklotVO.getBl_date() +" "+ timetableVO.getT_date() + "time " + booklotVO.getBl_time() + " " + timetableVO.getT_time() + " " + timetableVO.getPri_num());
+		   String t_time = booklotVO.getBl_time();
+		   timetableVO.setT_time(t_time);
+		   service.lotpay(booklotVO, timetableVO);
+		   
+		   //mv.addObject(attributeValue);
+		   mv.setViewName("/lot/LotReserve.lot");
+		   return mv;
+	   }
 	   
  
     	   

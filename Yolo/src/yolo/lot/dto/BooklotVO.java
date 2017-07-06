@@ -2,106 +2,103 @@ package yolo.lot.dto;
 
 public class BooklotVO {
 
-	private String b_id;    /* 예약 번호 */
+	private String bl_id;    /* 예약 번호 */
 	private String u_id;    /* 아이디 */
 	private String pri_num; /* 민간시설 공간 번호 */
-	private int b_people;   /* 인원 */
-	private String b_date;  /* 예약 날짜 */
-	private String b_time;  /* 예약 시간 */
-	private String b_pay;   /* 결제 여부 */
+	private int bl_people;   /* 인원 */
+	private String bl_date;  /* 예약 날짜 */
+	private String bl_time;  /* 예약 시간 */
+	private String bl_tel;
+	private String bl_name;
+	private String bl_pay;   /* 결제 여부 */
 
-	/* Constructor */
-	public BooklotVO(){}
-
-
-	public BooklotVO(String b_id, String u_id, String pri_num, int b_people, String b_date, String b_time,
-			String b_pay) {
+	public BooklotVO() {}
+	
+	public BooklotVO(String bl_id, String u_id, String pri_num, int bl_people, String bl_date, String bl_time,
+			String bl_tel, String bl_name, String bl_pay) {
 		super();
-		this.b_id = b_id;
+		this.bl_id = bl_id;
 		this.u_id = u_id;
 		this.pri_num = pri_num;
-		this.b_people = b_people;
-		this.b_date = b_date;
-		this.b_time = b_time;
-		this.b_pay = b_pay;
-	}
-	/* End of Constructor */
-
-
-
-	/* Getters and Setters */
-
-	public String getB_id() {
-		return b_id;
+		this.bl_people = bl_people;
+		this.bl_date = bl_date;
+		this.bl_time = bl_time;
+		this.bl_tel = bl_tel;
+		this.bl_name = bl_name;
+		this.bl_pay = bl_pay;
 	}
 
-
-	public void setB_id(String b_id) {
-		this.b_id = b_id;
+	public String getBl_id() {
+		return bl_id;
 	}
 
+	public void setBl_id(String bl_id) {
+		this.bl_id = bl_id;
+	}
 
 	public String getU_id() {
 		return u_id;
 	}
 
-
 	public void setU_id(String u_id) {
 		this.u_id = u_id;
 	}
-
 
 	public String getPri_num() {
 		return pri_num;
 	}
 
-
 	public void setPri_num(String pri_num) {
 		this.pri_num = pri_num;
 	}
 
-
-	public int getB_people() {
-		return b_people;
+	public int getBl_people() {
+		return bl_people;
 	}
 
-
-	public void setB_people(int b_people) {
-		this.b_people = b_people;
+	public void setBl_people(int bl_people) {
+		this.bl_people = bl_people;
 	}
 
-
-	public String getB_date() {
-		return b_date;
+	public String getBl_date() {
+		return bl_date;
 	}
 
-
-	public void setB_date(String b_date) {
-		this.b_date = b_date;
+	public void setBl_date(String bl_date) {
+		this.bl_date = bl_date;
 	}
 
-
-	public String getB_time() {
-		return b_time;
+	public String getBl_time() {
+		return bl_time;
 	}
 
-
-	public void setB_time(String b_time) {
-		this.b_time = b_time;
+	public void setBl_time(String bl_time) {
+		this.bl_time = bl_time;
 	}
 
-
-	public String getB_pay() {
-		return b_pay;
+	public String getBl_tel() {
+		return bl_tel;
 	}
 
-
-	public void setB_pay(String b_pay) {
-		this.b_pay = b_pay;
+	public void setBl_tel(String bl_tel) {
+		this.bl_tel = bl_tel;
 	}
 
+	public String getBl_name() {
+		return bl_name;
+	}
 
+	public void setBl_name(String bl_name) {
+		this.bl_name = bl_name;
+	}
 
+	public String getBl_pay() {
+		return bl_pay;
+	}
+
+	public void setBl_pay(String bl_pay) {
+		this.bl_pay = bl_pay;
+	}
 
 
 }

@@ -3,16 +3,19 @@ package yolo.lot.dao;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.StringTokenizer;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import yolo.host.dto.EntrepreneurVO;
+import yolo.lot.dto.BooklotVO;
 import yolo.lot.dto.LotListVO;
 import yolo.lot.dto.PostscriptVO;
 import yolo.lot.dto.PrivateimageVO;
 import yolo.lot.dto.PrivatelotVO;
+import yolo.lot.dto.TimetableVO;
 import yolo.lot.dto.ZipcodeVO;
 
 /*
@@ -208,5 +211,126 @@ public class LotDAO {
 				
 		return list;
 	}
+	
+	public TimetableVO gettime(TimetableVO timetableVO) {
+		TimetableVO returnVO = session.selectOne("lot.gettime", timetableVO);
+		return returnVO;
+	}
+	
+	public int lotpay(BooklotVO booklotVO, TimetableVO timetableVO) {
+		int result=0;
+		try{
+			TimetableVO returnVO = null;
+			result = session.insert("lot.bookinsert", booklotVO);
+			returnVO = session.selectOne("lot.gettime", timetableVO);
+			System.out.println("너버" + returnVO.getT_num());
+			//예약된게 없을때
+			if(returnVO == null){
+				String alltime[] = { "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"};
+				String seltimes = timetableVO.getT_time();
+				String t_time = parsetime(seltimes, alltime);
+				timetableVO.setT_time(t_time);
+				result += session.insert("lot.inserttime",timetableVO);
+			//예약된게 있을때
+			} else{
+				timetableVO.setPri_num(returnVO.getPri_num());
+				String t_time = returnVO.getT_time();
+				String alltime[] = divtime(t_time);
+				String seltimes = timetableVO.getT_time();
+				t_time = parsetime(seltimes, alltime);
+				timetableVO.setT_time(t_time);
+				timetableVO.setT_num(returnVO.getT_num());
+				session.update("lot.updatetime", timetableVO);
+			}
+		}catch(Exception ex){
+			System.out.println("lotreview 실패: " + ex.getMessage());
+		}
+		
+		return result;
+	}
+	
+	//시간 나누기 
+	public String[] divtime(String t_time){
+		StringTokenizer st = new StringTokenizer(t_time, "/");
+		String alltime[] = new String[16];
+		int i = 0;
+		while(st.hasMoreTokens()){
+			alltime[i] = st.nextToken();
+			i++;
+		}
+		return alltime;
+	}
+	
+	//시간 입력하기
+	public String parsetime(String times, String[] alltime){
+		   StringTokenizer st = new StringTokenizer(times, "/");
+		   while(st.hasMoreTokens()){
+			   String time = st.nextToken();
+			   switch (time){
+			   case "9:00" :
+				   alltime[0] = "1";
+				   break;
+			   case "10:00" :
+				   alltime[1] = "1";
+				   break;
+			   case "11:00" :
+				   alltime[2] = "1";
+				   break;
+			   case "12:00" :
+				   alltime[3] = "1";
+				   break;
+			   case "13:00" :
+				   alltime[4] = "1";
+				   break;
+			   case "14:00" :
+				   alltime[5] = "1";
+				   break;
+			   case "15:00" :
+				   alltime[6] = "1";
+				   break;
+			   case "16:00" :
+				   alltime[7] = "1";
+				   break;
+			   case "17:00" :
+				   alltime[8] = "1";
+				   break;
+			   case "18:00" :
+				   alltime[9] = "1";
+				   break;
+			   case "19:00" :
+				   alltime[10] = "1";
+				   break;
+			   case "20:00" :
+				   alltime[11] = "1";
+				   break;
+			   case "21:00" :
+				   alltime[12] = "1";
+				   break;
+			   case "22:00" :
+				   alltime[13] = "1";
+				   break;
+			   case "23:00" :
+				   alltime[14] = "1";
+				   break;
+			   case "24:00" :
+				   alltime[15] = "1";
+				   break;	   
+			   
+			   }
+			   
+		   }
+		   String t_time = new String();
+		   for(int i = 0; i<alltime.length ; i++){
+			   
+			   if(i == alltime.length-1){
+				   t_time +=  alltime[i];
+			   } else{
+				   t_time +=  alltime[i] + "/";
+			   }
+		   }   
+		   System.out.println(t_time);
+		   return t_time;
+	  }
+	
 
 }
