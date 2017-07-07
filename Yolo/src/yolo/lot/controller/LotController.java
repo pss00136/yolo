@@ -72,6 +72,7 @@ public class LotController {
 		   if( hostvo != null){
 			   //h_num세션을 지정해줌
 			    session.setAttribute("h_num", hostvo.getH_num() );
+			    System.out.println(hostvo.getH_num());
 			    mv.setViewName("/lot/LotInputFirst");			   
 		   }
 		   else{
@@ -179,7 +180,7 @@ public class LotController {
 		 
 		 //이미지 넘겨오나?
 		 sessStatus.setComplete(); 
-			return "/lot/LotList.lot";
+			return "/host/HostMyLot.host";
 		}
 	    
 	    /*

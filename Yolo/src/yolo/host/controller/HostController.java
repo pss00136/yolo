@@ -39,7 +39,7 @@ public class HostController {
 	*/
    @RequestMapping("/HostMain.host")	
    public String hostmain(){
-	  
+	    
 	    return "/host/HostMain.host";
 	   		
    }
@@ -81,9 +81,12 @@ public class HostController {
  	* @return  String:반환하는 경로
  	*/ 
    @RequestMapping("/HostMyLot.host")
-   public ModelAndView hostmylot(LotListVO lotlistVO){
+   public ModelAndView hostmylot( HttpSession session ){
 	   ModelAndView mv = new ModelAndView();
-	   List<LotListVO> list = service.hostmylotlist();
+	   String h_num = (String)session.getAttribute("h_num");
+	   System.out.println("hhhh"+ h_num);
+	   List<LotListVO> list = service.hostmylotlist(h_num);
+
 	   mv.addObject("list", list);
 	   mv.setViewName("/host/HostMyLot.host");
 	   return mv;

@@ -1,5 +1,6 @@
 package yolo.host.dao;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.mybatis.spring.SqlSessionTemplate;
@@ -8,7 +9,6 @@ import org.springframework.stereotype.Repository;
 
 import yolo.host.dto.HostinfoVO;
 import yolo.lot.dto.LotListVO;
-import yolo.user.dto.UserVO;
 
 /*
 * @클래스명: HostDAO
@@ -50,10 +50,13 @@ public class HostDAO {
 	* @param   HostVO
 	* @return  int: DB insert쿼리문 결과값
 	*/
-	public List<LotListVO> hostmylotlist(){
+	public List<LotListVO> hostmylotlist(String h_num){
 		List<LotListVO>	list = null;
+		HashMap map = new HashMap<>();
+		
+		map.put("h_num", h_num);
 		try{
-			list = session.selectList("host.hostmylotlist");
+			list = session.selectList("host.hostmylotlist", map);
 		}catch(Exception ex){
 			System.out.println("hostmylotlist 실패 : " + ex.getMessage());
 		}

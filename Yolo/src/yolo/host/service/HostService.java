@@ -30,7 +30,7 @@ public interface HostService {
 	* @역할: HostController에서 전달받은 값을 DAO로 전달, 결과값 리턴
 	*
 	* @param   HostVO:HostController에서 전달받은 값
-	* @return  int : 결과값
+	* @return  
 	*/
-	public List<LotListVO> hostmylotlist();
+	public List<LotListVO> hostmylotlist(String h_num);
 }

@@ -25,8 +25,8 @@ public class HostServiceImpl implements HostService {
 
 
 	@Override
-	public List<LotListVO> hostmylotlist() {		
-		return hdao.hostmylotlist();
+	public List<LotListVO> hostmylotlist(String h_num) {		
+		return hdao.hostmylotlist(h_num);
 	}
 
 

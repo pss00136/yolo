@@ -46,7 +46,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	values(concat('h_', HOST_NO_SEQ.nextVal),#{h_name},#{h_content}, #{u_id})
 	</insert>
 
-<select id="hostmylotlist" resultMap="lotlistMap">
+<select id="hostmylotlist" parameterType="lotlistVO" resultMap="lotlistMap">
  select i.priimg_name priimg_name, p.pri_weekprice pri_weekprice, p.pri_title pri_title, p.pri_addr pri_addr, p.pri_num pri_num,h_num
       from privatelot p  JOIN privateimage i
       ON p.pri_num = i.pri_num
