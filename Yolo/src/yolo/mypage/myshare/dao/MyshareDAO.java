@@ -22,10 +22,26 @@ public class MyshareDAO {
 	
 	@Autowired
 	SqlSessionTemplate session;
-	
+
+	/*
+	* @메소드명: myshareList
+	* @역할:  mypage의 shareList를 조건검색
+	* @param   
+	* @return  List<ShareMainListVO>: DB select쿼리문 결과값
+	*/
 	public List<ShareMainListVO> myshareList(String uid) {
 		List<ShareMainListVO> list = session.selectList("myshare.myshareList",uid);	
 		return list;
 	}
 
+	
+	public ShareMainListVO sdetail(ShareMainListVO sharemainlistVO){
+		ShareMainListVO sdetail = null;
+		try {
+			sdetail = session.selectOne("myshare.sdetail", sharemainlistVO);
+		} catch (Exception e) {
+			System.out.println("sdetail 실패: " + e.getMessage());	
+		}
+		return sdetail;
+	}
 }

@@ -25,9 +25,16 @@ import yolo.share.dto.ShareMainListVO;
 @RequestMapping("mypage/myReg")
 public class MyshareController {
 	
+	/* 멤버필드 */
 	@Autowired
 	MyshareService service;
 	
+	/*
+	* @메소드명: mysharelist
+	* @역할: views/mypage/myReg/ShareMyList로 페이지 전환
+	* @param   없음
+	* @return  ModelAndView :반환하는 경로
+	*/
 	@RequestMapping("/ShareMyList.myreg")
 	public ModelAndView mysharelist(HttpSession session){
 		String uid = (String)session.getAttribute("u_id");
@@ -40,10 +47,20 @@ public class MyshareController {
 		
 	}
 	
+	/*
+	* @메소드명: sdetail
+	* @역할: views/mypage/myReg/S_Detail로 페이지 전환
+	* @param   없음
+	* @return  ModelAndView :반환하는 경로
+	*/
 	@RequestMapping("/S_Detail.myreg")
-	public String sDetail(){
-		
-		return "/mypage/myReg/S_Detail";
+	public ModelAndView sdetail(ShareMainListVO sharemainlistVO){
+		ModelAndView mv = new ModelAndView();
+		ShareMainListVO list = service.sdetail(sharemainlistVO);
+		System.out.println(sharemainlistVO.getSl_num());
+		mv.addObject("list", list);
+		mv.setViewName("/mypage/myReg/S_Detail");
+		return mv;
 	}
 	
 }

@@ -21,11 +21,34 @@ public class MyclubDAO {
 	@Autowired
 	SqlSessionTemplate session;
 	
+	/*
+	* @메소드명: myclubList
+	* @역할:  mypage의 clubList를 조건검색
+	* @param   
+	* @return  List<ClubListVO>: DB select쿼리문 결과값
+	*/
 	public List<ClubListVO> myclubList(String uid){
 		List<ClubListVO> list = session.selectList("myclub.myclubList", uid);
 		
 		return list;
 		
+	}
+	
+	
+	/*
+	* @메소드명: cdetail
+	* @역할:  DB에서 모든 clubList를 검색
+	* @param   
+	* @return  List<ClubListVO>: DB select쿼리문 결과값
+	*/
+	public ClubListVO cdetail(ClubListVO clublistVO) {
+		ClubListVO cdetail = null;
+		try {
+			cdetail = session.selectOne("myclub.cdetail", clublistVO);
+		} catch (Exception e) {
+			System.out.println("cdetail 실패: " + e.getMessage());		
+		}
+		return cdetail;
 	}
 	
 }

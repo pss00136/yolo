@@ -87,5 +87,7 @@ hr {
 	}
 }
 
-
-
+.image-block img{
+	width: 75%;
+    height: 75%;
+}

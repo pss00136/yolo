@@ -21,5 +21,10 @@ public class MyshareServiceImpl implements MyshareService {
 		System.out.println(list.size());
 		return list;
 	}
+
+	@Override
+	public ShareMainListVO sdetail(ShareMainListVO sharemainlistVO) {
+		return mysharedao.sdetail(sharemainlistVO);
+	}
 	
 }

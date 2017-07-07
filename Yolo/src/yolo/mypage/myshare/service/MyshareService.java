@@ -15,6 +15,9 @@ import yolo.share.dto.ShareMainListVO;
 public interface MyshareService {
 	
 	public List<ShareMainListVO> myshareList(String uid);
+
+	public ShareMainListVO sdetail(ShareMainListVO sharemainlistVO);
+
 	
 	
 }

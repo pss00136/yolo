@@ -21,6 +21,10 @@ public class MyclubServiceImpl implements MyclubService {
 		System.out.println(list.size());
 		return list;
 	}
-	
+
+	@Override
+	public ClubListVO cdetail(ClubListVO clublistVO) {
+		return myclubdao.cdetail(clublistVO);
+	}
 	
 }

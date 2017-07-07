@@ -36,7 +36,7 @@
 					<c:otherwise>
 						<c:forEach items="${list}" var="l">				
 					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" id="club">
-						<a href="C_Detail.myreg" class="propWidget-1">
+						<a href="C_Detail.myreg?c_num=${l.c_num}&u_id=<%=u_id%>" class="propWidget-1">
 							<div class="fig">
 								<img src="/Yolo/upload/club/${l.cimg_name}" alt="image">
 								<div class="figCap">

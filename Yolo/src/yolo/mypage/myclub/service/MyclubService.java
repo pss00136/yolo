@@ -15,4 +15,6 @@ import yolo.club.dto.ClubListVO;
 public interface MyclubService {
 
 	public List<ClubListVO> myclubList(String uid);
+	
+	public ClubListVO cdetail(ClubListVO clublistVO);
 }

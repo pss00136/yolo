@@ -52,8 +52,12 @@ public class MyclubController {
 	* @return  ModelAndView :반환하는 경로
 	*/
 	@RequestMapping("/C_Detail.myreg")
-	public String cDetail(){
-		
-		return "/mypage/myReg/C_Detail";
+	public ModelAndView cdetail(ClubListVO clublistVO){
+		ModelAndView mv = new ModelAndView();
+		ClubListVO list = service.cdetail(clublistVO);
+		System.out.println(clublistVO.getC_num());
+		mv.addObject("list",list);
+		mv.setViewName("/mypage/myReg/C_Detail");
+		return mv;
 	}
 }

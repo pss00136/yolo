@@ -1,5 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>	
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+
+<%
+	// 세션에 있는 id값 가져오기
+	String u_id="";
+	u_id = (String)session.getAttribute("u_id");	
+%>
     
 <!-- Custom CSS -->
 <link href="/Yolo/css_yolo/cssView/MyClub/portfolio-item.css" rel="stylesheet">
@@ -7,9 +15,6 @@
 
 
 <!-- -----------------여기에 컨텐츠 div넣으세요----------------- -->
-<!-- 이 사이에! -->
-<!-- Portfolio Item Heading -->
-<!-- Content -->
 
 <div class="home-content">
 	<div class="home-wrapper">
@@ -26,21 +31,12 @@
 
 				<div class="post-content">
 					<div class="image-block">
-						<img src="/Yolo/images/blog-3.jpg" alt="blog image">
-						<div class="ib-title"></div>
+						<img src="/Yolo/upload/lot/${list.priimg_name}" alt="blog image">
 					</div>
-					<h2 class="osLight">공간 쉐어 제목</h2>
-					<p>It is a long established fact that a reader will be
-						distracted by the readable content of a page when looking at its
-						layout. The point of using Lorem Ipsum is that it has a
-						more-or-less normal distribution of letters, as opposed to using
-						'Content here, content here', making it look like readable
-						English.</p>
-					<p>Many desktop publishing packages and web page editors now
-						use Lorem Ipsum as their default model text, and a search for
-						'lorem ipsum' will uncover many web sites still in their infancy.
-						Various versions have evolved over the years, sometimes by
-						accident, sometimes on purpose (injected humour and the like).</p>
+					<h2 class="osLight">${list.sl_title}</h2>
+					<p>${list.pri_addr}</p>
+					<p>${list.sl_time}</p>
+					<p>${list.sl_content}</p>
 				</div>
 			</div>
 			<!-- 회원리스트 보기 -->

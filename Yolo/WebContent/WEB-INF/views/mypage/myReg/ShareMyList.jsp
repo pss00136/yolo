@@ -32,7 +32,7 @@
 					<c:otherwise>
 						<c:forEach items="${list}" var="l">				
 							<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" id="share">
-								<a class="propWidget-1" href="S_Detail.myreg">
+								<a class="propWidget-1" href="S_Detail.myreg?sl_num=${l.sl_num}&u_id=<%=u_id%>">
 									<div class="fig">
 										<img src="/Yolo/upload/lot/${l.priimg_name}" alt="image">
 										<div class="priceCap">
