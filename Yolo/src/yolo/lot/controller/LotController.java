@@ -66,18 +66,18 @@ public class LotController {
 	public ModelAndView lotinput(HostinfoVO hvo, HttpSession session){
 		  ModelAndView mv = new ModelAndView();
 		  String u_id = (String)session.getAttribute("u_id");
-		  hvo.setU_id(u_id);
+		   hvo.setU_id(u_id);
            HostinfoVO hostvo = service.lothostselect(hvo);
+           System.out.println(hostvo.getU_id() + ">>>" +hostvo.getH_num());
 		   if( hostvo != null){
 			   //h_num세션을 지정해줌
-			   session.setAttribute("h_num", hvo.getH_num() );
-			  
-			   mv.setViewName("/lot/LotInputFirst");
-			   
-		   }else{
+			    session.setAttribute("h_num", hostvo.getH_num() );
+			    mv.setViewName("/lot/LotInputFirst");			   
+		   }
+		   else{
 			   mv.setViewName("/host/HostInput.host");
 		   }
-		   
+ 	
 		return mv;
 	}
 	
@@ -171,14 +171,15 @@ public class LotController {
 		 PrivateimageVO primgVO = (PrivateimageVO)session.getAttribute("primgVO");
 		 EntrepreneurVO entrepreneurVO = (EntrepreneurVO)session.getAttribute("entrepreneurVO");
 
-		 
 		 //호스트번호
-		 privateVO.setH_num((String)session.getAttribute("h_num")); 
+		 privateVO.setH_num((String)session.getAttribute("h_num"));
+		 System.out.println(privateVO.getH_num());
+		 
 		 service.lotinput(privateVO, primgVO, entrepreneurVO);
 		 
 		 //이미지 넘겨오나?
 		 sessStatus.setComplete(); 
-			return "/host/HostMyLot.host";
+			return "/lot/LotList.lot";
 		}
 	    
 	    /*

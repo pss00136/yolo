@@ -72,10 +72,17 @@ public class HostController {
 	   return "/host/HostMain.host";  		
    }
 
+   
+   /*
+ 	* @메소드명: hostmylot
+ 	* @역할: 호스트에서 내가 등록한 공간 보기
+ 	*
+ 	* @param   HostinfoVO: jsp form에서 가져온 값
+ 	* @return  String:반환하는 경로
+ 	*/ 
    @RequestMapping("/HostMyLot.host")
-   public ModelAndView hostmylot(LotListVO lotlistVO, HttpSession session){
+   public ModelAndView hostmylot(LotListVO lotlistVO){
 	   ModelAndView mv = new ModelAndView();
-	   String h_num =(String)session.getAttribute("h_num");
 	   List<LotListVO> list = service.hostmylotlist();
 	   mv.addObject("list", list);
 	   mv.setViewName("/host/HostMyLot.host");

@@ -32,40 +32,7 @@
                                 </div>
                                 <% }  %>
                               
-                                   <div class="col-md-4 col-xs-12">
-                                    <a href="/Yolo/view/lot/LotView.jsp" class="propWidget-1" style="margin-bottom: 5px;">
-                                    
-                                        <div class="fig">
-                                            <img src="/Yolo/images_yolo/lot/1.PNG" alt="image">
-                                            <div class="priceCap"><span>5,000원/시간</span></div>
-                                            <div class="figCap">
-                                                <h3>공상온도</h3>
-                                                <div class="address">홍대 합정</div>
-                                                <div class="feat feat-1"><span class="fa fa-eye"></span> 5</div>
-                                                <div class="feat feat-2"><span class="icon-bubble"></span> 	1</div>                                               
-                                            </div>
-                                        </div>      
-                                    </a>
-                                     <a style="float:right; margin-bottom: 5px;" href="#" class="btn  btn-o btn-green">요청취소</a>
-                                </div>
-                               
-                                
-                                   <div class="col-md-4 col-xs-12">
-                                    <a href="/Yolo/view/lot/LotView.jsp" class="propWidget-1" style="margin-bottom: 5px;">
-                                    
-                                        <div class="fig">
-                                            <img src="/Yolo/images_yolo/lot/3.PNG" alt="image">
-                                            <div class="priceCap"><span>40,000원/시간</span></div>
-                                            <div class="figCap">
-                                                <h3>카페 윌리</h3>
-                                                <div class="address">홍대 합정</div>
-                                                <div class="feat feat-1"><span class="fa fa-eye"></span> 8</div>
-                                                <div class="feat feat-2"><span class="icon-bubble"></span> 	1</div>                                               
-                                            </div>
-                                        </div>
-                                                <a style="float:right; margin-bottom: 5px;" href="#" class="btn  btn-o btn-green">요청취소</a>
-                                    </a>
-                                </div>
+                        
                                 
                             </div>
                      
