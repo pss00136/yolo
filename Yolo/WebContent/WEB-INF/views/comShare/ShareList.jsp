@@ -67,7 +67,7 @@
 		</c:when>
 		<c:otherwise>
 			<c:forEach items="${list}" var="list">
-				<a href="/Yolo/comShare/ShareDetail.share" class="item zoom active">
+				<a href="/Yolo/comShare/ShareDetail.share?sl_num=${list.sl_num }" class="item zoom active">
 					<div class="column">
 						<div class="image">
 							<img class="cover accelerate"

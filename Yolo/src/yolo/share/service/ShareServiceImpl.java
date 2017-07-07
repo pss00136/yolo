@@ -45,5 +45,11 @@ public class ShareServiceImpl implements ShareService{
 		return shareTotalCount;
 	}
 
+	@Override
+	public List<ShareMainListVO> shareDetail(ShareVO vo) {
+		List<ShareMainListVO> list = sharedao.shareDetail(vo);
+		return list;
+	}
+
 	
 }

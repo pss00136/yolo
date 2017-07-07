@@ -94,7 +94,7 @@ public class ShareController {
 		    endPage = shareTotalPage;
 		}// 마지막에 보여줄 페이지 수가 총 페이지 수 보다 클때
 			
-		int startCount = (shareNowPage - 1) * shareCountList + 1; //페이지에 보여줄 첫번째 게시물 
+		int startCount = ((shareNowPage - 1) * shareCountList) + 1; //페이지에 보여줄 첫번째 게시물 
 
 		int endCount = shareNowPage * shareCountList;   // 페이지에 보여줄 마지막 게시물
 		System.out.println("위치: controller = startCount:"+startCount);
@@ -275,8 +275,13 @@ public class ShareController {
 	 * @returnString:반환하는 경로
 	 */
 	@RequestMapping("/ShareDetail.share")
-	public String shareDetail(){
-		return "/comShare/ShareDetail/modal_share.modal";
+	public ModelAndView shareDetail(ShareVO vo){
+		List<ShareMainListVO> list = service.shareDetail(vo);
+		System.out.println("위치: controller: list의크기:"+list.size());
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("list", list);
+		mv.setViewName("/comShare/ShareDetail/modal_share.modal");
+		return mv;
 	}
 	
 	/*

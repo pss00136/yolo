@@ -25,4 +25,6 @@ public interface ShareService {
 
 	public int shareTotalGetCount();
 
+	public List<ShareMainListVO> shareDetail(ShareVO vo);
+
 }

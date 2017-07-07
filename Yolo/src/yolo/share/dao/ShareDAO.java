@@ -68,4 +68,16 @@ public class ShareDAO {
 		
 		return shareTotalCount;
 	}
+
+	public List<ShareMainListVO> shareDetail(ShareVO vo) {
+		List<ShareMainListVO> list = null;
+		try {
+			
+			list = session.selectList("share.shareDetail", vo);
+			
+		} catch (Exception e) {
+			System.out.println("회원이 예약한 공간보기리스트 에러:" + e.getMessage());
+		}
+		return list;
+	}
 }
