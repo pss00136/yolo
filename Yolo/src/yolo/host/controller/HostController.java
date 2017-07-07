@@ -1,5 +1,7 @@
 package yolo.host.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import yolo.host.dto.HostinfoVO;
 import yolo.host.service.HostService;
+import yolo.lot.dto.LotListVO;
 
 /*
 * @클래스명: HostController
@@ -35,9 +38,8 @@ public class HostController {
 	* @return  String:반환하는 경로
 	*/
    @RequestMapping("/HostMain.host")	
-   public String hostmain(HostinfoVO hvo, HttpSession session){
-	  	//hostmain 들어오자마자 h_num 세션설정
-	   session.setAttribute("h_num", hvo.getH_num() );   
+   public String hostmain(){
+	  
 	    return "/host/HostMain.host";
 	   		
    }
@@ -71,8 +73,13 @@ public class HostController {
    }
 
    @RequestMapping("/HostMyLot.host")
-   public String hostmylot(){
-	   return "/host/HostMyLot.host";
+   public ModelAndView hostmylot(LotListVO lotlistVO, HttpSession session){
+	   ModelAndView mv = new ModelAndView();
+	   String h_num =(String)session.getAttribute("h_num");
+	   List<LotListVO> list = service.hostmylotlist();
+	   mv.addObject("list", list);
+	   mv.setViewName("/host/HostMyLot.host");
+	   return mv;
    }
    
    @RequestMapping("/HostBook.host")

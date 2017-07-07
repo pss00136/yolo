@@ -25,6 +25,7 @@ import com.google.code.geocoder.model.GeocoderStatus;
 import com.google.code.geocoder.model.LatLng;
 
 import yolo.host.dto.EntrepreneurVO;
+import yolo.host.dto.HostinfoVO;
 import yolo.lot.dto.BooklotVO;
 import yolo.lot.dto.LotListVO;
 import yolo.lot.dto.PostscriptVO;
@@ -62,8 +63,22 @@ public class LotController {
 		* @return  String:반환하는 경로
 		*/	
 	@RequestMapping("lot/LotInputFirst.lot")
-	public String lotinput(){
-		return "/lot/LotInputFirst";
+	public ModelAndView lotinput(HostinfoVO hvo, HttpSession session){
+		  ModelAndView mv = new ModelAndView();
+		  String u_id = (String)session.getAttribute("u_id");
+		  hvo.setU_id(u_id);
+           HostinfoVO hostvo = service.lothostselect(hvo);
+		   if( hostvo != null){
+			   //h_num세션을 지정해줌
+			   session.setAttribute("h_num", hvo.getH_num() );
+			  
+			   mv.setViewName("/lot/LotInputFirst");
+			   
+		   }else{
+			   mv.setViewName("/host/HostInput.host");
+		   }
+		   
+		return mv;
 	}
 	
 	

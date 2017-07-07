@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import yolo.host.dto.EntrepreneurVO;
+import yolo.host.dto.HostinfoVO;
 import yolo.lot.dao.LotDAO;
 import yolo.lot.dto.BooklotVO;
 import yolo.lot.dto.LotListVO;
@@ -71,6 +72,11 @@ public class LotServiceImpl implements LotService {
 	public int lotpay(BooklotVO booklotVO, TimetableVO timetableVO) {
 		// TODO Auto-generated method stub
 		return ldao.lotpay(booklotVO, timetableVO);
+	}
+
+	@Override
+	public HostinfoVO lothostselect(HostinfoVO hvo) {
+		return ldao.lothostselect(hvo);
 	}
 
 }

@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import yolo.host.dto.EntrepreneurVO;
+import yolo.host.dto.HostinfoVO;
 import yolo.lot.dto.BooklotVO;
 import yolo.lot.dto.LotListVO;
 import yolo.lot.dto.PostscriptVO;
@@ -332,5 +333,9 @@ public class LotDAO {
 		   return t_time;
 	  }
 	
+	public HostinfoVO lothostselect(HostinfoVO hvo){
+		HostinfoVO hostvo = session.selectOne("lot.lothostselect", hvo);
+		return hostvo;
+	}
 
 }

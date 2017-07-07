@@ -3,6 +3,7 @@ package yolo.lot.service;
 import java.util.List;
 
 import yolo.host.dto.EntrepreneurVO;
+import yolo.host.dto.HostinfoVO;
 import yolo.lot.dto.BooklotVO;
 import yolo.lot.dto.LotListVO;
 import yolo.lot.dto.PostscriptVO;
@@ -47,7 +48,7 @@ public interface LotService {
 	public List<LotListVO> lotlistview();
 
 	/*
-	* @메소드명: lotdetailview
+	* @메소드 명: lotdetailview
 	* @역할: LotController에서 전달받은 값을 DAO로 전달, 결과값 리턴
 	*
 	* @param   LotListVO 에서 전달받은 값
@@ -62,6 +63,7 @@ public interface LotService {
 	* @param   LotListVO 에서 전달받은 값
 	* @return  
 	*/
+	
 	public LotListVO lotreserve(LotListVO lotlistVO);
 	
 	/*
@@ -104,5 +106,7 @@ public interface LotService {
 	public TimetableVO gettime(TimetableVO timetableVO);
 	
 	public int lotpay(BooklotVO booklotVO, TimetableVO timetableVO);
+	
+	public HostinfoVO lothostselect(HostinfoVO hvo);
 	
 }

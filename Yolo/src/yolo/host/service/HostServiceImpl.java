@@ -1,10 +1,13 @@
 package yolo.host.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import yolo.host.dao.HostDAO;
 import yolo.host.dto.HostinfoVO;
+import yolo.lot.dto.LotListVO;
 
 @Service 
 public class HostServiceImpl implements HostService {
@@ -19,6 +22,14 @@ public class HostServiceImpl implements HostService {
 		return result;
 				
 	}
+
+
+	@Override
+	public List<LotListVO> hostmylotlist() {		
+		return hdao.hostmylotlist();
+	}
+
+
 	
 	
 

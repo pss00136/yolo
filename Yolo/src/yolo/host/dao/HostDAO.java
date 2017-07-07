@@ -1,10 +1,14 @@
 package yolo.host.dao;
 
+import java.util.List;
+
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import yolo.host.dto.HostinfoVO;
+import yolo.lot.dto.LotListVO;
+import yolo.user.dto.UserVO;
 
 /*
 * @클래스명: HostDAO
@@ -21,7 +25,7 @@ public class HostDAO {
 	@Autowired
 	SqlSessionTemplate session;
 	
-	
+
 	/*
 	* @메소드명: hostinputok
 	* @역할: HostService에서 전달받은 값을 DB에 삽입
@@ -32,12 +36,28 @@ public class HostDAO {
 	public int hostinputok(HostinfoVO hvo){
 		int result = 0;
 		try{
-		  result = session.insert("hostInputok", hvo);
+		  result = session.insert("host.hostInputok", hvo);
 		}catch(Exception ex){
 			System.out.println("hostinputok 실패 : " + ex.getMessage());
 		}
 		return result;
 	}
 	
+	/*
+	* @메소드명: hostmylotlist
+	* @역할: HostService에서 전달받은 값을 DB에 삽입
+	*
+	* @param   HostVO
+	* @return  int: DB insert쿼리문 결과값
+	*/
+	public List<LotListVO> hostmylotlist(){
+		List<LotListVO>	list = null;
+		try{
+			list = session.selectList("host.hostmylotlist");
+		}catch(Exception ex){
+			System.out.println("hostmylotlist 실패 : " + ex.getMessage());
+		}
+		return list;
+	}
 
 }

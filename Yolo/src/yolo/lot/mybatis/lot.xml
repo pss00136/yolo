@@ -134,7 +134,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		WHERE T_NUM = #{t_num}
 	</update>
 	
-	
+	<select id="lothostselect" parameterType="hvo" resultType="hvo">
+	SELECT * FROM hostinfo WHERE u_id = #{u_id}
+	</select>
 
 
 </mapper>
