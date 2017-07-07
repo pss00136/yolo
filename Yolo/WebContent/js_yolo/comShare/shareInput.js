@@ -29,9 +29,7 @@
 		evt.preventDefault();
 		evt.stopImmediatePropagation();
 		$(this).toggleClass("active");
-		alert("출력");
 		var label = $("#alltime").find('label[class*=active]');
-		alert(label.length);
 		var times = '';
 		for(var i = 0; i < label.length ; i++){
 			if(i==label.length-1){
@@ -46,5 +44,5 @@
 		$('#sl_time').val(times);
 		$('#t_time').val(times);
 		
-		alter(times);
+		alert(times);
 	});	

@@ -1,6 +1,7 @@
 package yolo.share.controller;
 
 import java.util.List;
+import java.util.StringTokenizer;
 
 import javax.servlet.http.HttpSession;
 
@@ -129,12 +130,87 @@ public class ShareController {
 	@RequestMapping("ShareInputOk.share")
 	public ModelAndView shareInputOk(ShareVO vo, SharePagingVO pvo, HttpSession session){
 		vo.setU_id((String)session.getAttribute("u_id"));
+		// 초기값 주기
+		String defaulttime[] = { "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"};
+		//설정해야 할 값 가져오기
+		String settime = vo.getSl_time();
+		System.out.println("변경되기 전 선택 값들:"+settime);
+		//값 설정하기
+		StringTokenizer st = new StringTokenizer(settime,"/");
+		while(st.hasMoreTokens()){
+			String time = st.nextToken();
+			switch (time){
+			   case "9:00" :
+				   defaulttime[0] = "1";
+				   break;
+			   case "10:00" :
+				   defaulttime[1] = "1";
+				   break;
+			   case "11:00" :
+				   defaulttime[2] = "1";
+				   break;
+			   case "12:00" :
+				   defaulttime[3] = "1";
+				   break;
+			   case "13:00" :
+				   defaulttime[4] = "1";
+				   break;
+			   case "14:00" :
+				   defaulttime[5] = "1";
+				   break;
+			   case "15:00" :
+				   defaulttime[6] = "1";
+				   break;
+			   case "16:00" :
+				   defaulttime[7] = "1";
+				   break;
+			   case "17:00" :
+				   defaulttime[8] = "1";
+				   break;
+			   case "18:00" :
+				   defaulttime[9] = "1";
+				   break;
+			   case "19:00" :
+				   defaulttime[10] = "1";
+				   break;
+			   case "20:00" :
+				   defaulttime[11] = "1";
+				   break;
+			   case "21:00" :
+				   defaulttime[12] = "1";
+				   break;
+			   case "22:00" :
+				   defaulttime[13] = "1";
+				   break;
+			   case "23:00" :
+				   defaulttime[14] = "1";
+				   break;
+			   case "24:00" :
+				   defaulttime[15] = "1";
+				   break;	   
+			   
+			   }
+		}
+		// defaulttime 배열을 다시 settime에 설정
+		settime = "";
+		for(int i = 0; i<defaulttime.length; i++){
+			if(i == defaulttime.length-1){
+				settime += defaulttime[i];
+			} else {
+				settime += defaulttime[i]+"/";
+			}
+		}
+		System.out.println("선택된 시간 변경된 값:"+settime);
+		vo.setSl_time(settime);
 		int result = service.shareInput(vo);
 		String message = "입력실패";
 		if(result > 0){
 			message = "입력완료";
 		}
 		System.out.println(message);
+		
+		
+		
 		
 		
 		// ShareList.jsp 보여줄 때

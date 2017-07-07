@@ -34,6 +34,8 @@ public class ShareDAO {
 	 * @return int: DB insert쿼리문 결과값
 	 */
 	public int shareInput(ShareVO vo) {
+		
+		
 		int result = session.insert("share.shareInsert", vo);
 		
 		return result;

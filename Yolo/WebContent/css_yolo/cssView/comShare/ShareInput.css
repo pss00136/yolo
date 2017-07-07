@@ -26,3 +26,7 @@
 .panel.dd .panel-body {
     font-size: 12px;
 }
+
+item active {
+	overflow: auto;
+}

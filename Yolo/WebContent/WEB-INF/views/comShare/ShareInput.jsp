@@ -7,6 +7,67 @@
 <link href="/Yolo/css_yolo/cssView/comShare/ShareInput.css" rel="stylesheet">
 <link href="/Yolo/css_yolo/cssView/comShare/datetimePicker.css" rel="stylesheet">
 <link href="/Yolo/css_yolo/cssView/comShare/ShareEdit.css" rel="stylesheet">
+<style>
+/* CHECKBOX */
+.carousel-control.right {
+	right: 0;
+	left: auto;
+	background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .0001) 0%,
+		rgba(255, 255, 255, 0.5) 100%);
+	color: rgb(242, 118, 0);
+}
+
+.carousel-control {
+	position: absolute;
+	top: -15px;
+	bottom: 0;
+	left: 4px;
+	width: 5%;
+	font-size: 20px;
+	color: #000000;
+	text-align: center;
+	text-shadow: 0 1px 0px rgba(0, 0, 0, 0.57);
+	filter: alpha(opacity = 50);
+	opacity: .5;
+}
+
+.carousel-control.left {
+	background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .0001) 0%,
+		rgba(255, 255, 255, 0.5) 100%);
+	color: rgb(242, 118, 0);
+}
+
+.btn-group, .btn-group-vertical {
+	display: inline-flex;
+}
+
+.carousel-inner {
+	position: relative;
+	width: 100%;
+	overflow: auto;
+	margin-left: 2px;
+}
+
+@media ( max-width :768px) {
+	.carousel-inner {
+		overflow: auto;
+	}
+}
+
+.btn-o.btn-warning {
+	margin-right: 4px;
+}
+.btn-o.btn-warning.disabled {
+	color:white;
+}
+p{
+	word-break: break-all;
+	padding-right: 5px;
+}
+.fullrow{
+	margin-bottom: 15px;
+}
+</style>
 
 <!-- ------------------------------------------------------- -->
 
@@ -81,24 +142,24 @@
 									<div class="col-sm-9">
 										<div class="item active">
 											<hr>
-											<div id="alltime" class="btn-group" data-toggle="buttons">
-												<label id="time1" class="btn btn-o btn-warning"	autocomplete="off">09:00</label> 
-												<label id="time2" class="btn btn-o btn-warning" autocomplete="off">10:00</label>
-												<label id="time3" class="btn btn-o btn-warning"	autocomplete="off">11:00</label> 
-												<label id="time4" class="btn btn-o btn-warning" autocomplete="off">12:00</label>
-												<label id="time5" class="btn btn-o btn-warning"	autocomplete="off">13:00</label> 
-												<label id="time6" class="btn btn-o btn-warning" autocomplete="off">14:00</label>
-												<label id="time7" class="btn btn-o btn-warning" autocomplete="off">15:00</label> 
-												<label id="time8" class="btn btn-o btn-warning" autocomplete="off">16:00</label>
-												<label id="time9" class="btn btn-o btn-warning" autocomplete="off">17:00</label> 
-												<label id="time10"class="btn btn-o btn-warning" autocomplete="off">18:00</label>
-												<label id="time11" class="btn btn-o btn-warning"autocomplete="off">19:00</label> 
-												<label id="time12"class="btn btn-o btn-warning" autocomplete="off">20:00</label>
-												<label id="time13" class="btn btn-o btn-warning"autocomplete="off">21:00</label> 
-												<label id="time14"class="btn btn-o btn-warning" autocomplete="off">22:00</label>
-												<label id="time15" class="btn btn-o btn-warning"autocomplete="off">23:00</label> 
-												<label id="time16"class="btn btn-o btn-warning" autocomplete="off">24:00</label>
+											<!-- 시간보기 -->
+											<div id="propWidget-3" class="carousel slide propWidget-3"
+												data-ride="carousel">
+												<div class="carousel-inner">
+													<div class="item active">
+
+														<div class="btn-group" id="alltime" data-toggle="buttons">
+															<c:forEach var='sharetime' begin = '1' end ='16' step ='1'>
+																<label id="time${sharetime}" class="btn btn-o btn-warning" for="${sharetime}" autocomplete="off">${sharetime+8}:00</label>
+															
+															</c:forEach>
+															
+														</div>
+													</div>
+
+												</div>
 											</div>
+											<!-- 시간보기 끝 -->
 											<hr>
 										</div>
 
