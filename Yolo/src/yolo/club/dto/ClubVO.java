@@ -1,19 +1,6 @@
 package yolo.club.dto;
 
 public class ClubVO {
-//	C_NUM VARCHAR(100) NOT NULL, /* 모임 번호 */
-//	U_ID VARCHAR(20), /* 아이디 */
-//	C_TYPE VARCHAR(100), /* 모임 유형 */
-//	C_TITLE VARCHAR(50), /* 모임명 */
-//	C_TAG VARCHAR(200), /* 해시태그 */
-//	C_PEOPLE INTEGER, /* 인원 */
-//	C_RECRUIT VARCHAR(80), /* 모집기간 */
-//	C_PERIOD VARCHAR(50), /* 활동주기 */
-//	C_DATE VARCHAR(200), /* 일시 */
-//	C_PLACE VARCHAR(200), /* 개최 장소 */
-//	C_CONTENT VARCHAR(255), /* 설명 */
-//	C_CONFIRM VARCHAR(5), /* 승인 여부 */
-//	C_REGDATE VARCHAR(100) /* 등록일 */
 	
 	/* 모임 등록 */
 	private String c_num; /* 모임 번호 */
@@ -29,13 +16,15 @@ public class ClubVO {
 	private String c_content; /* 설명 */
 	private String c_confirm; /* 승인 여부 */
 	private String c_regdate; /* 등록일 */
+	private String c_bookmark; /* 즐겨찾기 */
+	private String c_entry; /* 신청인원 */
 	
 	/* Constructor */
 	public ClubVO() {}
 
 	public ClubVO(String c_num, String u_id, String c_type, String c_title, String c_tag, int c_people,
 			String c_recruit, String c_period, String c_date, String c_place, String c_content, String c_confirm,
-			String c_regdate) {
+			String c_regdate, String c_bookmark, String c_entry) {
 		super();
 		this.c_num = c_num;
 		this.u_id = u_id;
@@ -50,7 +39,10 @@ public class ClubVO {
 		this.c_content = c_content;
 		this.c_confirm = c_confirm;
 		this.c_regdate = c_regdate;
+		this.c_bookmark = c_bookmark;
+		this.c_entry = c_entry;
 	}
+
 	/* Constructor END */
 
 	/* Setter & Getter */
@@ -157,6 +149,23 @@ public class ClubVO {
 	public void setC_regdate(String c_regdate) {
 		this.c_regdate = c_regdate;
 	}
+
+	public String getC_bookmark() {
+		return c_bookmark;
+	}
+
+	public void setC_bookmark(String c_bookmark) {
+		this.c_bookmark = c_bookmark;
+	}
+
+	public String getC_entry() {
+		return c_entry;
+	}
+
+	public void setC_entry(String c_entry) {
+		this.c_entry = c_entry;
+	}
+	
 	/* Setter & Getter END */
 	
 	

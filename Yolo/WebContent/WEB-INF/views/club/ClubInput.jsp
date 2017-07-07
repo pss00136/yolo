@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ page import="java.util.*"%>
+<%@ page import="yolo.share.dto.*"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 	
@@ -19,7 +21,7 @@
 				<div class="panel-body">
 					<!-- 입력 폼 -->
 						<!-- 주제 설정 -->
-						<form name="sendForm" method="get" >
+<!-- 						<form name="sendForm" method="get" > -->
 						<div class="form-group">
 							<label class="col-sm-2 control-label">주제</label>
 							<div class="col-sm-8">
@@ -69,7 +71,7 @@
 								</div>
 							</div>
 						</div>
-						</form>
+<!-- 						</form> -->
 						<!-- 제목 입력 -->
 						<div class="form-group">
 							<label class="col-sm-2 control-label">모임명</label>
@@ -213,11 +215,11 @@
 							<label class="col-sm-2 control-label">모임장소</label>
 							<div class="col-md-6 col-xs-10">
 								<div class="col-md-3 radio custom-radio">
-									<label><input type="radio" name="c_place" value="미확정" onclick="div_OnOff(this.value,'con');"><span
+									<label><input type="radio" name="c_place_v" value="미확정" onclick="div_OnOff(this.value,'con');"><span
 										class="fa fa-circle"></span> 미확정</label>
 								</div>
 								<div class="col-md-3 radio custom-radio">
-									<label><input type="radio" name="c_place" value="확정" onclick="div_OnOff(this.value,'con');"><span
+									<label><input type="radio" name="c_place_v" value="확정" onclick="div_OnOff(this.value,'con');"><span
 										class="fa fa-circle"></span> 확정</label>
 								</div>
 							</div>			
@@ -225,64 +227,103 @@
 						
 						<div id="con" style="display:none">
 						<!-- 예약한 공간 선택 -->
-<!-- 			 			<div class="form-group"> -->
-<!-- 			 				<label class="col-sm-2 control-label"></label> -->
-<!-- 	                       	 <div class="col-sm-6 btn-group" > -->
-<!--                         		<button data-toggle="dropdown" class="btn btn-o btn-gray dropdown-toggle"> -->
-<!-- 	                                  <span class="dropdown-label">예약한 공간 선택</span> <span class="caret"></span> -->
-<!-- 	                             </button> -->
-							<div class="table-overflow">
-								<table class="table" id="inboxTable">
-									<tbody class="table">
-		                             <c:choose>
-			                             <c:when test="${fn:length(list) eq 0 }">
-	                              			<tr>
-												<td>예약된 공간이 없습니다.</td>
-											</tr>
-			                             </c:when>
-			                             <c:otherwise>
-	                            	 		<c:forEach items="${list}" var="a">
-			                              		<tr>
-													<td><div class="radio custom-radio">
-													<label><input type="radio" name="bl_id" value="${a.bl_id}"><span
-														class="fa fa-circle"></span></label>
-														</div></td>
-													<td><img alt="" src="/Yolo/images_yolo/lot/${a.priimg_name}"
-															width="150px;" height="100px;"></td>
-													<td>${a.pri_title}</td>
-													<td>${a.pri_addr}</td>
-													<td>${a.bl_date}</td>
-												</tr>
-			                             	</c:forEach>
-	<!-- 		                             	<ul class="dropdown-menu dropdown-select"> -->
-	<!-- 				                        	<li class="active"><input type="radio" name="c_place_v" checked="checked" value="미선택"><a href="#">예약한 공간 선택</a></li> -->
-	<!-- 		                             	</ul> -->
-			                             </c:otherwise>
-		                             </c:choose>
-	                            	 </tbody>
-								</table>
-							</div>
-            				</div>
-                         <div class="form-group">
-                         	<label class="col-sm-2 control-label">주소입력</label>
-                             	<div class="col-sm-8">
-								<!-- 우편번호 검색 -->
-									<div class="input-group addr">
-										<input type="text" class="form-control" id="postcode"
-											name="postcode" placeholder="우편번호"> <span
-											class="input-group-btn"> <input type="button"
-											class="btn btn-success form-control" onclick="DaumPostcode()"
-											value="우편번호 찾기">
-										</span>
-									</div>
-									<input type="text" class="form-control addr" id="main_address"
-										name="main_address" placeholder=" 주소"> <input type="text"
-										class="form-control addr" id="detail_address"
-										name="detail_address" placeholder=" 상세주소">
-			
-								</div>
-                            </div>
-                        </div>
+				 			<div class="form-group">
+				 				<label class="col-sm-2 control-label">예약한 공간 선택</label>
+	<!-- 	                       	 <div class="col-sm-6 btn-group" > -->
+	<!--                         		<button data-toggle="dropdown" class="btn btn-o btn-gray dropdown-toggle"> -->
+	<!-- 	                                  <span class="dropdown-label">예약한 공간 선택</span> <span class="caret"></span> -->
+	<!-- 	                             </button> -->
+								<div class="col-sm-9 panel panel-default dd">
+									<a href="#ddPanel"
+										class="btn btn-o btn-default btn-block btn-lg align-left"
+										data-toggle="collapse"><span
+										class="fa fa-angle-down pull-right"></span></a>
+									<div id="ddPanel" class="panel-collapse collapse">
+										<div class="panel-body">
+											<div class="table-overflow">
+												<table class="table" id="inboxTable">
+													<tbody class="table">
+<%-- 													<% ArrayList list = (ArrayList)request.getAttribute("list"); %> --%>
+						                             <c:choose>
+							                             <c:when test="${fn:length(list) eq 0 }">
+					                              			<tr>
+																<td>예약된 공간이 없습니다.</td>
+															</tr>
+							                             </c:when>
+							                             <c:otherwise>
+									                             <tr>
+							                              			<td><div class="radio custom-radio">
+																	<label class="active"><input type="radio" name="c_place" value="미선택"><span
+																		class="fa fa-circle"></span></label>
+																		</div></td>
+																	<td></td>
+																	<td></td>
+																	<td>미선택</td>
+																	<td></td>
+																	<td></td>
+							                              		</tr>
+					                            	 		<c:forEach items="${list}" var="a">
+							                              		<tr>
+																	<td><div class="radio custom-radio">
+																	<label><input type="radio" name="c_place" value="${a.pri_addr}"><span
+																		class="fa fa-circle"></span></label>
+																		</div></td>
+																	<td>${a.bl_id}</td>
+																	<td><img alt="" src="/Yolo/images_yolo/lot/${a.priimg_name}"
+																			width="150px;" height="100px;"></td>
+																	<td>${a.pri_title}</td>
+																	<td>${a.pri_addr}</td>
+																	<td>${a.bl_date}</td>
+																</tr>
+							                             	</c:forEach>
+							                             </c:otherwise>
+						                             </c:choose>
+<%-- 														<% --%>
+<!-- // 															for(int i=0; i<list.size(); i++){ -->
+<%-- 																InputListVO vo = (InputListVO)list.get(i);%> --%>
+<!-- 														<tr> -->
+<!-- 															<td><div class="radio custom-radio"> -->
+<%-- 															<label><input type="radio" name="c_address" value="<%= vo.getPri_addr()%>"><span --%>
+<!-- 																class="fa fa-circle"></span></label> -->
+<!-- 																</div></td> -->
+<!-- 															<td></td> -->
+<%-- 															<td><img alt="" src="/Yolo/images_yolo/lot/<%= vo.getPriimg_name()%>" --%>
+<!-- 																	width="150px;" height="100px;"></td> -->
+<%-- 															<td><%= vo.getPri_title()%></td> --%>
+<%-- 															<td><%= vo.getPri_addr()%></td> --%>
+<%-- 															<td><%= vo.getBl_date()%></td> --%>
+<!-- 														</tr>				 -->
+<%-- 														<%}%> --%>
+																											
+					                            	 </tbody>
+												</table>
+											</div>
+	           							</div>
+                     			 	</div>
+                   			 	</div>
+                   			 	<div class="form-group">
+                   			 		<label class="col-sm-6 control-label">또는</label>
+                   			 	</div>
+                   			 	<div class="form-group">
+		                         	<label class="col-sm-2 control-label">주소 직접 입력</label>
+		                             	<div class="col-sm-8">
+										<!-- 우편번호 검색 -->
+											<div class="input-group addr">
+												<input type="text" class="form-control" id="postcode"
+													name="postcode" placeholder="우편번호"> <span
+													class="input-group-btn"> <input type="button"
+													class="btn btn-success form-control" onclick="DaumPostcode()"
+													value="우편번호 찾기">
+												</span>
+											</div>
+											<input type="text" class="form-control addr" id="main_address"
+												name="main_address" placeholder=" 주소"> <input type="text"
+												class="form-control addr" id="detail_address"
+												name="detail_address" placeholder=" 상세주소">
+										</div>
+		                        </div>
+               			 	</div>
+           			 	</div>
 						<!-- 개최 장소 끝 -->	
 									
 						<!-- 대표 이미지 선택 -->

@@ -134,20 +134,35 @@ public class ClubController {
 	* @메소드명: clubInputOk
 	* @역할: ClubService를 호출하여 웹에서 가져온 Club 등록값을 전달 
 	*
-	* @param   ClubVO:jsp form에서 가져온 값
+	* @param   clubVO:jsp form에서 가져온 값
+	* 			c_dateFrom / c_timeFrom : 모임 운영 시작 날짜/시간
+	* 			c_dateTo / c_timeTo : 모임 운영 종료 날짜/시간
+	* 			c_recruitFrom / c_recruitTo : 모임 모집 시작/종료 날짜
+	* 			c_place_v : 모임 장소 확정 or 미확정 value
+	* 			b_place : 모임 장소 확정 후 예약 공간 미선택 value
+	* 			main_address / detail_address : 모임 장소 확정시 주소 직접 입력 값
+	* 			
 	* @return  String:반환하는 경로
 	*/
 	@RequestMapping("/ClubInputOk.club")
 	public String clubInputOk(ClubVO clubVO, String c_dateFrom, String c_timeFrom, 
 			String c_dateTo, String c_timeTo, String c_recruitFrom, String c_recruitTo, 
-			String c_place_v, String main_address, String detail_address, ClubImageVO cimgVO, HttpSession session){
+			String c_place_v, String b_place, String main_address, String detail_address, 
+			ClubImageVO cimgVO, HttpSession session){
 		clubVO.setU_id((String)session.getAttribute("u_id"));
 		System.out.println("u_id:"+clubVO.getU_id());
+		System.out.println("c_place_v:"+ c_place_v);
+		System.out.println("C_place1:"+ clubVO.getC_place());
 		clubVO.setC_date(c_dateFrom + "/" + c_timeFrom + "~" + c_dateTo + "/" + c_timeTo);
 		clubVO.setC_recruit(c_recruitFrom + "~" + c_recruitTo);
-		if(clubVO.getC_place().equals("확정") && c_place_v.equals("미선택")){
+		if(c_place_v.equals("미확정") || (c_place_v.equals("확정") && clubVO.getC_place().equals("미선택") && main_address.equals("")) ){
+			clubVO.setC_place("미확정");
+			System.out.println("C_placeAdd:"+clubVO.getC_place());
+		}else if((!main_address.equals(""))){
 			clubVO.setC_place(main_address +" "+ detail_address);
+			System.out.println("C_placeSUm:"+clubVO.getC_place());
 		}
+		
 		int result = service.clubinput(clubVO, cimgVO);
 		if(result > 0){
 			System.out.println("DB입력 성공");
