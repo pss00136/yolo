@@ -12,7 +12,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	INSERT INTO SHARELOT2
 	(sl_num, u_id, sl_title, sl_content, sl_time, sl_price, sl_regdate, sl_hits, bl_id)
 	VALUES
-	(SHARELOT_NO_SEQ.nextval, #{u_id}, #{sl_title}, #{sl_content},'06:00~15:00', '50000', sysdate , 0 , #{bl_id})
+	(SHARELOT_NO_SEQ.nextval, #{u_id}, #{sl_title}, #{sl_content}, #{sl_time}, '50000', sysdate , 0 , #{bl_id})
 </insert>
 
 <select id="shareList" parameterType="yolo.share.dto.SharePagingVO" resultType="yolo.share.dto.ShareMainListVO">

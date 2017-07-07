@@ -60,7 +60,7 @@
 																			</div></td>
 																		<td><img alt="" src="/Yolo/images_yolo/lot/${a.priimg_name}"
 																				width="150px;" height="100px;"></td>
-																		<td>${a.pri_title} ,${a.bl_id }</td>
+																		<td>${a.pri_title}</td>
 																		<td>${a.pri_addr}</td>
 																		<td>${a.bl_date}</td>
 																	</tr>

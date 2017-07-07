@@ -129,7 +129,6 @@ public class ShareController {
 	@RequestMapping("ShareInputOk.share")
 	public ModelAndView shareInputOk(ShareVO vo, SharePagingVO pvo, HttpSession session){
 		vo.setU_id((String)session.getAttribute("u_id"));
-		
 		int result = service.shareInput(vo);
 		String message = "입력실패";
 		if(result > 0){

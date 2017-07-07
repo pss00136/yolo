@@ -37,11 +37,11 @@ public class ShareVO {
 	private String sl_regdate; /* 등록일 */
 	private int sl_hits; /* 조회수 */
 	private int sl_people; /* 제한 인원수 */
-	private int bl_id; /* 예약번호 */
+	private String bl_id; /* 예약번호 */
 	
 	/* Constructor */
 	public ShareVO(String sl_num, String u_id, String sl_title, String sl_content, String sl_time, int sl_price,
-			String sl_regdate, int sl_hits, int sl_people, int bl_id) {
+			String sl_regdate, int sl_hits, int sl_people, String bl_id) {
 		super();
 		this.sl_num = sl_num;
 		this.u_id = u_id;
@@ -54,16 +54,11 @@ public class ShareVO {
 		this.sl_people = sl_people;
 		this.bl_id = bl_id;
 	}
-
+		
 	public ShareVO() {
 		super();
 	}
 
-	
-	
-	/* Constructor end */
-	/* Setter & getter */	
-	
 	public String getSl_num() {
 		return sl_num;
 	}
@@ -136,24 +131,19 @@ public class ShareVO {
 		this.sl_people = sl_people;
 	}
 
-	public int getBl_id() {
+	public String getBl_id() {
 		return bl_id;
 	}
 
-	public void setBl_id(int bl_id) {
+	public void setBl_id(String bl_id) {
 		this.bl_id = bl_id;
 	}
+
+	/* Constructor end */
+	/* Setter & getter */	
 	
 		
-	
-	
-	
-	
-	
 	/* Setter & getter end*/	
-	
-	
-	
 	
 	
 }

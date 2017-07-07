@@ -11,10 +11,13 @@
 		    alert("글내용을 입력해주세요.");
 		    return false;
 		}
-//		if( $("input:radio[name=bl_id]:checked").length < 1){
-//			alert("예약공간을 선택해주세요");
-//			return false;
-//		}
+		if( $("input:radio[name=bl_id]:checked").length < 1){
+			alert("예약공간을 선택해주세요");
+			return false;
+		}
+
+		
+		
 //		if($("input:radio[name=b_id]").val() == "0"){
 //			alert($("input[name=b_id]:checked").val());
 //			return false;
