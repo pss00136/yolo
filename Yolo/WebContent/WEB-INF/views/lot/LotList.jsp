@@ -17,7 +17,8 @@
 %>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript">
+
+<script>
 $(function(){
 	var temp = '<%=jsonList%>' ;
 	
@@ -83,9 +84,7 @@ $(function(){
 
 		// function that adds the markers on map
 		var addMarkers = function(props, map) {
-			$.each(
-							props.props,
-							function(i, prop) {
+			$.each(props.props,function(i, prop) {
 								var latlng = new google.maps.LatLng(
 										prop.position.lat, prop.position.lng);
 								var marker = new google.maps.Marker({

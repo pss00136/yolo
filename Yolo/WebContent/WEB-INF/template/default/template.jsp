@@ -68,7 +68,7 @@
         <script src=" <c:url value='/js/jquery.touchSwipe.min.js'/> "></script>
         <script src=" <c:url value='/js/jquery.slimscroll.min.js'/> "></script>
         <script src=" <c:url value='/js/jquery.visible.js'/> "></script>
-        <script src=" <c:url value='http://maps.googleapis.com/maps/api/js?sensor=true&amp;libraries=geometry&amp;libraries=places" type="text/javascript'/> "></script>
+        <script src=" <c:url value='https://maps.googleapis.com/maps/api/js?key=AIzaSyAdr4Ul6T6VHRn7H9wlqH63xNmKWuUbMy4&callback=initMap" type="text/javascript'/> "></script>
         <script src=" <c:url value='/js/infobox.js'/>"></script>
         <script src=" <c:url value='/js/clndr.js'/> "></script>
         <script src=" <c:url value='/js/jquery.tagsinput.min.js'/> "></script>

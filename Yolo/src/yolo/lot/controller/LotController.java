@@ -156,9 +156,9 @@ public class LotController {
 		 PrivateimageVO primgVO = (PrivateimageVO)session.getAttribute("primgVO");
 		 EntrepreneurVO entrepreneurVO = (EntrepreneurVO)session.getAttribute("entrepreneurVO");
 
-
+		 
 		 //호스트번호
-		 privateVO.setH_num("h_61"); 
+		 privateVO.setH_num((String)session.getAttribute("h_num")); 
 		 service.lotinput(privateVO, primgVO, entrepreneurVO);
 		 
 		 //이미지 넘겨오나?
@@ -264,11 +264,38 @@ public class LotController {
 		   ModelAndView mv = new ModelAndView();
 		    LotListVO list = service.lotdetailview(lotlistVO);
 		    List<PostscriptVO> review = service.lotreviewlist(postVO);
+		    String jsonlot = lotjson(list);
+			mv.addObject("jsonlot", jsonlot);
 		    mv.addObject("list", list);
 		    mv.addObject("review", review);
 		    mv.setViewName("/lot/LotView.map");
 			return mv;
 		}
+	   
+	   public String lotjson(LotListVO lotVO){
+	       //최종 완성될 JSONObject 선언(전체)
+	           JSONObject jsonObject = new JSONObject();
+	           //props의 한명 정보가 들어갈 JSONObject 선언
+	           JSONObject propsInfo = new JSONObject();
+	           //위도 경도의 한명 정보
+	           JSONObject positionInfo = new JSONObject();
+	           
+	           propsInfo.put("title", lotVO.getPri_title());
+	           propsInfo.put("image", "2-1-thmb.png");
+	           propsInfo.put("type", lotVO.getPri_info());
+	           propsInfo.put("price", lotVO.getPri_charge());
+	           propsInfo.put("address", lotVO.getPri_addr());
+	           //위도 경도 추가
+	           		positionInfo.put("lat", lotVO.getPri_lat());
+	           		positionInfo.put("lng", lotVO.getPri_long());
+	           propsInfo.put("position", positionInfo);   	
+	           propsInfo.put("markerIcon", "marker-green.png");
+	           jsonObject.put("prop", propsInfo);
+	           
+	           String jsonInfo = jsonObject.toJSONString();
+	           System.out.println(jsonInfo);
+	           return jsonInfo;
+	     }
 	   
 	   /*
 		* @메소드명: lotreview
@@ -351,7 +378,6 @@ public class LotController {
 		}
 	   
 	   
-	   
 	   /*
 		* @메소드명: lotreserve
 		* @역할: 공간 예약하기 
@@ -363,10 +389,13 @@ public class LotController {
 		public ModelAndView lotreserve(LotListVO lotlistVO){
 		   ModelAndView mv = new ModelAndView();
 		   LotListVO list = service.lotreserve(lotlistVO);
+		   System.out.println(list.getPri_num());
 		    mv.addObject("list", list);
 		    mv.setViewName("/lot/LotReserve.lot");
 			return mv;
 		}
+	   
+	   
 	   
 	   /*
 		* @메소드명: lotreserveajax
@@ -411,7 +440,7 @@ public class LotController {
 		   service.lotpay(booklotVO, timetableVO);
 		   
 		   //mv.addObject(attributeValue);
-		   mv.setViewName("/lot/LotReserve.lot");
+		   mv.setViewName("redirect:/lot/LotReserve.lot?pri_num="+booklotVO.getPri_num());
 		   return mv;
 	   }
 	   
