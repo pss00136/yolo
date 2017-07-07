@@ -67,6 +67,19 @@
  	<put-attribute name="body" value='/WEB-INF/views/{1}/{2}.jsp'></put-attribute>
  </definition>
 
+  <!-- map Template -->
+ <definition name='mapviewTemplate' template="/WEB-INF/template/map/template_map_view.jsp">
+ 	<put-attribute name="header" value="/WEB-INF/template/default/header.jsp"></put-attribute>
+ 	<put-attribute name="menu" value="/WEB-INF/template/default/menu.jsp"></put-attribute>
+ 	<put-attribute name="footer" value="/WEB-INF/template/default/footer.jsp"></put-attribute>
+ 	<put-attribute name="login" value="/WEB-INF/template/default/login.jsp"></put-attribute>
+ 	<put-attribute name="join" value="/WEB-INF/template/default/join.jsp"></put-attribute>
+ </definition>
+ 
+ <definition name='/*/*.mapview' extends='mapviewTemplate'>
+ 	<put-attribute name="body" value='/WEB-INF/views/{1}/{2}.jsp'></put-attribute>
+ </definition>
+ 
 <!--  no template -->
 <definition name='noTemplate' template='/WEB-INF/template/default/noTiles.jsp'>
 	<put-attribute name="noTemplate" value=''></put-attribute>

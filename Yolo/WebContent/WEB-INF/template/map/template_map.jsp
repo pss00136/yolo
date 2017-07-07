@@ -59,7 +59,7 @@
         <script src=" <c:url value='/js/jquery.touchSwipe.min.js'/> "></script>
         <script src=" <c:url value='/js/jquery.slimscroll.min.js'/> "></script>
         <script src=" <c:url value='/js/jquery.visible.js'/> "></script>
-        <script src=" <c:url value='https://maps.googleapis.com/maps/api/js?key=AIzaSyAdr4Ul6T6VHRn7H9wlqH63xNmKWuUbMy4&callback=initMap" type="text/javascript'/> "></script>
+        <script src=" <c:url value='https://maps.googleapis.com/maps/api/js?key=AIzaSyAnz6jSoVfd1oPE40BICOZDENSC4we2s4o&callback=initMap" type="text/javascript'/> "></script>
         <script src=" <c:url value='/js/infobox.js'/>"></script>
         <script src=" <c:url value='/js/clndr.js'/> "></script>
         <script src=" <c:url value='/js/jquery.tagsinput.min.js'/> "></script>
@@ -69,7 +69,7 @@
         <script src=" <c:url value='/js/calendar.js'/> "></script>
         
         <!-- 추가  -->
-      <script src=" <c:url value='/js/home.js'/> " type="text/javascript"></script>
+<%--       <script src=" <c:url value='/js/home.js'/> " type="text/javascript"></script> --%>
       <!-- ShareInput.js by 찬종 -->
       <script  src=" <c:url value='/js_yolo/comShare/shareInput.js'/> " type="text/javascript"></script>
      	
