@@ -60,7 +60,7 @@
 																			</div></td>
 																		<td><img alt="" src="/Yolo/images_yolo/lot/${a.priimg_name}"
 																				width="150px;" height="100px;"></td>
-																		<td>${a.pri_title}</td>
+																		<td>${a.pri_title} ,${a.bl_id }</td>
 																		<td>${a.pri_addr}</td>
 																		<td>${a.bl_date}</td>
 																	</tr>
@@ -81,50 +81,23 @@
 									<div class="col-sm-9">
 										<div class="item active">
 											<hr>
-											<div class="btn-group" data-toggle="buttons">
-												<label class="btn btn-o btn-warning active "> 
-												<input type="checkbox" autocomplete="off" checked><span>09:00</span>
-												</label> 
-												<label class="btn btn-o btn-warning"> 
-												<input	type="checkbox" autocomplete="off"><span>10:00</span>
-												</label> 
-												<label class="btn btn-o btn-warning"> 
-												<input	type="checkbox" autocomplete="off"><span>11:00</span>
-												</label> 
-												<label class="btn btn-o btn-warning"> 
-												<input type="checkbox" autocomplete="off"><span>12:00</span>
-												</label> 
-												<label class="btn btn-o btn-warning"> 
-												<input type="checkbox" autocomplete="off"><span>13:00</span>
-												</label> 
-												<label class="btn btn-o btn-warning"> 
-												<input type="checkbox" autocomplete="off"><span>14:00</span>
-												</label> 
-												<label class="btn btn-o btn-warning"> 
-												<input type="checkbox" autocomplete="off"><span>15:00</span>
-												</label> 
-												<label class="btn btn-o btn-warning"> 
-												<input	type="checkbox" autocomplete="off"><span>16:00</span>
-												</label>
-											</div>
-											<div class="btn-group" data-toggle="buttons">
-												<label class="btn btn-o btn-warning"> <input
-													type="checkbox" autocomplete="off"><span>17:00</span>
-												</label> <label class="btn btn-o btn-warning"> <input
-													type="checkbox" autocomplete="off"><span>18:00</span>
-												</label> <label class="btn btn-o btn-warning"> <input
-													type="checkbox" autocomplete="off"><span>19:00</span>
-												</label> <label class="btn btn-o btn-warning"> <input
-													type="checkbox" autocomplete="off"><span>20:00</span>
-												</label> <label class="btn btn-o btn-warning"> <input
-													type="checkbox" autocomplete="off"><span>21:00</span>
-												</label> <label class="btn btn-o btn-warning"> <input
-													type="checkbox" autocomplete="off"><span>22:00</span>
-												</label> <label class="btn btn-o btn-warning"> <input
-													type="checkbox" autocomplete="off"><span>23:00</span>
-												</label> <label class="btn btn-o btn-warning"> <input
-													type="checkbox" autocomplete="off"><span>24:00</span>
-												</label>
+											<div id="alltime" class="btn-group" data-toggle="buttons">
+												<label id="time1" class="btn btn-o btn-warning"	autocomplete="off">09:00</label> 
+												<label id="time2" class="btn btn-o btn-warning" autocomplete="off">10:00</label>
+												<label id="time3" class="btn btn-o btn-warning"	autocomplete="off">11:00</label> 
+												<label id="time4" class="btn btn-o btn-warning" autocomplete="off">12:00</label>
+												<label id="time5" class="btn btn-o btn-warning"	autocomplete="off">13:00</label> 
+												<label id="time6" class="btn btn-o btn-warning" autocomplete="off">14:00</label>
+												<label id="time7" class="btn btn-o btn-warning" autocomplete="off">15:00</label> 
+												<label id="time8" class="btn btn-o btn-warning" autocomplete="off">16:00</label>
+												<label id="time9" class="btn btn-o btn-warning" autocomplete="off">17:00</label> 
+												<label id="time10"class="btn btn-o btn-warning" autocomplete="off">18:00</label>
+												<label id="time11" class="btn btn-o btn-warning"autocomplete="off">19:00</label> 
+												<label id="time12"class="btn btn-o btn-warning" autocomplete="off">20:00</label>
+												<label id="time13" class="btn btn-o btn-warning"autocomplete="off">21:00</label> 
+												<label id="time14"class="btn btn-o btn-warning" autocomplete="off">22:00</label>
+												<label id="time15" class="btn btn-o btn-warning"autocomplete="off">23:00</label> 
+												<label id="time16"class="btn btn-o btn-warning" autocomplete="off">24:00</label>
 											</div>
 											<hr>
 										</div>
@@ -132,7 +105,12 @@
 
 									</div>
 								</div>
-								
+
+								<!-- 예약날짜 -->
+								<div id="pay" class="form-group col-xs-12 col-sm-12 col-md-12">
+										<input type="hidden" id="sl_time" name="sl_time" /> 
+										<input type="hidden" id="t_time" name="t_time" />
+								</div>
 								<!-- 글 내용 입력 -->
 								<div class="form-group">
 									<label class="col-sm-2 control-label">글 내용</label>

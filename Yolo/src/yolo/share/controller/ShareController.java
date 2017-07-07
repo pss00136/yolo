@@ -138,7 +138,7 @@ public class ShareController {
 		System.out.println(message);
 		
 		
-		
+		// ShareList.jsp 보여줄 때
 		int shareTotalCount = service.shareTotalGetCount(); //총 게시물 수 구하기
 		System.out.println("위치 controller : db에 있는 sharelot 총 게시물 수"+shareTotalCount);
 		int shareCountList = 5; // 한 페이지 출력될 게시물 수
