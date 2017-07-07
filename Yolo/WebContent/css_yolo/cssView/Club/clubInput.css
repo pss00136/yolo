@@ -138,3 +138,7 @@ fieldset[disabled] .checkbox.switch input:checked+span.cs-place span.cs-handler 
     border-radius: 100px;
 }
 
+.box{
+	display: none;
+	}
+

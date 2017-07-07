@@ -158,7 +158,7 @@ public class ClubController {
 		if(c_place_v.equals("미확정") || (c_place_v.equals("확정") && clubVO.getC_place().equals("미선택") && main_address.equals("")) ){
 			clubVO.setC_place("미확정");
 			System.out.println("C_placeAdd:"+clubVO.getC_place());
-		}else if((!main_address.equals(""))){
+		}else if((clubVO.getC_place() == null && !main_address.equals(""))){
 			clubVO.setC_place(main_address +" "+ detail_address);
 			System.out.println("C_placeSUm:"+clubVO.getC_place());
 		}
