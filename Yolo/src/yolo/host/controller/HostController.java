@@ -1,5 +1,7 @@
 package yolo.host.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,9 +35,9 @@ public class HostController {
 	* @return  String:반환하는 경로
 	*/
    @RequestMapping("/HostMain.host")	
-   public String hostmain(){
-	  	   
-	   
+   public String hostmain(HostinfoVO hvo, HttpSession session){
+	  	//hostmain 들어오자마자 h_num 세션설정
+	   session.setAttribute("h_num", hvo.getH_num() );   
 	    return "/host/HostMain.host";
 	   		
    }
@@ -62,7 +64,8 @@ public class HostController {
   	* @return  String:반환하는 경로
   	*/
    @RequestMapping("/HostInput_Ok.host")	
-   public String hostinputok(HostinfoVO hostinfoVO){  
+   public String hostinputok(HostinfoVO hostinfoVO, HttpSession session ){  
+	   hostinfoVO.setU_id((String)session.getAttribute("u_id"));
 	   service.hostinputok(hostinfoVO);
 	   return "/host/HostMain.host";  		
    }
