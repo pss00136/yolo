@@ -37,7 +37,7 @@ WHERE s.bl_id = b.bl_id AND b.pri_num = p.pri_num AND p.pri_num = i.pri_num
 
 
 <select id="shareInputList" parameterType="string" resultType="shareinputlist">
-SELECT i.priimg_num priimg_num, i.priimg_path priimg_path, i.priimg_name priimg_name, p.pri_num pri_num, p.pri_title pri_title, p.pri_addr pri_addr, b.bl_id bl_id, b.u_id u_id, b.bl_date b_date
+SELECT i.priimg_num priimg_num, i.priimg_path priimg_path, i.priimg_name priimg_name, p.pri_num pri_num, p.pri_title pri_title, p.pri_addr pri_addr, b.bl_id bl_id, b.u_id u_id, b.bl_date bl_date
 FROM privatelot P , booklot b, privateimage i
 WHERE b.U_ID = #{uid} and  p.pri_num = b.pri_num and i.PRI_NUM = p.pri_num
 </select>

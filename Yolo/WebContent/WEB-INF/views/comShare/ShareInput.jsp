@@ -62,7 +62,7 @@
 																				width="150px;" height="100px;"></td>
 																		<td>${a.pri_title}</td>
 																		<td>${a.pri_addr}</td>
-																		<td>${a.b_date}</td>
+																		<td>${a.bl_date}</td>
 																	</tr>
 																</c:forEach>
 															</c:otherwise>
