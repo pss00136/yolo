@@ -9,6 +9,8 @@ import org.springframework.stereotype.Repository;
 
 import yolo.host.dto.HostinfoVO;
 import yolo.lot.dto.LotListVO;
+import yolo.lot.dto.PrivateimageVO;
+import yolo.lot.dto.PrivatelotVO;
 
 /*
 * @클래스명: HostDAO
@@ -63,4 +65,31 @@ public class HostDAO {
 		return list;
 	}
 
+	public HostinfoVO hostselect(HostinfoVO hvo){
+		HostinfoVO hostvo = session.selectOne("host.hostselect", hvo);
+		return hostvo;
+	}
+	
+	
+	public int lotdelete(LotListVO lotlistVO){
+		int result = 0;
+		try{
+			result = session.delete("host.lotdelete", lotlistVO);
+			//result = session.delete("lot.lotimgdelete", primgVO);
+			
+		}catch(Exception ex){
+			System.out.println("lotdelete 실패 : " + ex.getMessage());
+		}
+		return result;
+	}
+	
+	public LotListVO modifyfirst(LotListVO lotlistVO){
+		LotListVO list = null;
+		try{
+			list = session.selectOne("host.modifyfirst", lotlistVO);
+		}catch(Exception ex){
+			System.out.println("modifyfirst 실패: " + ex.getMessage());
+		}
+		return list;
+	}
 }

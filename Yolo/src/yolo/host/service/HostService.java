@@ -4,6 +4,8 @@ import java.util.List;
 
 import yolo.host.dto.HostinfoVO;
 import yolo.lot.dto.LotListVO;
+import yolo.lot.dto.PrivateimageVO;
+import yolo.lot.dto.PrivatelotVO;
 
 /*
 * @인터페이스명: HostService
@@ -33,4 +35,31 @@ public interface HostService {
 	* @return  
 	*/
 	public List<LotListVO> hostmylotlist(String h_num);
+	
+	/*
+	* @메소드명: hostselect
+	* @역할: HostController에서 전달받은 값을 DAO로 전달, 결과값 리턴
+	*
+	* @param   HostVO:HostController에서 전달받은 값
+	* @return  
+	*/
+	public HostinfoVO hostselect(HostinfoVO hvo);
+	
+	/*
+	* @메소드명: lotdelete
+	* @역할: HostController에서 전달받은 값을 DAO로 전달, 결과값 리턴
+	*
+	* @param   HostVO:HostController에서 전달받은 값
+	* @return  
+	*/
+	public int lotdelete(LotListVO lotlistVO);
+	
+	/*
+	* @메소드 명: modifyfirst
+	* @역할: HostController에서 전달받은 값을 DAO로 전달, 결과값 리턴
+	*
+	* @param   LotListVO 에서 전달받은 값
+	* @return  
+	*/
+	public LotListVO modifyfirst(LotListVO lotlistVO);
 }

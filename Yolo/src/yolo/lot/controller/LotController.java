@@ -180,7 +180,7 @@ public class LotController {
 		 
 		 //이미지 넘겨오나?
 		 sessStatus.setComplete(); 
-			return "/host/HostMyLot.host";
+			return "redirect:/host/HostMyLot.host";
 		}
 	    
 	    /*

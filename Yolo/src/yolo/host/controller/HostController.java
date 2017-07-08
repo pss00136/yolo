@@ -12,6 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 import yolo.host.dto.HostinfoVO;
 import yolo.host.service.HostService;
 import yolo.lot.dto.LotListVO;
+import yolo.lot.dto.PrivateimageVO;
 
 /*
 * @클래스명: HostController
@@ -38,9 +39,16 @@ public class HostController {
 	* @return  String:반환하는 경로
 	*/
    @RequestMapping("/HostMain.host")	
-   public String hostmain(){
-	    
-	    return "/host/HostMain.host";
+   public ModelAndView hostmain(HostinfoVO hvo, HttpSession session){
+	    ModelAndView mv = new ModelAndView();
+	    String u_id = (String)session.getAttribute("u_id");
+		hvo.setU_id(u_id);
+	    HostinfoVO hostvo = service.hostselect(hvo);
+	    System.out.println(hostvo.getH_num() );
+	    session.setAttribute("h_num", hostvo.getH_num() );
+	    mv.setViewName("/host/HostMain.host");
+	   
+	    return mv;
 	   		
    }
    
@@ -86,8 +94,9 @@ public class HostController {
 	   String h_num = (String)session.getAttribute("h_num");
 	   System.out.println("hhhh"+ h_num);
 	   List<LotListVO> list = service.hostmylotlist(h_num);
-
+	 
 	   mv.addObject("list", list);
+	   mv.addObject("dlist", list);
 	   mv.setViewName("/host/HostMyLot.host");
 	   return mv;
    }
@@ -96,6 +105,37 @@ public class HostController {
    public String hostbook(){
 	   return "/host/HostBook.host";
    }
+   
+   /*
+	* @메소드명: lotdelete
+	* @역할: 호스트 내공간보기에서 공간 삭제
+	*
+	* @param   LotListVO: jsp form에서 가져온 값
+	* @return  String:반환하는 경로
+	*/ 
+  @RequestMapping("/LotDelete.host")
+  public ModelAndView lotdelete(LotListVO lotlistVO){
+	   ModelAndView mv = new ModelAndView();
+	   service.lotdelete(lotlistVO);  
+	   mv.setViewName("redirect:/host/HostMyLot.host");
+	   return mv;
+  }
+  
+  /*
+	* @메소드명: modifyfirst
+	* @역할:   공간 수정 버튼 클릭 -> 첫번째 페이지로 전환
+	*
+	* @param   LotListVO: jsp form에서 가져온 값
+	* @return  String:반환하는 경로
+	*/ 
+@RequestMapping("/LotModify.host")
+public ModelAndView modifyfirst(LotListVO lotlistVO){
+	   ModelAndView mv = new ModelAndView();
+	   LotListVO list = service.modifyfirst(lotlistVO);
+	   mv.addObject("list", list);
+	   mv.setViewName("/host/ModifyFirst.host");
+	   return mv;
+}
    
   
 }
