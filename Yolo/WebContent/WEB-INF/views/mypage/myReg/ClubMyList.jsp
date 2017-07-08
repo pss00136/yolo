@@ -47,7 +47,7 @@
 						</a>
 						<div class="btn-group btn-group-justified">
 							<div class="btn-group">
-								<button type="button" class="btn btn-o btn-blue">수정</button>
+								<a href="/Yolo/club/ClubEdit.club" type="button" class="btn btn-o btn-blue">수정</a>
 							</div>
 
 							<div class="btn-group">

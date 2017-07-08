@@ -235,7 +235,8 @@
 								<textarea class="form-control" rows="4"></textarea>
 							</div>
 						</div>
-					
+						<!-- 수정 취소버튼 추가 -->
+				
 				</div><!-- 세미나/강연 정보 입력 끝 -->
 				</form>
 			</div>

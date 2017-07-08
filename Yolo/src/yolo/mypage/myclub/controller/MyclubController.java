@@ -59,4 +59,16 @@ public class MyclubController {
 		mv.setViewName("/mypage/myReg/C_Detail");
 		return mv;
 	}
+	
+	/*
+	 * @메소드명: clubEdit
+	 * @역활 : clubEdit페이지 이동
+	 * @param 없음
+	 * @return	String:반환하는 경로
+	 */
+	@RequestMapping("/ClubEdit.club")
+	public String clubEdit(){
+		
+		return "/club/ClubEdit";
+	}
 }

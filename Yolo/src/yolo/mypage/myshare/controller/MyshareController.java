@@ -61,5 +61,16 @@ public class MyshareController {
 		mv.setViewName("/mypage/myReg/S_Detail");
 		return mv;
 	}
-	
+
+	/*
+	 * @메소드명: shareEdit
+	 * @역활 : ShareEdit페이지 이동
+	 * @param 없음
+	 * @return	String:반환하는 경로
+	 */
+	@RequestMapping("/ShareEdit.share")
+	public String shareEdit(){
+		
+		return "/comshare/ShareEdit";
+	}
 }
