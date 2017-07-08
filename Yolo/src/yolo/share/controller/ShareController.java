@@ -285,6 +285,18 @@ public class ShareController {
 	}
 	
 	/*
+	 * @메소드명: shareEdit
+	 * @역활 : url 따라서 페이지 전환
+	 * @param 없음
+	 * @return	String:반환하는 경로
+	 */
+	@RequestMapping("/ShareEdit.share")
+	public String shareEdit(){
+		
+		return "/comShare/ShareEdit";
+	}
+	
+	/*
 	 * @메소드명: shareView
 	 * @역활 : url 따라서 페이지 전환
 	 * @param 없음
@@ -295,4 +307,6 @@ public class ShareController {
 		System.out.println(url+"path 페이지 이동중");
 		return "/comShare/"+url;
 	}
+	
+
 }

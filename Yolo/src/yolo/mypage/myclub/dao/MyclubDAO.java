@@ -37,7 +37,7 @@ public class MyclubDAO {
 	
 	/*
 	* @메소드명: cdetail
-	* @역할:  DB에서 모든 clubList를 검색
+	* @역할:  mypage의 조건검색된 clublist의 상세페이지 이동
 	* @param   
 	* @return  List<ClubListVO>: DB select쿼리문 결과값
 	*/

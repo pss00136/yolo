@@ -15,7 +15,6 @@ import yolo.share.dto.ShareMainListVO;
 
 /*
  * @클래스명: MyshareController
- * 
  * @version 	1.0 17/07/05
  * @author		김명희
  * @see			yolo.mypage.myshare.controller

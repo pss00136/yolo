@@ -14,8 +14,7 @@ import yolo.mypage.myclub.service.MyclubService;
 
 /*
  * @클래스명: MyclubController
- * 
- * @version 	1.0 17/07/06
+ * @version 	1.0 17/07/05
  * @author		김명희
  * @see			yolo.mypage.myclub.controller
  * @since		JDK1.8

@@ -46,10 +46,10 @@
 								</a>
 								<div class="btn-group btn-group-justified">
 									<div class="btn-group">
-										<button type="button" class="btn btn-o btn-blue col-md-6">수정</button>
+										<a href="/Yolo/comShare/ShareEdit.share" type="button" class="btn btn-o btn-blue col-md-6">수정</a>
 									</div>
 									<div class="btn-group">
-										<button type="button" class="btn btn-o btn-red col-md-6">삭제</button>
+										<a type="button" class="btn btn-o btn-red col-md-6">삭제</a>
 									</div>
 								</div>
 							</div>

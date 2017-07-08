@@ -11,7 +11,7 @@ import yolo.share.dto.ShareMainListVO;
 /*
  * @클래스명: MyshareDAO
  * 
- * @version		1.0 17/07/05
+ * @version		1.0 17/07/06
  * @author		김명희
  * @see			yolo.mypage.myshare.dao
  * @since		JDK1.8
@@ -34,7 +34,12 @@ public class MyshareDAO {
 		return list;
 	}
 
-	
+	/*
+	* @메소드명: sdetail
+	* @역할:  mypage의 조건검색된 sharelist의 상세페이지 이동
+	* @param   
+	* @return  List<ShareMainListVO>: DB select쿼리문 결과값
+	*/
 	public ShareMainListVO sdetail(ShareMainListVO sharemainlistVO){
 		ShareMainListVO sdetail = null;
 		try {
