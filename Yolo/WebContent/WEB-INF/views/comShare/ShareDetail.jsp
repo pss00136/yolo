@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 
 <!-- 추가 CSS -->
 <link href="/Yolo/css_yolo/cssView/comShare/ShareDetail.css" rel="stylesheet">
@@ -24,6 +25,12 @@
 				<!-- 공간 쉐어링 제목부분 끝 -->
 
 				<!-- 글 메인 -->
+				<c:choose>
+					<c:when test = "${fn:length(list) eq 0  }">
+						<h1 class="tab center bounds padding active">검색된 쉐어링이 없습니다.</h1>
+					</c:when>
+					<c:otherwise>
+						<c:forEach items="${list }" var="list">
 				<div class="post-content">
 					<!-- 상단 부분 -->
 					<div class="row">
@@ -36,7 +43,7 @@
 						</div>
 						<!-- 등록 이미지 삽입 끝 -->
 						<!-- 내용 -->
-						<h3>스터디룸 쉐어해요!</h3>
+						<h3>${list.sl_title }</h3>
 						<div class="form-group col-md-6">
 							<div class="profile-card">
 								<div class="pc-avatar">
@@ -102,6 +109,10 @@
 					</div>
 				</div>
 				<!-- 글 메인 끝-->
+						
+						</c:forEach>
+					</c:otherwise>
+				</c:choose>
 			</div>
 			<!-- 글 전체 끝 -->
 		</div>
