@@ -31,7 +31,7 @@
 						<div class="col-md-6">
 							<div id="image_div"
 								class="image-block col-md-12 col-xs-12 col-sm-12">
-								<img src="/Yolo/images_yolo/lot/1.PNG" alt="blog image">
+								<img src="/Yolo/upload/lot/${list.priimg_name }" alt="blog image">
 							</div>
 						</div>
 						<!-- 등록 이미지 삽입 끝 -->
@@ -40,7 +40,7 @@
 						<div class="form-group col-md-6">
 							<div class="profile-card">
 								<div class="pc-avatar">
-									<img src="/Yolo/images/avatar-1.png" alt="avatar">
+									<img src="/Yolo/upload/user/${list.u_iname }" alt="avatar">
 								</div>
 								<div class="pc-name">LeeYJ</div>
 
