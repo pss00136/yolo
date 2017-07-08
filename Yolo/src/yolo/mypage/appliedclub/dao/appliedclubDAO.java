@@ -42,6 +42,7 @@ public class appliedclubDAO {
 	public int signclubinput(appliedclubVO appclubVO){
 		
 		int result = session.insert("appliedclub.appclubinput", appclubVO);
+		result += session.update("appliedclub.clubentryUp", appclubVO);
 		
 		return result;
 	}

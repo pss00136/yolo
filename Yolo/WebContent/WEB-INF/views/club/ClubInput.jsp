@@ -270,17 +270,17 @@
 																</tr>
 								                             </c:when>
 								                             <c:otherwise>
-										                             <tr>
-								                              			<td><div class="radio custom-radio">
-																		<label class="active"><input type="radio" name="c_place" value="미선택"><span
-																			class="fa fa-circle"></span></label>
-																			</div></td>
-																		<td></td>
-																		<td></td>
-																		<td>미선택</td>
-																		<td></td>
-																		<td></td>
-								                              		</tr>
+<!-- 										                             <tr> -->
+<!-- 								                              			<td><div class="radio custom-radio"> -->
+<!-- 																		<label class="active"><input type="radio" name="c_place" value="미선택"><span -->
+<!-- 																			class="fa fa-circle"></span></label> -->
+<!-- 																			</div></td> -->
+<!-- 																		<td></td> -->
+<!-- 																		<td></td> -->
+<!-- 																		<td>미선택</td> -->
+<!-- 																		<td></td> -->
+<!-- 																		<td></td> -->
+<!-- 								                              		</tr> -->
 						                            	 		<c:forEach items="${list}" var="a">
 								                              		<tr>
 																		<td><div class="radio custom-radio">
@@ -503,16 +503,6 @@
 // 		 }
 // 		}
 		
-// 		function Reveal(it, box) { 
-// 			var vis = (box.checked) ? "block" : "none"; 
-// 			document.getElementById(it).style.display = vis;
-// 		} 
-
-// 		function Hide(it, box) { 
-// 			var vis = (box.checked) ? "none" : "none"; 
-// 			document.getElementById(it).style.display = vis;
-// 		} 
-		
 		function oneCheckbox(a){
 	        var obj = document.getElementsByName("c_type");
 	        for(var i=0; i<obj.length; i++){
@@ -525,7 +515,7 @@
 		$(document).ready(function(){
 		    $(".radio_p").click(function(){
 		        var inputValue = $(this).attr("value");
-		        alert($(this).val());
+// 		        alert($(this).val());
 		        var targetBox = $("." + inputValue);
 		        $(".box").not(targetBox).hide();
 		        $(targetBox).show();

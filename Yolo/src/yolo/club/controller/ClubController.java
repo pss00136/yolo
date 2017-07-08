@@ -147,7 +147,7 @@ public class ClubController {
 	@RequestMapping("/ClubInputOk.club")
 	public String clubInputOk(ClubVO clubVO, String c_dateFrom, String c_timeFrom, 
 			String c_dateTo, String c_timeTo, String c_recruitFrom, String c_recruitTo, 
-			String c_place_v, String b_place, String main_address, String detail_address, 
+			String c_place_v, String c_place_c, String main_address, String detail_address, 
 			ClubImageVO cimgVO, HttpSession session){
 		clubVO.setU_id((String)session.getAttribute("u_id"));
 		System.out.println("u_id:"+clubVO.getU_id());
@@ -155,10 +155,18 @@ public class ClubController {
 		System.out.println("C_place1:"+ clubVO.getC_place());
 		clubVO.setC_date(c_dateFrom + "/" + c_timeFrom + "~" + c_dateTo + "/" + c_timeTo);
 		clubVO.setC_recruit(c_recruitFrom + "~" + c_recruitTo);
-		if(c_place_v.equals("미확정") || (c_place_v.equals("확정") && clubVO.getC_place().equals("미선택") && main_address.equals("")) ){
+//		if(c_place_v.equals("미확정") || (c_place_v.equals("확정") && clubVO.getC_place().equals("미선택") && main_address.equals("")) ){
+//			clubVO.setC_place("미확정");
+//			System.out.println("C_placeAdd:"+clubVO.getC_place());
+//		}else if((clubVO.getC_place() == null && !main_address.equals(""))){
+//			clubVO.setC_place(main_address +" "+ detail_address);
+//			System.out.println("C_placeSUm:"+clubVO.getC_place());
+//		}
+		
+		if(c_place_v.equals("미확정")){
 			clubVO.setC_place("미확정");
 			System.out.println("C_placeAdd:"+clubVO.getC_place());
-		}else if((clubVO.getC_place() == null && !main_address.equals(""))){
+		}else if(c_place_v.equals("확정") && c_place_c.equals("etc")){
 			clubVO.setC_place(main_address +" "+ detail_address);
 			System.out.println("C_placeSUm:"+clubVO.getC_place());
 		}

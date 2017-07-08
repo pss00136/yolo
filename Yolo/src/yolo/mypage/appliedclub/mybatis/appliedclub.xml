@@ -8,8 +8,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <insert id="appclubinput" parameterType="yolo.mypage.appliedclub.dto.appliedclubVO">
 	INSERT INTO SIGNCLUB
 	VALUES( concat('sc_', SIGNCLUB_NO_SEQ.nextval), #{c_num}, #{u_id}, sysdate)
-
 </insert>
+<!-- Club Entry Number + sql -->
+<update id="clubentryUp" parameterType="yolo.mypage.appliedclub.dto.appliedclubVO">
+	UPDATE CLUB SET C_ENTRY = C_ENTRY +'1' WHERE c_num = #{c_num}
+</update>
+
 
 <!-- appliedClub List 출력 sql -->
 <select id="appclublist" parameterType="hashmap" resultType="yolo.mypage.appliedclub.dto.SignclubVO">
