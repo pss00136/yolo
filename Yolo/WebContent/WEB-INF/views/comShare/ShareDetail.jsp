@@ -42,7 +42,7 @@
 								<div class="pc-avatar">
 									<img src="/Yolo/upload/user/${list.u_iname }" alt="avatar">
 								</div>
-								<div class="pc-name">LeeYJ</div>
+								<div class="pc-name">${list.u_id }</div>
 
 								<a></a>
 								<div class="mainFunction summaryItem">
@@ -70,32 +70,26 @@
 								<div class="form-group">
 									<label class="col-sm-2 control-label">공간명</label>
 									<div class="col-sm-10">
-										<a>XX 스터디룸</a>
+										<a>${list.pri_title }</a>
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="col-sm-2 control-label">공간주소</label>
 									<div class="col-sm-10">
-										<a>서울특별시 금천구 oo로 1-1</a>
+										<a>${list.pri_addr }</a>
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="col-sm-2 control-label">쉐어링 일시</label>
 									<div class="col-sm-10">
-										<a>2017-07-12 / 3pm ~ 9pm</a>
+										<a>${list.bl_date }</a>
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="col-sm-2 control-label">상세내용</label>
 									<div class="col-sm-10">
-										<a>아아아아아아아아아아아아아아아아아아아아아</a><br/>
-										<a>아아아아아아아아아아아아아아아아아아아아아</a><br/>
-										<a>아아아아아아아아아아아아아아아아아아아아아</a><br/>
-										<a>아아아아아아아아아아아아아아아아아아아아아</a><br/>
-										<a>아아아아아아아아아아아아아아아아아아아아아</a><br/>
-										<a>아아아아아아아아아아아아아아아아아아아아아</a><br/>
-										<a>아아아아아아아아아아아아아아아아아아아아아</a><br/>
-										<a>아아아아아아아아아아아아아아아아아아아아아</a><br/>
+										<a>${list.sl_content }</a><br/>
+										
 									</div>
 								</div>
 							</form>

@@ -277,24 +277,14 @@ public class ShareController {
 	@RequestMapping("/ShareDetail.share")
 	public ModelAndView shareDetail(ShareVO vo){
 		List<ShareMainListVO> list = service.shareDetail(vo);
-		System.out.println("위치: controller: list의크기:"+list.size());
+		System.out.println("list 목록"+list);
+		System.out.println("/sharedetail ,위치: controller: list의크기:"+list.size());
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("list", list);
 		mv.setViewName("/comShare/ShareDetail/modal_share.modal");
 		return mv;
 	}
-	
-	/*
-	 * @메소드명: shareEdit
-	 * @역활 : url 따라서 페이지 전환
-	 * @param 없음
-	 * @return	String:반환하는 경로
-	 */
-	@RequestMapping("/ShareEdit.share")
-	public String shareEdit(){
-		
-		return "/comShare/ShareEdit";
-	}
+
 	
 	/*
 	 * @메소드명: shareView
