@@ -54,6 +54,11 @@
  	<put-attribute name="modal" value="/WEB-INF/template/modal/{3}.jsp"></put-attribute>
  </definition>
  
+  <definition name='/*/*/*/*.modal' extends='modalTemplate'>
+ 	<put-attribute name="body" value="/WEB-INF/views/{1}/{2}/{3}.jsp"></put-attribute>
+ 	<put-attribute name="modal" value="/WEB-INF/template/modal/{4}.jsp"></put-attribute>
+ </definition>
+ 
   <!-- map Template -->
  <definition name='mapTemplate' template="/WEB-INF/template/map/template_map.jsp">
  	<put-attribute name="header" value="/WEB-INF/template/default/header.jsp"></put-attribute>
