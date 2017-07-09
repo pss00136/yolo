@@ -129,45 +129,67 @@ p{
 										</div>
 									</div>
 								</div>
-								<!-- 시간 선택 -->
-								<div id="propWidget-3" class="carousel slide propWidget-3"
-									data-ride="carousel">
-									<div class="carousel-inner">
-										<div class="item active">
-											<hr>
-											<div class="btn-group" id="alltime" data-toggle="buttons">
-												<c:forEach var='sharetime' begin='1' end='16' step='1'>
-													<label id="time${sharetime}" class="btn btn-o btn-warning"
-														for="${sharetime}" autocomplete="off">${sharetime+8}:00</label>
+											<!-- 시간 선택 -->
+											<div class="form-group">
+												<label class="col-sm-2 control-label time">공간사용시간</label>
+												<div class="col-sm-9">
+													<div class="item active">
+														<div id="propWidget-3" class="carousel slide propWidget-3"
+															data-ride="carousel">
+															<div class="carousel-inner">
+																<div class="item active">
+																	<hr>
+																	<div class="btn-group" id="alltime"
+																		data-toggle="buttons">
+																		<c:forTokens var="time" items="${a.sl_time }"
+																			varStatus="status" delims="/">
+																			<c:choose>
+																				<c:when test="${time == 0 }">
+																					<label id="time${status.count }"
+																						class="btn btn-o btn-warning" autocomplete="off">${status.count +8}:00</label>
+																				</c:when>
+																				<c:otherwise>
+																					<label id="time${status.count }"
+																						class="btn btn-o btn-warning active"
+																						autocomplete="off">${status.count +8}:00</label>
+																				</c:otherwise>
+																			</c:choose>
+																		</c:forTokens>
+																	</div>
+																	<hr>
+																</div>
 
-												</c:forEach>
-
+															</div>
+														</div>
+													</div>
+												</div>
 											</div>
-											<hr>
-										</div>
-
-									</div>
-								</div>
+											<!-- 시간보기 끝 -->
 								<!-- 글 내용 입력 -->
 								<div class="form-group">
 									<label class="col-sm-2 control-label">글 내용</label>
 									<div class="col-sm-9">
-										<textarea class="form-control" rows="15"></textarea>
+										<textarea class="form-control" rows="15">${a.sl_content}</textarea>
 									</div>
+								</div>
+								<!-- 예약날짜 -->
+								<div id="pay" class="form-group col-xs-12 col-sm-12 col-md-12">
+										<input type="hidden" id="sl_time" name="sl_time" /> 
+										<input type="hidden" id="t_time" name="t_time" />
+								</div>
+								<!-- 쉐어링 등록하기 버튼 -->
+								<div  class="col-md-12">
+									<div class="col-md-3"></div>
+									<button id="share_check_ok" class="col-md-2 btn btn-round btn-o btn-green">수정</button>
+									<div class="col-md-3"></div>
+									<a href= "ShareDetail.share?sl_num=${a.sl_num }" class="col-md-2 btn btn-round btn-o btn-green">취소</a>
+									<div class="col-md-3"></div>
 								</div>
 											
 										</c:forEach>
 									</c:otherwise>
-									
 								</c:choose>
-								<!-- 쉐어링 등록하기 버튼 -->
-								<div id="nextbtn" class="col-md-12">
-									<div class="col-md-3"></div>
-									<button class="col-md-2 btn btn-round btn-o btn-green">수정</button>
-									<div class="col-md-3"></div>
-									<button class="col-md-2 btn btn-round btn-o btn-green">취소</button>
-									<div class="col-md-3"></div>
-								</div>
+								
 
 							</form>
 						</div>
