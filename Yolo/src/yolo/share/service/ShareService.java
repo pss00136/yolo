@@ -27,4 +27,6 @@ public interface ShareService {
 
 	public List<ShareMainListVO> shareDetail(ShareVO vo);
 
+	public List<ShareMainListVO> shareEdit(ShareVO vo);
+
 }

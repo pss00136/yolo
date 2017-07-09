@@ -29,16 +29,9 @@ import yolo.share.service.ShareService;
 @RequestMapping("comShare")
 public class ShareController {
 	/* 멤버필드 */
-
-	
-	
-	
 	@Autowired
 	ShareService service;
-	
-	
-	
-	
+
 	/*
 	 * @메소드명: shareInput
 	 * @역활 : 쉐어링 Input 페이지 보여주기
@@ -56,7 +49,21 @@ public class ShareController {
 		System.out.println("controller"+list.size());
 		return mv;
 	}
-	
+	/*
+	 * @메소드명: shareEdit
+	 * @역활 : 쉐어링 Edit 페이지 보여주기
+	 * @param shareVO vo(sl_num) 
+	 * @return ModelAndView로 반환
+	 */
+	@RequestMapping("ShareEdit.share")
+	public ModelAndView shareEdit(ShareVO vo){
+		List<ShareMainListVO> list = service.shareEdit(vo);
+		System.out.println("shareEdit controller list크기"+list.size());
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("list", list);
+		mv.setViewName("/comShare/ShareEdit");
+		return mv;
+	}
 	/*
 	 * @메소드명: shareList
 	 * @역활 : 쉐어링 List 페이지 보여주기

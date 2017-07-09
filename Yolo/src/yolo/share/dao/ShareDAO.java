@@ -80,4 +80,16 @@ public class ShareDAO {
 		}
 		return list;
 	}
+
+	public List<ShareMainListVO> shareEdit(ShareVO vo) {
+		List<ShareMainListVO> list = null;
+		try {
+			
+			list = session.selectList("share.shareEdit", vo);
+			
+		} catch (Exception e) {
+			System.out.println("회원이 쉐어링 등록한 페이지 보기(shareEdit) 에러:" + e.getMessage());
+		}
+		return list;
+	}
 }

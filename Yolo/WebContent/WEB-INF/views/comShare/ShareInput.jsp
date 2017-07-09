@@ -107,10 +107,7 @@ p{
 																<c:when test="${fn:length(list) eq 0 }">
 																	<tr>
 																		<td>예약된 공간이 없습니다.</td>
-																	</tr>
-																	<tr>
-																	<button class="col-md-2 btn btn-round btn-o btn-green">공간 찾아보기</button>
-																	</tr>															
+																	</tr>											
 																</c:when>
 															<c:otherwise>
 																<c:forEach items="${list}" var="a">
@@ -142,12 +139,12 @@ p{
 									<div class="col-sm-9">
 										<div class="item active">
 											<hr>
-											<!-- 시간보기 -->
+											<!-- 시간선택 -->
 											<div id="propWidget-3" class="carousel slide propWidget-3"
 												data-ride="carousel">
 												<div class="carousel-inner">
 													<div class="item active">
-
+														<hr>
 														<div class="btn-group" id="alltime" data-toggle="buttons">
 															<c:forEach var='sharetime' begin = '1' end ='16' step ='1'>
 																<label id="time${sharetime}" class="btn btn-o btn-warning" for="${sharetime}" autocomplete="off">${sharetime+8}:00</label>
@@ -155,6 +152,7 @@ p{
 															</c:forEach>
 															
 														</div>
+														<hr>
 													</div>
 
 												</div>

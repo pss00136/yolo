@@ -15,22 +15,39 @@
 			<!-- 글전체 -->
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
-				<!-- 공간 쉐어링 제목부분 -->
-				<div class="post-top" id="post-top">
-					<div class="post-author">
-						<h1 id="lec_title">공간 쉐어링</h1>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-				<!-- 공간 쉐어링 제목부분 끝 -->
+				
 
 				<!-- 글 메인 -->
 				<c:choose>
 					<c:when test = "${fn:length(list) eq 0  }">
+					<!-- 공간 쉐어링 제목부분 -->
+				<div class="post-top" id="post-top">
+					<div class="post-author">
+						<h1 id="lec_title">공간 쉐어링</h1>
+					</div>
+					<div class="btn">
+						<a data-toggle="modal" href="ShareEdit.share"
+							class="btn btn-lg btn-round btn-green contactBtn">수정하기</a>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<!-- 공간 쉐어링 제목부분 끝 -->
 						<h1 class="tab center bounds padding active">검색된 쉐어링이 없습니다.</h1>
 					</c:when>
 					<c:otherwise>
 						<c:forEach items="${list }" var="list">
+						<!-- 공간 쉐어링 제목부분 -->
+				<div class="post-top" id="post-top">
+					<div class="post-author">
+						<h1 id="lec_title">공간 쉐어링</h1>
+					</div>
+					<div class="btn">
+						<a data-toggle="modal" href="ShareEdit.share?sl_num=${list.sl_num }"
+							class="btn btn-lg btn-round btn-green contactBtn">수정하기</a>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<!-- 공간 쉐어링 제목부분 끝 -->
 				<div class="post-content">
 					<!-- 상단 부분 -->
 					<div class="row">
