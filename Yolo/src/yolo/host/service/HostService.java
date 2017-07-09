@@ -3,9 +3,8 @@ package yolo.host.service;
 import java.util.List;
 
 import yolo.host.dto.HostinfoVO;
+import yolo.lot.dto.BooklotVO;
 import yolo.lot.dto.LotListVO;
-import yolo.lot.dto.PrivateimageVO;
-import yolo.lot.dto.PrivatelotVO;
 
 /*
 * @인터페이스명: HostService
@@ -62,4 +61,13 @@ public interface HostService {
 	* @return  
 	*/
 	public LotListVO modifyfirst(LotListVO lotlistVO);
+	
+	/*
+	* @메소드명: searchbook
+	* @역할: HostController에서 전달받은 값을 DAO로 전달, 결과값 리턴
+	*
+	* @param   LotListVO:HostController에서 전달받은 값
+	* @return   List<BooklotVO> : 결과값
+	*/
+	public List<BooklotVO> searchbook(LotListVO lotlistVO);
 }

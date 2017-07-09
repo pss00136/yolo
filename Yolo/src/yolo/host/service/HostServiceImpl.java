@@ -7,9 +7,8 @@ import org.springframework.stereotype.Service;
 
 import yolo.host.dao.HostDAO;
 import yolo.host.dto.HostinfoVO;
+import yolo.lot.dto.BooklotVO;
 import yolo.lot.dto.LotListVO;
-import yolo.lot.dto.PrivateimageVO;
-import yolo.lot.dto.PrivatelotVO;
 
 @Service 
 public class HostServiceImpl implements HostService {
@@ -51,7 +50,10 @@ public class HostServiceImpl implements HostService {
 	}
 
 
-	
+	@Override
+	public List<BooklotVO> searchbook(LotListVO lotlistVO) {
+		return hdao.searchbook(lotlistVO);
+	}
 	
 
 

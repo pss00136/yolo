@@ -68,4 +68,11 @@ DELETE FROM privatelot WHERE pri_num = #{pri_num}
 	 WHERE p.pri_num = #{pri_num}
 	</select>
 	
+<select id="booklist" resultType="yolo.lot.dto.BooklotVO" parameterType="lotlistVO">
+	select bl_id, u_id, bl_time, bl_date, bl_name, bl_tel, bl_pay
+	from booklot
+	where pri_num = #{pri_num}
+</select>
+
+	
 </mapper>

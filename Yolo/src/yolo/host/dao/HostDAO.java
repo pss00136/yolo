@@ -8,9 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import yolo.host.dto.HostinfoVO;
+import yolo.lot.dto.BooklotVO;
 import yolo.lot.dto.LotListVO;
-import yolo.lot.dto.PrivateimageVO;
-import yolo.lot.dto.PrivatelotVO;
 
 /*
 * @클래스명: HostDAO
@@ -89,6 +88,17 @@ public class HostDAO {
 			list = session.selectOne("host.modifyfirst", lotlistVO);
 		}catch(Exception ex){
 			System.out.println("modifyfirst 실패: " + ex.getMessage());
+		}
+		return list;
+	}
+	
+	public List<BooklotVO> searchbook(LotListVO lotlistVO){
+		List<BooklotVO> list = null;
+		try{
+			
+			list = session.selectList("host.booklist", lotlistVO);
+		}catch(Exception ex){
+			System.out.println("hostmylotlist 실패 : " + ex.getMessage());
 		}
 		return list;
 	}

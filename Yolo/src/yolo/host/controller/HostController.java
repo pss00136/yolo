@@ -1,18 +1,23 @@
 package yolo.host.controller;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.StringTokenizer;
 
 import javax.servlet.http.HttpSession;
 
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import yolo.host.dto.HostinfoVO;
 import yolo.host.service.HostService;
+import yolo.lot.dto.BooklotVO;
 import yolo.lot.dto.LotListVO;
-import yolo.lot.dto.PrivateimageVO;
 
 /*
 * @클래스명: HostController
@@ -102,8 +107,17 @@ public class HostController {
    }
    
    @RequestMapping("/HostBook.host")
-   public String hostbook(){
-	   return "/host/HostBook.host";
+   public ModelAndView hostbook(HttpSession session){
+	   ModelAndView mv = new ModelAndView();
+	   String h_num = (String)session.getAttribute("h_num");
+	   System.out.println(h_num);
+	   List<LotListVO> list = service.hostmylotlist("h_61");
+	   System.out.println(list.size());
+	   
+	   mv.addObject("list", list);
+	   mv.setViewName("/host/HostBook.host");
+	   //mv.addObject();
+	   return mv;
    }
    
    /*
@@ -136,6 +150,52 @@ public ModelAndView modifyfirst(LotListVO lotlistVO){
 	   mv.setViewName("/host/ModifyFirst.host");
 	   return mv;
 }
+
+
    
-  
+@RequestMapping(value="/ShowSchedule.host", produces="text/plain; charset=UTF-8")
+@ResponseBody
+public String showschedule(LotListVO lotlistVO){
+	   System.out.println("이벤트 " + lotlistVO.getPri_num());
+	   //예약 날짜와 예약시간을 봐야된다.
+	   //예약 한사람도 가지고온다.
+	   List<BooklotVO> blist = service.searchbook(lotlistVO);
+	   String json = parsejson(blist);
+	   return json;
+}
+
+public String parsejson(List<BooklotVO> list){
+        //props의 JSON정보를 담을 Array 선언
+        JSONArray propsArray = new JSONArray();
+        
+        for(BooklotVO bookVO: list){
+           //props의 한명 정보가 들어갈 JSONObject 선언
+           JSONObject propsInfo = new JSONObject();
+           
+           propsInfo.put("title", bookVO.getBl_name());
+           
+           String alltime = bookVO.getBl_time();
+           StringTokenizer st = new StringTokenizer(alltime, "/");
+           List<String> times = new ArrayList<String>();
+           String starttime = null;
+           String endtime = null;
+           for(int i = 0; st.hasMoreTokens(); i++){
+         	  times.add(st.nextToken());
+           }
+           if(times.size() > 1){
+         	  starttime = times.get(0)+":00";
+         	  endtime = times.get(times.size()-1)+":00";
+         	  propsInfo.put("start", bookVO.getBl_date()+"T"+starttime);
+         	  propsInfo.put("end", bookVO.getBl_date()+"T"+endtime);
+           }else{
+         	  starttime = alltime+":00";
+         	  propsInfo.put("start", bookVO.getBl_date()+"T"+starttime);
+           }
+            propsArray.add(propsInfo);
+        }
+        System.out.println(propsArray.toString());
+        return propsArray.toString();
+  }
+
+
 }

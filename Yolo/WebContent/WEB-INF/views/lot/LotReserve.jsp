@@ -317,11 +317,15 @@ p{
 					<!-------------  편의시설 항목들 끝--------------------->
 				</div>
 				<!--상세정보보기 끝 -->
+				
+				
 				<!-- 달력보기 -->
 				<div class="row" style="margin-bottom: 10px;">
 					<div id='calendar'></div>
 				</div>
 				<!-- 달력보기 끝 -->
+				
+				
 				</br>
 				<!-- 시간보기 -->
 				<div id="propWidget-3" class="carousel slide propWidget-3" data-ride="carousel">
