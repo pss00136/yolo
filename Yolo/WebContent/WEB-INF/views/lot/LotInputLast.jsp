@@ -288,7 +288,7 @@ if(session.getAttribute("privateVO") == null){
 			 <div class="form-group">
 							<label class="col-sm-2 control-label">연락처</label>
 							<div class="col-sm-5">
-								<input type="text" name="pri_tel" class="form-control" <%if(pri_tel==null) {%> value="<%=pri_tel%>" <%} %>>
+								<input type="text" name="pri_tel" class="form-control" <%if(pri_tel!=null) {%> value="<%=pri_tel%>" <%} %>>
 							</div>
 						</div>
 		</div>
@@ -301,7 +301,7 @@ if(session.getAttribute("privateVO") == null){
 			  <div class="form-group">
 							<label class="col-sm-2 control-label">주 소</label>
 							<div class="col-sm-5">
-								<input type="text" name="pri_web" class="form-control" <%if(pri_web==null) {%> value="<%=pri_web%>" <%} %>>
+								<input type="text" name="pri_web" class="form-control" <%if(pri_web!=null) {%> value="<%=pri_web%>" <%} %>>
 							</div>
 						</div>
 		
@@ -311,11 +311,10 @@ if(session.getAttribute("privateVO") == null){
 				<div>
 					<div style="text-align: center;">
 						<div style="display: inline-block;">
-							<a href="/Yolo/lot/LotInputSecond.lot" id="btn_before"
-								class="btn btn-o btn-green">이전으로</a>
+							<button id="btn_before" class="btn btn-o btn-green">이전으로</button>
 						</div>
 						<div style="display: inline-block;">
-							<button id="btn_register" class="btn btn-o btn-green">등록하기</button>
+							<button type="submit" id="btn_register" class="btn btn-o btn-green">등록하기</button>
 						</div>
 					</div>
 				</div>
@@ -329,7 +328,15 @@ if(session.getAttribute("privateVO") == null){
 	</form>
 </div>
 <!---------------공간등록 정보입력 끝 ------------------------>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+	$(function(){
+		$("#btn_before").click(function(){
+			$('form').attr('action','/Yolo/lot/LotInputSecond.lot')
+			$(this).submit();
+		});
+	});
+</script>
 
 <!-- 추가 js  -->
 <script src="/Yolo/js/home.js" type="text/javascript"></script>

@@ -20,7 +20,6 @@
 
 <link href="/Yolo/css_yolo/cssView/Club/clubInput.css" rel="stylesheet">
 
-</script>
 <style>
 /* CHECKBOX */
 .carousel-control.right {

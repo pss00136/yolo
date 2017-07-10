@@ -92,16 +92,20 @@ public class LotController {
 	*/	
 	 @RequestMapping("lot/LotInputSecond.lot" )
 		public String lotinputfirst(@ModelAttribute("privateVO") PrivatelotVO privateVO, PrivateimageVO primgVO, HttpSession session
-				,String lot_postcode, String lot_main_address, String lot_detail_address){	    
+				,String lot_postcode, String lot_main_address, String lot_detail_address){
 		     session.setAttribute("primgVO", primgVO);
 		    //address 합치기
-			 privateVO.setPri_addr(lot_postcode+"/"+lot_main_address +"/"+ lot_detail_address);
+			 
 			 //경도,위도
 			 Float[] coords = new Float[2];
-		      coords = geoCoding(lot_main_address);
-		      //coords[0] : 위도 , coords[1] : 경도 
-		       privateVO.setPri_lat(Float.toString(coords[0]));
-		       privateVO.setPri_long(Float.toString(coords[1]));
+			 if(lot_main_address != null){
+				 privateVO.setPri_addr(lot_postcode+"/"+lot_main_address +"/"+ lot_detail_address);
+				 coords = geoCoding(lot_main_address);
+			     //coords[0] : 위도 , coords[1] : 경도 
+			     privateVO.setPri_lat(Float.toString(coords[0]));
+			     privateVO.setPri_long(Float.toString(coords[1]));
+			 }
+		      
 			 return "/lot/LotInputSecond";
 		}
 	    
@@ -171,7 +175,7 @@ public class LotController {
 				, SessionStatus sessStatus, HttpSession session){
 		 PrivateimageVO primgVO = (PrivateimageVO)session.getAttribute("primgVO");
 		 EntrepreneurVO entrepreneurVO = (EntrepreneurVO)session.getAttribute("entrepreneurVO");
-
+		 
 		 //호스트번호
 		 privateVO.setH_num((String)session.getAttribute("h_num"));
 		 System.out.println(privateVO.getH_num());
@@ -179,7 +183,7 @@ public class LotController {
 		 service.lotinput(privateVO, primgVO, entrepreneurVO);
 		 
 		 //이미지 넘겨오나?
-		 sessStatus.setComplete(); 
+		 sessStatus.setComplete();
 			return "redirect:/host/HostMyLot.host";
 		}
 	    
@@ -362,8 +366,7 @@ public class LotController {
 		    //구,군 data값을 list받아옴
 		   
 		   List<ZipcodeVO> gugunlist = service.searchgugun(zipcodeVO);
-		    
-		    
+ 
 		    String jsonInfo = gugunjson(gugunlist);   
 		     
 		    return jsonInfo; 

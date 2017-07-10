@@ -115,7 +115,6 @@ if(session.getAttribute("privateVO") == null){
 			}
 		}
 		
-		
 		%>
 		
 		<!-- 예약 방법 등록 -->
@@ -125,20 +124,20 @@ if(session.getAttribute("privateVO") == null){
 				<label class="col-sm-2 control-label"></label>
 				<div class="col-sm-3">
 					<div class="radio custom-radio">
-						<label><input type="radio" name="pri_info" value="바로결제" <%if(pri_infos[0] == 1){ %> selected <%} %>><span
-							class="fa fa-circle"></span>바로결제</label>
+						<label><input type="radio" name="pri_info" value="바로결제" <%if(pri_infos[0] == 1){ %> selected <%} %>>
+						<span class="fa fa-circle"></span>바로결제</label>
 					</div>
 				</div>
 				<div class="col-sm-3">
 					<div class="radio custom-radio">
-						<label><input type="radio" name="pri_info" value="승인결제" <%if(pri_infos[1] == 1){ %> selected <%} %>><span
-							class="fa fa-circle"></span>승인결제</label>
+						<label><input type="radio" name="pri_info" value="승인결제" <%if(pri_infos[1] == 1){ %> selected <%} %>>
+						<span class="fa fa-circle"></span>승인결제</label>
 					</div>
 				</div>
 				<div class="col-sm-3">
 					<div class="radio custom-radio">
-						<label><input type="radio" name="pri_info" value="승인예약" <%if(pri_infos[2] == 1){ %> selected <%} %>><span
-							class="fa fa-circle"></span>승인예약</label>
+						<label><input type="radio" name="pri_info" value="승인예약" <%if(pri_infos[2] == 1){ %> selected <%} %>>
+						<span class="fa fa-circle"></span>승인예약</label>
 					</div>
 				</div>
 			</div>
@@ -333,7 +332,7 @@ if(session.getAttribute("privateVO") == null){
 				<label class="col-sm-10 control-label"></label>
 			</div>
 			<%int pri_minpeople  =privateVO.getPri_minpeople();
-				int pri_maxpeople  =privateVO.getPri_maxpeople();
+			  int pri_maxpeople  =privateVO.getPri_maxpeople();
 			%>
 			<!-- 예약 허용 -->
 			<div class="panel-heading">허용인원</div>
@@ -360,7 +359,7 @@ if(session.getAttribute("privateVO") == null){
 								class="btn btn-o btn-green">이전으로</a>
 						</div>
 						<div style="display: inline-block;">
-							<button id="btn_next" class="btn btn-o btn-green">다음으로</button>
+							<button type="submit" id="btn_next" class="btn btn-o btn-green">다음으로</button>
 						</div>
 					</div>
 				</div>
