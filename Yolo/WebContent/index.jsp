@@ -78,7 +78,7 @@
 		<div class="headerUserWraper">	
 			<!-- 메세지 알림 아이콘 -->
 			<a href="#" class="userHandler dropdown-toggle" data-toggle="dropdown"><span class="icon-user"></span>
-			<span class="counter">5</span></a> 
+			<span class="counter">1</span></a> 
 			<!-- 유저 프로필 아이콘 -->
 			<a href="#" class="headerUser dropdown-toggle" data-toggle="dropdown"> 
 				<img class="avatar headerAvatar pull-left" src="/Yolo/images/avatar-1.png" alt="John Smith">
@@ -97,12 +97,11 @@
 				<ul>
 					<li><a href="#"><span class="icon-user"></span>마이페이지</a></li>
 					<li><a href="#" class="msg_btn"><span class="icon-envelope"></span>메세지 
-					<span class="badge pull-right bg-red">5</span></a></li>
+					<span class="badge pull-right bg-red">1</span></a></li>
 					<li class="divider"></li>
 					<li><a href="/Yolo/logout/logout.main"><span class="icon-power"></span>Logout</a></li>
 				</ul>
 			</div>
-
 		</div>
 		<!-- 상단 메뉴 유저부분 끝 -->	
 		<!-- 상단 메뉴 알림부분 -->
@@ -111,7 +110,7 @@
 			<div class="headerNotifyWraper">
                 <a href="#" id="menu_msg_btn" class="headerNotify msg_btn">
                     <span class="notifyIcon icon-envelope"></span>
-                    <span class="counter">5</span>
+                    <span class="counter">1</span>
                 </a>
                 
                 <!-- 메세지 창 -->
@@ -124,10 +123,10 @@
                     <ul id="chat_list" class="notifyList">
                         <li>
                             <a href="#" class="chat_in">
-                                <img class="avatar pull-left" src="images/avatar-1.png" alt="John Smith">
+                                <img class="avatar pull-left" src="/Yolo/images/avatar-1.png" alt="John Smith">
                                 <div class="pulse border-grey"></div>
                                 <div class="notify pull-left">
-                                    <div class="notifyName">새로운 문의가 있습니다</div>
+                                    <div class="notifyName">새로운 메세지가 있습니다</div>
                                     <div class="notifyTime">5 minutes ago</div>
                                 </div>
                                 <div class="clearfix"></div>
@@ -200,8 +199,7 @@
 							<li><a href="/Yolo/mypage/myReg/ClubMyList.myreg">나의 모임</a></li>
 							<li><a href="/Yolo/mypage/myReg/ShareMyList.myreg">나의 쉐어링</a></li>				
 							<li class="align-center"><h5 style="color:#fff;">정보수정</h5></li>
-							<li><a href="/Yolo/mypage/info/MyInfoModify.myinfo">개인정보수정</a></li>
-							<li><a href="/Yolo/mypage/info/MyInfoModify.myinfo">비밀번호변경</a></li>				
+							<li><a href="/Yolo/mypage/info/MyInfoModify.myinfo">개인정보수정</a></li>			
 						</ul>
 					</li>				
 		<%}%>

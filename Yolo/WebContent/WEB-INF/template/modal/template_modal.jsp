@@ -31,16 +31,10 @@
 <link href="<c:url value='http://www.jqueryscript.net/css/jquerysctipttop.css'/>" rel="stylesheet" type="text/css">
 <link href="<c:url value='/css_yolo/cssView/comShare/datetimePicker.css'/>" rel="stylesheet">	
 	
-<link href="<c:url value='/css_yolo/cssView/common/main_style.css'/>" rel="stylesheet">	
-<style type="text/css">
-#footer_title {
-	font-size: 3em;
-}
-
-.home-footer {
-	position: relative;
-}
-</style>
+<link href="<c:url value='/css_yolo/cssView/common/main_style.css'/>" rel="stylesheet">
+<!-- 채팅CSS -->
+<link href="<c:url value='/css_yolo/cssView/common/chat_style.css'/>" rel="stylesheet">
+<link href="<c:url value='/css_yolo/cssView/Chat/bootchat.css'/>" rel="stylesheet">
 <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -102,11 +96,14 @@
 	<!-- 추가  -->
 	<script src=" <c:url value='/js/home.js'/> " type="text/javascript"></script>
 	
-<!-- share date picker JS -->
-<script src=" <c:url value='http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'/>"></script> 
-<script src=" <c:url value='/js_yolo/comShare/ios-7-date-picker.js'/>"></script>
-<script src=" <c:url value='/js_yolo/comShare/datetimePicker.js'/>"></script>
-
+	<!-- share date picker JS -->
+	<script src=" <c:url value='http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'/>"></script> 
+	<script src=" <c:url value='/js_yolo/comShare/ios-7-date-picker.js'/>"></script>
+	<script src=" <c:url value='/js_yolo/comShare/datetimePicker.js'/>"></script>
+ 	<!-- 채팅 JS -->
+ 	<script src="http://192.168.0.151:3000/socket.io/socket.io.js" type="text/javascript"></script>
+ 	<script src=" <c:url value='/js_yolo/chat/chatClient.js"'/> " type="text/javascript"></script>
+ 	<script src=" <c:url value='/js_yolo/chat/chat.js'/> " type="text/javascript"></script>
 
 </body>
 </html>

@@ -646,7 +646,7 @@ a.headerNotify {
     border-bottom: 1px solid #dfdfdf;
 }
 .notifyHeader span {
-    font-size: 13px;
+    font-size: 15px;
     line-height: 15px;
     display: block;
     float: left;
@@ -697,12 +697,12 @@ a.notifySettings {
     margin-left: 5px;
 }
 .notifyName {
-    font-size: 12px;
+    font-size: 14px;
     color: #333;
     padding-top: 3px;
 }
 .notifyTime {
-    font-size: 11px;
+    font-size: 13px;
     color: #999;
 }
 .notifyRound {

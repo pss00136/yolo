@@ -655,7 +655,7 @@ a.headerNotify {
     border-bottom: 1px solid #dfdfdf;
 }
 .notifyHeader span {
-    font-size: 13px;
+    font-size: 15px;
     line-height: 15px;
     display: block;
     float: left;
@@ -706,12 +706,12 @@ a.notifySettings {
     margin-left: 5px;
 }
 .notifyName {
-    font-size: 12px;
+    font-size: 14px;
     color: #333;
     padding-top: 3px;
 }
 .notifyTime {
-    font-size: 11px;
+    font-size: 13px;
     color: #999;
 }
 .notifyRound {
@@ -1132,12 +1132,12 @@ a.userHandler .counter {
 }
 .leftNav ul li ul li a {
     width: 100%;
-    font-size: 12px;
+    font-size: 14px;
     height: auto;
     padding: 7px 20px;
 }
 .leftNav ul li ul li a span.icon-right {
-    font-size: 11px;
+    font-size: 14px;
     font-weight: normal;
     margin-right: 0;
     position: relative;
@@ -1149,7 +1149,7 @@ a.userHandler .counter {
     color: #96adac;
     background-color: #2a2a2a;
     width: 100%;
-    font-size: 12px;
+    font-size: 14px;
     height: auto;
 }
 .no-touch .leftNav ul li ul li a:hover {
