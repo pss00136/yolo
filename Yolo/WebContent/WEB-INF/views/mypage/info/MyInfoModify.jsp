@@ -16,11 +16,13 @@
 					PROFILE</h4>
 				<div class="panel-body">
                   
-					<form class="form-horizontal" id="frm" method="get" action="/Yolo/mypage/info/ModifyFinish.myinfo">
+					<form class="form-horizontal" id="frm" method="post" enctype="multipart/form-data"  action="/Yolo/mypage/info/ModifyFinish.myinfo">
 						<div class="form-group">
-                     <label class="col-sm-2 control-label"> 프로필 </label>
-                     <div class="col-sm-2">
-                        <input type="file" name="imageUpload" id="imageUpload"
+                     	<label class="col-sm-2 control-label"> 프로필 </label>
+                     	<div class="col-sm-2">
+                        <input type="file" name="file" id="imageUpload"
+                        multiple data-show-upload="false" data-show-caption="false"
+						data-show-remove="false" accept="image/jpeg,image/png"
                            style="display: none;" /> <img src="" id="imagePreview" alt=""
                            class="ratio img-responsive img-circle"/><br />
 
@@ -37,7 +39,8 @@
 						<div class="form-group">
 							<label class="col-sm-2 control-label">아이디</label>
 							<div class="col-sm-8">
-								<input type="text" name="u_id" class="form-control" value="<%= info.getU_id() %>" >
+								<input type="text" name="u_id_t" class="form-control" value="<%= info.getU_id() %>" disabled>
+								<input type="hidden" name="u_id" class="form-control" value="<%= info.getU_id() %>">
 							</div>
 						</div>
 				
@@ -51,7 +54,7 @@
 						<div class="form-group">
 							<label class="col-sm-2 control-label">비밀번호 확인</label>
 							<div class="col-sm-8">
-								<input type="password" id="u_passconfirm" name="u_passconfirm"	class="form-control" value="" onchange="check()" >
+								<input type="password" id="u_passconfirm" class="form-control" value="" onchange="check()" >
 				                 <p id="result" style="color:red;"></p>
 							</div>
 						</div>
@@ -118,10 +121,10 @@
 						
 						<div style="text-align: center;">
 						<div style="display: inline-block;">
-							<a href="#" id="btn_modify" class="btn btn-o btn-green">수 정</a>
+							<button type="submit" class="btn btn-o btn-green">수 정</button>
 						</div>
 					</div>
-					</form>
+				</form>
 
 					
 
@@ -141,9 +144,9 @@
     	  });
     	  
     	  
-    	  $('#btn_modify').click(function(){
-    		 $('#frm').submit(); 
-    	  });
+//     	  $('#btn_modify').click(function(){
+//     		 $('#frm').submit(); 
+//     	  });
       });
     </script>
     <script type="text/javascript" src='/Yolo/js_yolo/host/hostregister.js'></script>
