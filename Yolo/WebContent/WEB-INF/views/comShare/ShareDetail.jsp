@@ -74,7 +74,7 @@
 									<div class="btn">
 										<div class="btn">
 											<a data-toggle="modal" href=""
-												class="btn btn-lg btn-round btn-green contactBtn">문의하기</a>
+												class="btn btn-lg btn-round btn-green contactBtn chat_in">문의하기</a>
 										</div>
 										<div class="btn">
 											<a data-toggle="modal" href="#contactAgent"

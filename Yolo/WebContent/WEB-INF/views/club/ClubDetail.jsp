@@ -86,7 +86,7 @@
 	                                </div>
 	                                <div class="mainFunction summaryItem">
 	                                     <div class="clearfix"></div>
-	                                    <a data-toggle="modal" href="#contactAgent" class="btn btn-lg btn-round btn-green contactBtn">문의하기</a>
+	                                    <a data-toggle="modal" href="#contactAgent" class="btn btn-lg btn-round btn-green contactBtn chat_in">문의하기</a>
 	<!--                                     <a href="#confirmSigning" class="btn btn-lg btn-round btn-green applyBtn">신청하기</a> -->
 	                                    <a href="/Yolo/mypage/appStatus/applyClubOk.myinfo?c_num=${list.c_num}" class="btn btn-lg btn-round btn-green applyBtn">신청하기</a>
 	                                </div>

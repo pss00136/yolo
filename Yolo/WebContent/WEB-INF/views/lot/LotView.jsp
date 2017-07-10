@@ -767,7 +767,7 @@ $(function(){
 					<div class="mainFunction summaryItem">
 						<div class="clearfix"></div>
 						<a data-toggle="modal" href="#contactAgent"
-							class="btn btn-lg btn-round btn-green contactBtn">문의하기</a> <a
+							class="btn btn-lg btn-round btn-green contactBtn chat_in">문의하기</a> <a
 							href="/Yolo/lot/LotReserve.lot?pri_num=${list.pri_num}"
 							class="btn btn-lg btn-round btn-green applyBtn">예약하기</a>
 					</div>

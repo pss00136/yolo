@@ -13,6 +13,7 @@ $(function() {
 	});
 
 	$(".chat_in").click(function() {
+		$("#chat_div").show();
 		$("#chat_list").hide();
 		$("#chat_view").show();
 	});
