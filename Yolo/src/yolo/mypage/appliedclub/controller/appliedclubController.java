@@ -42,7 +42,7 @@ public class appliedclubController {
 		ModelAndView mv = new ModelAndView();
 		List<SignclubVO> clublist = service.signclublist(user);
 		mv.addObject("clublist", clublist);
-		mv.setViewName("/mypage/appStatus/appliedClub");
+		mv.setViewName("/mypage/appStatus/appliedClub/modal_cancel.modal");
 //		System.out.println(clublist.size());
 		return mv;
 	}

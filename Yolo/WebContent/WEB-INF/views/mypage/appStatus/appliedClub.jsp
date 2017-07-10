@@ -37,8 +37,8 @@
 															<a href="#">${c.u_id}</a>, <a href="#"> ${c.c_date}</a>
 														</div>
 													</div>
-													<div class="button">
-														<a href="#confirmSigning" class="btn btn-lg btn-round btn-green cancelBtn">취소하기</a>
+													<div class="cancel">
+														<a data-toggle="modal" href="#SigningCancel" class="btn btn-lg btn-round btn-green cancelBtn">취소하기</a>
 <!-- 														<input type="button" class="btn btn-lg btn-round btn-green cancelBtn" value="글삭제" onclick="delete_ok()"> -->
 													</div>
 												</div>
@@ -51,19 +51,6 @@
 						</div>
 					</div>
 				</div>
-				
-<!-- 				<script> -->
-				
-<!-- // 				function delete_ok(){ -->
-<!-- // // 					  if(document.form.b_pwd.value.length==0) { -->
-<!-- // // 					    alert("안됑"); -->
-<!-- // // 					    form.b_pwd.focus(); -->
-<!-- // // 					    return false; -->
-<!-- // // 					  }   -->
-<!-- // 					  document.form.submit(); -->
-<!-- // 					} -->
-				
-<!-- 				</script> -->
 				
 				
 			

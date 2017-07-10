@@ -92,6 +92,7 @@ public class ClubController {
 	*/
 	@RequestMapping("/ClubDetail.club")
 	public ModelAndView clubDetail(ClubListVO clublistVO){
+//		System.out.println("c:"+ clublistVO.getC_title());
 		ModelAndView mv = new ModelAndView();
 		ClubListVO list = service.clubdetail(clublistVO);
 		mv.addObject("list", list);

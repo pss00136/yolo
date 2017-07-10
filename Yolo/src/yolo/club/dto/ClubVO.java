@@ -16,15 +16,17 @@ public class ClubVO {
 	private String c_content; /* 설명 */
 	private String c_confirm; /* 승인 여부 */
 	private String c_regdate; /* 등록일 */
+	private String c_hits;
 	private String c_bookmark; /* 즐겨찾기 */
 	private String c_entry; /* 신청인원 */
+	
 	
 	/* Constructor */
 	public ClubVO() {}
 
 	public ClubVO(String c_num, String u_id, String c_type, String c_title, String c_tag, int c_people,
 			String c_recruit, String c_period, String c_date, String c_place, String c_content, String c_confirm,
-			String c_regdate, String c_bookmark, String c_entry) {
+			String c_regdate, String c_hits, String c_bookmark, String c_entry) {
 		super();
 		this.c_num = c_num;
 		this.u_id = u_id;
@@ -39,6 +41,7 @@ public class ClubVO {
 		this.c_content = c_content;
 		this.c_confirm = c_confirm;
 		this.c_regdate = c_regdate;
+		this.c_hits = c_hits;
 		this.c_bookmark = c_bookmark;
 		this.c_entry = c_entry;
 	}
@@ -148,6 +151,14 @@ public class ClubVO {
 
 	public void setC_regdate(String c_regdate) {
 		this.c_regdate = c_regdate;
+	}
+
+	public String getC_hits() {
+		return c_hits;
+	}
+
+	public void setC_hits(String c_hits) {
+		this.c_hits = c_hits;
 	}
 
 	public String getC_bookmark() {
