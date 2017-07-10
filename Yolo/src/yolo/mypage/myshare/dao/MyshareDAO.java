@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import yolo.share.dto.ShareMainListVO;
+import yolo.share.dto.ShareVO;
 
 /*
  * @클래스명: MyshareDAO
@@ -48,5 +49,15 @@ public class MyshareDAO {
 			System.out.println("sdetail 실패: " + e.getMessage());	
 		}
 		return sdetail;
+	}
+	
+	public List<ShareMainListVO> myshareEdit(ShareVO vo){
+		List<ShareMainListVO> list = null;
+		try {
+			list = session.selectList("myshare.myshareEdit", vo);
+		} catch (Exception e) {
+			System.out.println("회원이 쉐어링 등록한 페이지 보기(myshareEdit) 에러:" + e.getMessage());
+		}
+		return list;
 	}
 }
