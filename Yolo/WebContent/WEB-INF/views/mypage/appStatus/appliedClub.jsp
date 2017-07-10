@@ -3,6 +3,28 @@
 	<!--  JSTL 선언 -->
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
+<!-- 추가 JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+	$(function(){
+		$(".cancel").click(function(){
+			var temp = $(this).find(".sc_num1").val();
+			alert(temp);
+		
+// 			$("#sc_num").val(temp)
+// 			alert($("#sc_num").val());
+			
+			var action = '/Yolo/mypage/appStatus/delete_ok.myinfo?sc_num='+temp;
+			
+			$('#btn_cancel').click(function(){
+// 				$('form').attr("action", action);
+// 				$('#btn_cancel').submit();
+				$('#btn_cancel').attr("href", action);
+			});
+		});
+	});
+</script>
 <!-- 추가 Css -->
 <link href="/Yolo/css_yolo/cssView/appStatus/appliedClub.css" rel="stylesheet">
 
@@ -35,12 +57,22 @@
 														</h4>
 														<div class="footer">
 															<a href="#">${c.u_id}</a>, <a href="#"> ${c.c_date}</a>
+															
 														</div>
+														
 													</div>
 													<div class="cancel">
+														<input type="hidden" class="sc_num1" value="${c.sc_num}"/>
+<!-- 														<a data-toggle="modal" href="#SigningCancel" role="button" class="btn btn-lg btn-round btn-green cancelBtn" data-backdrop="static">취소하기</a> -->
 														<a data-toggle="modal" href="#SigningCancel" class="btn btn-lg btn-round btn-green cancelBtn">취소하기</a>
-<!-- 														<input type="button" class="btn btn-lg btn-round btn-green cancelBtn" value="글삭제" onclick="delete_ok()"> -->
 													</div>
+													
+<!-- 													<div class="modal fade" id="SigningCancel" role="dialog" aria-labelledby="contactLabel" aria-hidden="true"> -->
+<!-- 														<div class="modal-dialog"> -->
+<!-- 															<div class="modal-content"> -->
+<!-- 															</div> -->
+<!-- 														</div> -->
+<!-- 													</div> -->
 												</div>
 											</c:forEach>
 										</div>

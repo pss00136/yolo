@@ -1,13 +1,13 @@
 
 
-// CHECKBOX
-$(document).ready(function() {
-	  $('#media').carousel({
-	    pause: true,
-	    interval: false,
-	    
-	  });
-});
+//// CHECKBOX
+//$(document).ready(function() {
+//	  $('#media').carousel({
+//	    pause: true,
+//	    interval: false,
+//	    
+//	  });
+//});
 
 
 //DATE PICKER

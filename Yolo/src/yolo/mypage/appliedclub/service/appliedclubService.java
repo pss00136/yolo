@@ -20,6 +20,6 @@ public interface appliedclubService {
 	
 	public int signclubinput(appliedclubVO appclubVO);
 	
-//	public int signclubdelete();
+	public int signclubdelete(SignclubVO signclubVO);
 
 }

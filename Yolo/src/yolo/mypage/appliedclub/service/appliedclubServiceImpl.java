@@ -32,8 +32,8 @@ public class appliedclubServiceImpl implements appliedclubService {
 		return appclubdao.signclubinput(appclubVO);
 	}
 	
-//	public int signclubdelete(){
-//		return appclubdao.signclubdelete();
-//	}
+	public int signclubdelete(SignclubVO signclubVO){
+		return appclubdao.signclubdelete(signclubVO);
+	}
 
 }

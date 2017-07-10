@@ -7,22 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-<script type="text/javascript">
-
-  alert("${message}");
-  if("${state}"=="yes"){
-	  location.href="appliedClub.myinfo";
-  }else{
-	  history.back();
-  }
-</script>
+등록됨
 </body>
 </html>
-
-
-
-
-
-
-

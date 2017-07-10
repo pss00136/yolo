@@ -1,12 +1,16 @@
 package yolo.mypage.appliedclub.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.client.HttpServerErrorException;
 import org.springframework.web.servlet.ModelAndView;
 
 import yolo.club.dto.ClubListVO;
@@ -71,20 +75,24 @@ public class appliedclubController {
 	}
 		
 	/*
-	* @메소드명: applyClubOk
-	* @역할: appliedclubService를 호출하여 웹에서 가져온 c_num을 통해 등록값을 전달 
+	* @메소드명: deleteOk
+	* @역할: signclubVO를 호출하여 웹에서 가져온 sc_num을 통해 등록값을 전달 
 	*
-	* @param   appliedclubVO:jsp a tag를 통해 가져온 c_num 값
+	* @param   appliedclubVO:jsp a tag를 통해 가져온 sc_num 값
 	* @return  String:반환하는 경로
 	*/	
-//	@RequestMapping("/delete_ok.do")
-//	public ModelAndView delete(SignclubVO signclubVO, HttpSession session){
+//	@RequestMapping(value="/delete_ok", method= RequestMethod.GET)
+//	public ModelAndView deleteOk(HttpServerErrorException request, @RequestParam Map<String, Object> param, SignclubVO signclubVO HttpSession session) throws Exception{
 //		String user = (String)session.getAttribute("u_id");
+//		signclubVO.setU_id(user);
+//		System.out.println("ID:"+signclubVO.getU_id());
+//		System.out.println("SC:"+signclubVO.getSc_num());
+//		System.out.println("C:"+signclubVO.getC_num());
 //		ModelAndView mv = new ModelAndView();
 //		int result =0;
 //		String message = "삭제 실패";
 //		String state = "no";
-//		result = service.signclubdelete();
+//		result = service.signclubdelete(signclubVO);
 //		if(result != 0){
 //			state = "yes";
 //			message = "삭제 성공";
@@ -94,6 +102,29 @@ public class appliedclubController {
 //		mv.setViewName("mypage/appStatus/delete_ok");
 //		return mv;
 //	}
+	
+	@RequestMapping("/delete_ok.myinfo")
+	public ModelAndView deleteOk(SignclubVO signclubVO, HttpSession session){
+		String user = (String)session.getAttribute("u_id");
+		signclubVO.setU_id(user);
+		System.out.println("ID:"+signclubVO.getU_id());
+		System.out.println("SC:"+signclubVO.getSc_num());
+//		System.out.println("SC2:"+sc_num);
+//		System.out.println("C:"+signclubVO.getC_num());
+		ModelAndView mv = new ModelAndView();
+		int result =0;
+		String message = "삭제 실패";
+		String state = "no";
+		result = service.signclubdelete(signclubVO);
+		if(result != 0){
+			state = "yes";
+			message = "삭제 성공";
+		}
+		mv.addObject("message", message);
+		mv.addObject("state", state);
+		mv.setViewName("mypage/appStatus/delete_ok");
+		return mv;
+	}
 	
 
 

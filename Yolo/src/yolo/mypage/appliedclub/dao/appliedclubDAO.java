@@ -47,11 +47,11 @@ public class appliedclubDAO {
 		return result;
 	}
 	
-//	public int signclubdelete(){
-//		
-//		int result = session.delete("appliedclub.appclubdelete");
-//		
-//		return result;
-//	}
+	public int signclubdelete(SignclubVO signclubVO){
+		
+		int result = session.delete("appliedclub.appclubdelete", signclubVO);
+		
+		return result;
+	}
 
 }
