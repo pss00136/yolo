@@ -47,3 +47,8 @@ hr {
 	margin-top: 5%;
 	}
 }
+
+.btn-group, .btn-group-vertical{
+	
+	display: inline-block;
+}

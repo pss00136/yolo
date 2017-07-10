@@ -41,7 +41,7 @@ public class MyshareController {
 		List<ShareMainListVO> list = service.myshareList(uid);
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("list", list);
-		mv.setViewName("/mypage/myReg/ShareMyList");
+		mv.setViewName("/mypage/myReg/ShareMyList/modal_myshare_delete.modal");
 		System.out.println("controller"+list.size());
 		return mv;
 		
@@ -67,7 +67,7 @@ public class MyshareController {
 	 * @메소드명: myShareEdit
 	 * @역활 : myshareEdit페이지 이동
 	 * @param 없음
-	 * @return	String:반환하는 경로
+	 * @return	ModelAndView:반환하는 경로
 	 */
 	@RequestMapping("/myShareEdit.myreg")
 	public ModelAndView myshareEdit(ShareVO vo){
@@ -78,4 +78,33 @@ public class MyshareController {
 		mv.setViewName("/mypage/myReg/myShareEdit");
 		return mv;
 	}
+	
+	/*
+	 * @메소드명: myShareEditOK
+	 * @역활 : myshareList페이지 이동
+	 * @param 없음
+	 * @return	String:반환하는 경로
+	 */
+	@RequestMapping("/myShareEditOK.myreg")
+	public String myshareEditOK(){
+		return "/Yolo/comshare/ShareList";
+	}
+	
+	/*
+	 * @메소드명: myshareDelete
+	 * @역활 : ShareMyList에서 삭제 후 ShareMyList로 이동
+	 * @param 없음
+	 * @return	ModelAndView:반환하는 경로
+	 */
+	@RequestMapping("/myShareDelete.myreg")
+	public ModelAndView myshareDelete(ShareMainListVO sharemainlistVO){
+		ModelAndView mv = new ModelAndView();
+		System.out.println(sharemainlistVO.getSl_num());
+		service.myshareDelete(sharemainlistVO);
+		mv.setViewName("redirect:/mypage/myReg/ShareMyList.myreg");
+		return mv;
+	}
+	
+
+	
 }

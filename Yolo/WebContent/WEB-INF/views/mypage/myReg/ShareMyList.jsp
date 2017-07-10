@@ -10,7 +10,25 @@
 %>
 <!-- 추가CSS -->
 <link href="/Yolo/css_yolo/cssView/MyShare/ShareMyList.css" rel="stylesheet">
+<!-- 추가 JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+<script type="text/javascript">
+	$(function(){
+		$("#delete_btn").click(function(){
+			var temp = $(this).find("#slnum").val();
+// 			alert(temp);
+
+			var action = '/Yolo/mypage/myReg/myShareDelete.myreg?sl_num='+temp;
+			
+			$('#btn_delete').click(function(){
+// 				$('form').attr("action", action);
+// 				$('#btn_cancel').submit();
+				$('#btn_delete').attr("href", action);
+			});
+		});
+	});
+</script>
 
 			<!-- ------------------------------------------------------- -->
 			<!-- 본문내용 -->
@@ -48,8 +66,9 @@
 									<div class="btn-group">
 										<a href="myShareEdit.myreg?sl_num=${l.sl_num}&u_id=<%=u_id%>" type="button" class="btn btn-o btn-blue col-md-6">수정</a>
 									</div>
-									<div class="btn-group">
-										<a type="button" class="btn btn-o btn-red col-md-6">삭제</a>
+									<div class="btn-group" id="delete_btn">
+										<input type="hidden" id="slnum" value="${l.sl_num}" />
+										<a href="#SigningCancel" data-toggle="modal" class="btn btn-o btn-red col-md-6">삭제</a>
 									</div>
 								</div>
 							</div>

@@ -51,6 +51,12 @@ public class MyshareDAO {
 		return sdetail;
 	}
 	
+	/*
+	* @메소드명: myshareEdit
+	* @역할:  mypage sharelist의 myShareEdit페이지 이동
+	* @param   
+	* @return  List<ShareMainListVO>: DB select쿼리문 결과값
+	*/
 	public List<ShareMainListVO> myshareEdit(ShareVO vo){
 		List<ShareMainListVO> list = null;
 		try {
@@ -59,5 +65,22 @@ public class MyshareDAO {
 			System.out.println("회원이 쉐어링 등록한 페이지 보기(myshareEdit) 에러:" + e.getMessage());
 		}
 		return list;
+	}
+	
+	/*
+	* @메소드명: myshareDelete
+	* @역할:  mypage sharelist 페이지 삭제
+	* @param   
+	* @return  List<ShareMainListVO>: DB select쿼리문 결과값
+	*/
+	public int myshareDelete(ShareMainListVO sharemainlistVO){
+		int result = 0;
+		try {
+			result = session.delete("myshare.myshareDelete", sharemainlistVO);
+			
+		} catch (Exception e) {
+			System.out.println("sdetail 실패: " + e.getMessage());	
+		}
+		return result;
 	}
 }

@@ -246,9 +246,9 @@
 			<!-- 수정 취소버튼 추가 -->
 			<div id="nextbtn" class="col-md-12">
 				<div class="col-md-2"></div>
-					<button class="col-md-2 btn btn-round btn-o btn-green">수정</button>
+					<a class="col-md-2 btn btn-round btn-o btn-green">수정</a>
 				<div class="col-md-4"></div>
-					<button class="col-md-2 btn btn-round btn-o btn-green">취소</button>
+					<a href="/Yolo/club/ClubList.club" class="col-md-2 btn btn-round btn-o btn-green">취소</a>
 				<div class="col-md-3"></div>
 			</div>
 

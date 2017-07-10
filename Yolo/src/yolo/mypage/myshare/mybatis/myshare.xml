@@ -28,5 +28,9 @@ WHERE s.bl_id = l.bl_id AND l.pri_num = p.pri_num AND l.u_id = u.u_id AND p.pri_
 ORDER BY s.SL_NUM DESC
 </select>
 
+<!-- myshareDelete -->
+<delete id="myshareDelete" parameterType="yolo.share.dto.ShareMainListVO">
+DELETE FROM sharelot2 WHERE sl_num = #{sl_num}
+</delete>
 
 </mapper>
