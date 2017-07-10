@@ -68,9 +68,9 @@ public class MyshareController {
 	 * @param 없음
 	 * @return	String:반환하는 경로
 	 */
-	@RequestMapping("/ShareEdit.share")
+	@RequestMapping("/myShareEdit.myreg")
 	public String shareEdit(){
 		
-		return "/comshare/ShareEdit";
+		return "/mypage/myReg/myShareEdit";
 	}
 }

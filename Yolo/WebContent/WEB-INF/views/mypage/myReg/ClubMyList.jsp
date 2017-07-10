@@ -47,11 +47,10 @@
 						</a>
 						<div class="btn-group btn-group-justified">
 							<div class="btn-group">
-								<a href="/Yolo/club/ClubEdit.club" type="button" class="btn btn-o btn-blue">수정</a>
+								<a href="/Yolo/mypage/myReg/myClubEdit.myreg" type="button" class="btn btn-o btn-blue">수정</a>
 							</div>
-
 							<div class="btn-group">
-								<button type="button" class="btn btn-o btn-red">삭제</button>
+								<a type="button" class="btn btn-o btn-red">삭제</a>
 							</div>
 						</div>
 					</div>

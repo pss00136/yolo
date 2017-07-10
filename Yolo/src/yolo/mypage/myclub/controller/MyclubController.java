@@ -62,13 +62,13 @@ public class MyclubController {
 	
 	/*
 	 * @메소드명: clubEdit
-	 * @역활 : clubEdit페이지 이동
+	 * @역활 : ClubEdit페이지 이동
 	 * @param 없음
-	 * @return	String:반환하는 경로
+	 * @return String:반환하는 경로
 	 */
-	@RequestMapping("/ClubEdit.club")
+	@RequestMapping("/myClubEdit.myreg")
 	public String clubEdit(){
 		
-		return "/club/ClubEdit";
+		return "/mypage/myReg/myClubEdit";
 	}
 }

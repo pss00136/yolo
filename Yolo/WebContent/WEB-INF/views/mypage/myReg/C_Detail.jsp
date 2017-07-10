@@ -14,7 +14,10 @@
 <link href="/Yolo/css_yolo/cssView/MyClub/ClubMyList.css" rel="stylesheet">
 
 
+<style>
 
+
+</style>
 
 <!-- -----------------여기에 컨텐츠 div넣으세요----------------- -->
 
@@ -60,6 +63,10 @@
 												<div class="name">Rust Cohle</div>
 												<div class="title">Administrator</div>
 												<div class="address">Los Angeles, CA, USA</div>
+											</div>
+											<div class="col-sm-3">
+											<a type="button" class="btn btn-blue btn-xs">승인</a>
+											<a type="button" class="btn btn-blue btn-xs">취소</a>
 											</div>
 										</div>
 									</li>

@@ -46,7 +46,7 @@
 								</a>
 								<div class="btn-group btn-group-justified">
 									<div class="btn-group">
-										<a href="/Yolo/comShare/ShareEdit.share" type="button" class="btn btn-o btn-blue col-md-6">수정</a>
+										<a href="/Yolo/mypage/myReg/myShareEdit.myreg" type="button" class="btn btn-o btn-blue col-md-6">수정</a>
 									</div>
 									<div class="btn-group">
 										<a type="button" class="btn btn-o btn-red col-md-6">삭제</a>
