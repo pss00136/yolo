@@ -198,8 +198,9 @@
 							<li class="align-center"><h5 style="color:#fff;">나의 등록글</h5></li>
 							<li><a href="/Yolo/mypage/myReg/ClubMyList.myreg">나의 모임</a></li>
 							<li><a href="/Yolo/mypage/myReg/ShareMyList.myreg">나의 쉐어링</a></li>				
-							<li class="align-center"><h5 style="color:#fff;">정보수정</h5></li>
-							<li><a href="/Yolo/mypage/info/MyInfoModify.myinfo">개인정보수정</a></li>			
+							<li class="align-center"><h5 style="color:#fff;">내정보 수정</h5></li>
+							<li><a href="/Yolo/mypage/info/MyInfoModify.myinfo?u_id=<%=u_id%>">개인정보수정</a></li>
+											
 						</ul>
 					</li>				
 		<%}%>
