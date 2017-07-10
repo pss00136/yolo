@@ -95,7 +95,7 @@
 					<div class="mobAvatarName"><%=u_id%></div>
 				</div>
 				<ul>
-					<li><a href="#"><span class="icon-user"></span>마이페이지</a></li>
+					<li><a href="/Yolo/mypage/info/MyPageView.myinfo"><span class="icon-user"></span>프로필</a></li>
 					<li><a href="#" class="msg_btn"><span class="icon-envelope"></span>메세지 
 					<span class="badge pull-right bg-red">1</span></a></li>
 					<li class="divider"></li>
@@ -198,8 +198,9 @@
 							<li class="align-center"><h5 style="color:#fff;">나의 등록글</h5></li>
 							<li><a href="/Yolo/mypage/myReg/ClubMyList.myreg">나의 모임</a></li>
 							<li><a href="/Yolo/mypage/myReg/ShareMyList.myreg">나의 쉐어링</a></li>				
-							<li class="align-center"><h5 style="color:#fff;">정보수정</h5></li>
-							<li><a href="/Yolo/mypage/info/MyInfoModify.myinfo">개인정보수정</a></li>			
+							<li class="align-center"><h5 style="color:#fff;">내정보 수정</h5></li>
+							<li><a href="/Yolo/mypage/info/MyInfoModify.myinfo?u_id=<%=u_id%>">개인정보수정</a></li>
+											
 						</ul>
 					</li>				
 		<%}%>

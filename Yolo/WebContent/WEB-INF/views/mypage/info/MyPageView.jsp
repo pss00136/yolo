@@ -19,7 +19,7 @@
 						<div class="form-group">
 							<label class="col-sm-2 control-label"> 프로필 </label>
 							<div class="col-sm-2 col-md-3">
-								<img src="/Yolo/upload/user/<%= info.getU_iname() %>" id="imagePreview" alt="" 
+								<img src="#" id="imagePreview" alt="" 
 									class="ratio img-responsive img-circle" /><br />
 							</div>
 						</div>

@@ -716,12 +716,7 @@ $(function(){
 				<div class="col-md-4">
 					<label>군·구</label> 
 					 <select id="gugun" name="gugun" class="btn btn-default">
-					  	<% List<ZipcodeVO> gugunlist = (List<ZipcodeVO>)request.getAttribute("gugunlist"); 
-					  	for(ZipcodeVO zvo: gugunlist) {
-					  	
-					  	 for(int i=0; i < zvo.getGugun().length(); i++){ %>
-					  	      <option>zvo.getGugun()</option>	
-					  	<%}  }//end of for  %>
+                       
 					 </select>
 				</div>
 

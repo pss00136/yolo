@@ -12,6 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import yolo.mypage.myshare.service.MyshareService;
 import yolo.share.dto.ShareMainListVO;
+import yolo.share.dto.ShareVO;
 
 /*
  * @클래스명: MyshareController
@@ -63,14 +64,18 @@ public class MyshareController {
 	}
 
 	/*
-	 * @메소드명: shareEdit
-	 * @역활 : ShareEdit페이지 이동
+	 * @메소드명: myShareEdit
+	 * @역활 : myshareEdit페이지 이동
 	 * @param 없음
 	 * @return	String:반환하는 경로
 	 */
 	@RequestMapping("/myShareEdit.myreg")
-	public String shareEdit(){
-		
-		return "/mypage/myReg/myShareEdit";
+	public ModelAndView myshareEdit(ShareVO vo){
+		ModelAndView mv = new ModelAndView();
+		System.out.println(vo.getSl_num());
+		List<ShareMainListVO> list = service.myshareEdit(vo);
+		mv.addObject("list", list);
+		mv.setViewName("/mypage/myReg/myShareEdit");
+		return mv;
 	}
 }
