@@ -909,13 +909,11 @@ $(function(){
 		</div>
 
 		<!-- 후기 작성란 -->
-		<div id="input-group" class="col-md-12 input-group">
-
-			<div class="col-md-8">
+		<div id="input-group" style="width:100%;" class="col-md-12 input-group">
+			<div class="col-md-10">
 				<input type="text" id="ps_content" name="ps_content"
 					class="form-control" placeholder="한 줄 후기 작성하기">
 			</div>
-
 			<input type="hidden" id="Repri_num" value="${list.pri_num}" />
 			<div class="col-md-2">
 				<a id="Reviewbtn" class="form-control btn btn-green">작성하기</a>
