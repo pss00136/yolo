@@ -4,7 +4,7 @@
 <%@ page import="yolo.user.dto.*"%>
 <!-- 추가 css -->
 <link href="/Yolo/css_yolo/cssView/MyPage/mypage.css" rel="stylesheet">
-<script type="text/javascript" src='/Yolo/js_yolo/host/hostregister.js'></script>
+
 			<!-------- ------- 개인정보 수정하기 ------------------------>
 			<div class="home-wrapper info">
                 <%
@@ -16,13 +16,13 @@
 					PROFILE</h4>
 				<div class="panel-body">
                   
-					<form class="form-horizontal" role="form">
+					<form class="form-horizontal" id="frm" method="get" action="/Yolo/mypage/info/ModifyFinish.myinfo">
 						<div class="form-group">
                      <label class="col-sm-2 control-label"> 프로필 </label>
                      <div class="col-sm-2">
                         <input type="file" name="imageUpload" id="imageUpload"
                            style="display: none;" /> <img src="" id="imagePreview" alt=""
-                           class="ratio img-responsive img-circle" /><br />
+                           class="ratio img-responsive img-circle"/><br />
 
                         <div style="text-align: center;">
                            <div style="display: inline-block;">
@@ -30,7 +30,7 @@
                                  class="btn btn-o btn-green">사진 등록</label>
                            </div>
                         </div>
-                        <!-------사진 등록버튼 가운데정렬 -->
+                       
                      </div>
                   </div>
 
@@ -115,13 +115,15 @@
 							<input type="text" class="form-control" id="detail_address" name="detail_address" value=<%=detail_address%> >
 						</div>
 						</div>
-					</form>
-
-					<div style="text-align: center;">
+						
+						<div style="text-align: center;">
 						<div style="display: inline-block;">
-							<a href="/Yolo/mypage/info/ModifyFinish.myinfo?u_id=<%= info.getU_id() %>" id="btn_modify" class="btn btn-o btn-green">수 정</a>
+							<a href="#" id="btn_modify" class="btn btn-o btn-green">수 정</a>
 						</div>
 					</div>
+					</form>
+
+					
 
 				</div>
 			</div>
@@ -137,5 +139,11 @@
     			  $('#result').text("");
     		  }
     	  });
+    	  
+    	  
+    	  $('#btn_modify').click(function(){
+    		 $('#frm').submit(); 
+    	  });
       });
     </script>
+    <script type="text/javascript" src='/Yolo/js_yolo/host/hostregister.js'></script>

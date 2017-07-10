@@ -10,7 +10,7 @@ SELECT * FROM userinfo where u_id = #{u_id}
 </select>
 
 <update id="myinfomodify" parameterType="yolo.user.dto.UserVO">
-UPDATE userinfo set u_id = #{u_id}, u_pass = #{u_pass}, u_name = #{u_name}, u_tel = #{u_tel}, u_email = #{u_email}, u_birth = #{u_birth}, u_addr = #{u_addr}
+UPDATE userinfo set u_pass = #{u_pass}, u_name = #{u_name}, u_tel = #{u_tel}, u_email = #{u_email}, u_birth = #{u_birth}, u_addr = #{u_addr}
 WHERE u_id= #{u_id} 
 </update>
 
