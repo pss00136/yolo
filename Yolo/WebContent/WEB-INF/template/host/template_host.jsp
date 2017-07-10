@@ -77,6 +77,9 @@
         <!-- 추가  -->
 		<script src=" <c:url value='/Yolo/js/home.js'/> " type="text/javascript"></script>
 		<script type="text/javascript" src='/Yolo/js_yolo/host/hostregister.js'></script>
+		<!-- 다음 맵 -->
+      <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+      <script src=" <c:url value='/js_yolo/postcode/postcode.js'/> " type="text/javascript"></script>
 		
 </body>
 </html>

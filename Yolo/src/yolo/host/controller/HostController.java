@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import yolo.host.dto.EntrepreneurVO;
 import yolo.host.dto.HostinfoVO;
 import yolo.host.service.HostService;
 import yolo.lot.dto.BooklotVO;
@@ -143,10 +144,14 @@ public class HostController {
 	* @return  String:반환하는 경로
 	*/ 
 @RequestMapping("/LotModify.host")
-public ModelAndView modifyfirst(LotListVO lotlistVO){
+public ModelAndView modifyfirst(LotListVO lotlistVO, HttpSession session){
 	   ModelAndView mv = new ModelAndView();
-	   LotListVO list = service.modifyfirst(lotlistVO);
-	   mv.addObject("list", list);
+	   String h_num = (String)session.getAttribute("h_num");
+	   LotListVO lotlist = service.getlot(lotlistVO);
+	   List<EntrepreneurVO> entlist = service.getentre(h_num);
+	   
+	   session.setAttribute("lotlist", lotlist);
+	   session.setAttribute("entlist", entlist);
 	   mv.setViewName("/host/ModifyFirst.host");
 	   return mv;
 }

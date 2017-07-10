@@ -7,6 +7,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import yolo.host.dto.EntrepreneurVO;
 import yolo.host.dto.HostinfoVO;
 import yolo.lot.dto.BooklotVO;
 import yolo.lot.dto.LotListVO;
@@ -82,12 +83,12 @@ public class HostDAO {
 		return result;
 	}
 	
-	public LotListVO modifyfirst(LotListVO lotlistVO){
+	public LotListVO getlot(LotListVO lotlistVO){
 		LotListVO list = null;
 		try{
-			list = session.selectOne("host.modifyfirst", lotlistVO);
+			list = session.selectOne("host.getlot", lotlistVO);
 		}catch(Exception ex){
-			System.out.println("modifyfirst 실패: " + ex.getMessage());
+			System.out.println("getlot 실패: " + ex.getMessage());
 		}
 		return list;
 	}
@@ -101,5 +102,17 @@ public class HostDAO {
 			System.out.println("hostmylotlist 실패 : " + ex.getMessage());
 		}
 		return list;
+	}
+	
+	public List<EntrepreneurVO> getentre(String h_num) {
+		List<EntrepreneurVO> entvo = null;
+		HashMap map = new HashMap<>();
+		try{
+			map.put("h_num", h_num);
+			entvo = session.selectList("host.getentre", map);
+		}catch(Exception ex){
+			System.out.println("getentre 실패 : " + ex.getMessage());
+		}
+		return entvo;
 	}
 }

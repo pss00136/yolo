@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import yolo.host.dao.HostDAO;
+import yolo.host.dto.EntrepreneurVO;
 import yolo.host.dto.HostinfoVO;
 import yolo.lot.dto.BooklotVO;
 import yolo.lot.dto.LotListVO;
@@ -45,14 +46,21 @@ public class HostServiceImpl implements HostService {
 
 
 	@Override
-	public LotListVO modifyfirst(LotListVO lotlistVO) {
-		return hdao.modifyfirst(lotlistVO);
+	public LotListVO getlot(LotListVO lotlistVO) {
+		return hdao.getlot(lotlistVO);
 	}
 
 
 	@Override
 	public List<BooklotVO> searchbook(LotListVO lotlistVO) {
 		return hdao.searchbook(lotlistVO);
+	}
+
+
+	@Override
+	public List<EntrepreneurVO> getentre(String h_num) {
+		// TODO Auto-generated method stub
+		return hdao.getentre(h_num);
 	}
 	
 

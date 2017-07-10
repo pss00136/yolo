@@ -64,8 +64,8 @@ public class LotController {
 		*/	
 	@RequestMapping("lot/LotInputFirst.lot")
 	public ModelAndView lotinput(HostinfoVO hvo, HttpSession session){
-		  ModelAndView mv = new ModelAndView();
-		  String u_id = (String)session.getAttribute("u_id");
+		   ModelAndView mv = new ModelAndView();
+		   String u_id = (String)session.getAttribute("u_id");
 		   hvo.setU_id(u_id);
            HostinfoVO hostvo = service.lothostselect(hvo);
            System.out.println(hostvo.getU_id() + ">>>" +hostvo.getH_num());
@@ -73,7 +73,7 @@ public class LotController {
 			   //h_num세션을 지정해줌
 			    session.setAttribute("h_num", hostvo.getH_num() );
 			    System.out.println(hostvo.getH_num());
-			    mv.setViewName("/lot/LotInputFirst");			   
+			    mv.setViewName("/lot/LotInputFirst.host");			   
 		   }
 		   else{
 			   mv.setViewName("/host/HostInput.host");
@@ -95,7 +95,7 @@ public class LotController {
 				,String lot_postcode, String lot_main_address, String lot_detail_address){	    
 		     session.setAttribute("primgVO", primgVO);
 		    //address 합치기
-			 privateVO.setPri_addr(lot_main_address +" "+ lot_detail_address);
+			 privateVO.setPri_addr(lot_postcode+"/"+lot_main_address +"/"+ lot_detail_address);
 			 //경도,위도
 			 Float[] coords = new Float[2];
 		      coords = geoCoding(lot_main_address);
