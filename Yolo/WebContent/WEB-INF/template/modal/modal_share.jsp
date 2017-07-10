@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 	<!-- modal popup -->
 	
 	<div class="modal fade" id="contactAgent" role="dialog" aria-labelledby="contactLabel" aria-hidden="true">
@@ -21,54 +22,27 @@
                         <div class="carousel-inner">
                             <div class="item active">
                             	 <div class="btn-group" data-toggle="buttons">
-									<label class="btn btn-o btn-warning active">
-										<input type="checkbox" autocomplete="off" checked><span>09:00</span>
-									</label>
-									<label class="btn btn-o btn-warning disabled">
-										<input type="checkbox" autocomplete="off"><span>10:00</span>
-									</label>			
-									<label class="btn btn-o btn-warning">
-										<input type="checkbox" autocomplete="off"><span>11:00</span>
-									</label>			
-									<label class="btn btn-o btn-warning">
-										<input type="checkbox" autocomplete="off"><span>12:00</span>
-									</label>			
-									<label class="btn btn-o btn-warning">
-										<input type="checkbox" autocomplete="off"><span>13:00</span>
-									</label>			
-									<label class="btn btn-o btn-warning">
-										<input type="checkbox" autocomplete="off"><span>14:00</span>
-									</label>	
-									<label class="btn btn-o btn-warning">
-										<input type="checkbox" autocomplete="off"><span>15:00</span>
-									</label>			
-									<label class="btn btn-o btn-warning">
-										<input type="checkbox" autocomplete="off"><span>16:00</span>
-									</label>			
-									<label class="btn btn-o btn-warning">
-										<input type="checkbox" autocomplete="off"><span>17:00</span>
-									</label>
-									<label class="btn btn-o btn-warning">
-										<input type="checkbox" autocomplete="off"><span>18:00</span>
-									</label>			
-									<label class="btn btn-o btn-warning">
-										<input type="checkbox" autocomplete="off"><span>19:00</span>
-									</label>			
-									<label class="btn btn-o btn-warning">
-										<input type="checkbox" autocomplete="off"><span>20:00</span>
-									</label>			
-									<label class="btn btn-o btn-warning">
-										<input type="checkbox" autocomplete="off"><span>21:00</span>
-									</label>			
-									<label class="btn btn-o btn-warning">
-										<input type="checkbox" autocomplete="off"><span>22:00</span>
-									</label>	
-									<label class="btn btn-o btn-warning">
-										<input type="checkbox" autocomplete="off"><span>23:00</span>
-									</label>			
-									<label class="btn btn-o btn-warning">
-										<input type="checkbox" autocomplete="off"><span>24:00</span>
-									</label>			
+<%-- 									<c:choose> --%>
+<%-- 										<c:when test="${fn:length(list) eq 0 }"> --%>
+<!-- 											<h1 class="tab center bounds padding active">선택된 시간을 찾을 수 없습니다.</h1>										 -->
+<%-- 										</c:when> --%>
+<%-- 										<c:otherwise> --%>
+<%-- 											<c:forEach items=${list } var="b"> --%>
+<%-- 												<c:forTokens var="usertime" items="${b.sl_time }" varStatus="status" delims="/"> --%>
+<%-- 													<c:choose> --%>
+<%-- 														<c:when test="${usertime == 0 }"> --%>
+<%-- 															<label id="time${status.count }" class="btn btn-o btn-warning" autocomplete="off">${status.count +8}:00</label> --%>
+<%-- 														</c:when> --%>
+<%-- 														<c:otherwise> --%>
+<%-- 															<label id="time${status.count }" class="btn btn-o btn-warning disabled active" --%>
+<%-- 															 autocomplete="off">${status.count +8}:00</label> --%>
+<%-- 														</c:otherwise> --%>
+<%-- 													</c:choose> --%>
+<%-- 												</c:forTokens> --%>
+<%-- 											</c:forEach> --%>
+<%-- 										</c:otherwise> --%>
+<%-- 									</c:choose> --%>
+								
 								</div>       
                             </div>
                         </div>
