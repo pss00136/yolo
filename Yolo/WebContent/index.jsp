@@ -24,13 +24,16 @@
 <link href="/Yolo/css_yolo/cssPlugin/icongrid/component.css" rel="stylesheet">
 <link href="/Yolo/css_yolo/cssPlugin/icongrid/default.css" rel="stylesheet">
 
+<!-- 채팅CSS -->
+<link href="/Yolo/css_yolo/cssView/common/chat_style.css" rel="stylesheet">
+<link href="/Yolo/css_yolo/cssView/Chat/bootchat.css" rel="stylesheet">
 <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-        
-</head>
 
+      
+</head>
 <body class="notransition" id="mainbody">
 
 	<!-- Header -->
@@ -48,7 +51,6 @@
 			<p id="header_subtitle">즐길 줄 아는 사람들을 위한 공간 서비스</p>
 		</div>		
 		<!-- -----------로그인 처리-------- -->
-		
 		<% 
 		String u_id = "";
 		
@@ -66,7 +68,7 @@
 			<a href="#signup" id="web_join_btn" data-toggle="modal" class="btn btn-round btn-o btn-green">회원가입</a>
 		</div>	
 		<div class="headerUserWraper">
-			<a id="hostbtn" href="#signin" class="headerUser btn btn-o btn-gray" data-toggle="modal">호스트 센터</a>
+			<a id="hostbtn" href="/Yolo/host/HostMain.host" class="headerUser btn btn-o btn-gray">호스트 센터</a>
 		</div>	
 		<!-- 로그인 회원가입 끝 -->				
 		<% }else{
@@ -74,8 +76,10 @@
 		%>
 		<!-- 상단 메뉴 유저부분 -->
 		<div class="headerUserWraper">	
+			<!-- 메세지 알림 아이콘 -->
 			<a href="#" class="userHandler dropdown-toggle" data-toggle="dropdown"><span class="icon-user"></span>
 			<span class="counter">5</span></a> 
+			<!-- 유저 프로필 아이콘 -->
 			<a href="#" class="headerUser dropdown-toggle" data-toggle="dropdown"> 
 				<img class="avatar headerAvatar pull-left" src="/Yolo/images/avatar-1.png" alt="John Smith">
 				<div class="userTop pull-left">
@@ -92,30 +96,74 @@
 				</div>
 				<ul>
 					<li><a href="#"><span class="icon-user"></span>마이페이지</a></li>
-					<li><a href="#"><span class="icon-envelope"></span>메세지 <span
-							class="badge pull-right bg-red">5</span></a></li>
+					<li><a href="#" class="msg_btn"><span class="icon-envelope"></span>메세지 
+					<span class="badge pull-right bg-red">5</span></a></li>
 					<li class="divider"></li>
 					<li><a href="/Yolo/logout/logout.main"><span class="icon-power"></span>Logout</a></li>
 				</ul>
 			</div>
+
 		</div>
 		<!-- 상단 메뉴 유저부분 끝 -->	
-		<!-- 호스트 페이지 버튼 부분 -->
+		<!-- 상단 메뉴 알림부분 -->
 		<div class="headerUserWraper">		
 			<!-- 상단 메뉴 알림부분 -->
 			<div class="headerNotifyWraper">
-				<a href="/Yolo/message/MessageDetail.message" class="headerNotify"><span
-					class="notifyIcon icon-envelope"></span> <span class="counter">5</span>
-				</a>
+                <a href="#" id="menu_msg_btn" class="headerNotify msg_btn">
+                    <span class="notifyIcon icon-envelope"></span>
+                    <span class="counter">5</span>
+                </a>
+                
+                <!-- 메세지 창 -->
+                <div id="chat_div" class="pull-right" style="z-index:900; background:#fff;">
+                    <div class="notifyHeader">
+                        <span>메세지함</span>
+                        <a href="#" class="notifySettings icon-close msg_btn chat_out"></a>
+                        <div class="clearfix"></div>
+                    </div>
+                    <ul id="chat_list" class="notifyList">
+                        <li>
+                            <a href="#" class="chat_in">
+                                <img class="avatar pull-left" src="images/avatar-1.png" alt="John Smith">
+                                <div class="pulse border-grey"></div>
+                                <div class="notify pull-left">
+                                    <div class="notifyName">새로운 문의가 있습니다</div>
+                                    <div class="notifyTime">5 minutes ago</div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </a>
+                        </li>              
+                    </ul>
+                    
+                    <!--  -----------채팅 페이지 첨부--------- -->
+                    <div id="chat_view" class="notifyList">
+					  	<p><span id="clientID"><%=u_id %></span>의 대화창</p>					
+							<div class="frame">
+								<ul class="chat_ul" id="message"></ul>
+								<div id="chat_input">
+									<div class="msj-rta macro" style="margin: auto">
+										<div id="chatInput" class="text text-r">
+											<input class="mytext" id="txtChat" name="txtChat"
+												placeholder="Type a message" />
+										</div>
+									</div>
+								</div>
+							</div>
+					</div>                     
+                    <!--  --------------------------------- --> 
+                </div>						
 			</div>
-		</div>
+			</div>		
+
+		<!-- 상단 메뉴 알림부분 끝 -->
+		<!-- 호스트 페이지 버튼 -->
 		<div class="headerUserWraper">
 			<a href="/Yolo/host/HostMain.host" class="userHandler"><span class="icon-user-follow"></span></a> 
 			<a id="hostbtn" href="/Yolo/host/HostMain.host" class="headerUser btn btn-o btn-gray">호스트 센터</a>
 		</div>
-		<!-- 상단 메뉴 알림부분 끝 -->					
+		<!-- 호스트 페이지 버튼 끝 -->				
 		<% } %>	
-		
+		<!-- -----------로그인 처리 끝 -------- -->
 		<div class="clearfix"></div>
 	</div><!-- Header END -->
 		<!-- 좌측 네비게이션 메뉴 -->
@@ -135,7 +183,8 @@
 						<a href="/Yolo/comShare/ShareList.share"><span class="navIcon fa fa-globe"></span>
 						<span class="navLabel">공간쉐어링</span></a>
 					</li>			
-		<% if( u_id==null || u_id=="" ){%>	
+		<% 		
+		if( u_id==null || u_id=="" ){%>	
 		<%}else{%>
 					<li class="hasSub"><a href="#">
 						<span class="navIcon fa fa-cog"></span>
@@ -305,7 +354,7 @@
 								<input type="button"  class="btn btn-success form-control" onclick="DaumPostcode()" value="우편번호 찾기">
 								</span>
 							</div>	
-						</div>	
+						</div>
 						<div class="form-group">
 							<input type="text" class="form-control" id="main_address" name="main_address" placeholder="주소">
 						</div>
@@ -317,7 +366,7 @@
 							<button type="submit" id="modal_join_btn" class="btn btn-lg btn-green">가입하기</button>
 						</div>
 						<p class="help-block">
-							회원이신가요? <a href="/Yolo/views/login/login.user"  ccccclass="text-green">로그인하기</a>
+							회원이신가요? <a href="/Yolo/views/login/login.user" class="text-green">로그인하기</a>
 						</p>
 					</form>
 				</div>
@@ -358,7 +407,11 @@
     <!-- 다음 맵 -->
     <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
     <script src=" <c:url value='/js_yolo/postcode/postcode.js'/> " type="text/javascript"></script>
+    <!-- 채팅 JS -->
+    <script src="http://192.168.0.151:3000/socket.io/socket.io.js"></script>
+    <script src="/Yolo/js_yolo/chat/chatClient.js"></script>
+    <script src="/Yolo/js_yolo/chat/chat.js" ></script>
  	<!-- javascript end -->
-
+ 
 </body>
 </html>
