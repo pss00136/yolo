@@ -63,12 +63,12 @@
 		<div class="headerUserWraper" id="signdiv">
 			<a href="#signin" class="userHandler modal-toggle" data-toggle="modal"><span class="icon-login"></span>
 			<a href="#signup" class="userHandler modal-toggle" data-toggle="modal"><span class="icon-note"></span>
-			<a href="/Yolo/host/HostMain.host" class="userHandler"><span class="icon-user-follow"></span></a> 
+			<a href="#signin" class="userHandler" data-toggle="modal"><span class="icon-user-follow"></span></a> 
 			<a href="#signin" id="web_login_btn" data-toggle="modal" class="btn btn-round btn-o btn-green">로그인</a> 
 			<a href="#signup" id="web_join_btn" data-toggle="modal" class="btn btn-round btn-o btn-green">회원가입</a>
 		</div>	
 		<div class="headerUserWraper">
-			<a id="hostbtn" href="/Yolo/host/HostMain.host" class="headerUser btn btn-o btn-gray">호스트 센터</a>
+			<a id="hostbtn" href="#signin" data-toggle="modal" class="headerUser btn btn-o btn-gray">호스트 센터</a>
 		</div>	
 		<!-- 로그인 회원가입 끝 -->				
 		<% }else{
