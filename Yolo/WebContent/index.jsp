@@ -135,8 +135,7 @@
 						<a href="/Yolo/comShare/ShareList.share"><span class="navIcon fa fa-globe"></span>
 						<span class="navLabel">공간쉐어링</span></a>
 					</li>			
-		<% 		
-		if( u_id==null || u_id=="" ){%>	
+		<% if( u_id==null || u_id=="" ){%>	
 		<%}else{%>
 					<li class="hasSub"><a href="#">
 						<span class="navIcon fa fa-cog"></span>
@@ -306,7 +305,7 @@
 								<input type="button"  class="btn btn-success form-control" onclick="DaumPostcode()" value="우편번호 찾기">
 								</span>
 							</div>	
-						</div>
+						</div>	
 						<div class="form-group">
 							<input type="text" class="form-control" id="main_address" name="main_address" placeholder="주소">
 						</div>
@@ -318,7 +317,7 @@
 							<button type="submit" id="modal_join_btn" class="btn btn-lg btn-green">가입하기</button>
 						</div>
 						<p class="help-block">
-							회원이신가요? <a href="/Yolo/views/login/login.user" class="text-green">로그인하기</a>
+							회원이신가요? <a href="/Yolo/views/login/login.user"  ccccclass="text-green">로그인하기</a>
 						</p>
 					</form>
 				</div>

@@ -1,5 +1,7 @@
 package yolo.user.service;
 
+import java.util.List;
+
 import yolo.user.dto.UserVO;
 
 /*
@@ -38,5 +40,6 @@ public interface UserService {
 	* @return  int : 결과값
 	*/
 	public UserVO loginUser(UserVO vo);
-
+    
+	
 }
