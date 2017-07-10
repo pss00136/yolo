@@ -1,101 +1,141 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<%@ page import="java.util.*"%>
+<%@ page import="yolo.user.dto.*"%>
 <!-- 추가 css -->
 <link href="/Yolo/css_yolo/cssView/MyPage/mypage.css" rel="stylesheet">
 <script type="text/javascript" src='/Yolo/js_yolo/host/hostregister.js'></script>
 			<!-------- ------- 개인정보 수정하기 ------------------------>
 			<div class="home-wrapper info">
-
+                <%
+								UserVO info = (UserVO)request.getAttribute("myinfo");
+             
+							   %>
 				<h4
 					style="text-align: center; margin-bottom: 30px; border-bottom: 1px solid silver; padding-bottom: 10px;">MY
 					PROFILE</h4>
 				<div class="panel-body">
-
+                  
 					<form class="form-horizontal" role="form">
 						<div class="form-group">
-							<label class="col-sm-2 control-label"> 프로필 </label>
-							<div class="col-sm-2">
-								<input type="file" name="imageUpload" id="imageUpload"
-									style="display: none;" /> <img src="" id="imagePreview" alt=""
-									class="ratio img-responsive img-circle" /><br />
+                     <label class="col-sm-2 control-label"> 프로필 </label>
+                     <div class="col-sm-2">
+                        <input type="file" name="imageUpload" id="imageUpload"
+                           style="display: none;" /> <img src="" id="imagePreview" alt=""
+                           class="ratio img-responsive img-circle" /><br />
 
-								<div style="text-align: center;">
-									<div style="display: inline-block;">
-										<label for="imageUpload" id="btn_profile"
-											class="btn btn-o btn-green">사진 등록</label>
-									</div>
-								</div>
-								<!-------사진 등록버튼 가운데정렬 -->
-							</div>
-						</div>
+                        <div style="text-align: center;">
+                           <div style="display: inline-block;">
+                              <label for="imageUpload" id="btn_profile"
+                                 class="btn btn-o btn-green">사진 등록</label>
+                           </div>
+                        </div>
+                        <!-------사진 등록버튼 가운데정렬 -->
+                     </div>
+                  </div>
 
 						<div class="form-group">
 							<label class="col-sm-2 control-label">아이디</label>
 							<div class="col-sm-8">
-								<input type="text" name="uId" class="form-control" value="">
+								<input type="text" name="u_id" class="form-control" value="<%= info.getU_id() %>" >
 							</div>
 						</div>
 				
 						<div class="form-group">
 							<label class="col-sm-2 control-label">비밀번호</label>
 							<div class="col-sm-8">
-								<input type="text" name="uPass" class="form-control" value="">
+								<input type="password" id="u_pass" name="u_pass" class="form-control" value="<%=info.getU_pass()%>" onchange="check()" >
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label class="col-sm-2 control-label">비밀번호 확인</label>
+							<div class="col-sm-8">
+								<input type="password" id="u_passconfirm" name="u_passconfirm"	class="form-control" value="" onchange="check()" >
+				                 <p id="result" style="color:red;"></p>
 							</div>
 						</div>
 				
 						<div class="form-group">
 							<label class="col-sm-2 control-label">이 름</label>
 							<div class="col-sm-8">
-								<input type="text" name="uName" class="form-control" value="">
+								<input type="text" name="u_name" class="form-control" value="<%= info.getU_name() %>" >
 							</div>
 						</div>
 				
 						<div class="form-group">
 							<label class="col-sm-2 control-label">휴대전화</label>
 							<div class="col-sm-8">
-								<input type="text" name="uPhone" class="form-control" value="">
+								<input type="text" name="u_tel" class="form-control" value="<%= info.getU_tel() %>" >
 							</div>
 						</div>
 				
 						<div class="form-group">
 							<label class="col-sm-2 control-label">이메일</label>
 							<div class="col-sm-8">
-								<input type="text" name="uEmail" class="form-control" value="">
+								<input type="text" name="u_email" class="form-control" value="<%= info.getU_email() %>" >
 							</div>
 						</div>
 			
 						<div class="form-group">
 							<label class="col-sm-2 control-label">생 일</label>
 							<div class="col-sm-8">
-								<input type="text" name="uBirth" class="form-control" id="datepicker">
+								<input type="text" name="u_birth" value="<%= info.getU_birth() %>" class="form-control" id="datepicker">
 								
 							</div>
 						</div>
-					
+					    <% 
+					    String str = info.getU_addr();
+						StringTokenizer st = new StringTokenizer(str,"/");
+						String postcode = st.nextToken();
+						String main_address = st.nextToken();
+						String detail_address = st.nextToken();
+					    %>
+						<!-- 우편번호 검색 -->
 						<div class="form-group">
-							<label class="col-sm-2 control-label">주 소 </label>
-							<div class="col-sm-8">
-
-								<div class="col-xs-5 col-md-3 addr">
-									<input type="text" name="uAddr" class="form-control" value="">
+							<label class="col-sm-2 control-label">주 소</label>
+							  <div class="col-sm-5">
+								<input type="text" class="form-control col-sm-5" id="postcode" name="postcode" value="<%=postcode %>">
 								</div>
-								<div class="col-xs-3 col-md-3">
-									<button id="btn_addr" class="btn btn-o btn-green">우편번호 검색</button>
-								</div>
-								
-								<input type="text" name="uAddr" class="form-control" value="">
-							</div>
+								<div class="col-sm-3">
+								<span class="input-group-btn">
+								<input type="button"  class="btn btn-success form-control " onclick="DaumPostcode()" value="우편번호 찾기">
+								</span>
+								</div>	
+						</div>
+						<div class="form-group">
+						<label class="col-sm-2 control-label"> </label>
+						   <div class="col-sm-8">
+							<input type="text" class="form-control col-sm-8" id="main_address" name="main_address" value="<%= main_address%>">
+						</div>
+						</div>
+						<div class="form-group">
+						<label class="col-sm-2 control-label"> </label>
+						 <div class="col-sm-8">
+							<input type="text" class="form-control" id="detail_address" name="detail_address" value=<%=detail_address%> >
+						</div>
 						</div>
 					</form>
 
 					<div style="text-align: center;">
 						<div style="display: inline-block;">
-							<button id="btn_modify" class="btn btn-o btn-green">수정</button>
+							<a href="/Yolo/mypage/info/ModifyFinish.myinfo?u_id=<%= info.getU_id() %>" id="btn_modify" class="btn btn-o btn-green">수 정</a>
 						</div>
 					</div>
 
 				</div>
 			</div>
 			<!---------------개인정보  수정하기 끝 ------------------------>
-	
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+      $(function(){
+    	  $('#u_passconfirm').blur(function(){
+    		  if($('#u_pass').val() !== $('#u_passconfirm').val()){
+    			  $('#result').text("비밀번호가 일치하지 않습니다.");
+    			  $('#u_passconfirm').val("");
+    		  }else{
+    			  $('#result').text("");
+    		  }
+    	  });
+      });
+    </script>

@@ -7,7 +7,12 @@
     width:75%;display:flex;flex-direction:column;
 }
 .text > p:first-of-type{
-    width:100%;margin-top:0;margin-bottom:auto;line-height: 13px;font-size: 12px;
+	word-break:break-all;
+    width:100%;
+    margin-top:0;
+    margin-bottom:auto;
+    line-height: 13px;
+    font-size: 14px;
 }
 .text > p:last-of-type{
     width:100%;text-align:right;color:silver;margin-bottom:-7px;margin-top:auto;
@@ -16,6 +21,7 @@
     float:left;padding-right:10px;
 }        
 .text-r{
+	width:95%;
     float:right;padding-left:10px;
 }
 /* .avatar{ */
@@ -28,7 +34,7 @@
 /* } */
 
 .username{
-	width:30%;
+	width:35%;
 	float:left;
 }
 .macro{

@@ -58,7 +58,7 @@
 					<div class="mobAvatarName"><%=u_id%></div>
 				</div>
 				<ul>
-					<li><a href="#"><span class="icon-user"></span>마이페이지</a></li>
+					<li><a href="/Yolo/mypage/info/MyPageView.myinfo?u_id=<%=u_id%>"><span class="icon-user"></span>마이페이지</a></li>
 					<li><a href="#"><span class="icon-envelope"></span>메세지 <span
 							class="badge pull-right bg-red">5</span></a></li>
 					<li class="divider"></li>
