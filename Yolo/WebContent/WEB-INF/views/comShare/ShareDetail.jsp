@@ -69,11 +69,6 @@
 					<div class="post-author">
 						<h1 id="lec_title">공간 쉐어링</h1>
 					</div>
-<!-- 					수정하기 버튼 마이페이지로 넘어감 -->
-<!-- 					<div class="btn"> -->
-<!-- 						<a data-toggle="modal" href="ShareEdit.share" -->
-<!-- 							class="btn btn-lg btn-round btn-green contactBtn">수정하기</a> -->
-<!-- 					</div> -->
 					<div class="clearfix"></div>
 				</div>
 				<!-- 공간 쉐어링 제목부분 끝 -->
@@ -85,10 +80,6 @@
 				<div class="post-top" id="post-top">
 					<div class="post-author">
 						<h1 id="lec_title">공간 쉐어링</h1>
-					</div>
-					<div class="btn">
-						<a data-toggle="modal" href="ShareEdit.share?sl_num=${list.sl_num }"
-							class="btn btn-lg btn-round btn-green contactBtn">수정하기</a>
 					</div>
 					<div class="clearfix"></div>
 				</div>
