@@ -33,6 +33,7 @@
 		evt.stopImmediatePropagation();
 		$(this).toggleClass("active");
 			var label = $("#alltime").find('label[class*=active]');
+			var disabled = $("#alltime").find('label[class*=disabled]');
 			var times = '';
 			for(var i = 0; i < label.length ; i++){
 				if(i==label.length-1){
@@ -41,6 +42,8 @@
 					times += $(label[i]).text()+"/"
 				}
 			}
+			
+			
 			$('#sl_time').val('');
 			$('#t_time').val('');
 			$('#sl_time').val(times);

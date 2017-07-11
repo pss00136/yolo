@@ -10,6 +10,7 @@
 						aria-hidden="true"></button>
 				</div>
 				<div class="modal-body">
+					<form action="ShareBookLot.share" method="post" name="shareBookLot" id="shareBookLot">
 					<!-- date picker -->
 					<div class='formInput dateSelector'> 
 						<input style="display:block;" type='input' class='icon-calendar' id="bl_date" name="bl_date" />
@@ -28,6 +29,7 @@
                     </div>
                     <input type="text" id="sl_time" name="sl_time"/>
 					<input type="text" id="t_time" name="t_time"/>
+				</form>
 				</div>
 				
 				<div class="modal-footer">
