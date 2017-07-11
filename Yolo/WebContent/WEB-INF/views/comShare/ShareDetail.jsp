@@ -10,11 +10,9 @@
 
 <script type="text/javascript">
 	$(function(){
-		$("#sl_time").click(function(){
+		$("#ask-time").click(function(){
 			var temp = $("#sl_time_h").val();
-// 			alert(temp);
 			var alltimes = temp.split('/');
-// 			alert(alltimes);
 			var hours = 8;
 			for(var i =0; i <alltimes.length;  i++ ){
 				hours++;
@@ -25,29 +23,25 @@
 				}
 			}
 		});
-		
-		$('#alltime label').on('click',function(evt){
-			alert("출력");
-			evt.preventDefault();
-			evt.stopImmediatePropagation();
-			$(this).toggleClass("active");
-// 			var label = $("#alltime").find('label[class*=active]');
-// 			var times = '';
-// 			for(var i = 0; i < label.length ; i++){
-// 				if(i==label.length-1){
-// 					times += $(label[i]).text()
-// 				}else{
-// 					times += $(label[i]).text()+"/"
-// 				}
-// 			}
-			
-// 			$('#sl_time').val('');
-// 			$('#t_time').val('');
-// 			$('#sl_time').val(times);
-// 			$('#t_time').val(times);
-			
-// 			alert(times);
-		});
+	});
+	
+	$(document).on('click','#alltime label',function(evt){
+		evt.preventDefault();
+		evt.stopImmediatePropagation();
+		$(this).toggleClass("active");
+			var label = $("#alltime").find('label[class*=active]');
+			var times = '';
+			for(var i = 0; i < label.length ; i++){
+				if(i==label.length-1){
+					times += $(label[i]).text()
+				}else{
+					times += $(label[i]).text()+"/"
+				}
+			}
+			$('#sl_time').val('');
+			$('#t_time').val('');
+			$('#sl_time').val(times);
+			$('#t_time').val(times);
 	});
 </script>
         
@@ -113,8 +107,8 @@
 												class="btn btn-lg btn-round btn-green contactBtn chat_in">문의하기</a>
 										</div>
 										<div class="btn">
-										<input type="hidden" id="sl_time_h" name="sl_time" value="${list.sl_time }" />
-											<a id="sl_time" data-toggle="modal" href="#contactAgent"
+											<input type="hidden" id="sl_time_h" name="sl_time_h" value="${list.sl_time }">
+											<a id="ask-time" data-toggle="modal" href="#contactAgent"
 												class="btn btn-lg btn-round btn-green contactBtn">신청하기</a>
 												
 										</div>
