@@ -40,7 +40,7 @@
 				}
 			}
 			
-			$('#bl_time').val('');
+			$('#sl_time').val('');
 			$('#t_time').val('');
 			$('#sl_time').val(times);
 			$('#t_time').val(times);

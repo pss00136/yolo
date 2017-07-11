@@ -24,8 +24,8 @@
                             </div>
                         </div>
                     </div>
-                    <input type="hidden" id="bl_time" name="bl_time"/>
-					<input type="hidden" id="t_time" name="t_time"/>
+                    <input type="text" id="sl_time" name="sl_time"/>
+					<input type="text" id="t_time" name="t_time"/>
 				</div>
 				
 				<div class="modal-footer">
