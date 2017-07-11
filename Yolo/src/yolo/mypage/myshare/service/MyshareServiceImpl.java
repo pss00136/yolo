@@ -34,5 +34,10 @@ public class MyshareServiceImpl implements MyshareService {
 		List<ShareMainListVO> list = mysharedao.myshareEdit(vo);
 		return list;
 	}
+
+	@Override
+	public int myshareDelete(ShareMainListVO sharemainlistVO) {
+		return mysharedao.myshareDelete(sharemainlistVO);
+	}
 	
 }

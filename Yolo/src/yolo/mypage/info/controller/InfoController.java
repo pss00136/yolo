@@ -44,9 +44,8 @@ public class InfoController {
 	@RequestMapping("mypage/info/MyInfoModify.myinfo")
 	public ModelAndView myinfomodify(UserVO vo, HttpSession session){
         ModelAndView mv = new ModelAndView();
-        
 		UserVO myinfo = service.myinfoview(vo);
-		
+		System.out.println(myinfo.getU_iname());
 		mv.addObject("myinfo", myinfo);
 		mv.setViewName("/mypage/info/MyInfoModify");
 		return mv;
@@ -60,12 +59,12 @@ public class InfoController {
 	* @return  ModelAndView:반환하는 경로 
 	*/
 	@RequestMapping("mypage/info/ModifyFinish.myinfo")
-	public ModelAndView modifyfinish(UserVO vo, String postcode,String main_address , String detail_address){
+	public ModelAndView modifyfinish(UserVO vo, String postcode, String main_address , String detail_address){
         ModelAndView mv = new ModelAndView();
+        System.out.println(vo.getU_id() + vo.getU_pass() + vo.getU_iname());
         vo.setU_addr(postcode+"/" + main_address + "/" + detail_address);
 		int result = service.myinfomodify(vo);
 		System.out.println(result);
-		System.out.println(vo.getU_tel());
 		mv.setViewName("redirect:/mypage/info/MyPageView.myinfo");
 		return mv;
 	}

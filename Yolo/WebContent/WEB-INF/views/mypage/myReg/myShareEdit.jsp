@@ -86,7 +86,7 @@ p{
 										<h4>쉐어링 정보입력</h4>
 										<hr>
 										<br />
-										<form id="shareInputForm1" name="shareInputForm1"  method="post" action="ShareModifyOk.share" class="form-horizontal" role="form">
+										<form id="myshareEditForm" name="myshareEditForm"  method="post" action="myshareEditOK.myreg" class="form-horizontal" role="form">
 									<c:choose>
 										<c:when test="${fn:length(list) eq 0  }">
 											<h1 class="tab center bounds padding active">작성된 쉐어링을 찾을 수 없습니다.</h1>	
@@ -171,7 +171,7 @@ p{
 												<div class="col-md-3"></div>
 												<a href="#" class="col-md-2 btn btn-round btn-o btn-green">수정</a>
 												<div class="col-md-3"></div>
-												<a href="#" class="col-md-2 btn btn-round btn-o btn-green">취소</a>
+												<a href="/Yolo/comShare/ShareList.share" class="col-md-2 btn btn-round btn-o btn-green">취소</a>
 												<div class="col-md-3"></div>
 											</div>
 											</c:forEach>

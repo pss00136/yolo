@@ -1,5 +1,10 @@
 package yolo.user.dto;
 
+import java.io.File;
+import java.io.IOException;
+
+import org.springframework.web.multipart.MultipartFile;
+
 public class UserVO {
 
 		/* 회원정보 */
@@ -25,6 +30,8 @@ public class UserVO {
 	private String u_ipath;  /* 회원 이미지 위치 */
 	private String u_iname;  /* 회원 이미지 이름 */
 	
+	MultipartFile file;
+	
 	/* Constructor */
 	public UserVO(String u_id, String u_pass, String u_name, String u_tel, String u_email, String u_birth,
 			String u_addr, String u_ipath, String u_iname) {
@@ -40,8 +47,33 @@ public class UserVO {
 		this.u_iname = u_iname;
 	}
 	
-	public UserVO() {
-		super();
+	public UserVO(){}
+	
+	public MultipartFile getFile() {
+		return file;
+	}
+	public void setFile(MultipartFile file) {
+		this.file = file;
+		
+		// 업로드 파일 접근
+		if(! file.isEmpty()){
+			this.u_iname = file.getOriginalFilename();
+			this.u_ipath = "C:\\Users\\kosta\\git\\yolo\\Yolo\\WebContent\\upload\\user\\";
+			//this.u_ipath = "C:\\Users\\kosta\\Desktop\\image\\";
+			//this.b_fsize = file.getSize();
+			
+			File f = new File(u_ipath+u_iname);
+			
+			try {
+				file.transferTo(f);
+				
+			} catch (IllegalStateException e) {				
+				e.printStackTrace();
+			} catch (IOException e) {
+				
+				e.printStackTrace();
+			}
+		}
 	}
 
 	/* Constructor end*/

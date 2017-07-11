@@ -518,12 +518,6 @@ $(function(){
 				- ($('.areaSlider .sliderTooltip').width() / 2);
 		$('.areaSlider .sliderTooltip').css('left', areaSliderLeft);
 
-		
-
-		$('.handleFilter').click(function() {
-			$('.filterForm').slideToggle(200);
-		});
-
 		//Enable swiping
 		$(".carousel-inner").swipe(
 				{
@@ -704,7 +698,7 @@ $(function(){
 
 		<div class="row">
 			<div id="search" class="col-xs-12 col-sm-6 col-md-12  formItem">
-				<div class="col-md-3">
+				<div class="col-md-3 col-xs-6">
 					<label>시</label> 
 					 <select id="sido" name="sido" class="btn btn-default">
 					 <c:forEach items="${zlist}" var="b">
@@ -713,7 +707,7 @@ $(function(){
 					 </select>
 				</div>
 
-				<div class="col-md-4">
+				<div class="col-md-4 col-xs-6">
 					<label>군·구</label> 
 					 <select id="gugun" name="gugun" class="btn btn-default">
                        
@@ -744,56 +738,72 @@ $(function(){
 			</div>
 
 			<div class="col-xs-12 col-sm-6 col-md-4 formItem">
-				<a id="lotsearch" style="margin-top: 20px;" class="btn btn-yellow col-md-7">검색</a>
+				<a id="lotsearch" style="margin-top: 20px;" class="btn btn-yellow col-md-7 col-xs-12">검색</a>
 				<div class="clearfix"></div>
 			</div>
 
 		</div>
-
-
+	</form>
+</div>
+<div class="resultsList">
 		<!------------- 공간 검색 결과 리스트 보여주기 --------------------->
-		<div class="row rightContainer">
-			<h3>공간검색결과</h3>
+		<% 
+			ArrayList list = (ArrayList)request.getAttribute("list");
+		if(list.size()==0){%>
+			<p>등록된 게시물이 없습니다.</p>
+		<%}//end of if%>
+		<%
+		//row열 판단 변수
+		int pagenum = 0;
+		//index값 저장 변수
+		int index = 0;
+		
+		if(list.size()%2 == 0){
+			pagenum = list.size()/2;
+		}else{
+			pagenum = list.size()/2 + 1;
+		}
+
+		for(int i=0; i<pagenum; i++){%>
 			<div class="row">
-				<c:choose>
-					<c:when test="${fn:length(list) eq 0}">
-						<tr>
-							<td colspan='7'>등록된 게시물이 없습니다.</td>
-						</tr>
-					</c:when>
-					<c:otherwise>
-						<c:forEach items="${list}" var="a">
-							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-								<a href="/Yolo/lot/LotView.lot?pri_num=${a.pri_num}"
-									class="card">
-									<div class="figure">
-										<img src="/Yolo/upload/lot/${a.priimg_name}" alt="image">
-										<div class="figCaption">
-											<div>${a.pri_weekprice}</div>
-											<span class="icon-eye"> 200</span> <span class="icon-heart">
-												54</span> <span class="icon-bubble"> 13</span>
-										</div>
-										<div class="figView">
-											<span class="icon-eye"></span>
-										</div>
-
-									</div>
-									<h2>${a.pri_title}</h2>
-									<div class="cardAddress">
-										<span class="icon-pointer"></span>${a.pri_addr}</div>
-									<div class="cardRating">
-										<span class="fa fa-star"></span> <span class="fa fa-star"></span>
-										<span class="fa fa-star"></span> <span class="fa fa-star"></span>
-										<span class="fa fa-star-o"></span> (146)
-									</div>
-
-									<div class="clearfix"></div>
-								</a>
+			<%
+			for(int j=0; j<2; j++){
+				LotListVO vo = (LotListVO)list.get(index);
+				index++; %>
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+					<a href="/Yolo/lot/LotView.lot?pri_num=<%= vo.getPri_num() %>" class="card">
+						<div class="figure">
+							<img src="/Yolo/upload/lot/<%= vo.getPriimg_name() %>" alt="image">
+							<div class="figCaption">
+								<div><%= vo.getPri_weekprice() %></div>
+									<span class="icon-eye"> 200</span> <span class="icon-heart">
+									54</span> <span class="icon-bubble"> 13</span>
 							</div>
-						</c:forEach>
-					</c:otherwise>
-				</c:choose>
+							<div class="figView">
+								<span class="icon-eye"></span>
+							</div>
+	
+						</div>
+						<h2><%= vo.getPri_title() %></h2>
+						<div class="cardAddress">
+							<span class="icon-pointer"></span><%= vo.getPri_addr() %>
+						</div>
+						<div class="cardRating">
+							<span class="fa fa-star"></span> <span class="fa fa-star"></span>
+							<span class="fa fa-star"></span> <span class="fa fa-star"></span>
+							<span class="fa fa-star-o"></span> (146)
+						</div>
+						<div class="clearfix"></div>
+					</a>
+				</div>						
+			<%	//index 위치 확인
+				if(index==list.size()){
+					//끝에 도달했다면 반복문 종료
+					break;
+				}//end of if	
+			}//end of for	%>
 			</div>
+		<%}//end of for	%>
 
 			<!-- 페이징 넘기기 -->
 			<ul class="pagination">
@@ -806,11 +816,9 @@ $(function(){
 				<li><a href="#">5</a></li>
 				<li><a href="#"><span class="fa fa-angle-right"></span></a></li>
 			</ul>
-		</div>
+</div>
 		<!------------- 공간 검색 결과 리스트 보여주기 --------------------->
 
-	</form>
-</div>
 <!---- 필터 끝 ----->
 
 <!-- 추가js -->

@@ -36,8 +36,15 @@ public interface MyshareService {
 	* @param   ShareMainListVO에서 전달받은 값
 	* @return  
 	*/
-
 	public List<ShareMainListVO> myshareEdit(ShareVO vo);
+
+	/*
+	* @메소드명: myshareDelete
+	* @역할: MyshareController에서 전달받은 값을 DAO로 전달, 결과값 리턴
+	* @param   ShareMainListVO에서 전달받은 값
+	* @return  
+	*/
+	public int myshareDelete(ShareMainListVO sharemainlistVO);
 
 	
 	
