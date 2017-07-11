@@ -109,7 +109,7 @@ public interface LotService {
 	
 	public int lotpay(BooklotVO booklotVO, TimetableVO timetableVO);
 	
-	public HostinfoVO lothostselect(HostinfoVO hvo);
+	public int lothostselect(HostinfoVO hvo);
 	
 	/*
 	* @메소드명: lotcount

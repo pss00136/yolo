@@ -71,11 +71,7 @@ public class HostController {
    @RequestMapping("/HostMain.host")	
    public ModelAndView hostmain(HostinfoVO hvo, HttpSession session){
 	    ModelAndView mv = new ModelAndView();
-	    String u_id = (String)session.getAttribute("u_id");
-		hvo.setU_id(u_id);
-	    HostinfoVO hostvo = service.hostselect(hvo);
-	    System.out.println(hostvo.getH_num() );
-	    session.setAttribute("h_num", hostvo.getH_num() );
+
 	    mv.setViewName("/host/HostMain.host");
 	   
 	    return mv;		
@@ -121,12 +117,12 @@ public class HostController {
    public ModelAndView hostmylot( HttpSession session ){
 	   ModelAndView mv = new ModelAndView();
 	   String h_num = (String)session.getAttribute("h_num");
-	   System.out.println("hhhh"+ h_num);
+	  
 	   List<LotListVO> list = service.hostmylotlist(h_num);
 	 
 	   mv.addObject("list", list);
 	   mv.addObject("dlist", list);
-	   mv.setViewName("/host/HostMyLot.host");
+	   mv.setViewName("/host/HostMyLot/modal_hostmylot_delete.host");
 	   return mv;
    }
    
@@ -154,7 +150,7 @@ public class HostController {
   @RequestMapping("/LotDelete.host")
   public ModelAndView lotdelete(LotListVO lotlistVO){
 	   ModelAndView mv = new ModelAndView();
-	   service.lotdelete(lotlistVO);  
+	   service.lotdelete(lotlistVO);   
 	   mv.setViewName("redirect:/host/HostMyLot.host");
 	   return mv;
   }

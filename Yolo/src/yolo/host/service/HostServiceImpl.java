@@ -33,10 +33,7 @@ public class HostServiceImpl implements HostService {
 	}
 
 
-	@Override
-	public HostinfoVO hostselect(HostinfoVO hvo) {
-		return hdao.hostselect(hvo);
-	}
+	
 
 
 	@Override

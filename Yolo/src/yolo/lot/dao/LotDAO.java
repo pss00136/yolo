@@ -339,9 +339,15 @@ public class LotDAO {
 		   return t_time;
 	  }
 	
-	public HostinfoVO lothostselect(HostinfoVO hvo){
+	public int lothostselect(HostinfoVO hvo){
+		int result =0;
 		HostinfoVO hostvo = session.selectOne("lot.lothostselect", hvo);
-		return hostvo;
+		if(hostvo == null){
+			result =0;
+		}else{
+			result =1;
+		}
+		return result;
 	}
 	
 	/*

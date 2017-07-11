@@ -37,14 +37,7 @@ public interface HostService {
 	*/
 	public List<LotListVO> hostmylotlist(String h_num);
 	
-	/*
-	* @메소드명: hostselect
-	* @역할: HostController에서 전달받은 값을 DAO로 전달, 결과값 리턴
-	*
-	* @param   HostVO:HostController에서 전달받은 값
-	* @return  
-	*/
-	public HostinfoVO hostselect(HostinfoVO hvo);
+	
 	
 	/*
 	* @메소드명: lotdelete

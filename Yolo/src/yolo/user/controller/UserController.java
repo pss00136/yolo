@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import yolo.host.dto.HostinfoVO;
 import yolo.user.dto.UserVO;
 import yolo.user.service.UserService;
 
@@ -93,9 +94,13 @@ public class UserController {
 		String referrer = request.getHeader("Referer");
 				
 		UserVO reVO = service.loginUser(userVO);
-		System.out.println(reVO);
+		HostinfoVO hostvo = service.hostselect(reVO);
+		if(hostvo != null){
+			session.setAttribute("h_num",hostvo.getH_num());
+		}
 		if(reVO != null){
 			session.setAttribute("u_id",reVO.getU_id());
+			
 			System.out.println("로그인 완료");
 		}else{
 			System.out.println("로그인 실패");

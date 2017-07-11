@@ -6,6 +6,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import yolo.host.dto.HostinfoVO;
 import yolo.user.dto.UserVO;
 /*
 * @클래스명: UserDAO
@@ -60,5 +61,9 @@ public class UserDAO {
 		return vo;
 	}
 	
+	public HostinfoVO hostselect(UserVO reVO){
+		HostinfoVO hostvo = session.selectOne("user.hostselect", reVO);
+		return hostvo;
+	}
 	
 }

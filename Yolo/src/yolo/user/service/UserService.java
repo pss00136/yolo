@@ -2,6 +2,7 @@ package yolo.user.service;
 
 import java.util.List;
 
+import yolo.host.dto.HostinfoVO;
 import yolo.user.dto.UserVO;
 
 /*
@@ -41,5 +42,6 @@ public interface UserService {
 	*/
 	public UserVO loginUser(UserVO vo);
     
+	public HostinfoVO hostselect(UserVO reVO);
 	
 }

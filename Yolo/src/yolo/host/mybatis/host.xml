@@ -40,9 +40,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<result column="pri_confirm" property="pri_confirm" />
 	</resultMap>
 
-<select id="hostselect" parameterType="hvo" resultType="hvo">
-SELECT h_num FROM hostinfo WHERE u_id = #{u_id}
-</select>
+
 
 <insert id="hostInputok" parameterType="hvo">
 	insert into HOSTINFO(h_num, h_name, h_content, u_id)

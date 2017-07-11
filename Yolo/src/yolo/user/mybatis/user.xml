@@ -17,6 +17,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</if>
 </select>
 
-
+<select id="hostselect" parameterType="yolo.user.dto.UserVO" resultType="hvo">
+SELECT h_num FROM hostinfo WHERE u_id = #{u_id}
+</select>
 	
 </mapper>

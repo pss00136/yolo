@@ -40,6 +40,17 @@
  	<put-attribute name="body" value='/WEB-INF/views/{1}/{2}.jsp'></put-attribute>
  </definition>
  
+ <!-- host modal Template -->
+  <definition name='hostTemplateModal' template="/WEB-INF/template/host/template_host_modal.jsp">
+ 	<put-attribute name="header" value="/WEB-INF/template/host/header_host.jsp"></put-attribute>
+ 	<put-attribute name="menu" value="/WEB-INF/template/host/menu_host.jsp"></put-attribute>
+ </definition>
+ <definition name='/*/*/*.host' extends='hostTemplateModal'>
+ 	<put-attribute name="title" value='YoloWowLotHost'></put-attribute>
+ 	<put-attribute name="body" value='/WEB-INF/views/{1}/{2}.jsp'></put-attribute>
+ 	<put-attribute name="modal" value="/WEB-INF/template/modal/{3}.jsp"></put-attribute>
+ </definition>
+ 
  <!-- modal Template -->
  <definition name='modalTemplate' template="/WEB-INF/template/modal/template_modal.jsp">
  	<put-attribute name="header" value="/WEB-INF/template/default/header.jsp"></put-attribute>

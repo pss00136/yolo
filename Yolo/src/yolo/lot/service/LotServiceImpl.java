@@ -77,7 +77,7 @@ public class LotServiceImpl implements LotService {
 	}
 
 	@Override
-	public HostinfoVO lothostselect(HostinfoVO hvo) {
+	public int lothostselect(HostinfoVO hvo) {
 		return ldao.lothostselect(hvo);
 	}
 

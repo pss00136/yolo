@@ -4,6 +4,23 @@
 <%@ page import="yolo.lot.dto.*"%>
            <!-- 추가 css -->
            <link href="/Yolo/css_yolo/cssView/Host/host.css" rel="stylesheet">
+           <script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script type="text/javascript">
+	$(function(){
+		$(".hostlotdelete").click(function(){
+			var temp = $(this).find("#prinum").val();
+			
+
+			var href = '/Yolo/host/LotDelete.host?pri_num='+temp;
+			
+			$('#btn_delete').click(function(){
+
+				$('#btn_delete').attr("href", href);
+			});
+		});
+	});
+</script>
 
                 <div class="widgets">
                     <h4 style="margin-bottom: 30px; font-size: 20px; font-family: 'Nanum Brush Script';">내 공간보기</h4>
@@ -87,13 +104,11 @@
                                         </div>
                                         <div>
 	                                        <a style="float:right; margin: 5px;" href="/Yolo/host/LotModify.host?pri_num=<%=lvo.getPri_num()%>" class="btn  btn-o btn-green">수정</a>
-	<%--                                                 <a style="float:right; margin: 5px;" href="/Yolo/host/LotDelete.host?pri_num=<%=lvo.getPri_num()%>" id="bdelete" class="btn  btn-o btn-green">삭제</a> --%>
 										</div>
-										<div>
-											 <a style="float:right; margin: 5px;" href="/Yolo/host/LotDelete.host?pri_num=<%=lvo.getPri_num()%>" id="bdelete" class="btn btn-o btn-green">삭제</a> --%>
-<%-- 											<input type="hidden" class="sc_num1" value="${c.sc_num}"/> --%>
-<!-- 														<a data-toggle="modal" href="#SigningCancel" role="button" class="btn btn-lg btn-round btn-green cancelBtn" data-backdrop="static">취소하기</a> -->
-<!-- 											<a data-toggle="modal" href="#SigningCancel" class="btn btn-lg btn-round btn-green cancelBtn">취소하기</a> -->
+										
+										<div  class="hostlotdelete" >
+										<input type="hidden" id="prinum" value="<%=lvo.getPri_num()%>"/>
+											 <a style="float:right; margin: 5px;" data-toggle="modal" href="#SigningCancel" class="btn btn-o btn-green">삭제</a> 
 										</div>
 													
                                     </a>
@@ -114,3 +129,4 @@
                     </div>
                     
  </div>
+ 

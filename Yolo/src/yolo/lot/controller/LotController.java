@@ -73,12 +73,8 @@ public class LotController {
 		   ModelAndView mv = new ModelAndView();
 		   String u_id = (String)session.getAttribute("u_id");
 		   hvo.setU_id(u_id);
-           HostinfoVO hostvo = service.lothostselect(hvo);
-           System.out.println(hostvo.getU_id() + ">>>" +hostvo.getH_num());
-		   if( hostvo != null){
-			   //h_num세션을 지정해줌
-			    session.setAttribute("h_num", hostvo.getH_num() );
-			    System.out.println(hostvo.getH_num());
+           int hostresult = service.lothostselect(hvo);
+		   if( hostresult == 1){
 			    mv.setViewName("/lot/LotInputFirst.host");			   
 		   }
 		   else{
