@@ -21,24 +21,59 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <!-- club 예약한 공간 list 출력 -->
 <select id="clubinputList" parameterType="string" resultType="yolo.share.dto.InputListVO">
- SELECT B.BL_DATE B_DATE, B.BL_ID BL_ID, P.PRI_NUM PRI_NUM, P.PRI_TITLE PRI_TITLE, I.PRIIMG_NAME PRIIMG_NAME, P.PRI_ADDR PRI_ADDR 
-FROM PRIVATELOT P, BOOKLOT B, PRIVATEIMAGE I
-WHERE P.PRI_NUM = B.PRI_NUM AND I.PRI_NUM = P.PRI_NUM AND B.U_ID = #{user}
+	SELECT B.BL_DATE B_DATE, B.BL_ID BL_ID, P.PRI_NUM PRI_NUM, P.PRI_TITLE PRI_TITLE, I.PRIIMG_NAME PRIIMG_NAME, P.PRI_ADDR PRI_ADDR 
+	FROM PRIVATELOT P, BOOKLOT B, PRIVATEIMAGE I
+	WHERE P.PRI_NUM = B.PRI_NUM AND I.PRI_NUM = P.PRI_NUM AND B.U_ID = #{user}
 </select>
 
 <!-- club List 출력 sql -->
-<select id = "clublistview" resultType="yolo.club.dto.ClubListVO">
-	SELECT C.C_NUM C_NUM, I.CIMG_NAME CIMG_NAME, C.C_TYPE C_TYPE, C.C_TITLE C_TITLE, C.c_people c_people, C.C_PERIOD C_PERIOD, C.C_DATE C_DATE, C.C_PLACE C_PLACE
-	FROM CLUB C JOIN CLUBIMAGE I
-	ON c.c_num = i.c_num
+<select id = "clublistview" parameterType="yolo.club.dto.ClubPagingVO" resultType="yolo.club.dto.ClubListVO">
+<![CDATA[
+	SELECT b.rnum rnum, b.C_NUM C_NUM, b.CIMG_NAME CIMG_NAME, b.C_TYPE C_TYPE, b.C_TITLE C_TITLE, b.c_people c_people, b.C_PERIOD C_PERIOD, b.C_DATE C_DATE, b.C_PLACE C_PLACE
+	FROM (Select rownum rnum, a.C_NUM C_NUM, a.CIMG_NAME CIMG_NAME, a.C_TYPE C_TYPE, a.C_TITLE C_TITLE, a.c_people c_people, a.C_PERIOD C_PERIOD, a.C_DATE C_DATE, a.C_PLACE C_PLACE
+	      FROM (SELECT C.C_NUM C_NUM, I.CIMG_NAME CIMG_NAME, C.C_TYPE C_TYPE, C.C_TITLE C_TITLE, C.c_people c_people, C.C_PERIOD C_PERIOD, C.C_DATE C_DATE, C.C_PLACE C_PLACE
+	            FROM CLUB C JOIN CLUBIMAGE I
+	            ON c.c_num = i.c_num 
+	            ORDER BY to_number(substr(C.C_NUM, 3))) a
+	      WHERE ROWNUM <= #{endCount}) b
+	WHERE b.rnum >= #{startCount}
+]]>
 </select>
+
+<!-- list 게시물 총 조회 -->
+<select id="clubTotalgetCount" resultType="int">
+SELECT COUNT(*) totalCount 
+FROM CLUB 
+</select>
+
+<!-- <select id="clubSearchgetCount" parameterType="hashmap" resultType="int"> -->
+<!-- SELECT COUNT(*) totalCount  -->
+<!-- FROM (SELECT C.C_NUM C_NUM, I.CIMG_NAME CIMG_NAME, C.C_TYPE C_TYPE, C.C_TITLE C_TITLE, C.c_people c_people, C.C_PERIOD C_PERIOD, C.C_DATE C_DATE, C.C_PLACE C_PLACE -->
+<!-- 	FROM CLUB C JOIN CLUBIMAGE I -->
+<!-- 	ON c.c_num = i.c_num -->
+<!-- 	<where> -->
+<!-- 		<choose> -->
+<!-- 			<when test= "keyWord.size != null"> -->
+<!-- 				C.C_TYPE like #{keyWord} -->
+<!-- 			</when> -->
+<!-- 			<when test="locations.size != null"> -->
+<!-- 				<foreach collection="locations" item="one" index="index" open="(" close=")" separator="or"> -->
+<!-- 					C.C_PLACE like #{one} ||'%' -->
+<!-- 				</foreach> -->
+<!-- 			</when> -->
+<!-- 		</choose> -->
+<!-- 	</where> -->
+<!-- 	) -->
+
+<!-- </select> -->
 
 <!-- club keyword Search 출력 sql -->
 <select id = "clubsearhKey" parameterType="hashmap" resultType="yolo.club.dto.ClubListVO">
 	SELECT C.C_NUM C_NUM, I.CIMG_NAME CIMG_NAME, C.C_TYPE C_TYPE, C.C_TITLE C_TITLE, C.c_people c_people, C.C_PERIOD C_PERIOD, C.C_DATE C_DATE, C.C_PLACE C_PLACE
 	FROM CLUB C JOIN CLUBIMAGE I
 	ON c.c_num = i.c_num
- 	WHERE C.C_TYPE like #{keyWord}
+	WHERE C.C_TYPE like #{keyWord}
+	
 </select>
 
 <!-- club location Search 출력 sql -->

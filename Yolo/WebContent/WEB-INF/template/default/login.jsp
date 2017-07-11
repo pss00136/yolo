@@ -14,13 +14,13 @@
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
 				</div>
 				<div class="modal-body">
-					 <form role="form" method="post" action="/Yolo/login/login.main">
+					 <form id="login_frm" role="form" method="post" action="/Yolo/login/login.main">
 
 						<div class="form-group">
-							<input type="text" placeholder="ID" name="u_id" class="form-control">
+							<input type="text" id="login_id_input" placeholder="ID" name="u_id" class="form-control">
 						</div>
 						<div class="form-group">
-							<input type="password" placeholder="Password" name="u_pass" class="form-control">
+							<input type="password" id="login_pass_input" placeholder="Password" name="u_pass" class="form-control">
 						</div>
 						<div class="form-group">
 							<div class="row">
@@ -43,7 +43,7 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<button id="modal_login_btn" type="submit" class="btn btn-lg btn-green">LOGIN</button>
+							<a id="modal_login_btn" class="btn btn-lg btn-green">LOGIN</a>
 						</div>
 						<p class="help-block">
 							아직 회원이 아니십니까? 

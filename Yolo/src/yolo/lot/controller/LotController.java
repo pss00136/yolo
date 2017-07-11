@@ -29,6 +29,7 @@ import yolo.host.dto.HostinfoVO;
 import yolo.host.service.HostService;
 import yolo.lot.dto.BooklotVO;
 import yolo.lot.dto.LotListVO;
+import yolo.lot.dto.LotPagingVO;
 import yolo.lot.dto.PostscriptVO;
 import yolo.lot.dto.PrivateimageVO;
 import yolo.lot.dto.PrivatelotVO;
@@ -223,15 +224,53 @@ public class LotController {
  
 	    /*
 		* @메소드명: lotlist
-		* @역할: 공간 검색, 검색 결과 보여주기 
+		* @역할: 공간 검색, 검색 결과 보여주기, 페이징
 		*
 		* @param   LotListVO 값
 		* @return  String:반환하는 경로
 		*/
 	   @RequestMapping("lot/LotList.lot")
-		public ModelAndView lotlist(LotListVO lotlistVO, ZipcodeVO zipcodeVO ){
+		public ModelAndView lotlist(LotPagingVO lpageVO, LotListVO lotlistVO, ZipcodeVO zipcodeVO ){
 		    ModelAndView mv = new ModelAndView();
-		    List<LotListVO> list = service.lotlistview();
+		    
+		    int lotTotalCount = service.lotcount(); //총 게시물 갯수 구하기
+		    System.out.println("공간 총 게시물 수: " + lotTotalCount);
+		    int lotCountList = 4; //한 페이지에 출력될 게시물 수
+		    int LotCountPage = 5; //한 화면에 보여줄 페이지 수
+		    int lotTotalPage = lotTotalCount / lotCountList; //총 페이지 수
+		    if(lotTotalCount % lotCountList > 0){
+		    	lotTotalPage++;
+			}
+		    
+		    int LotNowPage = lpageVO.getLotNowPage(); //현재 보여줄 페이지 가져오기
+		    
+		    // 현재 보여줄 페이지 요청이 1페이지보다 작을때 1페이지로 변환
+		    if (LotNowPage < 1) {
+		    	LotNowPage = 1;
+			} 
+			
+		    //보여줄 페이지 요청이 총 페이지 보다 클때  총 페이지로 변환
+			if (lotTotalPage < LotNowPage) {
+				LotNowPage = lotTotalPage;
+			} 
+ 
+			//화면에 보여줄 시작 페이지수
+			int startPage = ((LotNowPage - 1) / LotCountPage) * LotCountPage + 1; 
+			
+			//화면에 보여줄 끝 페이지 수
+			int endPage = startPage + LotCountPage - 1; 
+			
+			// 마지막에 보여줄 페이지 수가 총 페이지 수 보다 클때
+			if (endPage > lotTotalPage) {
+			    endPage = lotTotalPage;
+			}
+				
+			int startCount = ((LotNowPage - 1) * lotCountList) + 1; //페이지에 보여줄 첫번째 게시물 
+			int endCount = LotNowPage * lotCountList;   // 페이지에 보여줄 마지막 게시물
+			lpageVO.setStartCount(startCount);
+			lpageVO.setEndCount(endCount);
+			
+		    List<LotListVO> list = service.lotlistview(lpageVO);
 		    //시,도 셀렉트박스
 		    List<ZipcodeVO> zlist = service.selectsido();
 		    //구,군 셀렉트박스
@@ -242,6 +281,9 @@ public class LotController {
 		    mv.addObject("list", list);
 		    mv.addObject("zlist", zlist);
 		    mv.addObject("gugunlist", gugunlist);
+		    mv.addObject("startPage", startPage);
+		    mv.addObject("endPage", endPage);
+		    mv.addObject("LotNowPage", LotNowPage);
 		    mv.setViewName("/lot/LotList.map");
 			return mv;
 		}
@@ -288,7 +330,11 @@ public class LotController {
 	   @RequestMapping("lot/LotView.lot")
 		public ModelAndView lotview(LotListVO lotlistVO, PostscriptVO postVO){
 		   ModelAndView mv = new ModelAndView();
+		    //조회수 증가
+		    service.lotviewcount(lotlistVO);
+		    //상세정보 보여주기
 		    LotListVO list = service.lotdetailview(lotlistVO);
+		    System.out.println(list.getPri_bookmark());
 		    List<PostscriptVO> review = service.lotreviewlist(postVO);
 		    String jsonlot = lotjson(list);
 			mv.addObject("jsonlot", jsonlot);

@@ -6,6 +6,7 @@ import yolo.host.dto.EntrepreneurVO;
 import yolo.host.dto.HostinfoVO;
 import yolo.lot.dto.BooklotVO;
 import yolo.lot.dto.LotListVO;
+import yolo.lot.dto.LotPagingVO;
 import yolo.lot.dto.PostscriptVO;
 import yolo.lot.dto.PrivateimageVO;
 import yolo.lot.dto.PrivatelotVO;
@@ -45,7 +46,7 @@ public interface LotService {
 	* @param   LotListVO 에서 전달받은 값
 	* @return  
 	*/
-	public List<LotListVO> lotlistview();
+	public List<LotListVO> lotlistview(LotPagingVO  lpageVO);
 
 	/*
 	* @메소드 명: lotdetailview
@@ -109,4 +110,21 @@ public interface LotService {
 	
 	public HostinfoVO lothostselect(HostinfoVO hvo);
 	
+	/*
+	* @메소드명: lotcount
+	* @역할: LotController에서 전달받은 값을 DAO로 전달, 결과값 리턴
+	*
+	* @param   LotPagingVO 에서 전달받은 값
+	* @return  
+	*/
+	public int lotcount();
+	
+	/*
+	* @메소드명: lotviewcount
+	* @역할: LotController에서 전달받은 값을 DAO로 전달, 결과값 리턴
+	*
+	* @param   LotPagingVO 에서 전달받은 값
+	* @return  
+	*/
+	public int lotviewcount(LotListVO lotlistVO);
 }

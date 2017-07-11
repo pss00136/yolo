@@ -12,6 +12,7 @@ import yolo.host.dto.HostinfoVO;
 import yolo.lot.dao.LotDAO;
 import yolo.lot.dto.BooklotVO;
 import yolo.lot.dto.LotListVO;
+import yolo.lot.dto.LotPagingVO;
 import yolo.lot.dto.PostscriptVO;
 import yolo.lot.dto.PrivateimageVO;
 import yolo.lot.dto.PrivatelotVO;
@@ -29,8 +30,8 @@ public class LotServiceImpl implements LotService {
 		 return result;
 	}
 	
-	public List<LotListVO> lotlistview(){      
-		return ldao.lotlistview();
+	public List<LotListVO> lotlistview(LotPagingVO lpageVO){      
+		return ldao.lotlistview(lpageVO);
 	}
 	
 	public List<LotListVO> lotsearch(String sido, String gugun, String rdate, String rcount){      
@@ -77,6 +78,19 @@ public class LotServiceImpl implements LotService {
 	@Override
 	public HostinfoVO lothostselect(HostinfoVO hvo) {
 		return ldao.lothostselect(hvo);
+	}
+
+	@Override
+	public int lotcount() {
+		int lotcount = ldao.lotcount();
+		return lotcount;
+		
+	}
+
+	@Override
+	public int lotviewcount(LotListVO lotlistVO) {
+		int lotviewcount = ldao.lotviewcount(lotlistVO);
+		return lotviewcount;
 	}
 
 }

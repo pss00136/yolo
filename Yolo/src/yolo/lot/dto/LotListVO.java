@@ -32,6 +32,7 @@ public class LotListVO {
 	private String pri_web;       /* 홈페이지 */
 	private int pri_bookcount;    /* 예약수 */
 	private int pri_bookmark;     /* 관심지수 */
+	private int pri_hits;         /* 조회수(클릭수) */
 	private String pri_regdate;   /* 등록일 */
 	private String pri_confirm;   /* 관리자승인여부 */
 	
@@ -44,7 +45,7 @@ public class LotListVO {
 			String pri_content, String pri_info, String pri_account, int pri_weekprice, int pri_weekendprice,
 			String pri_facility, int pri_minpeople, int pri_maxpeople, String pri_weekdayo, String pri_weekdaye,
 			String pri_weekendo, String pri_weekende, String pri_lat, String pri_long, String pri_tel, String pri_web,
-			int pri_bookcount, int pri_bookmark, String pri_regdate, String pri_confirm) {
+			int pri_bookcount, int pri_bookmark, int pri_hits, String pri_regdate, String pri_confirm) {
 		super();
 		this.priimg_num = priimg_num;
 		this.priimg_path = priimg_path;
@@ -77,6 +78,7 @@ public class LotListVO {
 		this.pri_bookmark = pri_bookmark;
 		this.pri_regdate = pri_regdate;
 		this.pri_confirm = pri_confirm;
+		this.pri_hits = pri_hits;
 	}
 
 	/* End of Constructor */
@@ -94,7 +96,16 @@ public class LotListVO {
 	public String getPriimg_path() {
 		return priimg_path;
 	}
+    
+	public int getPri_hits() {
+		return pri_hits;
+	}
 
+
+	public void setPri_hits(int pri_hits) {
+		this.pri_hits = pri_hits;
+	}
+	
 	public void setPriimg_path(String priimg_path) {
 		this.priimg_path = priimg_path;
 	}

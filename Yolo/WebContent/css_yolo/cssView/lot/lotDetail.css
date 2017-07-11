@@ -1,3 +1,12 @@
+#lot_title{
+	font-size: 23px;
+}
+
+#bookmark{
+	cursor:pointer;
+	color:coral;
+}
+
 #commentsForm {
 	padding-bottom: 10px;
 }

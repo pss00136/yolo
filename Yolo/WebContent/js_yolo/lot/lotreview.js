@@ -39,4 +39,40 @@ $(function(){
 			});
 	});
 	
+	//찜 이벤트
+	$("#bookmark").click(function(){
+		if( $("#bookmark").attr('class') == "fa fa-heart-o"){
+			$.ajax({
+				type: "POST",
+				url: "/Yolo/lot/bookmark.lot",
+				data:{"bm_selnum": $("#Repri_num").val() ,"bm_category":'공간'},
+				dataType : "text",
+	            contentType: "application/x-www-form-urlencoded; charset=UTF-8",			
+				success : function(data){
+					//채워진 하트로 이미지 변경
+					$("#bookmark").attr('class','fa fa-heart');
+				}, 
+				error : function(request,status, error){
+	    			alert("error:"+ error);
+	    		}
+			});			
+		}else if( $("#bookmark").attr('class') == "fa fa-heart" ){
+			$.ajax({
+				type: "POST",
+				url: "/Yolo/lot/bookmarkdelete.lot",
+				data:{"bm_selnum": $("#Repri_num").val()},
+				dataType : "text",
+	            contentType: "application/x-www-form-urlencoded; charset=UTF-8",			
+				success : function(data){
+					//빈 하트로 이미지 변경
+					$("#bookmark").attr('class','fa fa-heart-o');
+				}, 
+				error : function(request,status, error){
+	    			alert("error:"+ error);
+	    		}
+			});					
+		}
+
+	});
+	
 });

@@ -172,15 +172,41 @@
 	                        </c:otherwise>
                         </c:choose>
                     </div>
-                    <ul class="pagination">
-                        <li class="disabled"><a href="#"><span class="fa fa-angle-left"></span></a></li>
-                        <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#"><span class="fa fa-angle-right"></span></a></li>
-                    </ul>
+<!--                     <ul class="pagination"> -->
+<!--                         <li class="disabled"><a href="#"><span class="fa fa-angle-left"></span></a></li> -->
+<!--                         <li class="active"><a href="#">1</a></li> -->
+<!--                         <li><a href="#">2</a></li> -->
+<!--                         <li><a href="#">3</a></li> -->
+<!--                         <li><a href="#">4</a></li> -->
+<!--                         <li><a href="#">5</a></li> -->
+<!--                         <li><a href="#"><span class="fa fa-angle-right"></span></a></li> -->
+<!--                     </ul> -->
+					<!-- 페이징 부분 -->
+					<div class="row bounds padding" style="text-align:center;">
+						<div class="col-md-4"></div>
+						<div class="col-md-4 col-xs-12" style="display:inline-block;">
+							<ul class="pagination pagination-round">
+								<li><a href="ClubList.club?clubNowPage=${clubNowPage -1}"><span
+										class="fa fa-angle-left"></span></a></li>
+											
+										
+										<c:forEach var="paging" begin='${startPage}'  end='${endPage}' step ="1">
+											<c:choose>
+												<c:when test='${paging == clubNowPage}'>
+													<li class="active"><a href="#">${paging}</a></li>
+												</c:when>
+												<c:otherwise>	
+													<li><a href="ClubList.club?clubNowPage=${paging}">${paging}</a></li>	
+												</c:otherwise>								
+											</c:choose>
+										</c:forEach>
+								
+	
+								<li><a href="ClubList.club?clubNowPage=${clubNowPage +1}"><span class="fa fa-angle-right"></span></a></li>
+							</ul>				
+						</div>
+						<div class="col-md-4"></div>
+					</div><!-- 페이징 부분 끝 -->
                 </div>
              </div>
 <!--                 </form> -->

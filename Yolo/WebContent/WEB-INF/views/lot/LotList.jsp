@@ -776,8 +776,9 @@ $(function(){
 							<img src="/Yolo/upload/lot/<%= vo.getPriimg_name() %>" alt="image">
 							<div class="figCaption">
 								<div><%= vo.getPri_weekprice() %></div>
-									<span class="icon-eye"> 200</span> <span class="icon-heart">
-									54</span> <span class="icon-bubble"> 13</span>
+									<span class="icon-eye"><%= vo.getPri_hits() %></span> 
+									<span class="icon-heart">
+									54</span> 
 							</div>
 							<div class="figView">
 								<span class="icon-eye"></span>
@@ -806,16 +807,32 @@ $(function(){
 		<%}//end of for	%>
 
 			<!-- 페이징 넘기기 -->
-			<ul class="pagination">
-				<li class="disabled"><a href="#"><span
-						class="fa fa-angle-left"></span></a></li>
-				<li class="active"><a href="#">1</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">5</a></li>
-				<li><a href="#"><span class="fa fa-angle-right"></span></a></li>
-			</ul>
+				<!-- 페이징 부분 -->
+					<div class="row bounds padding" style="text-align:center;">
+						<div class="col-md-4"></div>
+						<div class="col-md-4 col-xs-12" style="display:inline-block;">
+							<ul class="pagination pagination-round">
+								<li><a href="LotList.lot?LotNowPage=${LotNowPage -1}"><span
+										class="fa fa-angle-left"></span></a></li>
+											
+										
+										<c:forEach var="paging" begin='${startPage}'  end='${endPage}' step ="1">
+											<c:choose>
+												<c:when test='${paging == LotNowPage}'>
+													<li class="active"><a href="#">${paging}</a></li>
+												</c:when>
+												<c:otherwise>	
+													<li><a href="LotList.lot?LotNowPage=${paging}">${paging}</a></li>	
+												</c:otherwise>								
+											</c:choose>
+										</c:forEach>
+								
+	
+								<li><a href="LotList.lot?LotNowPage=${clubNowPage +1}"><span class="fa fa-angle-right"></span></a></li>
+							</ul>				
+						</div>
+						<div class="col-md-4"></div>
+					</div><!-- 페이징 부분 끝 -->
 </div>
 		<!------------- 공간 검색 결과 리스트 보여주기 --------------------->
 
