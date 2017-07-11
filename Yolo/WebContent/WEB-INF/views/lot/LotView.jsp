@@ -733,7 +733,10 @@ $(function(){
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-8">
 				<div class="summaryItem">
-					<h1 class="pageTitle">${list.pri_title}</h1>
+					<h1 class="pageTitle" id="lot_title">
+						${list.pri_title}&nbsp;
+						<span id="bookmark" class="fa fa-heart-o"></span>
+					</h1>
 					<strong style="margin-top: 0px; font-size: 25px;">${list.pri_weekprice}</strong>
 					<div class="address">
 						<span class="icon-pointer"></span>${list.pri_addr}

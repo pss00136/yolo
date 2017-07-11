@@ -12,6 +12,7 @@ import org.springframework.stereotype.Repository;
 import yolo.host.dto.EntrepreneurVO;
 import yolo.host.dto.HostinfoVO;
 import yolo.lot.dto.BooklotVO;
+import yolo.lot.dto.BookmarkVO;
 import yolo.lot.dto.LotListVO;
 import yolo.lot.dto.LotPagingVO;
 import yolo.lot.dto.PostscriptVO;
@@ -349,6 +350,16 @@ public class LotDAO {
 	public int lotcount(){
 		int lotcount = session.selectOne("lot.lotcount");
 		return lotcount;
+	}
+	
+	public int lotBookmarkInsert(BookmarkVO bookmarkVO){
+		int result = session.insert("bookmark.bookmarkinsert",bookmarkVO);
+		return result;
+	}
+	
+	public int lotBookmarkDelete(BookmarkVO bookmarkVO){
+		int result = session.delete("bookmark.bookmarkdelete",bookmarkVO);
+		return result;
 	}
 
 }

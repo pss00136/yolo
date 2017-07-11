@@ -28,6 +28,7 @@ import yolo.host.dto.EntrepreneurVO;
 import yolo.host.dto.HostinfoVO;
 import yolo.host.service.HostService;
 import yolo.lot.dto.BooklotVO;
+import yolo.lot.dto.BookmarkVO;
 import yolo.lot.dto.LotListVO;
 import yolo.lot.dto.LotPagingVO;
 import yolo.lot.dto.PostscriptVO;
@@ -511,6 +512,31 @@ public class LotController {
 		   return mv;
 	   }
 	   
+	   @RequestMapping("lot/bookmark.lot")
+	   @ResponseBody
+	   public String bookmark(BookmarkVO bookmarkVO ,HttpSession session){	   
+		    String u_id = (String)session.getAttribute("u_id");
+		    bookmarkVO.setU_id(u_id);
+		    int result = service.lotBookmark(bookmarkVO);
+		    if(result == 1){
+		    	return "관심리스트에 추가되었습니다.";
+		    }else{
+		    	return "실패";
+		    }
+		}
+	   
+	   @RequestMapping("lot/bookmarkdelete.lot")
+	   @ResponseBody
+	   public String bookmarkdel(BookmarkVO bookmarkVO ,HttpSession session){
+		    String u_id = (String)session.getAttribute("u_id");
+		    bookmarkVO.setU_id(u_id);
+		    int result = service.lotBookmarkdelete(bookmarkVO);
+		    if(result == 1){
+		    	return "관심리스트가 삭제되었습니다.";
+		    }else{
+		    	return "실패";
+		    }
+		}
  
     	   
 }
