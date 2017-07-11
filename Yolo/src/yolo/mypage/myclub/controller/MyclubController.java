@@ -39,7 +39,7 @@ public class MyclubController {
 		List<ClubListVO> list = service.myclubList(uid);
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("list", list);
-		mv.setViewName("/mypage/myReg/ClubMyList");
+		mv.setViewName("/mypage/myReg/ClubMyList/modal_myclub_delete.modal");
 		System.out.println("controller"+list.size());
 		return mv;
 	}
@@ -70,5 +70,13 @@ public class MyclubController {
 	public String clubEdit(){
 		
 		return "/mypage/myReg/myClubEdit";
+	}
+	
+	@RequestMapping("/myClubDelete.myreg")
+	public ModelAndView myclubDelete(ClubListVO clublistVO){
+		ModelAndView mv = new ModelAndView();
+		service.myclubDelete(clublistVO);
+		mv.setViewName("redirect:/mypage/myReg/ClubMyList.myreg");
+		return mv;
 	}
 }

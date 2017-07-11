@@ -26,5 +26,10 @@ public class MyclubServiceImpl implements MyclubService {
 	public ClubListVO cdetail(ClubListVO clublistVO) {
 		return myclubdao.cdetail(clublistVO);
 	}
+
+	@Override
+	public int myclubDelete(ClubListVO clublistVO) {
+		return myclubdao.myclubDelete(clublistVO);
+	}
 	
 }

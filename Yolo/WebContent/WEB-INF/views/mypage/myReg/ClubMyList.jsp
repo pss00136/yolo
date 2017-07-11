@@ -8,7 +8,25 @@
 	rel="stylesheet">
 <link href="/Yolo/css_yolo/cssView/MyClub/ClubMyList.css"
 	rel="stylesheet">
+<!-- 추가 JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+<script type="text/javascript">
+	$(function(){
+		$("#delete_btn").click(function(){
+			var temp = $(this).find("#cnum").val();
+			alert(temp);
+
+			var action = '/Yolo/mypage/myReg/myClubDelete.myreg?c_num='+temp;
+			
+			$('#btn_delete').click(function(){
+// 				$('form').attr("action", action);
+// 				$('#btn_cancel').submit();
+				$('#btn_delete').attr("href", action);
+			});
+		});
+	});
+</script>
 <% 
 	// 세션에 있는 id값 가져오기
 	String u_id="";
@@ -49,8 +67,9 @@
 							<div class="btn-group">
 								<a href="myClubEdit.myreg" type="button" class="btn btn-o btn-blue">수정</a>
 							</div>
-							<div class="btn-group">
-								<a href="myClubDeleteOK.myreg" type="button" class="btn btn-o btn-red">삭제</a>
+							<div class="btn-group" id="delete_btn">
+								<input type="hidden" id="cnum" value="${l.c_num}" />
+								<a href="#SigningCancel" data-toggle="modal" class="btn btn-o btn-red">삭제</a>
 							</div>
 						</div>
 					</div>

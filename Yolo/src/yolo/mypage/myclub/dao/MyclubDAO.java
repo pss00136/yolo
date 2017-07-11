@@ -51,4 +51,13 @@ public class MyclubDAO {
 		return cdetail;
 	}
 	
+	public int myclubDelete(ClubListVO clublistVO){
+		int result = 0;
+		try {
+			result = session.delete("myclub.myclubDelete", clublistVO);
+		} catch (Exception e) {
+			System.out.println("myclubDelete 실패: " + e.getMessage());	
+		}
+		return result;
+	}
 }

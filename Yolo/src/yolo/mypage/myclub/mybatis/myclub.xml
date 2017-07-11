@@ -22,4 +22,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	WHERE C.C_NUM = #{c_num} AND C.U_ID = #{u_id}
 </select>
 
+<!-- myclubDelete -->
+<delete id="myclubDelete" parameterType="yolo.club.dto.ClubListVO">
+	DELETE FROM club WHERE C_NUM=#{c_num}
+</delete>
+
 </mapper>

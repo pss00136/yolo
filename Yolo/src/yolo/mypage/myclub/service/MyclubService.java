@@ -28,4 +28,12 @@ public interface MyclubService {
 	* @return  
 	*/
 	public ClubListVO cdetail(ClubListVO clublistVO);
+
+	/*
+	* @메소드명: myclubDelete
+	* @역할: MyclubController에서 전달받은 값을 DAO로 전달, 결과값 리턴
+	* @param   ClubListVO에서 전달받은 값
+	* @return  
+	*/
+	public int myclubDelete(ClubListVO clublistVO);
 }
