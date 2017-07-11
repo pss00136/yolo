@@ -11,8 +11,10 @@ import org.springframework.stereotype.Repository;
 
 import yolo.club.dto.ClubImageVO;
 import yolo.club.dto.ClubListVO;
+import yolo.club.dto.ClubPagingVO;
 import yolo.club.dto.ClubVO;
 import yolo.share.dto.InputListVO;
+import yolo.share.dto.SharePagingVO;
 
 /*
 * @클래스명: ClubDAO
@@ -75,10 +77,17 @@ public class ClubDAO {
 	* @param   
 	* @return  List<ClubListVO>: DB select쿼리문 결과값
 	*/
-	public List<ClubListVO> clublistview(){
+	public List<ClubListVO> clublistview(ClubPagingVO pagingVO){
 		List<ClubListVO> list = null;
-		list = session.selectList("club.clublistview");
+		list = session.selectList("club.clublistview", pagingVO);
 		return list;
+	}
+	
+	
+	public int clubTotalgetCount() {
+		int clubTotalCount = session.selectOne("club.clubTotalgetCount");
+		
+		return clubTotalCount;
 	}
 	
 	/*

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import yolo.club.dao.ClubDAO;
 import yolo.club.dto.ClubImageVO;
 import yolo.club.dto.ClubListVO;
+import yolo.club.dto.ClubPagingVO;
 import yolo.club.dto.ClubVO;
 import yolo.share.dto.InputListVO;
 
@@ -24,8 +25,13 @@ public class ClubServiceImpl implements ClubService {
 		return result;
 	}
 	
-	public List<ClubListVO> clublistview(){
-		return clubdao.clublistview();
+	public List<ClubListVO> clublistview(ClubPagingVO pageVO){
+		return clubdao.clublistview(pageVO);
+	}
+	
+	public int clubTotalgetCount() {
+		int clubTotalgetCount = clubdao.clubTotalgetCount();
+		return clubTotalgetCount;
 	}
 	
 	public List<InputListVO> inputList(String user){

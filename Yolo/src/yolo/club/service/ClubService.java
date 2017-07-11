@@ -5,6 +5,7 @@ import java.util.List;
 
 import yolo.club.dto.ClubImageVO;
 import yolo.club.dto.ClubListVO;
+import yolo.club.dto.ClubPagingVO;
 import yolo.club.dto.ClubVO;
 import yolo.share.dto.InputListVO;
 
@@ -30,7 +31,9 @@ public interface ClubService {
 	
 	public int clubinput( ClubVO clubVO, ClubImageVO cimgVO);
 	
-	public List<ClubListVO> clublistview();
+	public List<ClubListVO> clublistview(ClubPagingVO pageVO);
+	
+	public int clubTotalgetCount();
 	
 	public ClubListVO clubdetail(ClubListVO clublistVO);
 	

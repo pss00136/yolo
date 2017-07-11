@@ -49,7 +49,8 @@ public class appliedclubDAO {
 	
 	public int signclubdelete(SignclubVO signclubVO){
 		
-		int result = session.delete("appliedclub.appclubdelete", signclubVO);
+		int result = session.update("appliedclub.clubentryDown", signclubVO);
+		result += session.delete("appliedclub.appclubdelete", signclubVO);
 		
 		return result;
 	}

@@ -15,9 +15,11 @@ import org.springframework.web.servlet.ModelAndView;
 import yolo.club.dao.ClubDAO;
 import yolo.club.dto.ClubImageVO;
 import yolo.club.dto.ClubListVO;
+import yolo.club.dto.ClubPagingVO;
 import yolo.club.dto.ClubVO;
 import yolo.club.service.ClubService;
 import yolo.share.dto.InputListVO;
+import yolo.share.dto.SharePagingVO;
 
 /*
 * @클래스명: ClubController
@@ -61,10 +63,52 @@ public class ClubController {
 	* @return  ModelAndView :반환하는 경로
 	*/
 	@RequestMapping("/ClubList.club")
-	public ModelAndView list(String keyWord, String location){
+	public ModelAndView list(ClubPagingVO pageVO, String keyWord, String location){
+		
+		int clubTotalCount = service.clubTotalgetCount(); //총 게시물 수 구하기
+		System.out.println("위치 controller : db에 있는 club 총 게시물 수"+clubTotalCount);
+		int clubCountList = 2; // 한 페이지 출력될 게시물 수
+		int clubCountPage = 5; // 한 화면에 출력될 페이지 수
+		int clubTotalPage = clubTotalCount / clubCountList; // 총 페이지 수
+		if(clubTotalCount % clubCountList >0){
+			clubTotalPage++;
+		}
+		
+		
+		int clubNowPage = pageVO.getClubNowPage(); //보여줄 페이지 가져오기
+		System.out.println("pageVO.getClubNowPage() 값"+clubNowPage);
+		
+		if (clubNowPage < 1) {
+			clubNowPage = 1;
+		} // 보여줄 페이지 요청이 1페이지보다 작을때 1페이지로 변환
+		
+		if (clubTotalPage < clubNowPage) {
+			clubNowPage = clubTotalPage;
+		} //보여줄 페이지 요청이 총 페이지 보다 클때  총 페이지로 변환
+
+		int startPage = ((clubNowPage - 1) / clubCountPage) * clubCountPage + 1; //화면에 보여줄 시작 페이지수
+		int endPage = startPage + clubCountPage - 1; //화면에 보여줄 끝 페이지 수
+		
+		if (endPage > clubTotalPage) {
+		    endPage = clubTotalPage;
+		}// 마지막에 보여줄 페이지 수가 총 페이지 수 보다 클때
+			
+		int startCount = ((clubNowPage - 1) * clubCountList) + 1; //페이지에 보여줄 첫번째 게시물 
+
+		int endCount = clubNowPage * clubCountList;   // 페이지에 보여줄 마지막 게시물
+		System.out.println("위치: controller = startCount:"+startCount);
+		System.out.println("위치: controller = endCount:"+endCount);
+//		SharePagingVO vo = new SharePagingVO();
+		pageVO.setStartCount(startCount);
+		pageVO.setEndCount(endCount);
+	
+		System.out.println(pageVO.getEndCount());
+		System.out.println(pageVO.getStartCount());
+		
+		
 //		System.out.println("location:"+location);
 //		System.out.println("key:"+keyWord);
-		ModelAndView mv = new ModelAndView();
+		
 		List<ClubListVO> clublist = new ArrayList<ClubListVO>();
 		if(keyWord != null){
 			System.out.println("ㅋ워드 들어감");
@@ -76,12 +120,18 @@ public class ClubController {
 		else if(keyWord == null && location == null)
 		{
 			System.out.println("ㅋ워드 없음");
-			clublist = service.clublistview();
+			clublist = service.clublistview(pageVO);
 		}
+		
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("startPage",startPage);
+		mv.addObject("endPage",endPage);
+		mv.addObject("clubNowPage", clubNowPage);
 		mv.addObject("list", clublist);
 		mv.setViewName("/club/ClubList");
 		return mv;
 	}
+	
 	
 	/*
 	* @메소드명: clubDetail
