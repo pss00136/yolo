@@ -72,7 +72,7 @@ p{
 <script src="/Yolo/js/jquery-2.1.1.min.js"></script>
 <script type="text/javascript">
 $(function(){
-$("#share_check_ok").click(function(){
+	$("#share_check_ok").click(function(){
 		
 		
 		if($("#sl_title").val() ==""){
@@ -116,7 +116,6 @@ $("#share_check_ok").click(function(){
 		$('#sl_time').val(times);
 		$('#t_time').val(times);
 		
-		alert(times);
 	});	
 });
 

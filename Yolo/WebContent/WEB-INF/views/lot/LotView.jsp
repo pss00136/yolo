@@ -697,26 +697,26 @@ $(function(){
 
 		<!------------- 슬라이더로 사진, 상세사진 보여주기 --------------------->
 		<div class="carousel-inner">
-			<div class="item active">
-				<img src="/Yolo/upload/lot/${list.priimg_name}" alt="First slide">
+			<div  class="item active">
+				<img id="sliderimage" src="/Yolo/upload/lot/${list.priimg_name}" alt="First slide">
 				<div class="container">
 					<div class="carousel-caption"></div>
 				</div>
 			</div>
-			<div class="item">
-				<img src="/Yolo/images_yolo/lot/2-1.PNG" alt="Second slide">
+			<div  class="item">
+				<img id="sliderimage" src="/Yolo/images_yolo/lot/2-1.PNG" alt="Second slide">
 				<div class="container">
 					<div class="carousel-caption"></div>
 				</div>
 			</div>
-			<div class="item">
-				<img src="/Yolo/images_yolo/lot/2-2.PNG" alt="Third slide">
+			<div  class="item">
+				<img id="sliderimage" src="/Yolo/images_yolo/lot/2-2.PNG" alt="Third slide">
 				<div class="container">
 					<div class="carousel-caption"></div>
 				</div>
 			</div>
-			<div class="item">
-				<img src="/Yolo/images_yolo/lot/2-3.PNG" alt="Fourth slide">
+			<div  class="item">
+				<img id="sliderimage" src="/Yolo/images_yolo/lot/2-3.PNG" alt="Fourth slide">
 				<div class="container">
 					<div class="carousel-caption"></div>
 				</div>
@@ -735,6 +735,7 @@ $(function(){
 				<div class="summaryItem">
 					<h1 class="pageTitle" id="lot_title">
 						${list.pri_title}&nbsp;
+						
 						<span id="bookmark" class="fa fa-heart-o"></span>
 					</h1>
 					<strong style="margin-top: 0px; font-size: 25px;">${list.pri_weekprice}</strong>

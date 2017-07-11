@@ -12,6 +12,7 @@ import org.springframework.stereotype.Repository;
 import yolo.host.dto.EntrepreneurVO;
 import yolo.host.dto.HostinfoVO;
 import yolo.lot.dto.BooklotVO;
+import yolo.lot.dto.BookmarkVO;
 import yolo.lot.dto.LotListVO;
 import yolo.lot.dto.LotPagingVO;
 import yolo.lot.dto.PostscriptVO;
@@ -372,5 +373,28 @@ public class LotDAO {
 		
 		return result;
 	}
-
+   
+	  
+	/*
+	* @메소드명:  lotBookmarkInsert
+	* @역할:     LotService에서 전달받은 값을 DB에 삽입
+	*
+	* @param   BookmarkVO
+	* @return  list: DB insert쿼리문 결과값
+	*/
+	public int lotBookmarkInsert(BookmarkVO bookmarkVO){
+	        int result = session.insert("bookmark.bookmarkinsert",bookmarkVO);
+	        return result;
+	    }
+	/*
+	* @메소드명:  lotBookmarkDelete
+	* @역할:     LotService에서 전달받은 값을 DB에 삽입
+	*
+	* @param   BookmarkVO
+	* @return  list: DB insert쿼리문 결과값
+	*/    
+    public int lotBookmarkDelete(BookmarkVO bookmarkVO){
+	        int result = session.delete("bookmark.bookmarkdelete",bookmarkVO);
+	        return result;
+	    }
 }

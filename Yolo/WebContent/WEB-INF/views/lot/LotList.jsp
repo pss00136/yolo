@@ -2,15 +2,14 @@
 	pageEncoding="UTF-8"%>
 <link href="/Yolo/css/jquery-ui.css" rel="stylesheet">
 <link href="/Yolo/css/datepicker.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css"
+	href="/Yolo/css_yolo/cssView/lot/lotDetail.css" />
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ page import="java.util.*"%>
 <%@ page import="yolo.lot.dto.*"%>
-<style type="text/css">
-.dropdown-btn {
-	max-width: 200px;
-}
-</style>
+
 <%
 	String jsonList = (String) request.getAttribute("jsonList");
 	System.out.println(jsonList);
@@ -773,10 +772,10 @@ $(function(){
 				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 					<a href="/Yolo/lot/LotView.lot?pri_num=<%= vo.getPri_num() %>" class="card">
 						<div class="figure">
-							<img src="/Yolo/upload/lot/<%= vo.getPriimg_name() %>" alt="image">
+							<img id="lotimage" src="/Yolo/upload/lot/<%= vo.getPriimg_name() %>" alt="image">
 							<div class="figCaption">
 								<div><%= vo.getPri_weekprice() %></div>
-									<span class="icon-eye"><%= vo.getPri_hits() %></span> 
+									<span class="icon-eye"><%= vo.getPri_hits()%></span>  
 									<span class="icon-heart">
 									54</span> 
 							</div>

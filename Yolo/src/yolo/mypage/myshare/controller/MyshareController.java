@@ -71,9 +71,12 @@ public class MyshareController {
 	 */
 	@RequestMapping("/myShareEdit.myreg")
 	public ModelAndView myshareEdit(ShareVO vo ){
+		
+		
 		ModelAndView mv = new ModelAndView();
 		System.out.println(vo.getSl_num());
 		List<ShareMainListVO> list = service.myshareEdit(vo);
+		System.out.println("반환되는 리스트 값 사이즈"+list.size());
 		mv.addObject("list", list);
 		mv.setViewName("/mypage/myReg/myShareEdit");
 		return mv;
@@ -105,6 +108,6 @@ public class MyshareController {
 		return mv;
 	}
 	
-
+	
 	
 }

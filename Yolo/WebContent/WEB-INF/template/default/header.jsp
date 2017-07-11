@@ -128,6 +128,6 @@
 		<% } %>	
 		<!-- -----------로그인 처리 끝 -------- -->
 		<!-- 맵 아이콘 보여주기-->
-<!-- 		<a href="#" class="mapHandler"><span class="icon-map"></span></a> -->
-<!-- 		<div class="clearfix"></div>		 -->
+		<a href="#" class="mapHandler"><span class="icon-map"></span></a>
+		<div class="clearfix"></div>		
 	</div><!-- Header END -->

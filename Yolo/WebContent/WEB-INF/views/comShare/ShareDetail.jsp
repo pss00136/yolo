@@ -12,9 +12,9 @@
 	$(function(){
 		$("#sl_time").click(function(){
 			var temp = $("#sl_time_h").val();
-			alert(temp);
+// 			alert(temp);
 			var alltimes = temp.split('/');
-			alert(alltimes);
+// 			alert(alltimes);
 			var hours = 8;
 			for(var i =0; i <alltimes.length;  i++ ){
 				hours++;
@@ -69,10 +69,6 @@
 					<div class="post-author">
 						<h1 id="lec_title">공간 쉐어링</h1>
 					</div>
-					<div class="btn">
-						<a data-toggle="modal" href="ShareEdit.share"
-							class="btn btn-lg btn-round btn-green contactBtn">수정하기</a>
-					</div>
 					<div class="clearfix"></div>
 				</div>
 				<!-- 공간 쉐어링 제목부분 끝 -->
@@ -84,10 +80,6 @@
 				<div class="post-top" id="post-top">
 					<div class="post-author">
 						<h1 id="lec_title">공간 쉐어링</h1>
-					</div>
-					<div class="btn">
-						<a data-toggle="modal" href="ShareEdit.share?sl_num=${list.sl_num }"
-							class="btn btn-lg btn-round btn-green contactBtn">수정하기</a>
 					</div>
 					<div class="clearfix"></div>
 				</div>

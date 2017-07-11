@@ -90,4 +90,17 @@ label.star:before {
 
 }
 
+<!-- lotlist css -->
 
+.dropdown-btn {
+	max-width: 200px;
+}
+
+#lotimage{
+	height: 22%;
+}
+
+#sliderimage{
+	height: 50%;
+	width: 100%;
+}

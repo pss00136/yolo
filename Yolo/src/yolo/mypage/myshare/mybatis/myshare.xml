@@ -8,7 +8,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <!-- myshareList 출력 -->
 <select id="myshareList" parameterType="string" resultType="yolo.share.dto.ShareMainListVO">
 Select s.sl_num sl_num, s.sl_title sl_title, s.sl_content sl_content, s.sl_time sl_time, s.sl_price sl_price, s.sl_regdate sl_regdate, s.sl_hits sl_hits, s.bl_id bl_id, i.priimg_num priimg_num, i.priimg_path priimg_path, i.priimg_name priimg_name, p.pri_num pri_num, p.pri_title pri_title, p.pri_addr pri_addr
-FROM sharelot2 s, booklot b, privatelot p, privateimage i 
+FROM sharelot2 s, (select * from booklot where bl_date >= to_char(SYSDATE, 'YYYY-MM-DD')) b, privatelot p, privateimage i 
 WHERE s.bl_id = b.bl_id AND b.pri_num = p.pri_num AND p.pri_num = i.pri_num AND s.u_id = #{uid}
 </select>
 
@@ -21,7 +21,8 @@ WHERE s.bl_id = b.bl_id AND b.pri_num = p.pri_num AND p.pri_num = i.pri_num
 </select>
 
 <!-- myshareEdit 출력 어ㅣㅇㅇ리ㅏㅁ어라ㅣㅁ얼;미알;민앎;ㄴ이람;니 booklot-->
-<select id="myshareEdit" parameterType = "sharevo" resultType="yolo.share.dto.ShareMainListVO">
+<select id="myshareEdit" parameterType = "yolo.share.dto.ShareVO" resultType="yolo.share.dto.ShareMainListVO">
+<![CDATA[
 Select s.sl_num sl_num, s.u_id u_id, s.sl_title sl_title, s.sl_content sl_content, s.sl_time sl_time, s.sl_price sl_price, s.sl_regdate sl_regdate, s.sl_hits sl_hits, s.bl_id bl_id, i.priimg_num priimg_num, i.priimg_path priimg_path, i.priimg_name priimg_name, p.pri_num pri_num, p.pri_title pri_title, p.pri_addr pri_addr, p.pri_weekprice pri_weekprice, p.pri_weekendprice pri_weekendprice, p.pri_lat pri_lat, p.pri_long pri_long, l.bl_date bl_date, u.u_ipath u_ipath, u.u_iname u_iname 
 FROM (select * from sharelot2 WHERE sl_num = #{sl_num}) s, 
 	 (SELECT * FROM(select * from booklot where bl_id = #{bl_id}
@@ -31,12 +32,13 @@ FROM (select * from sharelot2 WHERE sl_num = #{sl_num}) s,
       (select * from privatelot where pri_booktype = '일단위') p, privateimage i ,userinfo u
 WHERE s.bl_id = l.bl_id AND l.pri_num = p.pri_num AND l.u_id = u.u_id AND p.pri_num = i.pri_num AND s.u_id = #{u_id}
 ORDER BY s.SL_NUM DESC
+]]>
 </select>
 
+
+
 <!-- myshareEditOK -->
-<update id="myshareEditOK" parameterType = "sharevo">
-Update 
-</update>
+
 
 <!-- myshareDelete -->
 <delete id="myshareDelete" parameterType="yolo.share.dto.ShareMainListVO">
