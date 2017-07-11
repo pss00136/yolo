@@ -24,7 +24,7 @@
 $(function(){
 	 	var temp = '<%=jsonlot%>' ;
 		var prop = jQuery.parseJSON(temp);
-		alert(temp);
+// 		alert(temp);
 
 		// Custom options for map
 		var options = {
