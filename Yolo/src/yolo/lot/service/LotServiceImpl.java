@@ -106,4 +106,10 @@ public class LotServiceImpl implements LotService {
 	        return result;
 	    }
 
+	@Override
+	public int lotbookmarkCheck(BookmarkVO bookmarkVO) {
+		int result = ldao.lotBookmarkSelect(bookmarkVO);
+		return result;
+	}
+
 }

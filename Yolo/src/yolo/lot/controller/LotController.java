@@ -234,6 +234,7 @@ public class LotController {
 		public ModelAndView lotlist(LotPagingVO lpageVO, LotListVO lotlistVO, ZipcodeVO zipcodeVO ){
 		    ModelAndView mv = new ModelAndView();
 		    
+		    
 		    int lotTotalCount = service.lotcount(); //총 게시물 갯수 구하기
 		    System.out.println("공간 총 게시물 수: " + lotTotalCount);
 		    int lotCountList = 4; //한 페이지에 출력될 게시물 수
@@ -329,7 +330,7 @@ public class LotController {
 	 		* @return  String:반환하는 경로
 	 		*/
 	   @RequestMapping("lot/LotView.lot")
-		public ModelAndView lotview(LotListVO lotlistVO, PostscriptVO postVO){
+		public ModelAndView lotview(LotListVO lotlistVO, PostscriptVO postVO, BookmarkVO bookmarkVO, HttpSession session){
 		   ModelAndView mv = new ModelAndView();
 		    //조회수 증가
 		    service.lotviewcount(lotlistVO);
@@ -337,13 +338,22 @@ public class LotController {
 		    LotListVO list = service.lotdetailview(lotlistVO);
 		    System.out.println(list.getPri_booktype());
 		    //북마크 누른 것 검사
-//		    service.lotbookmarkCheck();
+		    String u_id = (String)session.getAttribute("u_id");
+		    int bmcheck = 0;
+		    if(u_id==null || u_id=="" ){
+		    	bmcheck = 0;
+		    }else{
+		    	bookmarkVO.setU_id( u_id );
+		    	bookmarkVO.setBm_selnum( lotlistVO.getPri_num() );
+		    	bmcheck = service.lotbookmarkCheck(bookmarkVO);
+		    }
 		    System.out.println(list.getPri_bookmark());
 		    List<PostscriptVO> review = service.lotreviewlist(postVO);
 		    String jsonlot = lotjson(list);
 			mv.addObject("jsonlot", jsonlot);
 		    mv.addObject("list", list);
 		    mv.addObject("review", review);
+		    mv.addObject("bmcheck", bmcheck);
 		    mv.setViewName("/lot/LotView.map");
 			return mv;
 		}

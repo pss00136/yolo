@@ -394,7 +394,18 @@ public class LotDAO {
 	* @return  list: DB insert쿼리문 결과값
 	*/    
     public int lotBookmarkDelete(BookmarkVO bookmarkVO){
-	        int result = session.delete("bookmark.bookmarkdelete",bookmarkVO);
-	        return result;
-	    }
+    	int result = session.delete("bookmark.bookmarkdelete",bookmarkVO);
+    	return result;
+	}
+    
+    public int lotBookmarkSelect(BookmarkVO bookmarkVO){
+    	BookmarkVO vo = session.selectOne("bookmark.bookmarkselect" ,bookmarkVO);
+    	int result = 0;
+    	if(vo == null){
+    		result = 0;
+    	}else{
+    		result = 1;
+    	}
+        return result;    	
+    }
 }

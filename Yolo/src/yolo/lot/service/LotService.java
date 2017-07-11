@@ -146,4 +146,6 @@ public interface LotService {
     * @return  
     */    
     public int lotBookmarkdelete(BookmarkVO bookmarkVO);
+    
+    public int lotbookmarkCheck(BookmarkVO bookmarkVO);
 }
