@@ -12,9 +12,9 @@
 	$(function(){
 		$("#sl_time").click(function(){
 			var temp = $("#sl_time_h").val();
-			alert(temp);
+// 			alert(temp);
 			var alltimes = temp.split('/');
-			alert(alltimes);
+// 			alert(alltimes);
 			var hours = 8;
 			for(var i =0; i <alltimes.length;  i++ ){
 				hours++;
