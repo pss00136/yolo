@@ -7,11 +7,12 @@
 <% 
 PrivatelotVO privateVO;
 
-if(session.getAttribute("privateVO") == null){
-	privateVO = new PrivatelotVO();
-}else{
-	privateVO = (PrivatelotVO)session.getAttribute("privateVO");
-}
+
+	if(session.getAttribute("privateVO") == null){
+		privateVO = new PrivatelotVO();
+	}else{
+		privateVO = (PrivatelotVO)session.getAttribute("privateVO");
+	}
 
 %>
 
@@ -27,8 +28,7 @@ if(session.getAttribute("privateVO") == null){
 		간 등 록</h4>
 	
 	
-	<form class="form-horizontal" method="post"
-		enctype="multipart/form-data" action="/Yolo/lot/LotInputFinish.lot">
+	<form class="form-horizontal" method="post" enctype="multipart/form-data" >
 		
 		<div class="panel-body">
 			<!-- 주중 운영시간 선택  -->
@@ -145,22 +145,22 @@ if(session.getAttribute("privateVO") == null){
 									
 									<ul id="lec_timeselec" class="dropdown-menu dropdown-select">
 									
-										<li <% if(pri_weekdayos[0]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdayo" <% if(pri_weekdayos[0]==1){ %> selected <%} %> value="08:00"><a href="#">오전 08:00</a></li>
-										<li <% if(pri_weekdayos[1]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdayo" <% if(pri_weekdayos[1]==1){ %> selected <%} %> value="09:00"><a href="#">오전 09:00</a></li>
-									    <li <% if(pri_weekdayos[2]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdayo" <% if(pri_weekdayos[2]==1){ %> selected <%} %>  value="10:00"><a href="#">오전 10:00</a></li>
-										<li <% if(pri_weekdayos[3]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdayo" <% if(pri_weekdayos[3]==1){ %> selected <%} %>  value="11:00"><a href="#">오전 11:00</a></li>
-										<li <% if(pri_weekdayos[4]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdayo" <% if(pri_weekdayos[4]==1){ %> selected <%} %>  value="12:00"><a href="#">오후 12:00</a></li>
-									    <li <% if(pri_weekdayos[5]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdayo" <% if(pri_weekdayos[5]==1){ %> selected <%} %>  value="13:00"><a href="#">오후 01:00</a></li>
-										<li <% if(pri_weekdayos[6]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdayo" <% if(pri_weekdayos[6]==1){ %> selected <%} %>  value="14:00"><a href="#">오후 02:00</a></li>
-										<li <% if(pri_weekdayos[7]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdayo" <% if(pri_weekdayos[7]==1){ %> selected <%} %>  value="15:00" selected="selected"><a href="#">오후 03:00</a></li>
-										<li <% if(pri_weekdayos[8]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdayo" <% if(pri_weekdayos[8]==1){ %> selected <%} %>  value="16:00"><a href="#">오후 04:00</a></li>
-										<li <% if(pri_weekdayos[9]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdayo" <% if(pri_weekdayos[9]==1){ %> selected <%} %>  value="17:00"><a href="#">오후 05:00</a></li>
-								    	<li <% if(pri_weekdayos[10]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdayo" <% if(pri_weekdayos[10]==1){ %> selected <%} %>  value="18:00"><a href="#">오후 06:00</a></li>
-										<li <% if(pri_weekdayos[11]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdayo" <% if(pri_weekdayos[11]==1){ %> selected <%} %>  value="19:00"><a href="#">오후 07:00</a></li>
-										<li <% if(pri_weekdayos[12]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdayo" <% if(pri_weekdayos[12]==1){ %> selected <%} %>  value="20:00"><a href="#">오후 08:00</a></li>
-										<li <% if(pri_weekdayos[13]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdayo" <% if(pri_weekdayos[13]==1){ %> selected <%} %>  value="21:00"><a href="#">오후 09:00</a></li>
-										<li <% if(pri_weekdayos[14]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdayo" <% if(pri_weekdayos[14]==1){ %> selected <%} %>  value="22:00"><a href="#">오후 10:00</a></li>
-										<li <% if(pri_weekdayos[15]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdayo" <% if(pri_weekdayos[15]==1){ %> selected <%} %>  value="23:00"><a href="#">오후 11:00</a></li>
+										<li <% if(pri_weekdayos[0]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdayo" <% if(pri_weekdayos[0]==1){ %> checked <%} %> value="08:00"><a href="#">오전 08:00</a></li>
+										<li <% if(pri_weekdayos[1]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdayo" <% if(pri_weekdayos[1]==1){ %> checked <%} %> value="09:00"><a href="#">오전 09:00</a></li>
+									    <li <% if(pri_weekdayos[2]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdayo" <% if(pri_weekdayos[2]==1){ %> checked <%} %>  value="10:00"><a href="#">오전 10:00</a></li>
+										<li <% if(pri_weekdayos[3]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdayo" <% if(pri_weekdayos[3]==1){ %> checked <%} %>  value="11:00"><a href="#">오전 11:00</a></li>
+										<li <% if(pri_weekdayos[4]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdayo" <% if(pri_weekdayos[4]==1){ %> checked <%} %>  value="12:00"><a href="#">오후 12:00</a></li>
+									    <li <% if(pri_weekdayos[5]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdayo" <% if(pri_weekdayos[5]==1){ %> checked <%} %>  value="13:00"><a href="#">오후 01:00</a></li>
+										<li <% if(pri_weekdayos[6]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdayo" <% if(pri_weekdayos[6]==1){ %> checked <%} %>  value="14:00"><a href="#">오후 02:00</a></li>
+										<li <% if(pri_weekdayos[7]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdayo" <% if(pri_weekdayos[7]==1){ %> checked <%} %>  value="15:00"><a href="#">오후 03:00</a></li>
+										<li <% if(pri_weekdayos[8]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdayo" <% if(pri_weekdayos[8]==1){ %> checked <%} %>  value="16:00"><a href="#">오후 04:00</a></li>
+										<li <% if(pri_weekdayos[9]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdayo" <% if(pri_weekdayos[9]==1){ %> checked <%} %>  value="17:00"><a href="#">오후 05:00</a></li>
+								    	<li <% if(pri_weekdayos[10]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdayo" <% if(pri_weekdayos[10]==1){ %> checked <%} %>  value="18:00"><a href="#">오후 06:00</a></li>
+										<li <% if(pri_weekdayos[11]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdayo" <% if(pri_weekdayos[11]==1){ %> checked <%} %>  value="19:00"><a href="#">오후 07:00</a></li>
+										<li <% if(pri_weekdayos[12]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdayo" <% if(pri_weekdayos[12]==1){ %> checked <%} %>  value="20:00"><a href="#">오후 08:00</a></li>
+										<li <% if(pri_weekdayos[13]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdayo" <% if(pri_weekdayos[13]==1){ %> checked <%} %>  value="21:00"><a href="#">오후 09:00</a></li>
+										<li <% if(pri_weekdayos[14]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdayo" <% if(pri_weekdayos[14]==1){ %> checked <%} %>  value="22:00"><a href="#">오후 10:00</a></li>
+										<li <% if(pri_weekdayos[15]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdayo" <% if(pri_weekdayos[15]==1){ %> checked <%} %>  value="23:00"><a href="#">오후 11:00</a></li>
 									
 									</ul>
 								   </div>
@@ -179,22 +179,22 @@ if(session.getAttribute("privateVO") == null){
 									
 									<ul id="lec_timeselec" class="dropdown-menu dropdown-select">
 									
-										<li <% if(pri_weekendes[0]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekende" <% if(pri_weekendes[0]==1){ %> selected <%} %> value="08:00"><a href="#">오전 08:00</a></li>
-										<li <% if(pri_weekendes[1]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekende" <% if(pri_weekendes[1]==1){ %> selected <%} %> value="09:00"><a href="#">오전 09:00</a></li>
-									    <li <% if(pri_weekendes[2]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekende" <% if(pri_weekendes[2]==1){ %> selected <%} %>  value="10:00"><a href="#">오전 10:00</a></li>
-										<li <% if(pri_weekendes[3]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekende" <% if(pri_weekendes[3]==1){ %> selected <%} %>  value="11:00"><a href="#">오전 11:00</a></li>
-										<li <% if(pri_weekendes[4]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekende" <% if(pri_weekendes[4]==1){ %> selected <%} %>  value="12:00"><a href="#">오후 12:00</a></li>
-									    <li <% if(pri_weekendes[5]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekende" <% if(pri_weekendes[5]==1){ %> selected <%} %>  value="13:00"><a href="#">오후 01:00</a></li>
-										<li <% if(pri_weekendes[6]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekende" <% if(pri_weekendes[6]==1){ %> selected <%} %>  value="14:00"><a href="#">오후 02:00</a></li>
-										<li <% if(pri_weekendes[7]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekende" <% if(pri_weekendes[7]==1){ %> selected <%} %>  value="15:00" selected="selected"><a href="#">오후 03:00</a></li>
-										<li <% if(pri_weekendes[8]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekende" <% if(pri_weekendes[8]==1){ %> selected <%} %>  value="16:00"><a href="#">오후 04:00</a></li>
-										<li <% if(pri_weekendes[9]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekende" <% if(pri_weekendes[9]==1){ %> selected <%} %>  value="17:00"><a href="#">오후 05:00</a></li>
-								    	<li <% if(pri_weekendes[10]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekende" <% if(pri_weekendes[10]==1){ %> selected <%} %>  value="18:00"><a href="#">오후 06:00</a></li>
-										<li <% if(pri_weekendes[11]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekende" <% if(pri_weekendes[11]==1){ %> selected <%} %>  value="19:00"><a href="#">오후 07:00</a></li>
-										<li <% if(pri_weekendes[12]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekende" <% if(pri_weekendes[12]==1){ %> selected <%} %>  value="20:00"><a href="#">오후 08:00</a></li>
-										<li <% if(pri_weekendes[13]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekende" <% if(pri_weekendes[13]==1){ %> selected <%} %>  value="21:00"><a href="#">오후 09:00</a></li>
-										<li <% if(pri_weekendes[14]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekende" <% if(pri_weekendes[14]==1){ %> selected <%} %>  value="22:00"><a href="#">오후 10:00</a></li>
-										<li <% if(pri_weekendes[15]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekende" <% if(pri_weekendes[15]==1){ %> selected <%} %>  value="23:00"><a href="#">오후 11:00</a></li>
+										<li <% if(pri_weekendes[0]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdaye" <% if(pri_weekendes[0]==1){ %> checked <%} %> value="08:00"><a href="#">오전 08:00</a></li>
+										<li <% if(pri_weekendes[1]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdaye" <% if(pri_weekendes[1]==1){ %> checked <%} %> value="09:00"><a href="#">오전 09:00</a></li>
+									    <li <% if(pri_weekendes[2]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdaye" <% if(pri_weekendes[2]==1){ %> checked <%} %>  value="10:00"><a href="#">오전 10:00</a></li>
+										<li <% if(pri_weekendes[3]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdaye" <% if(pri_weekendes[3]==1){ %> checked <%} %>  value="11:00"><a href="#">오전 11:00</a></li>
+										<li <% if(pri_weekendes[4]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdaye" <% if(pri_weekendes[4]==1){ %> checked <%} %>  value="12:00"><a href="#">오후 12:00</a></li>
+									    <li <% if(pri_weekendes[5]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdaye" <% if(pri_weekendes[5]==1){ %> checked <%} %>  value="13:00"><a href="#">오후 01:00</a></li>
+										<li <% if(pri_weekendes[6]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdaye" <% if(pri_weekendes[6]==1){ %> checked <%} %>  value="14:00"><a href="#">오후 02:00</a></li>
+										<li <% if(pri_weekendes[7]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdaye" <% if(pri_weekendes[7]==1){ %> checked <%} %>  value="15:00"><a href="#">오후 03:00</a></li>
+										<li <% if(pri_weekendes[8]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdaye" <% if(pri_weekendes[8]==1){ %> checked <%} %>  value="16:00"><a href="#">오후 04:00</a></li>
+										<li <% if(pri_weekendes[9]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdaye" <% if(pri_weekendes[9]==1){ %> checked <%} %>  value="17:00"><a href="#">오후 05:00</a></li>
+								    	<li <% if(pri_weekendes[10]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdaye" <% if(pri_weekendes[10]==1){ %> checked <%} %>  value="18:00"><a href="#">오후 06:00</a></li>
+										<li <% if(pri_weekendes[11]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdaye" <% if(pri_weekendes[11]==1){ %> checked <%} %>  value="19:00"><a href="#">오후 07:00</a></li>
+										<li <% if(pri_weekendes[12]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdaye" <% if(pri_weekendes[12]==1){ %> checked <%} %>  value="20:00"><a href="#">오후 08:00</a></li>
+										<li <% if(pri_weekendes[13]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdaye" <% if(pri_weekendes[13]==1){ %> checked <%} %>  value="21:00"><a href="#">오후 09:00</a></li>
+										<li <% if(pri_weekendes[14]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdaye" <% if(pri_weekendes[14]==1){ %> checked <%} %>  value="22:00"><a href="#">오후 10:00</a></li>
+										<li <% if(pri_weekendes[15]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekdaye" <% if(pri_weekendes[15]==1){ %> checked <%} %>  value="23:00"><a href="#">오후 11:00</a></li>
 									
 									</ul>
 								   </div>
@@ -220,22 +220,22 @@ if(session.getAttribute("privateVO") == null){
 									
 									<ul id="lec_timeselec" class="dropdown-menu dropdown-select">
 									
-										<li <% if(pri_weekendos[0]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[0]==1){ %> selected <%} %> value="08:00"><a href="#">오전 08:00</a></li>
-										<li <% if(pri_weekendos[1]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[1]==1){ %> selected <%} %> value="09:00"><a href="#">오전 09:00</a></li>
-									    <li <% if(pri_weekendos[2]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[2]==1){ %> selected <%} %>  value="10:00"><a href="#">오전 10:00</a></li>
-										<li <% if(pri_weekendos[3]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[3]==1){ %> selected <%} %>  value="11:00"><a href="#">오전 11:00</a></li>
-										<li <% if(pri_weekendos[4]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[4]==1){ %> selected <%} %>  value="12:00"><a href="#">오후 12:00</a></li>
-									    <li <% if(pri_weekendos[5]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[5]==1){ %> selected <%} %>  value="13:00"><a href="#">오후 01:00</a></li>
-										<li <% if(pri_weekendos[6]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[6]==1){ %> selected <%} %>  value="14:00"><a href="#">오후 02:00</a></li>
-										<li <% if(pri_weekendos[7]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[7]==1){ %> selected <%} %>  value="15:00" selected="selected"><a href="#">오후 03:00</a></li>
-										<li <% if(pri_weekendos[8]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[8]==1){ %> selected <%} %>  value="16:00"><a href="#">오후 04:00</a></li>
-										<li <% if(pri_weekendos[9]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[9]==1){ %> selected <%} %>  value="17:00"><a href="#">오후 05:00</a></li>
-								    	<li <% if(pri_weekendos[10]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[10]==1){ %> selected <%} %>  value="18:00"><a href="#">오후 06:00</a></li>
-										<li <% if(pri_weekendos[11]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[11]==1){ %> selected <%} %>  value="19:00"><a href="#">오후 07:00</a></li>
-										<li <% if(pri_weekendos[12]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[12]==1){ %> selected <%} %>  value="20:00"><a href="#">오후 08:00</a></li>
-										<li <% if(pri_weekendos[13]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[13]==1){ %> selected <%} %>  value="21:00"><a href="#">오후 09:00</a></li>
-										<li <% if(pri_weekendos[14]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[14]==1){ %> selected <%} %>  value="22:00"><a href="#">오후 10:00</a></li>
-										<li <% if(pri_weekendos[15]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[15]==1){ %> selected <%} %>  value="23:00"><a href="#">오후 11:00</a></li>
+										<li <% if(pri_weekendos[0]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[0]==1){ %> checked <%} %> value="08:00"><a href="#">오전 08:00</a></li>
+										<li <% if(pri_weekendos[1]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[1]==1){ %> checked <%} %> value="09:00"><a href="#">오전 09:00</a></li>
+									    <li <% if(pri_weekendos[2]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[2]==1){ %> checked <%} %>  value="10:00"><a href="#">오전 10:00</a></li>
+										<li <% if(pri_weekendos[3]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[3]==1){ %> checked <%} %>  value="11:00"><a href="#">오전 11:00</a></li>
+										<li <% if(pri_weekendos[4]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[4]==1){ %> checked <%} %>  value="12:00"><a href="#">오후 12:00</a></li>
+									    <li <% if(pri_weekendos[5]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[5]==1){ %> checked <%} %>  value="13:00"><a href="#">오후 01:00</a></li>
+										<li <% if(pri_weekendos[6]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[6]==1){ %> checked <%} %>  value="14:00"><a href="#">오후 02:00</a></li>
+										<li <% if(pri_weekendos[7]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[7]==1){ %> checked <%} %>  value="15:00"><a href="#">오후 03:00</a></li>
+										<li <% if(pri_weekendos[8]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[8]==1){ %> checked <%} %>  value="16:00"><a href="#">오후 04:00</a></li>
+										<li <% if(pri_weekendos[9]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[9]==1){ %> checked <%} %>  value="17:00"><a href="#">오후 05:00</a></li>
+								    	<li <% if(pri_weekendos[10]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[10]==1){ %> checked <%} %>  value="18:00"><a href="#">오후 06:00</a></li>
+										<li <% if(pri_weekendos[11]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[11]==1){ %> checked <%} %>  value="19:00"><a href="#">오후 07:00</a></li>
+										<li <% if(pri_weekendos[12]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[12]==1){ %> checked <%} %>  value="20:00"><a href="#">오후 08:00</a></li>
+										<li <% if(pri_weekendos[13]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[13]==1){ %> checked <%} %>  value="21:00"><a href="#">오후 09:00</a></li>
+										<li <% if(pri_weekendos[14]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[14]==1){ %> checked <%} %>  value="22:00"><a href="#">오후 10:00</a></li>
+										<li <% if(pri_weekendos[15]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[15]==1){ %> checked <%} %>  value="23:00"><a href="#">오후 11:00</a></li>
 									
 									</ul>
 								   </div>
@@ -254,22 +254,22 @@ if(session.getAttribute("privateVO") == null){
 									
 									<ul id="lec_timeselec" class="dropdown-menu dropdown-select">
 									
-										<li <% if(pri_weekendos[0]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[0]==1){ %> selected <%} %> value="08:00"><a href="#">오전 08:00</a></li>
-										<li <% if(pri_weekendos[1]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[1]==1){ %> selected <%} %> value="09:00"><a href="#">오전 09:00</a></li>
-									    <li <% if(pri_weekendos[2]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[2]==1){ %> selected <%} %>  value="10:00"><a href="#">오전 10:00</a></li>
-										<li <% if(pri_weekendos[3]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[3]==1){ %> selected <%} %>  value="11:00"><a href="#">오전 11:00</a></li>
-										<li <% if(pri_weekendos[4]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[4]==1){ %> selected <%} %>  value="12:00"><a href="#">오후 12:00</a></li>
-									    <li <% if(pri_weekendos[5]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[5]==1){ %> selected <%} %>  value="13:00"><a href="#">오후 01:00</a></li>
-										<li <% if(pri_weekendos[6]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[6]==1){ %> selected <%} %>  value="14:00"><a href="#">오후 02:00</a></li>
-										<li <% if(pri_weekendos[7]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[7]==1){ %> selected <%} %>  value="15:00" selected="selected"><a href="#">오후 03:00</a></li>
-										<li <% if(pri_weekendos[8]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[8]==1){ %> selected <%} %>  value="16:00"><a href="#">오후 04:00</a></li>
-										<li <% if(pri_weekendos[9]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[9]==1){ %> selected <%} %>  value="17:00"><a href="#">오후 05:00</a></li>
-								    	<li <% if(pri_weekendos[10]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[10]==1){ %> selected <%} %>  value="18:00"><a href="#">오후 06:00</a></li>
-										<li <% if(pri_weekendos[11]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[11]==1){ %> selected <%} %>  value="19:00"><a href="#">오후 07:00</a></li>
-										<li <% if(pri_weekendos[12]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[12]==1){ %> selected <%} %>  value="20:00"><a href="#">오후 08:00</a></li>
-										<li <% if(pri_weekendos[13]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[13]==1){ %> selected <%} %>  value="21:00"><a href="#">오후 09:00</a></li>
-										<li <% if(pri_weekendos[14]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[14]==1){ %> selected <%} %>  value="22:00"><a href="#">오후 10:00</a></li>
-										<li <% if(pri_weekendos[15]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekendo" <% if(pri_weekendos[15]==1){ %> selected <%} %>  value="23:00"><a href="#">오후 11:00</a></li>
+										<li <% if(pri_weekendes[0]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekende" <% if(pri_weekendes[0]==1){ %> checked <%} %> value="08:00"><a href="#">오전 08:00</a></li>
+										<li <% if(pri_weekendes[1]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekende" <% if(pri_weekendes[1]==1){ %> checked <%} %> value="09:00"><a href="#">오전 09:00</a></li>
+									    <li <% if(pri_weekendes[2]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekende" <% if(pri_weekendes[2]==1){ %> checked <%} %>  value="10:00"><a href="#">오전 10:00</a></li>
+										<li <% if(pri_weekendes[3]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekende" <% if(pri_weekendes[3]==1){ %> checked <%} %>  value="11:00"><a href="#">오전 11:00</a></li>
+										<li <% if(pri_weekendes[4]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekende" <% if(pri_weekendes[4]==1){ %> checked <%} %>  value="12:00"><a href="#">오후 12:00</a></li>
+									    <li <% if(pri_weekendes[5]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekende" <% if(pri_weekendes[5]==1){ %> checked <%} %>  value="13:00"><a href="#">오후 01:00</a></li>
+										<li <% if(pri_weekendes[6]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekende" <% if(pri_weekendes[6]==1){ %> checked <%} %>  value="14:00"><a href="#">오후 02:00</a></li>
+										<li <% if(pri_weekendes[7]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekende" <% if(pri_weekendes[7]==1){ %> checked <%} %>  value="15:00"><a href="#">오후 03:00</a></li>
+										<li <% if(pri_weekendes[8]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekende" <% if(pri_weekendes[8]==1){ %> checked <%} %>  value="16:00"><a href="#">오후 04:00</a></li>
+										<li <% if(pri_weekendes[9]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekende" <% if(pri_weekendes[9]==1){ %> checked <%} %>  value="17:00"><a href="#">오후 05:00</a></li>
+								    	<li <% if(pri_weekendes[10]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekende" <% if(pri_weekendes[10]==1){ %> checked <%} %>  value="18:00"><a href="#">오후 06:00</a></li>
+										<li <% if(pri_weekendes[11]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekende" <% if(pri_weekendes[11]==1){ %> checked <%} %>  value="19:00"><a href="#">오후 07:00</a></li>
+										<li <% if(pri_weekendes[12]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekende" <% if(pri_weekendes[12]==1){ %> checked <%} %>  value="20:00"><a href="#">오후 08:00</a></li>
+										<li <% if(pri_weekendes[13]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekende" <% if(pri_weekendes[13]==1){ %> checked <%} %>  value="21:00"><a href="#">오후 09:00</a></li>
+										<li <% if(pri_weekendes[14]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekende" <% if(pri_weekendes[14]==1){ %> checked <%} %>  value="22:00"><a href="#">오후 10:00</a></li>
+										<li <% if(pri_weekendes[15]==1){ %> class="active" <%} %> ><input type="radio" name="pri_weekende" <% if(pri_weekendes[15]==1){ %> checked <%} %>  value="23:00"><a href="#">오후 11:00</a></li>
 									
 									</ul>
 								   </div>
@@ -314,7 +314,7 @@ if(session.getAttribute("privateVO") == null){
 							<button id="btn_before" class="btn btn-o btn-green">이전으로</button>
 						</div>
 						<div style="display: inline-block;">
-							<button type="submit" id="btn_register" class="btn btn-o btn-green">등록하기</button>
+							<button id="btn_register" class="btn btn-o btn-green">등록하기</button>
 						</div>
 					</div>
 				</div>
@@ -333,6 +333,11 @@ if(session.getAttribute("privateVO") == null){
 	$(function(){
 		$("#btn_before").click(function(){
 			$('form').attr('action','/Yolo/lot/LotInputSecond.lot')
+			$(this).submit();
+		});
+		
+		$("#btn_register").click(function(){
+			$('form').attr('action','/Yolo/lot/LotInputFinish.lot')
 			$(this).submit();
 		});
 	});

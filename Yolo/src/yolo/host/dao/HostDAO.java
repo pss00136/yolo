@@ -11,6 +11,7 @@ import yolo.host.dto.EntrepreneurVO;
 import yolo.host.dto.HostinfoVO;
 import yolo.lot.dto.BooklotVO;
 import yolo.lot.dto.LotListVO;
+import yolo.lot.dto.PrivatelotVO;
 
 /*
 * @클래스명: HostDAO
@@ -83,10 +84,10 @@ public class HostDAO {
 		return result;
 	}
 	
-	public LotListVO getlot(LotListVO lotlistVO){
-		LotListVO list = null;
+	public PrivatelotVO getlot(PrivatelotVO privatelotVO){
+		PrivatelotVO list = null;
 		try{
-			list = session.selectOne("host.getlot", lotlistVO);
+			list = session.selectOne("host.getlotlist", privatelotVO);
 		}catch(Exception ex){
 			System.out.println("getlot 실패: " + ex.getMessage());
 		}
@@ -114,5 +115,17 @@ public class HostDAO {
 			System.out.println("getentre 실패 : " + ex.getMessage());
 		}
 		return entvo;
+	}
+	
+	public int lotmodify(PrivatelotVO privateVO) {
+		int result = 0;
+		try{
+
+			result = session.update("host.lotmodify", privateVO);
+		}catch(Exception ex){
+			System.out.println("getentre 실패 : " + ex.getMessage());
+		}
+		
+		return result;
 	}
 }

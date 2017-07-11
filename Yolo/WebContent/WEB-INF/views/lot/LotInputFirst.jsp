@@ -8,11 +8,11 @@
 <%
 PrivatelotVO privateVO;
 
-if(session.getAttribute("privateVO") == null){
-	privateVO = new PrivatelotVO();
-}else{
-	privateVO = (PrivatelotVO)session.getAttribute("privateVO");
-}
+	if(session.getAttribute("privateVO") == null){
+		privateVO = new PrivatelotVO();
+	}else{
+		privateVO = (PrivatelotVO)session.getAttribute("privateVO");
+	}
 
 %>
 	

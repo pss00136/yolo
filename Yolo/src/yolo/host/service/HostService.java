@@ -6,6 +6,7 @@ import yolo.host.dto.EntrepreneurVO;
 import yolo.host.dto.HostinfoVO;
 import yolo.lot.dto.BooklotVO;
 import yolo.lot.dto.LotListVO;
+import yolo.lot.dto.PrivatelotVO;
 
 /*
 * @인터페이스명: HostService
@@ -61,7 +62,7 @@ public interface HostService {
 	* @param   LotListVO 에서 전달받은 값
 	* @return  
 	*/
-	public LotListVO getlot(LotListVO lotlistVO);
+	public PrivatelotVO getlot(PrivatelotVO privatelotVO);
 	
 	/*
 	* @메소드 명: getlot
@@ -80,4 +81,7 @@ public interface HostService {
 	* @return   List<BooklotVO> : 결과값
 	*/
 	public List<BooklotVO> searchbook(LotListVO lotlistVO);
+	
+	
+	public int lotmodify(PrivatelotVO privateVO);
 }

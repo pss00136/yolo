@@ -6,11 +6,12 @@
 <%
 PrivatelotVO privateVO;
 
-if(session.getAttribute("privateVO") == null){
-	privateVO = new PrivatelotVO();
-}else{
-	privateVO = (PrivatelotVO)session.getAttribute("privateVO");
-}
+	if(session.getAttribute("privateVO") == null){
+		privateVO = new PrivatelotVO();
+	}else{
+		privateVO = (PrivatelotVO)session.getAttribute("privateVO");
+	}
+
 %>
 
 <!-- 추가 css -->
@@ -26,7 +27,7 @@ if(session.getAttribute("privateVO") == null){
 	<!-- 사업자 등록 여부 입력 -->
 	<div class="panel-heading">사업자 등록 여부</div>
 	<form class="form-horizontal" method="post"
-		enctype="multipart/form-data" action="/Yolo/lot/LotInputLast.lot">
+		enctype="multipart/form-data" >
 		<div class="panel-body">
 			<!-- 입력 폼 -->
 			<!-- 사업자/비사업자 선택 -->
@@ -124,19 +125,19 @@ if(session.getAttribute("privateVO") == null){
 				<label class="col-sm-2 control-label"></label>
 				<div class="col-sm-3">
 					<div class="radio custom-radio">
-						<label><input type="radio" name="pri_info" value="바로결제" <%if(pri_infos[0] == 1){ %> selected <%} %>>
+						<label><input type="radio" name="pri_info" value="바로결제" <%if(pri_infos[0] == 1){ %> checked <%} %>>
 						<span class="fa fa-circle"></span>바로결제</label>
 					</div>
 				</div>
 				<div class="col-sm-3">
 					<div class="radio custom-radio">
-						<label><input type="radio" name="pri_info" value="승인결제" <%if(pri_infos[1] == 1){ %> selected <%} %>>
+						<label><input type="radio" name="pri_info" value="승인결제" <%if(pri_infos[1] == 1){ %> checked <%} %>>
 						<span class="fa fa-circle"></span>승인결제</label>
 					</div>
 				</div>
 				<div class="col-sm-3">
 					<div class="radio custom-radio">
-						<label><input type="radio" name="pri_info" value="승인예약" <%if(pri_infos[2] == 1){ %> selected <%} %>>
+						<label><input type="radio" name="pri_info" value="승인예약" <%if(pri_infos[2] == 1){ %> checked <%} %>>
 						<span class="fa fa-circle"></span>승인예약</label>
 					</div>
 				</div>
@@ -355,11 +356,11 @@ if(session.getAttribute("privateVO") == null){
 				<div>
 					<div style="text-align: center;">
 						<div style="display: inline-block;">
-							<a href="/Yolo/lot/LotInputFirst.lot" id="btn_before"
-								class="btn btn-o btn-green">이전으로</a>
+							<button href="/Yolo/lot/LotInputFirst.lot" id="btn_before"
+								class="btn btn-o btn-green">이전으로</button>
 						</div>
 						<div style="display: inline-block;">
-							<button type="submit" id="btn_next" class="btn btn-o btn-green">다음으로</button>
+							<button id="btn_next" class="btn btn-o btn-green">다음으로</button>
 						</div>
 					</div>
 				</div>
@@ -383,6 +384,21 @@ if(session.getAttribute("privateVO") == null){
 		 }
 		}
 	</script>
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+	$(function(){
+		$("#btn_before").click(function(){
+			$('form').attr('action','/Yolo/lot/LotInputFirst.lot');
+			$(this).submit();
+		});
+		
+		$("#btn_next").click(function(){
+			$('form').attr('action','/Yolo/lot/LotInputLast.lot');
+			$(this).submit();
+		});
+	});
+</script>
 
 
 <!-- 추가 js  -->

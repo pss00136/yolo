@@ -56,6 +56,13 @@ SELECT h_num FROM hostinfo WHERE u_id = #{u_id}
       WHERE h_num = #{h_num}
 </select>
 
+<select id="getlotlist" parameterType="privateVO" resultType="privateVO">
+	select pri_num, h_num, pri_type, pri_charge, pri_booktype, pri_title, pri_addr,
+	pri_tag, pri_content, pri_info, pri_account, pri_weekprice, pri_weekendprice, pri_facility, pri_minpeople, pri_maxpeople, pri_weekdayo, pri_weekdaye, pri_weekendo, pri_weekende, pri_lat, pri_long, pri_tel, pri_web
+	from privatelot
+	where pri_num = #{pri_num}
+</select>
+
 <delete id="lotdelete" parameterType="lotlistVO">
 DELETE FROM privatelot WHERE pri_num = #{pri_num}
 </delete>
@@ -79,6 +86,16 @@ DELETE FROM privatelot WHERE pri_num = #{pri_num}
 	from entrepreneur
 	where h_num = #{h_num}
 </select>
+
+<update id="lotmodify" parameterType="privateVO">
+	UPDATE PRIVATELOT
+	SET pri_type = #{pri_type}, pri_charge = #{pri_charge}, pri_booktype = #{pri_booktype}, pri_title = #{pri_title}, pri_addr = #{pri_addr},
+	    pri_tag = #{pri_tag}, pri_content = #{pri_content}, pri_info = #{pri_info}, pri_account = #{pri_account},
+	    pri_weekprice = #{pri_weekprice}, pri_weekendprice = #{pri_weekendprice}, pri_facility=#{pri_facility}, pri_minpeople=#{pri_minpeople},
+	    pri_maxpeople = #{pri_maxpeople}, pri_weekdayo = #{pri_weekdayo}, pri_weekdaye=#{pri_weekdaye}, pri_weekendo=#{pri_weekendo},
+	    pri_weekende = #{pri_weekende}, pri_lat = #{pri_lat}, pri_long=#{pri_long}, pri_tel=#{pri_tel}, pri_web=#{pri_web}
+    where pri_num = #{pri_num}
+</update>
 
 	
 </mapper>

@@ -10,6 +10,7 @@ import yolo.host.dto.EntrepreneurVO;
 import yolo.host.dto.HostinfoVO;
 import yolo.lot.dto.BooklotVO;
 import yolo.lot.dto.LotListVO;
+import yolo.lot.dto.PrivatelotVO;
 
 @Service 
 public class HostServiceImpl implements HostService {
@@ -46,8 +47,8 @@ public class HostServiceImpl implements HostService {
 
 
 	@Override
-	public LotListVO getlot(LotListVO lotlistVO) {
-		return hdao.getlot(lotlistVO);
+	public PrivatelotVO getlot(PrivatelotVO privatelotVO) {
+		return hdao.getlot(privatelotVO);
 	}
 
 
@@ -61,6 +62,13 @@ public class HostServiceImpl implements HostService {
 	public List<EntrepreneurVO> getentre(String h_num) {
 		// TODO Auto-generated method stub
 		return hdao.getentre(h_num);
+	}
+
+
+	@Override
+	public int lotmodify(PrivatelotVO privateVO) {
+		
+		return hdao.lotmodify(privateVO);
 	}
 	
 

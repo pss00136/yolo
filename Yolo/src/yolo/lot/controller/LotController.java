@@ -26,6 +26,7 @@ import com.google.code.geocoder.model.LatLng;
 
 import yolo.host.dto.EntrepreneurVO;
 import yolo.host.dto.HostinfoVO;
+import yolo.host.service.HostService;
 import yolo.lot.dto.BooklotVO;
 import yolo.lot.dto.LotListVO;
 import yolo.lot.dto.PostscriptVO;
@@ -49,6 +50,9 @@ public class LotController {
 	
 	@Autowired
 	LotService service;
+	
+	@Autowired
+	HostService hservice;
 	
 	 @ModelAttribute("privateVO")
 	   public PrivatelotVO saveSession(){
@@ -91,11 +95,11 @@ public class LotController {
 	* @return  String:반환하는 경로
 	*/	
 	 @RequestMapping("lot/LotInputSecond.lot" )
-		public String lotinputfirst(@ModelAttribute("privateVO") PrivatelotVO privateVO, PrivateimageVO primgVO, HttpSession session
+		public ModelAndView lotinputfirst(@ModelAttribute("privateVO") PrivatelotVO privateVO, PrivateimageVO primgVO, HttpSession session
 				,String lot_postcode, String lot_main_address, String lot_detail_address){
+		 ModelAndView mv = new ModelAndView();
 		     session.setAttribute("primgVO", primgVO);
 		    //address 합치기
-			 
 			 //경도,위도
 			 Float[] coords = new Float[2];
 			 if(lot_main_address != null){
@@ -105,8 +109,8 @@ public class LotController {
 			     privateVO.setPri_lat(Float.toString(coords[0]));
 			     privateVO.setPri_long(Float.toString(coords[1]));
 			 }
-		      
-			 return "/lot/LotInputSecond";
+			 mv.setViewName("/lot/LotInputSecond.host");
+			 return mv;
 		}
 	    
 	    public Float[] geoCoding(String location){ 
@@ -145,22 +149,23 @@ public class LotController {
 		* @return  String:반환하는 경로
 		*/
 	    @RequestMapping("lot/LotInputLast.lot")
-	    public String lotinputsecond(@ModelAttribute("privateVO") PrivatelotVO privateVO, HttpSession session
+	    public ModelAndView lotinputsecond(@ModelAttribute("privateVO") PrivatelotVO privateVO, HttpSession session
 	        , String pri_accountbank, String pri_accountnum, String pri_accountname
 	        , EntrepreneurVO entrepreneurVO, String e_rnum1, String e_rnum2, String e_rnum3
 			, String postcode, String main_address, String detail_address){
-	    	
+	    	ModelAndView mv = new ModelAndView();
 	    	//pri 계좌번호 합치기
+	    	if(pri_accountnum != null){
 			 privateVO.setPri_account(pri_accountbank + "/" + pri_accountnum + "/" + pri_accountname );
-			 
+	    	}
 			 //entre 번호 합치기
 			 entrepreneurVO.setE_addr(main_address +" "+ detail_address);
 			 
 			 entrepreneurVO.setE_rnum(e_rnum1+"-"+e_rnum2+"-"+e_rnum3);
 			 
 			 session.setAttribute("entrepreneurVO", entrepreneurVO);
-			 
-			return "/lot/LotInputLast";
+			 mv.setViewName("/lot/LotInputLast.host");
+			return mv;
 		}
 	  
 	 /*

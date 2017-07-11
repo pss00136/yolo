@@ -1,5 +1,6 @@
 package yolo.host.controller;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
@@ -10,15 +11,28 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.google.code.geocoder.Geocoder;
+import com.google.code.geocoder.GeocoderRequestBuilder;
+import com.google.code.geocoder.model.GeocodeResponse;
+import com.google.code.geocoder.model.GeocoderRequest;
+import com.google.code.geocoder.model.GeocoderResult;
+import com.google.code.geocoder.model.GeocoderStatus;
+import com.google.code.geocoder.model.LatLng;
 
 import yolo.host.dto.EntrepreneurVO;
 import yolo.host.dto.HostinfoVO;
 import yolo.host.service.HostService;
 import yolo.lot.dto.BooklotVO;
 import yolo.lot.dto.LotListVO;
+import yolo.lot.dto.PrivateimageVO;
+import yolo.lot.dto.PrivatelotVO;
+import yolo.lot.service.LotService;
 
 /*
 * @클래스명: HostController
@@ -35,6 +49,14 @@ public class HostController {
 	/* 멤버필드 */
 	@Autowired
 	HostService service;
+	
+	@Autowired
+	LotService lservice;
+	
+	@ModelAttribute("privateVO")
+	public PrivatelotVO saveSession(){
+	     return new PrivatelotVO();
+	}
 	
 	
 	/*
@@ -54,8 +76,7 @@ public class HostController {
 	    session.setAttribute("h_num", hostvo.getH_num() );
 	    mv.setViewName("/host/HostMain.host");
 	   
-	    return mv;
-	   		
+	    return mv;		
    }
    
    /*
@@ -144,17 +165,126 @@ public class HostController {
 	* @return  String:반환하는 경로
 	*/ 
 @RequestMapping("/LotModify.host")
-public ModelAndView modifyfirst(LotListVO lotlistVO, HttpSession session){
+public ModelAndView modifyfirst(PrivatelotVO privatelotVO, HttpSession session){
 	   ModelAndView mv = new ModelAndView();
 	   String h_num = (String)session.getAttribute("h_num");
-	   LotListVO lotlist = service.getlot(lotlistVO);
-	   List<EntrepreneurVO> entlist = service.getentre(h_num);
+	   System.out.println("pri : "+privatelotVO.getPri_num());
+	   PrivatelotVO plotVO = service.getlot(privatelotVO);
+	   System.out.println(plotVO.getPri_title());
+//	   List<EntrepreneurVO> entlist = service.getentre(h_num);
+//	   session.setAttribute("privatelotVO", privatelotVO);
 	   
-	   session.setAttribute("lotlist", lotlist);
-	   session.setAttribute("entlist", entlist);
+	   session.setAttribute("plotVO", plotVO);
+	   
 	   mv.setViewName("/host/ModifyFirst.host");
 	   return mv;
 }
+
+@RequestMapping("/LotModifySecond.host" )
+public ModelAndView lotinputSecond(@ModelAttribute("privateVO") PrivatelotVO privateVO, PrivateimageVO primgVO, HttpSession session
+		,String lot_postcode, String lot_main_address, String lot_detail_address){
+	ModelAndView mv = new ModelAndView();
+	System.out.println(privateVO.getPri_title());
+	System.out.println(privateVO.getPri_type());
+     session.setAttribute("primgVO", primgVO);
+    //address 합치기
+	 //경도,위도
+	 Float[] coords = new Float[2];
+	 if(lot_main_address != null){
+		 privateVO.setPri_addr(lot_postcode+"/"+lot_main_address +"/"+ lot_detail_address);
+		 coords = geoCoding(lot_main_address);
+	     //coords[0] : 위도 , coords[1] : 경도 
+	     privateVO.setPri_lat(Float.toString(coords[0]));
+	     privateVO.setPri_long(Float.toString(coords[1]));
+	 }
+	 mv.setViewName("/host/ModifySecond.host");
+	 return mv;
+}
+
+/*
+* @메소드명: lotinputsecond
+* @역할: 두번째 공간등록 페이지  
+*
+* @param   PrivatelotVO, PrivateimageVO 값
+* @return  String:반환하는 경로
+*/
+@RequestMapping("/LotModifyLast.host")
+public ModelAndView modifylast(@ModelAttribute("privateVO") PrivatelotVO privateVO, HttpSession session
+    , String pri_accountbank, String pri_accountnum, String pri_accountname
+    , EntrepreneurVO entrepreneurVO, String e_rnum1, String e_rnum2, String e_rnum3
+	, String postcode, String main_address, String detail_address){
+	ModelAndView mv = new ModelAndView();
+	//pri 계좌번호 합치기
+	if(pri_accountnum != null){
+	 privateVO.setPri_account(pri_accountbank + "/" + pri_accountnum + "/" + pri_accountname );
+	}
+	 //entre 번호 합치기
+	 entrepreneurVO.setE_addr(postcode+"/"+main_address +"/"+ detail_address);
+	 
+	 entrepreneurVO.setE_rnum(e_rnum1+"-"+e_rnum2+"-"+e_rnum3);
+	 
+	 session.setAttribute("entrepreneurVO", entrepreneurVO);
+	 mv.setViewName("/host/ModifyLast.host");
+	return mv;
+}
+
+/*
+* @메소드명: lotinputlast
+* @역할: 마지막공간등록 페이지  
+*
+* @param   PrivatelotVO, PrivateimageVO 값
+* @return  String:반환하는 경로 
+*/
+@RequestMapping("/LotModifyFinish.host")
+public String modifylastfinish(@ModelAttribute("privateVO") PrivatelotVO privateVO
+		, SessionStatus sessStatus, HttpSession session){
+ PrivateimageVO primgVO = (PrivateimageVO)session.getAttribute("primgVO");
+ EntrepreneurVO entrepreneurVO = (EntrepreneurVO)session.getAttribute("entrepreneurVO");
+PrivatelotVO privatelotVO = (PrivatelotVO)session.getAttribute("plotVO");
+ //호스트번호
+ privateVO.setH_num((String)session.getAttribute("h_num"));
+ privateVO.setPri_num(privatelotVO.getPri_num());
+ System.out.println(privateVO.getH_num());
+ System.out.println(privateVO.getPri_type());
+// lservice.lotinput(privateVO, primgVO, entrepreneurVO);
+ System.out.println(privateVO.getPri_type());
+ service.lotmodify(privateVO);
+ 
+ //이미지 넘겨오나?
+ sessStatus.setComplete();
+ return "redirect:/host/HostMyLot.host";
+}
+
+public Float[] geoCoding(String location){ 
+  if (location == null) {
+     return null;
+  }     
+     Geocoder geocoder = new Geocoder();
+     // setAddress : 변환하려는 주소 (경기도 성남시 분당구 등)
+     // setLanguate : 인코딩 설정
+     GeocoderRequest geocoderRequest = new GeocoderRequestBuilder().setAddress(location).setLanguage("ko").getGeocoderRequest();
+     GeocodeResponse geocoderResponse;
+
+     try {
+        geocoderResponse = geocoder.geocode(geocoderRequest);
+        if (geocoderResponse.getStatus() == GeocoderStatus.OK & !geocoderResponse.getResults().isEmpty()) {
+
+           GeocoderResult geocoderResult=geocoderResponse.getResults().iterator().next();
+           LatLng latitudeLongitude = geocoderResult.getGeometry().getLocation();
+                   
+           Float[] coords = new Float[2];
+           coords[0] = latitudeLongitude.getLat().floatValue();
+           coords[1] = latitudeLongitude.getLng().floatValue();
+           return coords;
+        }
+     } catch (IOException ex) {
+        ex.printStackTrace();
+     }
+  return null;
+}
+
+
+
 
 
    
