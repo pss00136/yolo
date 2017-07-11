@@ -770,7 +770,7 @@ $(function(){
 				LotListVO vo = (LotListVO)list.get(index);
 				index++; %>
 				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-					<a href="/Yolo/lot/LotView.lot?pri_num=<%= vo.getPri_num() %>&pri_booktype=<%= vo.getPri_booktype() %>" class="card">
+					<a href="/Yolo/lot/LotView.lot?pri_num=<%= vo.getPri_num() %>&pri_kind=<%= vo.getPri_kind() %>" class="card">
 						<div class="figure">
 							<img id="lotimage" src="/Yolo/upload/lot/<%= vo.getPriimg_name() %>" alt="image">
 							<div class="figCaption">

@@ -70,9 +70,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
      <!-- 공간정보 리스트 출력 sql -->
 	<select id="lotlistview" resultMap="lotlistMap">
 	<![CDATA[
-	  SELECT b.rnum rnum, b.priimg_name priimg_name, b.pri_weekprice pri_weekprice, b.pri_title pri_title, b.pri_addr pri_addr, b.pri_num pri_num, b.pri_long pri_long, b.pri_lat pri_lat, b.pri_hits pri_hits
-	  FROM(SELECT rownum rnum, a.priimg_name priimg_name, a.pri_weekprice pri_weekprice, a.pri_title pri_title, a.pri_addr pri_addr, a.pri_num pri_num, a.pri_long pri_long, a.pri_lat pri_lat, a.pri_hits pri_hits
-	       FROM (SELECT i.priimg_name priimg_name, p.pri_weekprice pri_weekprice, p.pri_title pri_title, p.pri_addr pri_addr, p.pri_num pri_num, p.pri_long pri_long, p.pri_lat pri_lat, p.pri_hits pri_hits
+	  SELECT b.rnum rnum, b.priimg_name priimg_name, b.pri_weekprice pri_weekprice, b.pri_title pri_title, b.pri_addr pri_addr, b.pri_num pri_num, b.pri_long pri_long, b.pri_lat pri_lat, b.pri_hits pri_hits, b.pri_kind pri_kind, b.pri_bookway pri_bookway, b.pri_holiday pri_holiday
+	  FROM(SELECT rownum rnum, a.priimg_name priimg_name, a.pri_weekprice pri_weekprice, a.pri_title pri_title, a.pri_addr pri_addr, a.pri_num pri_num, a.pri_long pri_long, a.pri_lat pri_lat, a.pri_hits pri_hits, a.pri_kind pri_kind, a.pri_bookway pri_bookway, a.pri_holiday pri_holiday
+	       FROM (SELECT i.priimg_name priimg_name, p.pri_weekprice pri_weekprice, p.pri_title pri_title, p.pri_addr pri_addr, p.pri_num pri_num, p.pri_long pri_long, p.pri_lat pri_lat, p.pri_hits pri_hits, p.pri_kind pri_kind, p.pri_bookway pri_bookway, p.pri_holiday pri_holiday 
                   FROM privatelot p  JOIN privateimage i
                    ON p.pri_num = i.pri_num
                    ORDER BY  to_number(substr(p.pri_num, 5)) )a 

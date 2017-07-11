@@ -26,7 +26,7 @@ public class ShareMainListVO {
 	private String pri_title;     /* 공간명 */
 	private String pri_addr;      /* 공간 주소 */
 	private int pri_weekprice;		/* 공간 주중가격 */
-	private int pri_weekendprice;	/* 공간 주말가격 */
+	private                                                                         int pri_weekendprice;	/* 공간 주말가격 */
 	private String pri_lat;			/* 공간 위도 */
 	private String pri_long;		/* 공간 경도 */
 	

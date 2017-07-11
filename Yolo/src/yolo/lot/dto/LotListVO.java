@@ -35,6 +35,9 @@ public class LotListVO {
 	private int pri_hits;         /* 조회수(클릭수) */
 	private String pri_regdate;   /* 등록일 */
 	private String pri_confirm;   /* 관리자승인여부 */
+	private String pri_kind;
+	private String pri_bookway;
+	private String pri_holiday;
 	
 	/* Constructor */
 	
@@ -342,9 +345,29 @@ public class LotListVO {
 		this.pri_confirm = pri_confirm;
 	}
 
-	
-	
-	
+	public String getPri_kind() {
+		return pri_kind;
+	}
+
+	public void setPri_kind(String pri_kind) {
+		this.pri_kind = pri_kind;
+	}
+
+	public String getPri_bookway() {
+		return pri_bookway;
+	}
+
+	public void setPri_bookway(String pri_bookway) {
+		this.pri_bookway = pri_bookway;
+	}
+
+	public String getPri_holiday() {
+		return pri_holiday;
+	}
+
+	public void setPri_holiday(String pri_holiday) {
+		this.pri_holiday = pri_holiday;
+	}
 	
 
 }

@@ -187,7 +187,7 @@ public class LotController {
 		 
 		 //이미지 넘겨오나?
 		 sessStatus.setComplete();
-			return "redirect:/host/HostMyLot.host";
+			return "redirect:/host/HostMyLot/modal_hostmylot_delete.host";
 		}
 	    
 	    /*
@@ -331,10 +331,10 @@ public class LotController {
 		    //조회수 증가
 		    service.lotviewcount(lotlistVO);
 		    //상세정보 보여주기
-		    if(lotlistVO.getPri_booktype() == "민간시설"){
-		    	
+		    if(lotlistVO.getPri_booktype().equals("민간시설")){
+		    	mv.setViewName("/lot/LotPublicView.map");
 		    }else{
-		    	
+		    	mv.setViewName("/lot/LotView.map");
 		    }
 		    
 		    //북마크 누른 것 검사
@@ -351,7 +351,7 @@ public class LotController {
 		    List<PostscriptVO> review = service.lotreviewlist(postVO);
 		    
 		    mv.addObject("bmcheck", bmcheck);
-		    mv.setViewName("/lot/LotView.map");
+		    
 			return mv;
 		}
 	   

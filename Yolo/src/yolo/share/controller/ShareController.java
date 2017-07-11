@@ -338,6 +338,8 @@ public class ShareController {
 		System.out.println("list 목록"+list);
 		System.out.println("/sharedetail ,위치: controller: list의크기:"+list.size());
 		ModelAndView mv = new ModelAndView();
+		String smlist = sharejson(list);
+		mv.addObject("smlist", smlist);
 		mv.addObject("list", list);
 		mv.setViewName("/comShare/ShareDetail/modal_share.modal");
 		return mv;
