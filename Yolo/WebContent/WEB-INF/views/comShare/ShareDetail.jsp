@@ -2,10 +2,53 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
-
+<%@ page import="java.util.*"%>
+<%@ page import="yolo.share.dto.*"%>
 <!-- 추가 CSS -->
 <link href="/Yolo/css_yolo/cssView/comShare/ShareDetail.css" rel="stylesheet">
-       
+<script src="/Yolo/js/jquery-2.1.1.min.js"></script>
+
+<script type="text/javascript">
+	$(function(){
+		$("#sl_time").click(function(){
+			var temp = $("#sl_time_h").val();
+			alert(temp);
+			var alltimes = temp.split('/');
+			alert(alltimes);
+			var hours = 8;
+			for(var i =0; i <alltimes.length;  i++ ){
+				hours++;
+				if(alltimes[i] == 1){
+					$('.btn-group').append('<label class="btn btn-o btn-warning disabled" autocomplete="off">'+hours+':00</label>');
+				}else{
+					$('.btn-group').append('<label class="btn btn-o btn-warning" autocomplete="off">'+hours+':00</label>');
+				}
+			}
+		});
+		
+		$('#alltime label').click(function(evt){
+			evt.preventDefault();
+			evt.stopImmediatePropagation();
+			$(this).toggleClass("active");
+			var label = $("#alltime").find('label[class*=active]');
+			var times = '';
+			for(var i = 0; i < label.length ; i++){
+				if(i==label.length-1){
+					times += $(label[i]).text()
+				}else{
+					times += $(label[i]).text()+"/"
+				}
+			}
+			
+			$('#bl_time').val('');
+			$('#t_time').val('');
+			$('#sl_time').val(times);
+			$('#t_time').val(times);
+			
+			alert(times);
+		});
+	});
+</script>
         
 <!-- -------------------------------------------------------------------------- -->
 <div class="home-content">
@@ -77,8 +120,10 @@
 												class="btn btn-lg btn-round btn-green contactBtn chat_in">문의하기</a>
 										</div>
 										<div class="btn">
-											<a data-toggle="modal" href="#contactAgent"
+										<input type="hidden" id="sl_time_h" name="sl_time" value="${list.sl_time }" />
+											<a id="sl_time" data-toggle="modal" href="#contactAgent"
 												class="btn btn-lg btn-round btn-green contactBtn">신청하기</a>
+												
 										</div>
 									</div>
 								</div>
