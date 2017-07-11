@@ -12,6 +12,9 @@
 	$(function(){
 		$("#ask-time").click(function(){
 			var temp = $("#sl_time_h").val();
+			var date = $("#bl_date_d").val();
+			$('#bl_date').val('');
+			$('#bl_date').val(date);
 			var alltimes = temp.split('/');
 			var hours = 8;
 			for(var i =0; i <alltimes.length;  i++ ){
@@ -108,6 +111,7 @@
 										</div>
 										<div class="btn">
 											<input type="hidden" id="sl_time_h" name="sl_time_h" value="${list.sl_time }">
+											<input type="hidden" id="bl_date_d" name="bl_date_d" value="${list.bl_date}">
 											<a id="ask-time" data-toggle="modal" href="#contactAgent"
 												class="btn btn-lg btn-round btn-green contactBtn">신청하기</a>
 												

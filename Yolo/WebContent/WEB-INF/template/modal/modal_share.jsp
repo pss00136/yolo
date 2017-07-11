@@ -7,13 +7,15 @@
 			
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal"
-						aria-hidden="true">×</button>
+						aria-hidden="true"></button>
 				</div>
 				<div class="modal-body">
 					<!-- date picker -->
 					<div class='formInput dateSelector'> 
-						<input style="display:block;" type='input' class='icon-calendar' id='hbdsdf' value='yyyy.mm.dd' />
+						<input style="display:block;" type='input' class='icon-calendar' id="bl_date" name="bl_date" />
 					</div>
+<!-- 					아래 id는 datepicker 막기 위해 잠시 주석달았음 -->
+<!-- 					id='hbdsdf' -->
 					<div id="propWidget-3" class="carousel slide propWidget-3" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="item active">
