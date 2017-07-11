@@ -117,7 +117,6 @@
 											<input type="hidden" id="bl_date_d" name="bl_date_d" value="${list.bl_date}">
 											<a id="ask-time" data-toggle="modal" href="#contactAgent"
 												class="btn btn-lg btn-round btn-green contactBtn">신청하기</a>
-												
 										</div>
 									</div>
 								</div>
