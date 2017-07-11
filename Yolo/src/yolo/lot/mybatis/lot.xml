@@ -39,7 +39,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<result column="pri_regdate" property="pri_regdate" />
 		<result column="pri_confirm" property="pri_confirm" />
 	</resultMap>
-
+    
+    <!-- 공간정보 입력  sql -->
 	<insert id="lotinput" parameterType="privateVO">
 		INSERT INTO
 		privatelot(pri_num,h_num,pri_type,pri_booktype,pri_charge,pri_title,pri_addr,pri_tag,
@@ -53,7 +54,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		#{pri_weekdayo},#{pri_weekdaye},#{pri_weekendo},#{pri_weekende},#{pri_lat},#{pri_long},
 		#{pri_tel},#{pri_web}, to_char(sysdate,'yy/MM/dd') )
 	</insert>
-
+    
+     <!-- 공간정보이미지 입력 sql -->
 	<insert id="lotimginput" parameterType="primgVO">
 		<selectKey keyColumn='pri_num' keyProperty='pri_num' order='BEFORE'
 			resultType='string'>
@@ -64,12 +66,21 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		values(concat('priimg_', PRIVATEIMAGE_NO_SEQ.nextVal), #{pri_num}, #{priimg_name}, #{priimg_path})
 	</insert>
 
+     <!-- 공간정보 리스트 출력 sql -->
 	<select id="lotlistview" resultMap="lotlistMap">
-	  select i.priimg_name priimg_name, p.pri_weekprice pri_weekprice, p.pri_title pri_title, p.pri_addr pri_addr, p.pri_num pri_num, p.pri_long pri_long, p.pri_lat pri_lat
-      from privatelot p  JOIN privateimage i
-      ON p.pri_num = i.pri_num
+	<![CDATA[
+	  SELECT b.rnum rnum, b.priimg_name priimg_name, b.pri_weekprice pri_weekprice, b.pri_title pri_title, b.pri_addr pri_addr, b.pri_num pri_num, b.pri_long pri_long, b.pri_lat pri_lat
+	  FROM(SELECT rownum rnum, a.priimg_name priimg_name, a.pri_weekprice pri_weekprice, a.pri_title pri_title, a.pri_addr pri_addr, a.pri_num pri_num, a.pri_long pri_long, a.pri_lat pri_lat
+	       FROM (SELECT i.priimg_name priimg_name, p.pri_weekprice pri_weekprice, p.pri_title pri_title, p.pri_addr pri_addr, p.pri_num pri_num, p.pri_long pri_long, p.pri_lat pri_lat
+                  FROM privatelot p  JOIN privateimage i
+                   ON p.pri_num = i.pri_num
+                   ORDER BY  to_number(substr(p.pri_num, 5)) )a 
+           WHERE rownum <= #{endCount} )b
+      WHERE b.rnum >= #{startCount}
+      ]]>
 	</select>
 	
+	 <!-- 공간정보 검색 출력 sql -->
 	<select id="lotsearch" parameterType="hashmap" resultMap="lotlistMap">
 	  select i.priimg_name priimg_name, p.pri_weekprice pri_weekprice, p.pri_title pri_title, p.pri_addr pri_addr, p.pri_num pri_num, p.pri_long pri_long, p.pri_lat pri_lat
       from privatelot p JOIN privateimage i
@@ -79,24 +90,26 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
       group by i.priimg_name, p.pri_weekprice, p.pri_title, p.pri_addr, p.pri_num, p.pri_long, p.pri_lat
 	</select>
 	
+	 <!-- 공간상세정보 후기 리스트 출력 sql -->
 	<select id="lotreviewlist" parameterType="postVO" resultType="postVO">
 	 select u_id, ps_star, ps_content, pri_num, ps_regdate
 	 from postscript2 
 	 where pri_num = #{pri_num}
 	</select> 
 	
-	
+	 <!-- 공간정보 후기 작성 입력 sql -->
 	<insert id="lotreview" parameterType="postVO">
 	 insert into POSTSCRIPT2(ps_num, pri_num, ps_star, u_id, ps_content, ps_regdate) 
 	 values(concat('ps_', POSTSCRIPT_NO_SEQ.nextVal), #{pri_num}, #{ps_star}, #{u_id} , #{ps_content}, to_char(sysdate,'yy/MM/dd')) 
 	</insert>
 	
+	 <!-- 공간정보 사업자정보 입력  sql -->
 	<insert id="entrepreneurinput" parameterType="yolo.host.dto.EntrepreneurVO">
 	 insert into ENTREPRENEUR(E_NUM, H_NUM, E_TYPE, E_TITLE, E_ADDR, E_RNUM, E_FNAME, E_FPATH)
 	 VALUES (concat('e_',ENTREPRENEUR_NO_SEQ.nextval),'21', #{e_type}, #{e_title}, #{e_addr}, #{e_rnum}, #{e_fname}, #{e_fpath})
 	</insert>
 	
-	
+	 <!-- 공간상세정보  출력 sql -->
 	<select id="lotdetailview" parameterType="lotlistVO" resultMap="lotlistMap">
 	 SELECT i.priimg_name priimg_name, p.pri_title pri_title, p.pri_weekprice pri_weekprice, p.pri_addr pri_addr, p.pri_tag pri_tag,
 	 p.pri_content pri_content, p.pri_facility pri_facility, p.pri_num pri_num,p.pri_lat,p.pri_long
@@ -105,6 +118,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	 WHERE p.pri_num = #{pri_num}
 	</select>
 	
+	 <!-- 공간예약 정보 출력 sql -->
 	<select id="lotreserve" resultMap="lotlistMap">
 	 select i.priimg_name priimg_name, p.pri_title pri_title, p.pri_weekprice pri_weekprice, p.pri_facility pri_facility, p.pri_addr pri_addr, p.pri_num pri_num, p.pri_content pri_content
      from privatelot p JOIN privateimage i
@@ -112,31 +126,40 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
      WHERE p.pri_num = #{pri_num}
 	</select>
 	
+	 <!-- 공간예약 시간테이블 출력 sql -->
 	<select id="gettime" parameterType="yolo.lot.dto.TimetableVO" resultType="yolo.lot.dto.TimetableVO">
 	SELECT t_num, pri_num, t_date, t_time
 	FROM timetable
 	WHERE t_date = #{t_date} AND pri_num = #{pri_num}
 	</select>
 	
+	 <!-- 공간예약 입력 sql -->
 	<insert id="bookinsert" parameterType="yolo.lot.dto.BooklotVO">
 		INSERT INTO BOOKLOT(bl_id, u_id, pri_num, bl_name, bl_tel, bl_people, bl_date, bl_time, bl_pay)
 		VALUES (concat('bl_', BOOKLOT_NO_SEQ.nextVal), #{u_id},#{pri_num},#{bl_name},#{bl_tel},#{bl_people},#{bl_date},#{bl_time},#{bl_pay})
 	</insert>
 	
+	 <!-- 공간예약 시간입력 sql -->
 	<insert id="inserttime" parameterType="yolo.lot.dto.TimetableVO">
 		INSERT INTO TIMETABLE(T_NUM, PRI_NUM, T_DATE, T_TIME)
 		VALUES (concat('t_', TIMETABLE_NO_SEQ.nextVal), #{pri_num}, #{t_date}, #{t_time})
 	</insert> 
 	
+	 <!-- 공간예약 시간 수정 sql -->
 	<update id="updatetime" parameterType="yolo.lot.dto.TimetableVO">
 		UPDATE TIMETABLE
 		SET T_DATE = #{t_date}, T_TIME = #{t_time}
 		WHERE T_NUM = #{t_num}
 	</update>
 	
+	 <!-- 호스트정보 출력 sql -->
 	<select id="lothostselect" parameterType="hvo" resultType="hvo">
 	SELECT * FROM hostinfo WHERE u_id = #{u_id}
 	</select>
-
+    
+     <!-- 공간리스트 총 페이지 개수 출력 sql -->
+   <select id="lotcount" resultType="int">
+    SELECT COUNT(*) lotcount FROM privatelot
+   </select>
 
 </mapper>

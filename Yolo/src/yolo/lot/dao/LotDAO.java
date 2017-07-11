@@ -13,6 +13,7 @@ import yolo.host.dto.EntrepreneurVO;
 import yolo.host.dto.HostinfoVO;
 import yolo.lot.dto.BooklotVO;
 import yolo.lot.dto.LotListVO;
+import yolo.lot.dto.LotPagingVO;
 import yolo.lot.dto.PostscriptVO;
 import yolo.lot.dto.PrivateimageVO;
 import yolo.lot.dto.PrivatelotVO;
@@ -89,10 +90,10 @@ public class LotDAO {
 	* @param   LotListVO
 	* @return  list: DB insert쿼리문 결과값
 	*/
-	public List<LotListVO> lotlistview(){
+	public List<LotListVO> lotlistview(LotPagingVO lpageVO){
 		List<LotListVO>	list = null;
 		try{
-			list = session.selectList("lot.lotlistview");
+			list = session.selectList("lot.lotlistview",lpageVO);
 		}catch(Exception ex){
 			System.out.println("lotlistview 실패: " + ex.getMessage());
 		}
@@ -336,6 +337,18 @@ public class LotDAO {
 	public HostinfoVO lothostselect(HostinfoVO hvo){
 		HostinfoVO hostvo = session.selectOne("lot.lothostselect", hvo);
 		return hostvo;
+	}
+	
+	/*
+	* @메소드명:  lotcount
+	* @역할:     LotService에서 전달받은 값을 DB에 삽입
+	*
+	* @param   LotPagingVO
+	* @return  list: DB insert쿼리문 결과값
+	*/
+	public int lotcount(){
+		int lotcount = session.selectOne("lot.lotcount");
+		return lotcount;
 	}
 
 }
