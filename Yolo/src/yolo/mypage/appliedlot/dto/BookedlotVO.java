@@ -34,12 +34,12 @@ public class BookedlotVO {
 	private String pri_regdate;   /* 등록일 */
 	private String pri_confirm;   /* 관리자승인여부 */
 	
-	private String b_id;    /* 예약 번호 */
+	private String bl_id;    /* 예약 번호 */
 	private String u_id;    /* 아이디 */
-	private int b_people;   /* 인원 */
-	private String b_date;  /* 예약 날짜 */
-	private String b_time;  /* 예약 시간 */
-	private String b_pay;   /* 결제 여부 */
+	private int bl_people;   /* 인원 */
+	private String bl_date;  /* 예약 날짜 */
+	private String bl_time;  /* 예약 시간 */
+	private String bl_pay;   /* 결제 여부 */
 
 	/* Constructor */
 	public BookedlotVO(){}
@@ -49,8 +49,8 @@ public class BookedlotVO {
 			String pri_content, String pri_info, String pri_account, int pri_weekprice, int pri_weekendprice,
 			String pri_facility, int pri_minpeople, int pri_maxpeople, String pri_weekdayo, String pri_weekdaye,
 			String pri_weekendo, String pri_weekende, String pri_lat, String pri_long, String pri_tel, String pri_web,
-			int pri_bookcount, int pri_bookmark, String pri_regdate, String pri_confirm, String b_id, String u_id,
-			int b_people, String b_date, String b_time, String b_pay) {
+			int pri_bookcount, int pri_bookmark, String pri_regdate, String pri_confirm, String bl_id, String u_id,
+			int bl_people, String bl_date, String bl_time, String bl_pay) {
 		super();
 		this.priimg_num = priimg_num;
 		this.priimg_path = priimg_path;
@@ -83,12 +83,12 @@ public class BookedlotVO {
 		this.pri_bookmark = pri_bookmark;
 		this.pri_regdate = pri_regdate;
 		this.pri_confirm = pri_confirm;
-		this.b_id = b_id;
+		this.bl_id = bl_id;
 		this.u_id = u_id;
-		this.b_people = b_people;
-		this.b_date = b_date;
-		this.b_time = b_time;
-		this.b_pay = b_pay;
+		this.bl_people = bl_people;
+		this.bl_date = bl_date;
+		this.bl_time = bl_time;
+		this.bl_pay = bl_pay;
 	}
 	
 	/* End of Constructor */
@@ -345,12 +345,12 @@ public class BookedlotVO {
 		this.pri_confirm = pri_confirm;
 	}
 
-	public String getB_id() {
-		return b_id;
+	public String getBl_id() {
+		return bl_id;
 	}
 
-	public void setB_id(String b_id) {
-		this.b_id = b_id;
+	public void setBl_id(String bl_id) {
+		this.bl_id = bl_id;
 	}
 
 	public String getU_id() {
@@ -361,36 +361,36 @@ public class BookedlotVO {
 		this.u_id = u_id;
 	}
 
-	public int getB_people() {
-		return b_people;
+	public int getBl_people() {
+		return bl_people;
 	}
 
-	public void setB_people(int b_people) {
-		this.b_people = b_people;
+	public void setBl_people(int bl_people) {
+		this.bl_people = bl_people;
 	}
 
-	public String getB_date() {
-		return b_date;
+	public String getBl_date() {
+		return bl_date;
 	}
 
-	public void setB_date(String b_date) {
-		this.b_date = b_date;
+	public void setBl_date(String bl_date) {
+		this.bl_date = bl_date;
 	}
 
-	public String getB_time() {
-		return b_time;
+	public String getBl_time() {
+		return bl_time;
 	}
 
-	public void setB_time(String b_time) {
-		this.b_time = b_time;
+	public void setBl_time(String bl_time) {
+		this.bl_time = bl_time;
 	}
 
-	public String getB_pay() {
-		return b_pay;
+	public String getBl_pay() {
+		return bl_pay;
 	}
 
-	public void setB_pay(String b_pay) {
-		this.b_pay = b_pay;
+	public void setBl_pay(String bl_pay) {
+		this.bl_pay = bl_pay;
 	}
 
 

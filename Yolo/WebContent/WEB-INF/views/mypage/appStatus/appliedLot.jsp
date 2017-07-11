@@ -31,14 +31,15 @@
 														<a href="/Yolo/lot/LotView.lot?pri_num=${l.pri_num}" class="image"><img
 															src="/Yolo/upload/lot/${l.priimg_name}" alt="blog image"></a>
 														<div class="article-category">
-															<a href="#" class="text-green">${l.b_pay} 결제진행중</a>
+															<a href="#" class="text-green">${l.bl_pay} \</a>
+															<a href="#" class="text-green"> / ${l.pri_booktype}</a>
 														</div>
 														<h4 class="osLight">
 															<a href="blog-post.html">${l.pri_title}</a>
 														</h4>
 														<div class="footer">
 															<a href="#" class="fa fa-check-circle"> 예약번호 : ${l.pri_num}</a>
-															<a href="#" class="fa  fa-calendar"> 예약일시 : ${l.b_date}</a>
+															<a href="#" class="fa  fa-calendar"> 예약일시 : ${l.bl_date}</a>
 														</div>
 													</div>
 												</div>
