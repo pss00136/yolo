@@ -78,7 +78,7 @@
                 </a>
                 
                 <!-- 메세지 창 -->
-                <div id="chat_div" class="pull-right" style="z-index:900; background:#fff;">
+                <div id="chat_div" class="pull-right" style="z-index:900; background:#fff; position:absolute; top:-1000px;">
                     <div class="notifyHeader">
                         <span>메세지함</span>
                         <a href="#" class="notifySettings icon-close msg_btn chat_out"></a>

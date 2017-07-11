@@ -4,6 +4,7 @@ $(function() {
 
 	$(".msg_btn").click(function() {
 		if ($("#chat_div").css("display") == "none") {
+			$("#chat_div").attr("style","display:block;");
 			$("#chat_div").show();
 		} else {
 			$("#chat_div").hide();
