@@ -106,7 +106,7 @@ p{
 	        }
 	    });
 		
-
+	
 		$('#alltime label').click(function(evt){
 			evt.preventDefault();
 			evt.stopImmediatePropagation();
@@ -117,9 +117,9 @@ p{
 			var times = '';
 			for(var i = 0; i < label.length ; i++){
 				if(i==label.length-1){
-					times += $(label[i]).text()
+					times += $(label[i]).text();
 				}else{
-					times += $(label[i]).text()+"/"
+					times += $(label[i]).text()+"/";
 				}
 			}
 			$('#bl_time_p').text('');
@@ -135,9 +135,6 @@ p{
 			$('#bl_pay').val(pay);
 			
 		});
-
-		
-		
 		
 		$('#calendar').fullCalendar({
 				header : {
@@ -353,7 +350,7 @@ p{
                             </div>
                             
                       </div>
-                 </div>
+                </div>
 				<!-- 시간보기 끝 -->
 				</br>
 				<!--------- 인원선택 ---------->

@@ -49,6 +49,7 @@ public class ShareController {
 		System.out.println("controller"+list.size());
 		return mv;
 	}
+	
 	/*
 	 * @메소드명: shareEdit
 	 * @역활 : 쉐어링 Edit 페이지 보여주기
@@ -64,6 +65,7 @@ public class ShareController {
 		mv.setViewName("/comShare/ShareEdit");
 		return mv;
 	}
+	
 	/*
 	 * @메소드명: shareList
 	 * @역활 : 쉐어링 List 페이지 보여주기
@@ -78,10 +80,9 @@ public class ShareController {
 		int shareCountList = 5; // 한 페이지 출력될 게시물 수
 		int shareCountPage = 5; // 한 화면에 출력될 페이지 수
 		int shareTotalPage = shareTotalCount / shareCountList; // 총 페이지 수
-		if(shareTotalCount % shareCountList >0){
+		if(shareTotalCount % shareCountList > 0){
 			shareTotalPage++;
-		}
-		
+		} 
 		
 		int shareNowPage = pvo.getShareNowPage(); //보여줄 페이지 가져오기
 		System.out.println("pvo.getShareNowPage() 값"+shareNowPage);
@@ -126,7 +127,6 @@ public class ShareController {
 		
 		return mv;
 	}
-	
 	
 	/*
 	 * @메소드명: shareInput
@@ -215,8 +215,6 @@ public class ShareController {
 			message = "입력완료";
 		}
 		System.out.println(message);
-		
-		
 		
 		
 		

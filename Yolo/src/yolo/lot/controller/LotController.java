@@ -300,9 +300,9 @@ public class LotController {
 	              JSONObject propsInfo = new JSONObject();
 	              //위도 경도의 한명 정보
 	              JSONObject positionInfo = new JSONObject();
-	              
+	              propsInfo.put("number", lotVO.getPri_num());
 	              propsInfo.put("title", lotVO.getPri_title());
-	               propsInfo.put("image", "2-1-thmb.png");
+	              propsInfo.put("image", lotVO.getPriimg_name());
 	               propsInfo.put("type", lotVO.getPri_info());
 	               propsInfo.put("price", lotVO.getPri_charge());
 	               propsInfo.put("address", lotVO.getPri_addr());
@@ -336,7 +336,7 @@ public class LotController {
 		    //상세정보 보여주기
 		    LotListVO list = service.lotdetailview(lotlistVO);
 		    //북마크 누른 것 검사
-		    //service.lotbookmarkCheck();
+//		    service.lotbookmarkCheck();
 		    System.out.println(list.getPri_bookmark());
 		    List<PostscriptVO> review = service.lotreviewlist(postVO);
 		    String jsonlot = lotjson(list);
@@ -354,9 +354,9 @@ public class LotController {
 	           JSONObject propsInfo = new JSONObject();
 	           //위도 경도의 한명 정보
 	           JSONObject positionInfo = new JSONObject();
-	           
+	           propsInfo.put("number", lotVO.getPri_num());
 	           propsInfo.put("title", lotVO.getPri_title());
-	           propsInfo.put("image", "2-1-thmb.png");
+	           propsInfo.put("image", lotVO.getPriimg_name());
 	           propsInfo.put("type", lotVO.getPri_info());
 	           propsInfo.put("price", lotVO.getPri_charge());
 	           propsInfo.put("address", lotVO.getPri_addr());

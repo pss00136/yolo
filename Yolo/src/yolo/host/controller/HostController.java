@@ -14,6 +14,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -44,6 +45,7 @@ import yolo.lot.service.LotService;
 */
 @Controller
 @RequestMapping("host")
+@SessionAttributes("privateVO")
 public class HostController {
 	
 	/* 멤버필드 */
@@ -181,7 +183,7 @@ public ModelAndView modifyfirst(PrivatelotVO privatelotVO, HttpSession session){
 }
 
 @RequestMapping("/LotModifySecond.host" )
-public ModelAndView lotinputSecond(@ModelAttribute("privateVO") PrivatelotVO privateVO, PrivateimageVO primgVO, HttpSession session
+public ModelAndView LotModifySecond(@ModelAttribute("privateVO") PrivatelotVO privateVO, PrivateimageVO primgVO, HttpSession session
 		,String lot_postcode, String lot_main_address, String lot_detail_address){
 	ModelAndView mv = new ModelAndView();
 	System.out.println(privateVO.getPri_title());
@@ -214,6 +216,9 @@ public ModelAndView modifylast(@ModelAttribute("privateVO") PrivatelotVO private
     , EntrepreneurVO entrepreneurVO, String e_rnum1, String e_rnum2, String e_rnum3
 	, String postcode, String main_address, String detail_address){
 	ModelAndView mv = new ModelAndView();
+	
+	System.out.println(privateVO.getPri_title());
+	System.out.println(privateVO.getPri_type());
 	//pri 계좌번호 합치기
 	if(pri_accountnum != null){
 	 privateVO.setPri_account(pri_accountbank + "/" + pri_accountnum + "/" + pri_accountname );
@@ -247,7 +252,7 @@ PrivatelotVO privatelotVO = (PrivatelotVO)session.getAttribute("plotVO");
  System.out.println(privateVO.getH_num());
  System.out.println(privateVO.getPri_type());
 // lservice.lotinput(privateVO, primgVO, entrepreneurVO);
- System.out.println(privateVO.getPri_type());
+ System.out.println("pri_type =" + privateVO.getPri_type());
  service.lotmodify(privateVO);
  
  //이미지 넘겨오나?

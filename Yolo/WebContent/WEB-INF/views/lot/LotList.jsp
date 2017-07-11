@@ -98,7 +98,7 @@ $(function(){
 								});
 								var infoboxContent = '<div class="infoW">'
 										+ '<div class="propImg">'
-										+ '<img src="images/prop/' + prop.image + '">'
+										+ '<img src="/Yolo/upload/lot/' + prop.image + '">'
 										+ '<div class="propBg">'
 										+ '<div class="propPrice">'
 										+ prop.price
@@ -119,7 +119,7 @@ $(function(){
 										+ '<div class="clearfix"></div>'
 										+ '<div class="infoButtons">'
 										+ '<a class="btn btn-sm btn-round btn-gray btn-o closeInfo">Close</a>'
-										+ '<a href="single.html" class="btn btn-sm btn-round btn-green viewInfo">View</a>'
+										+ '<a href="/Yolo/lot/LotView.lot?pri_num='+ prop.number +'" class="btn btn-sm btn-round btn-green viewInfo">View</a>'
 										+ '</div>' + '</div>';
 
 								google.maps.event
