@@ -11,7 +11,6 @@ import yolo.host.dto.EntrepreneurVO;
 import yolo.host.dto.HostinfoVO;
 import yolo.lot.dao.LotDAO;
 import yolo.lot.dto.BooklotVO;
-import yolo.lot.dto.BookmarkVO;
 import yolo.lot.dto.LotListVO;
 import yolo.lot.dto.LotPagingVO;
 import yolo.lot.dto.PostscriptVO;
@@ -89,15 +88,9 @@ public class LotServiceImpl implements LotService {
 	}
 
 	@Override
-	public int lotBookmark(BookmarkVO bookmarkVO) {
-		int result = ldao.lotBookmarkInsert(bookmarkVO);
-		return result;
-	}
-
-	@Override
-	public int lotBookmarkdelete(BookmarkVO bookmarkVO) {
-		int result = ldao.lotBookmarkDelete(bookmarkVO);
-		return result;
+	public int lotviewcount(LotListVO lotlistVO) {
+		int lotviewcount = ldao.lotviewcount(lotlistVO);
+		return lotviewcount;
 	}
 
 }

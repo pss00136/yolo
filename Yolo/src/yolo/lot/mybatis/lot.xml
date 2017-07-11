@@ -36,6 +36,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<result column="pri_web" property="pri_web" />
 		<result column="pri_bookcount" property="pri_bookcount" />
 		<result column="pri_bookmark" property="pri_bookmark" />
+		<result column="pri_hits" property="pri_hits" />
 		<result column="pri_regdate" property="pri_regdate" />
 		<result column="pri_confirm" property="pri_confirm" />
 	</resultMap>
@@ -69,9 +70,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
      <!-- 공간정보 리스트 출력 sql -->
 	<select id="lotlistview" resultMap="lotlistMap">
 	<![CDATA[
-	  SELECT b.rnum rnum, b.priimg_name priimg_name, b.pri_weekprice pri_weekprice, b.pri_title pri_title, b.pri_addr pri_addr, b.pri_num pri_num, b.pri_long pri_long, b.pri_lat pri_lat
-	  FROM(SELECT rownum rnum, a.priimg_name priimg_name, a.pri_weekprice pri_weekprice, a.pri_title pri_title, a.pri_addr pri_addr, a.pri_num pri_num, a.pri_long pri_long, a.pri_lat pri_lat
-	       FROM (SELECT i.priimg_name priimg_name, p.pri_weekprice pri_weekprice, p.pri_title pri_title, p.pri_addr pri_addr, p.pri_num pri_num, p.pri_long pri_long, p.pri_lat pri_lat
+	  SELECT b.rnum rnum, b.priimg_name priimg_name, b.pri_weekprice pri_weekprice, b.pri_title pri_title, b.pri_addr pri_addr, b.pri_num pri_num, b.pri_long pri_long, b.pri_lat pri_lat, b.pri_hits pri_hits
+	  FROM(SELECT rownum rnum, a.priimg_name priimg_name, a.pri_weekprice pri_weekprice, a.pri_title pri_title, a.pri_addr pri_addr, a.pri_num pri_num, a.pri_long pri_long, a.pri_lat pri_lat, a.pri_hits pri_hits
+	       FROM (SELECT i.priimg_name priimg_name, p.pri_weekprice pri_weekprice, p.pri_title pri_title, p.pri_addr pri_addr, p.pri_num pri_num, p.pri_long pri_long, p.pri_lat pri_lat, p.pri_hits pri_hits
                   FROM privatelot p  JOIN privateimage i
                    ON p.pri_num = i.pri_num
                    ORDER BY  to_number(substr(p.pri_num, 5)) )a 
@@ -117,6 +118,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	 ON p.pri_num = i.pri_num
 	 WHERE p.pri_num = #{pri_num}
 	</select>
+	
+	<update id="lotviewcount" parameterType="lotlistVO">
+	  UPDATE privatelot SET pri_hits = pri_hits + 1
+	  WHERE pri_num = #{pri_num}
+	</update>
 	
 	 <!-- 공간예약 정보 출력 sql -->
 	<select id="lotreserve" resultMap="lotlistMap">

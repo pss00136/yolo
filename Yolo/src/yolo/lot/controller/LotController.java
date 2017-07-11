@@ -28,7 +28,6 @@ import yolo.host.dto.EntrepreneurVO;
 import yolo.host.dto.HostinfoVO;
 import yolo.host.service.HostService;
 import yolo.lot.dto.BooklotVO;
-import yolo.lot.dto.BookmarkVO;
 import yolo.lot.dto.LotListVO;
 import yolo.lot.dto.LotPagingVO;
 import yolo.lot.dto.PostscriptVO;
@@ -225,7 +224,7 @@ public class LotController {
  
 	    /*
 		* @메소드명: lotlist
-		* @역할: 공간 검색, 검색 결과 보여주기 
+		* @역할: 공간 검색, 검색 결과 보여주기, 페이징
 		*
 		* @param   LotListVO 값
 		* @return  String:반환하는 경로
@@ -331,7 +330,11 @@ public class LotController {
 	   @RequestMapping("lot/LotView.lot")
 		public ModelAndView lotview(LotListVO lotlistVO, PostscriptVO postVO){
 		   ModelAndView mv = new ModelAndView();
+		    //조회수 증가
+		    service.lotviewcount(lotlistVO);
+		    //상세정보 보여주기
 		    LotListVO list = service.lotdetailview(lotlistVO);
+		    System.out.println(list.getPri_bookmark());
 		    List<PostscriptVO> review = service.lotreviewlist(postVO);
 		    String jsonlot = lotjson(list);
 			mv.addObject("jsonlot", jsonlot);
@@ -512,31 +515,6 @@ public class LotController {
 		   return mv;
 	   }
 	   
-	   @RequestMapping("lot/bookmark.lot")
-	   @ResponseBody
-	   public String bookmark(BookmarkVO bookmarkVO ,HttpSession session){	   
-		    String u_id = (String)session.getAttribute("u_id");
-		    bookmarkVO.setU_id(u_id);
-		    int result = service.lotBookmark(bookmarkVO);
-		    if(result == 1){
-		    	return "관심리스트에 추가되었습니다.";
-		    }else{
-		    	return "실패";
-		    }
-		}
-	   
-	   @RequestMapping("lot/bookmarkdelete.lot")
-	   @ResponseBody
-	   public String bookmarkdel(BookmarkVO bookmarkVO ,HttpSession session){
-		    String u_id = (String)session.getAttribute("u_id");
-		    bookmarkVO.setU_id(u_id);
-		    int result = service.lotBookmarkdelete(bookmarkVO);
-		    if(result == 1){
-		    	return "관심리스트가 삭제되었습니다.";
-		    }else{
-		    	return "실패";
-		    }
-		}
  
     	   
 }

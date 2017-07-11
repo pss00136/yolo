@@ -12,7 +12,6 @@ import org.springframework.stereotype.Repository;
 import yolo.host.dto.EntrepreneurVO;
 import yolo.host.dto.HostinfoVO;
 import yolo.lot.dto.BooklotVO;
-import yolo.lot.dto.BookmarkVO;
 import yolo.lot.dto.LotListVO;
 import yolo.lot.dto.LotPagingVO;
 import yolo.lot.dto.PostscriptVO;
@@ -110,9 +109,11 @@ public class LotDAO {
 	* @return  list: DB insert쿼리문 결과값
 	*/
 	public LotListVO lotdetailview(LotListVO lotlistVO){
+		
 		LotListVO list = null;                                                   
 		try{
 			list = session.selectOne("lot.lotdetailview", lotlistVO);
+			
 		}catch(Exception ex){
 			System.out.println("lotdetailview 실패: " + ex.getMessage());
 		}
@@ -128,9 +129,11 @@ public class LotDAO {
 	* @return  list: DB insert쿼리문 결과값
 	*/
 	public LotListVO lotreserve(LotListVO lotlistVO){
+		
 		LotListVO list = null;
 		try{
 			list = session.selectOne("lot.lotreserve", lotlistVO);
+			
 		}catch(Exception ex){
 			System.out.println("lotreserve 실패: " + ex.getMessage());
 		}
@@ -352,13 +355,21 @@ public class LotDAO {
 		return lotcount;
 	}
 	
-	public int lotBookmarkInsert(BookmarkVO bookmarkVO){
-		int result = session.insert("bookmark.bookmarkinsert",bookmarkVO);
-		return result;
-	}
-	
-	public int lotBookmarkDelete(BookmarkVO bookmarkVO){
-		int result = session.delete("bookmark.bookmarkdelete",bookmarkVO);
+	/*
+	* @메소드명:  lotviewcount
+	* @역할:     LotService에서 전달받은 값을 DB에 삽입
+	*
+	* @param   LotPagingVO
+	* @return  list: DB insert쿼리문 결과값
+	*/
+	public int lotviewcount(LotListVO lotlistVO){
+		int result=0;
+		try{
+			result = session.update("lot.lotviewcount", lotlistVO);
+		}catch(Exception ex){
+			System.out.println("lotviewcount 실패: " + ex.getMessage());
+		}
+		
 		return result;
 	}
 

@@ -776,8 +776,9 @@ $(function(){
 							<img src="/Yolo/upload/lot/<%= vo.getPriimg_name() %>" alt="image">
 							<div class="figCaption">
 								<div><%= vo.getPri_weekprice() %></div>
-									<span class="icon-eye"> 200</span> <span class="icon-heart">
-									54</span> <span class="icon-bubble"> 13</span>
+									<span class="icon-eye"><%= vo.getPri_hits() %></span> 
+									<span class="icon-heart">
+									54</span> 
 							</div>
 							<div class="figView">
 								<span class="icon-eye"></span>
