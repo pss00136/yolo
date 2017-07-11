@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import yolo.share.dao.ShareDAO;
+import yolo.share.dto.BookShareVO;
 import yolo.share.dto.InputListVO;
 import yolo.share.dto.ShareMainListVO;
 import yolo.share.dto.SharePagingVO;
@@ -55,6 +56,12 @@ public class ShareServiceImpl implements ShareService{
 	public List<ShareMainListVO> shareEdit(ShareVO vo) {
 		List<ShareMainListVO> list = sharedao.shareEdit(vo);
 		return list;
+	}
+
+	@Override
+	public int ShareBookLot(BookShareVO vo) {
+		int sharebooklot = sharedao.shareBookLot(vo);
+		return sharebooklot;
 	}
 
 	

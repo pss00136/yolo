@@ -9,47 +9,59 @@
 <script src="/Yolo/js/jquery-2.1.1.min.js"></script>
 
 <script type="text/javascript">
-	$(function(){
-		$("#ask-time").click(function(){
-			var temp = $("#sl_time_h").val();
-			var date = $("#bl_date_d").val();
-			$('#bl_date').val('');
-			$('#bl_date').val(date);
-			var alltimes = temp.split('/');
-			var hours = 8;
-			for(var i =0; i <alltimes.length;  i++ ){
-				hours++;
-				if(alltimes[i] == 1){
-					$('.btn-group').append('<label class="btn btn-o btn-warning disabled" autocomplete="off">'+hours+':00</label>');
-				}else{
-					$('.btn-group').append('<label class="btn btn-o btn-warning" autocomplete="off">'+hours+':00</label>');
-				}
-			}
-		});
-	});
-	
-	$(document).on('click','#alltime label',function(evt){
-		evt.preventDefault();
-		evt.stopImmediatePropagation();
-		$(this).toggleClass("active");
-			var label = $("#alltime").find('label[class*=active]');
-			var disabled = $("#alltime").find('label[class*=disabled]');
-			var times = '';
-			for(var i = 0; i < label.length ; i++){
-				if(i==label.length-1){
-					times += $(label[i]).text()
-				}else{
-					times += $(label[i]).text()+"/"
-				}
-			}
-			
-			
-			$('#sl_time').val('');
-			$('#t_time').val('');
-			$('#sl_time').val(times);
-			$('#t_time').val(times);
-	});
+$(function(){
+    $("#ask-time").click(function(){
+       var temp = $("#sl_time_h").val();
+       var date = $("#bl_date_d").val();
+       var num = $("#sl_num_s").val();
+       $('#bsl_date').val('');
+       $('#bsl_date').val(date);
+       $('#sl_num').val('');
+       $('#sl_num').val(num);
+       var alltimes = temp.split('/');
+       var hours = 8;
+       for(var i =0; i <alltimes.length;  i++ ){
+          hours++;
+          if(alltimes[i] == 1){
+             $('.btn-group').append('<label class="btn btn-o btn-warning disabled" autocomplete="off">'+hours+':00</label>');
+          }else{
+             $('.btn-group').append('<label class="btn btn-o btn-warning" autocomplete="off">'+hours+':00</label>');
+          }
+       }
+    });
+ });
+ 
+ $(document).on('click','#alltime label',function(evt){
+    evt.preventDefault();
+    evt.stopImmediatePropagation();
+    $(this).toggleClass("active");
+       var label = $("#alltime").find('label[class*=active]');
+       var disabled = $("#alltime").find('label[class*=disabled]');
+       var times = '';
+       for(var i = 0; i < label.length ; i++){
+          if(i==label.length-1){
+             times += $(label[i]).text()
+          }else{
+             times += $(label[i]).text()+"/"
+          }
+       }
+ 
+ 
+       $('#bsl_time').val('');
+       $('#t_time').val('');
+       $('#bsl_time').val(times);
+       $('#t_time').val(times);
+ });
+ 
+ $(document).on('click', "#ShareBookLotSubmit", function(){
+    if($("#bsl_time").val() == ""){
+       alert("시간을 선택해주세요");
+       return false;
+    }
+    $('#shareBookLot').submit();
+ });
 </script>
+
         
 <!-- -------------------------------------------------------------------------- -->
 <div class="home-content">
@@ -115,6 +127,7 @@
 										<div class="btn">
 											<input type="hidden" id="sl_time_h" name="sl_time_h" value="${list.sl_time }">
 											<input type="hidden" id="bl_date_d" name="bl_date_d" value="${list.bl_date}">
+											<input type="hidden" id="sl_num_s" name="sl_num_s" value="${list.sl_num}">
 											<a id="ask-time" data-toggle="modal" href="#contactAgent"
 												class="btn btn-lg btn-round btn-green contactBtn">신청하기</a>
 										</div>

@@ -6,6 +6,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import yolo.share.dto.BookShareVO;
 import yolo.share.dto.InputListVO;
 import yolo.share.dto.ShareMainListVO;
 import yolo.share.dto.SharePagingVO;
@@ -91,5 +92,17 @@ public class ShareDAO {
 			System.out.println("회원이 쉐어링 등록한 페이지 보기(shareEdit) 에러:" + e.getMessage());
 		}
 		return list;
+	}
+
+	public int shareBookLot(BookShareVO vo) {
+		int result = 0;
+		try {
+			
+			result = session.insert("share.shareBookLot", vo);
+			
+		} catch (Exception e) {
+			System.out.println("회원이 쉐어링 신청한 시간 값 넣기(shareBookLot) 에러:" + e.getMessage());
+		}
+		return result;
 	}
 }

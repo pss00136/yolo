@@ -2,6 +2,7 @@ package yolo.share.service;
 
 import java.util.List;
 
+import yolo.share.dto.BookShareVO;
 import yolo.share.dto.InputListVO;
 import yolo.share.dto.ShareMainListVO;
 import yolo.share.dto.SharePagingVO;
@@ -28,5 +29,7 @@ public interface ShareService {
 	public List<ShareMainListVO> shareDetail(ShareVO vo);
 
 	public List<ShareMainListVO> shareEdit(ShareVO vo);
+
+	public int ShareBookLot(BookShareVO vo);
 
 }

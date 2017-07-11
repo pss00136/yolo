@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import yolo.share.dto.BookShareVO;
 import yolo.share.dto.InputListVO;
 import yolo.share.dto.ShareMainListVO;
 import yolo.share.dto.SharePagingVO;
@@ -127,7 +128,22 @@ public class ShareController {
 		
 		return mv;
 	}
-	
+	/*
+	 * @메소드명: ShareBookLot
+	 * @역활 : 쉐어링 신청하고 ShareList로 페이지 전환
+	 * @param BookShareVO
+	 * @return ModelAndView로 반환
+	 */
+	@RequestMapping("ShareBookLot.share")
+	public ModelAndView ShareBookLot(BookShareVO vo, HttpSession session){
+		System.out.println("ShareBookLot 컨트롤러 실행");
+		vo.setU_id((String)session.getAttribute("u_id"));
+		int result = service.ShareBookLot(vo);
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("redirect:/comShare/ShareList.share");
+		System.out.println("ShareBookLot 컨트룰러 끝" + result);
+		return mv;
+	}
 	/*
 	 * @메소드명: shareInput
 	 * @역활 : 쉐어링 글등록하고 ShareList로 페이지 전환
