@@ -12,9 +12,19 @@
                    <div class="col-md-12">
                     <div class="row" style="margin-bottom: 10px;">
                      <h3 style="margin: 5px;">승인 요청중인 공간 &nbsp;<span class="label label-warning">승인 대기</span></h3>
+                            <div>
+                            <% List<LotListVO> list = (List<LotListVO>)request.getAttribute("list"); 
+                            int pagenum =0;
+                            int index = 0;
+                            if(list.size() % 3 == 0 ){
+                            	pagenum = list.size()/3;
+                            }else{
+                            	pagenum = list.size()/3 + 1;
+                            }
+                            for(int j=0; j < pagenum; j++) { %>
                             <div class="row">
-                             <% List<LotListVO> list = (List<LotListVO>)request.getAttribute("list"); 
-                             for(LotListVO lvo : list) { %>
+                            <% for(int i = 0 ; i<3 ; i++)   { 
+                            	  LotListVO lvo = (LotListVO)list.get(index); index++;	%>
                                 <div class="col-md-4 col-xs-12">
                                     <a href="/Yolo/lot/LotView.lot?pri_num=<%=lvo.getPri_num() %>" class="propWidget-1" style="margin-bottom: 5px;">
                                         <div class="fig">
@@ -30,12 +40,15 @@
                                              </a>
                                    <a style="float:right; margin-bottom: 5px;" href="#" class="btn  btn-o btn-green">요청취소</a>
                                 </div>
-                                <% }  %>
-                              
-                        
-                                
-                            </div>
-                     
+                                 <% if(index == list.size()){
+                            	  break;   
+                                        } //end of if
+                                    
+                            	}%>
+                               
+                            </div><!-- end of row -->
+                            <% } %>
+                           </div>
                         </div>
                         
                      
@@ -47,12 +60,20 @@
                      <h3 style="margin: 5px;">승인 완료된 공간 &nbsp;<span class="label label-danger">승인 완료</span></h3>
                      
                         <div>
-                             
+                            <% List<LotListVO> dlist = (List<LotListVO>)request.getAttribute("list"); 
+                            int dpagenum =0;
+                            int dindex = 0;
+                            if(dlist.size() % 3 == 0 ){
+                            	dpagenum = list.size()/3;
+                            }else{
+                            	dpagenum = list.size()/3 + 1;
+                            }
+                            for(int j=0; j < dpagenum; j++) { %>
                             <div class="row">
-                             <% List<LotListVO> dlist = (List<LotListVO>)request.getAttribute("list"); 
-                             for(LotListVO lvo : dlist) { %>
                             
-                                <div class="col-md-4 col-xs-12" style="background-color: white;">
+                            	<% for(int i = 0 ; i<3 ; i++)   { 
+                            	  LotListVO lvo = (LotListVO)list.get(dindex); dindex++;	%>
+                                <div class="col-md-4 col-xs-12">
                                     <a href="/Yolo/lot/LotView.lot?pri_num=<%=lvo.getPri_num() %>" class="propWidget-1" style="margin-bottom: 5px;">
                                         <div class="fig">
                                             <img src="/Yolo/images_yolo/lot/<%= lvo.getPriimg_name()%>" alt="image">
@@ -64,29 +85,32 @@
                                                 <div class="feat feat-2"><span class="icon-bubble"></span> 	2</div>                                               
                                             </div>
                                         </div>
-                                                <a style="float:right; margin: 5px;" href="/Yolo/host/LotModify.host?pri_num=<%=lvo.getPri_num()%>" class="btn  btn-o btn-green">수정</a>
-                                                <a style="float:right; margin: 5px;" href="/Yolo/host/LotDelete.host?pri_num=<%=lvo.getPri_num()%>" id="bdelete" class="btn  btn-o btn-green">삭제</a>
+                                        <div>
+	                                        <a style="float:right; margin: 5px;" href="/Yolo/host/LotModify.host?pri_num=<%=lvo.getPri_num()%>" class="btn  btn-o btn-green">수정</a>
+	<%--                                                 <a style="float:right; margin: 5px;" href="/Yolo/host/LotDelete.host?pri_num=<%=lvo.getPri_num()%>" id="bdelete" class="btn  btn-o btn-green">삭제</a> --%>
+										</div>
+										<div>
+											 <a style="float:right; margin: 5px;" href="/Yolo/host/LotDelete.host?pri_num=<%=lvo.getPri_num()%>" id="bdelete" class="btn btn-o btn-green">삭제</a> --%>
+<%-- 											<input type="hidden" class="sc_num1" value="${c.sc_num}"/> --%>
+<!-- 														<a data-toggle="modal" href="#SigningCancel" role="button" class="btn btn-lg btn-round btn-green cancelBtn" data-backdrop="static">취소하기</a> -->
+<!-- 											<a data-toggle="modal" href="#SigningCancel" class="btn btn-lg btn-round btn-green cancelBtn">취소하기</a> -->
+										</div>
+													
                                     </a>
                                 </div>
-                                   <% } %>
+                                   
+                               <% if(dindex == list.size()){
+                            	  break;   
+                                        } //end of if
+                                    
+                            	}%>
                                
                                 
                             </div>
+                            <% } %>
                           
                         </div>
                         </div>
-                        
-                     
                     </div>
                     
-                    
-               
-
-        
-        <!-- ì¶ê°  -->
-		<script src="/Yolo/js/home.js" type="text/javascript"></script>
-	
-		
-		
-    </body>
-</html>
+ </div>

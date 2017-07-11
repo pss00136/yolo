@@ -17,9 +17,7 @@
 			<li><a href="HostBook.host"><span
 					class="navIcon glyphicon glyphicon-user"></span><span
 					class="navLabel">예약 관리</span></a></li>
-			<li><a href="single.html"><span
-					class="navIcon glyphicon glyphicon-comment"></span><span
-					class="navLabel">문의 확인</span></a></li>
+			
 
 		</ul>
 	</nav>
