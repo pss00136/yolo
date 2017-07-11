@@ -5,6 +5,7 @@ import java.util.List;
 import yolo.host.dto.EntrepreneurVO;
 import yolo.host.dto.HostinfoVO;
 import yolo.lot.dto.BooklotVO;
+import yolo.lot.dto.BookmarkVO;
 import yolo.lot.dto.LotListVO;
 import yolo.lot.dto.LotPagingVO;
 import yolo.lot.dto.PostscriptVO;
@@ -127,4 +128,22 @@ public interface LotService {
 	* @return  
 	*/
 	public int lotviewcount(LotListVO lotlistVO);
+	
+    /*
+    * @메소드명: lotBookmark
+    * @역할: LotController에서 전달받은 값을 DAO로 전달, 결과값 리턴
+    *
+    * @param   BookmarkVO 에서 전달받은 값
+    * @return  
+    */    
+    public int lotBookmark(BookmarkVO bookmarkVO);
+
+    /*
+    * @메소드명: lotBookmarkdelete
+    * @역할: LotController에서 전달받은 값을 DAO로 전달, 결과값 리턴
+    *
+    * @param   BookmarkVO 에서 전달받은 값
+    * @return  
+    */    
+    public int lotBookmarkdelete(BookmarkVO bookmarkVO);
 }

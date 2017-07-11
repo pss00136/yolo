@@ -735,6 +735,7 @@ $(function(){
 				<div class="summaryItem">
 					<h1 class="pageTitle" id="lot_title">
 						${list.pri_title}&nbsp;
+						
 						<span id="bookmark" class="fa fa-heart-o"></span>
 					</h1>
 					<strong style="margin-top: 0px; font-size: 25px;">${list.pri_weekprice}</strong>

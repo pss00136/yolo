@@ -10,7 +10,7 @@ $(function(){
 				dataType : "text",
 	            contentType: "application/x-www-form-urlencoded; charset=UTF-8",
 				success : function(data){
-					//받아온 데이터를 json으로
+					//받아온 데이터 json으로 바꿔줌
 					var r = jQuery.parseJSON(data);
 					var divl = $('#ReviewList');
 					divl.append(' <div class="row commentContent" style="margin-bottom: 7px; padding:10px;">'+
