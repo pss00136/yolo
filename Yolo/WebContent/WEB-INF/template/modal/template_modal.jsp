@@ -80,6 +80,13 @@
 	<script src=" <c:url value='/js/jquery-ui-touch-punch.js'/> "></script>
 	<script src=" <c:url value='/js/jquery.placeholder.js'/> "></script>
 	<script src=" <c:url value='/js/bootstrap.js'/> "></script>
+
+ 	<!-- 채팅 JS -->
+ 	<script src="http://192.168.0.151:3000/socket.io/socket.io.js" type="text/javascript"></script>
+ 	<script src=" <c:url value='/js_yolo/chat/chatClient.js"'/> " type="text/javascript"></script>
+ 	<script src=" <c:url value='/js_yolo/chat/chat.js'/> " type="text/javascript"></script>
+	
+	
 	<script src=" <c:url value='/js/jquery.touchSwipe.min.js'/> "></script>
 	<script src=" <c:url value='/js/jquery.slimscroll.min.js'/> "></script>
 	<script src=" <c:url value='/js/jquery.visible.js'/> "></script>
@@ -94,16 +101,12 @@
 	<script src=" <c:url value='/js/calendar.js'/> "></script>
 
 	<!-- 추가  -->
+	<script src=" <c:url value='/js_yolo/user/login.js'/> " type="text/javascript"></script>
 	<script src=" <c:url value='/js/home.js'/> " type="text/javascript"></script>
 	
 	<!-- share date picker JS -->
 	<script src=" <c:url value='http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'/>"></script> 
 	<script src=" <c:url value='/js_yolo/comShare/ios-7-date-picker.js'/>"></script>
 	<script src=" <c:url value='/js_yolo/comShare/datetimePicker.js'/>"></script>
- 	<!-- 채팅 JS -->
- 	<script src="http://192.168.0.151:3000/socket.io/socket.io.js" type="text/javascript"></script>
- 	<script src=" <c:url value='/js_yolo/chat/chatClient.js"'/> " type="text/javascript"></script>
- 	<script src=" <c:url value='/js_yolo/chat/chat.js'/> " type="text/javascript"></script>
-
 </body>
 </html>

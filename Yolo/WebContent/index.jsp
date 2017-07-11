@@ -408,11 +408,12 @@
 	<script src="/Yolo/js/calendar.js"></script>
 
 	<!-- 추가  -->
+	<script src="/Yolo/js_yolo/user/login.js" type="text/javascript"></script>
 	<script src="/Yolo/js/home.js" type="text/javascript"></script>
 	<script src="/Yolo/js_yolo/icongrid/modernizr.custom.js" type="text/javascript"></script>
     <!-- 다음 맵 -->
     <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
-    <script src=" <c:url value='/js_yolo/postcode/postcode.js'/> " type="text/javascript"></script>
+    <script src="/Yolo/js_yolo/postcode/postcode.js" type="text/javascript"></script>
  	<!-- javascript end -->
  	<script type="text/javascript">
  	$(function(){
