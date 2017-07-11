@@ -12,7 +12,7 @@
 		    </div>
 		    
 			<!-- 타이틀 부분 -->
-			<div class="row bounds padding" >			
+			<div class="row bounds padding">			
 				<div class="col-md-12 col-xs-12">
 					<div id="Share_Title" >
 						<h1 class="tab center bounds padding active">공간 쉐어링</h1>
@@ -44,11 +44,10 @@
 		     // 로그인 된 경우
 		     %> 
 		     
-		    <div class="row bounds padding" >
-				<div class="col-md-12 col-xs-12" >
+		    <div class="write_btn" >
+<!-- 				<div class="col-md-12 col-xs-12" > -->
 					<a href="ShareInput.share" class="btn btn-round btn-green ">쉐어링 글쓰기</a>
-					
-				</div>				
+<!-- 				</div>				 -->
 			</div>
 			<%} %> 
 			
@@ -85,7 +84,7 @@
 								<span class="text-smaller">${list.pri_addr}</span>
 							</p>
 							<p>${list.u_id}</p>
-							<p style="float: right;">${list.sl_time}</p>
+							<p style="float: right; display:none;">${list.sl_time}</p>
 						</div>
 					</div>
 				</a>
@@ -124,4 +123,4 @@
 
 
 <!-- 추가JS  -->
-<script src="/Yolo/js/home.js" type="text/javascript"></script>
+<!-- <script src="/Yolo/js/home.js" type="text/javascript"></script> -->

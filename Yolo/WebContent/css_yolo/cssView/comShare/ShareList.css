@@ -162,13 +162,14 @@ outline
 }
 h1, h2, h3, h4, h5, h6 {
 	line-height: 1em;
-	margin: .6em 0
+	margin: 0;
 }
 
 h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child,
 	h6:first-child {
-	margin-top: 0
+	margin-top: 13px;
 }
+
 
 h1 {
 	font-size: 220%
@@ -709,12 +710,11 @@ a.item .image {
 }
 
 a.item .column>.text {
-	width: 385px;
-	padding: 0 30px 0 40px;
-	margin: 45px auto 0;
-	background:
-		url(/cassette.axd/file/images/hex-red-e93d9680540c7a03d478e9abea5c3e7eebdf4bb6.png)
-		left top no-repeat
+	width: 516px;
+    padding: 0 30px 0 40px;
+    margin: 15px 15px;
+    background: url(/cassette.axd/file/images/hex-red-e93d9680540c7a03d478e9abea5c3e7eebdf4bb6.png)
+ 	left top no-repeat;
 }
 
 a.item .column>.text p {
@@ -882,5 +882,12 @@ p.small {
 	}
 	.post-image img {
 		width: 100%
+	}
+}
+
+
+@media(max-width:768px){
+	.write_btn{
+		float: right;
 	}
 }

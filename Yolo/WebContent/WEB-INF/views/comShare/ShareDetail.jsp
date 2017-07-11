@@ -96,8 +96,8 @@
 						</div>
 						<!-- 등록 이미지 삽입 끝 -->
 						<!-- 내용 -->
-						<h3>${list.sl_title }</h3>
-						<div class="form-group col-md-6">
+						<div class="col-md-6"><h3>${list.sl_title }</h3>
+						<div class="form-group">
 							<div class="profile-card">
 								<div class="pc-avatar">
 									<img src="/Yolo/upload/user/${list.u_iname }" alt="avatar">
@@ -122,6 +122,7 @@
 									</div>
 								</div>
 							</div>
+						</div>
 						</div>
 					</div>
 					<!-- 상단 부분 끝 -->
