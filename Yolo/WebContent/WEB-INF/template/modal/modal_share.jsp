@@ -11,7 +11,6 @@
 						aria-hidden="true"></button>
 				</div>
 				<div class="modal-body">
-																						   
 					<!-- date picker -->
 					<div class='formInput dateSelector'> 
 						<input style="display:block;" type='input' class='icon-calendar' id="bsl_date" name="bsl_date" />
@@ -28,9 +27,9 @@
                             </div>
                         </div>
                     </div>
-                    <input type="hidden" id="bsl_time" name="bsl_time"/>
-					<input type="hidden" id="t_time" name="t_time"/>
-					<input type="hidden" id="sl_num" name="sl_num"/>
+                    <input type="text" id="bsl_time" name="bsl_time"/>
+					<input type="text" id="t_time" name="t_time"/>
+					<input type="text" id="sl_num" name="sl_num"/>
 				</div>
 				
 				<div class="modal-footer">
