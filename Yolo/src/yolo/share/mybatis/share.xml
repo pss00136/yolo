@@ -63,4 +63,11 @@ SELECT i.priimg_num priimg_num, i.priimg_path priimg_path, i.priimg_name priimg_
 FROM (select * from privatelot where pri_booktype = '일단위') p , (select * FROM(select * from booklot where bl_id not in (select o.bl_id bl_id from sharelot2 h, booklot o where o.bl_id = h.bl_id)) e WHERE e.bl_date >= to_char(SYSDATE, 'YYYY-MM-DD')) b, privateimage i
 WHERE b.U_ID = #{uid} and  p.pri_num = b.pri_num and i.PRI_NUM = p.pri_num
 </select>
+
+<select id="alllist" resultType="yolo.share.dto.ShareMainListVO">
+SELECT DISTINCT i.priimg_name priimg_name, p.pri_addr pri_addr, p.pri_lat pri_lat, p.pri_long pri_long, p.pri_weekprice pri_weekprice, p.pri_num pri_num
+FROM sharelot2 s, (select * from booklot where bl_date >= to_char(sysdate,'YYYY-MM-DD')) b, (select * from privatelot where pri_booktype = '일단위') p, privateimage i 
+WHERE s.bl_id = b.bl_id AND b.pri_num = p.pri_num AND p.pri_num = i.pri_num
+</select>
+
 </mapper>

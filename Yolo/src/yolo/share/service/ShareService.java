@@ -32,4 +32,5 @@ public interface ShareService {
 
 	public int ShareBookLot(BookShareVO vo);
 
+	public List<ShareMainListVO> shareAllList();
 }

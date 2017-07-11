@@ -18,7 +18,6 @@ public class SharePagingVO {
 		super();
 	}
 	
-	
 	/* Constructor end */
 	
 	/* Setter & Getter */

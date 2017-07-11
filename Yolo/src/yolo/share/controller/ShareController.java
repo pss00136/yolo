@@ -5,6 +5,8 @@ import java.util.StringTokenizer;
 
 import javax.servlet.http.HttpSession;
 
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -95,14 +97,14 @@ public class ShareController {
 		if (shareTotalPage < shareNowPage) {
 			shareNowPage = shareTotalPage;
 		} //보여줄 페이지 요청이 총 페이지 보다 클때  총 페이지로 변환
-
+		
 		int startPage = ((shareNowPage - 1) / shareCountPage) * shareCountPage + 1; //화면에 보여줄 시작 페이지수
 		int endPage = startPage + shareCountPage - 1; //화면에 보여줄 끝 페이지 수
 		
 		if (endPage > shareTotalPage) {
 		    endPage = shareTotalPage;
 		}// 마지막에 보여줄 페이지 수가 총 페이지 수 보다 클때
-			
+		
 		int startCount = ((shareNowPage - 1) * shareCountList) + 1; //페이지에 보여줄 첫번째 게시물 
 
 		int endCount = shareNowPage * shareCountList;   // 페이지에 보여줄 마지막 게시물
@@ -111,16 +113,19 @@ public class ShareController {
 //		SharePagingVO vo = new SharePagingVO();
 		pvo.setStartCount(startCount);
 		pvo.setEndCount(endCount);
-	
+		
 		System.out.println(pvo.getEndCount());
 		System.out.println(pvo.getStartCount());
 		
 		List<ShareMainListVO> list = service.shareList(pvo);
+		List<ShareMainListVO> slist = service.shareAllList();
+		String smlist = sharejson(slist);
 		
 		System.out.println("위치: controller: list의크기:"+list.size());
 		
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("startPage",startPage);
+		mv.addObject("smlist", smlist);
 		mv.addObject("endPage",endPage);
 		mv.addObject("shareNowPage", shareNowPage);
 		mv.addObject("list", list);
@@ -128,6 +133,38 @@ public class ShareController {
 		
 		return mv;
 	}
+	
+	public String sharejson(List<ShareMainListVO> list){
+	       //최종 완성될 JSONObject 선언(전체)
+	           JSONObject jsonObject = new JSONObject();
+	           //props의 JSON정보를 담을 Array 선언
+	           JSONArray propsArray = new JSONArray();
+	           
+	           for(ShareMainListVO lotVO: list){
+	              //props의 한명 정보가 들어갈 JSONObject 선언
+	              JSONObject propsInfo = new JSONObject();
+	              //위도 경도의 한명 정보
+	              JSONObject positionInfo = new JSONObject();
+	              propsInfo.put("number", lotVO.getPri_num());
+	              propsInfo.put("title", lotVO.getPri_title());
+	              propsInfo.put("image", lotVO.getPriimg_name());
+	               propsInfo.put("price", lotVO.getPri_weekprice());
+	               propsInfo.put("address", lotVO.getPri_addr());
+	               //위도 경도 추가
+	               	positionInfo.put("lat", lotVO.getPri_lat());
+	               	positionInfo.put("lng", lotVO.getPri_long());
+	               propsInfo.put("position", positionInfo);   	
+	               propsInfo.put("markerIcon", "marker-green.png");
+	               propsArray.add(propsInfo);
+	           }
+	           jsonObject.put("props", propsArray);
+	           
+	           String jsonInfo = jsonObject.toJSONString();
+	           
+	           System.out.println(jsonInfo);
+	           return jsonInfo;
+	     }
+	
 	/*
 	 * @메소드명: ShareBookLot
 	 * @역활 : 쉐어링 신청하고 ShareList로 페이지 전환

@@ -87,7 +87,7 @@
 
       <!-- 추가  -->
       <script src=" <c:url value='/js_yolo/user/login.js'/> " type="text/javascript"></script>
-      <script src=" <c:url value='/js/home.js'/> " type="text/javascript"></script>
+<%--       <script src=" <c:url value='/js/home.js'/> " type="text/javascript"></script> --%>
       
       <!-- userInput.js by 찬종 -->
       <script  src=" <c:url value='/js_yolo/user/userinput.js'/> " type="text/javascript"></script>

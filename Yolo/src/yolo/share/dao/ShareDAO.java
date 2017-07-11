@@ -105,4 +105,15 @@ public class ShareDAO {
 		}
 		return result;
 	}
+	
+	public List<ShareMainListVO> shareAllList() {
+		List<ShareMainListVO> list = null;
+		try {
+			list = session.selectList("share.alllist");
+			
+		} catch (Exception e) {
+			System.out.println("회원이 쉐어링 등록한 페이지 보기(shareEdit) 에러:" + e.getMessage());
+		}
+		return list;
+	}
 }

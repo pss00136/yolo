@@ -64,5 +64,11 @@ public class ShareServiceImpl implements ShareService{
 		return sharebooklot;
 	}
 
+	@Override
+	public List<ShareMainListVO> shareAllList() {
+		List<ShareMainListVO> slist = sharedao.shareAllList();
+		return slist;
+	}
+
 	
 }
