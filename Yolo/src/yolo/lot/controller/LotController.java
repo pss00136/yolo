@@ -233,7 +233,7 @@ public class LotController {
 		    
 		    int lotTotalCount = service.lotcount(); //총 게시물 갯수 구하기
 		    System.out.println("공간 총 게시물 수: " + lotTotalCount);
-		    int lotCountList = 4; //한 페이지에 출력될 게시물 수
+		    int lotCountList = 10; //한 페이지에 출력될 게시물 수
 		    int LotCountPage = 5; //한 화면에 보여줄 페이지 수
 		    int lotTotalPage = lotTotalCount / lotCountList; //총 페이지 수
 		    if(lotTotalCount % lotCountList > 0){
@@ -331,8 +331,12 @@ public class LotController {
 		    //조회수 증가
 		    service.lotviewcount(lotlistVO);
 		    //상세정보 보여주기
-		    LotListVO list = service.lotdetailview(lotlistVO);
-		    System.out.println(list.getPri_booktype());
+		    if(lotlistVO.getPri_booktype() == "민간시설"){
+		    	
+		    }else{
+		    	
+		    }
+		    
 		    //북마크 누른 것 검사
 		    String u_id = (String)session.getAttribute("u_id");
 		    int bmcheck = 0;
@@ -343,12 +347,9 @@ public class LotController {
 		    	bookmarkVO.setBm_selnum( lotlistVO.getPri_num() );
 		    	bmcheck = service.lotbookmarkCheck(bookmarkVO);
 		    }
-		    System.out.println(list.getPri_bookmark());
+		   
 		    List<PostscriptVO> review = service.lotreviewlist(postVO);
-		    String jsonlot = lotjson(list);
-			mv.addObject("jsonlot", jsonlot);
-		    mv.addObject("list", list);
-		    mv.addObject("review", review);
+		    
 		    mv.addObject("bmcheck", bmcheck);
 		    mv.setViewName("/lot/LotView.map");
 			return mv;
