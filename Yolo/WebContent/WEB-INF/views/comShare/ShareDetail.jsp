@@ -26,26 +26,27 @@
 			}
 		});
 		
-		$('#alltime label').click(function(evt){
+		$('#alltime label').on('click',function(evt){
+			alert("출력");
 			evt.preventDefault();
 			evt.stopImmediatePropagation();
 			$(this).toggleClass("active");
-			var label = $("#alltime").find('label[class*=active]');
-			var times = '';
-			for(var i = 0; i < label.length ; i++){
-				if(i==label.length-1){
-					times += $(label[i]).text()
-				}else{
-					times += $(label[i]).text()+"/"
-				}
-			}
+// 			var label = $("#alltime").find('label[class*=active]');
+// 			var times = '';
+// 			for(var i = 0; i < label.length ; i++){
+// 				if(i==label.length-1){
+// 					times += $(label[i]).text()
+// 				}else{
+// 					times += $(label[i]).text()+"/"
+// 				}
+// 			}
 			
-			$('#sl_time').val('');
-			$('#t_time').val('');
-			$('#sl_time').val(times);
-			$('#t_time').val(times);
+// 			$('#sl_time').val('');
+// 			$('#t_time').val('');
+// 			$('#sl_time').val(times);
+// 			$('#t_time').val(times);
 			
-			alert(times);
+// 			alert(times);
 		});
 	});
 </script>
