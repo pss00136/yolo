@@ -81,8 +81,7 @@
 
       <!-- 추가  -->
       <script src=" <c:url value='/js/home.js'/> " type="text/javascript"></script>
-      <!-- ShareInput.js by 찬종 -->
-      <script  src=" <c:url value='/js_yolo/comShare/shareInput.js'/> " type="text/javascript"></script>
+      
       <!-- userInput.js by 찬종 -->
       <script  src=" <c:url value='/js_yolo/user/userinput.js'/> " type="text/javascript"></script>
       <!-- 다음 맵 -->
