@@ -10,7 +10,7 @@
 	$(function(){
 		$(".cancel").click(function(){
 			var temp = $(this).find(".sc_num1").val();
-			alert(temp);
+// 			alert(temp);
 		
 // 			$("#sc_num").val(temp)
 // 			alert($("#sc_num").val());

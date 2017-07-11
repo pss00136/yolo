@@ -152,8 +152,8 @@
 			                                <div class="figure">
 			                                    <img src="/Yolo/upload/club/${c.cimg_name}" alt="image">
 			                                    <div class="figCaption">
-			                                        <div><span class="icon-users"> 총 ${c.c_people} 명 / 1명 신청가능</span> </div>
-			                                        <span class="icon-eye"> 200</span>
+			                                        <div><span class="icon-users"> 총 ${c.c_people} 명 / ${c.c_entry}명 신청가능</span> </div>
+			                                        <span class="icon-eye"> ${c.c_hits}</span>
 <!-- 			                                        <span class="icon-star"> 54</span> -->
 			                                    </div>
 			                                    <div class="figView"><span class="icon-eye"></span></div>
@@ -181,32 +181,68 @@
 <!--                         <li><a href="#">5</a></li> -->
 <!--                         <li><a href="#"><span class="fa fa-angle-right"></span></a></li> -->
 <!--                     </ul> -->
+
 					<!-- 페이징 부분 -->
 					<div class="row bounds padding" style="text-align:center;">
 						<div class="col-md-4"></div>
 						<div class="col-md-4 col-xs-12" style="display:inline-block;">
 							<ul class="pagination pagination-round">
-								<li><a href="ClubList.club?clubNowPage=${clubNowPage -1}"><span
-										class="fa fa-angle-left"></span></a></li>
-											
-										
-										<c:forEach var="paging" begin='${startPage}'  end='${endPage}' step ="1">
-											<c:choose>
-												<c:when test='${paging == clubNowPage}'>
-													<li class="active"><a href="#">${paging}</a></li>
-												</c:when>
-												<c:otherwise>	
-													<li><a href="ClubList.club?clubNowPage=${paging}">${paging}</a></li>	
-												</c:otherwise>								
-											</c:choose>
-										</c:forEach>
-								
-	
-								<li><a href="ClubList.club?clubNowPage=${clubNowPage +1}"><span class="fa fa-angle-right"></span></a></li>
+								<!-- 키워드/지역명검색 페이징 부분 -->
+								<c:choose>
+                    				<c:when test="${returnKey ne null}">
+										<li><a href="ClubList.club?clubNowPage=${clubNowPage -1}&keyWord=${returnKey}"><span
+												class="fa fa-angle-left"></span></a></li>
+												
+											<c:forEach var="paging" begin='${startPage}'  end='${endPage}' step ="1">
+												<c:choose>
+													<c:when test='${paging == clubNowPage}'>
+														<li class="active"><a href="#">${paging}</a></li>
+													</c:when>
+													<c:otherwise>	
+														<li><a href="/Yolo/club/ClubList.club?clubNowPage=${paging}&keyWord=${returnKey}">${paging}</a></li>	
+													</c:otherwise>								
+												</c:choose>
+											</c:forEach>
+										<li><a href="ClubList.club?clubNowPage=${clubNowPage +1}&keyWord=${returnKey}"><span class="fa fa-angle-right"></span></a></li>
+									</c:when>
+									<c:when test="${returnLoc ne null}">
+										<li><a href="ClubList.club?clubNowPage=${clubNowPage -1}&location=${returnLoc}"><span
+												class="fa fa-angle-left"></span></a></li>
+												
+											<c:forEach var="paging" begin='${startPage}'  end='${endPage}' step ="1">
+												<c:choose>
+													<c:when test='${paging == clubNowPage}'>
+														<li class="active"><a href="#">${paging}</a></li>
+													</c:when>
+													<c:otherwise>	
+														<li><a href="/Yolo/club/ClubList.club?clubNowPage=${paging}&location=${returnLoc}">${paging}</a></li>	
+													</c:otherwise>								
+												</c:choose>
+											</c:forEach>
+										<li><a href="ClubList.club?clubNowPage=${clubNowPage +1}&location=${returnLoc}"><span class="fa fa-angle-right"></span></a></li>
+									</c:when>
+									<c:otherwise>
+										<li><a href="ClubList.club?clubNowPage=${clubNowPage -1}"><span
+												class="fa fa-angle-left"></span></a></li>
+												
+											<c:forEach var="paging" begin='${startPage}'  end='${endPage}' step ="1">
+												<c:choose>
+													<c:when test='${paging == clubNowPage}'>
+														<li class="active"><a href="#">${paging}</a></li>
+													</c:when>
+													<c:otherwise>	
+														<li><a href="/Yolo/club/ClubList.club?clubNowPage=${paging}">${paging}</a></li>	
+													</c:otherwise>								
+												</c:choose>
+											</c:forEach>
+										<li><a href="ClubList.club?clubNowPage=${clubNowPage +1}"><span class="fa fa-angle-right"></span></a></li>
+									</c:otherwise>
+								</c:choose>
 							</ul>				
 						</div>
 						<div class="col-md-4"></div>
-					</div><!-- 페이징 부분 끝 -->
+					</div>
+					<!-- 페이징 부분 끝 -->
                 </div>
              </div>
 <!--                 </form> -->

@@ -27,14 +27,14 @@
 	                                    </div>
 	                                </div>
 	                            </div>
-	                            <div class="item">
-	                                <img src="/Yolo/images_yolo/club/wooden3.jpg" alt="Third slide">
-	                                <div class="container">
-	                                    <div class="carousel-caption">
+<!-- 	                            <div class="item"> -->
+<!-- 	                                <img src="/Yolo/images_yolo/club/wooden3.jpg" alt="Third slide"> -->
+<!-- 	                                <div class="container"> -->
+<!-- 	                                    <div class="carousel-caption"> -->
 	                                        
-	                                    </div>
-	                                </div>
-	                            </div>
+<!-- 	                                    </div> -->
+<!-- 	                                </div> -->
+<!-- 	                            </div> -->
 	                        </div>
 	                        <a class="left carousel-control" href="#carouselFull" role="button" data-slide="prev"><span class="fa fa-chevron-left"></span></a>
 	                        <a class="right carousel-control" href="#carouselFull" role="button" data-slide="next"><span class="fa fa-chevron-right"></span></a>
@@ -43,16 +43,16 @@
 	                        <div class="row">
 	                            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
 	                                <div class="summaryItem">
-	                                    <h1 class="pageTitle">${list.c_title}</h1>
+	                                    <h1 class="pageTitle" id="club_title">
+											${list.c_title}&nbsp;
+											
+											<span id="bookmark" class="fa fa-heart-o"></span>
+										</h1>
 	                                    <div class="address"><span class="icon-pointer"></span>서울 용산구 후암동 서울특별시 용산구 후암로 38, 지하 1층</div>
 	                                    <ul class="users">
 	                                    	<li><span class="icon-users"></span> 총 ${list.c_people} 명</li>
-	                                    	<li> / 10명 신청가능</li>
+	                                    	<li> / ${list.c_entry} 명 신청</li>
 	                                   	</ul>
-	                                    <div class="favLink"><a href="#"><span class="icon-star"></span></a>54</div>
-	                                    <ul class="stats">
-	                                        <li><span class="icon-eye"></span> 200</li>
-	                                    </ul>
 	                                    <div class="clearfix"></div>
 	                                    
 	                                    <% 
@@ -117,20 +117,15 @@
 	                    </div>
 	                </div>
             	<div class="commentsFormWrapper">
-                <div class="cfAvatar">
-                    <img class="avatar" src="/Yolo/images/avatar-1.png" alt="avatar">
-                </div>
-<!--                 <form class="commentsForm"> -->
-<!--                     <div class="input-group"> -->
-<!--                         <input type="text" class="form-control" placeholder="Write a comment..."> -->
-<!--                         <span class="input-group-btn"><a class="btn btn-green">Post</a></span> -->
-<!--                     </div> -->
-<!--                 </form> -->
-<!--                 <div class="clearfix"></div> -->
+	                <div class="cfAvatar">
+	                    <img class="avatar" src="/Yolo/images/avatar-1.png" alt="avatar">
+	                </div>
 	           	</div>
 	            <div class="clearfix"></div>
 	            <!-- 지도 부분 시작 -->
+	         	<div><h3>모임 장소</h3></div>
 	            <div id="hero-container-map">
+	            
 					<div id="home-map"></div>
 				</div>
 				<!-- 지도 부분 끝 -->

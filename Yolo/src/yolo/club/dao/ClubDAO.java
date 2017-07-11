@@ -13,6 +13,7 @@ import yolo.club.dto.ClubImageVO;
 import yolo.club.dto.ClubListVO;
 import yolo.club.dto.ClubPagingVO;
 import yolo.club.dto.ClubVO;
+import yolo.lot.dto.LotListVO;
 import yolo.share.dto.InputListVO;
 import yolo.share.dto.SharePagingVO;
 
@@ -30,6 +31,7 @@ public class ClubDAO {
 	@Autowired
 	SqlSessionTemplate session;
 	
+	
 	/*
 	* @메소드명: clubinput
 	* @역할: ClubService에서 전달받은 값을 DB에 삽입
@@ -46,9 +48,9 @@ public class ClubDAO {
 //		}else{
 //			session.rollback();
 //		}
-		
 		return result;
 	}
+	
 	
 	/*
 	* @메소드명: inputlist
@@ -65,7 +67,6 @@ public class ClubDAO {
 		} catch (Exception e) {
 			System.out.println("회원이 예약한 공간보기리스트 에러:" + e.getMessage());
 		}
-		
 		return list;
 	}
 	
@@ -84,11 +85,50 @@ public class ClubDAO {
 	}
 	
 	
+	/*
+	* @메소드명: clubSearchgetCount
+	* @역할:  DB에서 모든 clubList를 검색
+	*
+	* @param   
+	* @return int : 검색에 따른 목록의 수
+	*/
+	public int clubSearchgetCount(String keyWord, String location) {
+		
+		HashMap map = new HashMap<>();
+		if(keyWord != null){
+			map.put("keyWord", keyWord);
+		}
+		else if(location != null){
+			StringTokenizer st = new StringTokenizer(location, "/");
+			
+			String[] locations = new String[st.countTokens()];
+			int i=0;
+			while(st.hasMoreTokens())
+			{	
+				locations[i]=st.nextToken();
+				i++; 	
+			}
+			map.put("locations", locations);
+		}
+		int clubSearchgetCount = session.selectOne("club.clubSearchgetCount", map);
+		
+		return clubSearchgetCount;
+	}
+	
+	
+	/*
+	* @메소드명: clubTotalgetCount
+	* @역할:  DB에서 모든 clubList를 검색
+	*
+	* @param   
+	* @return int : 모든 목록의 수
+	*/
 	public int clubTotalgetCount() {
 		int clubTotalCount = session.selectOne("club.clubTotalgetCount");
 		
 		return clubTotalCount;
 	}
+	
 	
 	/*
 	* @메소드명: clubsearhKey
@@ -97,12 +137,15 @@ public class ClubDAO {
 	* @param   
 	* @return  List<ClubListVO>: DB select쿼리문 결과값
 	*/
-	public List<ClubListVO> clubsearhKey(String keyWord){
+	public List<ClubListVO> clubsearhKey(ClubPagingVO pageVO, String keyWord){
 		HashMap map = new HashMap<>();
+		map.put("endCount", pageVO.getEndCount());
+		map.put("startCount", pageVO.getStartCount());
 		map.put("keyWord", keyWord);
 		List<ClubListVO> search = session.selectList("club.clubsearhKey", map);
 		return search;
 	}
+	
 	
 	/*
 	 * @메소드명: clubsearhLoc
@@ -111,7 +154,7 @@ public class ClubDAO {
 	 * @param   
 	 * @return  List<ClubListVO>: DB select쿼리문 결과값
 	 */
-	public List<ClubListVO> clubsearhLoc(String location){
+	public List<ClubListVO> clubsearhLoc(ClubPagingVO pageVO, String location){
 		HashMap map = new HashMap<>();
 		StringTokenizer st = new StringTokenizer(location, "/");
 //		List locations = new ArrayList();
@@ -120,10 +163,11 @@ public class ClubDAO {
 		int i=0;
 		while(st.hasMoreTokens())
 		{	
-//			locations.add(st.nextToken());
 			locations[i]=st.nextToken();
 			i++; 	
 		}
+		map.put("endCount", pageVO.getEndCount());
+		map.put("startCount", pageVO.getStartCount());
 		map.put("locations", locations);
 		
 		System.out.println("locations:"+locations);
@@ -132,6 +176,27 @@ public class ClubDAO {
 		
 		return search;
 	}
+	
+	
+	/*
+	* @메소드명: clubviewcount
+	* @역할:  DB에서 모든 clubList를 검색
+	*
+	* @param   
+	* @return  List<ClubListVO>: DB select쿼리문 결과값
+	*/
+	public int clubviewcount(ClubListVO clublistVO){
+		int result=0;
+		try{
+			result = session.update("club.clubviewcount", clublistVO);
+		}catch(Exception ex){
+			System.out.println("clubviewcount 실패: " + ex.getMessage());
+		}
+		
+		System.out.println("clubviewcount 성공");
+		return result;
+	}
+	
 	
 	/*
 	* @메소드명: clubdetail
@@ -147,7 +212,6 @@ public class ClubDAO {
 		} catch (Exception ex) {
 			System.out.println("clubdetail 실패: " + ex.getMessage());
 		}
-//		System.out.println("모집"+clublistVO.getC_recruit());
 		return detail;
 	}
 	

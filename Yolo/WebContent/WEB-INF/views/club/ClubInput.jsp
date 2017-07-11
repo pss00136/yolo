@@ -38,11 +38,11 @@
 										class="fa fa-check"> 전시/박람회</span></label>
 								</div>
 								<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
-									<label><input type="checkbox" name="c_type" value=" 취미활동" onclick="oneCheckbox(this)"><span
+									<label><input type="checkbox" name="c_type" value="취미활동" onclick="oneCheckbox(this)"><span
 										class="fa fa-check"> 취미활동</span></label>
 								</div>
 								<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
-									<label><input type="checkbox" name="c_type" value=" 패션/뷰티" onclick="oneCheckbox(this)"><span
+									<label><input type="checkbox" name="c_type" value="패션/뷰티" onclick="oneCheckbox(this)"><span
 										class="fa fa-check"> 패션/뷰티</span></label>
 								</div>
 								<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
@@ -54,7 +54,7 @@
 										class="fa fa-check"> 문화/예술</span></label>
 								</div> 
 								<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
-									<label><input type="checkbox" name="c_type" value="  공모전" onclick="oneCheckbox(this)"><span
+									<label><input type="checkbox" name="c_type" value="공모전" onclick="oneCheckbox(this)"><span
 										class="fa fa-check"> 공모전</span></label>
 								</div>
 								<div class="col-md-2 col-xs-4 checkbox custom-checkbox">
@@ -73,7 +73,7 @@
 						</div>
 <!-- 						</form> -->
 
-						<!-- 제목 입력 -->
+						<!-- 제목 입력 -->+
 						<div class="form-group">
 							<label class="col-sm-2 control-label">모임명</label>
 							<div class="col-sm-8">
@@ -270,17 +270,6 @@
 																</tr>
 								                             </c:when>
 								                             <c:otherwise>
-<!-- 										                             <tr> -->
-<!-- 								                              			<td><div class="radio custom-radio"> -->
-<!-- 																		<label class="active"><input type="radio" name="c_place" value="미선택"><span -->
-<!-- 																			class="fa fa-circle"></span></label> -->
-<!-- 																			</div></td> -->
-<!-- 																		<td></td> -->
-<!-- 																		<td></td> -->
-<!-- 																		<td>미선택</td> -->
-<!-- 																		<td></td> -->
-<!-- 																		<td></td> -->
-<!-- 								                              		</tr> -->
 						                            	 		<c:forEach items="${list}" var="a">
 								                              		<tr>
 																		<td><div class="radio custom-radio">

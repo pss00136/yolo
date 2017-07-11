@@ -30,24 +30,35 @@ public class ClubServiceImpl implements ClubService {
 	}
 	
 	public int clubTotalgetCount() {
-		int clubTotalgetCount = clubdao.clubTotalgetCount();
-		return clubTotalgetCount;
+		
+		return clubdao.clubTotalgetCount();
+	}
+	
+	public int clubSearchgetCount(String keyword, String location) {
+	
+		return clubdao.clubSearchgetCount(keyword, location);
 	}
 	
 	public List<InputListVO> inputList(String user){
 		return clubdao.inputlist(user);
 	}
 	
+	
+	public int clubviewcount(ClubListVO clublistVO){
+		
+		return clubdao.clubviewcount(clublistVO);
+	}
+	
 	public ClubListVO clubdetail(ClubListVO clublistVO){
 		return clubdao.clubdetail(clublistVO);
 	}
 	
-	public List<ClubListVO> clubsearhKey(String keyWord){
-		return clubdao.clubsearhKey(keyWord);
+	public List<ClubListVO> clubsearhKey(ClubPagingVO pageVO, String keyWord){
+		return clubdao.clubsearhKey(pageVO, keyWord);
 	}
 	
-	public List<ClubListVO> clubsearhLoc(String location){
-		return clubdao.clubsearhLoc(location);
+	public List<ClubListVO> clubsearhLoc(ClubPagingVO pageVO, String location){
+		return clubdao.clubsearhLoc(pageVO, location);
 	}
 
 }
