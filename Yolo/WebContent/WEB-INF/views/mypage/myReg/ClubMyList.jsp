@@ -15,7 +15,7 @@
 	$(function(){
 		$("#delete_btn").click(function(){
 			var temp = $(this).find("#cnum").val();
-			alert(temp);
+// 			alert(temp);
 
 			var action = '/Yolo/mypage/myReg/myClubDelete.myreg?c_num='+temp;
 			
@@ -32,6 +32,7 @@
 	String u_id="";
 	u_id = (String)session.getAttribute("u_id");
 %>
+
 
 			<!-- -----------------여기에 컨텐츠 div넣으세요----------------- -->
 			<!-- 본문내용 -->

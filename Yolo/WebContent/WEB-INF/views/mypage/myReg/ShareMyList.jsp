@@ -17,7 +17,7 @@
 	$(function(){
 		$("#delete_btn").click(function(){
 			var temp = $(this).find("#slnum").val();
-			alert(temp);
+// 			alert(temp);
 
 			var action = '/Yolo/mypage/myReg/myShareDelete.myreg?sl_num='+temp;
 			
