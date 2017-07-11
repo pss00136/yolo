@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%request.setCharacterEncoding("UTF-8"); %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -259,13 +260,13 @@
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
 				</div>
 				<div class="modal-body">
-					 <form role="form" method="post" action="/Yolo/login/login.main">
+					 <form id="login_frm" role="form" method="post" action="/Yolo/login/login.main">
 
 						<div class="form-group">
-							<input type="text" placeholder="ID" name="u_id" class="form-control">
+							<input type="text" id="login_id_input" placeholder="ID" name="u_id" class="form-control">
 						</div>
 						<div class="form-group">
-							<input type="password" placeholder="Password" name="u_pass" class="form-control">
+							<input type="password" id="login_pass_input" placeholder="Password" name="u_pass" class="form-control">
 						</div>
 						<div class="form-group">
 							<div class="row">
@@ -288,7 +289,7 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<button id="modal_login_btn" type="submit" class="btn btn-lg btn-green">LOGIN</button>
+							<a id="modal_login_btn" class="btn btn-lg btn-green">LOGIN</a>
 						</div>
 						<p class="help-block">
 							아직 회원이 아니십니까? 
@@ -386,6 +387,12 @@
 	<script src="/Yolo/js/jquery-ui-touch-punch.js"></script>
 	<script src="/Yolo/js/jquery.placeholder.js"></script>
 	<script src="/Yolo/js/bootstrap.js"></script>
+	
+    <!-- 채팅 JS -->
+    <script src="http://192.168.0.151:3000/socket.io/socket.io.js"></script>
+    <script src="/Yolo/js_yolo/chat/chatClient.js"></script>
+    <script src="/Yolo/js_yolo/chat/chat.js" ></script>
+    	
 	<script src="/Yolo/js/jquery.touchSwipe.min.js"></script>
 	<script src="/Yolo/js/jquery.slimscroll.min.js"></script>
 	<script src="/Yolo/js/jquery.visible.js"></script>
@@ -406,11 +413,20 @@
     <!-- 다음 맵 -->
     <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
     <script src=" <c:url value='/js_yolo/postcode/postcode.js'/> " type="text/javascript"></script>
-    <!-- 채팅 JS -->
-    <script src="http://192.168.0.151:3000/socket.io/socket.io.js"></script>
-    <script src="/Yolo/js_yolo/chat/chatClient.js"></script>
-    <script src="/Yolo/js_yolo/chat/chat.js" ></script>
  	<!-- javascript end -->
+ 	<script type="text/javascript">
+ 	$(function(){
+ 		$("#modal_login_btn").click(function(){
+ 			if( $("#login_id_input").val() == "" ){
+ 				alert("아이디를 입력해주세요!");
+ 			}else if( $("#login_pass_input").val() == "" ){
+ 				alert("비밀번호를 입력해주세요!");
+ 			}else{
+ 				$("#login_frm").submit();	
+ 			} 						
+ 		});		
+ 	});
+ 	</script>
  
 </body>
 </html>
