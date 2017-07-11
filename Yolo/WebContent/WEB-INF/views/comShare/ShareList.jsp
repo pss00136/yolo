@@ -259,7 +259,7 @@ String smlist = (String)request.getAttribute("smlist");
 		     // 로그인 된 경우
 		     %> 
 		     
-		    <div class="row bounds padding" >
+		    <div class="write_btn" >
 				<div class="col-md-12 col-xs-12" >
 					<a href="ShareInput.share" class="btn btn-round btn-green ">쉐어링 글쓰기</a>
 					

@@ -72,7 +72,8 @@ public class LotDAO {
 		List<LotListVO>	list = null;
 		HashMap map = new HashMap<>();
 		
-		map.put("sigu", sido+" "+gugun);
+		map.put("sido", sido);
+		map.put("gugun", gugun);
 		map.put("rdate", rdate); map.put("rcount", rcount);
 		try{
 			list = session.selectList("lot.lotsearch", map);
