@@ -738,7 +738,7 @@ $(function(){
 						<span id="bookmark" class="fa fa-heart-o"></span>
 					</h1>
 					<strong style="margin-top: 0px; font-size: 25px;">${list.pri_weekprice}</strong>
-					<span>/${list.pri_booktype}</span>
+					<span class="booktype">/${list.pri_booktype}</span>
 					<div class="address">
 						<span class="icon-pointer"></span>${list.pri_addr}
 					</div>
@@ -783,7 +783,7 @@ $(function(){
 <div class="clearfix"></div>
 <div class="description">
 	<h3>공간소개</h3>
-	<div>${list.pri_content}</div>
+	<div style="font-size: 15px;">${list.pri_content}</div>
 </div>
 
 <!------------- 편의시설 항목들 --------------------->
@@ -852,7 +852,7 @@ $(function(){
 				style="margin-bottom: 7px; padding: 10px;">
     
                    	<!-- 아이디 -->
-                   <div class="commentTitle"><%=pvo.getU_id() %></div>
+                   <div style="font-size: 15px;" class="commentTitle"><%=pvo.getU_id() %></div>
 				<div class="commentBody col-md-12">
 					<!-- 후기글 -->
 					<div id="writereview" class="col-md-9"><%=pvo.getPs_content() %></div>

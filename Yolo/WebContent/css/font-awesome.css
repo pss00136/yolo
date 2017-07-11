@@ -180,9 +180,11 @@
 }
 .fa-star:before {
   content: "\f005";
+  font-size: 15px;
 }
 .fa-star-o:before {
   content: "\f006";
+  font-size: 15px;
 }
 .fa-user:before {
   content: "\f007";

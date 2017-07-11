@@ -202,8 +202,8 @@ p{
 				<!-- 사진 보여주기  -->
 				<div class="row" style="margin-bottom: 15px;">
 					<h2 id="lot_reserve"></h2>
-					<div class="image-block">
-						<img src="/Yolo/images_yolo/lot/${list.priimg_name}" alt="image">
+					<div style="margin-bottom: 30px;" class="fig">
+						<img id="reserveimage" src="/Yolo/images_yolo/lot/${list.priimg_name}" alt="image">
 					</div>
 					<!-- 공간명, 주소, 가격 -->
 					<div class="col-md-12">
@@ -217,7 +217,8 @@ p{
  							
 						</div>
 						<div class="col-md-4">
-							<strong style="margin-top: 0px; font-size: 25px; float: right;">${list.pri_weekprice}원</strong>
+							<strong style="margin-top: 0px; font-size: 25px;">${list.pri_weekprice}원</strong>
+							<span>/${list.pri_booktype}</span>
 							<input type="hidden" id="bl_subpay" name="bl_subpay" value="${list.pri_weekprice}"/>
 						</div>
 
