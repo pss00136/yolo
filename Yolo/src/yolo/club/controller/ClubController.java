@@ -10,6 +10,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import yolo.club.dao.ClubDAO;
@@ -18,6 +19,7 @@ import yolo.club.dto.ClubListVO;
 import yolo.club.dto.ClubPagingVO;
 import yolo.club.dto.ClubVO;
 import yolo.club.service.ClubService;
+import yolo.lot.dto.BookmarkVO;
 import yolo.share.dto.InputListVO;
 import yolo.share.dto.SharePagingVO;
 
@@ -176,50 +178,6 @@ public class ClubController {
 		return mv;
 	}
 	
-		
-//		int clubNowPage = pageVO.getClubNowPage(); //보여줄 페이지 가져오기
-//		System.out.println("pageVO.getClubNowPage() 값"+clubNowPage);
-		
-//		if (clubNowPage < 1) {
-//			clubNowPage = 1;
-//		} // 보여줄 페이지 요청이 1페이지보다 작을때 1페이지로 변환
-//		
-//		if (clubTotalPage < clubNowPage) {
-//			clubNowPage = clubTotalPage;
-//		} //보여줄 페이지 요청이 총 페이지 보다 클때  총 페이지로 변환
-//
-//		int startPage = ((clubNowPage - 1) / clubCountPage) * clubCountPage + 1; //화면에 보여줄 시작 페이지수
-//		int endPage = startPage + clubCountPage - 1; //화면에 보여줄 끝 페이지 수
-//		
-//		if (endPage > clubTotalPage) {
-//		    endPage = clubTotalPage;
-//		}// 마지막에 보여줄 페이지 수가 총 페이지 수 보다 클때
-			
-//		int startCount = ((clubNowPage - 1) * clubCountList) + 1; //페이지에 보여줄 첫번째 게시물 
-//
-//		int endCount = clubNowPage * clubCountList;   // 페이지에 보여줄 마지막 게시물
-		
-//		System.out.println("위치: controller = startCount:"+startCount);
-//		System.out.println("위치: controller = endCount:"+endCount);
-////		SharePagingVO vo = new SharePagingVO();
-//		pageVO.setStartCount(startCount);
-//		pageVO.setEndCount(endCount);
-//	
-//		System.out.println(pageVO.getEndCount());
-//		System.out.println(pageVO.getStartCount());
-		
-		
-//		System.out.println("location:"+location);
-//		System.out.println("key:"+keyWord);
-		
-//		if(keyWord != null){
-//			System.out.println("ㅋ워드 들어감");
-//			clublist = service.clubsearhKey(keyWord);
-//		}else if(location != null){
-//			System.out.println("위치 들어감");
-//			clublist = service.clubsearhLoc(location);
-//		}
-	
 	
 	/*
 	* @메소드명: clubDetail
@@ -243,6 +201,32 @@ public class ClubController {
 //		System.out.println("작성자:"+list.getU_id());
 		return mv;
 	}
+	
+	@RequestMapping("/bookmark.club")
+    @ResponseBody
+    public String bookmark(BookmarkVO bookmarkVO ,HttpSession session){       
+         String u_id = (String)session.getAttribute("u_id");
+         bookmarkVO.setU_id(u_id);
+         int result = service.clubBookmark(bookmarkVO);
+         if(result == 1){
+             return "관심리스트에 추가되었습니다.";
+         }else{
+             return "실패";
+         }
+     }
+	
+	@RequestMapping("/bookmarkdelete.club")
+    @ResponseBody
+    public String bookmarkdel(BookmarkVO bookmarkVO ,HttpSession session){
+         String u_id = (String)session.getAttribute("u_id");
+         bookmarkVO.setU_id(u_id);
+         int result = service.clubBookmarkdelete(bookmarkVO);
+         if(result == 1){
+             return "관심리스트가 삭제되었습니다.";
+         }else{
+             return "실패";
+         }
+     }
 	
 	
 	/*

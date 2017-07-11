@@ -13,6 +13,7 @@ import yolo.club.dto.ClubImageVO;
 import yolo.club.dto.ClubListVO;
 import yolo.club.dto.ClubPagingVO;
 import yolo.club.dto.ClubVO;
+import yolo.lot.dto.BookmarkVO;
 import yolo.lot.dto.LotListVO;
 import yolo.share.dto.InputListVO;
 import yolo.share.dto.SharePagingVO;
@@ -215,6 +216,28 @@ public class ClubDAO {
 		return detail;
 	}
 	
+	/*
+	* @메소드명:  clubBookmarkInsert
+	* @역할:     ClubService에서 전달받은 값을 DB에 삽입
+	*
+	* @param   BookmarkVO
+	* @return  list: DB insert쿼리문 결과값
+	*/
+	public int clubBookmarkInsert(BookmarkVO bookmarkVO){
+	        int result = session.insert("bookmark.bookmarkinsert",bookmarkVO);
+	        return result;
+    }
 	
+	/*
+	* @메소드명:  clubBookmarkDelete
+	* @역할:     ClubService에서 전달받은 값을 DB에서 삭제
+	*
+	* @param   BookmarkVO
+	* @return  list: DB insert쿼리문 결과값
+	*/
+	public int clubBookmarkDelete(BookmarkVO bookmarkVO){
+	        int result = session.delete("bookmark.bookmarkdelete",bookmarkVO);
+	        return result;
+    }
 
 }

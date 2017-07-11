@@ -7,6 +7,7 @@ import yolo.club.dto.ClubImageVO;
 import yolo.club.dto.ClubListVO;
 import yolo.club.dto.ClubPagingVO;
 import yolo.club.dto.ClubVO;
+import yolo.lot.dto.BookmarkVO;
 import yolo.share.dto.InputListVO;
 
 /*
@@ -81,6 +82,24 @@ public interface ClubService {
 	* @return  ClubListVO : DB에서 얻은 모임의 세부정보
 	*/
 	public ClubListVO clubdetail(ClubListVO clublistVO);
+	
+	/*
+	* @메소드명: clubBookmark
+	* @역할: ClubController에서 전달받은 값을 DB에 입력
+	*
+	* @param   BookmarkVO bookmarkVO : vo에 담은 c_num
+	* @return  
+	*/
+	public int clubBookmark(BookmarkVO bookmarkVO);
+	
+	/*
+	* @메소드명: clubBookmarkdelete
+	* @역할: ClubController에서 전달받은 값을 DB에서 삭제
+	*
+	* @param   BookmarkVO bookmarkVO : vo에 담은 c_num
+	* @return  
+	*/
+	public int clubBookmarkdelete(BookmarkVO bookmarkVO);
 	
 	/*
 	* @메소드명: clubsearhKey

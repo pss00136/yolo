@@ -10,6 +10,7 @@ import yolo.club.dto.ClubImageVO;
 import yolo.club.dto.ClubListVO;
 import yolo.club.dto.ClubPagingVO;
 import yolo.club.dto.ClubVO;
+import yolo.lot.dto.BookmarkVO;
 import yolo.share.dto.InputListVO;
 
 @Service
@@ -51,6 +52,14 @@ public class ClubServiceImpl implements ClubService {
 	
 	public ClubListVO clubdetail(ClubListVO clublistVO){
 		return clubdao.clubdetail(clublistVO);
+	}
+	
+	public int clubBookmark(BookmarkVO bookmarkVO){
+		return clubdao.clubBookmarkInsert(bookmarkVO);
+	}
+	
+	public int clubBookmarkdelete(BookmarkVO bookmarkVO){
+		return clubdao.clubBookmarkDelete(bookmarkVO);
 	}
 	
 	public List<ClubListVO> clubsearhKey(ClubPagingVO pageVO, String keyWord){

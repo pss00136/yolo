@@ -152,7 +152,7 @@
 			                                <div class="figure">
 			                                    <img src="/Yolo/upload/club/${c.cimg_name}" alt="image">
 			                                    <div class="figCaption">
-			                                        <div><span class="icon-users"> 총 ${c.c_people} 명 / ${c.c_entry}명 신청가능</span> </div>
+			                                        <div><span class="icon-users"> 총 ${c.c_people} 명 / ${c.c_entry}명 신청</span> </div>
 			                                        <span class="icon-eye"> ${c.c_hits}</span>
 <!-- 			                                        <span class="icon-star"> 54</span> -->
 			                                    </div>

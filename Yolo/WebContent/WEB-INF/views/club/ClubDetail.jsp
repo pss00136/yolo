@@ -5,9 +5,13 @@
 <%@ page import="yolo.club.dto.*" %>
     
 	<!-- 추가 속성 CSS -->
-        <link href="/Yolo/css_yolo/cssView/Club/clubDetail.css" rel="stylesheet">
-        <link href="/Yolo/css_yolo/cssView/Club/tagPlus.css" rel="stylesheet">
-        <link href="/Yolo/css_yolo/cssView/Club/slider.css" rel="stylesheet">
+    <link href="/Yolo/css_yolo/cssView/Club/clubDetail.css" rel="stylesheet">
+    <link href="/Yolo/css_yolo/cssView/Club/tagPlus.css" rel="stylesheet">
+    <link href="/Yolo/css_yolo/cssView/Club/slider.css" rel="stylesheet">
+        
+    <!-- 추가 속성 JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/Yolo/js_yolo/club/clubwish.js"></script>
         
    			<div class="home-wrapper">
 	                <div class="singleTop">
@@ -46,7 +50,7 @@
 	                                    <h1 class="pageTitle" id="club_title">
 											${list.c_title}&nbsp;
 											
-											<span id="bookmark" class="fa fa-heart-o"></span>
+											<span id="bookmarkC" class="fa fa-heart-o"></span>
 										</h1>
 	                                    <div class="address"><span class="icon-pointer"></span>서울 용산구 후암동 서울특별시 용산구 후암로 38, 지하 1층</div>
 	                                    <ul class="users">
@@ -84,7 +88,9 @@
 	                                    <img class="avatar agentAvatarImg" src="/Yolo/images/avatar-2.png" alt="avatar">
 	                                    <div class="agentName">${list.u_id}</div>
 	                                </div>
+	                                <input type="hidden" id="c_num" value="${list.c_num}" />
 	                                <div class="mainFunction summaryItem">
+	                              		 
 	                                     <div class="clearfix"></div>
 	                                    <a data-toggle="modal" href="#contactAgent" class="btn btn-lg btn-round btn-green contactBtn chat_in">문의하기</a>
 	<!--                                     <a href="#confirmSigning" class="btn btn-lg btn-round btn-green applyBtn">신청하기</a> -->
