@@ -64,7 +64,7 @@
 								</a>
 								<div class="btn-group btn-group-justified">
 									<div class="btn-group">
-										<a href="myShareEdit.myreg?sl_num=${l.sl_num}&u_id=<%=u_id%>" type="button" class="btn btn-o btn-blue col-md-6">수정</a>
+										<a href="myShareEdit.myreg?sl_num=${l.sl_num}&u_id=<%=u_id%>&bl_id=${l.bl_id}" type="button" class="btn btn-o btn-blue col-md-6">수정</a>
 									</div>
 									<div class="btn-group" id="delete_btn">
 										<input type="hidden" id="slnum" value="${l.sl_num}" />

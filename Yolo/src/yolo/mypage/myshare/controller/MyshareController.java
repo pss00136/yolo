@@ -70,7 +70,7 @@ public class MyshareController {
 	 * @return	ModelAndView:반환하는 경로
 	 */
 	@RequestMapping("/myShareEdit.myreg")
-	public ModelAndView myshareEdit(ShareVO vo){
+	public ModelAndView myshareEdit(ShareVO vo ){
 		ModelAndView mv = new ModelAndView();
 		System.out.println(vo.getSl_num());
 		List<ShareMainListVO> list = service.myshareEdit(vo);
