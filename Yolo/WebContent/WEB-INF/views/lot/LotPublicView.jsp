@@ -100,7 +100,7 @@ $(function(){
 								});
 								var infoboxContent = '<div class="infoW">'
 										+ '<div class="propImg">'
-										+ '<img src="/Yolo/upload/lot/' + prop.prop.image + '">'
+										+ '<img src="/Yolo/images/prop/' + prop.prop.image + '">'
 										+ '<div class="propBg">'
 										+ '<div class="propPrice">'
 										+ prop.prop.price
@@ -120,7 +120,8 @@ $(function(){
 										+ '</div>'
 										+ '<div class="clearfix"></div>'
 										+ '<div class="infoButtons">'
-										+ '<a class="btn btn-sm btn-round btn-gray btn-o closeInfo">Close</a>'										
+										+ '<a class="btn btn-sm btn-round btn-gray btn-o closeInfo">Close</a>'
+										+ '<a href="single.html" class="btn btn-sm btn-round btn-green viewInfo">View</a>'
 										+ '</div>' + '</div>';
 
 								google.maps.event.addListener(marker,'click', (function(marker) {
@@ -738,7 +739,6 @@ $(function(){
 						<span id="bookmark" class="fa fa-heart-o"></span>
 					</h1>
 					<strong style="margin-top: 0px; font-size: 25px;">${list.pri_weekprice}</strong>
-					<span>/${list.pri_booktype}</span>
 					<div class="address">
 						<span class="icon-pointer"></span>${list.pri_addr}
 					</div>
@@ -790,48 +790,23 @@ $(function(){
 <div class="amenities">
 	<h3>편의시설</h3>
 	<div class="row">
-		<%
-								
-								String f = lotlistVO.getPri_facility();
-								StringTokenizer st2 = new StringTokenizer(f,",");
-						        String icon = null;
-						        String fac[]={"TV/프로젝터", "인터넷/WIFI","복사/인쇄기","화이트보드","음향/마이크","취사시설","음식물반입가능","주류반입가능",
-						        		"주차", "금연","PC/노트북","의자/테이블"};
-						        String confirm = st2.nextToken();
-						        for( int i=0; i<fac.length; i++ ){
-									switch(fac[i]){
-									  case "TV/프로젝터" : icon="fa-film"; break;
-									  case "인터넷/WIFI" : icon="fa-wifi"; break;
-									  case "복사/인쇄기" : icon="fa-print"; break;
-									  case "화이트보드" : icon="fa-square-o"; break;
-									  case "음향/마이크" : icon="fa-microphone"; break;
-									  case "취사시설" : icon="fa-cutlery"; break;
-									  case "음식물반입가능" : icon="fa-shopping-cart"; break;
-									  case "주류반입가능" : icon="fa-beer"; break;
-									  case "주차" : icon="fa-automobile"; break;
-									  case "금연" : icon="fa-arrows-v"; break;
-									  case "PC/노트북" : icon="fa-laptop"; break;
-									  case "의자/테이블" : icon="fa-users"; break;		  
-									} //End of switch
-									
-									if(fac[i].equals(confirm)){%>
-		<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem">
-			<span class="fa <%=icon%>"></span><%= fac[i] %>
-		</div>
-		<%
-										if(st2.hasMoreTokens()){
-											confirm = st2.nextToken();
-										} //End of if
-									
-									}else {%>
-
-		<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem inactive">
-			<span class="fa <%=icon%>"></span><%= fac[i] %>
-		</div>
-
-		<%	}//End of else
-						        	
-								}//End of for %>
+		<div class="amenities">
+                    <h3>편의시설</h3>
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem"><span class="fa fa-film"></span>TV/프로젝터</div>
+                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem"><span class="fa fa-wifi"></span>인터넷/WIFI</div>
+                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem "><span class="fa fa-print"></span> 복사/인쇄기</div>
+                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem "><span class="fa fa-square-o"></span>화이트보드</div>
+                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem inactive"><span class="fa fa-microphone"></span>음향/마이크</div>
+                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem inactive"><span class="fa fa-cutlery"></span> 취사시설</div>
+                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem inactive"><span class="fa fa-shopping-cart"></span> 음식물반입가능</div>
+                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem inactive"><span class="fa fa-beer"></span> 주류반입가능</div>
+                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem"><span class="fa fa-automobile"></span> 주차</div>
+                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem"><span class="fa fa-arrows-v"></span> 금연</div>
+                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem"><span class="fa fa-laptop"></span>PC/노트북</div>
+                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem"><span class="fa fa-users"></span>의자/테이블</div>
+                    </div>
+                </div>
 	</div>
 </div>
 <!------------- 편의시설 항목들 끝--------------------->

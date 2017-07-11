@@ -335,6 +335,7 @@ public class LotController {
 		    service.lotviewcount(lotlistVO);
 		    //상세정보 보여주기
 		    LotListVO list = service.lotdetailview(lotlistVO);
+		    System.out.println(list.getPri_booktype());
 		    //북마크 누른 것 검사
 //		    service.lotbookmarkCheck();
 		    System.out.println(list.getPri_bookmark());
