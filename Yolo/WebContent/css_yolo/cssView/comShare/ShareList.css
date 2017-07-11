@@ -884,7 +884,9 @@ p.small {
 		width: 100%
 	}
 }
-
+.write_btn{
+	display: table-row-group;
+}
 
 @media(max-width:768px){
 	.write_btn{
