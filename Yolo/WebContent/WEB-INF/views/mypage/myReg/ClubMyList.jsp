@@ -13,7 +13,7 @@
 
 <script type="text/javascript">
 	$(function(){
-		$("#delete_btn").click(function(){
+		$(".delete_btn").click(function(){
 			var temp = $(this).find("#cnum").val();
 // 			alert(temp);
 
@@ -68,7 +68,7 @@
 							<div class="btn-group">
 								<a href="myClubEdit.myreg" type="button" class="btn btn-o btn-blue">수정</a>
 							</div>
-							<div class="btn-group" id="delete_btn">
+							<div class="btn-group delete_btn">
 								<input type="hidden" id="cnum" value="${l.c_num}" />
 								<a href="#SigningCancel" data-toggle="modal" class="btn btn-o btn-red">삭제</a>
 							</div>

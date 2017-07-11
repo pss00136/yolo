@@ -15,7 +15,7 @@
 
 <script type="text/javascript">
 	$(function(){
-		$("#delete_btn").click(function(){
+		$(".delete_btn").click(function(){
 			var temp = $(this).find("#slnum").val();
 // 			alert(temp);
 
@@ -66,7 +66,7 @@
 									<div class="btn-group">
 										<a href="myShareEdit.myreg?sl_num=${l.sl_num}&u_id=<%=u_id%>&bl_id=${l.bl_id}" type="button" class="btn btn-o btn-blue col-md-6">수정</a>
 									</div>
-									<div class="btn-group" id="delete_btn">
+									<div class="btn-group delete_btn">
 										<input type="hidden" id="slnum" value="${l.sl_num}" />
 										<a href="#SigningCancel" data-toggle="modal" class="btn btn-o btn-red col-md-6">삭제</a>
 									</div>
