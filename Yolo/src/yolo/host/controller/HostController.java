@@ -135,7 +135,7 @@ public class HostController {
 	   System.out.println(list.size());
 	   
 	   mv.addObject("list", list);
-	   mv.setViewName("/host/HostBook.host");
+	   mv.setViewName("/host/HostBook.nohost");
 	   //mv.addObject();
 	   return mv;
    }

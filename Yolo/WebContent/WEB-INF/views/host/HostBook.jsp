@@ -37,7 +37,7 @@
 		    var mon = (now.getMonth()+1)>9 ? ''+(now.getMonth()+1) : '0'+(now.getMonth()+1);
 		    var day = now.getDate()>9 ? ''+now.getDate() : '0'+now.getDate();
 		    var chan_val = year + '-' + mon + '-' + day;
-			alert($(this).siblings(".pri_num").val())
+			//alert($(this).siblings(".pri_num").val())
 			param = $(this).siblings(".pri_num").val()
 			$.ajax({
 				type : "post",
@@ -50,7 +50,7 @@
 				contentType : "application/x-www-form-urlencoded; charset=UTF-8",
 				success : function(data) {
 					$('#calendar').fullCalendar('refetchEvents');
-					alert(data);
+					//alert(data);
 					$('#calendar').fullCalendar({
 						header: {
 							left: 'prev,next',
