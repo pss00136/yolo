@@ -296,7 +296,7 @@ public class ClubController {
 		}else{
 			System.out.println("DB입력 실패");
 		}
-		return "redirect:/club/ClubInputOk.club";
+		return "redirect:/mypage/myReg/ClubMyList.myreg";
 	}
 
 }

@@ -71,7 +71,7 @@ public class appliedclubController {
 		}else{
 			System.out.println("DB입력 실패");
 		}
-		return "/mypage/appStatus/appliedClub";
+		return "redirect:/mypage/appStatus/appliedClub.myinfo";
 	}
 		
 	/*
@@ -81,28 +81,6 @@ public class appliedclubController {
 	* @param   appliedclubVO:jsp a tag를 통해 가져온 sc_num 값
 	* @return  String:반환하는 경로
 	*/	
-//	@RequestMapping(value="/delete_ok", method= RequestMethod.GET)
-//	public ModelAndView deleteOk(HttpServerErrorException request, @RequestParam Map<String, Object> param, SignclubVO signclubVO HttpSession session) throws Exception{
-//		String user = (String)session.getAttribute("u_id");
-//		signclubVO.setU_id(user);
-//		System.out.println("ID:"+signclubVO.getU_id());
-//		System.out.println("SC:"+signclubVO.getSc_num());
-//		System.out.println("C:"+signclubVO.getC_num());
-//		ModelAndView mv = new ModelAndView();
-//		int result =0;
-//		String message = "삭제 실패";
-//		String state = "no";
-//		result = service.signclubdelete(signclubVO);
-//		if(result != 0){
-//			state = "yes";
-//			message = "삭제 성공";
-//		}
-//		mv.addObject("message", message);
-//		mv.addObject("state", state);
-//		mv.setViewName("mypage/appStatus/delete_ok");
-//		return mv;
-//	}
-	
 	@RequestMapping("/delete_ok.myinfo")
 	public ModelAndView deleteOk(SignclubVO signclubVO, HttpSession session){
 		String user = (String)session.getAttribute("u_id");
