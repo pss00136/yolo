@@ -119,7 +119,7 @@ $(function(){
 										+ '<div class="clearfix"></div>'
 										+ '<div class="infoButtons">'
 										+ '<a class="btn btn-sm btn-round btn-gray btn-o closeInfo">Close</a>'
-										+ '<a href="/Yolo/lot/LotView.lot?pri_num='+ prop.number +'" class="btn btn-sm btn-round btn-green viewInfo">View</a>'
+										+ '<a href="/Yolo/lot/LotView.lot?pri_num='+ prop.number +'&pri_kind="'+ prop.kind +' class="btn btn-sm btn-round btn-green viewInfo">View</a>'
 										+ '</div>' + '</div>';
 
 								google.maps.event

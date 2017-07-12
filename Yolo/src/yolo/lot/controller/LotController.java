@@ -297,6 +297,7 @@ public class LotController {
 	              JSONObject propsInfo = new JSONObject();
 	              //위도 경도의 한명 정보
 	              JSONObject positionInfo = new JSONObject();
+	              propsInfo.put("kind", lotVO.getPri_kind());
 	              propsInfo.put("number", lotVO.getPri_num());
 	              propsInfo.put("title", lotVO.getPri_title());
 	              propsInfo.put("image", lotVO.getPriimg_name());
