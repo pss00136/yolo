@@ -24,7 +24,7 @@
 $(function(){
 	 	var temp = '<%=jsonlot%>' ;
 		var prop = jQuery.parseJSON(temp);
-		alert(temp);
+// 		alert(temp);
 
 		// Custom options for map
 		var options = {
@@ -735,8 +735,13 @@ $(function(){
 				<div class="summaryItem">
 					<h1 class="pageTitle" id="lot_title">
 						${list.pri_title}&nbsp;
-						
-						<span id="bookmark" class="fa fa-heart-o"></span>
+							<%
+							int bmcheck = (int)request.getAttribute("bmcheck");
+							if(bmcheck==0){%>
+								<span id="bookmark" class="fa fa-heart-o"></span>
+							<%}else{%>
+								<span id="bookmark" class="fa fa-heart"></span>
+							<%}%>
 					</h1>
 					<strong style="margin-top: 0px; font-size: 25px;">${list.pri_weekprice}</strong>
 					<div class="address">

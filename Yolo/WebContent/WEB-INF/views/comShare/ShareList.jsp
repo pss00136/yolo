@@ -299,7 +299,6 @@ String smlist = (String)request.getAttribute("smlist");
 								<span class="text-smaller">${list.pri_addr}</span>
 							</p>
 							<p>${list.u_id}</p>
-							<p style="float: right;">${list.sl_time}</p>
 						</div>
 					</div>
 				</a>
