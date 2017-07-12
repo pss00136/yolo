@@ -231,23 +231,30 @@ public class LotDAO {
 			TimetableVO returnVO = null;
 			result = session.insert("lot.bookinsert", booklotVO);
 			returnVO = session.selectOne("lot.gettime", timetableVO);
-			System.out.println("너버" + returnVO.getT_num());
+			//System.out.println("너버" + returnVO.getT_num());
 			//예약된게 없을때
-			if(returnVO == null){
+			if(returnVO==null){
+				System.out.println("시간없음");
 				String alltime[] = { "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"};
 				String seltimes = timetableVO.getT_time();
 				String t_time = parsetime(seltimes, alltime);
+				System.out.println(t_time);
 				timetableVO.setT_time(t_time);
+				System.out.println(timetableVO.getT_time());
 				result += session.insert("lot.inserttime",timetableVO);
 			//예약된게 있을때
 			} else{
+				System.out.println("시간있음");
 				timetableVO.setPri_num(returnVO.getPri_num());
 				String t_time = returnVO.getT_time();
+				System.out.println(t_time);
 				String alltime[] = divtime(t_time);
 				String seltimes = timetableVO.getT_time();
+				System.out.println("sel"+seltimes);
 				t_time = parsetime(seltimes, alltime);
 				timetableVO.setT_time(t_time);
 				timetableVO.setT_num(returnVO.getT_num());
+				System.out.println(timetableVO.getT_time());
 				session.update("lot.updatetime", timetableVO);
 			}
 		}catch(Exception ex){

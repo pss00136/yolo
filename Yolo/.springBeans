@@ -18,7 +18,7 @@
 		<config>WebContent/WEB-INF/springConfig/06_share/share-servlet.xml</config>
 		<config>WebContent/WEB-INF/springConfig/10_message/message-servlet.xml</config>
 		<config>WebContent/WEB-INF/springConfig/05_market/market-servlet.xml</config>
-		<config>WebContent/WEB-INF/springConfig/03_club/club-servlet.xml</config>
+		<config>WebContent/WEB-INF/springConfig/11_footermenu/footermenu-servlet.xml</config>
 		<config>WebContent/WEB-INF/springConfig/07_myinfo/myinfo-servlet.xml</config>
 	</autoconfigs>
 	<configSets>
