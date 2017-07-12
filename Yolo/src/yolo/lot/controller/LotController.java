@@ -331,9 +331,11 @@ public class LotController {
 		    //조회수 증가
 		    service.lotviewcount(lotlistVO);
 		    //상세정보 보여주기
-		    if(lotlistVO.getPri_booktype().equals("민간시설")){
+		    if("공공시설".equals(lotlistVO.getPri_kind())){
+		    	
 		    	mv.setViewName("/lot/LotPublicView.map");
 		    }else{
+		    	System.out.println("민간시설");
 		    	mv.setViewName("/lot/LotView.map");
 		    }
 		    
@@ -347,9 +349,12 @@ public class LotController {
 		    	bookmarkVO.setBm_selnum( lotlistVO.getPri_num() );
 		    	bmcheck = service.lotbookmarkCheck(bookmarkVO);
 		    }
-		   
+		    LotListVO list = service.lotdetailview(lotlistVO);
+		    String jsonlot = lotjson(list);
 		    List<PostscriptVO> review = service.lotreviewlist(postVO);
-		    
+		    mv.addObject("list",list);
+		    mv.addObject("jsonlot", jsonlot);
+		    mv.addObject("review", review);
 		    mv.addObject("bmcheck", bmcheck);
 		    
 			return mv;

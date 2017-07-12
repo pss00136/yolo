@@ -747,7 +747,7 @@ $(function(){
 <div class="resultsList">
 		<!------------- 공간 검색 결과 리스트 보여주기 --------------------->
 		<% 
-			ArrayList list = (ArrayList)request.getAttribute("list");
+		ArrayList list = (ArrayList)request.getAttribute("list");
 		if(list.size()==0){%>
 			<p>등록된 게시물이 없습니다.</p>
 		<%}//end of if%>
