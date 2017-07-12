@@ -10,7 +10,7 @@
 
 <script type="text/javascript">
 
-  alert("${message}");
+//   alert("${message}");
   if("${state}"=="yes"){
 	  location.href="appliedClub.myinfo";
   }else{

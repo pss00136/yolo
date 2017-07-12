@@ -40,7 +40,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		      FROM (SELECT C.C_NUM C_NUM, I.CIMG_NAME CIMG_NAME, C.C_TYPE C_TYPE, C.C_TITLE C_TITLE, C.c_people c_people, C.C_PERIOD C_PERIOD, C.C_DATE C_DATE, C.C_PLACE C_PLACE, C.C_ENTRY C_ENTRY, C.C_HITS C_HITS
 		            FROM CLUB C JOIN CLUBIMAGE I
 		            ON c.c_num = i.c_num 
-		            ORDER BY to_number(substr(C.C_NUM, 3))) a
+		            ORDER BY to_number(substr(C.C_NUM, 3))DESC) a
 		      WHERE ROWNUM <= #{endCount}) b
 		WHERE b.rnum >= #{startCount}
 	]]>
@@ -76,7 +76,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		            FROM CLUB C JOIN CLUBIMAGE I
 		            ON c.c_num = i.c_num
 		            WHERE C.C_TYPE like #{keyWord} 
-		            ORDER BY to_number(substr(C.C_NUM, 3))) a
+		            ORDER BY to_number(substr(C.C_NUM, 3))DESC) a
 		      WHERE ROWNUM <= #{endCount}) b
 		WHERE b.rnum >= #{startCount}
 	]]>
@@ -93,7 +93,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 					<foreach collection="locations" item="one" index="index" open="(" close=")" separator="or">
 						C.C_PLACE like #{one} ||'%'
 					</foreach> 
-		            ORDER BY to_number(substr(C.C_NUM, 3))) a
+		            ORDER BY to_number(substr(C.C_NUM, 3))DESC) a
 	<![CDATA[
 		      WHERE ROWNUM <= #{endCount}) b
 		WHERE b.rnum >= #{startCount}
