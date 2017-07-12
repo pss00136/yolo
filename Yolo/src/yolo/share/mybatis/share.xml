@@ -7,10 +7,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <!-- shareBookLot 신청등록 sql -->
 <insert id="shareBookLot" parameterType="yolo.share.dto.BookShareVO"> <!-- insert,delete,update는 리턴타입 필요없음 -->
-	INSERT INTO booksharelot
+	INSERT INTO booksharelot2
 	(bsl_num, sl_num, u_id, bsl_date, bsl_time, bsl_people, bsl_confirm)
 	VALUES
-	(BOOKSHARELOT_NO_SEQ.nextval,#{sl_num}, #{u_id}, #{bsl_date}, #{bsl_time}, '1', 'N')
+	(BOOKSHARELOT_NO_SEQ.nextval, #{sl_num}, #{u_id}, #{bsl_date}, #{bsl_time}, '1', 'N')
 </insert>
 
 <!-- shareEdit 등록된 글 조회 -->
