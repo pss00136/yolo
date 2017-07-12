@@ -83,12 +83,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
 	 <!-- 공간정보 검색 출력 sql -->
 	<select id="lotsearch" parameterType="hashmap" resultMap="lotlistMap">
-	  select i.priimg_name priimg_name, p.pri_weekprice pri_weekprice, p.pri_title pri_title, p.pri_addr pri_addr, p.pri_num pri_num, p.pri_long pri_long, p.pri_lat pri_lat
+	  select i.priimg_name priimg_name, p.pri_weekprice pri_weekprice, p.pri_title pri_title, p.pri_addr pri_addr, p.pri_num pri_num, p.pri_long pri_long, p.pri_lat pri_lat, p.pri_kind pri_kind, p.pri_bookway pri_bookway, p.pri_holiday pri_holiday
       from privatelot p JOIN privateimage i
       ON p.pri_num = i.pri_num
 <!--       JOIN timetable t ON p.pri_num = t.pri_num -->
       where #{rcount} > p.pri_minpeople AND p.pri_maxpeople > #{rcount} AND p.pri_addr like  #{sido} || '%' ||#{gugun}||'%' 
-      group by i.priimg_name, p.pri_weekprice, p.pri_title, p.pri_addr, p.pri_num, p.pri_long, p.pri_lat
+      group by i.priimg_name, p.pri_weekprice, p.pri_title, p.pri_addr, p.pri_num, p.pri_long, p.pri_lat,, p.pri_kind, p.pri_bookway, p.pri_holiday
       ORDER BY  to_number(substr(p.pri_num, 5))
 	</select>
 	
