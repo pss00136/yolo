@@ -38,7 +38,7 @@ public class PrivateimageVO {
 		// 업로드 파일 접근
 		if(! file.isEmpty()){
 			this.priimg_name = file.getOriginalFilename();
-			this.priimg_path = "C:\\Users\\gkack\\git\\yolo\\Yolo\\WebContent\\upload\\lot\\";
+			this.priimg_path = "C:\\Users\\kosta\\git\\yolo\\Yolo\\WebContent\\upload\\lot\\";
 			//this.b_fsize = file.getSize();
 			
 			File f = new File(priimg_path+priimg_name);

@@ -45,7 +45,7 @@
                                 <div class="col-md-4 col-xs-12">
                                     <a href="/Yolo/lot/LotView.lot?pri_num=<%=lvo.getPri_num() %>" class="propWidget-1" style="margin-bottom: 5px;">
                                         <div class="fig">
-                                            <img src="/Yolo/images_yolo/lot/<%=lvo.getPriimg_name()%>" alt="image">
+                                            <img src="/Yolo/upload/lot/<%=lvo.getPriimg_name()%>" alt="image">
                                             <div class="priceCap"><span><%=lvo.getPri_weekprice()%></span></div>
                                             <div class="figCap">
                                                 <h3><%=lvo.getPri_title()%></h3>
@@ -93,7 +93,7 @@
                                 <div class="col-md-4 col-xs-12">
                                     <a href="/Yolo/lot/LotView.lot?pri_num=<%=lvo.getPri_num() %>" class="propWidget-1" style="margin-bottom: 5px;">
                                         <div class="fig">
-                                            <img src="/Yolo/images_yolo/lot/<%= lvo.getPriimg_name()%>" alt="image">
+                                            <img src="/Yolo/upload/lot/<%= lvo.getPriimg_name()%>" alt="image">
                                             <div class="priceCap"><span><%=lvo.getPri_weekprice()%></span></div>
                                             <div class="figCap">
                                                 <h3><%=lvo.getPri_title()%></h3>
