@@ -187,7 +187,7 @@ public class LotController {
 		 
 		 //이미지 넘겨오나?
 		 sessStatus.setComplete();
-			return "redirect:/host/HostMyLot/modal_hostmylot_delete.host";
+			return "redirect:/host/HostMyLot.host";
 		}
 	    
 	    /*

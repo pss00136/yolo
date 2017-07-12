@@ -111,9 +111,9 @@ p{
 			evt.preventDefault();
 			evt.stopImmediatePropagation();
 			$(this).toggleClass("active");
-			alert("출력");
+			//alert("출력");
 			var label = $("#alltime").find('label[class*=active]');
-			alert(label.length);
+			//alert(label.length);
 			var times = '';
 			for(var i = 0; i < label.length ; i++){
 				if(i==label.length-1){
@@ -171,9 +171,9 @@ p{
 						dataType : "text",
 						contentType : "application/x-www-form-urlencoded; charset=UTF-8",
 						success : function(data) {
-							alert(data);
+							//alert(data);
 							var timeArray=data.split('/');
-							alert(timeArray.length);
+							//alert(timeArray.length);
 							$.each(timeArray , function(i,time) {
 								if(time == 0){
 									$("#alltime").children().eq(i).removeClass("active disabled");
