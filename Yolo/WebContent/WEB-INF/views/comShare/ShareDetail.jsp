@@ -14,9 +14,6 @@
          var temp = $("#sl_time_h").val();
          var date = $("#bl_date_d").val();
          var num = $("#sl_num_s").val();
-         alert(temp);
-         alert(date);
-         alert(num);
          $('#bsl_date').val('');
          $('#bsl_date').val(date);
          $('#sl_num').val('');
@@ -125,9 +122,9 @@
                                     class="btn btn-lg btn-round btn-green contactBtn chat_in">문의하기</a>
                               </div>
                               <div class="btn">
-                                 <input type="text" id="sl_time_h" name="sl_time_h" value="${list.sl_time }">
-                                 <input type="text" id="bl_date_d" name="bl_date_d" value="${list.bl_date}">
-                                 <input type="text" id="sl_num_s" name="sl_num_s" value="${list.sl_num}">
+                                 <input type="hidden" id="sl_time_h" name="sl_time_h" value="${list.sl_time }">
+                                 <input type="hidden" id="bl_date_d" name="bl_date_d" value="${list.bl_date}">
+                                 <input type="hidden" id="sl_num_s" name="sl_num_s" value="${list.sl_num}">
                                  <a id="ask-time" data-toggle="modal" href="#contactAgent"
                                     class="btn btn-lg btn-round btn-green contactBtn">신청하기</a>
                                     

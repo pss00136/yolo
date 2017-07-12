@@ -27,9 +27,9 @@
                             </div>
                         </div>
                     </div>
-                    <input type="text" id="bsl_time" name="bsl_time"/>
-					<input type="text" id="t_time" name="t_time"/>
-					<input type="text" id="sl_num" name="sl_num"/>
+                    <input type="hidden" id="bsl_time" name="bsl_time"/>
+					<input type="hidden" id="t_time" name="t_time"/>
+					<input type="hidden" id="sl_num" name="sl_num"/>
 				</div>
 				
 				<div class="modal-footer">
