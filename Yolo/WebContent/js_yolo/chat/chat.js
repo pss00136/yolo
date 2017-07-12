@@ -15,6 +15,7 @@ $(function() {
 
 	$(".chat_in").click(function() {
 		$("#chat_div").show();
+		$("#chat_div").attr("style","display:block;");
 		$("#chat_list").hide();
 		$("#chat_view").show();
 	});
