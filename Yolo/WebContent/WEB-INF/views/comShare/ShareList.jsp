@@ -27,7 +27,6 @@ String smlist = (String)request.getAttribute("smlist");
 <script>
 (function($) {
 	var temp = '<%=smlist%>';
-	alert(temp);
 	var props = jQuery.parseJSON(temp);
 	
 	
