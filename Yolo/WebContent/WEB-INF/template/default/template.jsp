@@ -95,5 +95,7 @@
       <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
       <script src=" <c:url value='/js_yolo/postcode/postcode.js'/> " type="text/javascript"></script>
  	  <!-- javascript end -->
+ 	  <script type="text/javascript" src="/Yolo/js_yolo/user/join.js"></script>
+ 	  
 </body>
 </html>

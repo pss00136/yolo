@@ -1,30 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
-	<script type="text/javascript">
-	 $(function(){
-		 $("#check").click(function(){
-			 alert("클릭");
-			 $.ajax({
-		            type: 'post',
-		            async: true,
-		            //url:'${pageContext.request.contextPath}/login_chk.do',
-		            url:'/Yolo/join/idCheck.main',
-		            contentType:'application/x-www-form-urlencoded;charset=UTF-8',
-		           // data: $("#userinput").serialize(),
-		            data: "u_id="+$("#u_id").val(),
-		           
-		            success:function(resultData){
-		            	//alert("resultData = "+resultData)
-		    			$('#idCheckResult').html(resultData);
-		    		}
-			 });
-			 
-		 });
-		 
-	 });
-	
-	</script>
+<script type="text/javascript" src="/Yolo/js_yolo/user/join.js"></script>
+
+
 	<!-- 회원가입 Modal -->
 	<div class="modal fade" id="signup" role="dialog"
 		aria-labelledby="signupLabel" aria-hidden="true">
@@ -46,8 +24,8 @@
 								<span class="input-group-btn">
 									<button class="btn btn-success" type="button" id="check" name="check">중복확인</button>
 								</span>
-								<span id="idCheckResult" style="width:150px;color:red"></span>
 							</div>
+							<span id="idCheckResult" style="width:150px;color:red"></span>
 						</div>
 						<div class="form-group">
 							<input type="password" placeholder="비밀번호" id="u_pass" name="u_pass" class="form-control">
@@ -55,6 +33,7 @@
 						<div class="form-group">
 							<input type="password" placeholder="비밀번호확인" id="u_passconfirm" name="u_passconfirm" class="form-control">
 						</div>
+						<span id="result" style="width:150px;color:red"></span>
 						<div class="form-group">
 							<input type="text" placeholder="성명" id="u_name" name="u_name" class="form-control">
 						</div>

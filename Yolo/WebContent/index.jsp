@@ -325,8 +325,8 @@
 								<span class="input-group-btn">
 									<button class="btn btn-success" type="button" id="check" name="check">중복확인</button>
 								</span>
-								<span id="idCheckResult" style="width:150px;color:red"></span>
 							</div>
+							<span id="idCheckResult" style="width:150px;color:red"></span>
 						</div>
 						<div class="form-group">
 							<input type="password" placeholder="비밀번호" id="u_pass" name="u_pass" class="form-control">
@@ -415,19 +415,8 @@
     <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
     <script src="/Yolo/js_yolo/postcode/postcode.js" type="text/javascript"></script>
  	<!-- javascript end -->
- 	<script type="text/javascript">
- 	$(function(){
- 		$("#modal_login_btn").click(function(){
- 			if( $("#login_id_input").val() == "" ){
- 				alert("아이디를 입력해주세요!");
- 			}else if( $("#login_pass_input").val() == "" ){
- 				alert("비밀번호를 입력해주세요!");
- 			}else{
- 				$("#login_frm").submit();	
- 			} 						
- 		});		
- 	});
- 	</script>
+ 	<script type="text/javascript" src="/Yolo/js_yolo/user/join.js"></script>
+
  
 </body>
 </html>

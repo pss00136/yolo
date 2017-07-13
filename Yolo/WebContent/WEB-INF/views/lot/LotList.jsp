@@ -14,8 +14,7 @@
 	String jsonList = (String) request.getAttribute("jsonList");
 	System.out.println(jsonList);
 %>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <script>
 $(function(){
@@ -83,7 +82,7 @@ $(function(){
 
 		// function that adds the markers on map
 		var addMarkers = function(props, map) {
-			$.each(props.props,function(i, prop) {
+				$.each(props.props,function(i, prop) {
 								var latlng = new google.maps.LatLng(
 										prop.position.lat, prop.position.lng);
 								var marker = new google.maps.Marker({
@@ -128,20 +127,16 @@ $(function(){
 												'click',
 												(function(marker, i) {
 													return function() {
-														infobox
-																.setContent(infoboxContent);
-														infobox.open(map,
-																marker);
+														infobox.setContent(infoboxContent);
+														infobox.open(map,marker);
 													}
 												})(marker, i));
-
-								$(document).on('click', '.closeInfo',
-										function() {
+								$(document).on('click', '.closeInfo',function() {
 											infobox.open(null, null);
-										});
+								});
 
 								markers.push(marker);
-							});
+					});
 		}
 
 		var map;
@@ -700,6 +695,7 @@ $(function(){
 				<div class="col-md-3 col-xs-6">
 					<label>시</label> 
 					 <select id="sido" name="sido" class="btn btn-default">
+					 <option value="">시/도 선택</option>
 					 <c:forEach items="${zlist}" var="b">
 					   <option value="${b.sido}">${b.sido}</option>
 					 </c:forEach>
