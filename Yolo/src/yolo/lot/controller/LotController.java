@@ -233,7 +233,7 @@ public class LotController {
 		    
 		    int lotTotalCount = service.lotcount(); //총 게시물 갯수 구하기
 		    System.out.println("공간 총 게시물 수: " + lotTotalCount);
-		    int lotCountList = 19; //한 페이지에 출력될 게시물 수
+		    int lotCountList = 39; //한 페이지에 출력될 게시물 수
 		    int LotCountPage = 5; //한 화면에 보여줄 페이지 수
 		    int lotTotalPage = lotTotalCount / lotCountList; //총 페이지 수
 		    if(lotTotalCount % lotCountList > 0){
@@ -286,6 +286,14 @@ public class LotController {
 			return mv;
 		}
 	   
+	   
+	   /*
+		* @메소드명: json
+		* @역할: 공간list를 json
+		*
+		* @param   LotListVO 값
+		* @return  String: list를 json으로 return
+		*/
 	   public String json(List<LotListVO> list){
 	       //최종 완성될 JSONObject 선언(전체)
 	           JSONObject jsonObject = new JSONObject();
@@ -357,7 +365,6 @@ public class LotController {
 		    mv.addObject("jsonlot", jsonlot);
 		    mv.addObject("review", review);
 		    mv.addObject("bmcheck", bmcheck);
-		    
 			return mv;
 		}
 	   
@@ -405,7 +412,13 @@ public class LotController {
 			return jsonInfo;
 		}
 	   
-
+	   /*
+		* @메소드명: lotreview
+		* @역할: 공간 상세 페이지 후기작
+		*
+		* @param   LotListVO 값
+		* @return  String:반환하는 경로
+		*/
 	   public String reviewjson(PostscriptVO postVO){
 		   JSONObject jsonObject = new JSONObject();
             

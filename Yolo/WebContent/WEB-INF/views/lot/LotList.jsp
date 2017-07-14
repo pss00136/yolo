@@ -12,7 +12,7 @@
 
 <%
 	String jsonList = (String) request.getAttribute("jsonList");
-	System.out.println(jsonList);
+	//System.out.println(jsonList);
 %>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -21,6 +21,7 @@ $(function(){
 	var temp = '<%=jsonList%>' ;
 	
 		var props = jQuery.parseJSON(temp);
+		//alert(props.props.length);
 
 		// Custom options for map
 		var options = {
@@ -127,7 +128,7 @@ $(function(){
 												'click',
 												(function(marker, i) {
 													return function() {
-														//infobox.setContent(infoboxContent);
+														infobox.setContent(infoboxContent);
 														infobox.open(map,marker);
 													}
 												})(marker, i));
@@ -265,7 +266,7 @@ $(function(){
 			}
 
 			addMarkers(props, map);
-		}, 300);
+		}, 600);
 
 		if (!(('ontouchstart' in window) || window.DocumentTouch
 				&& document instanceof DocumentTouch)) {

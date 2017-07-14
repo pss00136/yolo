@@ -22,7 +22,8 @@ PrivatelotVO privateVO;
 <link href="/Yolo/css_yolo/cssView/lot/lotInputSecond.css"
 	rel="stylesheet">
 <link href="/Yolo/css_yolo/cssView/Club/clubInput.css" rel="stylesheet">
-
+<link href="/Yolo/css_yolo/cssView/Club/tagPlus.css" rel="stylesheet">
+<link href="/Yolo/css/jquery.tagsinput.css" rel="stylesheet">
 
 
 <!--------------- 공간등록 정보입력 ------------------------>
