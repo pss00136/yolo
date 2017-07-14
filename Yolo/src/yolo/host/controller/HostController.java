@@ -117,15 +117,26 @@ public class HostController {
    public ModelAndView hostmylot( HttpSession session ){
 	   ModelAndView mv = new ModelAndView();
 	   String h_num = (String)session.getAttribute("h_num");
-	  
+	   if(h_num != null){
 	   List<LotListVO> list = service.hostmylotlist(h_num);
 	 
-	   mv.addObject("list", list);
-	   mv.addObject("dlist", list);
-	   mv.setViewName("/host/HostMyLot/modal_hostmylot_delete.host");
+	   	mv.addObject("list", list);
+	   	mv.addObject("dlist", list);
+	   	mv.setViewName("/host/HostMyLot/modal_hostmylot_delete.host");
+	   }
+	   else{
+			mv.setViewName("/host/HostInput.host");
+	   }
 	   return mv;
    }
    
+   /*
+	* @메소드명: hostmylot
+	* @역할: 호스트에서 내가 등록한 공간 보기
+	*
+	* @param   HostinfoVO: jsp form에서 가져온 값
+	* @return  String:반환하는 경로
+	*/ 
    @RequestMapping("/HostBook.host")
    public ModelAndView hostbook(HttpSession session){
 	   ModelAndView mv = new ModelAndView();

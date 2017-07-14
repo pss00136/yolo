@@ -203,7 +203,7 @@ p{
 				<div class="row" style="margin-bottom: 15px;">
 					<h2 id="lot_reserve"></h2>
 					<div style="margin-bottom: 30px;" class="fig">
-						<img id="reserveimage" src="/Yolo/images_yolo/lot/${list.priimg_name}" alt="image">
+						<img id="reserveimage" src="/Yolo/upload/lot/${list.priimg_name}" alt="image">
 					</div>
 					<!-- 공간명, 주소, 가격 -->
 					<div class="col-md-12">

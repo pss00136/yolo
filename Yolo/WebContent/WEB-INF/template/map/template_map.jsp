@@ -43,8 +43,6 @@
 			<!-- ------------------------------------------------------- -->
 
 		</div>
-		
-		
 	
 	</div>
 	<tiles:insertAttribute name="login"></tiles:insertAttribute>

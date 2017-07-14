@@ -227,13 +227,13 @@ public class LotController {
 		* @return  String:반환하는 경로
 		*/
 	   @RequestMapping("lot/LotList.lot")
-		public ModelAndView lotlist(LotPagingVO lpageVO, LotListVO lotlistVO, ZipcodeVO zipcodeVO ){
+		public ModelAndView lotlist(LotPagingVO lpageVO, LotListVO lotlistVO, ZipcodeVO zipcodeVO ,HttpSession session){
 		    ModelAndView mv = new ModelAndView();
 		    
 		    
 		    int lotTotalCount = service.lotcount(); //총 게시물 갯수 구하기
 		    System.out.println("공간 총 게시물 수: " + lotTotalCount);
-		    int lotCountList = 10; //한 페이지에 출력될 게시물 수
+		    int lotCountList = 19; //한 페이지에 출력될 게시물 수
 		    int LotCountPage = 5; //한 화면에 보여줄 페이지 수
 		    int lotTotalPage = lotTotalCount / lotCountList; //총 페이지 수
 		    if(lotTotalCount % lotCountList > 0){

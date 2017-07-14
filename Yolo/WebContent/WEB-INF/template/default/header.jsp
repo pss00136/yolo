@@ -34,7 +34,7 @@
 		<div class="headerUserWraper">
 			<a id="hostbtn" href="#signin" data-toggle="modal" class="headerUser btn btn-o btn-gray">호스트 센터</a>
 		</div>	
-		<!-- 로그인 회원가입 끝 -->				
+		<!-- 로그인 회원가입 끝 -->
 		<% }else{
 		//로그인된 경우
 		%>

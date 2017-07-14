@@ -127,7 +127,7 @@ $(function(){
 												'click',
 												(function(marker, i) {
 													return function() {
-														infobox.setContent(infoboxContent);
+														//infobox.setContent(infoboxContent);
 														infobox.open(map,marker);
 													}
 												})(marker, i));
