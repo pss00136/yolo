@@ -50,13 +50,10 @@
 
 			<!-- ------------------------------------------------------- -->
 			<!-- Footer -->
-			<tiles:insertAttribute name="footer" />
 
 		</div>
 		<div class="clearfix"></div>
 	</div>
-	<tiles:insertAttribute name="login"></tiles:insertAttribute>
-	<tiles:insertAttribute name="join"></tiles:insertAttribute>
 	
 	<!-- javascript -->
         <script src=" <c:url value='/js/json2.js'/> "></script>

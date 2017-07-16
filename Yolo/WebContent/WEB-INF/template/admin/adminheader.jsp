@@ -29,7 +29,7 @@
 			<a href="#" class="headerUser dropdown-toggle" data-toggle="dropdown"> 
 				<img class="avatar headerAvatar pull-left" src="/Yolo/images/avatar-1.png" alt="John Smith">
 				<div class="userTop pull-left">
-					<span class="headerUserName"><%=u_id%>님</span> <span
+					<span class="headerUserName">Admin님</span> <span
 						class="fa fa-angle-down"></span>
 				</div>
 				<div class="clearfix"></div>
@@ -38,7 +38,7 @@
 				<div class="mobAvatar">
 					<img class="avatar mobAvatarImg" src="/Yolo/images/avatar-1.png"
 						alt="John Smith">
-					<div class="mobAvatarName"><%=u_id%></div>
+					<div class="mobAvatarName">Admin</div>
 				</div>
 				<ul>
 					<li><a href="/Yolo/logout/logout.main"><span class="icon-power"></span>Logout</a></li>

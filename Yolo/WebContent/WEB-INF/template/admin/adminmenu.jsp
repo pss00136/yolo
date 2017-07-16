@@ -7,19 +7,19 @@
 				<!-- 네비게이션 메뉴 -->
 				<ul id="lefynav_menu_ul">
 					<li>
-						<a href="/Yolo/lot/LotList.lot"><span class="navIcon icon-compass"></span>
+						<a href="/Yolo/admin/LotManage.admin"><span class="navIcon icon-compass"></span>
 						<span class="navLabel">공공시설 관리</span></a>
 					</li>
 					<li>
-						<a href="/Yolo/club/ClubList.club"><span class="navIcon fa fa-group"></span>
+						<a href="/Yolo/admin/AdminMain.admin"><span class="navIcon fa fa-group"></span>
 						<span class="navLabel">민간시설 승인</span></a>
 					</li>
 					<li class="hasSub">
-						<a href="/Yolo/comShare/ShareList.share"><span class="navIcon fa fa-globe"></span>
+						<a href="/Yolo/admin/FNQList.admin"><span class="navIcon fa fa-globe"></span>
 						<span class="navLabel">도움말 관리</span></a>
 					</li>
 					<li class="hasSub">
-						<a href="/Yolo/comShare/ShareList.share"><span class="navIcon fa fa-globe"></span>
+						<a href="/Yolo/admin/UserList.admin"><span class="navIcon fa fa-globe"></span>
 						<span class="navLabel">회원 관리</span></a>
 					</li>	
 				</ul><!-- 네비게이션 메뉴 끝 -->

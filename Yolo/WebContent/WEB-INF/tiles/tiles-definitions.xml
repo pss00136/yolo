@@ -4,6 +4,16 @@
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 <tiles-definitions>
 
+ <!-- admin Template -->
+ <definition name='adminTemplate' template="/WEB-INF/template/admin/template_admin.jsp">
+ 	<put-attribute name="header" value="/WEB-INF/template/admin/adminheader.jsp"></put-attribute>
+ 	<put-attribute name="menu" value="/WEB-INF/template/admin/adminmenu.jsp"></put-attribute>
+ </definition>
+ 
+  <definition name='/*/*.admin' extends='adminTemplate'>
+ 	<put-attribute name="body" value='/WEB-INF/views/{1}/{2}.jsp'></put-attribute>
+ </definition>
+
   <!-- lots Template -->
  <definition name='lotTemplate' template="/WEB-INF/template/lot/template_lot.jsp">
  	<put-attribute name="header" value="/WEB-INF/template/default/header.jsp"></put-attribute>

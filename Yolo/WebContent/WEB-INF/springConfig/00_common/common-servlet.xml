@@ -52,6 +52,7 @@
 			<value>classpath*:yolo/mypage/myshare/mybatis/*.xml</value>
 			<value>classpath*:yolo/mypage/orderstatus/mybatis/*.xml</value>
 			<value>classpath*:yolo/mypage/wishlist/mybatis/*.xml</value>
+			<value>classpath*:yolo/admin/mybatis/*.xml</value>
 		</array>
 	</property>
 	<property name="configLocation" value="classpath:mybatis/config/config.xml"></property>

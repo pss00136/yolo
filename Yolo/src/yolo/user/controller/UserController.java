@@ -92,20 +92,24 @@ public class UserController {
 	public String login(UserVO userVO, HttpSession session, HttpServletRequest request, HttpServletResponse response){
 		//이전페이지 주소값을 가져옴
 		String referrer = request.getHeader("Referer");
-				
-		UserVO reVO = service.loginUser(userVO);
-		HostinfoVO hostvo = service.hostselect(reVO);
-		if(hostvo != null){
-			session.setAttribute("h_num",hostvo.getH_num());
-		}
-		if(reVO != null){
-			session.setAttribute("u_id",reVO.getU_id());
-			
-			System.out.println("로그인 완료");
+		if("admin".equals(userVO.getU_id()) & "admin".equals(userVO.getU_pass())){
+			System.out.println("관리자로그인");
+			return "redirect:/admin/AdminMain.admin";
 		}else{
-			System.out.println("로그인 실패");
+			UserVO reVO = service.loginUser(userVO);
+			HostinfoVO hostvo = service.hostselect(reVO);
+			if(hostvo != null){
+			session.setAttribute("h_num",hostvo.getH_num());
+			}
+			if(reVO != null){
+				session.setAttribute("u_id",reVO.getU_id());
+				
+				System.out.println("로그인 완료");
+			}else{
+				System.out.println("로그인 실패");
+			}
+			return "redirect:"+referrer;
 		}
-		return "redirect:"+referrer;
 	}
 
 	/*

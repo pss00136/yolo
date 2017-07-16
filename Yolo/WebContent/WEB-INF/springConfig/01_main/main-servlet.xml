@@ -9,6 +9,7 @@
 
 <context:component-scan base-package="yolo.user"></context:component-scan>
 <context:component-scan base-package="yolo.main"></context:component-scan>
+<context:component-scan base-package="yolo.admin"></context:component-scan>
 
 <mvc:annotation-driven>
     <mvc:message-converters>

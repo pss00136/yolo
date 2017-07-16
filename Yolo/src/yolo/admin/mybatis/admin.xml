@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="admin">
+
+<select id="getlotlist" resultType="lotlistVO">
+	select pri_num, h_num, pri_title, pri_regdate
+	from privatelot
+	where pri_kind='민간시설'
+</select>
+
+<select id="getuserlist" resultType="yolo.user.dto.UserVO">
+	select u_id, u_name, u_tel, u_email
+	from userinfo
+</select>
+
+<select id="getusercount" resultType="int">
+	select count(*) count from userinfo
+</select>
+
+</mapper>
