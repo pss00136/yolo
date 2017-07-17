@@ -6,9 +6,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="admin">
 
 <select id="getlotlist" resultType="lotlistVO">
-	select pri_num, h_num, pri_title, pri_regdate
+	select pri_num, h_num, pri_title, pri_regdate, pri_confirm
 	from privatelot
 	where pri_kind='민간시설'
+	<if test="pri_confirm != null">
+			AND pri_confirm = #{pri_confirm}
+	</if>
 </select>
 
 <select id="getuserlist" resultType="yolo.user.dto.UserVO">
@@ -20,4 +23,22 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	select count(*) count from userinfo
 </select>
 
+<select id="getqnalist" parameterType="hashmap" resultType="yolo.footermenu.dto.FnQVO">
+	select a_num, a_type, a_title, a_content, a_date
+	from advice
+	where a_type = #{a_type}
+</select>
+
+<update id="lotconfirm" parameterType="hashmap">
+	update privatelot
+	set pri_confirm = #{pri_confirm}
+	where pri_num = #{pri_num}
+</update>
+
+<insert id="fnqinputdo" parameterType="yolo.footermenu.dto.FnQVO">
+	insert into advice(a_num, a_type, a_title, a_content, a_date)
+	values (concat('a_',ADVICE_NO_SEQ.nextval), #{a_type}, #{a_title}, #{a_content}, sysdate)
+
+</insert>
+	
 </mapper>

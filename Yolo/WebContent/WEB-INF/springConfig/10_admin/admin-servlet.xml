@@ -7,4 +7,5 @@
 
 <context:component-scan base-package="yolo.admin"></context:component-scan>
 <context:component-scan base-package="yolo.user"></context:component-scan>
+<context:component-scan base-package="yolo.footermenu"></context:component-scan>
 </beans>

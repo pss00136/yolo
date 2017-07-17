@@ -412,6 +412,13 @@ public class LotDAO {
     	return result;
 	}
     
+    /*
+	* @메소드명:  lotBookmarkSelect
+	* @역할:     LotService에서 전달받은 값을 DB에 삽입
+	*
+	* @param   BookmarkVO
+	* @return  list: DB insert쿼리문 결과값
+	*/ 
     public int lotBookmarkSelect(BookmarkVO bookmarkVO){
     	BookmarkVO vo = session.selectOne("bookmark.bookmarkselect" ,bookmarkVO);
     	int result = 0;

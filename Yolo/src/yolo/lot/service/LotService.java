@@ -147,5 +147,12 @@ public interface LotService {
     */    
     public int lotBookmarkdelete(BookmarkVO bookmarkVO);
     
+    /*
+     * @메소드명: lotbookmarkCheck
+     * @역할: LotController에서 전달받은 값을 DAO로 전달, 결과값 리턴
+     *
+     * @param   BookmarkVO 에서 전달받은 값
+     * @return  
+     */    
     public int lotbookmarkCheck(BookmarkVO bookmarkVO);
 }

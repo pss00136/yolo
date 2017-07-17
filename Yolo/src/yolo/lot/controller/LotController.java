@@ -233,7 +233,7 @@ public class LotController {
 		    
 		    int lotTotalCount = service.lotcount(); //총 게시물 갯수 구하기
 		    System.out.println("공간 총 게시물 수: " + lotTotalCount);
-		    int lotCountList = 39; //한 페이지에 출력될 게시물 수
+		    int lotCountList = 20; //한 페이지에 출력될 게시물 수
 		    int LotCountPage = 5; //한 화면에 보여줄 페이지 수
 		    int lotTotalPage = lotTotalCount / lotCountList; //총 페이지 수
 		    if(lotTotalCount % lotCountList > 0){
@@ -528,6 +528,14 @@ public class LotController {
 		   return time;
 	   }
 	   
+	   /*
+		* @메소드명: lotpay
+		* @역할: 예약 및 결제
+		*
+		* @param   booklotVO timetableVO session값
+		* @return  ModelAndView:반환하는 경로
+		*/
+	   
 	   @RequestMapping("lot/LotPay.lot") 
 	   public ModelAndView lotpay(BooklotVO booklotVO, TimetableVO timetableVO, HttpSession session){
 		   ModelAndView mv = new ModelAndView();
@@ -545,6 +553,13 @@ public class LotController {
 		   return mv;
 	   }
 	   
+	   /*
+	 		* @메소드명: bookmark
+	 		* @역할: 관심리스트 추가 ajax
+	 		*
+	 		* @param   bookmarkVO session값
+	 		* @return  String:
+	 		*/
 	   @RequestMapping("lot/bookmark.lot")
        @ResponseBody
        public String bookmark(BookmarkVO bookmarkVO ,HttpSession session){       
@@ -558,6 +573,13 @@ public class LotController {
             }
         }
        
+	   /*
+		* @메소드명: bookmarkdel
+		* @역할: 관심리스트 삭제 ajax
+		*
+		* @param   bookmarkVO session값
+		* @return  String:
+		*/
        @RequestMapping("lot/bookmarkdelete.lot")
        @ResponseBody
        public String bookmarkdel(BookmarkVO bookmarkVO ,HttpSession session){
